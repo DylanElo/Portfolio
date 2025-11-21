@@ -19,10 +19,10 @@ This project is built from scratch without relying on pre-made BI tools like Tab
 
 ```mermaid
 graph LR
-    A[Raw Data (Jikan API)] --> B[Python ETL]
-    B --> C[SQLite Data Warehouse]
-    C --> D[JSON Data Export]
-    D --> E[Interactive Web Dashboard]
+    A["Raw Data (Jikan API)"] --> B["Python ETL"]
+    B --> C["SQLite Data Warehouse"]
+    C --> D["JSON Data Export"]
+    D --> E["Interactive Web Dashboard"]
 ```
 
 *   **ETL Pipeline:** Python (`pandas`, `requests`) to extract data and generate realistic business metrics (150k+ rows).
