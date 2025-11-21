@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Pierrot BI Analysis - Dylan Elo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background-gradient"></div>
+
+    <header class="header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo">Portfolio.</a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="gradient-text">Studio Pierrot BI Analysis</h1>
+                <p class="hero-description">
+                    A comprehensive Business Intelligence capstone project analyzing performance trends,
+                    financial ROI, and production quality across 20 major anime titles.
+                </p>
+                <div style="margin-top: 2rem;">
+                    <span class="tech-stack-tag">Python ETL</span>
+                    <span class="tech-stack-tag">SQLite</span>
+                    <span class="tech-stack-tag">SQL Analysis</span>
+                    <span class="tech-stack-tag">Chart.js</span>
+                    <span class="tech-stack-tag">Business Intelligence</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Live Dashboard -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Live Dashboard</h2>
+                <p style="text-align: center; color: #cbd5e1; margin-top: 1rem; margin-bottom: 2rem;">
+                    Interactive dashboard visualizing key metrics and insights.
+                </p>
+                <iframe src="dashboard/index.html" class="dashboard-container" title="Studio Pierrot BI Dashboard"
+                    loading="lazy">
+                </iframe>
+            </div>
+        </section>
+
+        <!-- Key Findings -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Key Findings</h2>
+                <div class="projects-grid" style="margin-top: 3rem;">
+                    <div class="project-card">
+                        <div class="project-info">
+                            <h3>📉 Recent Performance Dip</h3>
+                            <p>
+                                Recent Studio Pierrot titles (Boruto, Tokyo Ghoul:re) show a marked decline
+                                in average MAL scores compared to classics like Naruto and Yu Yu Hakusho.
+                                High filler ratios (>40%) are a primary driver of this trend.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-info">
+                            <h3>💰 ROI & Filler Correlation</h3>
+                            <p>
+                                Analysis reveals a strong negative correlation between filler percentage and ROI.
+                                Titles with <10% filler (e.g., Bleach: TYBW) generate significantly higher engagement
+                                    and merchandise revenue potential. </p>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-info">
+                            <h3>⚔️ Competitor Benchmarks</h3>
+                            <p>
+                                Competitors like MAPPA (Jujutsu Kaisen) and Ufotable (Demon Slayer) are setting
+                                new standards with 0% filler and high production stability, yielding superior
+                                ROI and fan retention.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Implementation -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Technical Implementation</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Architecture</h3>
+                        <p>The project follows a classic ELT (Extract, Load, Transform) pipeline:</p>
+                        <ul>
+                            <li><strong>Data Acquisition:</strong> Python scripts fetch data from the Jikan API
+                                (MyAnimeList) and generate simulated internal business metrics.</li>
+                            <li><strong>Data Warehouse:</strong> A Star Schema implemented in SQLite with dimension
+                                tables (Anime, Season) and fact tables (Metrics, Financials, Marketing).</li>
+                            <li><strong>Analysis:</strong> Complex SQL queries derive insights on retention,
+                                profitability, and quality trends.</li>
+                            <li><strong>Visualization:</strong> A custom web dashboard built with Chart.js and Tailwind
+                                CSS consumes JSON data exported from the warehouse.</li>
+                        </ul>
+                        <div style="margin-top: 2rem;">
+                            <a href="https://github.com" class="btn btn-primary">View Source Code on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Dylan Elo. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="/main.js"></script>
+</body>
+
+</html>
