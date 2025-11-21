@@ -1,135 +1,81 @@
-# Studio Pierrot Anime BI Capstone
+# Studio Pierrot Turnaround Strategy: BI Capstone
 
-<parameter name="portfolio-grade Business Intelligence project analyzing Studio Pierrot anime performance using a complete BI workflow: dimensional modeling, ETL/ELT, data warehousing, SQL analysis, and dashboard visualization.
+A strategic Business Intelligence project designed to "save" Studio Pierrot by analyzing the performance of 10 iconic anime franchises. This project demonstrates a full-stack data engineering and analytics workflow, culminating in an interactive "XXL" executive dashboard.
 
-## 🎯 Project Goals
+**[🔴 Live Dashboard Demo](https://dylanelo.github.io/Portfolio/project_studio_pierrot.html)**
 
-Analyze why recent Studio Pierrot anime (Boruto, Tokyo Ghoul:re) underperform compared to historical hits (Naruto, Bleach) by examining:
-- Rating and popularity trends from MyAnimeList
-- Production metrics (filler ratio, quality, stability)
-- Marketing campaign effectiveness (simulated)
-- Financial performance (simulated)
+## 🎯 Project Objective: The "Savior" Persona
 
-## 📊 Architecture
+**Scenario:** Studio Pierrot (Naruto, Bleach, Tokyo Ghoul) is facing declining ROI on recent productions. As a new Data Analyst, your mission is to identify the root causes and propose a data-driven turnaround strategy.
 
-```
-Studio Pierrot BI Project
-├── data/           # Raw CSV/JSON dumps from MAL API
-├── etl/            # Python ETL scripts
-│   └── init_db.py  # Database initialization
-├── model/          # Star schema definition
-│   ├── schema.sql  # DDL for all tables
-│   └── model.md    # ER diagram & documentation
-├── sql/            # Analytical queries
-├── dashboard/      # Tableau/Power BI files
-└── studio_pierrot.db  # SQLite data warehouse
-```
+**Key Questions Answered:**
+1.  **The Filler Trap:** Does "padding" episodes (filler) significantly hurt profitability?
+2.  **Quality vs. Quantity:** How does animation budget correlate with global streaming revenue?
+3.  **Global Shift:** What is the revenue split between domestic broadcast and international streaming?
 
-## 🗄️ Data Model
+## 📊 Architecture & Tech Stack
 
-**Star Schema** with 2 dimensions and 3 fact tables:
+This project is built from scratch without relying on pre-made BI tools like Tableau, demonstrating full-stack capability.
 
-### Dimensions
-- `dim_anime` – Core anime attributes (title, studio, episodes, dates, genre)
-- `dim_season` – Production metadata (season type, filler ratio, quality scores)
-
-### Facts
-- `fact_anime_metrics` – MAL performance (ratings, popularity, member counts)
-- `fact_marketing` – Campaign data (type, channel, cost, impressions)
-- `fact_financials` – Cost and revenue estimates
-
-See [`model/model.md`](model/model.md) for full documentation.
-
-## 🚀 Quick Start
-
-### 1. Initialize the Database
-```bash
-python etl/init_db.py
+```mermaid
+graph LR
+    A[Raw Data (Jikan API)] --> B[Python ETL]
+    B --> C[SQLite Data Warehouse]
+    C --> D[JSON Data Export]
+    D --> E[Interactive Web Dashboard]
 ```
 
-This creates all tables in `studio_pierrot.db`.
+*   **ETL Pipeline:** Python (`pandas`, `requests`) to extract data and generate realistic business metrics (150k+ rows).
+*   **Data Warehouse:** SQLite with a **Star Schema** design (`dim_anime`, `dim_date`, `fact_daily_performance`).
+*   **Frontend:** Vanilla HTML5, **Tailwind CSS** for styling, and **Chart.js** for visualizations.
+*   **Deployment:** GitHub Pages.
 
-### 2. Verify Tables
-```bash
-sqlite3 studio_pierrot.db "SELECT name FROM sqlite_master WHERE type='table';"
-```
+## 🚀 Key Features
 
-Expected output:
-```
-dim_anime
-dim_season
-fact_anime_metrics
-fact_financials
-fact_marketing
-```
+### 1. "XXL" Executive Dashboard
+A high-density, interactive command center for studio executives.
+*   **Global KPI Cards:** Real-time tracking of Revenue, Views, Watch Time, and Sentiment.
+*   **Interactive Filters:** Filter all charts by Date Range (2023/2024), Specific Anime, and Platform.
+*   **Advanced Visualizations:**
+    *   **ROI vs. Filler % (Scatter Plot):** Visual proof that high filler correlates with low ROI.
+    *   **Revenue Trend (Multi-Axis):** Correlating daily views with revenue spikes.
+    *   **Platform Split:** Breakdown of revenue by Netflix, Crunchyroll, Hulu, etc.
 
-## 📋 Roadmap
+### 2. Strategic Insights
+*   **Actionable Recommendations:** Specific business moves based on data (e.g., "Cap filler at 10%").
+*   **Persona-Driven Narrative:** The entire project is framed as a strategic proposal to studio leadership.
 
-### ✅ Phase 1: Project Setup (Completed)
-- [x] Folder structure
-- [x] Star schema design
-- [x] SQLite database
-- [x] Model documentation
+## 🗄️ Data Model (Star Schema)
 
-### ✅ Phase 2: Data Acquisition (Completed)
-- [x] Fetched 20 anime from MyAnimeList via Jikan API (incl. Gintama, JJK, One Piece, etc.)
-- [x] Generated simulated production metrics
-- [x] Generated marketing campaigns
-- [x] Generated financial data
-- [x] Loaded all data into warehouse
+The data warehouse is designed for performance and analytical flexibility.
 
-### ✅ Phase 3: SQL Analysis (Completed)
-- [x] Created 10 comprehensive analytical queries
-- [x] Tested and validated all queries
-- [x] Derived key business insights
+*   **`dim_anime`**: Metadata for 10 iconic franchises (Naruto, Bleach, Tokyo Ghoul, etc.).
+*   **`dim_platform`**: Streaming platforms (Crunchyroll, Netflix, etc.).
+*   **`dim_date`**: Date dimension for time-series analysis.
+*   **`fact_daily_performance`**: Granular daily metrics (views, revenue, sentiment) for 2 years.
 
-### ✅ Phase 4: Dashboard (Completed)
-- [x] Created web-based dashboard with Chart.js
-- [x] Exported warehouse data to JSON
-- [x] Visualized KPIs, Score vs Filler, and ROI
+## 🛠️ Setup & Usage
 
-### ✅ Phase 5: Portfolio Integration (Completed)
-- [x] Added project showcase page (`project_studio_pierrot.html`)
-- [x] Embedded interactive dashboard
-- [x] Linked from main portfolio page (`index.html`)
-- [ ] Add project showcase page
-- [ ] Embed screenshots and findings
-- [ ] Link to GitHub repository
-- [ ] Write analytical queries
-- [ ] Answer business questions
+### Local Development
+1.  Clone the repository.
+2.  Run the dashboard locally:
+    ```bash
+    npx serve .
+    ```
+3.  Open `http://localhost:3000/dashboard/index.html`.
 
-### 🔜 Phase 5: Dashboard
-- [ ] Create visualizations
-- [ ] Build executive dashboard
-
-## 🎨 Portfolio Integration
-
-This project will be showcased on my portfolio website with:
-- Interactive demo
-- Key findings and insights
-- Dashboard screenshots
-- Link to GitHub repository
-
-## 📝 Business Context
-
-**Scenario**: Studio Pierrot notices recent shows underperform compared to classics. They need to understand:
-1. Performance gaps (ratings, engagement)
-2. Structural issues (filler, pacing, production quality)
-3. Risk factors for current projects
-4. Recommendations for future productions
-
-## 🛠️ Tech Stack
-
-- **Database**: SQLite (easily portable)
-- **ETL**: Python (pandas, requests)
-- **Analysis**: SQL
-- **Visualization**: Tableau / Power BI / Looker Studio
-- **Version Control**: Git
+### ETL Pipeline (Optional)
+To regenerate the data:
+1.  Navigate to the `etl` directory.
+2.  Run the generation script:
+    ```bash
+    python generate_data_v2.py
+    ```
+3.  Export the dashboard data:
+    ```bash
+    python export_dashboard_data.py
+    ```
 
 ## 📄 License
 
-This is a portfolio project for demonstration purposes.
-
----
-
-**Status**: Phase 1 Complete ✓ | Next: Data Acquisition
+This is a portfolio project created by Dylan Elo.
