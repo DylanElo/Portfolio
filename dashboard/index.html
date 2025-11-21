@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Studio Pierrot BI Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"  rel="stylesheet">
-    <style>body { font-family: 'Inter', sans-serif; background-color: #f3f4f6; }</style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+    </style>
 </head>
+
 <body class="p-6">
     <header class="mb-8">
         <h1 class="text-3xl font-bold text-gray-800">Studio Pierrot Anime Analytics</h1>
@@ -16,40 +23,49 @@
     </header>
     <div id="kpi-container" class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8"></div>
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-        <div class="bg-white p-6 rounded-lg shadow"><h2 class="text-xl font-semibold mb-4">Top Anime by Score</h2><canvas id="scoreChart"></canvas></div>
-        <div class="bg-white p-6 rounded-lg shadow"><h2 class="text-xl font-semibold mb-4">Filler vs Score</h2><canvas id="fillerChart"></canvas></div>
+        <div class="bg-white p-6 rounded-lg shadow">
+            <h2 class="text-xl font-semibold mb-4">Top Anime by Score</h2><canvas id="scoreChart"></canvas>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+            <h2 class="text-xl font-semibold mb-4">Filler vs Score</h2><canvas id="fillerChart"></canvas>
+        </div>
     </div>
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-        <div class="bg-white p-6 rounded-lg shadow"><h2 class="text-xl font-semibold mb-4">Profit Analysis</h2><canvas id="roiChart"></canvas></div>
-        <div class="bg-white p-6 rounded-lg shadow"><h2 class="text-xl font-semibold mb-4">Filler Impact</h2><canvas id="fillerImpactChart"></canvas></div>
+        <div class="bg-white p-6 rounded-lg shadow">
+            <h2 class="text-xl font-semibold mb-4">Profit Analysis</h2><canvas id="roiChart"></canvas>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+            <h2 class="text-xl font-semibold mb-4">Filler Impact</h2><canvas id="fillerImpactChart"></canvas>
+        </div>
     </div>
     <script>
-// NOTE: This was a Chart.js dashboard, NOT Tableau. Tableau is a commercial BI tool, this is a custom web dashboard.
-fetch('/dashboard/data.json')
-    .then(r => {
-        if (!r.ok) throw new Error('HTTP ' + r.status);
-        return r.json();
-    })
-    .then(data => {
-        const anime = data.anime;
-        document.getElementById('kpi-container').innerHTML = `
+        // NOTE: This was a Chart.js dashboard, NOT Tableau. Tableau is a commercial BI tool, this is a custom web dashboard.
+        fetch('/Portfolio/dashboard/data.json')
+            .then(r => {
+                if (!r.ok) throw new Error('HTTP ' + r.status);
+                return r.json();
+            })
+            .then(data => {
+                const anime = data.anime;
+                document.getElementById('kpi-container').innerHTML = `
             <div class="bg-white p-4 rounded shadow border-l-4 border-blue-500"><p class="text-sm text-gray-500">Total Anime</p><p class="text-2xl font-bold text-gray-800">${anime.length}</p></div>
-            <div class="bg-white p-4 rounded shadow border-l-4 border-green-500"><p class="text-sm text-gray-500">Avg Score</p><p class="text-2xl font-bold text-gray-800">${(anime.reduce((s,a)=>s+(a.score||0),0)/anime.length).toFixed(2)}</p></div>
-            <div class="bg-white p-4 rounded shadow border-l-4 border-indigo-500"><p class="text-sm text-gray-500">Total Profit</p><p class="text-2xl font-bold text-gray-800">$${(anime.reduce((s,a)=>s+(a.profit||0),0)/1000000).toFixed(1)}M</p></div>
-            <div class="bg-white p-4 rounded shadow border-l-4 border-purple-500"><p class="text-sm text-gray-500">Avg Filler</p><p class="text-2xl font-bold text-gray-800">${(anime.reduce((s,a)=>s+(a.filler_ratio||0),0)/anime.length*100).toFixed(1)}%</p></div>
+            <div class="bg-white p-4 rounded shadow border-l-4 border-green-500"><p class="text-sm text-gray-500">Avg Score</p><p class="text-2xl font-bold text-gray-800">${(anime.reduce((s, a) => s + (a.score || 0), 0) / anime.length).toFixed(2)}</p></div>
+            <div class="bg-white p-4 rounded shadow border-l-4 border-indigo-500"><p class="text-sm text-gray-500">Total Profit</p><p class="text-2xl font-bold text-gray-800">$${(anime.reduce((s, a) => s + (a.profit || 0), 0) / 1000000).toFixed(1)}M</p></div>
+            <div class="bg-white p-4 rounded shadow border-l-4 border-purple-500"><p class="text-sm text-gray-500">Avg Filler</p><p class="text-2xl font-bold text-gray-800">${(anime.reduce((s, a) => s + (a.filler_ratio || 0), 0) / anime.length * 100).toFixed(1)}%</p></div>
         `;
-        const top = anime.sort((a,b) => b.score - a.score).slice(0,10);
-        new Chart(document.getElementById('scoreChart'), {type: 'bar', data: {labels: top.map(a => a.title.substring(0,15)), datasets: [{label: 'MAL Score', data: top.map(a => a.score), backgroundColor: 'rgba(59, 130, 246, 0.6)'}]}, options: {scales: {y: {beginAtZero: false, min: 6}}}});
-        new Chart(document.getElementById('fillerChart'), {type: 'scatter', data: {datasets: [{label: 'Anime', data: anime.map(a => ({x: (a.filler_ratio*100), y: a.score})), backgroundColor: 'rgba(239, 68, 68, 0.6)'}]}, options: {scales: {x: {title: {display: true, text: 'Filler %'}}, y: {title: {display: true, text: 'Score'}}}}});
-        const topROI = [...anime].sort((a,b) => b.profit - a.profit).slice(0,10);
-        new Chart(document.getElementById('roiChart'), {type: 'bar', data: {labels: topROI.map(a => a.title.substring(0,15)), datasets: [{label: 'Profit ($M)', data: topROI.map(a => (a.profit/1000000).toFixed(1)), backgroundColor: 'rgba(16, 185, 129, 0.6)'}]}});
-        const fillerData = data.filler_analysis;
-        new Chart(document.getElementById('fillerImpactChart'), {type: 'line', data: {labels: fillerData.map(d => d.category), datasets: [{label: 'Avg Score', data: fillerData.map(d => d.avg_score), borderColor: 'blue', yAxisID: 'y'}, {label: 'Drop Rate (%)', data: fillerData.map(d => d.avg_drop_rate), borderColor: 'red', yAxisID: 'y1'}]}, options: {scales: {y: {type: 'linear', position: 'left'}, y1: {type: 'linear', position: 'right', grid: {drawOnChartArea: false}}}}});
-    })
-    .catch(error => {
-        console.error('Error loading data:', error);
-        document.getElementById('kpi-container').innerHTML = '<div class="col-span-4 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded"><strong>Error:</strong> Failed to load data. ' + error.message + '</div>';
-    });
+                const top = anime.sort((a, b) => b.score - a.score).slice(0, 10);
+                new Chart(document.getElementById('scoreChart'), { type: 'bar', data: { labels: top.map(a => a.title.substring(0, 15)), datasets: [{ label: 'MAL Score', data: top.map(a => a.score), backgroundColor: 'rgba(59, 130, 246, 0.6)' }] }, options: { scales: { y: { beginAtZero: false, min: 6 } } } });
+                new Chart(document.getElementById('fillerChart'), { type: 'scatter', data: { datasets: [{ label: 'Anime', data: anime.map(a => ({ x: (a.filler_ratio * 100), y: a.score })), backgroundColor: 'rgba(239, 68, 68, 0.6)' }] }, options: { scales: { x: { title: { display: true, text: 'Filler %' } }, y: { title: { display: true, text: 'Score' } } } } });
+                const topROI = [...anime].sort((a, b) => b.profit - a.profit).slice(0, 10);
+                new Chart(document.getElementById('roiChart'), { type: 'bar', data: { labels: topROI.map(a => a.title.substring(0, 15)), datasets: [{ label: 'Profit ($M)', data: topROI.map(a => (a.profit / 1000000).toFixed(1)), backgroundColor: 'rgba(16, 185, 129, 0.6)' }] } });
+                const fillerData = data.filler_analysis;
+                new Chart(document.getElementById('fillerImpactChart'), { type: 'line', data: { labels: fillerData.map(d => d.category), datasets: [{ label: 'Avg Score', data: fillerData.map(d => d.avg_score), borderColor: 'blue', yAxisID: 'y' }, { label: 'Drop Rate (%)', data: fillerData.map(d => d.avg_drop_rate), borderColor: 'red', yAxisID: 'y1' }] }, options: { scales: { y: { type: 'linear', position: 'left' }, y1: { type: 'linear', position: 'right', grid: { drawOnChartArea: false } } } } });
+            })
+            .catch(error => {
+                console.error('Error loading data:', error);
+                document.getElementById('kpi-container').innerHTML = '<div class="col-span-4 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded"><strong>Error:</strong> Failed to load data. ' + error.message + '</div>';
+            });
     </script>
 </body>
+
 </html>
