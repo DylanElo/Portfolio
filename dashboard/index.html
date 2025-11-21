@@ -192,7 +192,10 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
                 <div class="glass lg:col-span-2 p-6 fade-in">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">💎 ROI vs Filler Percentage</h3>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">💎 The "Filler Trap": ROI vs Filler Percentage
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-3">Higher filler content correlates with lower ROI. Bubble size =
+                        total views.</p>
                     <div class="chart-container">
                         <canvas id="scatterChart"></canvas>
                     </div>
@@ -249,6 +252,9 @@
             })
             .then(data => {
                 console.log('Data loaded successfully:', data);
+
+                // Preprocess data: aggregate franchises
+                data = aggregateFranchises(data);
                 rawData = data;
 
                 // Hide loading screen
@@ -268,6 +274,89 @@
                     </div>
                 `;
             });
+
+        // Aggregate franchise data
+        function aggregateFranchises(data) {
+            const franchiseMap = {
+                'Naruto Franchise': ['Naruto', 'Naruto: Shippuuden'],
+                'Bleach Franchise': ['Bleach', 'Bleach: Sennen Kessen-hen']
+            };
+
+            // Aggregate daily trend data
+            if (data.daily_anime_trend) {
+                const aggregated = {};
+                data.daily_anime_trend.forEach(entry => {
+                    let title = entry.title;
+                    for (const [franchise, titles] of Object.entries(franchiseMap)) {
+                        if (titles.includes(title)) {
+                            title = franchise;
+                            break;
+                        }
+                    }
+                    const key = `${entry.date}_${title}`;
+                    if (!aggregated[key]) {
+                        aggregated[key] = { date: entry.date, title, views: 0, revenue: 0 };
+                    }
+                    aggregated[key].views += (entry.views || 0);
+                    aggregated[key].revenue += (entry.revenue || 0);
+                });
+                data.daily_anime_trend = Object.values(aggregated);
+            }
+
+            // Aggregate anime performance data
+            if (data.anime_performance) {
+                const aggregated = {};
+                data.anime_performance.forEach(anime => {
+                    let title = anime.title;
+                    for (const [franchise, titles] of Object.entries(franchiseMap)) {
+                        if (titles.includes(title)) {
+                            title = franchise;
+                            break;
+                        }
+                    }
+                    if (!aggregated[title]) {
+                        aggregated[title] = {
+                            title,
+                            views: 0,
+                            revenue: 0,
+                            sentiment: 0,
+                            roi: 0,
+                            count: 0
+                        };
+                    }
+                    aggregated[title].views += (anime.views || 0);
+                    aggregated[title].revenue += (anime.revenue || 0);
+                    aggregated[title].sentiment += (anime.sentiment || anime.avg_sentiment || 0);
+                    aggregated[title].roi += (anime.roi || 0);
+                    aggregated[title].count++;
+                });
+
+                // Average sentiment and ROI
+                data.anime_performance = Object.values(aggregated).map(anime => ({
+                    ...anime,
+                    sentiment: anime.sentiment / anime.count,
+                    roi: anime.roi / anime.count
+                }));
+            }
+
+            // Update anime list
+            if (data.anime_list) {
+                const uniqueTitles = new Set();
+                data.anime_list.forEach(anime => {
+                    let title = anime.title || anime;
+                    for (const [franchise, titles] of Object.entries(franchiseMap)) {
+                        if (titles.includes(title)) {
+                            title = franchise;
+                            break;
+                        }
+                    }
+                    uniqueTitles.add(title);
+                });
+                data.anime_list = Array.from(uniqueTitles).map(title => ({ title }));
+            }
+
+            return data;
+        }
 
         function initDashboard(data) {
             // Populate anime filter
@@ -637,8 +726,8 @@
                         </td>
                         <td class="px-6 py-4 text-sm text-right font-semibold text-gray-700">${formatCurrency(anime.revenue || anime.total_revenue || 0)}</td>
                         <td class="px-6 py-4 text-sm text-right text-gray-700">${formatNumber(anime.views || anime.total_views || 0)}</td>
-                        <td class="px-6 py-4 text-sm text-center font-semibold ${sentimentClass}">${sentiment.toFixed(2)}</td>
-                        <td class="px-6 py-4 text-sm text-center font-semibold ${roiClass}">${(anime.roi || 0).toFixed(2)}x</td>
+                        <td class="px-6 py-4 text-sm text-center font-semibold ${sentimentClass}">${(sentiment || 0).toFixed(2)}</td>
+                        <td class="px-6 py-4 text-sm text-center font-semibold ${roiClass}">${((anime.roi || 0).toFixed(2))}x</td>
                     </tr>
                 `;
             }).join('');
