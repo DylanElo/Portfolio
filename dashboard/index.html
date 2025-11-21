@@ -220,49 +220,360 @@
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200" id="anime-table-body">
                         <!-- Rows injected via JS -->
-                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${anime.title}</td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 text-right">
-                            ${formatCurrency(anime.revenue)}</td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 text-right">
-                            ${formatNumber(anime.views)}</td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-center">
-                            <span
-                                class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${anime.sentiment > 0.5 ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800'}">
-                                ${anime.sentiment.toFixed(2)}
-                            </span>
-                        </td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 text-center">
-                            ${(anime.completion_rate *
-                            100).toFixed(1)}%</td>
-                        </tr>
-                        `).join('');
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        let rawData = null;
+        let charts = {};
+
+        // Load data from the root-relative path to ensure correctness
+        fetch('/dashboard/data.json')
+            .then(response => response.json())
+            .then(data => {
+                rawData = data;
+                initDashboard(data);
+            })
+            .catch(err => console.error('Error loading data:', err));
+
+        function formatCurrency(value) {
+            if (value >= 1000000) return '$' + (value / 1000000).toFixed(1) + 'M';
+            if (value >= 1000) return '$' + (value / 1000).toFixed(1) + 'K';
+            return '$' + value.toFixed(0);
+        }
+
+        function formatNumber(value) {
+            if (value >= 1000000) return (value / 1000000).toFixed(1) + 'M';
+            if (value >= 1000) return (value / 1000).toFixed(1) + 'K';
+            return value.toLocaleString();
+        }
+
+        function initDashboard(data) {
+            // Populate Dropdowns
+            const animeSelect = document.getElementById('anime-select');
+            data.anime_list.forEach(anime => {
+                const option = document.createElement('option');
+                option.value = anime.title;
+                option.textContent = anime.title;
+                animeSelect.appendChild(option);
+            });
+
+            // Populate Platform Filters
+            const platformContainer = document.getElementById('platform-filters');
+            data.platform_split.forEach(p => {
+                const div = document.createElement('div');
+                div.className = 'flex items-center space-x-2 text-sm text-gray-300 cursor-pointer';
+                div.innerHTML = `
+                    <input type="checkbox" checked value="${p.platform_name}" class="form-checkbox text-blue-500 rounded bg-slate-700 border-none platform-checkbox">
+                    <span>${p.platform_name}</span>
+                `;
+                platformContainer.appendChild(div);
+            });
+
+            // Add Event Listeners
+            document.getElementById('date-range').addEventListener('change', updateDashboard);
+            document.getElementById('anime-select').addEventListener('change', updateDashboard);
+            document.querySelectorAll('.platform-checkbox').forEach(cb => cb.addEventListener('change', updateDashboard));
+
+            // Initial Render
+            renderKPIs(data.kpis);
+            renderTrendChart(data.daily_trend); // Initial load uses aggregated trend
+            renderPlatformChart(data.platform_split);
+            renderScatterChart(data.scatter_plot);
+            renderHeatmapChart(data.heatmap);
+            renderAnimeTable(data.anime_performance);
+        }
+
+        function updateDashboard() {
+            const dateRange = document.getElementById('date-range').value;
+            const selectedAnime = document.getElementById('anime-select').value;
+            const selectedPlatforms = Array.from(document.querySelectorAll('.platform-checkbox:checked')).map(cb => cb.value);
+
+            console.log("Filtering:", { dateRange, selectedAnime, selectedPlatforms });
+
+            // --- Trend Data (date & anime) ---
+            const filteredTrend = rawData.daily_anime_trend.filter(d => {
+                const date = new Date(d.date);
+                const year = date.getFullYear();
+                if (dateRange === '2024' && year !== 2024) return false;
+                if (dateRange === '2023' && year !== 2023) return false;
+                if (selectedAnime !== 'all' && d.title !== selectedAnime) return false;
+                return true;
+            });
+            const aggregatedTrend = {};
+            filteredTrend.forEach(d => {
+                if (!aggregatedTrend[d.date]) {
+                    aggregatedTrend[d.date] = { date: d.date, views: 0, revenue: 0 };
+                }
+                aggregatedTrend[d.date].views += d.views;
+                aggregatedTrend[d.date].revenue += d.revenue;
+            });
+            const finalTrendData = Object.values(aggregatedTrend).sort((a, b) => new Date(a.date) - new Date(b.date));
+            updateTrendChart(finalTrendData);
+
+            // --- Platform Revenue Split (platform filter) ---
+            const platformData = rawData.platform_split.filter(p => selectedPlatforms.includes(p.platform_name));
+            updatePlatformChart(platformData);
+
+            // --- Heatmap (no platform filter, but keep current data) ---
+            updateHeatmapChart(rawData.heatmap);
+
+            // --- Anime Table (anime filter) ---
+            const tableData = selectedAnime === 'all' ? rawData.anime_performance : rawData.anime_performance.filter(a => a.title === selectedAnime);
+            renderAnimeTable(tableData);
+        }
+
+        function renderKPIs(kpis) {
+            const container = document.getElementById('kpi-container');
+            container.innerHTML = `
+                <div class="card border-l-4 border-blue-500">
+                    <p class="kpi-label">Total Revenue</p>
+                    <p class="kpi-value">${formatCurrency(kpis.total_revenue)}</p>
+                    <p class="text-xs text-green-500 mt-1">↑ 12.5% vs last year</p>
+                </div>
+                <div class="card border-l-4 border-indigo-500">
+                    <p class="kpi-label">Total Views</p>
+                    <p class="kpi-value">${formatNumber(kpis.total_views)}</p>
+                    <p class="text-xs text-green-500 mt-1">↑ 8.2% vs last year</p>
+                </div>
+                <div class="card border-l-4 border-purple-500">
+                    <p class="kpi-label">Total Watch Time</p>
+                    <p class="kpi-value">${formatNumber(kpis.total_watch_time / 60)} hrs</p>
+                    <p class="text-xs text-gray-400 mt-1">Avg 22m per session</p>
+                </div>
+                <div class="card border-l-4 border-emerald-500">
+                    <p class="kpi-label">Avg Sentiment</p>
+                    <p class="kpi-value">${kpis.avg_sentiment.toFixed(2)}</p>
+                    <p class="text-xs text-gray-400 mt-1">Scale: -1.0 to 1.0</p>
+                </div>
+            `;
+        }
+
+        function renderTrendChart(trendData) {
+            const ctx = document.getElementById('trendChart').getContext('2d');
+            charts.trend = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: trendData.map(d => d.date),
+                    datasets: [
+                        {
+                            label: 'Revenue ($)',
+                            data: trendData.map(d => d.revenue),
+                            borderColor: '#3b82f6',
+                            backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                            yAxisID: 'y',
+                            tension: 0.4,
+                            fill: true,
+                            pointRadius: 0,
+                            pointHoverRadius: 4
+                        },
+                        {
+                            label: 'Views',
+                            data: trendData.map(d => d.views),
+                            borderColor: '#8b5cf6',
+                            backgroundColor: 'rgba(139, 92, 246, 0.0)',
+                            yAxisID: 'y1',
+                            tension: 0.4,
+                            borderDash: [5, 5],
+                            pointRadius: 0,
+                            pointHoverRadius: 4
                         }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    interaction: { mode: 'index', intersect: false },
+                    scales: {
+                        y: { type: 'linear', display: true, position: 'left', grid: { display: false } },
+                        y1: { type: 'linear', display: true, position: 'right', grid: { display: false } },
+                        x: { grid: { display: false }, ticks: { maxTicksLimit: 10 } }
+                    },
+                    plugins: { legend: { position: 'top' } }
+                }
+            });
+        }
 
-                        function refreshData() {
-                        // Simulate refresh
-                        const btn = document.querySelector('button[onclick="refreshData()"]');
-                        const originalText = btn.innerHTML;
-                        btn.innerHTML = '<svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
-                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4">
-                            </circle>
-                            ['Total Views', rawData.kpis.total_views],
-                            ['Total Watch Time (min)', rawData.kpis.total_watch_time],
-                            ['Avg Sentiment', rawData.kpis.avg_sentiment]
-                            ];
+        function updateTrendChart(newData) {
+            if (charts.trend) {
+                charts.trend.data.labels = newData.map(d => d.date);
+                charts.trend.data.datasets[0].data = newData.map(d => d.revenue);
+                charts.trend.data.datasets[1].data = newData.map(d => d.views);
+                charts.trend.update();
+            }
+        }
 
-                            let csvContent = "data:text/csv;charset=utf-8,"
-                            + rows.map(e => e.join(",")).join("\n");
+        function renderPlatformChart(platformData) {
+            const ctx = document.getElementById('platformChart').getContext('2d');
+            charts.platform = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: platformData.map(d => d.platform_name),
+                    datasets: [{
+                        data: platformData.map(d => d.revenue),
+                        backgroundColor: ['#3b82f6', '#ef4444', '#10b981', '#f59e0b', '#8b5cf6'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { position: 'bottom' } },
+                    cutout: '70%'
+                }
+            });
+        }
 
-                            const encodedUri = encodeURI(csvContent);
-                            const link = document.createElement("a");
-                            link.setAttribute("href", encodedUri);
-                            link.setAttribute("download", "studio_pierrot_bi_report.csv");
-                            document.body.appendChild(link);
-                            link.click();
-                            document.body.removeChild(link);
+        function updatePlatformChart(platformData) {
+            if (charts.platform) {
+                charts.platform.data.labels = platformData.map(d => d.platform_name);
+                charts.platform.data.datasets[0].data = platformData.map(d => d.revenue);
+                charts.platform.update();
+            } else {
+                renderPlatformChart(platformData);
+            }
+        }
+
+        function renderScatterChart(scatterData) {
+            const ctx = document.getElementById('scatterChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bubble',
+                data: {
+                    datasets: [{
+                        label: 'Anime Titles',
+                        data: scatterData.map(d => ({
+                            x: d.filler_percentage,
+                            y: d.roi_percentage,
+                            r: Math.sqrt(d.total_views) / 500, // Scale bubble size
+                            title: d.title // Custom property
+                        })),
+                        backgroundColor: scatterData.map(d => d.roi_percentage > 0 ? 'rgba(16, 185, 129, 0.6)' : 'rgba(239, 68, 68, 0.6)'),
+                        borderColor: scatterData.map(d => d.roi_percentage > 0 ? '#10b981' : '#ef4444'),
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        tooltip: {
+                            callbacks: {
+                                label: function (context) {
+                                    const point = context.raw;
+                                    return `${point.title}: ${point.x}% Filler, ${point.y.toFixed(0)}% ROI`;
+                                }
                             }
-                            </script>
+                        },
+                        legend: { display: false }
+                    },
+                    scales: {
+                        x: {
+                            title: { display: true, text: 'Filler Percentage (%)' },
+                            min: -5, max: 100
+                        },
+                        y: {
+                            title: { display: true, text: 'ROI Percentage (%)' },
+                            grid: { color: '#f3f4f6' }
+                        }
+                    }
+                }
+            });
+        }
+
+        function renderHeatmapChart(heatmapData) {
+            const ctx = document.getElementById('heatmapChart').getContext('2d');
+            charts.heatmap = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: heatmapData.map(d => d.day_name),
+                    datasets: [{
+                        label: 'Total Views',
+                        data: heatmapData.map(d => d.views),
+                        backgroundColor: heatmapData.map(d => {
+                            const max = Math.max(...heatmapData.map(x => x.views));
+                            const alpha = (d.views / max).toFixed(2);
+                            return `rgba(59, 130, 246, ${alpha})`;
+                        }),
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        y: { beginAtZero: true, display: false },
+                        x: { grid: { display: false } }
+                    }
+                }
+            });
+        }
+
+        function updateHeatmapChart(heatmapData) {
+            if (charts.heatmap) {
+                charts.heatmap.data.labels = heatmapData.map(d => d.day_name);
+                charts.heatmap.data.datasets[0].data = heatmapData.map(d => d.views);
+                charts.heatmap.update();
+            } else {
+                renderHeatmapChart(heatmapData);
+            }
+        }
+
+        function renderAnimeTable(animeData) {
+            const tbody = document.getElementById('anime-table-body');
+            tbody.innerHTML = animeData.slice(0, 10).map(anime => `
+                <tr>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${anime.title}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 text-right">${formatCurrency(anime.revenue)}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 text-right">${formatNumber(anime.views)}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-center">
+                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${anime.sentiment > 0.5 ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800'}">
+                            ${anime.sentiment.toFixed(2)}
+                        </span>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 text-center">${(anime.completion_rate * 100).toFixed(1)}%</td>
+                </tr>
+            `).join('');
+        }
+
+        function refreshData() {
+            // Simulate refresh
+            const btn = document.querySelector('button[onclick="refreshData()"]');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Refreshing...';
+
+            setTimeout(() => {
+                location.reload();
+            }, 1000);
+        }
+
+        function exportReport() {
+            // Simple CSV export of KPI data
+            if (!rawData) return;
+
+            const rows = [
+                ['Metric', 'Value'],
+                ['Total Revenue', rawData.kpis.total_revenue],
+                ['Total Views', rawData.kpis.total_views],
+                ['Total Watch Time (min)', rawData.kpis.total_watch_time],
+                ['Avg Sentiment', rawData.kpis.avg_sentiment]
+            ];
+
+            let csvContent = "data:text/csv;charset=utf-8,"
+                + rows.map(e => e.join(",")).join("\n");
+
+            const encodedUri = encodeURI(csvContent);
+            const link = document.createElement("a");
+            link.setAttribute("href", encodedUri);
+            link.setAttribute("download", "studio_pierrot_bi_report.csv");
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
 </body>
 
 </html>
