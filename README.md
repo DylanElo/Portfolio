@@ -54,6 +54,16 @@ The data warehouse is designed for performance and analytical flexibility.
 *   **`dim_date`**: Date dimension for time-series analysis.
 *   **`fact_daily_performance`**: Granular daily metrics (views, revenue, sentiment) for 2 years.
 
+## 📚 Strategic Documents
+
+This project includes comprehensive business documentation demonstrating the full BI workflow:
+
+- **[Executive Requirements](docs/executive_requirements.md)**: High-level business objectives and success metrics defined by studio leadership.
+- **[Stakeholder Requirements](docs/stakeholder_requirements.md)**: Detailed analytical needs from Production, Marketing, and Finance teams.
+- **[Strategy Document](docs/strategy_document.md)**: Technical implementation roadmap and BI approach.
+
+These documents showcase the **requirements gathering** and **stakeholder alignment** process that precedes any data project.
+
 ## 🛠️ Setup & Usage
 
 ### Local Development

@@ -28,17 +28,32 @@
                 <li><a href="index.html#contact">Contact</a></li>
             </ul>
         </nav>
-        <span class="tech-stack-tag">Business Intelligence</span>
-        </div>
-        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="section" style="padding-top: 8rem;">
+            <div class="container">
+                <h1 class="hero-title">Studio Pierrot BI Analysis</h1>
+                <p class="hero-subtitle">
+                    A strategic Business Intelligence project analyzing 10 iconic anime franchises to identify
+                    actionable insights for improving production ROI.
+                </p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+                    <span class="tech-stack-tag">Python ETL</span>
+                    <span class="tech-stack-tag">SQLite</span>
+                    <span class="tech-stack-tag">Chart.js</span>
+                    <span class="tech-stack-tag">Business Intelligence</span>
+                </div>
+            </div>
         </section>
 
         <!-- Live Dashboard -->
         <section class="section">
             <div class="container">
-                <h2 class="section-title">Live Dashboard</h2>
+                <h2 class="section-title">📊 Live Dashboard</h2>
                 <p style="text-align: center; color: #cbd5e1; margin-top: 1rem; margin-bottom: 2rem;">
-                    Interactive dashboard visualizing key metrics and insights.
+                    Interactive dashboard visualizing key metrics and insights with real-time filtering.
                 </p>
                 <iframe src="dashboard/index.html" class="dashboard-container" title="Studio Pierrot BI Dashboard"
                     loading="lazy">
@@ -46,10 +61,75 @@
             </div>
         </section>
 
+        <!-- Strategic Documents -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">📚 Strategic Documents</h2>
+                <p style="text-align: center; color: #cbd5e1; margin-top: 1rem; margin-bottom: 2rem;">
+                    Complete business documentation demonstrating the full BI workflow from requirements to strategy.
+                </p>
+                <div class="projects-grid" style="margin-top: 3rem;">
+                    <div class="project-card">
+                        <div class="project-info">
+                            <h3>📋 Executive Requirements</h3>
+                            <p>
+                                <strong>Purpose:</strong> High-level business objectives and success metrics defined by
+                                studio leadership.
+                                <br><br>
+                                <strong>Contents:</strong> Strategic goals, key performance indicators, and
+                                executive-level questions
+                                that drive the entire analysis.
+                            </p>
+                            <div style="margin-top: 1.5rem;">
+                                <a href="docs/executive_requirements.md" class="btn btn-primary" target="_blank">View
+                                    Document</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-info">
+                            <h3>👥 Stakeholder Requirements</h3>
+                            <p>
+                                <strong>Purpose:</strong> Detailed analytical needs from Production, Marketing, and
+                                Finance teams.
+                                <br><br>
+                                <strong>Contents:</strong> Specific questions from each department, required metrics,
+                                and data granularity needs.
+                            </p>
+                            <div style="margin-top: 1.5rem;">
+                                <a href="docs/stakeholder_requirements.md" class="btn btn-primary" target="_blank">View
+                                    Document</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-info">
+                            <h3>🎯 Strategy Document</h3>
+                            <p>
+                                <strong>Purpose:</strong> Technical implementation roadmap and BI approach.
+                                <br><br>
+                                <strong>Contents:</strong> Data sources, tech stack selection, pipeline architecture,
+                                and project timeline.
+                            </p>
+                            <div style="margin-top: 1.5rem;">
+                                <a href="docs/strategy_document.md" class="btn btn-primary" target="_blank">View
+                                    Document</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Strategic Recommendations -->
         <section class="section">
             <div class="container">
-                <h2 class="section-title">Strategic Recommendations</h2>
+                <h2 class="section-title">💡 Strategic Recommendations</h2>
+                <p style="text-align: center; color: #cbd5e1; margin-top: 1rem; margin-bottom: 2rem;">
+                    Data-driven insights translated into actionable business strategies.
+                </p>
                 <div class="projects-grid" style="margin-top: 3rem;">
                     <div class="project-card">
                         <div class="project-info">
@@ -57,7 +137,8 @@
                             <p>
                                 <strong>Insight:</strong> Data confirms a direct correlation: titles with >40% filler
                                 (e.g., Boruto) see a <strong>35% drop in ROI</strong> compared to faithful adaptations.
-                                <br><strong>Action:</strong> Cap filler content at 10% max. Invest in seasonal breaks
+                                <br><br><strong>Action:</strong> Cap filler content at 10% max. Invest in seasonal
+                                breaks
                                 rather than low-quality padding.
                             </p>
                         </div>
@@ -69,7 +150,7 @@
                             <p>
                                 <strong>Insight:</strong> "Bleach: TYBW" (0% filler, high budget) achieved <strong>3x
                                     the revenue per episode</strong> of long-running weekly formats.
-                                <br><strong>Action:</strong> Pivot production model to high-budget, 12-24 episode
+                                <br><br><strong>Action:</strong> Pivot production model to high-budget, 12-24 episode
                                 seasonal cours.
                             </p>
                         </div>
@@ -81,7 +162,7 @@
                             <p>
                                 <strong>Insight:</strong> 65% of revenue now comes from international streaming
                                 (Crunchyroll/Netflix), yet marketing spend is still 80% domestic Japan.
-                                <br><strong>Action:</strong> Reallocate marketing budget to target global digital
+                                <br><br><strong>Action:</strong> Reallocate marketing budget to target global digital
                                 channels immediately.
                             </p>
                         </div>
@@ -93,11 +174,11 @@
         <!-- Technical Implementation -->
         <section class="section">
             <div class="container">
-                <h2 class="section-title">Technical Implementation</h2>
+                <h2 class="section-title">⚙️ Technical Implementation</h2>
                 <div class="about-content">
                     <div class="about-text">
                         <h3>Architecture</h3>
-                        <p>The project follows a classic ELT (Extract, Load, Transform) pipeline:</p>
+                        <p>The project follows a complete end-to-end BI pipeline:</p>
                         <ul class="list-disc pl-6 space-y-2 mb-6 text-gray-300">
                             <li><strong>Advanced Data Modeling:</strong> Implemented a robust <strong>Star
                                     Schema</strong> (Facts & Dimensions) in SQLite to handle complex analytical queries.
@@ -106,27 +187,28 @@
                                 of realistic daily performance data, including seasonality, marketing campaigns, and
                                 platform splits.</li>
                             <li><strong>ETL Pipeline:</strong> Python-based ETL process to extract, transform, and load
-                                (ETL) data, aggregating it into a high-performance JSON structure for the frontend.</li>
-                            <li><strong>Interactive "XXL" Dashboard:</strong> A feature-rich dashboard built with
+                                data, aggregating it into a high-performance JSON structure for the frontend.</li>
+                            <li><strong>Interactive Dashboard:</strong> A feature-rich dashboard built with
                                 <strong>Chart.js</strong> and <strong>Tailwind CSS</strong>, featuring multi-axis trend
-                                lines, heatmaps, and dynamic filtering by region and platform.
+                                lines, heatmaps, and dynamic filtering.
                             </li>
                         </ul>
                         <div style="margin-top: 2rem;">
-                            <a href="https://github.com/DylanElo/Portfolio" class="btn btn-primary">View Source Code on
+                            <a href="https://github.com/DylanElo/Portfolio" class="btn btn-primary" target="_blank">View
+                                Source Code on
                                 GitHub</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        </main>
+    </main>
 
-        <footer class="footer">
-            <p>&copy; 2024 Dylan Elo. All rights reserved.</p>
-        </footer>
+    <footer class="footer">
+        <p>&copy; 2024 Dylan Elo. All rights reserved.</p>
+    </footer>
 
-        <script type="module" src="/Portfolio/main.js"></script>
+    <script type="module" src="/Portfolio/main.js"></script>
 </body>
 
 </html>

@@ -11,11 +11,19 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8fafc;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
         }
 
         .sidebar {
-            width: 260px;
+            width: 280px;
             background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
             color: white;
             height: 100vh;
@@ -23,32 +31,32 @@
             left: 0;
             top: 0;
             overflow-y: auto;
+            box-shadow: 4px 0 20px rgba(0, 0, 0, 0.2);
         }
 
         .main-content {
-            margin-left: 260px;
+            margin-left: 280px;
             padding: 2rem;
             min-height: 100vh;
         }
 
-        .card {
-            background: white;
-            border-radius: 12px;
-            padding: 1.5rem;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-        }
-
         .kpi-card {
             background: white;
-            border-radius: 12px;
+            border-radius: 16px;
             padding: 1.5rem;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-            border-left: 4px solid;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .kpi-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
         }
 
         .chart-container {
             position: relative;
-            height: 300px;
+            height: 350px;
             width: 100%;
         }
 
@@ -64,91 +72,167 @@
             background: #334155;
             border-radius: 3px;
         }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .filter-label {
+            transition: all 0.2s ease;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 8px;
+        }
+
+        .filter-label:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.6s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 
 <body>
-    <div class="sidebar p-6">
-        <h1 class="text-2xl font-bold mb-8 text-blue-400">Studio Pierrot BI</h1>
-
-        <div class="mb-8">
-            <h3 class="text-xs uppercase text-gray-400 font-semibold mb-4 tracking-wider">Filters</h3>
-
-            <div class="mb-4">
-                <label class="block text-sm mb-2 text-gray-300">Date Range</label>
-                <select id="dateFilter" class="w-full bg-slate-700 border-none rounded p-2 text-sm text-white">
-                    <option value="all">All Time</option>
-                    <option value="2024">2024</option>
-                    <option value="2023">2023</option>
-                </select>
-            </div>
-
-            <div class="mb-4">
-                <label class="block text-sm mb-2 text-gray-300">Anime</label>
-                <select id="animeFilter" class="w-full bg-slate-700 border-none rounded p-2 text-sm text-white">
-                    <option value="all">All Titles</option>
-                </select>
-            </div>
-
-            <div class="mb-4">
-                <label class="block text-sm mb-2 text-gray-300">Platform</label>
-                <div id="platformFilters" class="space-y-2"></div>
-            </div>
+    <div id="loadingScreen" class="loading">
+        <div class="text-center">
+            <div class="text-3xl mb-4">📊</div>
+            <div>Loading Dashboard...</div>
         </div>
     </div>
 
-    <div class="main-content">
-        <div class="mb-8">
-            <h2 class="text-3xl font-bold text-gray-900">Executive Dashboard</h2>
-            <p class="text-gray-500 mt-1">Strategic insights to optimize production ROI</p>
+    <div id="dashboardContent" style="display: none;">
+        <div class="sidebar p-6">
+            <h1 class="text-3xl font-bold mb-2 gradient-text" style="-webkit-text-fill-color: white;">Studio Pierrot
+            </h1>
+            <p class="text-sm text-gray-400 mb-8">Business Intelligence Dashboard</p>
+
+            <div class="mb-8">
+                <h3 class="text-xs uppercase text-gray-400 font-semibold mb-4 tracking-wider">Filters</h3>
+
+                <div class="mb-4">
+                    <label class="block text-sm mb-2 text-gray-300">Date Range</label>
+                    <select id="dateFilter"
+                        class="w-full bg-slate-700 border-none rounded-lg p-2.5 text-sm text-white focus:ring-2 focus:ring-purple-500 transition">
+                        <option value="all">All Time</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                    </select>
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-sm mb-2 text-gray-300">Anime Title</label>
+                    <select id="animeFilter"
+                        class="w-full bg-slate-700 border-none rounded-lg p-2.5 text-sm text-white focus:ring-2 focus:ring-purple-500 transition">
+                        <option value="all">All Titles</option>
+                    </select>
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-sm mb-2 text-gray-300">Platform</label>
+                    <div id="platformFilters" class="space-y-2"></div>
+                </div>
+
+                <button id="resetFilters"
+                    class="w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold py-2.5 px-4 rounded-lg transition mt-4">
+                    Reset Filters
+                </button>
+            </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8" id="kpiContainer"></div>
+        <div class="main-content">
+            <div class="mb-8 fade-in">
+                <h2 class="text-4xl font-bold text-white mb-2">Executive Dashboard</h2>
+                <p class="text-purple-100">Strategic insights to optimize production ROI</p>
+            </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
-            <div class="card lg:col-span-2">
-                <h3 class="text-lg font-semibold text-gray-800 mb-4">Revenue & Views Trend</h3>
-                <div class="chart-container">
-                    <canvas id="trendChart"></canvas>
-                </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8 fade-in" id="kpiContainer">
+                <!-- KPIs will be inserted here -->
             </div>
-            <div class="card">
-                <h3 class="text-lg font-semibold text-gray-800 mb-4">Platform Split</h3>
-                <div class="chart-container">
-                    <canvas id="platformChart"></canvas>
-                </div>
-            </div>
-        </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
-            <div class="card lg:col-span-2">
-                <h3 class="text-lg font-semibold text-gray-800 mb-4">ROI vs Filler %</h3>
-                <div class="chart-container">
-                    <canvas id="scatterChart"></canvas>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+                <div class="glass lg:col-span-2 p-6 fade-in">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">📈 Revenue & Views Trend</h3>
+                    <div class="chart-container">
+                        <canvas id="trendChart"></canvas>
+                    </div>
+                </div>
+                <div class="glass p-6 fade-in">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">🎯 Platform Distribution</h3>
+                    <div class="chart-container">
+                        <canvas id="platformChart"></canvas>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <h3 class="text-lg font-semibold text-gray-800 mb-4">Weekly Heatmap</h3>
-                <div class="chart-container">
-                    <canvas id="heatmapChart"></canvas>
-                </div>
-            </div>
-        </div>
 
-        <div class="card">
-            <h3 class="text-lg font-semibold text-gray-800 mb-4">Anime Performance</h3>
-            <div class="overflow-x-auto">
-                <table class="min-w-full divide-y divide-gray-200">
-                    <thead class="bg-gray-50">
-                        <tr>
-                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Title</th>
-                            <th class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase">Revenue</th>
-                            <th class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase">Views</th>
-                            <th class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase">Sentiment</th>
-                        </tr>
-                    </thead>
-                    <tbody id="animeTableBody" class="bg-white divide-y divide-gray-200"></tbody>
-                </table>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+                <div class="glass lg:col-span-2 p-6 fade-in">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">💎 ROI vs Filler Percentage</h3>
+                    <div class="chart-container">
+                        <canvas id="scatterChart"></canvas>
+                    </div>
+                </div>
+                <div class="glass p-6 fade-in">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">📅 Weekly Engagement</h3>
+                    <div class="chart-container">
+                        <canvas id="heatmapChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass p-6 fade-in">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">🏆 Top Anime Performance</h3>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full">
+                        <thead class="bg-gradient-to-r from-purple-50 to-indigo-50">
+                            <tr>
+                                <th
+                                    class="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                                    Title</th>
+                                <th
+                                    class="px-6 py-4 text-right text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                                    Revenue</th>
+                                <th
+                                    class="px-6 py-4 text-right text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                                    Views</th>
+                                <th
+                                    class="px-6 py-4 text-center text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                                    Sentiment</th>
+                                <th
+                                    class="px-6 py-4 text-center text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                                    ROI</th>
+                            </tr>
+                        </thead>
+                        <tbody id="animeTableBody" class="bg-white divide-y divide-gray-200">
+                            <!-- Table rows will be inserted here -->
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
@@ -157,42 +241,78 @@
         let rawData = null;
         let charts = {};
 
+        // Load data and initialize dashboard
         fetch('data.json')
             .then(res => {
-                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                if (!res.ok) throw new Error(`HTTP ${res.status}: Failed to load data`);
                 return res.json();
             })
             .then(data => {
+                console.log('Data loaded successfully:', data);
                 rawData = data;
+
+                // Hide loading screen
+                document.getElementById('loadingScreen').style.display = 'none';
+                document.getElementById('dashboardContent').style.display = 'block';
+
                 initDashboard(data);
             })
             .catch(err => {
-                console.error('Error:', err);
-                document.body.innerHTML = '<div class="p-8 text-center"><h1 class="text-2xl text-red-600">Error: ' + err.message + '</h1></div>';
+                console.error('Error loading data:', err);
+                document.getElementById('loadingScreen').innerHTML = `
+                    <div class="text-center">
+                        <div class="text-6xl mb-4">⚠️</div>
+                        <div class="text-2xl font-bold mb-2">Error Loading Dashboard</div>
+                        <div class="text-lg">${err.message}</div>
+                        <div class="mt-4 text-sm text-gray-300">Please check the console for more details</div>
+                    </div>
+                `;
             });
 
         function initDashboard(data) {
-            const animeFilter = document.getElementById('animeFilter');
-            data.anime_list.forEach(anime => {
-                const option = document.createElement('option');
-                option.value = anime.title;
-                option.textContent = anime.title;
-                animeFilter.appendChild(option);
-            });
+            // Populate anime filter
+            if (data.anime_list && Array.isArray(data.anime_list)) {
+                const animeFilter = document.getElementById('animeFilter');
+                data.anime_list.forEach(anime => {
+                    const option = document.createElement('option');
+                    option.value = anime.title || anime;
+                    option.textContent = anime.title || anime;
+                    animeFilter.appendChild(option);
+                });
+            }
 
-            const platformContainer = document.getElementById('platformFilters');
-            data.platform_split.forEach(platform => {
-                const label = document.createElement('label');
-                label.className = 'flex items-center space-x-2 text-sm text-gray-300 cursor-pointer';
-                label.innerHTML = '<input type="checkbox" checked value="' + platform.platform_name + '" class="platform-checkbox rounded"><span>' + platform.platform_name + '</span>';
-                platformContainer.appendChild(label);
-            });
+            // Populate platform filters
+            if (data.platform_split && Array.isArray(data.platform_split)) {
+                const platformContainer = document.getElementById('platformFilters');
+                const colors = ['#667eea', '#764ba2', '#f093fb', '#4facfe', '#43e97b'];
 
+                data.platform_split.forEach((platform, index) => {
+                    const label = document.createElement('label');
+                    label.className = 'filter-label flex items-center space-x-2 text-sm text-gray-300';
+                    const platformName = platform.platform_name || platform.name || 'Unknown';
+                    label.innerHTML = `
+                        <input type="checkbox" checked value="${platformName}" class="platform-checkbox rounded text-purple-600 focus:ring-purple-500">
+                        <span>${platformName}</span>
+                    `;
+                    platformContainer.appendChild(label);
+                });
+            }
+
+            // Add event listeners
             document.getElementById('dateFilter').addEventListener('change', applyFilters);
             document.getElementById('animeFilter').addEventListener('change', applyFilters);
             document.querySelectorAll('.platform-checkbox').forEach(cb => cb.addEventListener('change', applyFilters));
+            document.getElementById('resetFilters').addEventListener('click', resetFilters);
 
+            // Render initial dashboard
             renderDashboard(data);
+        }
+
+        function resetFilters() {
+            document.getElementById('dateFilter').value = 'all';
+            document.getElementById('animeFilter').value = 'all';
+            document.querySelectorAll('.platform-checkbox').forEach(cb => cb.checked = true);
+            applyFilters();
         }
 
         function applyFilters() {
@@ -200,176 +320,339 @@
             const animeFilter = document.getElementById('animeFilter').value;
             const selectedPlatforms = Array.from(document.querySelectorAll('.platform-checkbox:checked')).map(cb => cb.value);
 
-            let filteredTrend = rawData.daily_anime_trend;
-            if (dateFilter !== 'all') filteredTrend = filteredTrend.filter(d => d.date.startsWith(dateFilter));
-            if (animeFilter !== 'all') filteredTrend = filteredTrend.filter(d => d.title === animeFilter);
+            // Filter daily trend
+            let filteredTrend = rawData.daily_anime_trend || rawData.daily_trend || [];
+            if (dateFilter !== 'all') {
+                filteredTrend = filteredTrend.filter(d => d.date && d.date.startsWith(dateFilter));
+            }
+            if (animeFilter !== 'all') {
+                filteredTrend = filteredTrend.filter(d => d.title === animeFilter);
+            }
 
+            // Aggregate trend data
             const trendMap = {};
             filteredTrend.forEach(d => {
-                if (!trendMap[d.date]) trendMap[d.date] = { date: d.date, views: 0, revenue: 0 };
-                trendMap[d.date].views += d.views;
-                trendMap[d.date].revenue += d.revenue;
+                if (!d.date) return;
+                if (!trendMap[d.date]) {
+                    trendMap[d.date] = { date: d.date, views: 0, revenue: 0 };
+                }
+                trendMap[d.date].views += (d.views || 0);
+                trendMap[d.date].revenue += (d.revenue || 0);
             });
             const aggregatedTrend = Object.values(trendMap).sort((a, b) => new Date(a.date) - new Date(b.date));
 
-            const filteredPlatforms = rawData.platform_split.filter(p => selectedPlatforms.includes(p.platform_name));
-            let filteredAnime = rawData.anime_performance;
-            if (animeFilter !== 'all') filteredAnime = filteredAnime.filter(a => a.title === animeFilter);
+            // Filter platforms
+            const filteredPlatforms = (rawData.platform_split || []).filter(p => {
+                const name = p.platform_name || p.name;
+                return selectedPlatforms.includes(name);
+            });
 
-            updateTrendChart(aggregatedTrend);
-            updatePlatformChart(filteredPlatforms);
+            // Filter anime
+            let filteredAnime = rawData.anime_performance || [];
+            if (animeFilter !== 'all') {
+                filteredAnime = filteredAnime.filter(a => a.title === animeFilter);
+            }
+
+            // Update charts
+            updateTrendChart(aggregatedTrend.length > 0 ? aggregatedTrend : (rawData.daily_trend || []));
+            updatePlatformChart(filteredPlatforms.length > 0 ? filteredPlatforms : (rawData.platform_split || []));
             updateAnimeTable(filteredAnime);
         }
 
         function renderDashboard(data) {
-            renderKPIs(data.kpis);
-            renderTrendChart(data.daily_trend);
-            renderPlatformChart(data.platform_split);
-            renderScatterChart(data.scatter_plot);
-            renderHeatmap(data.heatmap);
-            updateAnimeTable(data.anime_performance);
+            renderKPIs(data.kpis || {});
+            renderTrendChart(data.daily_trend || []);
+            renderPlatformChart(data.platform_split || []);
+            renderScatterChart(data.scatter_plot || []);
+            renderHeatmap(data.heatmap || []);
+            updateAnimeTable(data.anime_performance || []);
         }
 
         function renderKPIs(kpis) {
             const container = document.getElementById('kpiContainer');
-            container.innerHTML = '<div class="kpi-card" style="border-color: #3b82f6;"><p class="text-sm text-gray-500 mb-1">Total Revenue</p><p class="text-3xl font-bold text-gray-900">' + formatCurrency(kpis.total_revenue) + '</p></div>' +
-                '<div class="kpi-card" style="border-color: #8b5cf6;"><p class="text-sm text-gray-500 mb-1">Total Views</p><p class="text-3xl font-bold text-gray-900">' + formatNumber(kpis.total_views) + '</p></div>' +
-                '<div class="kpi-card" style="border-color: #10b981;"><p class="text-sm text-gray-500 mb-1">Watch Time</p><p class="text-3xl font-bold text-gray-900">' + formatNumber(kpis.total_watch_time / 60) + ' hrs</p></div>' +
-                '<div class="kpi-card" style="border-color: #f59e0b;"><p class="text-sm text-gray-500 mb-1">Avg Sentiment</p><p class="text-3xl font-bold text-gray-900">' + kpis.avg_sentiment.toFixed(2) + '</p></div>';
+            const kpiConfig = [
+                { label: 'Total Revenue', value: kpis.total_revenue, format: 'currency', color: '#667eea', icon: '💰' },
+                { label: 'Total Views', value: kpis.total_views, format: 'number', color: '#764ba2', icon: '👁️' },
+                { label: 'Watch Time', value: (kpis.total_watch_time || 0) / 60, format: 'hours', color: '#f093fb', icon: '⏱️' },
+                { label: 'Avg Sentiment', value: kpis.avg_sentiment, format: 'decimal', color: '#4facfe', icon: '😊' }
+            ];
+
+            container.innerHTML = kpiConfig.map(kpi => {
+                let formattedValue = '—';
+                if (kpi.value !== undefined && kpi.value !== null) {
+                    if (kpi.format === 'currency') {
+                        formattedValue = formatCurrency(kpi.value);
+                    } else if (kpi.format === 'number') {
+                        formattedValue = formatNumber(kpi.value);
+                    } else if (kpi.format === 'hours') {
+                        formattedValue = formatNumber(kpi.value) + ' hrs';
+                    } else if (kpi.format === 'decimal') {
+                        formattedValue = kpi.value.toFixed(2);
+                    }
+                }
+
+                return `
+                    <div class="kpi-card" style="border-color: ${kpi.color};">
+                        <div class="flex items-center justify-between mb-2">
+                            <p class="text-sm text-gray-500 font-medium">${kpi.label}</p>
+                            <span class="text-2xl">${kpi.icon}</span>
+                        </div>
+                        <p class="text-3xl font-bold text-gray-900">${formattedValue}</p>
+                    </div>
+                `;
+            }).join('');
         }
 
         function renderTrendChart(data) {
+            if (!data || data.length === 0) {
+                console.warn('No trend data available');
+                return;
+            }
+
             const ctx = document.getElementById('trendChart').getContext('2d');
             charts.trend = new Chart(ctx, {
                 type: 'line',
                 data: {
-                    labels: data.map(d => d.date),
+                    labels: data.map(d => d.date || ''),
                     datasets: [
                         {
-                            label: 'Revenue',
-                            data: data.map(d => d.revenue),
-                            borderColor: '#3b82f6',
-                            backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                            label: 'Revenue ($)',
+                            data: data.map(d => d.revenue || 0),
+                            borderColor: '#667eea',
+                            backgroundColor: 'rgba(102, 126, 234, 0.1)',
                             yAxisID: 'y',
                             tension: 0.4,
-                            fill: true
+                            fill: true,
+                            borderWidth: 3
                         },
                         {
                             label: 'Views',
-                            data: data.map(d => d.views),
-                            borderColor: '#8b5cf6',
+                            data: data.map(d => d.views || 0),
+                            borderColor: '#764ba2',
+                            backgroundColor: 'rgba(118, 75, 162, 0.1)',
                             yAxisID: 'y1',
-                            tension: 0.4
+                            tension: 0.4,
+                            fill: true,
+                            borderWidth: 3
                         }
                     ]
                 },
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
+                    interaction: {
+                        mode: 'index',
+                        intersect: false,
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                            labels: {
+                                usePointStyle: true,
+                                padding: 20,
+                                font: { size: 12, weight: '600' }
+                            }
+                        }
+                    },
                     scales: {
-                        y: { type: 'linear', position: 'left' },
-                        y1: { type: 'linear', position: 'right', grid: { display: false } }
+                        y: {
+                            type: 'linear',
+                            position: 'left',
+                            grid: { color: 'rgba(0, 0, 0, 0.05)' }
+                        },
+                        y1: {
+                            type: 'linear',
+                            position: 'right',
+                            grid: { display: false }
+                        }
                     }
                 }
             });
         }
 
         function updateTrendChart(data) {
-            if (charts.trend) {
-                charts.trend.data.labels = data.map(d => d.date);
-                charts.trend.data.datasets[0].data = data.map(d => d.revenue);
-                charts.trend.data.datasets[1].data = data.map(d => d.views);
+            if (charts.trend && data && data.length > 0) {
+                charts.trend.data.labels = data.map(d => d.date || '');
+                charts.trend.data.datasets[0].data = data.map(d => d.revenue || 0);
+                charts.trend.data.datasets[1].data = data.map(d => d.views || 0);
                 charts.trend.update();
             }
         }
 
         function renderPlatformChart(data) {
+            if (!data || data.length === 0) {
+                console.warn('No platform data available');
+                return;
+            }
+
             const ctx = document.getElementById('platformChart').getContext('2d');
+            const colors = ['#667eea', '#764ba2', '#f093fb', '#4facfe', '#43e97b'];
+
             charts.platform = new Chart(ctx, {
                 type: 'doughnut',
                 data: {
-                    labels: data.map(d => d.platform_name),
+                    labels: data.map(d => d.platform_name || d.name || 'Unknown'),
                     datasets: [{
-                        data: data.map(d => d.revenue),
-                        backgroundColor: ['#3b82f6', '#ef4444', '#10b981', '#f59e0b', '#8b5cf6']
+                        data: data.map(d => d.revenue || d.value || 0),
+                        backgroundColor: colors,
+                        borderWidth: 3,
+                        borderColor: '#fff'
                     }]
                 },
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
-                    plugins: { legend: { position: 'bottom' } }
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                padding: 15,
+                                font: { size: 11, weight: '600' },
+                                usePointStyle: true
+                            }
+                        }
+                    }
                 }
             });
         }
 
         function updatePlatformChart(data) {
-            if (charts.platform) {
-                charts.platform.data.labels = data.map(d => d.platform_name);
-                charts.platform.data.datasets[0].data = data.map(d => d.revenue);
+            if (charts.platform && data && data.length > 0) {
+                charts.platform.data.labels = data.map(d => d.platform_name || d.name || 'Unknown');
+                charts.platform.data.datasets[0].data = data.map(d => d.revenue || d.value || 0);
                 charts.platform.update();
             }
         }
 
         function renderScatterChart(data) {
+            if (!data || data.length === 0) {
+                console.warn('No scatter plot data available');
+                return;
+            }
+
             const ctx = document.getElementById('scatterChart').getContext('2d');
             charts.scatter = new Chart(ctx, {
                 type: 'scatter',
                 data: {
                     datasets: [{
                         label: 'Anime',
-                        data: data.map(d => ({ x: d.filler_percentage, y: d.roi, r: d.total_views / 100000 })),
-                        backgroundColor: 'rgba(59, 130, 246, 0.5)'
+                        data: data.map(d => ({
+                            x: d.filler_percentage || 0,
+                            y: d.roi || 0,
+                            r: (d.total_views || 1000000) / 100000
+                        })),
+                        backgroundColor: 'rgba(102, 126, 234, 0.6)',
+                        borderColor: '#667eea',
+                        borderWidth: 2
                     }]
                 },
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false }
+                    },
                     scales: {
-                        x: { title: { display: true, text: 'Filler %' } },
-                        y: { title: { display: true, text: 'ROI' } }
+                        x: {
+                            title: { display: true, text: 'Filler %', font: { weight: '600' } },
+                            grid: { color: 'rgba(0, 0, 0, 0.05)' }
+                        },
+                        y: {
+                            title: { display: true, text: 'ROI', font: { weight: '600' } },
+                            grid: { color: 'rgba(0, 0, 0, 0.05)' }
+                        }
                     }
                 }
             });
         }
 
         function renderHeatmap(data) {
+            if (!data || data.length === 0) {
+                console.warn('No heatmap data available');
+                return;
+            }
+
             const ctx = document.getElementById('heatmapChart').getContext('2d');
+            const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+            // Ensure data is sorted by day of week
+            const sortedData = [...data].sort((a, b) => {
+                const dayA = days.indexOf(a.day_name || a.day_of_week || a.day);
+                const dayB = days.indexOf(b.day_name || b.day_of_week || b.day);
+                return dayA - dayB;
+            });
+
             charts.heatmap = new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: data.map(d => d.day_of_week),
+                    labels: sortedData.map(d => d.day_name || d.day_of_week || d.day || ''),
                     datasets: [{
-                        label: 'Avg Views',
-                        data: data.map(d => d.avg_views),
-                        backgroundColor: '#3b82f6'
+                        label: 'Total Views',
+                        data: sortedData.map(d => d.views || d.avg_views || 0),
+                        backgroundColor: '#667eea',
+                        borderRadius: 8,
+                        borderSkipped: false
                     }]
                 },
                 options: {
                     responsive: true,
-                    maintainAspectRatio: false
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: { color: 'rgba(0, 0, 0, 0.05)' }
+                        },
+                        x: {
+                            grid: { display: false }
+                        }
+                    }
                 }
             });
         }
 
         function updateAnimeTable(data) {
             const tbody = document.getElementById('animeTableBody');
-            tbody.innerHTML = data.slice(0, 10).map(anime =>
-                '<tr>' +
-                '<td class="px-6 py-4 text-sm font-medium text-gray-900">' + anime.title + '</td>' +
-                '<td class="px-6 py-4 text-sm text-right text-gray-700">' + formatCurrency(anime.total_revenue) + '</td>' +
-                '<td class="px-6 py-4 text-sm text-right text-gray-700">' + formatNumber(anime.total_views) + '</td>' +
-                '<td class="px-6 py-4 text-sm text-center text-gray-700">' + anime.avg_sentiment.toFixed(2) + '</td>' +
-                '</tr>'
-            ).join('');
+            if (!data || data.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="5" class="px-6 py-8 text-center text-gray-500">No data available</td></tr>';
+                return;
+            }
+
+            tbody.innerHTML = data.slice(0, 15).map((anime, index) => {
+                const sentiment = anime.sentiment || anime.avg_sentiment || 0;
+                const sentimentClass = sentiment >= 0.7 ? 'text-green-600' :
+                    sentiment >= 0.5 ? 'text-yellow-600' : 'text-red-600';
+                const roiClass = (anime.roi || 0) >= 2 ? 'text-green-600' :
+                    (anime.roi || 0) >= 1 ? 'text-yellow-600' : 'text-red-600';
+
+                return `
+                    <tr class="hover:bg-purple-50 transition">
+                        <td class="px-6 py-4 text-sm font-medium text-gray-900">
+                            <div class="flex items-center">
+                                <span class="mr-2 text-gray-400">${index + 1}.</span>
+                                ${anime.title || 'Unknown'}
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 text-sm text-right font-semibold text-gray-700">${formatCurrency(anime.revenue || anime.total_revenue || 0)}</td>
+                        <td class="px-6 py-4 text-sm text-right text-gray-700">${formatNumber(anime.views || anime.total_views || 0)}</td>
+                        <td class="px-6 py-4 text-sm text-center font-semibold ${sentimentClass}">${sentiment.toFixed(2)}</td>
+                        <td class="px-6 py-4 text-sm text-center font-semibold ${roiClass}">${(anime.roi || 0).toFixed(2)}x</td>
+                    </tr>
+                `;
+            }).join('');
         }
 
         function formatCurrency(value) {
+            if (value === null || value === undefined || isNaN(value)) return '$0';
             if (value >= 1000000) return '$' + (value / 1000000).toFixed(1) + 'M';
             if (value >= 1000) return '$' + (value / 1000).toFixed(1) + 'K';
             return '$' + value.toFixed(0);
         }
 
         function formatNumber(value) {
+            if (value === null || value === undefined || isNaN(value)) return '0';
             if (value >= 1000000) return (value / 1000000).toFixed(1) + 'M';
             if (value >= 1000) return (value / 1000).toFixed(1) + 'K';
             return value.toLocaleString();
