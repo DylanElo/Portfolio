@@ -68,7 +68,6 @@
 </head>
 
 <body>
-    <!-- Sidebar -->
     <div class="sidebar p-6">
         <h1 class="text-2xl font-bold mb-8 text-blue-400">Studio Pierrot BI</h1>
 
@@ -96,31 +95,16 @@
                 <div id="platformFilters" class="space-y-2"></div>
             </div>
         </div>
-
-        <div>
-            <h3 class="text-xs uppercase text-gray-400 font-semibold mb-4 tracking-wider">Navigation</h3>
-            <ul class="space-y-2 text-sm">
-                <li class="text-blue-400 font-medium py-1">Overview</li>
-                <li class="text-gray-400 hover:text-white cursor-pointer py-1">Reports</li>
-                <li class="text-gray-400 hover:text-white cursor-pointer py-1">Settings</li>
-            </ul>
-        </div>
     </div>
 
-    <!-- Main Content -->
     <div class="main-content">
-        <!-- Header -->
         <div class="mb-8">
             <h2 class="text-3xl font-bold text-gray-900">Executive Dashboard</h2>
             <p class="text-gray-500 mt-1">Strategic insights to optimize production ROI</p>
         </div>
 
-        <!-- KPIs -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8" id="kpiContainer">
-            <!-- KPIs will be injected here -->
-        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8" id="kpiContainer"></div>
 
-        <!-- Charts Row 1 -->
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
             <div class="card lg:col-span-2">
                 <h3 class="text-lg font-semibold text-gray-800 mb-4">Revenue & Views Trend</h3>
@@ -136,7 +120,6 @@
             </div>
         </div>
 
-        <!-- Charts Row 2 -->
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
             <div class="card lg:col-span-2">
                 <h3 class="text-lg font-semibold text-gray-800 mb-4">ROI vs Filler %</h3>
@@ -152,7 +135,6 @@
             </div>
         </div>
 
-        <!-- Anime Table -->
         <div class="card">
             <h3 class="text-lg font-semibold text-gray-800 mb-4">Anime Performance</h3>
             <div class="overflow-x-auto">
@@ -165,8 +147,7 @@
                             <th class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase">Sentiment</th>
                         </tr>
                     </thead>
-                    <tbody id="animeTableBody" class="bg-white divide-y divide-gray-200">
-                    </tbody>
+                    <tbody id="animeTableBody" class="bg-white divide-y divide-gray-200"></tbody>
                 </table>
             </div>
         </div>
@@ -176,20 +157,21 @@
         let rawData = null;
         let charts = {};
 
-        // Load data
-        fetch('./data.json')
-            .then(res => res.json())
+        fetch('data.json')
+            .then(res => {
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                return res.json();
+            })
             .then(data => {
                 rawData = data;
                 initDashboard(data);
             })
             .catch(err => {
-                console.error('Error loading data:', err);
-                document.body.innerHTML = '<div class="p-8 text-center"><h1 class="text-2xl text-red-600">Error loading dashboard data</h1></div>';
+                console.error('Error:', err);
+                document.body.innerHTML = '<div class="p-8 text-center"><h1 class="text-2xl text-red-600">Error: ' + err.message + '</h1></div>';
             });
 
         function initDashboard(data) {
-            // Populate filters
             const animeFilter = document.getElementById('animeFilter');
             data.anime_list.forEach(anime => {
                 const option = document.createElement('option');
@@ -202,64 +184,38 @@
             data.platform_split.forEach(platform => {
                 const label = document.createElement('label');
                 label.className = 'flex items-center space-x-2 text-sm text-gray-300 cursor-pointer';
-                label.innerHTML = `
-                    <input type="checkbox" checked value="${platform.platform_name}" class="platform-checkbox rounded">
-                    <span>${platform.platform_name}</span>
-                `;
+                label.innerHTML = '<input type="checkbox" checked value="' + platform.platform_name + '" class="platform-checkbox rounded"><span>' + platform.platform_name + '</span>';
                 platformContainer.appendChild(label);
             });
 
-            // Add event listeners
             document.getElementById('dateFilter').addEventListener('change', applyFilters);
             document.getElementById('animeFilter').addEventListener('change', applyFilters);
-            document.querySelectorAll('.platform-checkbox').forEach(cb => {
-                cb.addEventListener('change', applyFilters);
-            });
+            document.querySelectorAll('.platform-checkbox').forEach(cb => cb.addEventListener('change', applyFilters));
 
-            // Initial render
             renderDashboard(data);
         }
 
         function applyFilters() {
             const dateFilter = document.getElementById('dateFilter').value;
             const animeFilter = document.getElementById('animeFilter').value;
-            const selectedPlatforms = Array.from(document.querySelectorAll('.platform-checkbox:checked'))
-                .map(cb => cb.value);
+            const selectedPlatforms = Array.from(document.querySelectorAll('.platform-checkbox:checked')).map(cb => cb.value);
 
-            // Filter daily trend
             let filteredTrend = rawData.daily_anime_trend;
-            if (dateFilter !== 'all') {
-                filteredTrend = filteredTrend.filter(d => d.date.startsWith(dateFilter));
-            }
-            if (animeFilter !== 'all') {
-                filteredTrend = filteredTrend.filter(d => d.title === animeFilter);
-            }
+            if (dateFilter !== 'all') filteredTrend = filteredTrend.filter(d => d.date.startsWith(dateFilter));
+            if (animeFilter !== 'all') filteredTrend = filteredTrend.filter(d => d.title === animeFilter);
 
-            // Aggregate trend data
             const trendMap = {};
             filteredTrend.forEach(d => {
-                if (!trendMap[d.date]) {
-                    trendMap[d.date] = { date: d.date, views: 0, revenue: 0 };
-                }
+                if (!trendMap[d.date]) trendMap[d.date] = { date: d.date, views: 0, revenue: 0 };
                 trendMap[d.date].views += d.views;
                 trendMap[d.date].revenue += d.revenue;
             });
-            const aggregatedTrend = Object.values(trendMap).sort((a, b) =>
-                new Date(a.date) - new Date(b.date)
-            );
+            const aggregatedTrend = Object.values(trendMap).sort((a, b) => new Date(a.date) - new Date(b.date));
 
-            // Filter platforms
-            const filteredPlatforms = rawData.platform_split.filter(p =>
-                selectedPlatforms.includes(p.platform_name)
-            );
-
-            // Filter anime table
+            const filteredPlatforms = rawData.platform_split.filter(p => selectedPlatforms.includes(p.platform_name));
             let filteredAnime = rawData.anime_performance;
-            if (animeFilter !== 'all') {
-                filteredAnime = filteredAnime.filter(a => a.title === animeFilter);
-            }
+            if (animeFilter !== 'all') filteredAnime = filteredAnime.filter(a => a.title === animeFilter);
 
-            // Update charts
             updateTrendChart(aggregatedTrend);
             updatePlatformChart(filteredPlatforms);
             updateAnimeTable(filteredAnime);
@@ -276,24 +232,10 @@
 
         function renderKPIs(kpis) {
             const container = document.getElementById('kpiContainer');
-            container.innerHTML = `
-                <div class="kpi-card" style="border-color: #3b82f6;">
-                    <p class="text-sm text-gray-500 mb-1">Total Revenue</p>
-                    <p class="text-3xl font-bold text-gray-900">${formatCurrency(kpis.total_revenue)}</p>
-                </div>
-                <div class="kpi-card" style="border-color: #8b5cf6;">
-                    <p class="text-sm text-gray-500 mb-1">Total Views</p>
-                    <p class="text-3xl font-bold text-gray-900">${formatNumber(kpis.total_views)}</p>
-                </div>
-                <div class="kpi-card" style="border-color: #10b981;">
-                    <p class="text-sm text-gray-500 mb-1">Watch Time</p>
-                    <p class="text-3xl font-bold text-gray-900">${formatNumber(kpis.total_watch_time / 60)} hrs</p>
-                </div>
-                <div class="kpi-card" style="border-color: #f59e0b;">
-                    <p class="text-sm text-gray-500 mb-1">Avg Sentiment</p>
-                    <p class="text-3xl font-bold text-gray-900">${kpis.avg_sentiment.toFixed(2)}</p>
-                </div>
-            `;
+            container.innerHTML = '<div class="kpi-card" style="border-color: #3b82f6;"><p class="text-sm text-gray-500 mb-1">Total Revenue</p><p class="text-3xl font-bold text-gray-900">' + formatCurrency(kpis.total_revenue) + '</p></div>' +
+                '<div class="kpi-card" style="border-color: #8b5cf6;"><p class="text-sm text-gray-500 mb-1">Total Views</p><p class="text-3xl font-bold text-gray-900">' + formatNumber(kpis.total_views) + '</p></div>' +
+                '<div class="kpi-card" style="border-color: #10b981;"><p class="text-sm text-gray-500 mb-1">Watch Time</p><p class="text-3xl font-bold text-gray-900">' + formatNumber(kpis.total_watch_time / 60) + ' hrs</p></div>' +
+                '<div class="kpi-card" style="border-color: #f59e0b;"><p class="text-sm text-gray-500 mb-1">Avg Sentiment</p><p class="text-3xl font-bold text-gray-900">' + kpis.avg_sentiment.toFixed(2) + '</p></div>';
         }
 
         function renderTrendChart(data) {
@@ -411,14 +353,14 @@
 
         function updateAnimeTable(data) {
             const tbody = document.getElementById('animeTableBody');
-            tbody.innerHTML = data.slice(0, 10).map(anime => `
-                <tr>
-                    <td class="px-6 py-4 text-sm font-medium text-gray-900">${anime.title}</td>
-                    <td class="px-6 py-4 text-sm text-right text-gray-700">${formatCurrency(anime.total_revenue)}</td>
-                    <td class="px-6 py-4 text-sm text-right text-gray-700">${formatNumber(anime.total_views)}</td>
-                    <td class="px-6 py-4 text-sm text-center text-gray-700">${anime.avg_sentiment.toFixed(2)}</td>
-                </tr>
-            `).join('');
+            tbody.innerHTML = data.slice(0, 10).map(anime =>
+                '<tr>' +
+                '<td class="px-6 py-4 text-sm font-medium text-gray-900">' + anime.title + '</td>' +
+                '<td class="px-6 py-4 text-sm text-right text-gray-700">' + formatCurrency(anime.total_revenue) + '</td>' +
+                '<td class="px-6 py-4 text-sm text-right text-gray-700">' + formatNumber(anime.total_views) + '</td>' +
+                '<td class="px-6 py-4 text-sm text-center text-gray-700">' + anime.avg_sentiment.toFixed(2) + '</td>' +
+                '</tr>'
+            ).join('');
         }
 
         function formatCurrency(value) {
