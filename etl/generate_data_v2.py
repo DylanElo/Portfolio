@@ -86,22 +86,22 @@ def populate_dimensions():
     ''', dates)
 
     # 5. DIM_ANIME (Migrate from existing raw data or hardcode list for V2)
-    # For this V2, we'll use a clean list of Studio Pierrot titles
+    # Added Filler % and Budget Estimate for analysis
     anime_list = [
-        (1, 'Naruto', 'TV', 'Manga', 220, 'Finished', 'PG-13', 'Fall 2002', 2002),
-        (2, 'Naruto: Shippuuden', 'TV', 'Manga', 500, 'Finished', 'PG-13', 'Winter 2007', 2007),
-        (3, 'Bleach', 'TV', 'Manga', 366, 'Finished', 'PG-13', 'Fall 2004', 2004),
-        (4, 'Bleach: Sennen Kessen-hen', 'TV', 'Manga', 13, 'Finished', 'R-17+', 'Fall 2022', 2022),
-        (5, 'Tokyo Ghoul', 'TV', 'Manga', 12, 'Finished', 'R-17+', 'Summer 2014', 2014),
-        (6, 'Black Clover', 'TV', 'Manga', 170, 'Finished', 'PG-13', 'Fall 2017', 2017),
-        (7, 'Boruto: Naruto Next Generations', 'TV', 'Manga', 293, 'Finished', 'PG-13', 'Spring 2017', 2017),
-        (8, 'Great Teacher Onizuka', 'TV', 'Manga', 43, 'Finished', 'R-17+', 'Summer 1999', 1999),
-        (9, 'Yu Yu Hakusho', 'TV', 'Manga', 112, 'Finished', 'PG-13', 'Fall 1992', 1992),
-        (10, 'Kingdom', 'TV', 'Manga', 38, 'Finished', 'PG-13', 'Summer 2012', 2012)
+        (1, 'Naruto', 'TV', 'Manga', 220, 'Finished', 'PG-13', 'Fall 2002', 2002, 41.0, 15000000), # High filler
+        (2, 'Naruto: Shippuuden', 'TV', 'Manga', 500, 'Finished', 'PG-13', 'Winter 2007', 2007, 40.0, 45000000), # High filler
+        (3, 'Bleach', 'TV', 'Manga', 366, 'Finished', 'PG-13', 'Fall 2004', 2004, 45.0, 30000000), # Very high filler
+        (4, 'Bleach: Sennen Kessen-hen', 'TV', 'Manga', 13, 'Finished', 'R-17+', 'Fall 2022', 2022, 0.0, 5000000), # No filler, high budget
+        (5, 'Tokyo Ghoul', 'TV', 'Manga', 12, 'Finished', 'R-17+', 'Summer 2014', 2014, 0.0, 3000000),
+        (6, 'Black Clover', 'TV', 'Manga', 170, 'Finished', 'PG-13', 'Fall 2017', 2017, 10.0, 18000000),
+        (7, 'Boruto: Naruto Next Generations', 'TV', 'Manga', 293, 'Finished', 'PG-13', 'Spring 2017', 2017, 75.0, 25000000), # Extreme filler
+        (8, 'Great Teacher Onizuka', 'TV', 'Manga', 43, 'Finished', 'R-17+', 'Summer 1999', 1999, 5.0, 4000000),
+        (9, 'Yu Yu Hakusho', 'TV', 'Manga', 112, 'Finished', 'PG-13', 'Fall 1992', 1992, 3.0, 8000000),
+        (10, 'Kingdom', 'TV', 'Manga', 38, 'Finished', 'PG-13', 'Summer 2012', 2012, 0.0, 4500000)
     ]
     cursor.executemany('''
-        INSERT OR REPLACE INTO dim_anime (anime_id, title, type, source, episodes, status, rating, premiered_season, premiered_year)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+        INSERT OR REPLACE INTO dim_anime (anime_id, title, type, source, episodes, status, rating, premiered_season, premiered_year, filler_percentage, budget_estimate)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     ''', anime_list)
 
     conn.commit()

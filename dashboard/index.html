@@ -85,29 +85,24 @@
                 <select id="date-range"
                     class="w-full bg-slate-700 border-none rounded p-2 text-sm text-white focus:ring-2 focus:ring-blue-500">
                     <option value="all">All Time</option>
-                    <option value="ytd">Year to Date</option>
-                    <option value="last_30">Last 30 Days</option>
+                    <option value="2024">2024 (Year to Date)</option>
+                    <option value="2023">2023 (Historical)</option>
+                </select>
+            </div>
+
+            <div class="mb-4">
+                <label class="block text-sm mb-2 text-gray-300">Specific Anime</label>
+                <select id="anime-select"
+                    class="w-full bg-slate-700 border-none rounded p-2 text-sm text-white focus:ring-2 focus:ring-blue-500">
+                    <option value="all">All Titles</option>
+                    <!-- Options injected via JS -->
                 </select>
             </div>
 
             <div class="mb-4">
                 <label class="block text-sm mb-2 text-gray-300">Platform</label>
-                <div class="space-y-2">
-                    <label class="flex items-center space-x-2 text-sm text-gray-300 cursor-pointer">
-                        <input type="checkbox" checked
-                            class="form-checkbox text-blue-500 rounded bg-slate-700 border-none">
-                        <span>Netflix</span>
-                    </label>
-                    <label class="flex items-center space-x-2 text-sm text-gray-300 cursor-pointer">
-                        <input type="checkbox" checked
-                            class="form-checkbox text-blue-500 rounded bg-slate-700 border-none">
-                        <span>Crunchyroll</span>
-                    </label>
-                    <label class="flex items-center space-x-2 text-sm text-gray-300 cursor-pointer">
-                        <input type="checkbox" checked
-                            class="form-checkbox text-blue-500 rounded bg-slate-700 border-none">
-                        <span>Hulu</span>
-                    </label>
+                <div class="space-y-2" id="platform-filters">
+                    <!-- Checkboxes injected via JS -->
                 </div>
             </div>
         </div>
@@ -115,7 +110,7 @@
         <div>
             <h3 class="text-xs uppercase text-gray-500 font-semibold mb-4 tracking-wider">Navigation</h3>
             <ul class="space-y-2 text-sm text-gray-300">
-                <li class="hover:text-white cursor-pointer py-1">Overview</li>
+                <li class="hover:text-white cursor-pointer py-1 text-blue-400 font-medium">Overview</li>
                 <li class="hover:text-white cursor-pointer py-1">Campaigns</li>
                 <li class="hover:text-white cursor-pointer py-1">Content Library</li>
                 <li class="hover:text-white cursor-pointer py-1">Settings</li>
@@ -130,21 +125,31 @@
         <div class="flex justify-between items-center mb-8">
             <div>
                 <h2 class="text-2xl font-bold text-gray-800">Executive Overview</h2>
-                <p class="text-gray-500 text-sm">Real-time performance metrics across all regions</p>
+                <p class="text-gray-500 text-sm">Strategic insights to optimize production ROI</p>
             </div>
             <div class="flex space-x-3">
-                <button
-                    class="px-4 py-2 bg-white border border-gray-300 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-50 shadow-sm">Export
-                    Report</button>
-                <button
-                    class="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 shadow-sm">Refresh
-                    Data</button>
+                <button onclick="exportReport()"
+                    class="px-4 py-2 bg-white border border-gray-300 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-50 shadow-sm flex items-center">
+                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                    </svg>
+                    Export Report
+                </button>
+                <button onclick="refreshData()"
+                    class="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 shadow-sm flex items-center">
+                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15">
+                        </path>
+                    </svg>
+                    Refresh Data
+                </button>
             </div>
         </div>
 
         <!-- KPI GRID -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8" id="kpi-container">
-            <!-- KPIs injected via JS -->
             <div class="card animate-pulse h-32"></div>
             <div class="card animate-pulse h-32"></div>
             <div class="card animate-pulse h-32"></div>
@@ -154,7 +159,10 @@
         <!-- CHARTS ROW 1 -->
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
             <div class="card lg:col-span-2">
-                <h3 class="text-lg font-semibold text-gray-800 mb-4">Revenue & Views Trend</h3>
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800">Revenue & Views Trend</h3>
+                    <span class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">Daily Granularity</span>
+                </div>
                 <div class="chart-container">
                     <canvas id="trendChart"></canvas>
                 </div>
@@ -169,13 +177,19 @@
 
         <!-- CHARTS ROW 2 -->
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
-            <div class="card">
-                <h3 class="text-lg font-semibold text-gray-800 mb-4">Regional Performance</h3>
+            <div class="card lg:col-span-2">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800">Strategic Insight: ROI vs Filler %</h3>
+                    <span class="text-xs text-blue-600 bg-blue-50 px-2 py-1 rounded font-medium">Key Driver
+                        Analysis</span>
+                </div>
+                <p class="text-xs text-gray-500 mb-4">Does "padding" episodes hurt profitability? Bubble size = Total
+                    Views.</p>
                 <div class="chart-container">
-                    <canvas id="regionChart"></canvas>
+                    <canvas id="scatterChart"></canvas>
                 </div>
             </div>
-            <div class="card lg:col-span-2">
+            <div class="card">
                 <h3 class="text-lg font-semibold text-gray-800 mb-4">Weekly Engagement Heatmap</h3>
                 <div class="chart-container">
                     <canvas id="heatmapChart"></canvas>
@@ -185,7 +199,7 @@
 
         <!-- TOP ANIME TABLE -->
         <div class="card">
-            <h3 class="text-lg font-semibold text-gray-800 mb-4">Top Performing Titles</h3>
+            <h3 class="text-lg font-semibold text-gray-800 mb-4">Title Performance Matrix</h3>
             <div class="overflow-x-auto">
                 <table class="min-w-full divide-y divide-gray-200">
                     <thead class="bg-gray-50">
@@ -206,203 +220,49 @@
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200" id="anime-table-body">
                         <!-- Rows injected via JS -->
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-    </div>
-
-    <script>
-        // Fetch Data
-        fetch('data.json')
-            .then(response => response.json())
-            .then(data => {
-                initDashboard(data);
-            })
-            .catch(err => console.error('Error loading data:', err));
-
-        function formatCurrency(value) {
-            if (value >= 1000000) return '$' + (value / 1000000).toFixed(1) + 'M';
-            if (value >= 1000) return '$' + (value / 1000).toFixed(1) + 'K';
-            return '$' + value.toFixed(0);
-        }
-
-        function formatNumber(value) {
-            if (value >= 1000000) return (value / 1000000).toFixed(1) + 'M';
-            if (value >= 1000) return (value / 1000).toFixed(1) + 'K';
-            return value.toLocaleString();
-        }
-
-        function initDashboard(data) {
-            renderKPIs(data.kpis);
-            renderTrendChart(data.daily_trend);
-            renderPlatformChart(data.platform_split);
-            renderRegionChart(data.region_split);
-            renderHeatmapChart(data.heatmap);
-            renderAnimeTable(data.anime_performance);
-        }
-
-        function renderKPIs(kpis) {
-            const container = document.getElementById('kpi-container');
-            container.innerHTML = `
-                <div class="card border-l-4 border-blue-500">
-                    <p class="kpi-label">Total Revenue</p>
-                    <p class="kpi-value">${formatCurrency(kpis.total_revenue)}</p>
-                    <p class="text-xs text-green-500 mt-1">↑ 12.5% vs last year</p>
-                </div>
-                <div class="card border-l-4 border-indigo-500">
-                    <p class="kpi-label">Total Views</p>
-                    <p class="kpi-value">${formatNumber(kpis.total_views)}</p>
-                    <p class="text-xs text-green-500 mt-1">↑ 8.2% vs last year</p>
-                </div>
-                <div class="card border-l-4 border-purple-500">
-                    <p class="kpi-label">Total Watch Time</p>
-                    <p class="kpi-value">${formatNumber(kpis.total_watch_time / 60)} hrs</p>
-                    <p class="text-xs text-gray-400 mt-1">Avg 22m per session</p>
-                </div>
-                <div class="card border-l-4 border-emerald-500">
-                    <p class="kpi-label">Avg Sentiment</p>
-                    <p class="kpi-value">${kpis.avg_sentiment.toFixed(2)}</p>
-                    <p class="text-xs text-gray-400 mt-1">Scale: -1.0 to 1.0</p>
-                </div>
-            `;
-        }
-
-        function renderTrendChart(trendData) {
-            const ctx = document.getElementById('trendChart').getContext('2d');
-            new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: trendData.map(d => d.date),
-                    datasets: [
-                        {
-                            label: 'Revenue ($)',
-                            data: trendData.map(d => d.revenue),
-                            borderColor: '#3b82f6',
-                            backgroundColor: 'rgba(59, 130, 246, 0.1)',
-                            yAxisID: 'y',
-                            tension: 0.4,
-                            fill: true
-                        },
-                        {
-                            label: 'Views',
-                            data: trendData.map(d => d.views),
-                            borderColor: '#8b5cf6',
-                            backgroundColor: 'rgba(139, 92, 246, 0.0)',
-                            yAxisID: 'y1',
-                            tension: 0.4,
-                            borderDash: [5, 5]
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${anime.title}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 text-right">
+                            ${formatCurrency(anime.revenue)}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 text-right">
+                            ${formatNumber(anime.views)}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-center">
+                            <span
+                                class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${anime.sentiment > 0.5 ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800'}">
+                                ${anime.sentiment.toFixed(2)}
+                            </span>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 text-center">
+                            ${(anime.completion_rate *
+                            100).toFixed(1)}%</td>
+                        </tr>
+                        `).join('');
                         }
-                    ]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    interaction: { mode: 'index', intersect: false },
-                    scales: {
-                        y: { type: 'linear', display: true, position: 'left', grid: { display: false } },
-                        y1: { type: 'linear', display: true, position: 'right', grid: { display: false } },
-                        x: { grid: { display: false }, ticks: { maxTicksLimit: 10 } }
-                    },
-                    plugins: { legend: { position: 'top' } }
-                }
-            });
-        }
 
-        function renderPlatformChart(platformData) {
-            const ctx = document.getElementById('platformChart').getContext('2d');
-            new Chart(ctx, {
-                type: 'doughnut',
-                data: {
-                    labels: platformData.map(d => d.platform_name),
-                    datasets: [{
-                        data: platformData.map(d => d.revenue),
-                        backgroundColor: ['#3b82f6', '#ef4444', '#10b981', '#f59e0b', '#8b5cf6'],
-                        borderWidth: 0
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: { legend: { position: 'bottom' } },
-                    cutout: '70%'
-                }
-            });
-        }
+                        function refreshData() {
+                        // Simulate refresh
+                        const btn = document.querySelector('button[onclick="refreshData()"]');
+                        const originalText = btn.innerHTML;
+                        btn.innerHTML = '<svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4">
+                            </circle>
+                            ['Total Views', rawData.kpis.total_views],
+                            ['Total Watch Time (min)', rawData.kpis.total_watch_time],
+                            ['Avg Sentiment', rawData.kpis.avg_sentiment]
+                            ];
 
-        function renderRegionChart(regionData) {
-            const ctx = document.getElementById('regionChart').getContext('2d');
-            new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: regionData.map(d => d.region_name),
-                    datasets: [{
-                        label: 'Revenue',
-                        data: regionData.map(d => d.revenue),
-                        backgroundColor: '#3b82f6',
-                        borderRadius: 4
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: { legend: { display: false } },
-                    scales: {
-                        y: { beginAtZero: true, grid: { display: false } },
-                        x: { grid: { display: false } }
-                    }
-                }
-            });
-        }
+                            let csvContent = "data:text/csv;charset=utf-8,"
+                            + rows.map(e => e.join(",")).join("\n");
 
-        function renderHeatmapChart(heatmapData) {
-            const ctx = document.getElementById('heatmapChart').getContext('2d');
-            // Simulating heatmap with a bar chart for now as Chart.js core doesn't support heatmaps natively without plugins
-            new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: heatmapData.map(d => d.day_name),
-                    datasets: [{
-                        label: 'Total Views',
-                        data: heatmapData.map(d => d.views),
-                        backgroundColor: heatmapData.map(d => {
-                            const max = Math.max(...heatmapData.map(x => x.views));
-                            const alpha = (d.views / max).toFixed(2);
-                            return `rgba(59, 130, 246, ${alpha})`; // Blue with varying opacity
-                        }),
-                        borderRadius: 4
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: { legend: { display: false } },
-                    scales: {
-                        y: { beginAtZero: true, display: false },
-                        x: { grid: { display: false } }
-                    }
-                }
-            });
-        }
-
-        function renderAnimeTable(animeData) {
-            const tbody = document.getElementById('anime-table-body');
-            tbody.innerHTML = animeData.slice(0, 10).map(anime => `
-                <tr>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${anime.title}</td>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 text-right">${formatCurrency(anime.revenue)}</td>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 text-right">${formatNumber(anime.views)}</td>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm text-center">
-                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${anime.sentiment > 0.5 ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800'}">
-                            ${anime.sentiment.toFixed(2)}
-                        </span>
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 text-center">${(anime.completion_rate * 100).toFixed(1)}%</td>
-                </tr>
-            `).join('');
-        }
-    </script>
+                            const encodedUri = encodeURI(csvContent);
+                            const link = document.createElement("a");
+                            link.setAttribute("href", encodedUri);
+                            link.setAttribute("download", "studio_pierrot_bi_report.csv");
+                            document.body.appendChild(link);
+                            link.click();
+                            document.body.removeChild(link);
+                            }
+                            </script>
 </body>
 
 </html>

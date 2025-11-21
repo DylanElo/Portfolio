@@ -21,7 +21,9 @@ CREATE TABLE IF NOT EXISTS dim_anime (
     premiered_season TEXT, -- Fall 2002
     premiered_year INTEGER,
     studio TEXT DEFAULT 'Studio Pierrot',
-    image_url TEXT
+    image_url TEXT,
+    filler_percentage DECIMAL(5, 2), -- 0.00 to 100.00
+    budget_estimate DECIMAL(12, 2) -- Estimated production budget
 );
 
 -- DIM_DATE: Time dimension for time-series analysis

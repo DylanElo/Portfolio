@@ -106,6 +106,45 @@ def export_data():
     ''').fetchall()
     data['heatmap'] = [dict(row) for row in heatmap]
 
+    # 7. Scatter Plot Data (ROI vs Filler %)
+    print("  - Aggregating Scatter Plot Data...")
+    scatter = cursor.execute('''
+        SELECT 
+            a.title,
+            a.filler_percentage,
+            a.budget_estimate,
+            SUM(f.revenue_usd) as total_revenue,
+            SUM(f.views) as total_views,
+            (SUM(f.revenue_usd) - a.budget_estimate) / a.budget_estimate * 100 as roi_percentage
+        FROM fact_daily_performance f
+        JOIN dim_anime a ON f.anime_id = a.anime_id
+        GROUP BY a.title
+    ''').fetchall()
+    data['scatter_plot'] = [dict(row) for row in scatter]
+
+    # 8. Anime List (For Dropdown)
+    print("  - Fetching Anime List...")
+    anime_list = cursor.execute('SELECT anime_id, title FROM dim_anime ORDER BY title').fetchall()
+    data['anime_list'] = [dict(row) for row in anime_list]
+
+    # 9. Daily Anime Trend (Granular for Filtering)
+    # Note: This can be large, so we'll aggregate by week for performance if needed, 
+    # but for 150k rows total, daily per anime is manageable (~10k points for 10 anime * 365 days)
+    print("  - Aggregating Daily Anime Trends...")
+    daily_anime = cursor.execute('''
+        SELECT 
+            d.full_date as date,
+            a.title,
+            SUM(f.views) as views,
+            SUM(f.revenue_usd) as revenue
+        FROM fact_daily_performance f
+        JOIN dim_date d ON f.date_id = d.date_id
+        JOIN dim_anime a ON f.anime_id = a.anime_id
+        GROUP BY d.full_date, a.title
+        ORDER BY d.full_date
+    ''').fetchall()
+    data['daily_anime_trend'] = [dict(row) for row in daily_anime]
+
     conn.close()
 
     # Write to JSON
