@@ -100,31 +100,6 @@
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Technical Implementation -->
-        <section class="section">
-            <div class="container">
-                <h2 class="section-title">Technical Implementation</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <h3>Architecture</h3>
-                        <p>The project follows a classic ELT (Extract, Load, Transform) pipeline:</p>
-                        <ul>
-                            <li><strong>Data Acquisition:</strong> Python scripts fetch data from the Jikan API
-                                (MyAnimeList) and generate simulated internal business metrics.</li>
-                            <li><strong>Data Warehouse:</strong> A Star Schema implemented in SQLite with dimension
-                                tables (Anime, Season) and fact tables (Metrics, Financials, Marketing).</li>
-                            <li><strong>Analysis:</strong> Complex SQL queries derive insights on retention,
-                                profitability, and quality trends.</li>
-                            <li><strong>Visualization:</strong> A custom web dashboard built with Chart.js and Tailwind
-                                CSS consumes JSON data exported from the warehouse.</li>
-                        </ul>
-                        <div style="margin-top: 2rem;">
-                            <a href="https://github.com" class="btn btn-primary">View Source Code on GitHub</a>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
     </main>

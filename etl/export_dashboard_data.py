@@ -1,91 +1,118 @@
-"""
-Export data from the warehouse to JSON for the web dashboard.
-Creates dashboard/data.json with all necessary metrics.
-"""
 import sqlite3
 import json
-from pathlib import Path
+import os
 
-def export_dashboard_data():
-    """Query warehouse and export to JSON."""
-    db_path = Path(__file__).parent.parent / "studio_pierrot.db"
-    output_path = Path(__file__).parent.parent / "dashboard" / "data.json"
-    
-    conn = sqlite3.connect(db_path)
+DB_PATH = 'studio_pierrot.db'
+OUTPUT_PATH = 'dashboard/data.json'
+
+def export_data():
+    print("Exporting Dashboard Data (V2)...")
+    conn = sqlite3.connect(DB_PATH)
     conn.row_factory = sqlite3.Row
     cursor = conn.cursor()
-    
-    try:
-        # 1. Main Anime Dataset
-        cursor.execute("""
-            SELECT 
-                a.title,
-                a.studio,
-                a.start_date,
-                m.score,
-                m.members,
-                m.popularity,
-                s.filler_ratio,
-                s.production_stability,
-                f.estimated_revenue,
-                f.production_cost,
-                f.marketing_cost,
-                (f.estimated_revenue - f.production_cost - f.marketing_cost) as profit,
-                CAST(m.dropped AS REAL) / NULLIF(m.members, 0) * 100 as drop_rate
-            FROM dim_anime a
-            JOIN fact_anime_metrics m ON a.anime_id = m.anime_id
-            LEFT JOIN dim_season s ON a.anime_id = s.anime_id
-            LEFT JOIN fact_financials f ON a.anime_id = f.anime_id
-            ORDER BY m.score DESC
-        """)
-        anime_list = [dict(row) for row in cursor.fetchall()]
-        
-        # 2. Aggregates by Studio
-        cursor.execute("""
-            SELECT 
-                a.studio,
-                COUNT(*) as count,
-                AVG(m.score) as avg_score,
-                AVG(m.members) as avg_members,
-                AVG(s.filler_ratio) as avg_filler
-            FROM dim_anime a
-            JOIN fact_anime_metrics m ON a.anime_id = m.anime_id
-            LEFT JOIN dim_season s ON a.anime_id = s.anime_id
-            GROUP BY a.studio
-            HAVING count >= 1
-        """)
-        studio_stats = [dict(row) for row in cursor.fetchall()]
-        
-        # 3. Filler Impact
-        cursor.execute("""
-            SELECT 
-                CASE 
-                    WHEN s.filler_ratio < 0.10 THEN 'Low (<10%)'
-                    WHEN s.filler_ratio < 0.25 THEN 'Medium (10-25%)'
-                    WHEN s.filler_ratio < 0.40 THEN 'High (25-40%)'
-                    ELSE 'Very High (40%+)'
-                END AS category,
-                AVG(m.score) as avg_score,
-                AVG(CAST(m.dropped AS REAL) / NULLIF(m.members, 0) * 100) as avg_drop_rate
-            FROM dim_season s
-            JOIN fact_anime_metrics m ON s.anime_id = m.anime_id
-            GROUP BY category
-        """)
-        filler_stats = [dict(row) for row in cursor.fetchall()]
-        
-        data = {
-            "anime": anime_list,
-            "studios": studio_stats,
-            "filler_analysis": filler_stats
-        }
-        
-        with open(output_path, 'w', encoding='utf-8') as f:
-            json.dump(data, f, indent=2)
-            
-        print(f"✓ Exported dashboard data to {output_path}")
-        
-    finally:
-        conn.close()
 
-if __name__ == "__main__":
-    export_dashboard_data()
+    data = {}
+
+    # 1. Global KPIs
+    print("  - Calculating Global KPIs...")
+    kpis = cursor.execute('''
+        SELECT 
+            SUM(views) as total_views,
+            SUM(revenue_usd) as total_revenue,
+            SUM(watch_time_minutes) as total_watch_time,
+            AVG(sentiment_score) as avg_sentiment
+        FROM fact_daily_performance
+    ''').fetchone()
+    data['kpis'] = dict(kpis)
+
+    # 2. Daily Trend (Time Series)
+    print("  - Aggregating Daily Trends...")
+    daily_trend = cursor.execute('''
+        SELECT 
+            d.full_date as date,
+            SUM(f.views) as views,
+            SUM(f.revenue_usd) as revenue
+        FROM fact_daily_performance f
+        JOIN dim_date d ON f.date_id = d.date_id
+        GROUP BY d.full_date
+        ORDER BY d.full_date
+    ''').fetchall()
+    data['daily_trend'] = [dict(row) for row in daily_trend]
+
+    # 3. Platform Split
+    print("  - Aggregating Platform Data...")
+    platform_split = cursor.execute('''
+        SELECT 
+            p.platform_name,
+            SUM(f.views) as views,
+            SUM(f.revenue_usd) as revenue
+        FROM fact_daily_performance f
+        JOIN dim_platform p ON f.platform_id = p.platform_id
+        GROUP BY p.platform_name
+        ORDER BY revenue DESC
+    ''').fetchall()
+    data['platform_split'] = [dict(row) for row in platform_split]
+
+    # 4. Region Split
+    print("  - Aggregating Region Data...")
+    region_split = cursor.execute('''
+        SELECT 
+            r.region_name,
+            SUM(f.views) as views,
+            SUM(f.revenue_usd) as revenue
+        FROM fact_daily_performance f
+        JOIN dim_region r ON f.region_id = r.region_id
+        GROUP BY r.region_name
+        ORDER BY revenue DESC
+    ''').fetchall()
+    data['region_split'] = [dict(row) for row in region_split]
+
+    # 5. Anime Performance (Top Lists)
+    print("  - Aggregating Anime Performance...")
+    anime_perf = cursor.execute('''
+        SELECT 
+            a.title,
+            a.image_url,
+            SUM(f.views) as views,
+            SUM(f.revenue_usd) as revenue,
+            AVG(f.sentiment_score) as sentiment,
+            AVG(f.avg_completion_rate) as completion_rate
+        FROM fact_daily_performance f
+        JOIN dim_anime a ON f.anime_id = a.anime_id
+        GROUP BY a.title
+        ORDER BY revenue DESC
+    ''').fetchall()
+    data['anime_performance'] = [dict(row) for row in anime_perf]
+
+    # 6. Heatmap Data (Day of Week)
+    print("  - Aggregating Heatmap Data...")
+    heatmap = cursor.execute('''
+        SELECT 
+            d.day_name,
+            SUM(f.views) as views
+        FROM fact_daily_performance f
+        JOIN dim_date d ON f.date_id = d.date_id
+        GROUP BY d.day_name
+        ORDER BY 
+            CASE d.day_name 
+                WHEN 'Monday' THEN 1 
+                WHEN 'Tuesday' THEN 2 
+                WHEN 'Wednesday' THEN 3 
+                WHEN 'Thursday' THEN 4 
+                WHEN 'Friday' THEN 5 
+                WHEN 'Saturday' THEN 6 
+                WHEN 'Sunday' THEN 7 
+            END
+    ''').fetchall()
+    data['heatmap'] = [dict(row) for row in heatmap]
+
+    conn.close()
+
+    # Write to JSON
+    with open(OUTPUT_PATH, 'w') as f:
+        json.dump(data, f, indent=2)
+    
+    print(f"Data exported to {OUTPUT_PATH}")
+
+if __name__ == '__main__':
+    export_data()
