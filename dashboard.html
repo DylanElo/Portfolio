@@ -6,9 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Studio Pierrot BI Dashboard</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script type="module" crossorigin src="/Portfolio/assets/dashboard-CNS4w4UU.js"></script>
+  <script type="module" crossorigin src="/Portfolio/assets/dashboard-C9xdgX8Q.js"></script>
   <link rel="modulepreload" crossorigin href="/Portfolio/assets/modulepreload-polyfill-B5Qt9EMX.js">
   <link rel="stylesheet" crossorigin href="/Portfolio/assets/dashboard-Cnr_6-JF.css">
+  <link rel="stylesheet" crossorigin href="/Portfolio/assets/style-8rO0JUp0.css">
 </head>
 
 <body class="min-h-screen flex flex-col">
@@ -24,13 +25,13 @@
   <!-- Top Navigation Bar -->
   <header class="bg-white border-b border-slate-200 sticky top-0 z-40">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between h-16">
-        <div class="flex">
-          <div class="flex-shrink-0 flex items-center">
+      <div class="flex flex-wrap xl:flex-nowrap justify-between items-center min-h-16 py-2 gap-4">
+        <div class="flex items-center">
+          <div class="flex-shrink-0 flex items-center mr-4">
             <h1 class="text-xl font-bold text-slate-900 tracking-tight">Studio Pierrot <span
                 class="text-blue-600">BI</span></h1>
           </div>
-          <div class="hidden sm:ml-10 sm:flex sm:space-x-8">
+          <div class="hidden md:flex md:space-x-2 overflow-x-auto">
             <a href="index.html"
               class="nav-link inline-flex items-center px-1 pt-1 text-sm font-medium text-slate-500 hover:text-slate-700">
               Home
@@ -47,9 +48,15 @@
               class="nav-link inline-flex items-center px-1 pt-1 text-sm font-medium text-slate-500 hover:text-slate-700">
               Content Strategy
             </a>
-            <a onclick="switchTab('platform')" id="tab-platform"
+            <a onclick="switchTab('platform')
+
+" id="tab-platform"
               class="nav-link inline-flex items-center px-1 pt-1 text-sm font-medium text-slate-500 hover:text-slate-700">
               Platform & Engagement
+            </a>
+            <a onclick="switchTab('studio')" id="tab-studio"
+              class="nav-link inline-flex items-center px-1 pt-1 text-sm font-medium text-slate-500 hover:text-slate-700">
+              Studio Comparison
             </a>
           </div>
         </div>
@@ -118,10 +125,10 @@
           </div>
         </div>
 
-        <!-- Legacy vs Modern -->
+        <!-- Generational Performance -->
         <div class="card p-6 lg:col-span-1">
-          <h3 class="text-lg font-semibold text-slate-800 mb-4">Legacy vs. Modern</h3>
-          <p class="text-xs text-slate-500 mb-2">Comparing avg revenue of historical hits vs. new titles.</p>
+          <h3 class="text-lg font-semibold text-slate-800 mb-4">Generational Performance</h3>
+          <p class="text-xs text-slate-500 mb-2">Avg revenue by era (Legacy, Gen 1, Gen 2, Gen 3).</p>
           <div class="chart-container" style="height: 350px;">
             <canvas id="legacyChart"></canvas>
           </div>
@@ -218,6 +225,15 @@
         </div>
       </div>
 
+      <!-- Platform Battle Chart -->
+      <div class="card p-6">
+        <h3 class="text-lg font-semibold text-slate-800 mb-4">Platform Battle: Revenue vs. Views</h3>
+        <p class="text-sm text-slate-500 mb-4">Comparing key performance metrics across major streaming platforms.</p>
+        <div class="chart-container" style="height: 400px;">
+          <canvas id="platformBattleChart"></canvas>
+        </div>
+      </div>
+
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <!-- Platform Doughnut -->
         <div class="card p-6 lg:col-span-1">
@@ -250,6 +266,50 @@
         <h3 class="text-sm font-semibold text-slate-800 mb-3">Filter by Platform</h3>
         <div id="platformFilters" class="flex flex-wrap gap-3">
           <!-- Checkboxes injected here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 4: Studio Comparison -->
+    <div id="view-studio" class="space-y-6 hidden fade-in">
+      <div class="flex items-center justify-between">
+        <div>
+          <h2 class="text-2xl font-bold text-slate-900">Studio Comparison</h2>
+          <p class="text-slate-500 text-sm">Benchmarking against major competitors (2020-2024 Era).</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <!-- Market Share -->
+        <div class="card p-6 lg:col-span-1">
+          <h3 class="text-lg font-semibold text-slate-800 mb-4">Market Share (Revenue)</h3>
+          <div class="chart-container">
+            <canvas id="studioShareChart"></canvas>
+          </div>
+        </div>
+
+        <!-- Performance Comparison -->
+        <div class="card p-6 lg:col-span-2">
+          <h3 class="text-lg font-semibold text-slate-800 mb-4">Revenue vs. Views per Studio</h3>
+          <div class="chart-container">
+            <canvas id="studioPerformanceChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Efficiency Metrics -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div class="card p-6">
+          <h3 class="text-lg font-semibold text-slate-800 mb-4">Average Sentiment Score</h3>
+          <div class="chart-container">
+            <canvas id="studioSentimentChart"></canvas>
+          </div>
+        </div>
+        <div class="card p-6">
+          <h3 class="text-lg font-semibold text-slate-800 mb-4">Production Output (Title Count)</h3>
+          <div class="chart-container">
+            <canvas id="studioOutputChart"></canvas>
+          </div>
         </div>
       </div>
     </div>
