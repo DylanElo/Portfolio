@@ -41,7 +41,7 @@
                 </p>
                 <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
                     <span class="tech-stack-tag">Python ETL</span>
-                    <span class="tech-stack-tag">SQLite</span>
+                    <span class="tech-stack-tag">SQL Warehouse</span>
                     <span class="tech-stack-tag">Chart.js</span>
                     <span class="tech-stack-tag">Business Intelligence</span>
                 </div>
@@ -130,6 +130,56 @@
             </div>
         </section>
 
+        <!-- Key Analyses (New) -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">🔍 Key Analyses</h2>
+                <p style="text-align: center; color: #cbd5e1; margin-top: 1rem; margin-bottom: 2rem;">
+                    Deep dives into specific business questions answered by the dashboard.
+                </p>
+                <div class="projects-grid" style="margin-top: 3rem;">
+                    <div class="project-card">
+                        <div class="project-info">
+                            <h3>🏛️ Legacy vs. Modern</h3>
+                            <p>
+                                <strong>Question:</strong> Are new titles performing as well as historical hits?
+                                <br><br>
+                                <strong>Finding:</strong> "Legacy" franchises (Naruto, Bleach) still drive <strong>60%+
+                                    of total revenue</strong>. Modern titles show higher volatility and lower average
+                                retention.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-info">
+                            <h3>📈 Top vs. Flop</h3>
+                            <p>
+                                <strong>Question:</strong> What distinguishes a hit from a miss?
+                                <br><br>
+                                <strong>Finding:</strong> Top performers (Revenue) correlate strongly with <strong>high
+                                    sentiment scores (>0.85)</strong>. "Flops" often suffer from high filler percentages
+                                (>40%) and negative community sentiment.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-info">
+                            <h3>🌍 Regional Growth</h3>
+                            <p>
+                                <strong>Question:</strong> Where is the audience growing?
+                                <br><br>
+                                <strong>Finding:</strong> While Japan remains a core market, <strong>International
+                                    Streaming</strong> (North America, Europe) is the fastest-growing revenue segment,
+                                outpacing domestic broadcast.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Strategic Recommendations -->
         <section class="section">
             <div class="container">
@@ -140,37 +190,36 @@
                 <div class="projects-grid" style="margin-top: 3rem;">
                     <div class="project-card">
                         <div class="project-info">
-                            <h3>🚨 The "Filler Trap"</h3>
+                            <h3>📉 Optimize Filler Strategy</h3>
                             <p>
                                 <strong>Insight:</strong> Data confirms a direct correlation: titles with >40% filler
                                 (e.g., Boruto) see a <strong>35% drop in ROI</strong> compared to faithful adaptations.
                                 <br><br><strong>Action:</strong> Cap filler content at 10% max. Invest in seasonal
-                                breaks
-                                rather than low-quality padding.
+                                breaks rather than low-quality padding.
                             </p>
                         </div>
                     </div>
 
                     <div class="project-card">
                         <div class="project-info">
-                            <h3>💎 Quality Over Quantity</h3>
+                            <h3>🔄 Leverage Legacy IP</h3>
                             <p>
-                                <strong>Insight:</strong> "Bleach: TYBW" (0% filler, high budget) achieved <strong>3x
-                                    the revenue per episode</strong> of long-running weekly formats.
-                                <br><br><strong>Action:</strong> Pivot production model to high-budget, 12-24 episode
-                                seasonal cours.
+                                <strong>Insight:</strong> "Legacy" titles are the financial backbone. "Bleach: TYBW"
+                                proved that reviving classic IP with high budgets yields massive returns.
+                                <br><br><strong>Action:</strong> Prioritize spin-offs, remasters, or high-quality
+                                continuations of established franchises over risky new IPs.
                             </p>
                         </div>
                     </div>
 
                     <div class="project-card">
                         <div class="project-info">
-                            <h3>🌍 Global Streaming First</h3>
+                            <h3>💬 Boost Engagement</h3>
                             <p>
-                                <strong>Insight:</strong> 65% of revenue now comes from international streaming
-                                (Crunchyroll/Netflix), yet marketing spend is still 80% domestic Japan.
-                                <br><br><strong>Action:</strong> Reallocate marketing budget to target global digital
-                                channels immediately.
+                                <strong>Insight:</strong> Recent titles show lower sentiment scores. Community
+                                engagement is a leading indicator of long-term retention.
+                                <br><br><strong>Action:</strong> Increase investment in community interaction, visual
+                                quality, and global marketing campaigns to improve brand perception.
                             </p>
                         </div>
                     </div>
@@ -188,7 +237,10 @@
                         <p>The project follows a complete end-to-end BI pipeline:</p>
                         <ul class="list-disc pl-6 space-y-2 mb-6 text-gray-300">
                             <li><strong>Advanced Data Modeling:</strong> Implemented a robust <strong>Star
-                                    Schema</strong> (Facts & Dimensions) in SQLite to handle complex analytical queries.
+                                    Schema</strong> (Facts & Dimensions) in SQL to handle complex analytical queries.
+                                <br>
+                                <a href="warehouse/schema.sql" target="_blank"
+                                    class="text-blue-400 hover:text-blue-300 underline">View SQL Schema</a>
                             </li>
                             <li><strong>Large-Scale Simulation:</strong> Generated over <strong>150,000+ rows</strong>
                                 of realistic daily performance data, including seasonality, marketing campaigns, and
