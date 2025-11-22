@@ -120,13 +120,29 @@ function formatValue(val, type) {
 // Initialize Dashboard
 function initDashboard(data) {
   // Populate Filters
+  // Populate Filters (Grouped by Era)
   const animeFilter = document.getElementById('animeFilter');
-  data.anime_list.forEach(a => {
+  animeFilter.innerHTML = '<option value="all">All Franchises</option>';
+
+  const modernGroup = document.createElement('optgroup');
+  modernGroup.label = "Modern Era (2016-Present)";
+  const legacyGroup = document.createElement('optgroup');
+  legacyGroup.label = "Legacy Era (2000-2015)";
+
+  // Use anime_performance to get category data
+  const sortedAnime = (data.anime_performance || []).sort((a, b) => a.title.localeCompare(b.title));
+
+  sortedAnime.forEach(a => {
     const opt = document.createElement('option');
     opt.value = a.title;
     opt.textContent = a.title;
-    animeFilter.appendChild(opt);
+
+    if (a.category === 'modern') modernGroup.appendChild(opt);
+    else legacyGroup.appendChild(opt);
   });
+
+  animeFilter.appendChild(modernGroup);
+  animeFilter.appendChild(legacyGroup);
 
   const platformContainer = document.getElementById('platformFilters');
   if (data.platform_split) {
