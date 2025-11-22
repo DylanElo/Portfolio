@@ -263,6 +263,24 @@
           <!-- Checkboxes injected here -->
         </div>
       </div>
+
+      <!-- NEW: Platform Dominance by Generation -->
+      <div class="card p-6">
+        <h3 class="text-lg font-semibold text-slate-800 mb-4">Platform Dominance by Generation</h3>
+        <p class="text-sm text-slate-500 mb-4">How platform market share evolved across generations</p>
+        <div class="chart-container" style="height: 350px;">
+          <canvas id="platformGenChart"></canvas>
+        </div>
+      </div>
+
+      <!-- NEW: Platform Performance Matrix -->
+      <div class="card p-6">
+        <h3 class="text-lg font-semibold text-slate-800 mb-4">Platform Performance Matrix</h3>
+        <p class="text-sm text-slate-500 mb-4">Multi-metric comparison across platforms</p>
+        <div class="chart-container" style="height: 350px;">
+          <canvas id="platformMatrixChart"></canvas>
+        </div>
+      </div>
     </div>
 
     <!-- Tab 4: Studio Comparison -->
@@ -305,6 +323,15 @@
           <div class="chart-container">
             <canvas id="studioOutputChart"></canvas>
           </div>
+        </div>
+      </div>
+
+      <!-- NEW: Cohort Performance Matrix -->
+      <div class="card p-6">
+        <h3 class="text-lg font-semibold text-slate-800 mb-4">Cohort Performance Matrix</h3>
+        <p class="text-sm text-slate-500 mb-4">Average revenue by studio and generation cohort</p>
+        <div class="chart-container" style="height: 400px;">
+          <canvas id="cohortMatrixChart"></canvas>
         </div>
       </div>
     </div>

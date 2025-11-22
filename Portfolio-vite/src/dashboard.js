@@ -17,7 +17,10 @@ let charts = {
   studioShare: null,
   studioPerformance: null,
   studioSentiment: null,
-  studioOutput: null
+  studioOutput: null,
+  cohortMatrix: null,
+  platformGen: null,
+  platformMatrix: null
 };
 let activeTab = 'executive';
 
@@ -173,6 +176,9 @@ function renderAllCharts(data) {
   renderLegacyChart(data.anime_performance || []);
   updateAnimeTable(data.anime_performance || []);
   renderStudioCharts(data.studio_comparison || []);
+  renderCohortMatrix(data.cohort_performance_matrix || []);
+  renderPlatformGenChart(data.platform_by_generation || []);
+  renderPlatformMatrix(data.platform_performance_matrix || []);
 
   applyFilters();
 }
@@ -602,6 +608,111 @@ function renderStudioCharts(data) {
       plugins: { legend: { display: false } }
     }
   });
+}
+
+// Render Cohort Performance Matrix (Heatmap)
+function renderCohortMatrix(data) {
+  const ctx = document.getElementById('cohortMatrixChart').getContext('2d');
+  if (charts.cohortMatrix) charts.cohortMatrix.destroy();
+  const studios = [...new Set(data.map(d => d.studio))];
+  const generations = [...new Set(data.map(d => d.generation))];
+  const matrix = generations.map(gen => {
+    return studios.map(studio => {
+      const entry = data.find(d => d.studio === studio && d.generation === gen);
+      return entry ? entry.value : 0;
+    });
+  });
+  charts.cohortMatrix = new Chart(ctx, {
+    type: 'heatmap', // using chartjs-chart-matrix plugin if available
+    data: {
+      labels: studios,
+      datasets: [{
+        label: 'Revenue',
+        data: matrix.flatMap((row, i) => row.map((value, j) => ({ x: j, y: i, v: value }))),
+        backgroundColor(context) {
+          const value = context.dataset.data[context.dataIndex].v;
+          const alpha = value / Math.max(...matrix.flat());
+          return `rgba(99, 102, 241, ${alpha})`;
+        }
+      }]
+    },
+    options: {
+      scales: {
+        x: { type: 'category', labels: studios, title: { display: true, text: 'Studio' } },
+        y: { type: 'category', labels: generations, title: { display: true, text: 'Generation' } }
+      },
+      plugins: { legend: { display: false } }
+    }
+  });
+}
+
+// Render Platform Dominance by Generation (Stacked Area)
+function renderPlatformGenChart(data) {
+  const ctx = document.getElementById('platformGenChart').getContext('2d');
+  if (charts.platformGen) charts.platformGen.destroy();
+  const generations = data.map(d => d.generation);
+  const platforms = Object.keys(data[0] || {}).filter(k => k !== 'generation');
+  const datasets = platforms.map(p => ({
+    label: p,
+    data: data.map(d => d[p] || 0),
+    fill: true,
+    backgroundColor: getRandomColor(p),
+    borderColor: getRandomColor(p),
+    tension: 0.4
+  }));
+  charts.platformGen = new Chart(ctx, {
+    type: 'line',
+    data: { labels: generations, datasets },
+    options: { plugins: { title: { display: true, text: 'Platform Dominance by Generation' } }, scales: { y: { stacked: true } } }
+  });
+}
+
+// Render Platform Performance Matrix (Heatmap)
+function renderPlatformMatrix(data) {
+  const ctx = document.getElementById('platformMatrixChart').getContext('2d');
+  if (charts.platformMatrix) charts.platformMatrix.destroy();
+  const platforms = [...new Set(data.map(d => d.platform))];
+  const metrics = [...new Set(data.map(d => d.metric))];
+  const matrix = metrics.map(metric => {
+    return platforms.map(platform => {
+      const entry = data.find(d => d.platform === platform && d.metric === metric);
+      return entry ? entry.value : 0;
+    });
+  });
+  charts.platformMatrix = new Chart(ctx, {
+    type: 'heatmap',
+    data: {
+      labels: platforms,
+      datasets: [{
+        label: 'Metric',
+        data: matrix.flatMap((row, i) => row.map((value, j) => ({ x: j, y: i, v: value }))),
+        backgroundColor(context) {
+          const value = context.dataset.data[context.dataIndex].v;
+          const alpha = value / Math.max(...matrix.flat());
+          return `rgba(34, 197, 94, ${alpha})`;
+        }
+      }]
+    },
+    options: {
+      scales: {
+        x: { type: 'category', labels: platforms, title: { display: true, text: 'Platform' } },
+        y: { type: 'category', labels: metrics, title: { display: true, text: 'Metric' } }
+      },
+      plugins: { legend: { display: false } }
+    }
+  });
+}
+
+function getRandomColor(key) {
+  const colors = {
+    'Crunchyroll': 'rgba(255,99,132,0.6)',
+    'Netflix': 'rgba(54,162,235,0.6)',
+    'Hulu': 'rgba(255,206,86,0.6)',
+    'Disney+': 'rgba(75,192,192,0.6)',
+    'TV Tokyo': 'rgba(153,102,255,0.6)',
+    'Funimation': 'rgba(255,159,64,0.6)'
+  };
+  return colors[key] || 'rgba(200,200,200,0.6)';
 }
 
 function updateAnimeTable(data) {
