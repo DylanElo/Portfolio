@@ -172,7 +172,7 @@ function switchTab(tabId) {
   activeLink.classList.remove('text-slate-500');
 
   // Update Content
-  ['executive', 'strategy', 'platform'].forEach(id => {
+  ['executive', 'strategy', 'platform', 'studio'].forEach(id => {
     const el = document.getElementById(`view-${id}`);
     if (id === tabId) {
       el.classList.remove('hidden');
@@ -222,6 +222,7 @@ function renderAllCharts(data) {
   renderRegionChart(data.region_split || []);
   renderLegacyChart(data.anime_performance || []);
   updateAnimeTable(data.anime_performance || []);
+  renderStudioCharts(data.studio_comparison || []);
 
   applyFilters();
 }
@@ -471,6 +472,111 @@ function updateLegacyChart(data) {
 
   charts.legacy.data.datasets[0].data = [avgLegacy, avgModern];
   charts.legacy.update();
+}
+
+function renderStudioCharts(data) {
+  if (charts.studioShare) charts.studioShare.destroy();
+  if (charts.studioPerformance) charts.studioPerformance.destroy();
+  if (charts.studioSentiment) charts.studioSentiment.destroy();
+  if (charts.studioOutput) charts.studioOutput.destroy();
+
+  if (!data || !data.length) return;
+
+  // 1. Market Share (Revenue)
+  const ctxShare = document.getElementById('studioShareChart').getContext('2d');
+  charts.studioShare = new Chart(ctxShare, {
+    type: 'doughnut',
+    data: {
+      labels: data.map(d => d.studio),
+      datasets: [{
+        data: data.map(d => d.total_revenue),
+        backgroundColor: [colors.primary, colors.secondary, colors.accent, colors.success, colors.warning, colors.danger],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'bottom' },
+        title: { display: true, text: 'Total Revenue Share' }
+      }
+    }
+  });
+
+  // 2. Performance (Revenue vs Views)
+  const ctxPerf = document.getElementById('studioPerformanceChart').getContext('2d');
+  charts.studioPerformance = new Chart(ctxPerf, {
+    type: 'bar',
+    data: {
+      labels: data.map(d => d.studio),
+      datasets: [
+        {
+          label: 'Revenue ($)',
+          data: data.map(d => d.total_revenue),
+          backgroundColor: colors.primary,
+          yAxisID: 'y',
+          order: 1
+        },
+        {
+          label: 'Views',
+          data: data.map(d => d.total_views),
+          backgroundColor: colors.secondary,
+          yAxisID: 'y1',
+          order: 2
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        y: { type: 'linear', display: true, position: 'left', title: { display: true, text: 'Revenue ($)' } },
+        y1: { type: 'linear', display: true, position: 'right', grid: { drawOnChartArea: false }, title: { display: true, text: 'Views' } }
+      }
+    }
+  });
+
+  // 3. Sentiment
+  const ctxSent = document.getElementById('studioSentimentChart').getContext('2d');
+  charts.studioSentiment = new Chart(ctxSent, {
+    type: 'bar',
+    data: {
+      labels: data.map(d => d.studio),
+      datasets: [{
+        label: 'Avg MAL Score',
+        data: data.map(d => d.avg_sentiment * 10), // Scale back to 1-10
+        backgroundColor: data.map(d => d.studio === 'Studio Pierrot' ? colors.primary : colors.slate),
+        borderRadius: 4
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: { y: { min: 5, max: 10 } },
+      plugins: { legend: { display: false } }
+    }
+  });
+
+  // 4. Output
+  const ctxOut = document.getElementById('studioOutputChart').getContext('2d');
+  charts.studioOutput = new Chart(ctxOut, {
+    type: 'bar',
+    data: {
+      labels: data.map(d => d.studio),
+      datasets: [{
+        label: 'Titles Analyzed',
+        data: data.map(d => d.title_count),
+        backgroundColor: colors.accent,
+        borderRadius: 4
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { display: false } }
+    }
+  });
 }
 
 function updateAnimeTable(data) {

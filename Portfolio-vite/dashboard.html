@@ -44,9 +44,15 @@
               class="nav-link inline-flex items-center px-1 pt-1 text-sm font-medium text-slate-500 hover:text-slate-700">
               Content Strategy
             </a>
-            <a onclick="switchTab('platform')" id="tab-platform"
+            <a onclick="switchTab('platform')
+
+" id="tab-platform"
               class="nav-link inline-flex items-center px-1 pt-1 text-sm font-medium text-slate-500 hover:text-slate-700">
               Platform & Engagement
+            </a>
+            <a onclick="switchTab('studio')" id="tab-studio"
+              class="nav-link inline-flex items-center px-1 pt-1 text-sm font-medium text-slate-500 hover:text-slate-700">
+              Studio Comparison
             </a>
           </div>
         </div>
@@ -247,6 +253,50 @@
         <h3 class="text-sm font-semibold text-slate-800 mb-3">Filter by Platform</h3>
         <div id="platformFilters" class="flex flex-wrap gap-3">
           <!-- Checkboxes injected here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 4: Studio Comparison -->
+    <div id="view-studio" class="space-y-6 hidden fade-in">
+      <div class="flex items-center justify-between">
+        <div>
+          <h2 class="text-2xl font-bold text-slate-900">Studio Comparison</h2>
+          <p class="text-slate-500 text-sm">Benchmarking against major competitors (2020-2024 Era).</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <!-- Market Share -->
+        <div class="card p-6 lg:col-span-1">
+          <h3 class="text-lg font-semibold text-slate-800 mb-4">Market Share (Revenue)</h3>
+          <div class="chart-container">
+            <canvas id="studioShareChart"></canvas>
+          </div>
+        </div>
+
+        <!-- Performance Comparison -->
+        <div class="card p-6 lg:col-span-2">
+          <h3 class="text-lg font-semibold text-slate-800 mb-4">Revenue vs. Views per Studio</h3>
+          <div class="chart-container">
+            <canvas id="studioPerformanceChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Efficiency Metrics -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div class="card p-6">
+          <h3 class="text-lg font-semibold text-slate-800 mb-4">Average Sentiment Score</h3>
+          <div class="chart-container">
+            <canvas id="studioSentimentChart"></canvas>
+          </div>
+        </div>
+        <div class="card p-6">
+          <h3 class="text-lg font-semibold text-slate-800 mb-4">Production Output (Title Count)</h3>
+          <div class="chart-container">
+            <canvas id="studioOutputChart"></canvas>
+          </div>
         </div>
       </div>
     </div>
