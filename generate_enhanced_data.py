@@ -311,6 +311,85 @@ def generate_daily_trend_data(anime: Dict, views: int, start_date: str, end_date
 # MAIN DATA GENERATION
 # ============================================================================
 
+def generate_cohort_matrix(competitor_data):
+    """Generate cohort performance matrix for heatmap visualization"""
+    generations = ["Legacy (Pre-2016)", "Gen 1 (2016-2019)", "Gen 2 (2020-2022)", "Gen 3 (2023-Present)"]
+    studios = sorted(set(d["studio"] for d in competitor_data))
+    
+    matrix = []
+    for studio in studios:
+        for gen in generations:
+            # Filter data for this studio and generation
+            filtered = [d for d in competitor_data if d["studio"] == studio and d["generation"] == gen]
+            if filtered:
+                avg_revenue = sum(d["revenue"] for d in filtered) / len(filtered)
+                matrix.append({
+                    "studio": studio,
+                    "generation": gen,
+                    "value": int(avg_revenue)
+                })
+    
+    return matrix
+
+def generate_platform_generation_data(competitor_data):
+    """Generate platform market share by generation for stacked area chart"""
+    from collections import defaultdict
+    
+    generations = ["Legacy (Pre-2016)", "Gen 1 (2016-2019)", "Gen 2 (2020-2022)", "Gen 3 (2023-Present)"]
+    gen_platform_data = defaultdict(lambda: defaultdict(int))
+    
+    # Estimate platform share for each anime based on generation
+    platform_weights_by_gen = {
+        "Legacy (Pre-2016)": {"TV Tokyo": 0.60, "Crunchyroll": 0.20, "Funimation": 0.15, "Netflix": 0.05},
+        "Gen 1 (2016-2019)": {"Crunchyroll": 0.45, "Funimation": 0.25, "Netflix": 0.20, "Hulu": 0.10},
+        "Gen 2 (2020-2022)": {"Crunchyroll": 0.40, "Netflix": 0.30, "Hulu": 0.20, "Disney+": 0.10},
+        "Gen 3 (2023-Present)": {"Crunchyroll": 0.35, "Netflix": 0.30, "Disney+": 0.20, "Hulu": 0.15}
+    }
+    
+    for item in competitor_data:
+        gen = item["generation"]
+        revenue = item["revenue"]
+        
+        if gen in platform_weights_by_gen:
+            for platform, weight in platform_weights_by_gen[gen].items():
+                gen_platform_data[gen][platform] += revenue * weight
+    
+    # Format for stacked area chart
+    result = []
+    for gen in generations:
+        gen_data = {"generation": gen}
+        for platform in set(p for weights in platform_weights_by_gen.values() for p in weights.keys()):
+            gen_data[platform] = int(gen_platform_data[gen].get(platform, 0))
+        result.append(gen_data)
+    
+    return result
+
+def generate_platform_matrix(platform_aggregates):
+    """Generate platform performance matrix for heatmap"""
+    metrics = ["Revenue", "Views", "Engagement"]
+    matrix = []
+    
+    for platform, data in platform_aggregates.items():
+        matrix.append({
+            "platform": platform,
+            "metric": "Revenue",
+            "value": int(data["revenue"])
+        })
+        matrix.append({
+            "platform": platform,
+            "metric": "Views",
+            "value": int(data["views"])
+        })
+        # Engagement = views/revenue ratio(normalized)
+        engagement = (data["views"] / data["revenue"]) if data["revenue"] > 0 else 0
+        matrix.append({
+            "platform": platform,
+            "metric": "Engagement",
+            "value": int(engagement)
+        })
+    
+    return matrix
+
 def generate_enhanced_dataset():
     """Generate complete enhanced dataset"""
     
@@ -507,7 +586,16 @@ def generate_enhanced_dataset():
         ],
         "studio_comparison": studio_comparison,
         "competitor_raw_data": competitor_raw_data,
-        "sankey_data": sankey_data
+        "sankey_data": sankey_data,
+        
+        # NEW: Cohort Performance Matrix (Heatmap)
+        "cohort_performance_matrix": generate_cohort_matrix(competitor_raw_data),
+        
+        # NEW: Platform Dominance by Generation (Stacked Area data)
+        "platform_by_generation": generate_platform_generation_data(competitor_raw_data),
+        
+        # NEW: Platform Performance Matrix
+        "platform_performance_matrix": generate_platform_matrix(platform_aggregates)
     }
     
     # Aggregate daily trend by date
