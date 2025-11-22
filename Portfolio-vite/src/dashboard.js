@@ -441,7 +441,13 @@ function renderRegionChart(data) {
 }
 
 function updateRegionChart(data) {
-  // Region chart is static/precomputed, no need to update
+  if (!charts.region) return;
+  const sorted = [...data].sort((a, b) => b.views - a.views);
+
+  charts.region.data.labels = sorted.map(d => d.region_name);
+  charts.region.data.datasets[0].data = sorted.map(d => d.views);
+  charts.region.data.datasets[1].data = sorted.map(d => d.revenue);
+  charts.region.update();
 }
 
 function renderLegacyChart(data) {
