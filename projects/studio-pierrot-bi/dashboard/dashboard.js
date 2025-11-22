@@ -1,8 +1,9 @@
-import './dashboard-style.css';
-import { Chart, registerables } from 'chart.js';
-import { MatrixController, MatrixElement } from 'chartjs-chart-matrix';
+// import './dashboard-style.css'; // CSS loaded via link in HTML or assumed present
+// Chart.js and Matrix plugin loaded via CDN
+// const Chart = window.Chart; 
 
-Chart.register(...registerables, MatrixController, MatrixElement);
+// Register plugin if needed (CDN usually registers global)
+// Chart.register(ChartMatrix.MatrixController, ChartMatrix.MatrixElement);
 
 let rawData = null;
 let charts = {

@@ -4,359 +4,195 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dylan Elo - Portfolio</title>
+  <title>My Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    :root {
-      --primary: #667eea;
-      --secondary: #764ba2;
-      --dark: #0f172a;
-      --light: #f8fafc;
-      --text: #334155;
-      --text-light: #94a3b8;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      color: var(--text);
-      background: var(--light);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    .background-gradient {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(circle at 50% 0%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 0% 50%, rgba(118, 75, 162, 0.05) 0%, transparent 50%);
-      z-index: -1;
-      pointer-events: none;
-    }
-
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: rgba(255, 255, 255, 0.8);
-      backdrop-filter: blur(10px);
-      z-index: 1000;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    }
-
-    nav {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 1.5rem;
-      font-weight: 700;
-      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      text-decoration: none;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: var(--text);
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-
-    .nav-links a:hover {
-      color: var(--primary);
-    }
-
-    section {
-      padding: 6rem 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-
-    .hero-content {
-      max-width: 800px;
-    }
-
-    .greeting {
-      display: block;
-      font-size: 1.25rem;
-      color: var(--primary);
-      font-weight: 600;
-      margin-bottom: 1rem;
-    }
-
-    h1 {
-      font-size: 4rem;
-      font-weight: 800;
-      line-height: 1.1;
-      margin-bottom: 1.5rem;
-      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .hero-description {
-      font-size: 1.25rem;
-      color: var(--text-light);
-      margin-bottom: 2.5rem;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      border-radius: 8px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.3s;
-      margin: 0.5rem;
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-      color: white;
-      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
-    }
-
-    .btn-secondary {
-      background: white;
-      color: var(--text);
-      border: 1px solid #e2e8f0;
-    }
-
-    .btn-secondary:hover {
-      background: #f8fafc;
-    }
-
-    h2 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      text-align: center;
-      margin-bottom: 3rem;
-      color: var(--dark);
-    }
-
-    .skills-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-      margin: 2rem 0;
-    }
-
-    .skill-item {
-      background: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 50px;
-      font-weight: 500;
-      color: var(--primary);
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-      border: 1px solid #e2e8f0;
-    }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-
-    .project-card {
-      background: white;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s;
-    }
-
-    .project-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .project-info {
-      padding: 1.5rem;
-    }
-
-    .project-info h3 {
-      font-size: 1.25rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      color: var(--dark);
-    }
-
-    .project-info p {
-      color: var(--text-light);
-      margin-bottom: 1rem;
-    }
-
-    .contact-info {
-      text-align: center;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .contact-info p {
-      font-size: 1.125rem;
-      margin-bottom: 2rem;
-    }
-
-    .contact-links {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    footer {
-      background: var(--dark);
-      color: white;
-      text-align: center;
-      padding: 2rem;
-    }
-
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 2.5rem;
-      }
-
-      .nav-links {
-        display: none;
-      }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <div class="background-gradient"></div>
 
-  <header>
-    <nav>
-      <a href="#home" class="logo">Portfolio.</a>
+  <header class="header">
+    <nav class="nav-container">
+      <a href="index.html" class="logo">Portfolio.</a>
+      <button class="mobile-menu-btn" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#resume">Resume</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <span class="greeting">Hello, I'm</span>
-      <h1>Dylan Elo</h1>
-      <p class="hero-description">
-        Software Engineer & Data Analyst | Applied Mathematics & Finance Background
-      </p>
-      <div>
-        <a href="#projects" class="btn btn-primary">View Work</a>
-        <a href="#contact" class="btn btn-secondary">Contact Me</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-      <p style="font-size: 1.125rem; margin-bottom: 2rem;">
-        With a diverse academic background in Applied Mathematics, Finance, and Software Engineering,
-        I have honed my skills in web and software development and data analytics. I am equipped with
-        the technical abilities to excel in challenging environments.
-      </p>
-      <div class="skills-grid">
-        <span class="skill-item">Software Engineering</span>
-        <span class="skill-item">Data Analysis</span>
-        <span class="skill-item">Power BI (PL 300)</span>
-        <span class="skill-item">API Integration</span>
-        <span class="skill-item">Incident Management</span>
-        <span class="skill-item">Japanese (N3)</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="projects">
-    <h2>My Projects</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <div class="project-info">
-          <h3>📊 Studio Pierrot BI Dashboard</h3>
-          <p>
-            Interactive Business Intelligence dashboard analyzing anime franchise performance
-            with Chart.js visualizations and strategic insights.
-          </p>
-          <a href="Portfolio-vite/dashboard.html" class="btn btn-primary">View Dashboard</a>
+  <main>
+    <section id="home" class="hero-section">
+      <div class="hero-content fade-in">
+        <span class="greeting">Hello, I'm</span>
+        <h1 class="gradient-text">Dylan Elo</h1>
+        <p class="hero-description">Software Engineer & Data Analyst | Applied Mathematics & Finance Background</p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">View Work</a>
+          <a href="#contact" class="btn btn-secondary">Contact Me</a>
         </div>
       </div>
+    </section>
 
-      <div class="project-card">
-        <div class="project-info">
-          <h3>💼 Professional Portfolio</h3>
-          <p>
-            Modern, responsive portfolio website showcasing projects and technical expertise
-            with clean design and smooth user experience.
-          </p>
-          <a href="#" class="btn btn-secondary">You're Here!</a>
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title fade-in">About Me</h2>
+        <div class="about-content fade-in">
+          <div class="about-text">
+            <p>With a diverse academic background in Applied Mathematics, Finance, and Software Engineering, I have
+              honed my skills in web and software development and data analytics. I am equipped with the technical
+              abilities to excel in challenging environments.</p>
+            <div class="skills-grid">
+              <div class="skill-item">Software Engineering</div>
+              <div class="skill-item">Data Analysis</div>
+              <div class="skill-item">Power BI (PL 300)</div>
+              <div class="skill-item">API Integration</div>
+              <div class="skill-item">Incident Management</div>
+              <div class="skill-item">Japanese (N3)</div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contact">
-    <h2>Get In Touch</h2>
-    <div class="contact-info">
-      <p>
-        I'm always interested in hearing about new opportunities and collaborations.
-        Feel free to reach out!
-      </p>
-      <div class="contact-links">
-        <a href="mailto:your.email@example.com" class="btn btn-primary">Email Me</a>
-        <a href="https://github.com/DylanElo" class="btn btn-secondary" target="_blank">GitHub</a>
-        <a href="https://linkedin.com/in/yourprofile" class="btn btn-secondary" target="_blank">LinkedIn</a>
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title fade-in">My Projects</h2>
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="project-card fade-in">
+            <div class="project-image">
+              <img
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Studio Pierrot BI Analysis">
+            </div>
+            <div class="project-info">
+              <h3>Studio Pierrot Turnaround Strategy</h3>
+            </div>
+            <div class="project-info">
+              <h3>Project Two</h3>
+              <p>An interactive web application built with vanilla JavaScript.</p>
+              <div class="project-tags">
+                <span>JavaScript</span>
+                <span>API</span>
+              </div>
+              <a href="#" class="project-link">View Project</a>
+            </div>
+          </article>
+          <!-- Project 3 -->
+          <article class="project-card fade-in">
+            <div class="project-image">
+              <img
+                src="https://images.unsplash.com/photo-1507238691126-866775fafd5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Project 3">
+            </div>
+            <div class="project-info">
+              <h3>Project Three</h3>
+              <p>A personal blog template with dark mode support.</p>
+              <div class="project-tags">
+                <span>Design</span>
+                <span>UI/UX</span>
+              </div>
+              <a href="#" class="project-link">View Project</a>
+            </div>
+          </article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer>
+    <section id="resume" class="section">
+      <div class="container">
+        <h2 class="section-title fade-in">Resume</h2>
+        <div class="resume-container fade-in">
+          <div class="resume-block">
+            <h3>Education</h3>
+            <div class="resume-item">
+              <span class="date">Sep 2017 - Jul 2019</span>
+              <h4>Software Engineering</h4>
+              <p>ESPRIT, Tunis, Tunisia</p>
+            </div>
+            <div class="resume-item">
+              <span class="date">Sep 2016 - Jul 2017</span>
+              <h4>Bachelor's in Applied Mathematics</h4>
+              <p>Le Mans Université, Le Mans, France</p>
+              <p><small>Focus: Finance, Insurance, and Healthcare</small></p>
+            </div>
+          </div>
+          <div class="resume-block">
+            <h3>Experience</h3>
+            <div class="resume-item">
+              <span class="date">Sep 2023 - Present</span>
+              <h4>Customer Support - Incident Analyst</h4>
+              <p>Maviance PLC, Douala Cameroon</p>
+              <ul>
+                <li>Analyzed incident trends and provided insights to product and engineering teams.</li>
+                <li>Successfully implemented a trend analysis framework, reducing incident rates.</li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <span class="date">Sep 2021 - Jul 2023</span>
+              <h4>Technical Support</h4>
+              <p>Meels & Beez, Douala, Cameroon</p>
+              <ul>
+                <li>Engaged with engineering teams to troubleshoot and remediate technical issues.</li>
+                <li>Leveraged deep knowledge of financial technology solutions for API integration support.</li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <span class="date">Jan 2021 - Jul 2021</span>
+              <h4>IT Business Unit Intern</h4>
+              <p>Atlantique Insurrances IARDT, Douala, Cameroon</p>
+              <ul>
+                <li>Assisted in development and implementation of IT solutions to improve business operations.</li>
+                <li>Spearheaded a cross-departmental project to implement analytical tools (30% reduction in recurring
+                  incidents).</li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <span class="date">Jan 2020 - Dec 2020</span>
+              <h4>Software Development Intern</h4>
+              <p>Octopus Technologies, Douala, Cameroon</p>
+              <ul>
+                <li>Analyzed API usage data to identify and resolve technical issues swiftly.</li>
+                <li>Ensured high system availability.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title fade-in">Get In Touch</h2>
+        <div class="contact-content fade-in">
+          <p>Interested in working together? Feel free to reach out!</p>
+          <a href="mailto:dylanelo18@gmail.com" class="btn btn-primary">Say Hello</a>
+          <div class="social-links">
+            <a href="#">GitHub</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Twitter</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
     <p>&copy; 2024 Dylan Elo. All rights reserved.</p>
   </footer>
+
+  <script type="module" src="/src/main.js"></script>
 </body>
 
 </html>

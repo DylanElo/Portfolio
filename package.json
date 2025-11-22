@@ -1,5 +1,5 @@
 {
-  "name": "temp_vite",
+  "name": "portfoliovite",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,5 +10,9 @@
   },
   "devDependencies": {
     "vite": "^7.2.4"
+  },
+  "dependencies": {
+    "chart.js": "^4.5.1",
+    "chartjs-chart-matrix": "^3.0.0"
   }
 }

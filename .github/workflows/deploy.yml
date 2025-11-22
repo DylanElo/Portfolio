@@ -31,13 +31,13 @@ jobs:
           
       - name: Install dependencies
         run: |
-          cd Portfolio-vite
           npm ci
           
       - name: Build
         run: |
-          cd Portfolio-vite
           npm run build
+          mkdir -p dist/projects/studio-pierrot-bi/dashboard
+          cp -r projects/studio-pierrot-bi/dashboard/* dist/projects/studio-pierrot-bi/dashboard/
         
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -45,7 +45,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './Portfolio-vite/dist'
+          path: './dist'
       
       - name: Deploy to GitHub Pages
         id: deployment

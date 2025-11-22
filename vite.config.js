@@ -8,7 +8,6 @@ export default defineConfig({
             input: {
                 main: resolve(__dirname, 'index.html'),
                 project: resolve(__dirname, 'project.html'),
-                dashboard: resolve(__dirname, 'dashboard.html'),
             },
         },
     },
