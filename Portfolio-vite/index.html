@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body>
+  <div class="background-gradient"></div>
+
+  <header class="header">
+    <nav class="nav-container">
+      <a href="index.html" class="logo">Portfolio.</a>
+      <button class="mobile-menu-btn" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero-section">
+      <div class="hero-content fade-in">
+        <span class="greeting">Hello, I'm</span>
+        <h1 class="gradient-text">Dylan Elo</h1>
+        <p class="hero-description">Software Engineer & Data Analyst | Applied Mathematics & Finance Background</p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">View Work</a>
+          <a href="#contact" class="btn btn-secondary">Contact Me</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title fade-in">About Me</h2>
+        <div class="about-content fade-in">
+          <div class="about-text">
+            <p>With a diverse academic background in Applied Mathematics, Finance, and Software Engineering, I have
+              honed my skills in web and software development and data analytics. I am equipped with the technical
+              abilities to excel in challenging environments.</p>
+            <div class="skills-grid">
+              <div class="skill-item">Software Engineering</div>
+              <div class="skill-item">Data Analysis</div>
+              <div class="skill-item">Power BI (PL 300)</div>
+              <div class="skill-item">API Integration</div>
+              <div class="skill-item">Incident Management</div>
+              <div class="skill-item">Japanese (N3)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title fade-in">My Projects</h2>
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="project-card fade-in">
+            <div class="project-image">
+              <img
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Studio Pierrot BI Analysis">
+            </div>
+            <div class="project-info">
+              <h3>Studio Pierrot Turnaround Strategy</h3>
+              <p>Strategic BI dashboard optimizing ROI and streaming revenue for major anime franchises.</p>
+              <div class="project-tags">
+                <span>Python ETL</span>
+                <span>SQL</span>
+                <span>Data Viz</span>
+              </div>
+              <a href="project.html" class="project-link">View Case Study</a>
+            </div>
+          </article>
+          <!-- Project 2 -->
+          <article class="project-card fade-in">
+            <div class="project-image">
+              <img
+                src="https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Project 2">
+            </div>
+            <div class="project-info">
+              <h3>Project Two</h3>
+              <p>An interactive web application built with vanilla JavaScript.</p>
+              <div class="project-tags">
+                <span>JavaScript</span>
+                <span>API</span>
+              </div>
+              <a href="#" class="project-link">View Project</a>
+            </div>
+          </article>
+          <!-- Project 3 -->
+          <article class="project-card fade-in">
+            <div class="project-image">
+              <img
+                src="https://images.unsplash.com/photo-1507238691126-866775fafd5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Project 3">
+            </div>
+            <div class="project-info">
+              <h3>Project Three</h3>
+              <p>A personal blog template with dark mode support.</p>
+              <div class="project-tags">
+                <span>Design</span>
+                <span>UI/UX</span>
+              </div>
+              <a href="#" class="project-link">View Project</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="resume" class="section">
+      <div class="container">
+        <h2 class="section-title fade-in">Resume</h2>
+        <div class="resume-container fade-in">
+          <div class="resume-block">
+            <h3>Education</h3>
+            <div class="resume-item">
+              <span class="date">Sep 2017 - Jul 2019</span>
+              <h4>Software Engineering</h4>
+              <p>ESPRIT, Tunis, Tunisia</p>
+            </div>
+            <div class="resume-item">
+              <span class="date">Sep 2016 - Jul 2017</span>
+              <h4>Bachelor's in Applied Mathematics</h4>
+              <p>Le Mans Université, Le Mans, France</p>
+              <p><small>Focus: Finance, Insurance, and Healthcare</small></p>
+            </div>
+          </div>
+          <div class="resume-block">
+            <h3>Experience</h3>
+            <div class="resume-item">
+              <span class="date">Sep 2023 - Present</span>
+              <h4>Customer Support - Incident Analyst</h4>
+              <p>Maviance PLC, Douala Cameroon</p>
+              <ul>
+                <li>Analyzed incident trends and provided insights to product and engineering teams.</li>
+                <li>Successfully implemented a trend analysis framework, reducing incident rates.</li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <span class="date">Sep 2021 - Jul 2023</span>
+              <h4>Technical Support</h4>
+              <p>Meels & Beez, Douala, Cameroon</p>
+              <ul>
+                <li>Engaged with engineering teams to troubleshoot and remediate technical issues.</li>
+                <li>Leveraged deep knowledge of financial technology solutions for API integration support.</li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <span class="date">Jan 2021 - Jul 2021</span>
+              <h4>IT Business Unit Intern</h4>
+              <p>Atlantique Insurrances IARDT, Douala, Cameroon</p>
+              <ul>
+                <li>Assisted in development and implementation of IT solutions to improve business operations.</li>
+                <li>Spearheaded a cross-departmental project to implement analytical tools (30% reduction in recurring
+                  incidents).</li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <span class="date">Jan 2020 - Dec 2020</span>
+              <h4>Software Development Intern</h4>
+              <p>Octopus Technologies, Douala, Cameroon</p>
+              <ul>
+                <li>Analyzed API usage data to identify and resolve technical issues swiftly.</li>
+                <li>Ensured high system availability.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title fade-in">Get In Touch</h2>
+        <div class="contact-content fade-in">
+          <p>Interested in working together? Feel free to reach out!</p>
+          <a href="mailto:dylanelo18@gmail.com" class="btn btn-primary">Say Hello</a>
+          <div class="social-links">
+            <a href="#">GitHub</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Twitter</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2024 Dylan Elo. All rights reserved.</p>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

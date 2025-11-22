@@ -585,89 +585,65 @@
         function renderKPIs(kpis) {
             const items = [
                 { label: 'Total Revenue', value: kpis.total_revenue, fmt: 'currency', icon: '💰', color: 'text-blue-600', bg: 'bg-blue-50' },
-                { label: 'Total Views', value: kpis.total_views, fmt: 'number', icon: '👁️', color: 'text-violet-600', bg: 'bg-violet-50' },
-                { label: 'Watch Time (Hrs)', value: kpis.total_watch_time, fmt: 'number', icon: '⏱️', color: 'text-emerald-600', bg: 'bg-emerald-50' },
-                { label: 'Avg Sentiment', value: kpis.avg_sentiment, fmt: 'decimal', icon: '😊', color: 'text-amber-600', bg: 'bg-amber-50' }
-            ];
-
-            document.getElementById('kpiContainer').innerHTML = items.map(item => `
-                <div class="card p-6 flex items-center space-x-4">
-                    <div class="p-3 rounded-full ${item.bg} ${item.color} text-2xl">
-                        ${item.icon}
-                    </div>
-                    <div>
-                        <p class="text-sm font-medium text-slate-500">${item.label}</p>
-                        <p class="text-2xl font-bold text-slate-900">${formatValue(item.value, item.fmt)}</p>
-                    if (!agg[key]) agg[key] = { date: entry.date, title, views: 0, revenue: 0 };
-                    agg[key].views += (entry.views || 0);
-                    agg[key].revenue += (entry.revenue || 0);
-                });
-                data.daily_anime_trend = Object.values(agg);
+                let title = item.title;
+            for (const [franchise, titles] of Object.entries(franchiseMap)) {
+                if (titles.includes(title)) { title = franchise; break; }
+            }
+            if (!scatterAgg[title]) scatterAgg[title] = { title, filler: 0, roi: 0, views: 0, count: 0 };
+            scatterAgg[title].filler += item.filler_percentage;
+            scatterAgg[title].roi += item.roi_percentage;
+            scatterAgg[title].views += item.total_views;
+            scatterAgg[title].count++;
+        });
+        data.scatter_plot = Object.values(scatterAgg).map(i => ({
+            title: i.title,
+            filler_percentage: i.filler / i.count,
+            roi_percentage: i.roi / i.count,
+            total_views: i.views
+        }));
             }
 
-            // 2. Scatter & Performance
-            const scatterAgg = {};
-            if (data.scatter_plot) {
-                data.scatter_plot.forEach(item => {
-                    let title = item.title;
-                    for (const [franchise, titles] of Object.entries(franchiseMap)) {
-                        if (titles.includes(title)) { title = franchise; break; }
-                    }
-                    if (!scatterAgg[title]) scatterAgg[title] = { title, filler: 0, roi: 0, views: 0, count: 0 };
-                    scatterAgg[title].filler += item.filler_percentage;
-                    scatterAgg[title].roi += item.roi_percentage;
-                    scatterAgg[title].views += item.total_views;
-                    scatterAgg[title].count++;
-                });
-                data.scatter_plot = Object.values(scatterAgg).map(i => ({
-                    title: i.title,
-                    filler_percentage: i.filler / i.count,
-                    roi_percentage: i.roi / i.count,
-                    total_views: i.views
-                }));
-            }
+        if (data.anime_performance) {
+            const agg = {};
+            data.anime_performance.forEach(anime => {
+                let title = anime.title;
+                for (const [franchise, titles] of Object.entries(franchiseMap)) {
+                    if (titles.includes(title)) { title = franchise; break; }
+                }
+                if (!agg[title]) agg[title] = { title, views: 0, rev: 0, sent: 0, comp: 0, count: 0 };
+                agg[title].views += (anime.views || 0);
+                agg[title].rev += (anime.revenue || 0);
+                agg[title].sent += (anime.sentiment || anime.avg_sentiment || 0);
+                agg[title].comp += (anime.completion_rate || 0);
+                agg[title].count++;
+            });
+            data.anime_performance = Object.values(agg).map(a => {
+                const scatterItem = data.scatter_plot.find(s => s.title === a.title);
+                return {
+                    title: a.title,
+                    views: a.views,
+                    revenue: a.rev,
+                    sentiment: a.sent / a.count,
+                    completion_rate: a.comp / a.count,
+                    roi: scatterItem ? scatterItem.roi_percentage : 0
+                };
+            });
+        }
 
-            if (data.anime_performance) {
-                const agg = {};
-                data.anime_performance.forEach(anime => {
-                    let title = anime.title;
-                    for (const [franchise, titles] of Object.entries(franchiseMap)) {
-                        if (titles.includes(title)) { title = franchise; break; }
-                    }
-                    if (!agg[title]) agg[title] = { title, views: 0, rev: 0, sent: 0, comp: 0, count: 0 };
-                    agg[title].views += (anime.views || 0);
-                    agg[title].rev += (anime.revenue || 0);
-                    agg[title].sent += (anime.sentiment || anime.avg_sentiment || 0);
-                    agg[title].comp += (anime.completion_rate || 0);
-                    agg[title].count++;
-                });
-                data.anime_performance = Object.values(agg).map(a => {
-                    const scatterItem = data.scatter_plot.find(s => s.title === a.title);
-                    return {
-                        title: a.title,
-                        views: a.views,
-                        revenue: a.rev,
-                        sentiment: a.sent / a.count,
-                        completion_rate: a.comp / a.count,
-                        roi: scatterItem ? scatterItem.roi_percentage : 0
-                    };
-                });
-            }
+        // 3. Anime List
+        if (data.anime_list) {
+            const unique = new Set();
+            data.anime_list.forEach(a => {
+                let title = a.title || a;
+                for (const [f, t] of Object.entries(franchiseMap)) {
+                    if (t.includes(title)) { title = f; break; }
+                }
+                unique.add(title);
+            });
+            data.anime_list = Array.from(unique).map(t => ({ title: t }));
+        }
 
-            // 3. Anime List
-            if (data.anime_list) {
-                const unique = new Set();
-                data.anime_list.forEach(a => {
-                    let title = a.title || a;
-                    for (const [f, t] of Object.entries(franchiseMap)) {
-                        if (t.includes(title)) { title = f; break; }
-                    }
-                    unique.add(title);
-                });
-                data.anime_list = Array.from(unique).map(t => ({ title: t }));
-            }
-
-            return data;
+        return data;
         }
 
         // --- Initialization ---
@@ -680,21 +656,6 @@
                 opt.textContent = a.title;
                 animeFilter.appendChild(opt);
             });
-
-            const platformContainer = document.getElementById('platformFilters');
-            if (data.platform_split) {
-                data.platform_split.forEach(p => {
-                    const name = p.platform_name || p.name || 'Unknown';
-                    const div = document.createElement('div');
-                    div.innerHTML = `
-                < label class= "inline-flex items-center bg-slate-100 px-3 py-1 rounded-full cursor-pointer hover:bg-slate-200 transition" >
-                <input type="checkbox" checked value="${name}" class="platform-checkbox form-checkbox h-4 w-4 text-blue-600 border-slate-300 rounded focus:ring-blue-500">
-                    <span class="ml-2 text-sm text-slate-700">${name}</span>
-                </label>
-                    `;
-                    platformContainer.appendChild(div);
-                });
-            }
 
             // Listeners
             document.getElementById('startDate').addEventListener('change', applyFilters);
@@ -714,13 +675,13 @@
                 el.classList.remove('active', 'text-slate-900');
                 el.classList.add('text-slate-500');
             });
-            const activeLink = document.getElementById(`tab - ${ tabId }`);
+            const activeLink = document.getElementById(`tab - ${tabId}`);
             activeLink.classList.add('active', 'text-slate-900');
             activeLink.classList.remove('text-slate-500');
 
             // Update Content
             ['executive', 'strategy', 'platform'].forEach(id => {
-                const el = document.getElementById(`view - ${ id }`);
+                const el = document.getElementById(`view - ${id}`);
                 if (id === tabId) {
                     el.classList.remove('hidden');
                 } else {
@@ -858,7 +819,7 @@
                 options: {
                     responsive: true, maintainAspectRatio: false,
                     plugins: {
-                        tooltip: { callbacks: { label: c => `${ c.raw.anime }: ROI ${ c.raw.y.toFixed(1) } %, Filler ${ c.raw.x } % ` } },
+                        tooltip: { callbacks: { label: c => `${c.raw.anime}: ROI ${c.raw.y.toFixed(1)} %, Filler ${c.raw.x} % ` } },
                         legend: { display: false }
                     },
                     scales: {
@@ -995,10 +956,10 @@
             if (!charts.legacy) return;
             const legacyTitles = ['Naruto', 'Naruto: Shippuuden', 'Bleach'];
             const legacy = data.filter(d => legacyTitles.some(t => d.title.includes(t)));
-                return val.toLocaleString();
-            }
-            if (type === 'decimal') return val.toFixed(2);
-            return val;
+            return val.toLocaleString();
+        }
+        if (type === 'decimal') return val.toFixed(2);
+        return val;
         }
     </script>
 </body>
