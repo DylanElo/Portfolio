@@ -598,12 +598,208 @@
                     <div>
                         <p class="text-sm font-medium text-slate-500">${item.label}</p>
                         <p class="text-2xl font-bold text-slate-900">${formatValue(item.value, item.fmt)}</p>
+                    if (!agg[key]) agg[key] = { date: entry.date, title, views: 0, revenue: 0 };
+                    agg[key].views += (entry.views || 0);
+                    agg[key].revenue += (entry.revenue || 0);
+                });
+                data.daily_anime_trend = Object.values(agg);
+            }
+
+            // 2. Scatter & Performance
+            const scatterAgg = {};
+            if (data.scatter_plot) {
+                data.scatter_plot.forEach(item => {
+                    let title = item.title;
+                    for (const [franchise, titles] of Object.entries(franchiseMap)) {
+                        if (titles.includes(title)) { title = franchise; break; }
+                    }
+                    if (!scatterAgg[title]) scatterAgg[title] = { title, filler: 0, roi: 0, views: 0, count: 0 };
+                    scatterAgg[title].filler += item.filler_percentage;
+                    scatterAgg[title].roi += item.roi_percentage;
+                    scatterAgg[title].views += item.total_views;
+                    scatterAgg[title].count++;
+                });
+                data.scatter_plot = Object.values(scatterAgg).map(i => ({
+                    title: i.title,
+                    filler_percentage: i.filler / i.count,
+                    roi_percentage: i.roi / i.count,
+                    total_views: i.views
+                }));
+            }
+
+            if (data.anime_performance) {
+                const agg = {};
+                data.anime_performance.forEach(anime => {
+                    let title = anime.title;
+                    for (const [franchise, titles] of Object.entries(franchiseMap)) {
+                        if (titles.includes(title)) { title = franchise; break; }
+                    }
+                    if (!agg[title]) agg[title] = { title, views: 0, rev: 0, sent: 0, comp: 0, count: 0 };
+                    agg[title].views += (anime.views || 0);
+                    agg[title].rev += (anime.revenue || 0);
+                    agg[title].sent += (anime.sentiment || anime.avg_sentiment || 0);
+                    agg[title].comp += (anime.completion_rate || 0);
+                    agg[title].count++;
+                });
+                data.anime_performance = Object.values(agg).map(a => {
+                    const scatterItem = data.scatter_plot.find(s => s.title === a.title);
+                    return {
+                        title: a.title,
+                        views: a.views,
+                        revenue: a.rev,
+                        sentiment: a.sent / a.count,
+                        completion_rate: a.comp / a.count,
+                        roi: scatterItem ? scatterItem.roi_percentage : 0
+                    };
+                });
+            }
+
+            // 3. Anime List
+            if (data.anime_list) {
+                const unique = new Set();
+                data.anime_list.forEach(a => {
+                    let title = a.title || a;
+                    for (const [f, t] of Object.entries(franchiseMap)) {
+                        if (t.includes(title)) { title = f; break; }
+                    }
+                    unique.add(title);
+                });
+                data.anime_list = Array.from(unique).map(t => ({ title: t }));
+            }
+
+            return data;
+        }
+
+        // --- Initialization ---
+        function initDashboard(data) {
+            // Populate Filters
+            const animeFilter = document.getElementById('animeFilter');
+            data.anime_list.forEach(a => {
+                const opt = document.createElement('option');
+                opt.value = a.title;
+                opt.textContent = a.title;
+                animeFilter.appendChild(opt);
+            });
+
+            const platformContainer = document.getElementById('platformFilters');
+            if (data.platform_split) {
+                data.platform_split.forEach(p => {
+                    const name = p.platform_name || p.name || 'Unknown';
+                    const div = document.createElement('div');
+                    div.innerHTML = `
+                < label class= "inline-flex items-center bg-slate-100 px-3 py-1 rounded-full cursor-pointer hover:bg-slate-200 transition" >
+                <input type="checkbox" checked value="${name}" class="platform-checkbox form-checkbox h-4 w-4 text-blue-600 border-slate-300 rounded focus:ring-blue-500">
+                    <span class="ml-2 text-sm text-slate-700">${name}</span>
+                </label>
+                    `;
+                    platformContainer.appendChild(div);
+                });
+            }
+
+            // Listeners
+            document.getElementById('startDate').addEventListener('change', applyFilters);
+            document.getElementById('endDate').addEventListener('change', applyFilters);
+            document.getElementById('animeFilter').addEventListener('change', applyFilters);
+            document.getElementById('resetFilters').addEventListener('click', resetFilters);
+            document.querySelectorAll('.platform-checkbox').forEach(cb => cb.addEventListener('change', applyFilters));
+
+            // Initial Render
+            renderAllCharts(data);
+        }
+
+        function switchTab(tabId) {
+            activeTab = tabId;
+            // Update Nav
+            document.querySelectorAll('.nav-link').forEach(el => {
+                el.classList.remove('active', 'text-slate-900');
+                el.classList.add('text-slate-500');
+            });
+            const activeLink = document.getElementById(`tab - ${ tabId }`);
+            activeLink.classList.add('active', 'text-slate-900');
+            activeLink.classList.remove('text-slate-500');
+
+            // Update Content
+            ['executive', 'strategy', 'platform'].forEach(id => {
+                const el = document.getElementById(`view - ${ id }`);
+                if (id === tabId) {
+                    el.classList.remove('hidden');
+                } else {
+                    el.classList.add('hidden');
+                }
+            });
+        }
+
+        function resetFilters() {
+            // Reset Dates
+            if (rawData.daily_anime_trend && rawData.daily_anime_trend.length) {
+                const dates = rawData.daily_anime_trend.map(d => d.date).sort();
+                document.getElementById('startDate').value = dates[0];
+                document.getElementById('endDate').value = dates[dates.length - 1];
+            }
+            const kpis = {
+                total_revenue: revenue,
+                total_views: views,
+                total_watch_time: watchTime,
+                avg_sentiment: avgSentiment
+            };
+            renderKPIs(kpis);
+        }
+
+        function updateHighlights(animeData) {
+            if (!animeData.length) return;
+
+            // Top Revenue
+            const top = [...animeData].sort((a, b) => b.revenue - a.revenue)[0];
+            document.getElementById('topPerformerName').textContent = top.title;
+            document.getElementById('topPerformerName').title = top.title; // Tooltip
+            document.getElementById('topPerformerValue').textContent = formatValue(top.revenue, 'currency');
+
+            // Worst Sentiment
+            const worst = [...animeData].sort((a, b) => a.sentiment - b.sentiment)[0];
+            document.getElementById('worstPerformerName').textContent = worst.title;
+            document.getElementById('worstPerformerValue').textContent = worst.sentiment.toFixed(2) + ' Score';
+        }
+
+        function renderAllCharts(data) {
+            renderKPIs(data.kpis || {});
+            renderTrendChart(data.daily_trend || []);
+            renderPlatformChart(data.platform_split || []);
+            renderScatterChart(data.scatter_plot || []);
+            renderHeatmap(data.heatmap || []);
+            renderCompletionChart(data.anime_performance || []);
+            renderRadarChart(data.anime_performance || []);
+            renderRegionChart(data.region_split || []);
+            renderLegacyChart(data.anime_performance || []);
+            updateAnimeTable(data.anime_performance || []);
+
+            applyFilters();
+        }
+
+        // --- Renderers ---
+
+        function renderKPIs(kpis) {
+            const items = [
+                { label: 'Total Revenue', value: kpis.total_revenue, fmt: 'currency', icon: '💰', color: 'text-blue-600', bg: 'bg-blue-50' },
+                { label: 'Total Views', value: kpis.total_views, fmt: 'number', icon: '👁️', color: 'text-violet-600', bg: 'bg-violet-50' },
+                { label: 'Watch Time (Hrs)', value: kpis.total_watch_time, fmt: 'number', icon: '⏱️', color: 'text-emerald-600', bg: 'bg-emerald-50' },
+                { label: 'Avg Sentiment', value: kpis.avg_sentiment, fmt: 'decimal', icon: '😊', color: 'text-amber-600', bg: 'bg-amber-50' }
+            ];
+
+            document.getElementById('kpiContainer').innerHTML = items.map(item => `
+            < div class= "card p-6 flex items-center space-x-4" >
+                    <div class="p-3 rounded-full ${item.bg} ${item.color} text-2xl">
+                        ${item.icon}
                     </div>
-                </div>
-            `).join('');
+                    <div>
+                        <p class="text-sm font-medium text-slate-500">${item.label}</p>
+                        <p class="text-2xl font-bold text-slate-900">${formatValue(item.value, item.fmt)}</p>
+                    </div>
+                </div >
+                `).join('');
         }
 
         function renderTrendChart(data) {
+            if (charts.trend) charts.trend.destroy();
             const ctx = document.getElementById('trendChart').getContext('2d');
             charts.trend = new Chart(ctx, {
                 type: 'line',
@@ -635,6 +831,7 @@
         }
 
         function renderPlatformChart(data) {
+            if (charts.platform) charts.platform.destroy();
             const ctx = document.getElementById('platformChart').getContext('2d');
             charts.platform = new Chart(ctx, {
                 type: 'doughnut',
@@ -653,6 +850,7 @@
         }
 
         function renderScatterChart(data) {
+            if (charts.scatter) charts.scatter.destroy();
             const ctx = document.getElementById('scatterChart').getContext('2d');
             charts.scatter = new Chart(ctx, {
                 type: 'bubble',
@@ -660,7 +858,7 @@
                 options: {
                     responsive: true, maintainAspectRatio: false,
                     plugins: {
-                        tooltip: { callbacks: { label: c => `${c.raw.anime}: ROI ${c.raw.y.toFixed(1)}%, Filler ${c.raw.x}%` } },
+                        tooltip: { callbacks: { label: c => `${ c.raw.anime }: ROI ${ c.raw.y.toFixed(1) } %, Filler ${ c.raw.x } % ` } },
                         legend: { display: false }
                     },
                     scales: {
@@ -679,6 +877,7 @@
         }
 
         function renderHeatmap(data) {
+            if (charts.heatmap) charts.heatmap.destroy();
             const ctx = document.getElementById('heatmapChart').getContext('2d');
             const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
             const sorted = [...data].sort((a, b) => days.indexOf(a.day_name) - days.indexOf(b.day_name));
@@ -694,6 +893,7 @@
         }
 
         function renderCompletionChart(data) {
+            if (charts.completion) charts.completion.destroy();
             const ctx = document.getElementById('completionChart').getContext('2d');
             charts.completion = new Chart(ctx, {
                 type: 'bar',
@@ -710,6 +910,7 @@
         }
 
         function renderRadarChart(data) {
+            if (charts.radar) charts.radar.destroy();
             const ctx = document.getElementById('radarChart').getContext('2d');
             charts.radar = new Chart(ctx, {
                 type: 'radar',
@@ -746,6 +947,7 @@
         }
 
         function renderRegionChart(data) {
+            if (charts.region) charts.region.destroy();
             const ctx = document.getElementById('regionChart').getContext('2d');
             // Sort by views
             const sorted = [...data].sort((a, b) => b.views - a.views);
@@ -781,6 +983,7 @@
         }
 
         function renderLegacyChart(data) {
+            if (charts.legacy) charts.legacy.destroy();
             const ctx = document.getElementById('legacyChart').getContext('2d');
             charts.legacy = new Chart(ctx, {
                 type: 'bar',
@@ -792,39 +995,6 @@
             if (!charts.legacy) return;
             const legacyTitles = ['Naruto', 'Naruto: Shippuuden', 'Bleach'];
             const legacy = data.filter(d => legacyTitles.some(t => d.title.includes(t)));
-            const modern = data.filter(d => !legacyTitles.some(t => d.title.includes(t)));
-
-            const avgLegacy = legacy.length ? legacy.reduce((s, d) => s + d.revenue, 0) / legacy.length : 0;
-            const avgModern = modern.length ? modern.reduce((s, d) => s + d.revenue, 0) / modern.length : 0;
-
-            charts.legacy.data.datasets[0].data = [avgLegacy, avgModern];
-            charts.legacy.update();
-        }
-
-        function updateAnimeTable(data) {
-            const tbody = document.getElementById('animeTableBody');
-            const sorted = [...data].sort((a, b) => b.revenue - a.revenue);
-            tbody.innerHTML = sorted.map(a => `
-                <tr class="hover:bg-slate-50 transition">
-                    <td class="px-6 py-4 font-medium text-slate-900">${a.title}</td>
-                    <td class="px-6 py-4 text-right text-slate-600">${formatValue(a.revenue, 'currency')}</td>
-                    <td class="px-6 py-4 text-right text-slate-600">${formatValue(a.views, 'number')}</td>
-                    <td class="px-6 py-4 text-center text-slate-600">${a.sentiment.toFixed(2)}</td>
-                    <td class="px-6 py-4 text-center ${a.roi >= 0 ? 'text-emerald-600' : 'text-red-600'} font-medium">${a.roi.toFixed(1)}%</td>
-                </tr>
-            `).join('');
-        }
-
-        function formatValue(val, type) {
-            if (val === null || val === undefined) return '-';
-            if (type === 'currency') {
-                if (val >= 1e6) return '$' + (val / 1e6).toFixed(1) + 'M';
-                if (val >= 1e3) return '$' + (val / 1e3).toFixed(1) + 'K';
-                return '$' + val.toFixed(0);
-            }
-            if (type === 'number') {
-                if (val >= 1e6) return (val / 1e6).toFixed(1) + 'M';
-                if (val >= 1e3) return (val / 1e3).toFixed(1) + 'K';
                 return val.toLocaleString();
             }
             if (type === 'decimal') return val.toFixed(2);
