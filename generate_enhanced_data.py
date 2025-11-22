@@ -5,6 +5,7 @@ Based on real anime titles, MAL scores, air dates, and known platform deals
 """
 
 import json
+import os
 import random
 from datetime import datetime, timedelta
 from typing import List, Dict
@@ -541,25 +542,26 @@ def generate_enhanced_dataset():
         "Amazon Prime": {"North America": 0.30, "Europe": 0.30, "Japan": 0.20, "Asia (Other)": 0.15, "Other": 0.05},
     }
 
+    # Aggregate platform totals into regions
     for plat, total_flow in platform_totals.items():
-        regions = platform_regions.get(plat, platform_regions["Netflix"]) # Default to Netflix distribution
+        regions = platform_regions.get(plat, platform_regions["Netflix"])  # Default to Netflix distribution
         for region, share in regions.items():
             flow = int(total_flow * share)
             if flow > 0:
                 sankey_data.append({"from": plat, "to": region, "flow": flow})
 
-    # Generate final dataset
+    # Build final dataset
     dataset = {
         "kpis": {
             "total_revenue": sum(p["revenue"] for p in all_anime_performance),
             "total_views": sum(p["views"] for p in all_anime_performance),
-            "total_watch_time": sum(p["views"] for p in all_anime_performance) * 20 // 60,  # 20 min avg per view
+            "total_watch_time": sum(p["views"] for p in all_anime_performance) * 20 // 60,
             "avg_sentiment": sum(p["sentiment"] for p in all_anime_performance) / len(all_anime_performance),
         },
         "anime_list": [{"title": a["title"]} for a in STUDIO_PIERROT_ANIME],
         "anime_performance": all_anime_performance,
         "daily_anime_trend": all_daily_trends,
-        "daily_trend": [],  # Aggregated separately
+        "daily_trend": [],  # will be filled later
         "platform_split": [
             {"platform_name": platform, "revenue": int(data["revenue"]), "views": int(data["views"])}
             for platform, data in platform_aggregates.items()
@@ -582,22 +584,16 @@ def generate_enhanced_dataset():
             {"region_name": "North America", "views": sum(p["views"] for p in all_anime_performance) * 0.35, "revenue": sum(p["revenue"] for p in all_anime_performance) * 0.40},
             {"region_name": "Europe", "views": sum(p["views"] for p in all_anime_performance) * 0.20, "revenue": sum(p["revenue"] for p in all_anime_performance) * 0.18},
             {"region_name": "Asia (Other)", "views": sum(p["views"] for p in all_anime_performance) * 0.15, "revenue": sum(p["revenue"] for p in all_anime_performance) * 0.10},
-            {"region_name": "Other", "views": sum(p["views"] for p in all_anime_performance) * 0.05, "revenue": sum(p["revenue"] for p in all_anime_performance) * 0.02},
+            {"region_name": "Other", "views": sum(p["views"] for p in all_anime_performance) * 0.05, "revenue": sum(p["revenue"] for p in all_anime_performance) * 0.02}
         ],
+        "cohort_performance_matrix": generate_cohort_matrix(competitor_raw_data),
+        "platform_by_generation": generate_platform_generation_data(competitor_raw_data),
+        "platform_performance_matrix": generate_platform_matrix(platform_aggregates),
         "studio_comparison": studio_comparison,
         "competitor_raw_data": competitor_raw_data,
-        "sankey_data": sankey_data,
-        
-        # NEW: Cohort Performance Matrix (Heatmap)
-        "cohort_performance_matrix": generate_cohort_matrix(competitor_raw_data),
-        
-        # NEW: Platform Dominance by Generation (Stacked Area data)
-        "platform_by_generation": generate_platform_generation_data(competitor_raw_data),
-        
-        # NEW: Platform Performance Matrix
-        "platform_performance_matrix": generate_platform_matrix(platform_aggregates)
+        "sankey_data": sankey_data
     }
-    
+
     # Aggregate daily trend by date
     daily_agg = {}
     for entry in all_daily_trends:
@@ -607,17 +603,16 @@ def generate_enhanced_dataset():
         daily_agg[date]["views"] += entry["views"]
         daily_agg[date]["revenue"] += entry["revenue"]
     dataset["daily_trend"] = sorted(daily_agg.values(), key=lambda x: x["date"])
-    
-    return dataset
 
-# ============================================================================
-# EXECUTE
-# ============================================================================
+    return dataset
 
 if __name__ == "__main__":
     dataset = generate_enhanced_dataset()
     
     output_file = "Portfolio-vite/public/data.json"
+    # Ensure directory exists
+    os.makedirs(os.path.dirname(output_file), exist_ok=True)
+    
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(dataset, f, indent=2)
     
@@ -627,3 +622,8 @@ if __name__ == "__main__":
     print(f"🏢 Competitor studios: {len(dataset['studio_comparison']) - 1}")
     print(f"💰 Total Revenue: ${dataset['kpis']['total_revenue']:,}")
     print(f"👁️  Total Views: {dataset['kpis']['total_views']:,}")
+
+
+
+
+

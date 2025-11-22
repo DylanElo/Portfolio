@@ -5404,6 +5404,228 @@
       "revenue": 1191352.22
     }
   ],
+  "cohort_performance_matrix": [
+    {
+      "studio": "Bones",
+      "generation": "Legacy (Pre-2016)",
+      "value": 1354190
+    },
+    {
+      "studio": "Bones",
+      "generation": "Gen 1 (2016-2019)",
+      "value": 2804497
+    },
+    {
+      "studio": "Bones",
+      "generation": "Gen 2 (2020-2022)",
+      "value": 488340
+    },
+    {
+      "studio": "CloverWorks",
+      "generation": "Gen 1 (2016-2019)",
+      "value": 1651846
+    },
+    {
+      "studio": "CloverWorks",
+      "generation": "Gen 2 (2020-2022)",
+      "value": 1515288
+    },
+    {
+      "studio": "CloverWorks",
+      "generation": "Gen 3 (2023-Present)",
+      "value": 423604
+    },
+    {
+      "studio": "MAPPA",
+      "generation": "Legacy (Pre-2016)",
+      "value": 1140187
+    },
+    {
+      "studio": "MAPPA",
+      "generation": "Gen 1 (2016-2019)",
+      "value": 1000577
+    },
+    {
+      "studio": "MAPPA",
+      "generation": "Gen 2 (2020-2022)",
+      "value": 1784427
+    },
+    {
+      "studio": "MAPPA",
+      "generation": "Gen 3 (2023-Present)",
+      "value": 2930624
+    },
+    {
+      "studio": "Studio Pierrot",
+      "generation": "Legacy (Pre-2016)",
+      "value": 3583658
+    },
+    {
+      "studio": "Studio Pierrot",
+      "generation": "Gen 1 (2016-2019)",
+      "value": 1088881
+    },
+    {
+      "studio": "Studio Pierrot",
+      "generation": "Gen 2 (2020-2022)",
+      "value": 963904
+    },
+    {
+      "studio": "Studio Pierrot",
+      "generation": "Gen 3 (2023-Present)",
+      "value": 1502259
+    },
+    {
+      "studio": "Ufotable",
+      "generation": "Legacy (Pre-2016)",
+      "value": 815224
+    },
+    {
+      "studio": "Ufotable",
+      "generation": "Gen 1 (2016-2019)",
+      "value": 174632
+    },
+    {
+      "studio": "Ufotable",
+      "generation": "Gen 2 (2020-2022)",
+      "value": 3726436
+    },
+    {
+      "studio": "Ufotable",
+      "generation": "Gen 3 (2023-Present)",
+      "value": 4117942
+    },
+    {
+      "studio": "Wit Studio",
+      "generation": "Legacy (Pre-2016)",
+      "value": 1711547
+    },
+    {
+      "studio": "Wit Studio",
+      "generation": "Gen 1 (2016-2019)",
+      "value": 2490548
+    },
+    {
+      "studio": "Wit Studio",
+      "generation": "Gen 2 (2020-2022)",
+      "value": 2075333
+    }
+  ],
+  "platform_by_generation": [
+    {
+      "generation": "Legacy (Pre-2016)",
+      "Netflix": 3603923,
+      "TV Tokyo": 43247082,
+      "Crunchyroll": 14415694,
+      "Hulu": 0,
+      "Disney+": 0,
+      "Funimation": 10811770
+    },
+    {
+      "generation": "Gen 1 (2016-2019)",
+      "Netflix": 11599373,
+      "TV Tokyo": 0,
+      "Crunchyroll": 26098591,
+      "Hulu": 5799686,
+      "Disney+": 0,
+      "Funimation": 14499217
+    },
+    {
+      "generation": "Gen 2 (2020-2022)",
+      "Netflix": 14095270,
+      "TV Tokyo": 0,
+      "Crunchyroll": 18793693,
+      "Hulu": 9396846,
+      "Disney+": 4698423,
+      "Funimation": 0
+    },
+    {
+      "generation": "Gen 3 (2023-Present)",
+      "Netflix": 5329890,
+      "TV Tokyo": 0,
+      "Crunchyroll": 6218205,
+      "Hulu": 2664945,
+      "Disney+": 3553260,
+      "Funimation": 0
+    }
+  ],
+  "platform_performance_matrix": [
+    {
+      "platform": "Crunchyroll",
+      "metric": "Revenue",
+      "value": 21706346
+    },
+    {
+      "platform": "Crunchyroll",
+      "metric": "Views",
+      "value": 5033875913
+    },
+    {
+      "platform": "Crunchyroll",
+      "metric": "Engagement",
+      "value": 231
+    },
+    {
+      "platform": "Netflix",
+      "metric": "Revenue",
+      "value": 15128883
+    },
+    {
+      "platform": "Netflix",
+      "metric": "Views",
+      "value": 3527026323
+    },
+    {
+      "platform": "Netflix",
+      "metric": "Engagement",
+      "value": 233
+    },
+    {
+      "platform": "Hulu",
+      "metric": "Revenue",
+      "value": 10990525
+    },
+    {
+      "platform": "Hulu",
+      "metric": "Views",
+      "value": 2570937724
+    },
+    {
+      "platform": "Hulu",
+      "metric": "Engagement",
+      "value": 233
+    },
+    {
+      "platform": "Funimation",
+      "metric": "Revenue",
+      "value": 8502632
+    },
+    {
+      "platform": "Funimation",
+      "metric": "Views",
+      "value": 1977659227
+    },
+    {
+      "platform": "Funimation",
+      "metric": "Engagement",
+      "value": 232
+    },
+    {
+      "platform": "Disney+",
+      "metric": "Revenue",
+      "value": 3159186
+    },
+    {
+      "platform": "Disney+",
+      "metric": "Views",
+      "value": 734546172
+    },
+    {
+      "platform": "Disney+",
+      "metric": "Engagement",
+      "value": 232
+    }
+  ],
   "studio_comparison": [
     {
       "studio": "Studio Pierrot",
@@ -6844,228 +7066,6 @@
       "from": "Disney+",
       "to": "Other",
       "flow": 6628478493
-    }
-  ],
-  "cohort_performance_matrix": [
-    {
-      "studio": "Bones",
-      "generation": "Legacy (Pre-2016)",
-      "value": 1354190
-    },
-    {
-      "studio": "Bones",
-      "generation": "Gen 1 (2016-2019)",
-      "value": 2804497
-    },
-    {
-      "studio": "Bones",
-      "generation": "Gen 2 (2020-2022)",
-      "value": 488340
-    },
-    {
-      "studio": "CloverWorks",
-      "generation": "Gen 1 (2016-2019)",
-      "value": 1651846
-    },
-    {
-      "studio": "CloverWorks",
-      "generation": "Gen 2 (2020-2022)",
-      "value": 1515288
-    },
-    {
-      "studio": "CloverWorks",
-      "generation": "Gen 3 (2023-Present)",
-      "value": 423604
-    },
-    {
-      "studio": "MAPPA",
-      "generation": "Legacy (Pre-2016)",
-      "value": 1140187
-    },
-    {
-      "studio": "MAPPA",
-      "generation": "Gen 1 (2016-2019)",
-      "value": 1000577
-    },
-    {
-      "studio": "MAPPA",
-      "generation": "Gen 2 (2020-2022)",
-      "value": 1784427
-    },
-    {
-      "studio": "MAPPA",
-      "generation": "Gen 3 (2023-Present)",
-      "value": 2930624
-    },
-    {
-      "studio": "Studio Pierrot",
-      "generation": "Legacy (Pre-2016)",
-      "value": 3583658
-    },
-    {
-      "studio": "Studio Pierrot",
-      "generation": "Gen 1 (2016-2019)",
-      "value": 1088881
-    },
-    {
-      "studio": "Studio Pierrot",
-      "generation": "Gen 2 (2020-2022)",
-      "value": 963904
-    },
-    {
-      "studio": "Studio Pierrot",
-      "generation": "Gen 3 (2023-Present)",
-      "value": 1502259
-    },
-    {
-      "studio": "Ufotable",
-      "generation": "Legacy (Pre-2016)",
-      "value": 815224
-    },
-    {
-      "studio": "Ufotable",
-      "generation": "Gen 1 (2016-2019)",
-      "value": 174632
-    },
-    {
-      "studio": "Ufotable",
-      "generation": "Gen 2 (2020-2022)",
-      "value": 3726436
-    },
-    {
-      "studio": "Ufotable",
-      "generation": "Gen 3 (2023-Present)",
-      "value": 4117942
-    },
-    {
-      "studio": "Wit Studio",
-      "generation": "Legacy (Pre-2016)",
-      "value": 1711547
-    },
-    {
-      "studio": "Wit Studio",
-      "generation": "Gen 1 (2016-2019)",
-      "value": 2490548
-    },
-    {
-      "studio": "Wit Studio",
-      "generation": "Gen 2 (2020-2022)",
-      "value": 2075333
-    }
-  ],
-  "platform_by_generation": [
-    {
-      "generation": "Legacy (Pre-2016)",
-      "Crunchyroll": 14415694,
-      "Funimation": 10811770,
-      "Netflix": 3603923,
-      "Disney+": 0,
-      "Hulu": 0,
-      "TV Tokyo": 43247082
-    },
-    {
-      "generation": "Gen 1 (2016-2019)",
-      "Crunchyroll": 26098591,
-      "Funimation": 14499217,
-      "Netflix": 11599373,
-      "Disney+": 0,
-      "Hulu": 5799686,
-      "TV Tokyo": 0
-    },
-    {
-      "generation": "Gen 2 (2020-2022)",
-      "Crunchyroll": 18793693,
-      "Funimation": 0,
-      "Netflix": 14095270,
-      "Disney+": 4698423,
-      "Hulu": 9396846,
-      "TV Tokyo": 0
-    },
-    {
-      "generation": "Gen 3 (2023-Present)",
-      "Crunchyroll": 6218205,
-      "Funimation": 0,
-      "Netflix": 5329890,
-      "Disney+": 3553260,
-      "Hulu": 2664945,
-      "TV Tokyo": 0
-    }
-  ],
-  "platform_performance_matrix": [
-    {
-      "platform": "Crunchyroll",
-      "metric": "Revenue",
-      "value": 21706346
-    },
-    {
-      "platform": "Crunchyroll",
-      "metric": "Views",
-      "value": 5033875913
-    },
-    {
-      "platform": "Crunchyroll",
-      "metric": "Engagement",
-      "value": 231
-    },
-    {
-      "platform": "Netflix",
-      "metric": "Revenue",
-      "value": 15128883
-    },
-    {
-      "platform": "Netflix",
-      "metric": "Views",
-      "value": 3527026323
-    },
-    {
-      "platform": "Netflix",
-      "metric": "Engagement",
-      "value": 233
-    },
-    {
-      "platform": "Hulu",
-      "metric": "Revenue",
-      "value": 10990525
-    },
-    {
-      "platform": "Hulu",
-      "metric": "Views",
-      "value": 2570937724
-    },
-    {
-      "platform": "Hulu",
-      "metric": "Engagement",
-      "value": 233
-    },
-    {
-      "platform": "Funimation",
-      "metric": "Revenue",
-      "value": 8502632
-    },
-    {
-      "platform": "Funimation",
-      "metric": "Views",
-      "value": 1977659227
-    },
-    {
-      "platform": "Funimation",
-      "metric": "Engagement",
-      "value": 232
-    },
-    {
-      "platform": "Disney+",
-      "metric": "Revenue",
-      "value": 3159186
-    },
-    {
-      "platform": "Disney+",
-      "metric": "Views",
-      "value": 734546172
-    },
-    {
-      "platform": "Disney+",
-      "metric": "Engagement",
-      "value": 232
     }
   ]
 }
