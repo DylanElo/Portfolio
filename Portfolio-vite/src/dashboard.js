@@ -650,6 +650,45 @@ function applyFilters() {
   // Filter platform_split data
   let filteredPlatform = (rawData.platform_split || []).filter(p => selectedPlatforms.includes(p.platform_name || p.name));
 
+  // Filter Studio Comparison Data
+  let filteredStudioData = [];
+  if (rawData.competitor_raw_data) {
+    const startYear = startDate ? new Date(startDate).getFullYear() : 2000;
+    const endYear = endDate ? new Date(endDate).getFullYear() : 2024;
+
+    const filteredRaw = rawData.competitor_raw_data.filter(d =>
+      d.start_year >= startYear && d.start_year <= endYear
+    );
+
+    // Aggregate by Studio
+    const studioAgg = {};
+    filteredRaw.forEach(d => {
+      if (!studioAgg[d.studio]) {
+        studioAgg[d.studio] = {
+          studio: d.studio,
+          total_revenue: 0,
+          total_views: 0,
+          sentiment_sum: 0,
+          count: 0
+        };
+      }
+      studioAgg[d.studio].total_revenue += d.revenue;
+      studioAgg[d.studio].total_views += d.views;
+      studioAgg[d.studio].sentiment_sum += d.sentiment;
+      studioAgg[d.studio].count++;
+    });
+
+    filteredStudioData = Object.values(studioAgg).map(s => ({
+      studio: s.studio,
+      total_revenue: s.total_revenue,
+      total_views: s.total_views,
+      avg_sentiment: s.count ? s.sentiment_sum / s.count : 0,
+      title_count: s.count
+    }));
+  } else {
+    filteredStudioData = rawData.studio_comparison || [];
+  }
+
   // Calculate filtered ratio for static charts
   const totalViews = (rawData.daily_anime_trend || []).reduce((sum, d) => sum + d.views, 0);
   const filteredViews = filteredTrend.reduce((sum, d) => sum + d.views, 0);
@@ -678,6 +717,7 @@ function applyFilters() {
   updateRegionChart(filteredRegion);
   updateLegacyChart(filteredPerformance);
   updateAnimeTable(filteredPerformance);
+  renderStudioCharts(filteredStudioData);
   updateHighlights(filteredPerformance);
 }
 

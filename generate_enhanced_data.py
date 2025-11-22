@@ -55,29 +55,93 @@ STUDIO_PIERROT_ANIME = [
 
 COMPETITOR_STUDIOS = {
     "MAPPA": [
-        {"title": "Jujutsu Kaisen", "start_year": 2020, "end_year": 2024, "episodes": 47, "mal_score": 8.63, "tier": "S"},
-        {"title": "Attack on Titan Final Season", "start_year": 2020, "end_year": 2023, "episodes": 28, "mal_score": 9.07, "tier": "S"},
-        {"title": "Chainsaw Man", "start_year": 2022, "end_year": 2022, "episodes": 12, "mal_score": 8.63, "tier": "S"},
+        {"title": "Jujutsu Kaisen", "start_year": 2020, "end_year": 2021, "episodes": 24, "mal_score": 8.63, "tier": "S"},
+        {"title": "Jujutsu Kaisen 2nd Season", "start_year": 2023, "end_year": 2023, "episodes": 23, "mal_score": 8.80, "tier": "S"},
+        {"title": "Attack on Titan Final Season", "start_year": 2020, "end_year": 2021, "episodes": 16, "mal_score": 8.80, "tier": "S"},
+        {"title": "Attack on Titan Final Season Part 2", "start_year": 2022, "end_year": 2022, "episodes": 12, "mal_score": 9.05, "tier": "S"},
+        {"title": "Chainsaw Man", "start_year": 2022, "end_year": 2022, "episodes": 12, "mal_score": 8.55, "tier": "S"},
         {"title": "Vinland Saga Season 2", "start_year": 2023, "end_year": 2023, "episodes": 24, "mal_score": 8.81, "tier": "S"},
+        {"title": "Hell's Paradise", "start_year": 2023, "end_year": 2023, "episodes": 13, "mal_score": 8.15, "tier": "A"},
+        {"title": "Dororo", "start_year": 2019, "end_year": 2019, "episodes": 24, "mal_score": 8.25, "tier": "A"},
+        {"title": "Banana Fish", "start_year": 2018, "end_year": 2018, "episodes": 24, "mal_score": 8.50, "tier": "A"},
+        {"title": "Zombieland Saga", "start_year": 2018, "end_year": 2018, "episodes": 12, "mal_score": 7.50, "tier": "B"},
+        {"title": "Yuri!!! on Ice", "start_year": 2016, "end_year": 2016, "episodes": 12, "mal_score": 7.90, "tier": "A"},
+        {"title": "Kakegurui", "start_year": 2017, "end_year": 2017, "episodes": 12, "mal_score": 7.25, "tier": "B"},
+        {"title": "Inuyashiki", "start_year": 2017, "end_year": 2017, "episodes": 11, "mal_score": 7.65, "tier": "B"},
+        {"title": "The God of High School", "start_year": 2020, "end_year": 2020, "episodes": 13, "mal_score": 7.05, "tier": "C"},
+        {"title": "Takt Op. Destiny", "start_year": 2021, "end_year": 2021, "episodes": 12, "mal_score": 7.15, "tier": "C"},
+        {"title": "Campfire Cooking in Another World", "start_year": 2023, "end_year": 2023, "episodes": 12, "mal_score": 7.70, "tier": "B"},
+        {"title": "Dance Dance Danseur", "start_year": 2022, "end_year": 2022, "episodes": 11, "mal_score": 7.95, "tier": "B"},
+        {"title": "Dorohedoro", "start_year": 2020, "end_year": 2020, "episodes": 12, "mal_score": 8.05, "tier": "A"},
+        {"title": "Terror in Resonance", "start_year": 2014, "end_year": 2014, "episodes": 11, "mal_score": 8.10, "tier": "A"},
+        {"title": "Kids on the Slope", "start_year": 2012, "end_year": 2012, "episodes": 12, "mal_score": 8.30, "tier": "A"},
     ],
     "Bones": [
-        {"title": "My Hero Academia", "start_year": 2016, "end_year": 2024, "episodes": 138, "mal_score": 7.87, "tier": "A"},
-        {"title": "Mob Psycho 100", "start_year": 2016, "end_year": 2022, "episodes": 37, "mal_score": 8.51, "tier": "S"},
-        {"title": "Fullmetal Alchemist: Brotherhood", "start_year": 2009, "end_year": 2010, "episodes": 64, "mal_score": 9.09, "tier": "S"},
+        {"title": "Fullmetal Alchemist: Brotherhood", "start_year": 2009, "end_year": 2010, "episodes": 64, "mal_score": 9.10, "tier": "S"},
+        {"title": "My Hero Academia", "start_year": 2016, "end_year": 2016, "episodes": 13, "mal_score": 7.90, "tier": "A"},
+        {"title": "My Hero Academia 2", "start_year": 2017, "end_year": 2017, "episodes": 25, "mal_score": 8.15, "tier": "S"},
+        {"title": "My Hero Academia 3", "start_year": 2018, "end_year": 2018, "episodes": 25, "mal_score": 8.05, "tier": "S"},
+        {"title": "Mob Psycho 100", "start_year": 2016, "end_year": 2016, "episodes": 12, "mal_score": 8.48, "tier": "S"},
+        {"title": "Mob Psycho 100 II", "start_year": 2019, "end_year": 2019, "episodes": 13, "mal_score": 8.80, "tier": "S"},
+        {"title": "Bungo Stray Dogs", "start_year": 2016, "end_year": 2016, "episodes": 12, "mal_score": 7.80, "tier": "A"},
+        {"title": "Noragami", "start_year": 2014, "end_year": 2014, "episodes": 12, "mal_score": 7.95, "tier": "A"},
+        {"title": "Soul Eater", "start_year": 2008, "end_year": 2009, "episodes": 51, "mal_score": 7.85, "tier": "A"},
+        {"title": "Ouran High School Host Club", "start_year": 2006, "end_year": 2006, "episodes": 26, "mal_score": 8.15, "tier": "A"},
+        {"title": "Space Dandy", "start_year": 2014, "end_year": 2014, "episodes": 13, "mal_score": 7.90, "tier": "B"},
+        {"title": "The Case Study of Vanitas", "start_year": 2021, "end_year": 2021, "episodes": 12, "mal_score": 7.90, "tier": "B"},
+        {"title": "SK8 the Infinity", "start_year": 2021, "end_year": 2021, "episodes": 12, "mal_score": 8.00, "tier": "B"},
+        {"title": "Blood Blockade Battlefront", "start_year": 2015, "end_year": 2015, "episodes": 12, "mal_score": 7.60, "tier": "B"},
+        {"title": "Eureka Seven", "start_year": 2005, "end_year": 2006, "episodes": 50, "mal_score": 8.05, "tier": "A"},
+        {"title": "Darker than Black", "start_year": 2007, "end_year": 2007, "episodes": 25, "mal_score": 8.10, "tier": "A"},
+        {"title": "Wolf's Rain", "start_year": 2003, "end_year": 2003, "episodes": 26, "mal_score": 7.80, "tier": "B"},
+        {"title": "Gosick", "start_year": 2011, "end_year": 2011, "episodes": 24, "mal_score": 8.05, "tier": "B"},
+        {"title": "Snow White with the Red Hair", "start_year": 2015, "end_year": 2015, "episodes": 12, "mal_score": 7.75, "tier": "B"},
+        {"title": "Carole & Tuesday", "start_year": 2019, "end_year": 2019, "episodes": 24, "mal_score": 7.90, "tier": "B"},
     ],
     "Ufotable": [
-        {"title": "Demon Slayer", "start_year": 2019, "end_year": 2024, "episodes": 63, "mal_score": 8.50, "tier": "S"},
-        {"title": "Fate/Zero", "start_year": 2011, "end_year": 2012, "episodes": 25, "mal_score": 8.28, "tier": "A"},
-        {"title": "Demon Slayer: Mugen Train", "start_year": 2020, "end_year": 2020, "episodes": 1, "mal_score": 8.56, "tier": "S"},
+        {"title": "Demon Slayer", "start_year": 2019, "end_year": 2019, "episodes": 26, "mal_score": 8.50, "tier": "S"},
+        {"title": "Demon Slayer: Mugen Train Arc", "start_year": 2021, "end_year": 2021, "episodes": 7, "mal_score": 8.35, "tier": "S"},
+        {"title": "Demon Slayer: Entertainment District", "start_year": 2021, "end_year": 2022, "episodes": 11, "mal_score": 8.80, "tier": "S"},
+        {"title": "Demon Slayer: Swordsmith Village", "start_year": 2023, "end_year": 2023, "episodes": 11, "mal_score": 8.30, "tier": "S"},
+        {"title": "Fate/Zero", "start_year": 2011, "end_year": 2011, "episodes": 13, "mal_score": 8.30, "tier": "A"},
+        {"title": "Fate/Zero 2nd Season", "start_year": 2012, "end_year": 2012, "episodes": 12, "mal_score": 8.55, "tier": "A"},
+        {"title": "Fate/stay night: UBW", "start_year": 2014, "end_year": 2014, "episodes": 12, "mal_score": 8.20, "tier": "A"},
+        {"title": "Fate/stay night: UBW 2nd Season", "start_year": 2015, "end_year": 2015, "episodes": 13, "mal_score": 8.30, "tier": "A"},
+        {"title": "The Garden of Sinners (Movie Series)", "start_year": 2007, "end_year": 2009, "episodes": 8, "mal_score": 8.00, "tier": "B"},
+        {"title": "God Eater", "start_year": 2015, "end_year": 2016, "episodes": 13, "mal_score": 7.30, "tier": "C"},
+        {"title": "Tales of Zestiria the X", "start_year": 2016, "end_year": 2016, "episodes": 12, "mal_score": 7.20, "tier": "C"},
+        {"title": "Katsugeki/Touken Ranbu", "start_year": 2017, "end_year": 2017, "episodes": 13, "mal_score": 7.00, "tier": "C"},
+        {"title": "Today's Menu for the Emiya Family", "start_year": 2018, "end_year": 2019, "episodes": 13, "mal_score": 7.80, "tier": "B"},
     ],
     "Wit Studio": [
-        {"title": "Spy x Family", "start_year": 2022, "end_year": 2023, "episodes": 37, "mal_score": 8.51, "tier": "S"},
+        {"title": "Attack on Titan", "start_year": 2013, "end_year": 2013, "episodes": 25, "mal_score": 8.54, "tier": "S"},
+        {"title": "Attack on Titan Season 2", "start_year": 2017, "end_year": 2017, "episodes": 12, "mal_score": 8.50, "tier": "S"},
+        {"title": "Attack on Titan Season 3", "start_year": 2018, "end_year": 2018, "episodes": 12, "mal_score": 8.65, "tier": "S"},
+        {"title": "Attack on Titan Season 3 Part 2", "start_year": 2019, "end_year": 2019, "episodes": 10, "mal_score": 9.05, "tier": "S"},
+        {"title": "Spy x Family", "start_year": 2022, "end_year": 2022, "episodes": 12, "mal_score": 8.50, "tier": "S"},
         {"title": "Vinland Saga", "start_year": 2019, "end_year": 2019, "episodes": 24, "mal_score": 8.75, "tier": "S"},
-        {"title": "Attack on Titan (S1-S3)", "start_year": 2013, "end_year": 2019, "episodes": 59, "mal_score": 9.01, "tier": "S"},
+        {"title": "Ranking of Kings", "start_year": 2021, "end_year": 2022, "episodes": 23, "mal_score": 8.55, "tier": "A"},
+        {"title": "Great Pretender", "start_year": 2020, "end_year": 2020, "episodes": 23, "mal_score": 8.25, "tier": "A"},
+        {"title": "Vivy: Fluorite Eye's Song", "start_year": 2021, "end_year": 2021, "episodes": 13, "mal_score": 8.45, "tier": "A"},
+        {"title": "Seraph of the End", "start_year": 2015, "end_year": 2015, "episodes": 12, "mal_score": 7.50, "tier": "B"},
+        {"title": "The Ancient Magus' Bride", "start_year": 2017, "end_year": 2018, "episodes": 24, "mal_score": 8.05, "tier": "B"},
+        {"title": "Kabaneri of the Iron Fortress", "start_year": 2016, "end_year": 2016, "episodes": 12, "mal_score": 7.25, "tier": "C"},
+        {"title": "After the Rain", "start_year": 2018, "end_year": 2018, "episodes": 12, "mal_score": 7.50, "tier": "B"},
     ],
     "CloverWorks": [
+        {"title": "Spy x Family (Part 2)", "start_year": 2022, "end_year": 2022, "episodes": 13, "mal_score": 8.40, "tier": "S"},
+        {"title": "Bocchi the Rock!", "start_year": 2022, "end_year": 2022, "episodes": 12, "mal_score": 8.80, "tier": "S"},
+        {"title": "My Dress-Up Darling", "start_year": 2022, "end_year": 2022, "episodes": 12, "mal_score": 8.30, "tier": "A"},
+        {"title": "The Promised Neverland", "start_year": 2019, "end_year": 2019, "episodes": 12, "mal_score": 8.50, "tier": "S"},
         {"title": "Horimiya", "start_year": 2021, "end_year": 2021, "episodes": 13, "mal_score": 8.20, "tier": "A"},
-        {"title": "The Promised Neverland S2", "start_year": 2021, "end_year": 2021, "episodes": 11, "mal_score": 5.77, "tier": "C"},
+        {"title": "Rascal Does Not Dream of Bunny Girl Senpai", "start_year": 2018, "end_year": 2018, "episodes": 13, "mal_score": 8.25, "tier": "A"},
+        {"title": "Wind Breaker", "start_year": 2024, "end_year": 2024, "episodes": 13, "mal_score": 7.80, "tier": "B"},
+        {"title": "Wonder Egg Priority", "start_year": 2021, "end_year": 2021, "episodes": 12, "mal_score": 7.60, "tier": "B"},
+        {"title": "Darling in the FranXX", "start_year": 2018, "end_year": 2018, "episodes": 24, "mal_score": 7.20, "tier": "B"},
+        {"title": "Fate/Grand Order: Babylonia", "start_year": 2019, "end_year": 2020, "episodes": 21, "mal_score": 7.90, "tier": "B"},
+        {"title": "Shadows House", "start_year": 2021, "end_year": 2021, "episodes": 13, "mal_score": 7.70, "tier": "B"},
+        {"title": "Fugou Keiji: Balance:UNLIMITED", "start_year": 2020, "end_year": 2020, "episodes": 11, "mal_score": 7.50, "tier": "C"},
+        {"title": "Akebi's Sailor Uniform", "start_year": 2022, "end_year": 2022, "episodes": 12, "mal_score": 7.60, "tier": "C"},
     ]
 }
 
@@ -287,6 +351,8 @@ def generate_enhanced_dataset():
     
     # Process Competitor Studios
     print("\n🏢 Processing Competitor Studios...")
+    competitor_raw_data = []
+
     for studio_name, anime_list in COMPETITOR_STUDIOS.items():
         studio_total_revenue = 0
         studio_total_views = 0
@@ -298,6 +364,18 @@ def generate_enhanced_dataset():
             
             studio_total_revenue += revenue
             studio_total_views += views
+            
+            # Add to raw list for frontend filtering
+            competitor_raw_data.append({
+                "title": anime["title"],
+                "studio": studio_name,
+                "start_year": anime["start_year"],
+                "end_year": anime["end_year"],
+                "views": views,
+                "revenue": revenue,
+                "sentiment": anime["mal_score"] / 10,
+                "tier": anime["tier"]
+            })
         
         studio_comparison.append({
             "studio": studio_name,
@@ -318,6 +396,21 @@ def generate_enhanced_dataset():
         "title_count": len(STUDIO_PIERROT_ANIME)
     }
     studio_comparison.insert(0, pierrot_total)
+
+    # Add Pierrot data to raw list
+    for p in all_anime_performance:
+        # Find original metadata for year
+        meta = next((a for a in STUDIO_PIERROT_ANIME if a["title"] == p["title"]), None)
+        competitor_raw_data.append({
+            "title": p["title"],
+            "studio": "Studio Pierrot",
+            "start_year": meta["start_year"] if meta else 2000,
+            "end_year": meta["end_year"] if meta else 2024,
+            "views": p["views"],
+            "revenue": p["revenue"],
+            "sentiment": p["sentiment"],
+            "tier": p["tier"]
+        })
     
     # Generate final dataset
     dataset = {
@@ -356,6 +449,7 @@ def generate_enhanced_dataset():
             {"region_name": "Other", "views": sum(p["views"] for p in all_anime_performance) * 0.05, "revenue": sum(p["revenue"] for p in all_anime_performance) * 0.02},
         ],
         "studio_comparison": studio_comparison,
+        "competitor_raw_data": competitor_raw_data
     }
     
     # Aggregate daily trend by date
