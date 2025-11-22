@@ -1,7 +1,8 @@
 import './dashboard-style.css';
 import { Chart, registerables } from 'chart.js';
+import { MatrixController, MatrixElement } from 'chartjs-chart-matrix';
 
-Chart.register(...registerables);
+Chart.register(...registerables, MatrixController, MatrixElement);
 
 let rawData = null;
 let charts = {
