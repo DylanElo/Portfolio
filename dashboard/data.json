@@ -1,9 +1,9 @@
 {
   "kpis": {
-    "total_views": 2498741259,
-    "total_revenue": 49974825.179999344,
-    "total_watch_time": 54972307698,
-    "avg_sentiment": 0.5865431683502398
+    "total_revenue": 51775542.319999866,
+    "total_views": 2588777116,
+    "total_watch_time": 862925705.3333334,
+    "avg_sentiment": 0.8125480568322605
   },
   "daily_trend": [
     {
@@ -1339,7 +1339,7 @@
     {
       "date": "2023-09-24",
       "views": 3796350,
-      "revenue": 75927.0
+      "revenue": 75927
     },
     {
       "date": "2023-09-25",
@@ -3722,7 +3722,7 @@
       "image_url": null,
       "views": 416956676,
       "revenue": 8339133.519999987,
-      "sentiment": 0.5859417652811143,
+      "sentiment": 0.832647459627401,
       "completion_rate": 0.7507661626592464
     },
     {
@@ -3730,7 +3730,7 @@
       "image_url": null,
       "views": 416875600,
       "revenue": 8337511.999999989,
-      "sentiment": 0.5865274555352245,
+      "sentiment": 0.8766857979229189,
       "completion_rate": 0.7517590910571711
     },
     {
@@ -3738,7 +3738,7 @@
       "image_url": null,
       "views": 416338827,
       "revenue": 8326776.539999996,
-      "sentiment": 0.5865320204494521,
+      "sentiment": 0.9294102625602216,
       "completion_rate": 0.7497136235799293
     },
     {
@@ -3746,7 +3746,7 @@
       "image_url": null,
       "views": 416163817,
       "revenue": 8323276.339999986,
-      "sentiment": 0.5850121842340025,
+      "sentiment": 0.8701496665235223,
       "completion_rate": 0.7485983722159448
     },
     {
@@ -3754,7 +3754,7 @@
       "image_url": null,
       "views": 250198543,
       "revenue": 5003970.859999948,
-      "sentiment": 0.5859018606561324,
+      "sentiment": 0.8582565936086812,
       "completion_rate": 0.7492164239968144
     },
     {
@@ -3762,7 +3762,7 @@
       "image_url": null,
       "views": 249249727,
       "revenue": 4984994.540000014,
-      "sentiment": 0.5873347823871182,
+      "sentiment": 0.8896381344186978,
       "completion_rate": 0.7496351717608745
     },
     {
@@ -3770,7 +3770,7 @@
       "image_url": null,
       "views": 83366330,
       "revenue": 1667326.6000000127,
-      "sentiment": 0.5865873298667738,
+      "sentiment": 0.6691756154177739,
       "completion_rate": 0.7503987172111222
     },
     {
@@ -3778,7 +3778,7 @@
       "image_url": null,
       "views": 83304897,
       "revenue": 1666097.94,
-      "sentiment": 0.5873119458743787,
+      "sentiment": 0.7775740752018498,
       "completion_rate": 0.7487309546798484
     },
     {
@@ -3786,7 +3786,7 @@
       "image_url": null,
       "views": 83198921,
       "revenue": 1663978.4199999953,
-      "sentiment": 0.5885673920567898,
+      "sentiment": 0.7070188623465689,
       "completion_rate": 0.7504205710067611
     },
     {
@@ -3794,7 +3794,7 @@
       "image_url": null,
       "views": 83087921,
       "revenue": 1661758.4200000102,
-      "sentiment": 0.5857149471613885,
+      "sentiment": 0.7149241006949696,
       "completion_rate": 0.7479563283210693
     }
   ],
@@ -4221,7 +4221,7 @@
       "date": "2023-01-05",
       "title": "Great Teacher Onizuka",
       "views": 108050,
-      "revenue": 2161.0
+      "revenue": 2161
     },
     {
       "date": "2023-01-05",
@@ -4773,7 +4773,7 @@
       "date": "2023-01-14",
       "title": "Naruto",
       "views": 640300,
-      "revenue": 12806.0
+      "revenue": 12806
     },
     {
       "date": "2023-01-14",
@@ -4911,7 +4911,7 @@
       "date": "2023-01-16",
       "title": "Yu Yu Hakusho",
       "views": 110900,
-      "revenue": 2218.0
+      "revenue": 2218
     },
     {
       "date": "2023-01-17",
@@ -5451,7 +5451,7 @@
       "date": "2023-01-25",
       "title": "Yu Yu Hakusho",
       "views": 107050,
-      "revenue": 2141.0
+      "revenue": 2141
     },
     {
       "date": "2023-01-26",
@@ -5673,7 +5673,7 @@
       "date": "2023-01-29",
       "title": "Naruto",
       "views": 643550,
-      "revenue": 12871.0
+      "revenue": 12871
     },
     {
       "date": "2023-01-29",
@@ -5859,7 +5859,7 @@
       "date": "2023-02-01",
       "title": "Naruto: Shippuuden",
       "views": 513250,
-      "revenue": 10265.0
+      "revenue": 10265
     },
     {
       "date": "2023-02-01",
@@ -7077,7 +7077,7 @@
       "date": "2023-02-22",
       "title": "Black Clover",
       "views": 323950,
-      "revenue": 6479.0
+      "revenue": 6479
     },
     {
       "date": "2023-02-22",
@@ -7449,7 +7449,7 @@
       "date": "2023-02-28",
       "title": "Bleach: Sennen Kessen-hen",
       "views": 524950,
-      "revenue": 10499.0
+      "revenue": 10499
     },
     {
       "date": "2023-02-28",
@@ -8307,7 +8307,7 @@
       "date": "2023-03-14",
       "title": "Kingdom",
       "views": 103400,
-      "revenue": 2068.0
+      "revenue": 2068
     },
     {
       "date": "2023-03-14",
@@ -8643,7 +8643,7 @@
       "date": "2023-03-20",
       "title": "Bleach",
       "views": 567100,
-      "revenue": 11342.0
+      "revenue": 11342
     },
     {
       "date": "2023-03-20",
@@ -8769,7 +8769,7 @@
       "date": "2023-03-22",
       "title": "Bleach: Sennen Kessen-hen",
       "views": 493750,
-      "revenue": 9875.0
+      "revenue": 9875
     },
     {
       "date": "2023-03-22",
@@ -9093,7 +9093,7 @@
       "date": "2023-03-27",
       "title": "Naruto",
       "views": 499900,
-      "revenue": 9998.0
+      "revenue": 9998
     },
     {
       "date": "2023-03-27",
@@ -9339,7 +9339,7 @@
       "date": "2023-03-31",
       "title": "Naruto: Shippuuden",
       "views": 539950,
-      "revenue": 10799.0
+      "revenue": 10799
     },
     {
       "date": "2023-03-31",
@@ -9369,7 +9369,7 @@
       "date": "2023-04-01",
       "title": "Bleach: Sennen Kessen-hen",
       "views": 682600,
-      "revenue": 13652.0
+      "revenue": 13652
     },
     {
       "date": "2023-04-01",
@@ -10509,7 +10509,7 @@
       "date": "2023-04-20",
       "title": "Bleach: Sennen Kessen-hen",
       "views": 526050,
-      "revenue": 10521.0
+      "revenue": 10521
     },
     {
       "date": "2023-04-20",
@@ -11019,7 +11019,7 @@
       "date": "2023-04-28",
       "title": "Naruto: Shippuuden",
       "views": 516150,
-      "revenue": 10323.0
+      "revenue": 10323
     },
     {
       "date": "2023-04-28",
@@ -11061,7 +11061,7 @@
       "date": "2023-04-29",
       "title": "Great Teacher Onizuka",
       "views": 141300,
-      "revenue": 2826.0
+      "revenue": 2826
     },
     {
       "date": "2023-04-29",
@@ -11757,7 +11757,7 @@
       "date": "2023-05-11",
       "title": "Black Clover",
       "views": 336950,
-      "revenue": 6739.0
+      "revenue": 6739
     },
     {
       "date": "2023-05-11",
@@ -11811,7 +11811,7 @@
       "date": "2023-05-11",
       "title": "Yu Yu Hakusho",
       "views": 101400,
-      "revenue": 2028.0
+      "revenue": 2028
     },
     {
       "date": "2023-05-12",
@@ -12747,7 +12747,7 @@
       "date": "2023-05-27",
       "title": "Kingdom",
       "views": 133700,
-      "revenue": 2674.0
+      "revenue": 2674
     },
     {
       "date": "2023-05-27",
@@ -13203,7 +13203,7 @@
       "date": "2023-06-04",
       "title": "Bleach",
       "views": 643000,
-      "revenue": 12860.0
+      "revenue": 12860
     },
     {
       "date": "2023-06-04",
@@ -13401,7 +13401,7 @@
       "date": "2023-06-07",
       "title": "Great Teacher Onizuka",
       "views": 109100,
-      "revenue": 2182.0
+      "revenue": 2182
     },
     {
       "date": "2023-06-07",
@@ -15807,7 +15807,7 @@
       "date": "2023-07-17",
       "title": "Kingdom",
       "views": 114550,
-      "revenue": 2291.0
+      "revenue": 2291
     },
     {
       "date": "2023-07-17",
@@ -16005,7 +16005,7 @@
       "date": "2023-07-20",
       "title": "Tokyo Ghoul",
       "views": 121200,
-      "revenue": 2424.0
+      "revenue": 2424
     },
     {
       "date": "2023-07-20",
@@ -16725,7 +16725,7 @@
       "date": "2023-08-01",
       "title": "Tokyo Ghoul",
       "views": 110950,
-      "revenue": 2219.0
+      "revenue": 2219
     },
     {
       "date": "2023-08-01",
@@ -18195,7 +18195,7 @@
       "date": "2023-08-26",
       "title": "Boruto: Naruto Next Generations",
       "views": 401650,
-      "revenue": 8033.0
+      "revenue": 8033
     },
     {
       "date": "2023-08-26",
@@ -18411,7 +18411,7 @@
       "date": "2023-08-29",
       "title": "Yu Yu Hakusho",
       "views": 108700,
-      "revenue": 2174.0
+      "revenue": 2174
     },
     {
       "date": "2023-08-30",
@@ -18801,7 +18801,7 @@
       "date": "2023-09-05",
       "title": "Great Teacher Onizuka",
       "views": 106500,
-      "revenue": 2130.0
+      "revenue": 2130
     },
     {
       "date": "2023-09-05",
@@ -19161,7 +19161,7 @@
       "date": "2023-09-11",
       "title": "Great Teacher Onizuka",
       "views": 94400,
-      "revenue": 1888.0
+      "revenue": 1888
     },
     {
       "date": "2023-09-11",
@@ -19959,7 +19959,7 @@
       "date": "2023-09-24",
       "title": "Naruto: Shippuuden",
       "views": 657200,
-      "revenue": 13144.0
+      "revenue": 13144
     },
     {
       "date": "2023-09-24",
@@ -20355,7 +20355,7 @@
       "date": "2023-10-01",
       "title": "Boruto: Naruto Next Generations",
       "views": 378150,
-      "revenue": 7563.0
+      "revenue": 7563
     },
     {
       "date": "2023-10-01",
@@ -20529,7 +20529,7 @@
       "date": "2023-10-04",
       "title": "Bleach: Sennen Kessen-hen",
       "views": 504900,
-      "revenue": 10098.0
+      "revenue": 10098
     },
     {
       "date": "2023-10-04",
@@ -20589,7 +20589,7 @@
       "date": "2023-10-05",
       "title": "Bleach: Sennen Kessen-hen",
       "views": 504250,
-      "revenue": 10085.0
+      "revenue": 10085
     },
     {
       "date": "2023-10-05",
@@ -20607,7 +20607,7 @@
       "date": "2023-10-05",
       "title": "Kingdom",
       "views": 103450,
-      "revenue": 2069.0
+      "revenue": 2069
     },
     {
       "date": "2023-10-05",
@@ -20895,7 +20895,7 @@
       "date": "2023-10-10",
       "title": "Boruto: Naruto Next Generations",
       "views": 327150,
-      "revenue": 6543.0
+      "revenue": 6543
     },
     {
       "date": "2023-10-10",
@@ -21687,7 +21687,7 @@
       "date": "2023-10-23",
       "title": "Kingdom",
       "views": 112500,
-      "revenue": 2250.0
+      "revenue": 2250
     },
     {
       "date": "2023-10-23",
@@ -22029,7 +22029,7 @@
       "date": "2023-10-29",
       "title": "Bleach: Sennen Kessen-hen",
       "views": 603750,
-      "revenue": 12075.0
+      "revenue": 12075
     },
     {
       "date": "2023-10-29",
@@ -22167,7 +22167,7 @@
       "date": "2023-10-31",
       "title": "Kingdom",
       "views": 107950,
-      "revenue": 2159.0
+      "revenue": 2159
     },
     {
       "date": "2023-10-31",
@@ -22761,7 +22761,7 @@
       "date": "2023-11-10",
       "title": "Great Teacher Onizuka",
       "views": 113900,
-      "revenue": 2278.0
+      "revenue": 2278
     },
     {
       "date": "2023-11-10",
@@ -23703,7 +23703,7 @@
       "date": "2023-11-26",
       "title": "Bleach",
       "views": 694700,
-      "revenue": 13894.0
+      "revenue": 13894
     },
     {
       "date": "2023-11-26",
@@ -24405,7 +24405,7 @@
       "date": "2023-12-07",
       "title": "Tokyo Ghoul",
       "views": 123550,
-      "revenue": 2471.0
+      "revenue": 2471
     },
     {
       "date": "2023-12-07",
@@ -24465,7 +24465,7 @@
       "date": "2023-12-08",
       "title": "Tokyo Ghoul",
       "views": 111800,
-      "revenue": 2236.0
+      "revenue": 2236
     },
     {
       "date": "2023-12-08",
@@ -24741,7 +24741,7 @@
       "date": "2023-12-13",
       "title": "Great Teacher Onizuka",
       "views": 103250,
-      "revenue": 2065.0
+      "revenue": 2065
     },
     {
       "date": "2023-12-13",
@@ -25005,7 +25005,7 @@
       "date": "2023-12-17",
       "title": "Tokyo Ghoul",
       "views": 149050,
-      "revenue": 2981.0
+      "revenue": 2981
     },
     {
       "date": "2023-12-17",
@@ -25125,7 +25125,7 @@
       "date": "2023-12-19",
       "title": "Tokyo Ghoul",
       "views": 106200,
-      "revenue": 2124.0
+      "revenue": 2124
     },
     {
       "date": "2023-12-19",
@@ -25137,7 +25137,7 @@
       "date": "2023-12-20",
       "title": "Black Clover",
       "views": 335550,
-      "revenue": 6711.0
+      "revenue": 6711
     },
     {
       "date": "2023-12-20",
@@ -25641,7 +25641,7 @@
       "date": "2023-12-28",
       "title": "Great Teacher Onizuka",
       "views": 110350,
-      "revenue": 2207.0
+      "revenue": 2207
     },
     {
       "date": "2023-12-28",
@@ -26019,7 +26019,7 @@
       "date": "2024-01-03",
       "title": "Naruto: Shippuuden",
       "views": 533750,
-      "revenue": 10675.0
+      "revenue": 10675
     },
     {
       "date": "2024-01-03",
@@ -26661,7 +26661,7 @@
       "date": "2024-01-14",
       "title": "Great Teacher Onizuka",
       "views": 129500,
-      "revenue": 2590.0
+      "revenue": 2590
     },
     {
       "date": "2024-01-14",
@@ -26715,7 +26715,7 @@
       "date": "2024-01-15",
       "title": "Boruto: Naruto Next Generations",
       "views": 303200,
-      "revenue": 6064.0
+      "revenue": 6064
     },
     {
       "date": "2024-01-15",
@@ -27171,7 +27171,7 @@
       "date": "2024-01-22",
       "title": "Yu Yu Hakusho",
       "views": 106900,
-      "revenue": 2138.0
+      "revenue": 2138
     },
     {
       "date": "2024-01-23",
@@ -27327,7 +27327,7 @@
       "date": "2024-01-25",
       "title": "Kingdom",
       "views": 104400,
-      "revenue": 2088.0
+      "revenue": 2088
     },
     {
       "date": "2024-01-25",
@@ -28257,7 +28257,7 @@
       "date": "2024-02-10",
       "title": "Black Clover",
       "views": 376450,
-      "revenue": 7529.0
+      "revenue": 7529
     },
     {
       "date": "2024-02-10",
@@ -28401,7 +28401,7 @@
       "date": "2024-02-12",
       "title": "Great Teacher Onizuka",
       "views": 102000,
-      "revenue": 2040.0
+      "revenue": 2040
     },
     {
       "date": "2024-02-12",
@@ -28917,7 +28917,7 @@
       "date": "2024-02-21",
       "title": "Black Clover",
       "views": 325600,
-      "revenue": 6512.0
+      "revenue": 6512
     },
     {
       "date": "2024-02-21",
@@ -29163,7 +29163,7 @@
       "date": "2024-02-25",
       "title": "Bleach",
       "views": 626350,
-      "revenue": 12527.0
+      "revenue": 12527
     },
     {
       "date": "2024-02-25",
@@ -30915,7 +30915,7 @@
       "date": "2024-03-25",
       "title": "Boruto: Naruto Next Generations",
       "views": 328600,
-      "revenue": 6572.0
+      "revenue": 6572
     },
     {
       "date": "2024-03-25",
@@ -31869,7 +31869,7 @@
       "date": "2024-04-10",
       "title": "Bleach: Sennen Kessen-hen",
       "views": 491000,
-      "revenue": 9820.0
+      "revenue": 9820
     },
     {
       "date": "2024-04-10",
@@ -33021,7 +33021,7 @@
       "date": "2024-04-29",
       "title": "Great Teacher Onizuka",
       "views": 96250,
-      "revenue": 1925.0
+      "revenue": 1925
     },
     {
       "date": "2024-04-29",
@@ -33069,7 +33069,7 @@
       "date": "2024-04-30",
       "title": "Bleach: Sennen Kessen-hen",
       "views": 549100,
-      "revenue": 10982.0
+      "revenue": 10982
     },
     {
       "date": "2024-04-30",
@@ -33489,7 +33489,7 @@
       "date": "2024-05-07",
       "title": "Bleach: Sennen Kessen-hen",
       "views": 462900,
-      "revenue": 9258.0
+      "revenue": 9258
     },
     {
       "date": "2024-05-07",
@@ -34923,7 +34923,7 @@
       "date": "2024-05-31",
       "title": "Bleach",
       "views": 505250,
-      "revenue": 10105.0
+      "revenue": 10105
     },
     {
       "date": "2024-05-31",
@@ -35235,7 +35235,7 @@
       "date": "2024-06-05",
       "title": "Boruto: Naruto Next Generations",
       "views": 344250,
-      "revenue": 6885.0
+      "revenue": 6885
     },
     {
       "date": "2024-06-05",
@@ -35607,7 +35607,7 @@
       "date": "2024-06-11",
       "title": "Kingdom",
       "views": 113450,
-      "revenue": 2269.0
+      "revenue": 2269
     },
     {
       "date": "2024-06-11",
@@ -38061,7 +38061,7 @@
       "date": "2024-07-22",
       "title": "Great Teacher Onizuka",
       "views": 122900,
-      "revenue": 2458.0
+      "revenue": 2458
     },
     {
       "date": "2024-07-22",
@@ -38481,7 +38481,7 @@
       "date": "2024-07-29",
       "title": "Great Teacher Onizuka",
       "views": 113550,
-      "revenue": 2271.0
+      "revenue": 2271
     },
     {
       "date": "2024-07-29",
@@ -38655,7 +38655,7 @@
       "date": "2024-08-01",
       "title": "Boruto: Naruto Next Generations",
       "views": 347550,
-      "revenue": 6951.0
+      "revenue": 6951
     },
     {
       "date": "2024-08-01",
@@ -38865,7 +38865,7 @@
       "date": "2024-08-04",
       "title": "Tokyo Ghoul",
       "views": 143100,
-      "revenue": 2862.0
+      "revenue": 2862
     },
     {
       "date": "2024-08-04",
@@ -39069,7 +39069,7 @@
       "date": "2024-08-08",
       "title": "Bleach: Sennen Kessen-hen",
       "views": 571400,
-      "revenue": 11428.0
+      "revenue": 11428
     },
     {
       "date": "2024-08-08",
@@ -39201,7 +39201,7 @@
       "date": "2024-08-10",
       "title": "Great Teacher Onizuka",
       "views": 141450,
-      "revenue": 2829.0
+      "revenue": 2829
     },
     {
       "date": "2024-08-10",
@@ -39579,7 +39579,7 @@
       "date": "2024-08-16",
       "title": "Naruto: Shippuuden",
       "views": 595000,
-      "revenue": 11900.0
+      "revenue": 11900
     },
     {
       "date": "2024-08-16",
@@ -39891,7 +39891,7 @@
       "date": "2024-08-21",
       "title": "Yu Yu Hakusho",
       "views": 115150,
-      "revenue": 2303.0
+      "revenue": 2303
     },
     {
       "date": "2024-08-22",
@@ -39921,7 +39921,7 @@
       "date": "2024-08-22",
       "title": "Great Teacher Onizuka",
       "views": 107600,
-      "revenue": 2152.0
+      "revenue": 2152
     },
     {
       "date": "2024-08-22",
@@ -40407,7 +40407,7 @@
       "date": "2024-08-30",
       "title": "Kingdom",
       "views": 113300,
-      "revenue": 2266.0
+      "revenue": 2266
     },
     {
       "date": "2024-08-30",
@@ -41727,7 +41727,7 @@
       "date": "2024-09-21",
       "title": "Kingdom",
       "views": 121750,
-      "revenue": 2435.0
+      "revenue": 2435
     },
     {
       "date": "2024-09-21",
@@ -41817,7 +41817,7 @@
       "date": "2024-09-23",
       "title": "Black Clover",
       "views": 284700,
-      "revenue": 5694.0
+      "revenue": 5694
     },
     {
       "date": "2024-09-23",
@@ -42009,7 +42009,7 @@
       "date": "2024-09-26",
       "title": "Bleach: Sennen Kessen-hen",
       "views": 537550,
-      "revenue": 10751.0
+      "revenue": 10751
     },
     {
       "date": "2024-09-26",
@@ -42723,7 +42723,7 @@
       "date": "2024-10-08",
       "title": "Bleach",
       "views": 550500,
-      "revenue": 11010.0
+      "revenue": 11010
     },
     {
       "date": "2024-10-08",
@@ -43071,7 +43071,7 @@
       "date": "2024-10-13",
       "title": "Yu Yu Hakusho",
       "views": 122050,
-      "revenue": 2441.0
+      "revenue": 2441
     },
     {
       "date": "2024-10-14",
@@ -43215,7 +43215,7 @@
       "date": "2024-10-16",
       "title": "Boruto: Naruto Next Generations",
       "views": 310700,
-      "revenue": 6214.0
+      "revenue": 6214
     },
     {
       "date": "2024-10-16",
@@ -43719,7 +43719,7 @@
       "date": "2024-10-24",
       "title": "Naruto: Shippuuden",
       "views": 548350,
-      "revenue": 10967.0
+      "revenue": 10967
     },
     {
       "date": "2024-10-24",
@@ -43809,7 +43809,7 @@
       "date": "2024-10-26",
       "title": "Bleach: Sennen Kessen-hen",
       "views": 653250,
-      "revenue": 13065.0
+      "revenue": 13065
     },
     {
       "date": "2024-10-26",
@@ -44517,7 +44517,7 @@
       "date": "2024-11-07",
       "title": "Black Clover",
       "views": 291550,
-      "revenue": 5831.0
+      "revenue": 5831
     },
     {
       "date": "2024-11-07",
@@ -44763,7 +44763,7 @@
       "date": "2024-11-11",
       "title": "Bleach",
       "views": 497200,
-      "revenue": 9944.0
+      "revenue": 9944
     },
     {
       "date": "2024-11-11",
@@ -44841,7 +44841,7 @@
       "date": "2024-11-12",
       "title": "Great Teacher Onizuka",
       "views": 109550,
-      "revenue": 2191.0
+      "revenue": 2191
     },
     {
       "date": "2024-11-12",
@@ -45471,7 +45471,7 @@
       "date": "2024-11-22",
       "title": "Yu Yu Hakusho",
       "views": 105850,
-      "revenue": 2117.0
+      "revenue": 2117
     },
     {
       "date": "2024-11-23",
@@ -45723,7 +45723,7 @@
       "date": "2024-11-27",
       "title": "Bleach",
       "views": 516350,
-      "revenue": 10327.0
+      "revenue": 10327
     },
     {
       "date": "2024-11-27",
@@ -46059,7 +46059,7 @@
       "date": "2024-12-02",
       "title": "Naruto: Shippuuden",
       "views": 648950,
-      "revenue": 12979.0
+      "revenue": 12979
     },
     {
       "date": "2024-12-02",
@@ -46251,7 +46251,7 @@
       "date": "2024-12-05",
       "title": "Yu Yu Hakusho",
       "views": 118950,
-      "revenue": 2379.0
+      "revenue": 2379
     },
     {
       "date": "2024-12-06",
@@ -46617,7 +46617,7 @@
       "date": "2024-12-12",
       "title": "Black Clover",
       "views": 289200,
-      "revenue": 5784.0
+      "revenue": 5784
     },
     {
       "date": "2024-12-12",
@@ -46989,7 +46989,7 @@
       "date": "2024-12-18",
       "title": "Bleach: Sennen Kessen-hen",
       "views": 552800,
-      "revenue": 11056.0
+      "revenue": 11056
     },
     {
       "date": "2024-12-18",
@@ -47721,7 +47721,7 @@
       "date": "2024-12-30",
       "title": "Great Teacher Onizuka",
       "views": 115800,
-      "revenue": 2316.0
+      "revenue": 2316
     },
     {
       "date": "2024-12-30",
@@ -47812,6 +47812,7266 @@
       "title": "Yu Yu Hakusho",
       "views": 118528,
       "revenue": 2370.56
+    },
+    {
+      "date": "2025-01-01",
+      "title": "Black Clover",
+      "views": 47491,
+      "revenue": 949.82
+    },
+    {
+      "date": "2025-01-01",
+      "title": "Bleach",
+      "views": 48946,
+      "revenue": 978.9200000000001
+    },
+    {
+      "date": "2025-01-01",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 198705,
+      "revenue": 3974.1
+    },
+    {
+      "date": "2025-01-01",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 166360,
+      "revenue": 3327.2000000000003
+    },
+    {
+      "date": "2025-01-01",
+      "title": "Great Teacher Onizuka",
+      "views": 41245,
+      "revenue": 824.9
+    },
+    {
+      "date": "2025-01-01",
+      "title": "Kingdom",
+      "views": 40144,
+      "revenue": 802.88
+    },
+    {
+      "date": "2025-01-01",
+      "title": "Naruto",
+      "views": 45935,
+      "revenue": 918.7
+    },
+    {
+      "date": "2025-01-01",
+      "title": "Naruto: Shippuuden",
+      "views": 44052,
+      "revenue": 881.04
+    },
+    {
+      "date": "2025-01-01",
+      "title": "Tokyo Ghoul",
+      "views": 51075,
+      "revenue": 1021.5
+    },
+    {
+      "date": "2025-01-01",
+      "title": "Yu Yu Hakusho",
+      "views": 44909,
+      "revenue": 898.1800000000001
+    },
+    {
+      "date": "2025-01-02",
+      "title": "Black Clover",
+      "views": 40878,
+      "revenue": 817.5600000000001
+    },
+    {
+      "date": "2025-01-02",
+      "title": "Bleach",
+      "views": 44324,
+      "revenue": 886.48
+    },
+    {
+      "date": "2025-01-02",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 221525,
+      "revenue": 4430.5
+    },
+    {
+      "date": "2025-01-02",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 162527,
+      "revenue": 3250.54
+    },
+    {
+      "date": "2025-01-02",
+      "title": "Great Teacher Onizuka",
+      "views": 49038,
+      "revenue": 980.76
+    },
+    {
+      "date": "2025-01-02",
+      "title": "Kingdom",
+      "views": 45901,
+      "revenue": 918.02
+    },
+    {
+      "date": "2025-01-02",
+      "title": "Naruto",
+      "views": 52794,
+      "revenue": 1055.88
+    },
+    {
+      "date": "2025-01-02",
+      "title": "Naruto: Shippuuden",
+      "views": 59877,
+      "revenue": 1197.54
+    },
+    {
+      "date": "2025-01-02",
+      "title": "Tokyo Ghoul",
+      "views": 47127,
+      "revenue": 942.54
+    },
+    {
+      "date": "2025-01-02",
+      "title": "Yu Yu Hakusho",
+      "views": 46779,
+      "revenue": 935.58
+    },
+    {
+      "date": "2025-01-03",
+      "title": "Black Clover",
+      "views": 59301,
+      "revenue": 1186.02
+    },
+    {
+      "date": "2025-01-03",
+      "title": "Bleach",
+      "views": 53649,
+      "revenue": 1072.98
+    },
+    {
+      "date": "2025-01-03",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 211108,
+      "revenue": 4222.16
+    },
+    {
+      "date": "2025-01-03",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 168046,
+      "revenue": 3360.92
+    },
+    {
+      "date": "2025-01-03",
+      "title": "Great Teacher Onizuka",
+      "views": 45545,
+      "revenue": 910.9
+    },
+    {
+      "date": "2025-01-03",
+      "title": "Kingdom",
+      "views": 55377,
+      "revenue": 1107.54
+    },
+    {
+      "date": "2025-01-03",
+      "title": "Naruto",
+      "views": 51236,
+      "revenue": 1024.72
+    },
+    {
+      "date": "2025-01-03",
+      "title": "Naruto: Shippuuden",
+      "views": 49176,
+      "revenue": 983.52
+    },
+    {
+      "date": "2025-01-03",
+      "title": "Tokyo Ghoul",
+      "views": 40952,
+      "revenue": 819.04
+    },
+    {
+      "date": "2025-01-03",
+      "title": "Yu Yu Hakusho",
+      "views": 59490,
+      "revenue": 1189.8
+    },
+    {
+      "date": "2025-01-04",
+      "title": "Black Clover",
+      "views": 40465,
+      "revenue": 809.3000000000001
+    },
+    {
+      "date": "2025-01-04",
+      "title": "Bleach",
+      "views": 54775,
+      "revenue": 1095.5
+    },
+    {
+      "date": "2025-01-04",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 197325,
+      "revenue": 3946.5
+    },
+    {
+      "date": "2025-01-04",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 162952,
+      "revenue": 3259.04
+    },
+    {
+      "date": "2025-01-04",
+      "title": "Great Teacher Onizuka",
+      "views": 47333,
+      "revenue": 946.66
+    },
+    {
+      "date": "2025-01-04",
+      "title": "Kingdom",
+      "views": 53978,
+      "revenue": 1079.56
+    },
+    {
+      "date": "2025-01-04",
+      "title": "Naruto",
+      "views": 48058,
+      "revenue": 961.16
+    },
+    {
+      "date": "2025-01-04",
+      "title": "Naruto: Shippuuden",
+      "views": 59208,
+      "revenue": 1184.16
+    },
+    {
+      "date": "2025-01-04",
+      "title": "Tokyo Ghoul",
+      "views": 52468,
+      "revenue": 1049.3600000000001
+    },
+    {
+      "date": "2025-01-04",
+      "title": "Yu Yu Hakusho",
+      "views": 52402,
+      "revenue": 1048.04
+    },
+    {
+      "date": "2025-01-05",
+      "title": "Black Clover",
+      "views": 58318,
+      "revenue": 1166.3600000000001
+    },
+    {
+      "date": "2025-01-05",
+      "title": "Bleach",
+      "views": 40948,
+      "revenue": 818.96
+    },
+    {
+      "date": "2025-01-05",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 187272,
+      "revenue": 3745.44
+    },
+    {
+      "date": "2025-01-05",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 122605,
+      "revenue": 2452.1
+    },
+    {
+      "date": "2025-01-05",
+      "title": "Great Teacher Onizuka",
+      "views": 50350,
+      "revenue": 1007
+    },
+    {
+      "date": "2025-01-05",
+      "title": "Kingdom",
+      "views": 41380,
+      "revenue": 827.6
+    },
+    {
+      "date": "2025-01-05",
+      "title": "Naruto",
+      "views": 47548,
+      "revenue": 950.96
+    },
+    {
+      "date": "2025-01-05",
+      "title": "Naruto: Shippuuden",
+      "views": 53037,
+      "revenue": 1060.74
+    },
+    {
+      "date": "2025-01-05",
+      "title": "Tokyo Ghoul",
+      "views": 50746,
+      "revenue": 1014.9200000000001
+    },
+    {
+      "date": "2025-01-05",
+      "title": "Yu Yu Hakusho",
+      "views": 52542,
+      "revenue": 1050.84
+    },
+    {
+      "date": "2025-01-06",
+      "title": "Black Clover",
+      "views": 51868,
+      "revenue": 1037.3600000000001
+    },
+    {
+      "date": "2025-01-06",
+      "title": "Bleach",
+      "views": 53169,
+      "revenue": 1063.38
+    },
+    {
+      "date": "2025-01-06",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 168140,
+      "revenue": 3362.8
+    },
+    {
+      "date": "2025-01-06",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 148031,
+      "revenue": 2960.62
+    },
+    {
+      "date": "2025-01-06",
+      "title": "Great Teacher Onizuka",
+      "views": 47261,
+      "revenue": 945.22
+    },
+    {
+      "date": "2025-01-06",
+      "title": "Kingdom",
+      "views": 47444,
+      "revenue": 948.88
+    },
+    {
+      "date": "2025-01-06",
+      "title": "Naruto",
+      "views": 43600,
+      "revenue": 872
+    },
+    {
+      "date": "2025-01-06",
+      "title": "Naruto: Shippuuden",
+      "views": 53728,
+      "revenue": 1074.56
+    },
+    {
+      "date": "2025-01-06",
+      "title": "Tokyo Ghoul",
+      "views": 46311,
+      "revenue": 926.22
+    },
+    {
+      "date": "2025-01-06",
+      "title": "Yu Yu Hakusho",
+      "views": 52899,
+      "revenue": 1057.98
+    },
+    {
+      "date": "2025-01-07",
+      "title": "Black Clover",
+      "views": 58310,
+      "revenue": 1166.2
+    },
+    {
+      "date": "2025-01-07",
+      "title": "Bleach",
+      "views": 45629,
+      "revenue": 912.58
+    },
+    {
+      "date": "2025-01-07",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 206506,
+      "revenue": 4130.12
+    },
+    {
+      "date": "2025-01-07",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 173634,
+      "revenue": 3472.6800000000003
+    },
+    {
+      "date": "2025-01-07",
+      "title": "Great Teacher Onizuka",
+      "views": 40953,
+      "revenue": 819.0600000000001
+    },
+    {
+      "date": "2025-01-07",
+      "title": "Kingdom",
+      "views": 55737,
+      "revenue": 1114.74
+    },
+    {
+      "date": "2025-01-07",
+      "title": "Naruto",
+      "views": 58544,
+      "revenue": 1170.88
+    },
+    {
+      "date": "2025-01-07",
+      "title": "Naruto: Shippuuden",
+      "views": 54167,
+      "revenue": 1083.34
+    },
+    {
+      "date": "2025-01-07",
+      "title": "Tokyo Ghoul",
+      "views": 48250,
+      "revenue": 965
+    },
+    {
+      "date": "2025-01-07",
+      "title": "Yu Yu Hakusho",
+      "views": 42554,
+      "revenue": 851.08
+    },
+    {
+      "date": "2025-01-08",
+      "title": "Black Clover",
+      "views": 57841,
+      "revenue": 1156.82
+    },
+    {
+      "date": "2025-01-08",
+      "title": "Bleach",
+      "views": 58476,
+      "revenue": 1169.52
+    },
+    {
+      "date": "2025-01-08",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 175590,
+      "revenue": 3511.8
+    },
+    {
+      "date": "2025-01-08",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 178636,
+      "revenue": 3572.7200000000003
+    },
+    {
+      "date": "2025-01-08",
+      "title": "Great Teacher Onizuka",
+      "views": 42399,
+      "revenue": 847.98
+    },
+    {
+      "date": "2025-01-08",
+      "title": "Kingdom",
+      "views": 49742,
+      "revenue": 994.84
+    },
+    {
+      "date": "2025-01-08",
+      "title": "Naruto",
+      "views": 57314,
+      "revenue": 1146.28
+    },
+    {
+      "date": "2025-01-08",
+      "title": "Naruto: Shippuuden",
+      "views": 59582,
+      "revenue": 1191.64
+    },
+    {
+      "date": "2025-01-08",
+      "title": "Tokyo Ghoul",
+      "views": 57316,
+      "revenue": 1146.32
+    },
+    {
+      "date": "2025-01-08",
+      "title": "Yu Yu Hakusho",
+      "views": 57296,
+      "revenue": 1145.92
+    },
+    {
+      "date": "2025-01-09",
+      "title": "Black Clover",
+      "views": 56046,
+      "revenue": 1120.92
+    },
+    {
+      "date": "2025-01-09",
+      "title": "Bleach",
+      "views": 47242,
+      "revenue": 944.84
+    },
+    {
+      "date": "2025-01-09",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 166688,
+      "revenue": 3333.76
+    },
+    {
+      "date": "2025-01-09",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 148154,
+      "revenue": 2963.08
+    },
+    {
+      "date": "2025-01-09",
+      "title": "Great Teacher Onizuka",
+      "views": 47071,
+      "revenue": 941.4200000000001
+    },
+    {
+      "date": "2025-01-09",
+      "title": "Kingdom",
+      "views": 43802,
+      "revenue": 876.04
+    },
+    {
+      "date": "2025-01-09",
+      "title": "Naruto",
+      "views": 59529,
+      "revenue": 1190.58
+    },
+    {
+      "date": "2025-01-09",
+      "title": "Naruto: Shippuuden",
+      "views": 51760,
+      "revenue": 1035.2
+    },
+    {
+      "date": "2025-01-09",
+      "title": "Tokyo Ghoul",
+      "views": 47715,
+      "revenue": 954.3000000000001
+    },
+    {
+      "date": "2025-01-09",
+      "title": "Yu Yu Hakusho",
+      "views": 43449,
+      "revenue": 868.98
+    },
+    {
+      "date": "2025-01-10",
+      "title": "Black Clover",
+      "views": 58591,
+      "revenue": 1171.82
+    },
+    {
+      "date": "2025-01-10",
+      "title": "Bleach",
+      "views": 49737,
+      "revenue": 994.74
+    },
+    {
+      "date": "2025-01-10",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 214406,
+      "revenue": 4288.12
+    },
+    {
+      "date": "2025-01-10",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 152118,
+      "revenue": 3042.36
+    },
+    {
+      "date": "2025-01-10",
+      "title": "Great Teacher Onizuka",
+      "views": 45816,
+      "revenue": 916.32
+    },
+    {
+      "date": "2025-01-10",
+      "title": "Kingdom",
+      "views": 54669,
+      "revenue": 1093.38
+    },
+    {
+      "date": "2025-01-10",
+      "title": "Naruto",
+      "views": 42768,
+      "revenue": 855.36
+    },
+    {
+      "date": "2025-01-10",
+      "title": "Naruto: Shippuuden",
+      "views": 48855,
+      "revenue": 977.1
+    },
+    {
+      "date": "2025-01-10",
+      "title": "Tokyo Ghoul",
+      "views": 48191,
+      "revenue": 963.82
+    },
+    {
+      "date": "2025-01-10",
+      "title": "Yu Yu Hakusho",
+      "views": 58487,
+      "revenue": 1169.74
+    },
+    {
+      "date": "2025-01-11",
+      "title": "Black Clover",
+      "views": 57976,
+      "revenue": 1159.52
+    },
+    {
+      "date": "2025-01-11",
+      "title": "Bleach",
+      "views": 56858,
+      "revenue": 1137.16
+    },
+    {
+      "date": "2025-01-11",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 183528,
+      "revenue": 3670.56
+    },
+    {
+      "date": "2025-01-11",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 139782,
+      "revenue": 2795.64
+    },
+    {
+      "date": "2025-01-11",
+      "title": "Great Teacher Onizuka",
+      "views": 54005,
+      "revenue": 1080.1
+    },
+    {
+      "date": "2025-01-11",
+      "title": "Kingdom",
+      "views": 40718,
+      "revenue": 814.36
+    },
+    {
+      "date": "2025-01-11",
+      "title": "Naruto",
+      "views": 53944,
+      "revenue": 1078.88
+    },
+    {
+      "date": "2025-01-11",
+      "title": "Naruto: Shippuuden",
+      "views": 55256,
+      "revenue": 1105.1200000000001
+    },
+    {
+      "date": "2025-01-11",
+      "title": "Tokyo Ghoul",
+      "views": 52399,
+      "revenue": 1047.98
+    },
+    {
+      "date": "2025-01-11",
+      "title": "Yu Yu Hakusho",
+      "views": 49704,
+      "revenue": 994.08
+    },
+    {
+      "date": "2025-01-12",
+      "title": "Black Clover",
+      "views": 42416,
+      "revenue": 848.32
+    },
+    {
+      "date": "2025-01-12",
+      "title": "Bleach",
+      "views": 49262,
+      "revenue": 985.24
+    },
+    {
+      "date": "2025-01-12",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 196299,
+      "revenue": 3925.98
+    },
+    {
+      "date": "2025-01-12",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 132429,
+      "revenue": 2648.58
+    },
+    {
+      "date": "2025-01-12",
+      "title": "Great Teacher Onizuka",
+      "views": 58391,
+      "revenue": 1167.82
+    },
+    {
+      "date": "2025-01-12",
+      "title": "Kingdom",
+      "views": 48872,
+      "revenue": 977.44
+    },
+    {
+      "date": "2025-01-12",
+      "title": "Naruto",
+      "views": 44726,
+      "revenue": 894.52
+    },
+    {
+      "date": "2025-01-12",
+      "title": "Naruto: Shippuuden",
+      "views": 44388,
+      "revenue": 887.76
+    },
+    {
+      "date": "2025-01-12",
+      "title": "Tokyo Ghoul",
+      "views": 42631,
+      "revenue": 852.62
+    },
+    {
+      "date": "2025-01-12",
+      "title": "Yu Yu Hakusho",
+      "views": 53685,
+      "revenue": 1073.7
+    },
+    {
+      "date": "2025-01-13",
+      "title": "Black Clover",
+      "views": 43651,
+      "revenue": 873.02
+    },
+    {
+      "date": "2025-01-13",
+      "title": "Bleach",
+      "views": 49934,
+      "revenue": 998.6800000000001
+    },
+    {
+      "date": "2025-01-13",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 214778,
+      "revenue": 4295.56
+    },
+    {
+      "date": "2025-01-13",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 136826,
+      "revenue": 2736.52
+    },
+    {
+      "date": "2025-01-13",
+      "title": "Great Teacher Onizuka",
+      "views": 43279,
+      "revenue": 865.58
+    },
+    {
+      "date": "2025-01-13",
+      "title": "Kingdom",
+      "views": 59823,
+      "revenue": 1196.46
+    },
+    {
+      "date": "2025-01-13",
+      "title": "Naruto",
+      "views": 49385,
+      "revenue": 987.7
+    },
+    {
+      "date": "2025-01-13",
+      "title": "Naruto: Shippuuden",
+      "views": 49177,
+      "revenue": 983.5400000000001
+    },
+    {
+      "date": "2025-01-13",
+      "title": "Tokyo Ghoul",
+      "views": 51630,
+      "revenue": 1032.6
+    },
+    {
+      "date": "2025-01-13",
+      "title": "Yu Yu Hakusho",
+      "views": 58382,
+      "revenue": 1167.64
+    },
+    {
+      "date": "2025-01-14",
+      "title": "Black Clover",
+      "views": 47203,
+      "revenue": 944.0600000000001
+    },
+    {
+      "date": "2025-01-14",
+      "title": "Bleach",
+      "views": 40068,
+      "revenue": 801.36
+    },
+    {
+      "date": "2025-01-14",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 192474,
+      "revenue": 3849.48
+    },
+    {
+      "date": "2025-01-14",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 123212,
+      "revenue": 2464.2400000000002
+    },
+    {
+      "date": "2025-01-14",
+      "title": "Great Teacher Onizuka",
+      "views": 42931,
+      "revenue": 858.62
+    },
+    {
+      "date": "2025-01-14",
+      "title": "Kingdom",
+      "views": 59974,
+      "revenue": 1199.48
+    },
+    {
+      "date": "2025-01-14",
+      "title": "Naruto",
+      "views": 51571,
+      "revenue": 1031.42
+    },
+    {
+      "date": "2025-01-14",
+      "title": "Naruto: Shippuuden",
+      "views": 53566,
+      "revenue": 1071.32
+    },
+    {
+      "date": "2025-01-14",
+      "title": "Tokyo Ghoul",
+      "views": 51258,
+      "revenue": 1025.16
+    },
+    {
+      "date": "2025-01-14",
+      "title": "Yu Yu Hakusho",
+      "views": 56790,
+      "revenue": 1135.8
+    },
+    {
+      "date": "2025-01-15",
+      "title": "Black Clover",
+      "views": 42079,
+      "revenue": 841.58
+    },
+    {
+      "date": "2025-01-15",
+      "title": "Bleach",
+      "views": 44362,
+      "revenue": 887.24
+    },
+    {
+      "date": "2025-01-15",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 233796,
+      "revenue": 4675.92
+    },
+    {
+      "date": "2025-01-15",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 134140,
+      "revenue": 2682.8
+    },
+    {
+      "date": "2025-01-15",
+      "title": "Great Teacher Onizuka",
+      "views": 47111,
+      "revenue": 942.22
+    },
+    {
+      "date": "2025-01-15",
+      "title": "Kingdom",
+      "views": 40084,
+      "revenue": 801.6800000000001
+    },
+    {
+      "date": "2025-01-15",
+      "title": "Naruto",
+      "views": 52286,
+      "revenue": 1045.72
+    },
+    {
+      "date": "2025-01-15",
+      "title": "Naruto: Shippuuden",
+      "views": 51931,
+      "revenue": 1038.6200000000001
+    },
+    {
+      "date": "2025-01-15",
+      "title": "Tokyo Ghoul",
+      "views": 44075,
+      "revenue": 881.5
+    },
+    {
+      "date": "2025-01-15",
+      "title": "Yu Yu Hakusho",
+      "views": 58815,
+      "revenue": 1176.3
+    },
+    {
+      "date": "2025-01-16",
+      "title": "Black Clover",
+      "views": 55076,
+      "revenue": 1101.52
+    },
+    {
+      "date": "2025-01-16",
+      "title": "Bleach",
+      "views": 48869,
+      "revenue": 977.38
+    },
+    {
+      "date": "2025-01-16",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 199192,
+      "revenue": 3983.84
+    },
+    {
+      "date": "2025-01-16",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 133040,
+      "revenue": 2660.8
+    },
+    {
+      "date": "2025-01-16",
+      "title": "Great Teacher Onizuka",
+      "views": 45420,
+      "revenue": 908.4
+    },
+    {
+      "date": "2025-01-16",
+      "title": "Kingdom",
+      "views": 44491,
+      "revenue": 889.82
+    },
+    {
+      "date": "2025-01-16",
+      "title": "Naruto",
+      "views": 48475,
+      "revenue": 969.5
+    },
+    {
+      "date": "2025-01-16",
+      "title": "Naruto: Shippuuden",
+      "views": 49872,
+      "revenue": 997.44
+    },
+    {
+      "date": "2025-01-16",
+      "title": "Tokyo Ghoul",
+      "views": 57936,
+      "revenue": 1158.72
+    },
+    {
+      "date": "2025-01-16",
+      "title": "Yu Yu Hakusho",
+      "views": 46048,
+      "revenue": 920.96
+    },
+    {
+      "date": "2025-01-17",
+      "title": "Black Clover",
+      "views": 52219,
+      "revenue": 1044.38
+    },
+    {
+      "date": "2025-01-17",
+      "title": "Bleach",
+      "views": 55695,
+      "revenue": 1113.9
+    },
+    {
+      "date": "2025-01-17",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 189525,
+      "revenue": 3790.5
+    },
+    {
+      "date": "2025-01-17",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 164974,
+      "revenue": 3299.48
+    },
+    {
+      "date": "2025-01-17",
+      "title": "Great Teacher Onizuka",
+      "views": 50647,
+      "revenue": 1012.94
+    },
+    {
+      "date": "2025-01-17",
+      "title": "Kingdom",
+      "views": 43371,
+      "revenue": 867.4200000000001
+    },
+    {
+      "date": "2025-01-17",
+      "title": "Naruto",
+      "views": 47376,
+      "revenue": 947.52
+    },
+    {
+      "date": "2025-01-17",
+      "title": "Naruto: Shippuuden",
+      "views": 51220,
+      "revenue": 1024.4
+    },
+    {
+      "date": "2025-01-17",
+      "title": "Tokyo Ghoul",
+      "views": 45110,
+      "revenue": 902.2
+    },
+    {
+      "date": "2025-01-17",
+      "title": "Yu Yu Hakusho",
+      "views": 44982,
+      "revenue": 899.64
+    },
+    {
+      "date": "2025-01-18",
+      "title": "Black Clover",
+      "views": 53687,
+      "revenue": 1073.74
+    },
+    {
+      "date": "2025-01-18",
+      "title": "Bleach",
+      "views": 42131,
+      "revenue": 842.62
+    },
+    {
+      "date": "2025-01-18",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 184653,
+      "revenue": 3693.06
+    },
+    {
+      "date": "2025-01-18",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 137013,
+      "revenue": 2740.26
+    },
+    {
+      "date": "2025-01-18",
+      "title": "Great Teacher Onizuka",
+      "views": 52023,
+      "revenue": 1040.46
+    },
+    {
+      "date": "2025-01-18",
+      "title": "Kingdom",
+      "views": 40076,
+      "revenue": 801.52
+    },
+    {
+      "date": "2025-01-18",
+      "title": "Naruto",
+      "views": 56909,
+      "revenue": 1138.18
+    },
+    {
+      "date": "2025-01-18",
+      "title": "Naruto: Shippuuden",
+      "views": 42273,
+      "revenue": 845.46
+    },
+    {
+      "date": "2025-01-18",
+      "title": "Tokyo Ghoul",
+      "views": 40349,
+      "revenue": 806.98
+    },
+    {
+      "date": "2025-01-18",
+      "title": "Yu Yu Hakusho",
+      "views": 55152,
+      "revenue": 1103.04
+    },
+    {
+      "date": "2025-01-19",
+      "title": "Black Clover",
+      "views": 59369,
+      "revenue": 1187.38
+    },
+    {
+      "date": "2025-01-19",
+      "title": "Bleach",
+      "views": 58153,
+      "revenue": 1163.06
+    },
+    {
+      "date": "2025-01-19",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 231444,
+      "revenue": 4628.88
+    },
+    {
+      "date": "2025-01-19",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 148886,
+      "revenue": 2977.7200000000003
+    },
+    {
+      "date": "2025-01-19",
+      "title": "Great Teacher Onizuka",
+      "views": 40604,
+      "revenue": 812.08
+    },
+    {
+      "date": "2025-01-19",
+      "title": "Kingdom",
+      "views": 56381,
+      "revenue": 1127.6200000000001
+    },
+    {
+      "date": "2025-01-19",
+      "title": "Naruto",
+      "views": 48786,
+      "revenue": 975.72
+    },
+    {
+      "date": "2025-01-19",
+      "title": "Naruto: Shippuuden",
+      "views": 48851,
+      "revenue": 977.02
+    },
+    {
+      "date": "2025-01-19",
+      "title": "Tokyo Ghoul",
+      "views": 46568,
+      "revenue": 931.36
+    },
+    {
+      "date": "2025-01-19",
+      "title": "Yu Yu Hakusho",
+      "views": 52410,
+      "revenue": 1048.2
+    },
+    {
+      "date": "2025-01-20",
+      "title": "Black Clover",
+      "views": 54553,
+      "revenue": 1091.06
+    },
+    {
+      "date": "2025-01-20",
+      "title": "Bleach",
+      "views": 55163,
+      "revenue": 1103.26
+    },
+    {
+      "date": "2025-01-20",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 161178,
+      "revenue": 3223.56
+    },
+    {
+      "date": "2025-01-20",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 124213,
+      "revenue": 2484.26
+    },
+    {
+      "date": "2025-01-20",
+      "title": "Great Teacher Onizuka",
+      "views": 42614,
+      "revenue": 852.28
+    },
+    {
+      "date": "2025-01-20",
+      "title": "Kingdom",
+      "views": 53024,
+      "revenue": 1060.48
+    },
+    {
+      "date": "2025-01-20",
+      "title": "Naruto",
+      "views": 54742,
+      "revenue": 1094.84
+    },
+    {
+      "date": "2025-01-20",
+      "title": "Naruto: Shippuuden",
+      "views": 55687,
+      "revenue": 1113.74
+    },
+    {
+      "date": "2025-01-20",
+      "title": "Tokyo Ghoul",
+      "views": 49773,
+      "revenue": 995.46
+    },
+    {
+      "date": "2025-01-20",
+      "title": "Yu Yu Hakusho",
+      "views": 50868,
+      "revenue": 1017.36
+    },
+    {
+      "date": "2025-01-21",
+      "title": "Black Clover",
+      "views": 50385,
+      "revenue": 1007.7
+    },
+    {
+      "date": "2025-01-21",
+      "title": "Bleach",
+      "views": 58016,
+      "revenue": 1160.32
+    },
+    {
+      "date": "2025-01-21",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 210816,
+      "revenue": 4216.32
+    },
+    {
+      "date": "2025-01-21",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 174992,
+      "revenue": 3499.84
+    },
+    {
+      "date": "2025-01-21",
+      "title": "Great Teacher Onizuka",
+      "views": 46173,
+      "revenue": 923.46
+    },
+    {
+      "date": "2025-01-21",
+      "title": "Kingdom",
+      "views": 43958,
+      "revenue": 879.16
+    },
+    {
+      "date": "2025-01-21",
+      "title": "Naruto",
+      "views": 55943,
+      "revenue": 1118.8600000000001
+    },
+    {
+      "date": "2025-01-21",
+      "title": "Naruto: Shippuuden",
+      "views": 44236,
+      "revenue": 884.72
+    },
+    {
+      "date": "2025-01-21",
+      "title": "Tokyo Ghoul",
+      "views": 58438,
+      "revenue": 1168.76
+    },
+    {
+      "date": "2025-01-21",
+      "title": "Yu Yu Hakusho",
+      "views": 43425,
+      "revenue": 868.5
+    },
+    {
+      "date": "2025-01-22",
+      "title": "Black Clover",
+      "views": 49940,
+      "revenue": 998.8000000000001
+    },
+    {
+      "date": "2025-01-22",
+      "title": "Bleach",
+      "views": 42181,
+      "revenue": 843.62
+    },
+    {
+      "date": "2025-01-22",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 169005,
+      "revenue": 3380.1
+    },
+    {
+      "date": "2025-01-22",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 141475,
+      "revenue": 2829.5
+    },
+    {
+      "date": "2025-01-22",
+      "title": "Great Teacher Onizuka",
+      "views": 52406,
+      "revenue": 1048.1200000000001
+    },
+    {
+      "date": "2025-01-22",
+      "title": "Kingdom",
+      "views": 55572,
+      "revenue": 1111.44
+    },
+    {
+      "date": "2025-01-22",
+      "title": "Naruto",
+      "views": 41908,
+      "revenue": 838.16
+    },
+    {
+      "date": "2025-01-22",
+      "title": "Naruto: Shippuuden",
+      "views": 41532,
+      "revenue": 830.64
+    },
+    {
+      "date": "2025-01-22",
+      "title": "Tokyo Ghoul",
+      "views": 53912,
+      "revenue": 1078.24
+    },
+    {
+      "date": "2025-01-22",
+      "title": "Yu Yu Hakusho",
+      "views": 58035,
+      "revenue": 1160.7
+    },
+    {
+      "date": "2025-01-23",
+      "title": "Black Clover",
+      "views": 42692,
+      "revenue": 853.84
+    },
+    {
+      "date": "2025-01-23",
+      "title": "Bleach",
+      "views": 42260,
+      "revenue": 845.2
+    },
+    {
+      "date": "2025-01-23",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 173846,
+      "revenue": 3476.92
+    },
+    {
+      "date": "2025-01-23",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 158782,
+      "revenue": 3175.64
+    },
+    {
+      "date": "2025-01-23",
+      "title": "Great Teacher Onizuka",
+      "views": 45507,
+      "revenue": 910.14
+    },
+    {
+      "date": "2025-01-23",
+      "title": "Kingdom",
+      "views": 45168,
+      "revenue": 903.36
+    },
+    {
+      "date": "2025-01-23",
+      "title": "Naruto",
+      "views": 43480,
+      "revenue": 869.6
+    },
+    {
+      "date": "2025-01-23",
+      "title": "Naruto: Shippuuden",
+      "views": 53287,
+      "revenue": 1065.74
+    },
+    {
+      "date": "2025-01-23",
+      "title": "Tokyo Ghoul",
+      "views": 50816,
+      "revenue": 1016.32
+    },
+    {
+      "date": "2025-01-23",
+      "title": "Yu Yu Hakusho",
+      "views": 47457,
+      "revenue": 949.14
+    },
+    {
+      "date": "2025-01-24",
+      "title": "Black Clover",
+      "views": 44614,
+      "revenue": 892.28
+    },
+    {
+      "date": "2025-01-24",
+      "title": "Bleach",
+      "views": 54364,
+      "revenue": 1087.28
+    },
+    {
+      "date": "2025-01-24",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 203944,
+      "revenue": 4078.88
+    },
+    {
+      "date": "2025-01-24",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 131185,
+      "revenue": 2623.7000000000003
+    },
+    {
+      "date": "2025-01-24",
+      "title": "Great Teacher Onizuka",
+      "views": 42039,
+      "revenue": 840.78
+    },
+    {
+      "date": "2025-01-24",
+      "title": "Kingdom",
+      "views": 41622,
+      "revenue": 832.44
+    },
+    {
+      "date": "2025-01-24",
+      "title": "Naruto",
+      "views": 58870,
+      "revenue": 1177.4
+    },
+    {
+      "date": "2025-01-24",
+      "title": "Naruto: Shippuuden",
+      "views": 47457,
+      "revenue": 949.14
+    },
+    {
+      "date": "2025-01-24",
+      "title": "Tokyo Ghoul",
+      "views": 55859,
+      "revenue": 1117.18
+    },
+    {
+      "date": "2025-01-24",
+      "title": "Yu Yu Hakusho",
+      "views": 42678,
+      "revenue": 853.5600000000001
+    },
+    {
+      "date": "2025-01-25",
+      "title": "Black Clover",
+      "views": 53090,
+      "revenue": 1061.8
+    },
+    {
+      "date": "2025-01-25",
+      "title": "Bleach",
+      "views": 56700,
+      "revenue": 1134
+    },
+    {
+      "date": "2025-01-25",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 177481,
+      "revenue": 3549.62
+    },
+    {
+      "date": "2025-01-25",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 172528,
+      "revenue": 3450.56
+    },
+    {
+      "date": "2025-01-25",
+      "title": "Great Teacher Onizuka",
+      "views": 52417,
+      "revenue": 1048.34
+    },
+    {
+      "date": "2025-01-25",
+      "title": "Kingdom",
+      "views": 54971,
+      "revenue": 1099.42
+    },
+    {
+      "date": "2025-01-25",
+      "title": "Naruto",
+      "views": 42285,
+      "revenue": 845.7
+    },
+    {
+      "date": "2025-01-25",
+      "title": "Naruto: Shippuuden",
+      "views": 49162,
+      "revenue": 983.24
+    },
+    {
+      "date": "2025-01-25",
+      "title": "Tokyo Ghoul",
+      "views": 58999,
+      "revenue": 1179.98
+    },
+    {
+      "date": "2025-01-25",
+      "title": "Yu Yu Hakusho",
+      "views": 50341,
+      "revenue": 1006.82
+    },
+    {
+      "date": "2025-01-26",
+      "title": "Black Clover",
+      "views": 43557,
+      "revenue": 871.14
+    },
+    {
+      "date": "2025-01-26",
+      "title": "Bleach",
+      "views": 56193,
+      "revenue": 1123.8600000000001
+    },
+    {
+      "date": "2025-01-26",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 236740,
+      "revenue": 4734.8
+    },
+    {
+      "date": "2025-01-26",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 121629,
+      "revenue": 2432.58
+    },
+    {
+      "date": "2025-01-26",
+      "title": "Great Teacher Onizuka",
+      "views": 52329,
+      "revenue": 1046.58
+    },
+    {
+      "date": "2025-01-26",
+      "title": "Kingdom",
+      "views": 40606,
+      "revenue": 812.12
+    },
+    {
+      "date": "2025-01-26",
+      "title": "Naruto",
+      "views": 58151,
+      "revenue": 1163.02
+    },
+    {
+      "date": "2025-01-26",
+      "title": "Naruto: Shippuuden",
+      "views": 49029,
+      "revenue": 980.58
+    },
+    {
+      "date": "2025-01-26",
+      "title": "Tokyo Ghoul",
+      "views": 58902,
+      "revenue": 1178.04
+    },
+    {
+      "date": "2025-01-26",
+      "title": "Yu Yu Hakusho",
+      "views": 45463,
+      "revenue": 909.26
+    },
+    {
+      "date": "2025-01-27",
+      "title": "Black Clover",
+      "views": 52110,
+      "revenue": 1042.2
+    },
+    {
+      "date": "2025-01-27",
+      "title": "Bleach",
+      "views": 46371,
+      "revenue": 927.4200000000001
+    },
+    {
+      "date": "2025-01-27",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 183381,
+      "revenue": 3667.62
+    },
+    {
+      "date": "2025-01-27",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 143179,
+      "revenue": 2863.58
+    },
+    {
+      "date": "2025-01-27",
+      "title": "Great Teacher Onizuka",
+      "views": 56299,
+      "revenue": 1125.98
+    },
+    {
+      "date": "2025-01-27",
+      "title": "Kingdom",
+      "views": 47799,
+      "revenue": 955.98
+    },
+    {
+      "date": "2025-01-27",
+      "title": "Naruto",
+      "views": 40841,
+      "revenue": 816.82
+    },
+    {
+      "date": "2025-01-27",
+      "title": "Naruto: Shippuuden",
+      "views": 49772,
+      "revenue": 995.44
+    },
+    {
+      "date": "2025-01-27",
+      "title": "Tokyo Ghoul",
+      "views": 45902,
+      "revenue": 918.04
+    },
+    {
+      "date": "2025-01-27",
+      "title": "Yu Yu Hakusho",
+      "views": 44955,
+      "revenue": 899.1
+    },
+    {
+      "date": "2025-01-28",
+      "title": "Black Clover",
+      "views": 51987,
+      "revenue": 1039.74
+    },
+    {
+      "date": "2025-01-28",
+      "title": "Bleach",
+      "views": 51862,
+      "revenue": 1037.24
+    },
+    {
+      "date": "2025-01-28",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 224488,
+      "revenue": 4489.76
+    },
+    {
+      "date": "2025-01-28",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 170356,
+      "revenue": 3407.12
+    },
+    {
+      "date": "2025-01-28",
+      "title": "Great Teacher Onizuka",
+      "views": 40506,
+      "revenue": 810.12
+    },
+    {
+      "date": "2025-01-28",
+      "title": "Kingdom",
+      "views": 42890,
+      "revenue": 857.8000000000001
+    },
+    {
+      "date": "2025-01-28",
+      "title": "Naruto",
+      "views": 58078,
+      "revenue": 1161.56
+    },
+    {
+      "date": "2025-01-28",
+      "title": "Naruto: Shippuuden",
+      "views": 51473,
+      "revenue": 1029.46
+    },
+    {
+      "date": "2025-01-28",
+      "title": "Tokyo Ghoul",
+      "views": 58694,
+      "revenue": 1173.88
+    },
+    {
+      "date": "2025-01-28",
+      "title": "Yu Yu Hakusho",
+      "views": 45552,
+      "revenue": 911.04
+    },
+    {
+      "date": "2025-01-29",
+      "title": "Black Clover",
+      "views": 56560,
+      "revenue": 1131.2
+    },
+    {
+      "date": "2025-01-29",
+      "title": "Bleach",
+      "views": 46676,
+      "revenue": 933.52
+    },
+    {
+      "date": "2025-01-29",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 209513,
+      "revenue": 4190.26
+    },
+    {
+      "date": "2025-01-29",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 155691,
+      "revenue": 3113.82
+    },
+    {
+      "date": "2025-01-29",
+      "title": "Great Teacher Onizuka",
+      "views": 44704,
+      "revenue": 894.08
+    },
+    {
+      "date": "2025-01-29",
+      "title": "Kingdom",
+      "views": 49686,
+      "revenue": 993.72
+    },
+    {
+      "date": "2025-01-29",
+      "title": "Naruto",
+      "views": 42561,
+      "revenue": 851.22
+    },
+    {
+      "date": "2025-01-29",
+      "title": "Naruto: Shippuuden",
+      "views": 45270,
+      "revenue": 905.4
+    },
+    {
+      "date": "2025-01-29",
+      "title": "Tokyo Ghoul",
+      "views": 57383,
+      "revenue": 1147.66
+    },
+    {
+      "date": "2025-01-29",
+      "title": "Yu Yu Hakusho",
+      "views": 43206,
+      "revenue": 864.12
+    },
+    {
+      "date": "2025-01-30",
+      "title": "Black Clover",
+      "views": 59272,
+      "revenue": 1185.44
+    },
+    {
+      "date": "2025-01-30",
+      "title": "Bleach",
+      "views": 56393,
+      "revenue": 1127.8600000000001
+    },
+    {
+      "date": "2025-01-30",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 173195,
+      "revenue": 3463.9
+    },
+    {
+      "date": "2025-01-30",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 151801,
+      "revenue": 3036.02
+    },
+    {
+      "date": "2025-01-30",
+      "title": "Great Teacher Onizuka",
+      "views": 46258,
+      "revenue": 925.16
+    },
+    {
+      "date": "2025-01-30",
+      "title": "Kingdom",
+      "views": 46813,
+      "revenue": 936.26
+    },
+    {
+      "date": "2025-01-30",
+      "title": "Naruto",
+      "views": 52445,
+      "revenue": 1048.9
+    },
+    {
+      "date": "2025-01-30",
+      "title": "Naruto: Shippuuden",
+      "views": 42786,
+      "revenue": 855.72
+    },
+    {
+      "date": "2025-01-30",
+      "title": "Tokyo Ghoul",
+      "views": 43001,
+      "revenue": 860.02
+    },
+    {
+      "date": "2025-01-30",
+      "title": "Yu Yu Hakusho",
+      "views": 49321,
+      "revenue": 986.4200000000001
+    },
+    {
+      "date": "2025-01-31",
+      "title": "Black Clover",
+      "views": 48031,
+      "revenue": 960.62
+    },
+    {
+      "date": "2025-01-31",
+      "title": "Bleach",
+      "views": 58094,
+      "revenue": 1161.88
+    },
+    {
+      "date": "2025-01-31",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 188953,
+      "revenue": 3779.06
+    },
+    {
+      "date": "2025-01-31",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 123855,
+      "revenue": 2477.1
+    },
+    {
+      "date": "2025-01-31",
+      "title": "Great Teacher Onizuka",
+      "views": 47114,
+      "revenue": 942.28
+    },
+    {
+      "date": "2025-01-31",
+      "title": "Kingdom",
+      "views": 46131,
+      "revenue": 922.62
+    },
+    {
+      "date": "2025-01-31",
+      "title": "Naruto",
+      "views": 56489,
+      "revenue": 1129.78
+    },
+    {
+      "date": "2025-01-31",
+      "title": "Naruto: Shippuuden",
+      "views": 50397,
+      "revenue": 1007.94
+    },
+    {
+      "date": "2025-01-31",
+      "title": "Tokyo Ghoul",
+      "views": 42750,
+      "revenue": 855
+    },
+    {
+      "date": "2025-01-31",
+      "title": "Yu Yu Hakusho",
+      "views": 51911,
+      "revenue": 1038.22
+    },
+    {
+      "date": "2025-02-01",
+      "title": "Black Clover",
+      "views": 40932,
+      "revenue": 818.64
+    },
+    {
+      "date": "2025-02-01",
+      "title": "Bleach",
+      "views": 55090,
+      "revenue": 1101.8
+    },
+    {
+      "date": "2025-02-01",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 227546,
+      "revenue": 4550.92
+    },
+    {
+      "date": "2025-02-01",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 122468,
+      "revenue": 2449.36
+    },
+    {
+      "date": "2025-02-01",
+      "title": "Great Teacher Onizuka",
+      "views": 46605,
+      "revenue": 932.1
+    },
+    {
+      "date": "2025-02-01",
+      "title": "Kingdom",
+      "views": 52427,
+      "revenue": 1048.54
+    },
+    {
+      "date": "2025-02-01",
+      "title": "Naruto",
+      "views": 58688,
+      "revenue": 1173.76
+    },
+    {
+      "date": "2025-02-01",
+      "title": "Naruto: Shippuuden",
+      "views": 56521,
+      "revenue": 1130.42
+    },
+    {
+      "date": "2025-02-01",
+      "title": "Tokyo Ghoul",
+      "views": 43693,
+      "revenue": 873.86
+    },
+    {
+      "date": "2025-02-01",
+      "title": "Yu Yu Hakusho",
+      "views": 49703,
+      "revenue": 994.0600000000001
+    },
+    {
+      "date": "2025-02-02",
+      "title": "Black Clover",
+      "views": 40398,
+      "revenue": 807.96
+    },
+    {
+      "date": "2025-02-02",
+      "title": "Bleach",
+      "views": 55275,
+      "revenue": 1105.5
+    },
+    {
+      "date": "2025-02-02",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 223192,
+      "revenue": 4463.84
+    },
+    {
+      "date": "2025-02-02",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 145858,
+      "revenue": 2917.16
+    },
+    {
+      "date": "2025-02-02",
+      "title": "Great Teacher Onizuka",
+      "views": 47176,
+      "revenue": 943.52
+    },
+    {
+      "date": "2025-02-02",
+      "title": "Kingdom",
+      "views": 46922,
+      "revenue": 938.44
+    },
+    {
+      "date": "2025-02-02",
+      "title": "Naruto",
+      "views": 57780,
+      "revenue": 1155.6000000000001
+    },
+    {
+      "date": "2025-02-02",
+      "title": "Naruto: Shippuuden",
+      "views": 40653,
+      "revenue": 813.0600000000001
+    },
+    {
+      "date": "2025-02-02",
+      "title": "Tokyo Ghoul",
+      "views": 55389,
+      "revenue": 1107.78
+    },
+    {
+      "date": "2025-02-02",
+      "title": "Yu Yu Hakusho",
+      "views": 50259,
+      "revenue": 1005.1800000000001
+    },
+    {
+      "date": "2025-02-03",
+      "title": "Black Clover",
+      "views": 43291,
+      "revenue": 865.82
+    },
+    {
+      "date": "2025-02-03",
+      "title": "Bleach",
+      "views": 57208,
+      "revenue": 1144.16
+    },
+    {
+      "date": "2025-02-03",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 167783,
+      "revenue": 3355.66
+    },
+    {
+      "date": "2025-02-03",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 168081,
+      "revenue": 3361.62
+    },
+    {
+      "date": "2025-02-03",
+      "title": "Great Teacher Onizuka",
+      "views": 56335,
+      "revenue": 1126.7
+    },
+    {
+      "date": "2025-02-03",
+      "title": "Kingdom",
+      "views": 41891,
+      "revenue": 837.82
+    },
+    {
+      "date": "2025-02-03",
+      "title": "Naruto",
+      "views": 41925,
+      "revenue": 838.5
+    },
+    {
+      "date": "2025-02-03",
+      "title": "Naruto: Shippuuden",
+      "views": 50592,
+      "revenue": 1011.84
+    },
+    {
+      "date": "2025-02-03",
+      "title": "Tokyo Ghoul",
+      "views": 55684,
+      "revenue": 1113.68
+    },
+    {
+      "date": "2025-02-03",
+      "title": "Yu Yu Hakusho",
+      "views": 51246,
+      "revenue": 1024.92
+    },
+    {
+      "date": "2025-02-04",
+      "title": "Black Clover",
+      "views": 49558,
+      "revenue": 991.16
+    },
+    {
+      "date": "2025-02-04",
+      "title": "Bleach",
+      "views": 42443,
+      "revenue": 848.86
+    },
+    {
+      "date": "2025-02-04",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 188766,
+      "revenue": 3775.32
+    },
+    {
+      "date": "2025-02-04",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 168926,
+      "revenue": 3378.52
+    },
+    {
+      "date": "2025-02-04",
+      "title": "Great Teacher Onizuka",
+      "views": 51675,
+      "revenue": 1033.5
+    },
+    {
+      "date": "2025-02-04",
+      "title": "Kingdom",
+      "views": 41452,
+      "revenue": 829.04
+    },
+    {
+      "date": "2025-02-04",
+      "title": "Naruto",
+      "views": 54119,
+      "revenue": 1082.38
+    },
+    {
+      "date": "2025-02-04",
+      "title": "Naruto: Shippuuden",
+      "views": 56754,
+      "revenue": 1135.08
+    },
+    {
+      "date": "2025-02-04",
+      "title": "Tokyo Ghoul",
+      "views": 50463,
+      "revenue": 1009.26
+    },
+    {
+      "date": "2025-02-04",
+      "title": "Yu Yu Hakusho",
+      "views": 52572,
+      "revenue": 1051.44
+    },
+    {
+      "date": "2025-02-05",
+      "title": "Black Clover",
+      "views": 47258,
+      "revenue": 945.16
+    },
+    {
+      "date": "2025-02-05",
+      "title": "Bleach",
+      "views": 59848,
+      "revenue": 1196.96
+    },
+    {
+      "date": "2025-02-05",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 229122,
+      "revenue": 4582.4400000000005
+    },
+    {
+      "date": "2025-02-05",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 130630,
+      "revenue": 2612.6
+    },
+    {
+      "date": "2025-02-05",
+      "title": "Great Teacher Onizuka",
+      "views": 42333,
+      "revenue": 846.66
+    },
+    {
+      "date": "2025-02-05",
+      "title": "Kingdom",
+      "views": 43359,
+      "revenue": 867.1800000000001
+    },
+    {
+      "date": "2025-02-05",
+      "title": "Naruto",
+      "views": 57918,
+      "revenue": 1158.3600000000001
+    },
+    {
+      "date": "2025-02-05",
+      "title": "Naruto: Shippuuden",
+      "views": 42463,
+      "revenue": 849.26
+    },
+    {
+      "date": "2025-02-05",
+      "title": "Tokyo Ghoul",
+      "views": 58856,
+      "revenue": 1177.1200000000001
+    },
+    {
+      "date": "2025-02-05",
+      "title": "Yu Yu Hakusho",
+      "views": 41968,
+      "revenue": 839.36
+    },
+    {
+      "date": "2025-02-06",
+      "title": "Black Clover",
+      "views": 59558,
+      "revenue": 1191.16
+    },
+    {
+      "date": "2025-02-06",
+      "title": "Bleach",
+      "views": 59775,
+      "revenue": 1195.5
+    },
+    {
+      "date": "2025-02-06",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 224410,
+      "revenue": 4488.2
+    },
+    {
+      "date": "2025-02-06",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 137212,
+      "revenue": 2744.2400000000002
+    },
+    {
+      "date": "2025-02-06",
+      "title": "Great Teacher Onizuka",
+      "views": 40498,
+      "revenue": 809.96
+    },
+    {
+      "date": "2025-02-06",
+      "title": "Kingdom",
+      "views": 48111,
+      "revenue": 962.22
+    },
+    {
+      "date": "2025-02-06",
+      "title": "Naruto",
+      "views": 43080,
+      "revenue": 861.6
+    },
+    {
+      "date": "2025-02-06",
+      "title": "Naruto: Shippuuden",
+      "views": 54001,
+      "revenue": 1080.02
+    },
+    {
+      "date": "2025-02-06",
+      "title": "Tokyo Ghoul",
+      "views": 43538,
+      "revenue": 870.76
+    },
+    {
+      "date": "2025-02-06",
+      "title": "Yu Yu Hakusho",
+      "views": 44949,
+      "revenue": 898.98
+    },
+    {
+      "date": "2025-02-07",
+      "title": "Black Clover",
+      "views": 56052,
+      "revenue": 1121.04
+    },
+    {
+      "date": "2025-02-07",
+      "title": "Bleach",
+      "views": 45607,
+      "revenue": 912.14
+    },
+    {
+      "date": "2025-02-07",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 166885,
+      "revenue": 3337.7000000000003
+    },
+    {
+      "date": "2025-02-07",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 143794,
+      "revenue": 2875.88
+    },
+    {
+      "date": "2025-02-07",
+      "title": "Great Teacher Onizuka",
+      "views": 47529,
+      "revenue": 950.58
+    },
+    {
+      "date": "2025-02-07",
+      "title": "Kingdom",
+      "views": 47969,
+      "revenue": 959.38
+    },
+    {
+      "date": "2025-02-07",
+      "title": "Naruto",
+      "views": 54110,
+      "revenue": 1082.2
+    },
+    {
+      "date": "2025-02-07",
+      "title": "Naruto: Shippuuden",
+      "views": 59270,
+      "revenue": 1185.4
+    },
+    {
+      "date": "2025-02-07",
+      "title": "Tokyo Ghoul",
+      "views": 55560,
+      "revenue": 1111.2
+    },
+    {
+      "date": "2025-02-07",
+      "title": "Yu Yu Hakusho",
+      "views": 47913,
+      "revenue": 958.26
+    },
+    {
+      "date": "2025-02-08",
+      "title": "Black Clover",
+      "views": 58949,
+      "revenue": 1178.98
+    },
+    {
+      "date": "2025-02-08",
+      "title": "Bleach",
+      "views": 46533,
+      "revenue": 930.66
+    },
+    {
+      "date": "2025-02-08",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 163908,
+      "revenue": 3278.16
+    },
+    {
+      "date": "2025-02-08",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 148299,
+      "revenue": 2965.98
+    },
+    {
+      "date": "2025-02-08",
+      "title": "Great Teacher Onizuka",
+      "views": 44166,
+      "revenue": 883.32
+    },
+    {
+      "date": "2025-02-08",
+      "title": "Kingdom",
+      "views": 56435,
+      "revenue": 1128.7
+    },
+    {
+      "date": "2025-02-08",
+      "title": "Naruto",
+      "views": 57855,
+      "revenue": 1157.1000000000001
+    },
+    {
+      "date": "2025-02-08",
+      "title": "Naruto: Shippuuden",
+      "views": 47523,
+      "revenue": 950.46
+    },
+    {
+      "date": "2025-02-08",
+      "title": "Tokyo Ghoul",
+      "views": 49039,
+      "revenue": 980.78
+    },
+    {
+      "date": "2025-02-08",
+      "title": "Yu Yu Hakusho",
+      "views": 42088,
+      "revenue": 841.76
+    },
+    {
+      "date": "2025-02-09",
+      "title": "Black Clover",
+      "views": 42986,
+      "revenue": 859.72
+    },
+    {
+      "date": "2025-02-09",
+      "title": "Bleach",
+      "views": 55104,
+      "revenue": 1102.08
+    },
+    {
+      "date": "2025-02-09",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 204157,
+      "revenue": 4083.14
+    },
+    {
+      "date": "2025-02-09",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 170393,
+      "revenue": 3407.86
+    },
+    {
+      "date": "2025-02-09",
+      "title": "Great Teacher Onizuka",
+      "views": 49170,
+      "revenue": 983.4
+    },
+    {
+      "date": "2025-02-09",
+      "title": "Kingdom",
+      "views": 45767,
+      "revenue": 915.34
+    },
+    {
+      "date": "2025-02-09",
+      "title": "Naruto",
+      "views": 53852,
+      "revenue": 1077.04
+    },
+    {
+      "date": "2025-02-09",
+      "title": "Naruto: Shippuuden",
+      "views": 59381,
+      "revenue": 1187.6200000000001
+    },
+    {
+      "date": "2025-02-09",
+      "title": "Tokyo Ghoul",
+      "views": 55081,
+      "revenue": 1101.6200000000001
+    },
+    {
+      "date": "2025-02-09",
+      "title": "Yu Yu Hakusho",
+      "views": 45587,
+      "revenue": 911.74
+    },
+    {
+      "date": "2025-02-10",
+      "title": "Black Clover",
+      "views": 56249,
+      "revenue": 1124.98
+    },
+    {
+      "date": "2025-02-10",
+      "title": "Bleach",
+      "views": 42290,
+      "revenue": 845.8000000000001
+    },
+    {
+      "date": "2025-02-10",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 223847,
+      "revenue": 4476.9400000000005
+    },
+    {
+      "date": "2025-02-10",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 175769,
+      "revenue": 3515.38
+    },
+    {
+      "date": "2025-02-10",
+      "title": "Great Teacher Onizuka",
+      "views": 49256,
+      "revenue": 985.12
+    },
+    {
+      "date": "2025-02-10",
+      "title": "Kingdom",
+      "views": 43657,
+      "revenue": 873.14
+    },
+    {
+      "date": "2025-02-10",
+      "title": "Naruto",
+      "views": 49481,
+      "revenue": 989.62
+    },
+    {
+      "date": "2025-02-10",
+      "title": "Naruto: Shippuuden",
+      "views": 59047,
+      "revenue": 1180.94
+    },
+    {
+      "date": "2025-02-10",
+      "title": "Tokyo Ghoul",
+      "views": 51752,
+      "revenue": 1035.04
+    },
+    {
+      "date": "2025-02-10",
+      "title": "Yu Yu Hakusho",
+      "views": 52691,
+      "revenue": 1053.82
+    },
+    {
+      "date": "2025-02-11",
+      "title": "Black Clover",
+      "views": 48568,
+      "revenue": 971.36
+    },
+    {
+      "date": "2025-02-11",
+      "title": "Bleach",
+      "views": 44214,
+      "revenue": 884.28
+    },
+    {
+      "date": "2025-02-11",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 192220,
+      "revenue": 3844.4
+    },
+    {
+      "date": "2025-02-11",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 148306,
+      "revenue": 2966.12
+    },
+    {
+      "date": "2025-02-11",
+      "title": "Great Teacher Onizuka",
+      "views": 51141,
+      "revenue": 1022.82
+    },
+    {
+      "date": "2025-02-11",
+      "title": "Kingdom",
+      "views": 48312,
+      "revenue": 966.24
+    },
+    {
+      "date": "2025-02-11",
+      "title": "Naruto",
+      "views": 42565,
+      "revenue": 851.3000000000001
+    },
+    {
+      "date": "2025-02-11",
+      "title": "Naruto: Shippuuden",
+      "views": 40369,
+      "revenue": 807.38
+    },
+    {
+      "date": "2025-02-11",
+      "title": "Tokyo Ghoul",
+      "views": 48586,
+      "revenue": 971.72
+    },
+    {
+      "date": "2025-02-11",
+      "title": "Yu Yu Hakusho",
+      "views": 51406,
+      "revenue": 1028.1200000000001
+    },
+    {
+      "date": "2025-02-12",
+      "title": "Black Clover",
+      "views": 51969,
+      "revenue": 1039.38
+    },
+    {
+      "date": "2025-02-12",
+      "title": "Bleach",
+      "views": 44094,
+      "revenue": 881.88
+    },
+    {
+      "date": "2025-02-12",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 201695,
+      "revenue": 4033.9
+    },
+    {
+      "date": "2025-02-12",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 161528,
+      "revenue": 3230.56
+    },
+    {
+      "date": "2025-02-12",
+      "title": "Great Teacher Onizuka",
+      "views": 43912,
+      "revenue": 878.24
+    },
+    {
+      "date": "2025-02-12",
+      "title": "Kingdom",
+      "views": 55568,
+      "revenue": 1111.3600000000001
+    },
+    {
+      "date": "2025-02-12",
+      "title": "Naruto",
+      "views": 43506,
+      "revenue": 870.12
+    },
+    {
+      "date": "2025-02-12",
+      "title": "Naruto: Shippuuden",
+      "views": 49339,
+      "revenue": 986.78
+    },
+    {
+      "date": "2025-02-12",
+      "title": "Tokyo Ghoul",
+      "views": 50224,
+      "revenue": 1004.48
+    },
+    {
+      "date": "2025-02-12",
+      "title": "Yu Yu Hakusho",
+      "views": 42586,
+      "revenue": 851.72
+    },
+    {
+      "date": "2025-02-13",
+      "title": "Black Clover",
+      "views": 49026,
+      "revenue": 980.52
+    },
+    {
+      "date": "2025-02-13",
+      "title": "Bleach",
+      "views": 49014,
+      "revenue": 980.28
+    },
+    {
+      "date": "2025-02-13",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 239833,
+      "revenue": 4796.66
+    },
+    {
+      "date": "2025-02-13",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 137166,
+      "revenue": 2743.32
+    },
+    {
+      "date": "2025-02-13",
+      "title": "Great Teacher Onizuka",
+      "views": 51058,
+      "revenue": 1021.16
+    },
+    {
+      "date": "2025-02-13",
+      "title": "Kingdom",
+      "views": 52591,
+      "revenue": 1051.82
+    },
+    {
+      "date": "2025-02-13",
+      "title": "Naruto",
+      "views": 44192,
+      "revenue": 883.84
+    },
+    {
+      "date": "2025-02-13",
+      "title": "Naruto: Shippuuden",
+      "views": 59307,
+      "revenue": 1186.14
+    },
+    {
+      "date": "2025-02-13",
+      "title": "Tokyo Ghoul",
+      "views": 46026,
+      "revenue": 920.52
+    },
+    {
+      "date": "2025-02-13",
+      "title": "Yu Yu Hakusho",
+      "views": 43595,
+      "revenue": 871.9
+    },
+    {
+      "date": "2025-02-14",
+      "title": "Black Clover",
+      "views": 55208,
+      "revenue": 1104.16
+    },
+    {
+      "date": "2025-02-14",
+      "title": "Bleach",
+      "views": 43025,
+      "revenue": 860.5
+    },
+    {
+      "date": "2025-02-14",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 162059,
+      "revenue": 3241.1800000000003
+    },
+    {
+      "date": "2025-02-14",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 155589,
+      "revenue": 3111.78
+    },
+    {
+      "date": "2025-02-14",
+      "title": "Great Teacher Onizuka",
+      "views": 43915,
+      "revenue": 878.3000000000001
+    },
+    {
+      "date": "2025-02-14",
+      "title": "Kingdom",
+      "views": 58477,
+      "revenue": 1169.54
+    },
+    {
+      "date": "2025-02-14",
+      "title": "Naruto",
+      "views": 48754,
+      "revenue": 975.08
+    },
+    {
+      "date": "2025-02-14",
+      "title": "Naruto: Shippuuden",
+      "views": 49582,
+      "revenue": 991.64
+    },
+    {
+      "date": "2025-02-14",
+      "title": "Tokyo Ghoul",
+      "views": 49598,
+      "revenue": 991.96
+    },
+    {
+      "date": "2025-02-14",
+      "title": "Yu Yu Hakusho",
+      "views": 56658,
+      "revenue": 1133.16
+    },
+    {
+      "date": "2025-02-15",
+      "title": "Black Clover",
+      "views": 47236,
+      "revenue": 944.72
+    },
+    {
+      "date": "2025-02-15",
+      "title": "Bleach",
+      "views": 50956,
+      "revenue": 1019.12
+    },
+    {
+      "date": "2025-02-15",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 207468,
+      "revenue": 4149.36
+    },
+    {
+      "date": "2025-02-15",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 149334,
+      "revenue": 2986.68
+    },
+    {
+      "date": "2025-02-15",
+      "title": "Great Teacher Onizuka",
+      "views": 46988,
+      "revenue": 939.76
+    },
+    {
+      "date": "2025-02-15",
+      "title": "Kingdom",
+      "views": 58755,
+      "revenue": 1175.1000000000001
+    },
+    {
+      "date": "2025-02-15",
+      "title": "Naruto",
+      "views": 40033,
+      "revenue": 800.66
+    },
+    {
+      "date": "2025-02-15",
+      "title": "Naruto: Shippuuden",
+      "views": 53408,
+      "revenue": 1068.16
+    },
+    {
+      "date": "2025-02-15",
+      "title": "Tokyo Ghoul",
+      "views": 43284,
+      "revenue": 865.6800000000001
+    },
+    {
+      "date": "2025-02-15",
+      "title": "Yu Yu Hakusho",
+      "views": 41383,
+      "revenue": 827.66
+    },
+    {
+      "date": "2025-02-16",
+      "title": "Black Clover",
+      "views": 52573,
+      "revenue": 1051.46
+    },
+    {
+      "date": "2025-02-16",
+      "title": "Bleach",
+      "views": 42925,
+      "revenue": 858.5
+    },
+    {
+      "date": "2025-02-16",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 183554,
+      "revenue": 3671.08
+    },
+    {
+      "date": "2025-02-16",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 143423,
+      "revenue": 2868.46
+    },
+    {
+      "date": "2025-02-16",
+      "title": "Great Teacher Onizuka",
+      "views": 44278,
+      "revenue": 885.5600000000001
+    },
+    {
+      "date": "2025-02-16",
+      "title": "Kingdom",
+      "views": 57054,
+      "revenue": 1141.08
+    },
+    {
+      "date": "2025-02-16",
+      "title": "Naruto",
+      "views": 45698,
+      "revenue": 913.96
+    },
+    {
+      "date": "2025-02-16",
+      "title": "Naruto: Shippuuden",
+      "views": 44594,
+      "revenue": 891.88
+    },
+    {
+      "date": "2025-02-16",
+      "title": "Tokyo Ghoul",
+      "views": 47572,
+      "revenue": 951.44
+    },
+    {
+      "date": "2025-02-16",
+      "title": "Yu Yu Hakusho",
+      "views": 57006,
+      "revenue": 1140.1200000000001
+    },
+    {
+      "date": "2025-02-17",
+      "title": "Black Clover",
+      "views": 56871,
+      "revenue": 1137.42
+    },
+    {
+      "date": "2025-02-17",
+      "title": "Bleach",
+      "views": 52103,
+      "revenue": 1042.06
+    },
+    {
+      "date": "2025-02-17",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 197437,
+      "revenue": 3948.7400000000002
+    },
+    {
+      "date": "2025-02-17",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 139244,
+      "revenue": 2784.88
+    },
+    {
+      "date": "2025-02-17",
+      "title": "Great Teacher Onizuka",
+      "views": 45765,
+      "revenue": 915.3000000000001
+    },
+    {
+      "date": "2025-02-17",
+      "title": "Kingdom",
+      "views": 56221,
+      "revenue": 1124.42
+    },
+    {
+      "date": "2025-02-17",
+      "title": "Naruto",
+      "views": 57949,
+      "revenue": 1158.98
+    },
+    {
+      "date": "2025-02-17",
+      "title": "Naruto: Shippuuden",
+      "views": 48431,
+      "revenue": 968.62
+    },
+    {
+      "date": "2025-02-17",
+      "title": "Tokyo Ghoul",
+      "views": 58372,
+      "revenue": 1167.44
+    },
+    {
+      "date": "2025-02-17",
+      "title": "Yu Yu Hakusho",
+      "views": 47597,
+      "revenue": 951.94
+    },
+    {
+      "date": "2025-02-18",
+      "title": "Black Clover",
+      "views": 42788,
+      "revenue": 855.76
+    },
+    {
+      "date": "2025-02-18",
+      "title": "Bleach",
+      "views": 47163,
+      "revenue": 943.26
+    },
+    {
+      "date": "2025-02-18",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 234977,
+      "revenue": 4699.54
+    },
+    {
+      "date": "2025-02-18",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 159512,
+      "revenue": 3190.2400000000002
+    },
+    {
+      "date": "2025-02-18",
+      "title": "Great Teacher Onizuka",
+      "views": 40955,
+      "revenue": 819.1
+    },
+    {
+      "date": "2025-02-18",
+      "title": "Kingdom",
+      "views": 51078,
+      "revenue": 1021.5600000000001
+    },
+    {
+      "date": "2025-02-18",
+      "title": "Naruto",
+      "views": 44984,
+      "revenue": 899.6800000000001
+    },
+    {
+      "date": "2025-02-18",
+      "title": "Naruto: Shippuuden",
+      "views": 58257,
+      "revenue": 1165.14
+    },
+    {
+      "date": "2025-02-18",
+      "title": "Tokyo Ghoul",
+      "views": 59591,
+      "revenue": 1191.82
+    },
+    {
+      "date": "2025-02-18",
+      "title": "Yu Yu Hakusho",
+      "views": 44108,
+      "revenue": 882.16
+    },
+    {
+      "date": "2025-02-19",
+      "title": "Black Clover",
+      "views": 45186,
+      "revenue": 903.72
+    },
+    {
+      "date": "2025-02-19",
+      "title": "Bleach",
+      "views": 51358,
+      "revenue": 1027.16
+    },
+    {
+      "date": "2025-02-19",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 204029,
+      "revenue": 4080.58
+    },
+    {
+      "date": "2025-02-19",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 120849,
+      "revenue": 2416.98
+    },
+    {
+      "date": "2025-02-19",
+      "title": "Great Teacher Onizuka",
+      "views": 43864,
+      "revenue": 877.28
+    },
+    {
+      "date": "2025-02-19",
+      "title": "Kingdom",
+      "views": 48453,
+      "revenue": 969.0600000000001
+    },
+    {
+      "date": "2025-02-19",
+      "title": "Naruto",
+      "views": 46181,
+      "revenue": 923.62
+    },
+    {
+      "date": "2025-02-19",
+      "title": "Naruto: Shippuuden",
+      "views": 47676,
+      "revenue": 953.52
+    },
+    {
+      "date": "2025-02-19",
+      "title": "Tokyo Ghoul",
+      "views": 45433,
+      "revenue": 908.66
+    },
+    {
+      "date": "2025-02-19",
+      "title": "Yu Yu Hakusho",
+      "views": 56870,
+      "revenue": 1137.4
+    },
+    {
+      "date": "2025-02-20",
+      "title": "Black Clover",
+      "views": 47266,
+      "revenue": 945.32
+    },
+    {
+      "date": "2025-02-20",
+      "title": "Bleach",
+      "views": 49883,
+      "revenue": 997.66
+    },
+    {
+      "date": "2025-02-20",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 215719,
+      "revenue": 4314.38
+    },
+    {
+      "date": "2025-02-20",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 128591,
+      "revenue": 2571.82
+    },
+    {
+      "date": "2025-02-20",
+      "title": "Great Teacher Onizuka",
+      "views": 52267,
+      "revenue": 1045.34
+    },
+    {
+      "date": "2025-02-20",
+      "title": "Kingdom",
+      "views": 41917,
+      "revenue": 838.34
+    },
+    {
+      "date": "2025-02-20",
+      "title": "Naruto",
+      "views": 52422,
+      "revenue": 1048.44
+    },
+    {
+      "date": "2025-02-20",
+      "title": "Naruto: Shippuuden",
+      "views": 42527,
+      "revenue": 850.54
+    },
+    {
+      "date": "2025-02-20",
+      "title": "Tokyo Ghoul",
+      "views": 48738,
+      "revenue": 974.76
+    },
+    {
+      "date": "2025-02-20",
+      "title": "Yu Yu Hakusho",
+      "views": 45221,
+      "revenue": 904.4200000000001
+    },
+    {
+      "date": "2025-02-21",
+      "title": "Black Clover",
+      "views": 45998,
+      "revenue": 919.96
+    },
+    {
+      "date": "2025-02-21",
+      "title": "Bleach",
+      "views": 51748,
+      "revenue": 1034.96
+    },
+    {
+      "date": "2025-02-21",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 206358,
+      "revenue": 4127.16
+    },
+    {
+      "date": "2025-02-21",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 137564,
+      "revenue": 2751.28
+    },
+    {
+      "date": "2025-02-21",
+      "title": "Great Teacher Onizuka",
+      "views": 47839,
+      "revenue": 956.78
+    },
+    {
+      "date": "2025-02-21",
+      "title": "Kingdom",
+      "views": 52126,
+      "revenue": 1042.52
+    },
+    {
+      "date": "2025-02-21",
+      "title": "Naruto",
+      "views": 44017,
+      "revenue": 880.34
+    },
+    {
+      "date": "2025-02-21",
+      "title": "Naruto: Shippuuden",
+      "views": 47595,
+      "revenue": 951.9
+    },
+    {
+      "date": "2025-02-21",
+      "title": "Tokyo Ghoul",
+      "views": 54287,
+      "revenue": 1085.74
+    },
+    {
+      "date": "2025-02-21",
+      "title": "Yu Yu Hakusho",
+      "views": 53236,
+      "revenue": 1064.72
+    },
+    {
+      "date": "2025-02-22",
+      "title": "Black Clover",
+      "views": 43922,
+      "revenue": 878.44
+    },
+    {
+      "date": "2025-02-22",
+      "title": "Bleach",
+      "views": 43546,
+      "revenue": 870.9200000000001
+    },
+    {
+      "date": "2025-02-22",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 201795,
+      "revenue": 4035.9
+    },
+    {
+      "date": "2025-02-22",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 161383,
+      "revenue": 3227.66
+    },
+    {
+      "date": "2025-02-22",
+      "title": "Great Teacher Onizuka",
+      "views": 50729,
+      "revenue": 1014.58
+    },
+    {
+      "date": "2025-02-22",
+      "title": "Kingdom",
+      "views": 43923,
+      "revenue": 878.46
+    },
+    {
+      "date": "2025-02-22",
+      "title": "Naruto",
+      "views": 47493,
+      "revenue": 949.86
+    },
+    {
+      "date": "2025-02-22",
+      "title": "Naruto: Shippuuden",
+      "views": 57177,
+      "revenue": 1143.54
+    },
+    {
+      "date": "2025-02-22",
+      "title": "Tokyo Ghoul",
+      "views": 40323,
+      "revenue": 806.46
+    },
+    {
+      "date": "2025-02-22",
+      "title": "Yu Yu Hakusho",
+      "views": 58261,
+      "revenue": 1165.22
+    },
+    {
+      "date": "2025-02-23",
+      "title": "Black Clover",
+      "views": 52300,
+      "revenue": 1046
+    },
+    {
+      "date": "2025-02-23",
+      "title": "Bleach",
+      "views": 45210,
+      "revenue": 904.2
+    },
+    {
+      "date": "2025-02-23",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 186741,
+      "revenue": 3734.82
+    },
+    {
+      "date": "2025-02-23",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 149648,
+      "revenue": 2992.96
+    },
+    {
+      "date": "2025-02-23",
+      "title": "Great Teacher Onizuka",
+      "views": 53645,
+      "revenue": 1072.9
+    },
+    {
+      "date": "2025-02-23",
+      "title": "Kingdom",
+      "views": 48642,
+      "revenue": 972.84
+    },
+    {
+      "date": "2025-02-23",
+      "title": "Naruto",
+      "views": 54559,
+      "revenue": 1091.18
+    },
+    {
+      "date": "2025-02-23",
+      "title": "Naruto: Shippuuden",
+      "views": 50045,
+      "revenue": 1000.9
+    },
+    {
+      "date": "2025-02-23",
+      "title": "Tokyo Ghoul",
+      "views": 55824,
+      "revenue": 1116.48
+    },
+    {
+      "date": "2025-02-23",
+      "title": "Yu Yu Hakusho",
+      "views": 40472,
+      "revenue": 809.44
+    },
+    {
+      "date": "2025-02-24",
+      "title": "Black Clover",
+      "views": 47716,
+      "revenue": 954.32
+    },
+    {
+      "date": "2025-02-24",
+      "title": "Bleach",
+      "views": 54214,
+      "revenue": 1084.28
+    },
+    {
+      "date": "2025-02-24",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 223732,
+      "revenue": 4474.64
+    },
+    {
+      "date": "2025-02-24",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 177573,
+      "revenue": 3551.46
+    },
+    {
+      "date": "2025-02-24",
+      "title": "Great Teacher Onizuka",
+      "views": 58347,
+      "revenue": 1166.94
+    },
+    {
+      "date": "2025-02-24",
+      "title": "Kingdom",
+      "views": 41609,
+      "revenue": 832.1800000000001
+    },
+    {
+      "date": "2025-02-24",
+      "title": "Naruto",
+      "views": 56150,
+      "revenue": 1123
+    },
+    {
+      "date": "2025-02-24",
+      "title": "Naruto: Shippuuden",
+      "views": 41344,
+      "revenue": 826.88
+    },
+    {
+      "date": "2025-02-24",
+      "title": "Tokyo Ghoul",
+      "views": 40851,
+      "revenue": 817.02
+    },
+    {
+      "date": "2025-02-24",
+      "title": "Yu Yu Hakusho",
+      "views": 54337,
+      "revenue": 1086.74
+    },
+    {
+      "date": "2025-02-25",
+      "title": "Black Clover",
+      "views": 57121,
+      "revenue": 1142.42
+    },
+    {
+      "date": "2025-02-25",
+      "title": "Bleach",
+      "views": 48449,
+      "revenue": 968.98
+    },
+    {
+      "date": "2025-02-25",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 166488,
+      "revenue": 3329.76
+    },
+    {
+      "date": "2025-02-25",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 175861,
+      "revenue": 3517.2200000000003
+    },
+    {
+      "date": "2025-02-25",
+      "title": "Great Teacher Onizuka",
+      "views": 48451,
+      "revenue": 969.02
+    },
+    {
+      "date": "2025-02-25",
+      "title": "Kingdom",
+      "views": 47482,
+      "revenue": 949.64
+    },
+    {
+      "date": "2025-02-25",
+      "title": "Naruto",
+      "views": 41870,
+      "revenue": 837.4
+    },
+    {
+      "date": "2025-02-25",
+      "title": "Naruto: Shippuuden",
+      "views": 42299,
+      "revenue": 845.98
+    },
+    {
+      "date": "2025-02-25",
+      "title": "Tokyo Ghoul",
+      "views": 47505,
+      "revenue": 950.1
+    },
+    {
+      "date": "2025-02-25",
+      "title": "Yu Yu Hakusho",
+      "views": 50678,
+      "revenue": 1013.5600000000001
+    },
+    {
+      "date": "2025-02-26",
+      "title": "Black Clover",
+      "views": 57292,
+      "revenue": 1145.84
+    },
+    {
+      "date": "2025-02-26",
+      "title": "Bleach",
+      "views": 40363,
+      "revenue": 807.26
+    },
+    {
+      "date": "2025-02-26",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 195738,
+      "revenue": 3914.76
+    },
+    {
+      "date": "2025-02-26",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 130979,
+      "revenue": 2619.58
+    },
+    {
+      "date": "2025-02-26",
+      "title": "Great Teacher Onizuka",
+      "views": 59980,
+      "revenue": 1199.6000000000001
+    },
+    {
+      "date": "2025-02-26",
+      "title": "Kingdom",
+      "views": 49470,
+      "revenue": 989.4
+    },
+    {
+      "date": "2025-02-26",
+      "title": "Naruto",
+      "views": 59010,
+      "revenue": 1180.2
+    },
+    {
+      "date": "2025-02-26",
+      "title": "Naruto: Shippuuden",
+      "views": 51278,
+      "revenue": 1025.56
+    },
+    {
+      "date": "2025-02-26",
+      "title": "Tokyo Ghoul",
+      "views": 57908,
+      "revenue": 1158.16
+    },
+    {
+      "date": "2025-02-26",
+      "title": "Yu Yu Hakusho",
+      "views": 48522,
+      "revenue": 970.44
+    },
+    {
+      "date": "2025-02-27",
+      "title": "Black Clover",
+      "views": 53412,
+      "revenue": 1068.24
+    },
+    {
+      "date": "2025-02-27",
+      "title": "Bleach",
+      "views": 59227,
+      "revenue": 1184.54
+    },
+    {
+      "date": "2025-02-27",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 204741,
+      "revenue": 4094.82
+    },
+    {
+      "date": "2025-02-27",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 127204,
+      "revenue": 2544.08
+    },
+    {
+      "date": "2025-02-27",
+      "title": "Great Teacher Onizuka",
+      "views": 59970,
+      "revenue": 1199.4
+    },
+    {
+      "date": "2025-02-27",
+      "title": "Kingdom",
+      "views": 55547,
+      "revenue": 1110.94
+    },
+    {
+      "date": "2025-02-27",
+      "title": "Naruto",
+      "views": 44547,
+      "revenue": 890.94
+    },
+    {
+      "date": "2025-02-27",
+      "title": "Naruto: Shippuuden",
+      "views": 58400,
+      "revenue": 1168
+    },
+    {
+      "date": "2025-02-27",
+      "title": "Tokyo Ghoul",
+      "views": 46711,
+      "revenue": 934.22
+    },
+    {
+      "date": "2025-02-27",
+      "title": "Yu Yu Hakusho",
+      "views": 54195,
+      "revenue": 1083.9
+    },
+    {
+      "date": "2025-02-28",
+      "title": "Black Clover",
+      "views": 55056,
+      "revenue": 1101.1200000000001
+    },
+    {
+      "date": "2025-02-28",
+      "title": "Bleach",
+      "views": 57160,
+      "revenue": 1143.2
+    },
+    {
+      "date": "2025-02-28",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 217664,
+      "revenue": 4353.28
+    },
+    {
+      "date": "2025-02-28",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 130886,
+      "revenue": 2617.7200000000003
+    },
+    {
+      "date": "2025-02-28",
+      "title": "Great Teacher Onizuka",
+      "views": 44170,
+      "revenue": 883.4
+    },
+    {
+      "date": "2025-02-28",
+      "title": "Kingdom",
+      "views": 44713,
+      "revenue": 894.26
+    },
+    {
+      "date": "2025-02-28",
+      "title": "Naruto",
+      "views": 52852,
+      "revenue": 1057.04
+    },
+    {
+      "date": "2025-02-28",
+      "title": "Naruto: Shippuuden",
+      "views": 47172,
+      "revenue": 943.44
+    },
+    {
+      "date": "2025-02-28",
+      "title": "Tokyo Ghoul",
+      "views": 42420,
+      "revenue": 848.4
+    },
+    {
+      "date": "2025-02-28",
+      "title": "Yu Yu Hakusho",
+      "views": 49930,
+      "revenue": 998.6
+    },
+    {
+      "date": "2025-03-01",
+      "title": "Black Clover",
+      "views": 44244,
+      "revenue": 884.88
+    },
+    {
+      "date": "2025-03-01",
+      "title": "Bleach",
+      "views": 56488,
+      "revenue": 1129.76
+    },
+    {
+      "date": "2025-03-01",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 216865,
+      "revenue": 4337.3
+    },
+    {
+      "date": "2025-03-01",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 145694,
+      "revenue": 2913.88
+    },
+    {
+      "date": "2025-03-01",
+      "title": "Great Teacher Onizuka",
+      "views": 40533,
+      "revenue": 810.66
+    },
+    {
+      "date": "2025-03-01",
+      "title": "Kingdom",
+      "views": 40011,
+      "revenue": 800.22
+    },
+    {
+      "date": "2025-03-01",
+      "title": "Naruto",
+      "views": 47006,
+      "revenue": 940.12
+    },
+    {
+      "date": "2025-03-01",
+      "title": "Naruto: Shippuuden",
+      "views": 55566,
+      "revenue": 1111.32
+    },
+    {
+      "date": "2025-03-01",
+      "title": "Tokyo Ghoul",
+      "views": 57451,
+      "revenue": 1149.02
+    },
+    {
+      "date": "2025-03-01",
+      "title": "Yu Yu Hakusho",
+      "views": 48216,
+      "revenue": 964.32
+    },
+    {
+      "date": "2025-03-02",
+      "title": "Black Clover",
+      "views": 59765,
+      "revenue": 1195.3
+    },
+    {
+      "date": "2025-03-02",
+      "title": "Bleach",
+      "views": 44696,
+      "revenue": 893.9200000000001
+    },
+    {
+      "date": "2025-03-02",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 200069,
+      "revenue": 4001.38
+    },
+    {
+      "date": "2025-03-02",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 157917,
+      "revenue": 3158.34
+    },
+    {
+      "date": "2025-03-02",
+      "title": "Great Teacher Onizuka",
+      "views": 40974,
+      "revenue": 819.48
+    },
+    {
+      "date": "2025-03-02",
+      "title": "Kingdom",
+      "views": 50772,
+      "revenue": 1015.44
+    },
+    {
+      "date": "2025-03-02",
+      "title": "Naruto",
+      "views": 56294,
+      "revenue": 1125.88
+    },
+    {
+      "date": "2025-03-02",
+      "title": "Naruto: Shippuuden",
+      "views": 49994,
+      "revenue": 999.88
+    },
+    {
+      "date": "2025-03-02",
+      "title": "Tokyo Ghoul",
+      "views": 48492,
+      "revenue": 969.84
+    },
+    {
+      "date": "2025-03-02",
+      "title": "Yu Yu Hakusho",
+      "views": 45280,
+      "revenue": 905.6
+    },
+    {
+      "date": "2025-03-03",
+      "title": "Black Clover",
+      "views": 50671,
+      "revenue": 1013.4200000000001
+    },
+    {
+      "date": "2025-03-03",
+      "title": "Bleach",
+      "views": 41621,
+      "revenue": 832.4200000000001
+    },
+    {
+      "date": "2025-03-03",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 227136,
+      "revenue": 4542.72
+    },
+    {
+      "date": "2025-03-03",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 127087,
+      "revenue": 2541.7400000000002
+    },
+    {
+      "date": "2025-03-03",
+      "title": "Great Teacher Onizuka",
+      "views": 47732,
+      "revenue": 954.64
+    },
+    {
+      "date": "2025-03-03",
+      "title": "Kingdom",
+      "views": 51612,
+      "revenue": 1032.24
+    },
+    {
+      "date": "2025-03-03",
+      "title": "Naruto",
+      "views": 59001,
+      "revenue": 1180.02
+    },
+    {
+      "date": "2025-03-03",
+      "title": "Naruto: Shippuuden",
+      "views": 48144,
+      "revenue": 962.88
+    },
+    {
+      "date": "2025-03-03",
+      "title": "Tokyo Ghoul",
+      "views": 58343,
+      "revenue": 1166.8600000000001
+    },
+    {
+      "date": "2025-03-03",
+      "title": "Yu Yu Hakusho",
+      "views": 52152,
+      "revenue": 1043.04
+    },
+    {
+      "date": "2025-03-04",
+      "title": "Black Clover",
+      "views": 42172,
+      "revenue": 843.44
+    },
+    {
+      "date": "2025-03-04",
+      "title": "Bleach",
+      "views": 41734,
+      "revenue": 834.6800000000001
+    },
+    {
+      "date": "2025-03-04",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 189810,
+      "revenue": 3796.2000000000003
+    },
+    {
+      "date": "2025-03-04",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 127946,
+      "revenue": 2558.92
+    },
+    {
+      "date": "2025-03-04",
+      "title": "Great Teacher Onizuka",
+      "views": 41979,
+      "revenue": 839.58
+    },
+    {
+      "date": "2025-03-04",
+      "title": "Kingdom",
+      "views": 49074,
+      "revenue": 981.48
+    },
+    {
+      "date": "2025-03-04",
+      "title": "Naruto",
+      "views": 47043,
+      "revenue": 940.86
+    },
+    {
+      "date": "2025-03-04",
+      "title": "Naruto: Shippuuden",
+      "views": 56441,
+      "revenue": 1128.82
+    },
+    {
+      "date": "2025-03-04",
+      "title": "Tokyo Ghoul",
+      "views": 40927,
+      "revenue": 818.54
+    },
+    {
+      "date": "2025-03-04",
+      "title": "Yu Yu Hakusho",
+      "views": 41974,
+      "revenue": 839.48
+    },
+    {
+      "date": "2025-03-05",
+      "title": "Black Clover",
+      "views": 54648,
+      "revenue": 1092.96
+    },
+    {
+      "date": "2025-03-05",
+      "title": "Bleach",
+      "views": 49502,
+      "revenue": 990.0400000000001
+    },
+    {
+      "date": "2025-03-05",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 221174,
+      "revenue": 4423.4800000000005
+    },
+    {
+      "date": "2025-03-05",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 173240,
+      "revenue": 3464.8
+    },
+    {
+      "date": "2025-03-05",
+      "title": "Great Teacher Onizuka",
+      "views": 41809,
+      "revenue": 836.1800000000001
+    },
+    {
+      "date": "2025-03-05",
+      "title": "Kingdom",
+      "views": 52637,
+      "revenue": 1052.74
+    },
+    {
+      "date": "2025-03-05",
+      "title": "Naruto",
+      "views": 44607,
+      "revenue": 892.14
+    },
+    {
+      "date": "2025-03-05",
+      "title": "Naruto: Shippuuden",
+      "views": 44327,
+      "revenue": 886.54
+    },
+    {
+      "date": "2025-03-05",
+      "title": "Tokyo Ghoul",
+      "views": 56782,
+      "revenue": 1135.64
+    },
+    {
+      "date": "2025-03-05",
+      "title": "Yu Yu Hakusho",
+      "views": 43549,
+      "revenue": 870.98
+    },
+    {
+      "date": "2025-03-06",
+      "title": "Black Clover",
+      "views": 46796,
+      "revenue": 935.9200000000001
+    },
+    {
+      "date": "2025-03-06",
+      "title": "Bleach",
+      "views": 55841,
+      "revenue": 1116.82
+    },
+    {
+      "date": "2025-03-06",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 209308,
+      "revenue": 4186.16
+    },
+    {
+      "date": "2025-03-06",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 126788,
+      "revenue": 2535.76
+    },
+    {
+      "date": "2025-03-06",
+      "title": "Great Teacher Onizuka",
+      "views": 42200,
+      "revenue": 844
+    },
+    {
+      "date": "2025-03-06",
+      "title": "Kingdom",
+      "views": 43666,
+      "revenue": 873.32
+    },
+    {
+      "date": "2025-03-06",
+      "title": "Naruto",
+      "views": 43014,
+      "revenue": 860.28
+    },
+    {
+      "date": "2025-03-06",
+      "title": "Naruto: Shippuuden",
+      "views": 58266,
+      "revenue": 1165.32
+    },
+    {
+      "date": "2025-03-06",
+      "title": "Tokyo Ghoul",
+      "views": 50721,
+      "revenue": 1014.4200000000001
+    },
+    {
+      "date": "2025-03-06",
+      "title": "Yu Yu Hakusho",
+      "views": 52391,
+      "revenue": 1047.82
+    },
+    {
+      "date": "2025-03-07",
+      "title": "Black Clover",
+      "views": 53812,
+      "revenue": 1076.24
+    },
+    {
+      "date": "2025-03-07",
+      "title": "Bleach",
+      "views": 58415,
+      "revenue": 1168.3
+    },
+    {
+      "date": "2025-03-07",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 230955,
+      "revenue": 4619.1
+    },
+    {
+      "date": "2025-03-07",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 170576,
+      "revenue": 3411.52
+    },
+    {
+      "date": "2025-03-07",
+      "title": "Great Teacher Onizuka",
+      "views": 41517,
+      "revenue": 830.34
+    },
+    {
+      "date": "2025-03-07",
+      "title": "Kingdom",
+      "views": 47073,
+      "revenue": 941.46
+    },
+    {
+      "date": "2025-03-07",
+      "title": "Naruto",
+      "views": 41111,
+      "revenue": 822.22
+    },
+    {
+      "date": "2025-03-07",
+      "title": "Naruto: Shippuuden",
+      "views": 45672,
+      "revenue": 913.44
+    },
+    {
+      "date": "2025-03-07",
+      "title": "Tokyo Ghoul",
+      "views": 44870,
+      "revenue": 897.4
+    },
+    {
+      "date": "2025-03-07",
+      "title": "Yu Yu Hakusho",
+      "views": 55130,
+      "revenue": 1102.6000000000001
+    },
+    {
+      "date": "2025-03-08",
+      "title": "Black Clover",
+      "views": 43596,
+      "revenue": 871.9200000000001
+    },
+    {
+      "date": "2025-03-08",
+      "title": "Bleach",
+      "views": 47471,
+      "revenue": 949.4200000000001
+    },
+    {
+      "date": "2025-03-08",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 183074,
+      "revenue": 3661.48
+    },
+    {
+      "date": "2025-03-08",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 139336,
+      "revenue": 2786.7200000000003
+    },
+    {
+      "date": "2025-03-08",
+      "title": "Great Teacher Onizuka",
+      "views": 58099,
+      "revenue": 1161.98
+    },
+    {
+      "date": "2025-03-08",
+      "title": "Kingdom",
+      "views": 57389,
+      "revenue": 1147.78
+    },
+    {
+      "date": "2025-03-08",
+      "title": "Naruto",
+      "views": 41733,
+      "revenue": 834.66
+    },
+    {
+      "date": "2025-03-08",
+      "title": "Naruto: Shippuuden",
+      "views": 54460,
+      "revenue": 1089.2
+    },
+    {
+      "date": "2025-03-08",
+      "title": "Tokyo Ghoul",
+      "views": 42880,
+      "revenue": 857.6
+    },
+    {
+      "date": "2025-03-08",
+      "title": "Yu Yu Hakusho",
+      "views": 49883,
+      "revenue": 997.66
+    },
+    {
+      "date": "2025-03-09",
+      "title": "Black Clover",
+      "views": 44151,
+      "revenue": 883.02
+    },
+    {
+      "date": "2025-03-09",
+      "title": "Bleach",
+      "views": 54405,
+      "revenue": 1088.1
+    },
+    {
+      "date": "2025-03-09",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 197695,
+      "revenue": 3953.9
+    },
+    {
+      "date": "2025-03-09",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 122312,
+      "revenue": 2446.2400000000002
+    },
+    {
+      "date": "2025-03-09",
+      "title": "Great Teacher Onizuka",
+      "views": 51351,
+      "revenue": 1027.02
+    },
+    {
+      "date": "2025-03-09",
+      "title": "Kingdom",
+      "views": 50460,
+      "revenue": 1009.2
+    },
+    {
+      "date": "2025-03-09",
+      "title": "Naruto",
+      "views": 56053,
+      "revenue": 1121.06
+    },
+    {
+      "date": "2025-03-09",
+      "title": "Naruto: Shippuuden",
+      "views": 56162,
+      "revenue": 1123.24
+    },
+    {
+      "date": "2025-03-09",
+      "title": "Tokyo Ghoul",
+      "views": 48304,
+      "revenue": 966.08
+    },
+    {
+      "date": "2025-03-09",
+      "title": "Yu Yu Hakusho",
+      "views": 46930,
+      "revenue": 938.6
+    },
+    {
+      "date": "2025-03-10",
+      "title": "Black Clover",
+      "views": 48638,
+      "revenue": 972.76
+    },
+    {
+      "date": "2025-03-10",
+      "title": "Bleach",
+      "views": 55250,
+      "revenue": 1105
+    },
+    {
+      "date": "2025-03-10",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 220450,
+      "revenue": 4409
+    },
+    {
+      "date": "2025-03-10",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 139190,
+      "revenue": 2783.8
+    },
+    {
+      "date": "2025-03-10",
+      "title": "Great Teacher Onizuka",
+      "views": 44041,
+      "revenue": 880.82
+    },
+    {
+      "date": "2025-03-10",
+      "title": "Kingdom",
+      "views": 57445,
+      "revenue": 1148.9
+    },
+    {
+      "date": "2025-03-10",
+      "title": "Naruto",
+      "views": 46787,
+      "revenue": 935.74
+    },
+    {
+      "date": "2025-03-10",
+      "title": "Naruto: Shippuuden",
+      "views": 49108,
+      "revenue": 982.16
+    },
+    {
+      "date": "2025-03-10",
+      "title": "Tokyo Ghoul",
+      "views": 49699,
+      "revenue": 993.98
+    },
+    {
+      "date": "2025-03-10",
+      "title": "Yu Yu Hakusho",
+      "views": 45915,
+      "revenue": 918.3000000000001
+    },
+    {
+      "date": "2025-03-11",
+      "title": "Black Clover",
+      "views": 49398,
+      "revenue": 987.96
+    },
+    {
+      "date": "2025-03-11",
+      "title": "Bleach",
+      "views": 43762,
+      "revenue": 875.24
+    },
+    {
+      "date": "2025-03-11",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 214033,
+      "revenue": 4280.66
+    },
+    {
+      "date": "2025-03-11",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 136492,
+      "revenue": 2729.84
+    },
+    {
+      "date": "2025-03-11",
+      "title": "Great Teacher Onizuka",
+      "views": 45734,
+      "revenue": 914.6800000000001
+    },
+    {
+      "date": "2025-03-11",
+      "title": "Kingdom",
+      "views": 42297,
+      "revenue": 845.94
+    },
+    {
+      "date": "2025-03-11",
+      "title": "Naruto",
+      "views": 58145,
+      "revenue": 1162.9
+    },
+    {
+      "date": "2025-03-11",
+      "title": "Naruto: Shippuuden",
+      "views": 55733,
+      "revenue": 1114.66
+    },
+    {
+      "date": "2025-03-11",
+      "title": "Tokyo Ghoul",
+      "views": 41207,
+      "revenue": 824.14
+    },
+    {
+      "date": "2025-03-11",
+      "title": "Yu Yu Hakusho",
+      "views": 49675,
+      "revenue": 993.5
+    },
+    {
+      "date": "2025-03-12",
+      "title": "Black Clover",
+      "views": 54385,
+      "revenue": 1087.7
+    },
+    {
+      "date": "2025-03-12",
+      "title": "Bleach",
+      "views": 40720,
+      "revenue": 814.4
+    },
+    {
+      "date": "2025-03-12",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 173447,
+      "revenue": 3468.94
+    },
+    {
+      "date": "2025-03-12",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 145225,
+      "revenue": 2904.5
+    },
+    {
+      "date": "2025-03-12",
+      "title": "Great Teacher Onizuka",
+      "views": 49436,
+      "revenue": 988.72
+    },
+    {
+      "date": "2025-03-12",
+      "title": "Kingdom",
+      "views": 54541,
+      "revenue": 1090.82
+    },
+    {
+      "date": "2025-03-12",
+      "title": "Naruto",
+      "views": 43821,
+      "revenue": 876.4200000000001
+    },
+    {
+      "date": "2025-03-12",
+      "title": "Naruto: Shippuuden",
+      "views": 45718,
+      "revenue": 914.36
+    },
+    {
+      "date": "2025-03-12",
+      "title": "Tokyo Ghoul",
+      "views": 44348,
+      "revenue": 886.96
+    },
+    {
+      "date": "2025-03-12",
+      "title": "Yu Yu Hakusho",
+      "views": 57623,
+      "revenue": 1152.46
+    },
+    {
+      "date": "2025-03-13",
+      "title": "Black Clover",
+      "views": 50216,
+      "revenue": 1004.32
+    },
+    {
+      "date": "2025-03-13",
+      "title": "Bleach",
+      "views": 48751,
+      "revenue": 975.02
+    },
+    {
+      "date": "2025-03-13",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 189656,
+      "revenue": 3793.12
+    },
+    {
+      "date": "2025-03-13",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 137087,
+      "revenue": 2741.7400000000002
+    },
+    {
+      "date": "2025-03-13",
+      "title": "Great Teacher Onizuka",
+      "views": 56953,
+      "revenue": 1139.06
+    },
+    {
+      "date": "2025-03-13",
+      "title": "Kingdom",
+      "views": 48551,
+      "revenue": 971.02
+    },
+    {
+      "date": "2025-03-13",
+      "title": "Naruto",
+      "views": 48429,
+      "revenue": 968.58
+    },
+    {
+      "date": "2025-03-13",
+      "title": "Naruto: Shippuuden",
+      "views": 57774,
+      "revenue": 1155.48
+    },
+    {
+      "date": "2025-03-13",
+      "title": "Tokyo Ghoul",
+      "views": 59968,
+      "revenue": 1199.3600000000001
+    },
+    {
+      "date": "2025-03-13",
+      "title": "Yu Yu Hakusho",
+      "views": 43976,
+      "revenue": 879.52
+    },
+    {
+      "date": "2025-03-14",
+      "title": "Black Clover",
+      "views": 49088,
+      "revenue": 981.76
+    },
+    {
+      "date": "2025-03-14",
+      "title": "Bleach",
+      "views": 53755,
+      "revenue": 1075.1
+    },
+    {
+      "date": "2025-03-14",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 169838,
+      "revenue": 3396.76
+    },
+    {
+      "date": "2025-03-14",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 128499,
+      "revenue": 2569.98
+    },
+    {
+      "date": "2025-03-14",
+      "title": "Great Teacher Onizuka",
+      "views": 57413,
+      "revenue": 1148.26
+    },
+    {
+      "date": "2025-03-14",
+      "title": "Kingdom",
+      "views": 44668,
+      "revenue": 893.36
+    },
+    {
+      "date": "2025-03-14",
+      "title": "Naruto",
+      "views": 49058,
+      "revenue": 981.16
+    },
+    {
+      "date": "2025-03-14",
+      "title": "Naruto: Shippuuden",
+      "views": 59969,
+      "revenue": 1199.38
+    },
+    {
+      "date": "2025-03-14",
+      "title": "Tokyo Ghoul",
+      "views": 53802,
+      "revenue": 1076.04
+    },
+    {
+      "date": "2025-03-14",
+      "title": "Yu Yu Hakusho",
+      "views": 45017,
+      "revenue": 900.34
+    },
+    {
+      "date": "2025-03-15",
+      "title": "Black Clover",
+      "views": 56844,
+      "revenue": 1136.88
+    },
+    {
+      "date": "2025-03-15",
+      "title": "Bleach",
+      "views": 48708,
+      "revenue": 974.16
+    },
+    {
+      "date": "2025-03-15",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 163944,
+      "revenue": 3278.88
+    },
+    {
+      "date": "2025-03-15",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 159624,
+      "revenue": 3192.48
+    },
+    {
+      "date": "2025-03-15",
+      "title": "Great Teacher Onizuka",
+      "views": 58507,
+      "revenue": 1170.14
+    },
+    {
+      "date": "2025-03-15",
+      "title": "Kingdom",
+      "views": 48633,
+      "revenue": 972.66
+    },
+    {
+      "date": "2025-03-15",
+      "title": "Naruto",
+      "views": 43612,
+      "revenue": 872.24
+    },
+    {
+      "date": "2025-03-15",
+      "title": "Naruto: Shippuuden",
+      "views": 45301,
+      "revenue": 906.02
+    },
+    {
+      "date": "2025-03-15",
+      "title": "Tokyo Ghoul",
+      "views": 50965,
+      "revenue": 1019.3000000000001
+    },
+    {
+      "date": "2025-03-15",
+      "title": "Yu Yu Hakusho",
+      "views": 47779,
+      "revenue": 955.58
+    },
+    {
+      "date": "2025-03-16",
+      "title": "Black Clover",
+      "views": 54823,
+      "revenue": 1096.46
+    },
+    {
+      "date": "2025-03-16",
+      "title": "Bleach",
+      "views": 54923,
+      "revenue": 1098.46
+    },
+    {
+      "date": "2025-03-16",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 227410,
+      "revenue": 4548.2
+    },
+    {
+      "date": "2025-03-16",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 131342,
+      "revenue": 2626.84
+    },
+    {
+      "date": "2025-03-16",
+      "title": "Great Teacher Onizuka",
+      "views": 48377,
+      "revenue": 967.54
+    },
+    {
+      "date": "2025-03-16",
+      "title": "Kingdom",
+      "views": 51566,
+      "revenue": 1031.32
+    },
+    {
+      "date": "2025-03-16",
+      "title": "Naruto",
+      "views": 54128,
+      "revenue": 1082.56
+    },
+    {
+      "date": "2025-03-16",
+      "title": "Naruto: Shippuuden",
+      "views": 41635,
+      "revenue": 832.7
+    },
+    {
+      "date": "2025-03-16",
+      "title": "Tokyo Ghoul",
+      "views": 49127,
+      "revenue": 982.54
+    },
+    {
+      "date": "2025-03-16",
+      "title": "Yu Yu Hakusho",
+      "views": 48758,
+      "revenue": 975.16
+    },
+    {
+      "date": "2025-03-17",
+      "title": "Black Clover",
+      "views": 55491,
+      "revenue": 1109.82
+    },
+    {
+      "date": "2025-03-17",
+      "title": "Bleach",
+      "views": 41032,
+      "revenue": 820.64
+    },
+    {
+      "date": "2025-03-17",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 164475,
+      "revenue": 3289.5
+    },
+    {
+      "date": "2025-03-17",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 151352,
+      "revenue": 3027.04
+    },
+    {
+      "date": "2025-03-17",
+      "title": "Great Teacher Onizuka",
+      "views": 57535,
+      "revenue": 1150.7
+    },
+    {
+      "date": "2025-03-17",
+      "title": "Kingdom",
+      "views": 49263,
+      "revenue": 985.26
+    },
+    {
+      "date": "2025-03-17",
+      "title": "Naruto",
+      "views": 54020,
+      "revenue": 1080.4
+    },
+    {
+      "date": "2025-03-17",
+      "title": "Naruto: Shippuuden",
+      "views": 59813,
+      "revenue": 1196.26
+    },
+    {
+      "date": "2025-03-17",
+      "title": "Tokyo Ghoul",
+      "views": 54483,
+      "revenue": 1089.66
+    },
+    {
+      "date": "2025-03-17",
+      "title": "Yu Yu Hakusho",
+      "views": 46805,
+      "revenue": 936.1
+    },
+    {
+      "date": "2025-03-18",
+      "title": "Black Clover",
+      "views": 45689,
+      "revenue": 913.78
+    },
+    {
+      "date": "2025-03-18",
+      "title": "Bleach",
+      "views": 47333,
+      "revenue": 946.66
+    },
+    {
+      "date": "2025-03-18",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 202246,
+      "revenue": 4044.92
+    },
+    {
+      "date": "2025-03-18",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 178725,
+      "revenue": 3574.5
+    },
+    {
+      "date": "2025-03-18",
+      "title": "Great Teacher Onizuka",
+      "views": 50841,
+      "revenue": 1016.82
+    },
+    {
+      "date": "2025-03-18",
+      "title": "Kingdom",
+      "views": 45981,
+      "revenue": 919.62
+    },
+    {
+      "date": "2025-03-18",
+      "title": "Naruto",
+      "views": 52345,
+      "revenue": 1046.9
+    },
+    {
+      "date": "2025-03-18",
+      "title": "Naruto: Shippuuden",
+      "views": 50640,
+      "revenue": 1012.8000000000001
+    },
+    {
+      "date": "2025-03-18",
+      "title": "Tokyo Ghoul",
+      "views": 57556,
+      "revenue": 1151.1200000000001
+    },
+    {
+      "date": "2025-03-18",
+      "title": "Yu Yu Hakusho",
+      "views": 43878,
+      "revenue": 877.5600000000001
+    },
+    {
+      "date": "2025-03-19",
+      "title": "Black Clover",
+      "views": 53234,
+      "revenue": 1064.68
+    },
+    {
+      "date": "2025-03-19",
+      "title": "Bleach",
+      "views": 47623,
+      "revenue": 952.46
+    },
+    {
+      "date": "2025-03-19",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 230274,
+      "revenue": 4605.4800000000005
+    },
+    {
+      "date": "2025-03-19",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 124643,
+      "revenue": 2492.86
+    },
+    {
+      "date": "2025-03-19",
+      "title": "Great Teacher Onizuka",
+      "views": 40158,
+      "revenue": 803.16
+    },
+    {
+      "date": "2025-03-19",
+      "title": "Kingdom",
+      "views": 49477,
+      "revenue": 989.5400000000001
+    },
+    {
+      "date": "2025-03-19",
+      "title": "Naruto",
+      "views": 49749,
+      "revenue": 994.98
+    },
+    {
+      "date": "2025-03-19",
+      "title": "Naruto: Shippuuden",
+      "views": 55635,
+      "revenue": 1112.7
+    },
+    {
+      "date": "2025-03-19",
+      "title": "Tokyo Ghoul",
+      "views": 40233,
+      "revenue": 804.66
+    },
+    {
+      "date": "2025-03-19",
+      "title": "Yu Yu Hakusho",
+      "views": 51475,
+      "revenue": 1029.5
+    },
+    {
+      "date": "2025-03-20",
+      "title": "Black Clover",
+      "views": 48767,
+      "revenue": 975.34
+    },
+    {
+      "date": "2025-03-20",
+      "title": "Bleach",
+      "views": 49808,
+      "revenue": 996.16
+    },
+    {
+      "date": "2025-03-20",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 190467,
+      "revenue": 3809.34
+    },
+    {
+      "date": "2025-03-20",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 172549,
+      "revenue": 3450.98
+    },
+    {
+      "date": "2025-03-20",
+      "title": "Great Teacher Onizuka",
+      "views": 50349,
+      "revenue": 1006.98
+    },
+    {
+      "date": "2025-03-20",
+      "title": "Kingdom",
+      "views": 41397,
+      "revenue": 827.94
+    },
+    {
+      "date": "2025-03-20",
+      "title": "Naruto",
+      "views": 48590,
+      "revenue": 971.8000000000001
+    },
+    {
+      "date": "2025-03-20",
+      "title": "Naruto: Shippuuden",
+      "views": 49937,
+      "revenue": 998.74
+    },
+    {
+      "date": "2025-03-20",
+      "title": "Tokyo Ghoul",
+      "views": 45256,
+      "revenue": 905.12
+    },
+    {
+      "date": "2025-03-20",
+      "title": "Yu Yu Hakusho",
+      "views": 43950,
+      "revenue": 879
+    },
+    {
+      "date": "2025-03-21",
+      "title": "Black Clover",
+      "views": 56388,
+      "revenue": 1127.76
+    },
+    {
+      "date": "2025-03-21",
+      "title": "Bleach",
+      "views": 42382,
+      "revenue": 847.64
+    },
+    {
+      "date": "2025-03-21",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 197924,
+      "revenue": 3958.48
+    },
+    {
+      "date": "2025-03-21",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 160695,
+      "revenue": 3213.9
+    },
+    {
+      "date": "2025-03-21",
+      "title": "Great Teacher Onizuka",
+      "views": 44462,
+      "revenue": 889.24
+    },
+    {
+      "date": "2025-03-21",
+      "title": "Kingdom",
+      "views": 52367,
+      "revenue": 1047.34
+    },
+    {
+      "date": "2025-03-21",
+      "title": "Naruto",
+      "views": 54094,
+      "revenue": 1081.88
+    },
+    {
+      "date": "2025-03-21",
+      "title": "Naruto: Shippuuden",
+      "views": 53245,
+      "revenue": 1064.9
+    },
+    {
+      "date": "2025-03-21",
+      "title": "Tokyo Ghoul",
+      "views": 43024,
+      "revenue": 860.48
+    },
+    {
+      "date": "2025-03-21",
+      "title": "Yu Yu Hakusho",
+      "views": 59153,
+      "revenue": 1183.06
+    },
+    {
+      "date": "2025-03-22",
+      "title": "Black Clover",
+      "views": 47182,
+      "revenue": 943.64
+    },
+    {
+      "date": "2025-03-22",
+      "title": "Bleach",
+      "views": 56776,
+      "revenue": 1135.52
+    },
+    {
+      "date": "2025-03-22",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 173902,
+      "revenue": 3478.04
+    },
+    {
+      "date": "2025-03-22",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 153304,
+      "revenue": 3066.08
+    },
+    {
+      "date": "2025-03-22",
+      "title": "Great Teacher Onizuka",
+      "views": 48061,
+      "revenue": 961.22
+    },
+    {
+      "date": "2025-03-22",
+      "title": "Kingdom",
+      "views": 58762,
+      "revenue": 1175.24
+    },
+    {
+      "date": "2025-03-22",
+      "title": "Naruto",
+      "views": 43433,
+      "revenue": 868.66
+    },
+    {
+      "date": "2025-03-22",
+      "title": "Naruto: Shippuuden",
+      "views": 42585,
+      "revenue": 851.7
+    },
+    {
+      "date": "2025-03-22",
+      "title": "Tokyo Ghoul",
+      "views": 53731,
+      "revenue": 1074.6200000000001
+    },
+    {
+      "date": "2025-03-22",
+      "title": "Yu Yu Hakusho",
+      "views": 51127,
+      "revenue": 1022.5400000000001
+    },
+    {
+      "date": "2025-03-23",
+      "title": "Black Clover",
+      "views": 42552,
+      "revenue": 851.04
+    },
+    {
+      "date": "2025-03-23",
+      "title": "Bleach",
+      "views": 43780,
+      "revenue": 875.6
+    },
+    {
+      "date": "2025-03-23",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 237236,
+      "revenue": 4744.72
+    },
+    {
+      "date": "2025-03-23",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 132071,
+      "revenue": 2641.42
+    },
+    {
+      "date": "2025-03-23",
+      "title": "Great Teacher Onizuka",
+      "views": 57185,
+      "revenue": 1143.7
+    },
+    {
+      "date": "2025-03-23",
+      "title": "Kingdom",
+      "views": 52874,
+      "revenue": 1057.48
+    },
+    {
+      "date": "2025-03-23",
+      "title": "Naruto",
+      "views": 53391,
+      "revenue": 1067.82
+    },
+    {
+      "date": "2025-03-23",
+      "title": "Naruto: Shippuuden",
+      "views": 50995,
+      "revenue": 1019.9
+    },
+    {
+      "date": "2025-03-23",
+      "title": "Tokyo Ghoul",
+      "views": 47186,
+      "revenue": 943.72
+    },
+    {
+      "date": "2025-03-23",
+      "title": "Yu Yu Hakusho",
+      "views": 58210,
+      "revenue": 1164.2
+    },
+    {
+      "date": "2025-03-24",
+      "title": "Black Clover",
+      "views": 46062,
+      "revenue": 921.24
+    },
+    {
+      "date": "2025-03-24",
+      "title": "Bleach",
+      "views": 49094,
+      "revenue": 981.88
+    },
+    {
+      "date": "2025-03-24",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 183488,
+      "revenue": 3669.76
+    },
+    {
+      "date": "2025-03-24",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 177296,
+      "revenue": 3545.92
+    },
+    {
+      "date": "2025-03-24",
+      "title": "Great Teacher Onizuka",
+      "views": 59469,
+      "revenue": 1189.38
+    },
+    {
+      "date": "2025-03-24",
+      "title": "Kingdom",
+      "views": 48218,
+      "revenue": 964.36
+    },
+    {
+      "date": "2025-03-24",
+      "title": "Naruto",
+      "views": 41851,
+      "revenue": 837.02
+    },
+    {
+      "date": "2025-03-24",
+      "title": "Naruto: Shippuuden",
+      "views": 52480,
+      "revenue": 1049.6
+    },
+    {
+      "date": "2025-03-24",
+      "title": "Tokyo Ghoul",
+      "views": 54343,
+      "revenue": 1086.8600000000001
+    },
+    {
+      "date": "2025-03-24",
+      "title": "Yu Yu Hakusho",
+      "views": 54435,
+      "revenue": 1088.7
+    },
+    {
+      "date": "2025-03-25",
+      "title": "Black Clover",
+      "views": 43083,
+      "revenue": 861.66
+    },
+    {
+      "date": "2025-03-25",
+      "title": "Bleach",
+      "views": 41636,
+      "revenue": 832.72
+    },
+    {
+      "date": "2025-03-25",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 197000,
+      "revenue": 3940
+    },
+    {
+      "date": "2025-03-25",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 151479,
+      "revenue": 3029.58
+    },
+    {
+      "date": "2025-03-25",
+      "title": "Great Teacher Onizuka",
+      "views": 52009,
+      "revenue": 1040.18
+    },
+    {
+      "date": "2025-03-25",
+      "title": "Kingdom",
+      "views": 56286,
+      "revenue": 1125.72
+    },
+    {
+      "date": "2025-03-25",
+      "title": "Naruto",
+      "views": 41860,
+      "revenue": 837.2
+    },
+    {
+      "date": "2025-03-25",
+      "title": "Naruto: Shippuuden",
+      "views": 48195,
+      "revenue": 963.9
+    },
+    {
+      "date": "2025-03-25",
+      "title": "Tokyo Ghoul",
+      "views": 44495,
+      "revenue": 889.9
+    },
+    {
+      "date": "2025-03-25",
+      "title": "Yu Yu Hakusho",
+      "views": 45746,
+      "revenue": 914.9200000000001
+    },
+    {
+      "date": "2025-03-26",
+      "title": "Black Clover",
+      "views": 42447,
+      "revenue": 848.94
+    },
+    {
+      "date": "2025-03-26",
+      "title": "Bleach",
+      "views": 50802,
+      "revenue": 1016.0400000000001
+    },
+    {
+      "date": "2025-03-26",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 207538,
+      "revenue": 4150.76
+    },
+    {
+      "date": "2025-03-26",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 122568,
+      "revenue": 2451.36
+    },
+    {
+      "date": "2025-03-26",
+      "title": "Great Teacher Onizuka",
+      "views": 57890,
+      "revenue": 1157.8
+    },
+    {
+      "date": "2025-03-26",
+      "title": "Kingdom",
+      "views": 59690,
+      "revenue": 1193.8
+    },
+    {
+      "date": "2025-03-26",
+      "title": "Naruto",
+      "views": 46684,
+      "revenue": 933.6800000000001
+    },
+    {
+      "date": "2025-03-26",
+      "title": "Naruto: Shippuuden",
+      "views": 58371,
+      "revenue": 1167.42
+    },
+    {
+      "date": "2025-03-26",
+      "title": "Tokyo Ghoul",
+      "views": 43668,
+      "revenue": 873.36
+    },
+    {
+      "date": "2025-03-26",
+      "title": "Yu Yu Hakusho",
+      "views": 46817,
+      "revenue": 936.34
+    },
+    {
+      "date": "2025-03-27",
+      "title": "Black Clover",
+      "views": 55328,
+      "revenue": 1106.56
+    },
+    {
+      "date": "2025-03-27",
+      "title": "Bleach",
+      "views": 59317,
+      "revenue": 1186.34
+    },
+    {
+      "date": "2025-03-27",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 215172,
+      "revenue": 4303.4400000000005
+    },
+    {
+      "date": "2025-03-27",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 150716,
+      "revenue": 3014.32
+    },
+    {
+      "date": "2025-03-27",
+      "title": "Great Teacher Onizuka",
+      "views": 48396,
+      "revenue": 967.9200000000001
+    },
+    {
+      "date": "2025-03-27",
+      "title": "Kingdom",
+      "views": 48613,
+      "revenue": 972.26
+    },
+    {
+      "date": "2025-03-27",
+      "title": "Naruto",
+      "views": 52084,
+      "revenue": 1041.68
+    },
+    {
+      "date": "2025-03-27",
+      "title": "Naruto: Shippuuden",
+      "views": 40543,
+      "revenue": 810.86
+    },
+    {
+      "date": "2025-03-27",
+      "title": "Tokyo Ghoul",
+      "views": 52080,
+      "revenue": 1041.6
+    },
+    {
+      "date": "2025-03-27",
+      "title": "Yu Yu Hakusho",
+      "views": 57681,
+      "revenue": 1153.6200000000001
+    },
+    {
+      "date": "2025-03-28",
+      "title": "Black Clover",
+      "views": 55255,
+      "revenue": 1105.1000000000001
+    },
+    {
+      "date": "2025-03-28",
+      "title": "Bleach",
+      "views": 49420,
+      "revenue": 988.4
+    },
+    {
+      "date": "2025-03-28",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 161408,
+      "revenue": 3228.16
+    },
+    {
+      "date": "2025-03-28",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 168820,
+      "revenue": 3376.4
+    },
+    {
+      "date": "2025-03-28",
+      "title": "Great Teacher Onizuka",
+      "views": 57691,
+      "revenue": 1153.82
+    },
+    {
+      "date": "2025-03-28",
+      "title": "Kingdom",
+      "views": 49438,
+      "revenue": 988.76
+    },
+    {
+      "date": "2025-03-28",
+      "title": "Naruto",
+      "views": 43479,
+      "revenue": 869.58
+    },
+    {
+      "date": "2025-03-28",
+      "title": "Naruto: Shippuuden",
+      "views": 51179,
+      "revenue": 1023.58
+    },
+    {
+      "date": "2025-03-28",
+      "title": "Tokyo Ghoul",
+      "views": 46175,
+      "revenue": 923.5
+    },
+    {
+      "date": "2025-03-28",
+      "title": "Yu Yu Hakusho",
+      "views": 43814,
+      "revenue": 876.28
+    },
+    {
+      "date": "2025-03-29",
+      "title": "Black Clover",
+      "views": 40339,
+      "revenue": 806.78
+    },
+    {
+      "date": "2025-03-29",
+      "title": "Bleach",
+      "views": 58688,
+      "revenue": 1173.76
+    },
+    {
+      "date": "2025-03-29",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 203683,
+      "revenue": 4073.6600000000003
+    },
+    {
+      "date": "2025-03-29",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 178256,
+      "revenue": 3565.12
+    },
+    {
+      "date": "2025-03-29",
+      "title": "Great Teacher Onizuka",
+      "views": 44088,
+      "revenue": 881.76
+    },
+    {
+      "date": "2025-03-29",
+      "title": "Kingdom",
+      "views": 48949,
+      "revenue": 978.98
+    },
+    {
+      "date": "2025-03-29",
+      "title": "Naruto",
+      "views": 46336,
+      "revenue": 926.72
+    },
+    {
+      "date": "2025-03-29",
+      "title": "Naruto: Shippuuden",
+      "views": 49062,
+      "revenue": 981.24
+    },
+    {
+      "date": "2025-03-29",
+      "title": "Tokyo Ghoul",
+      "views": 58754,
+      "revenue": 1175.08
+    },
+    {
+      "date": "2025-03-29",
+      "title": "Yu Yu Hakusho",
+      "views": 46108,
+      "revenue": 922.16
+    },
+    {
+      "date": "2025-03-30",
+      "title": "Black Clover",
+      "views": 58426,
+      "revenue": 1168.52
+    },
+    {
+      "date": "2025-03-30",
+      "title": "Bleach",
+      "views": 45640,
+      "revenue": 912.8000000000001
+    },
+    {
+      "date": "2025-03-30",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 165732,
+      "revenue": 3314.64
+    },
+    {
+      "date": "2025-03-30",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 137930,
+      "revenue": 2758.6
+    },
+    {
+      "date": "2025-03-30",
+      "title": "Great Teacher Onizuka",
+      "views": 41349,
+      "revenue": 826.98
+    },
+    {
+      "date": "2025-03-30",
+      "title": "Kingdom",
+      "views": 55926,
+      "revenue": 1118.52
+    },
+    {
+      "date": "2025-03-30",
+      "title": "Naruto",
+      "views": 55234,
+      "revenue": 1104.68
+    },
+    {
+      "date": "2025-03-30",
+      "title": "Naruto: Shippuuden",
+      "views": 47381,
+      "revenue": 947.62
+    },
+    {
+      "date": "2025-03-30",
+      "title": "Tokyo Ghoul",
+      "views": 46793,
+      "revenue": 935.86
+    },
+    {
+      "date": "2025-03-30",
+      "title": "Yu Yu Hakusho",
+      "views": 57335,
+      "revenue": 1146.7
+    },
+    {
+      "date": "2025-03-31",
+      "title": "Black Clover",
+      "views": 41108,
+      "revenue": 822.16
+    },
+    {
+      "date": "2025-03-31",
+      "title": "Bleach",
+      "views": 52467,
+      "revenue": 1049.34
+    },
+    {
+      "date": "2025-03-31",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 180910,
+      "revenue": 3618.2000000000003
+    },
+    {
+      "date": "2025-03-31",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 163645,
+      "revenue": 3272.9
+    },
+    {
+      "date": "2025-03-31",
+      "title": "Great Teacher Onizuka",
+      "views": 42026,
+      "revenue": 840.52
+    },
+    {
+      "date": "2025-03-31",
+      "title": "Kingdom",
+      "views": 49425,
+      "revenue": 988.5
+    },
+    {
+      "date": "2025-03-31",
+      "title": "Naruto",
+      "views": 42832,
+      "revenue": 856.64
+    },
+    {
+      "date": "2025-03-31",
+      "title": "Naruto: Shippuuden",
+      "views": 44256,
+      "revenue": 885.12
+    },
+    {
+      "date": "2025-03-31",
+      "title": "Tokyo Ghoul",
+      "views": 50983,
+      "revenue": 1019.66
+    },
+    {
+      "date": "2025-03-31",
+      "title": "Yu Yu Hakusho",
+      "views": 50179,
+      "revenue": 1003.58
+    },
+    {
+      "date": "2025-04-01",
+      "title": "Black Clover",
+      "views": 50608,
+      "revenue": 1012.16
+    },
+    {
+      "date": "2025-04-01",
+      "title": "Bleach",
+      "views": 59669,
+      "revenue": 1193.38
+    },
+    {
+      "date": "2025-04-01",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 163707,
+      "revenue": 3274.14
+    },
+    {
+      "date": "2025-04-01",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 142849,
+      "revenue": 2856.98
+    },
+    {
+      "date": "2025-04-01",
+      "title": "Great Teacher Onizuka",
+      "views": 42877,
+      "revenue": 857.54
+    },
+    {
+      "date": "2025-04-01",
+      "title": "Kingdom",
+      "views": 58506,
+      "revenue": 1170.1200000000001
+    },
+    {
+      "date": "2025-04-01",
+      "title": "Naruto",
+      "views": 43085,
+      "revenue": 861.7
+    },
+    {
+      "date": "2025-04-01",
+      "title": "Naruto: Shippuuden",
+      "views": 58047,
+      "revenue": 1160.94
+    },
+    {
+      "date": "2025-04-01",
+      "title": "Tokyo Ghoul",
+      "views": 45807,
+      "revenue": 916.14
+    },
+    {
+      "date": "2025-04-01",
+      "title": "Yu Yu Hakusho",
+      "views": 52269,
+      "revenue": 1045.38
+    },
+    {
+      "date": "2025-04-02",
+      "title": "Black Clover",
+      "views": 46322,
+      "revenue": 926.44
+    },
+    {
+      "date": "2025-04-02",
+      "title": "Bleach",
+      "views": 57987,
+      "revenue": 1159.74
+    },
+    {
+      "date": "2025-04-02",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 186716,
+      "revenue": 3734.32
+    },
+    {
+      "date": "2025-04-02",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 122666,
+      "revenue": 2453.32
+    },
+    {
+      "date": "2025-04-02",
+      "title": "Great Teacher Onizuka",
+      "views": 58102,
+      "revenue": 1162.04
+    },
+    {
+      "date": "2025-04-02",
+      "title": "Kingdom",
+      "views": 56589,
+      "revenue": 1131.78
+    },
+    {
+      "date": "2025-04-02",
+      "title": "Naruto",
+      "views": 53420,
+      "revenue": 1068.4
+    },
+    {
+      "date": "2025-04-02",
+      "title": "Naruto: Shippuuden",
+      "views": 40983,
+      "revenue": 819.66
+    },
+    {
+      "date": "2025-04-02",
+      "title": "Tokyo Ghoul",
+      "views": 57748,
+      "revenue": 1154.96
+    },
+    {
+      "date": "2025-04-02",
+      "title": "Yu Yu Hakusho",
+      "views": 59392,
+      "revenue": 1187.84
+    },
+    {
+      "date": "2025-04-03",
+      "title": "Black Clover",
+      "views": 58298,
+      "revenue": 1165.96
+    },
+    {
+      "date": "2025-04-03",
+      "title": "Bleach",
+      "views": 45860,
+      "revenue": 917.2
+    },
+    {
+      "date": "2025-04-03",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 188413,
+      "revenue": 3768.26
+    },
+    {
+      "date": "2025-04-03",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 160064,
+      "revenue": 3201.28
+    },
+    {
+      "date": "2025-04-03",
+      "title": "Great Teacher Onizuka",
+      "views": 58501,
+      "revenue": 1170.02
+    },
+    {
+      "date": "2025-04-03",
+      "title": "Kingdom",
+      "views": 41084,
+      "revenue": 821.6800000000001
+    },
+    {
+      "date": "2025-04-03",
+      "title": "Naruto",
+      "views": 52985,
+      "revenue": 1059.7
+    },
+    {
+      "date": "2025-04-03",
+      "title": "Naruto: Shippuuden",
+      "views": 43062,
+      "revenue": 861.24
+    },
+    {
+      "date": "2025-04-03",
+      "title": "Tokyo Ghoul",
+      "views": 53529,
+      "revenue": 1070.58
+    },
+    {
+      "date": "2025-04-03",
+      "title": "Yu Yu Hakusho",
+      "views": 40451,
+      "revenue": 809.02
+    },
+    {
+      "date": "2025-04-04",
+      "title": "Black Clover",
+      "views": 45668,
+      "revenue": 913.36
+    },
+    {
+      "date": "2025-04-04",
+      "title": "Bleach",
+      "views": 56573,
+      "revenue": 1131.46
+    },
+    {
+      "date": "2025-04-04",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 168610,
+      "revenue": 3372.2000000000003
+    },
+    {
+      "date": "2025-04-04",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 165017,
+      "revenue": 3300.34
+    },
+    {
+      "date": "2025-04-04",
+      "title": "Great Teacher Onizuka",
+      "views": 41168,
+      "revenue": 823.36
+    },
+    {
+      "date": "2025-04-04",
+      "title": "Kingdom",
+      "views": 49416,
+      "revenue": 988.32
+    },
+    {
+      "date": "2025-04-04",
+      "title": "Naruto",
+      "views": 40104,
+      "revenue": 802.08
+    },
+    {
+      "date": "2025-04-04",
+      "title": "Naruto: Shippuuden",
+      "views": 46101,
+      "revenue": 922.02
+    },
+    {
+      "date": "2025-04-04",
+      "title": "Tokyo Ghoul",
+      "views": 53359,
+      "revenue": 1067.18
+    },
+    {
+      "date": "2025-04-04",
+      "title": "Yu Yu Hakusho",
+      "views": 48151,
+      "revenue": 963.02
+    },
+    {
+      "date": "2025-04-05",
+      "title": "Black Clover",
+      "views": 44936,
+      "revenue": 898.72
+    },
+    {
+      "date": "2025-04-05",
+      "title": "Bleach",
+      "views": 45986,
+      "revenue": 919.72
+    },
+    {
+      "date": "2025-04-05",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 188592,
+      "revenue": 3771.84
+    },
+    {
+      "date": "2025-04-05",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 174115,
+      "revenue": 3482.3
+    },
+    {
+      "date": "2025-04-05",
+      "title": "Great Teacher Onizuka",
+      "views": 49758,
+      "revenue": 995.16
+    },
+    {
+      "date": "2025-04-05",
+      "title": "Kingdom",
+      "views": 53212,
+      "revenue": 1064.24
+    },
+    {
+      "date": "2025-04-05",
+      "title": "Naruto",
+      "views": 50181,
+      "revenue": 1003.62
+    },
+    {
+      "date": "2025-04-05",
+      "title": "Naruto: Shippuuden",
+      "views": 59131,
+      "revenue": 1182.6200000000001
+    },
+    {
+      "date": "2025-04-05",
+      "title": "Tokyo Ghoul",
+      "views": 53359,
+      "revenue": 1067.18
+    },
+    {
+      "date": "2025-04-05",
+      "title": "Yu Yu Hakusho",
+      "views": 54199,
+      "revenue": 1083.98
+    },
+    {
+      "date": "2025-04-06",
+      "title": "Black Clover",
+      "views": 57515,
+      "revenue": 1150.3
+    },
+    {
+      "date": "2025-04-06",
+      "title": "Bleach",
+      "views": 46432,
+      "revenue": 928.64
+    },
+    {
+      "date": "2025-04-06",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 172846,
+      "revenue": 3456.92
+    },
+    {
+      "date": "2025-04-06",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 121290,
+      "revenue": 2425.8
+    },
+    {
+      "date": "2025-04-06",
+      "title": "Great Teacher Onizuka",
+      "views": 41345,
+      "revenue": 826.9
+    },
+    {
+      "date": "2025-04-06",
+      "title": "Kingdom",
+      "views": 56297,
+      "revenue": 1125.94
+    },
+    {
+      "date": "2025-04-06",
+      "title": "Naruto",
+      "views": 57474,
+      "revenue": 1149.48
+    },
+    {
+      "date": "2025-04-06",
+      "title": "Naruto: Shippuuden",
+      "views": 42652,
+      "revenue": 853.04
+    },
+    {
+      "date": "2025-04-06",
+      "title": "Tokyo Ghoul",
+      "views": 47086,
+      "revenue": 941.72
+    },
+    {
+      "date": "2025-04-06",
+      "title": "Yu Yu Hakusho",
+      "views": 46233,
+      "revenue": 924.66
+    },
+    {
+      "date": "2025-04-07",
+      "title": "Black Clover",
+      "views": 45870,
+      "revenue": 917.4
+    },
+    {
+      "date": "2025-04-07",
+      "title": "Bleach",
+      "views": 56691,
+      "revenue": 1133.82
+    },
+    {
+      "date": "2025-04-07",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 203079,
+      "revenue": 4061.58
+    },
+    {
+      "date": "2025-04-07",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 150790,
+      "revenue": 3015.8
+    },
+    {
+      "date": "2025-04-07",
+      "title": "Great Teacher Onizuka",
+      "views": 53768,
+      "revenue": 1075.3600000000001
+    },
+    {
+      "date": "2025-04-07",
+      "title": "Kingdom",
+      "views": 42612,
+      "revenue": 852.24
+    },
+    {
+      "date": "2025-04-07",
+      "title": "Naruto",
+      "views": 40224,
+      "revenue": 804.48
+    },
+    {
+      "date": "2025-04-07",
+      "title": "Naruto: Shippuuden",
+      "views": 43793,
+      "revenue": 875.86
+    },
+    {
+      "date": "2025-04-07",
+      "title": "Tokyo Ghoul",
+      "views": 45806,
+      "revenue": 916.12
+    },
+    {
+      "date": "2025-04-07",
+      "title": "Yu Yu Hakusho",
+      "views": 52812,
+      "revenue": 1056.24
+    },
+    {
+      "date": "2025-04-08",
+      "title": "Black Clover",
+      "views": 40248,
+      "revenue": 804.96
+    },
+    {
+      "date": "2025-04-08",
+      "title": "Bleach",
+      "views": 55850,
+      "revenue": 1117
+    },
+    {
+      "date": "2025-04-08",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 230815,
+      "revenue": 4616.3
+    },
+    {
+      "date": "2025-04-08",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 166898,
+      "revenue": 3337.96
+    },
+    {
+      "date": "2025-04-08",
+      "title": "Great Teacher Onizuka",
+      "views": 58462,
+      "revenue": 1169.24
+    },
+    {
+      "date": "2025-04-08",
+      "title": "Kingdom",
+      "views": 50478,
+      "revenue": 1009.5600000000001
+    },
+    {
+      "date": "2025-04-08",
+      "title": "Naruto",
+      "views": 51192,
+      "revenue": 1023.84
+    },
+    {
+      "date": "2025-04-08",
+      "title": "Naruto: Shippuuden",
+      "views": 43993,
+      "revenue": 879.86
+    },
+    {
+      "date": "2025-04-08",
+      "title": "Tokyo Ghoul",
+      "views": 59427,
+      "revenue": 1188.54
+    },
+    {
+      "date": "2025-04-08",
+      "title": "Yu Yu Hakusho",
+      "views": 55985,
+      "revenue": 1119.7
+    },
+    {
+      "date": "2025-04-09",
+      "title": "Black Clover",
+      "views": 58190,
+      "revenue": 1163.8
+    },
+    {
+      "date": "2025-04-09",
+      "title": "Bleach",
+      "views": 52868,
+      "revenue": 1057.3600000000001
+    },
+    {
+      "date": "2025-04-09",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 188212,
+      "revenue": 3764.2400000000002
+    },
+    {
+      "date": "2025-04-09",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 132130,
+      "revenue": 2642.6
+    },
+    {
+      "date": "2025-04-09",
+      "title": "Great Teacher Onizuka",
+      "views": 45442,
+      "revenue": 908.84
+    },
+    {
+      "date": "2025-04-09",
+      "title": "Kingdom",
+      "views": 48255,
+      "revenue": 965.1
+    },
+    {
+      "date": "2025-04-09",
+      "title": "Naruto",
+      "views": 56900,
+      "revenue": 1138
+    },
+    {
+      "date": "2025-04-09",
+      "title": "Naruto: Shippuuden",
+      "views": 51820,
+      "revenue": 1036.4
+    },
+    {
+      "date": "2025-04-09",
+      "title": "Tokyo Ghoul",
+      "views": 51835,
+      "revenue": 1036.7
+    },
+    {
+      "date": "2025-04-09",
+      "title": "Yu Yu Hakusho",
+      "views": 48800,
+      "revenue": 976
+    },
+    {
+      "date": "2025-04-10",
+      "title": "Black Clover",
+      "views": 53318,
+      "revenue": 1066.3600000000001
+    },
+    {
+      "date": "2025-04-10",
+      "title": "Bleach",
+      "views": 53454,
+      "revenue": 1069.08
+    },
+    {
+      "date": "2025-04-10",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 186529,
+      "revenue": 3730.58
+    },
+    {
+      "date": "2025-04-10",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 172359,
+      "revenue": 3447.1800000000003
+    },
+    {
+      "date": "2025-04-10",
+      "title": "Great Teacher Onizuka",
+      "views": 48402,
+      "revenue": 968.04
+    },
+    {
+      "date": "2025-04-10",
+      "title": "Kingdom",
+      "views": 58025,
+      "revenue": 1160.5
+    },
+    {
+      "date": "2025-04-10",
+      "title": "Naruto",
+      "views": 56359,
+      "revenue": 1127.18
+    },
+    {
+      "date": "2025-04-10",
+      "title": "Naruto: Shippuuden",
+      "views": 48709,
+      "revenue": 974.1800000000001
+    },
+    {
+      "date": "2025-04-10",
+      "title": "Tokyo Ghoul",
+      "views": 41149,
+      "revenue": 822.98
+    },
+    {
+      "date": "2025-04-10",
+      "title": "Yu Yu Hakusho",
+      "views": 43275,
+      "revenue": 865.5
+    },
+    {
+      "date": "2025-04-11",
+      "title": "Black Clover",
+      "views": 41964,
+      "revenue": 839.28
+    },
+    {
+      "date": "2025-04-11",
+      "title": "Bleach",
+      "views": 46075,
+      "revenue": 921.5
+    },
+    {
+      "date": "2025-04-11",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 170972,
+      "revenue": 3419.44
+    },
+    {
+      "date": "2025-04-11",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 163017,
+      "revenue": 3260.34
+    },
+    {
+      "date": "2025-04-11",
+      "title": "Great Teacher Onizuka",
+      "views": 58312,
+      "revenue": 1166.24
+    },
+    {
+      "date": "2025-04-11",
+      "title": "Kingdom",
+      "views": 54949,
+      "revenue": 1098.98
+    },
+    {
+      "date": "2025-04-11",
+      "title": "Naruto",
+      "views": 55800,
+      "revenue": 1116
+    },
+    {
+      "date": "2025-04-11",
+      "title": "Naruto: Shippuuden",
+      "views": 40018,
+      "revenue": 800.36
+    },
+    {
+      "date": "2025-04-11",
+      "title": "Tokyo Ghoul",
+      "views": 51786,
+      "revenue": 1035.72
+    },
+    {
+      "date": "2025-04-11",
+      "title": "Yu Yu Hakusho",
+      "views": 54513,
+      "revenue": 1090.26
+    },
+    {
+      "date": "2025-04-12",
+      "title": "Black Clover",
+      "views": 44316,
+      "revenue": 886.32
+    },
+    {
+      "date": "2025-04-12",
+      "title": "Bleach",
+      "views": 50759,
+      "revenue": 1015.1800000000001
+    },
+    {
+      "date": "2025-04-12",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 176223,
+      "revenue": 3524.46
+    },
+    {
+      "date": "2025-04-12",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 169940,
+      "revenue": 3398.8
+    },
+    {
+      "date": "2025-04-12",
+      "title": "Great Teacher Onizuka",
+      "views": 54077,
+      "revenue": 1081.54
+    },
+    {
+      "date": "2025-04-12",
+      "title": "Kingdom",
+      "views": 46589,
+      "revenue": 931.78
+    },
+    {
+      "date": "2025-04-12",
+      "title": "Naruto",
+      "views": 47478,
+      "revenue": 949.5600000000001
+    },
+    {
+      "date": "2025-04-12",
+      "title": "Naruto: Shippuuden",
+      "views": 46511,
+      "revenue": 930.22
+    },
+    {
+      "date": "2025-04-12",
+      "title": "Tokyo Ghoul",
+      "views": 55539,
+      "revenue": 1110.78
+    },
+    {
+      "date": "2025-04-12",
+      "title": "Yu Yu Hakusho",
+      "views": 57034,
+      "revenue": 1140.68
+    },
+    {
+      "date": "2025-04-13",
+      "title": "Black Clover",
+      "views": 50195,
+      "revenue": 1003.9
+    },
+    {
+      "date": "2025-04-13",
+      "title": "Bleach",
+      "views": 47038,
+      "revenue": 940.76
+    },
+    {
+      "date": "2025-04-13",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 178486,
+      "revenue": 3569.7200000000003
+    },
+    {
+      "date": "2025-04-13",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 175485,
+      "revenue": 3509.7000000000003
+    },
+    {
+      "date": "2025-04-13",
+      "title": "Great Teacher Onizuka",
+      "views": 53028,
+      "revenue": 1060.56
+    },
+    {
+      "date": "2025-04-13",
+      "title": "Kingdom",
+      "views": 48736,
+      "revenue": 974.72
+    },
+    {
+      "date": "2025-04-13",
+      "title": "Naruto",
+      "views": 41394,
+      "revenue": 827.88
+    },
+    {
+      "date": "2025-04-13",
+      "title": "Naruto: Shippuuden",
+      "views": 55580,
+      "revenue": 1111.6000000000001
+    },
+    {
+      "date": "2025-04-13",
+      "title": "Tokyo Ghoul",
+      "views": 46473,
+      "revenue": 929.46
+    },
+    {
+      "date": "2025-04-13",
+      "title": "Yu Yu Hakusho",
+      "views": 45859,
+      "revenue": 917.1800000000001
+    },
+    {
+      "date": "2025-04-14",
+      "title": "Black Clover",
+      "views": 49458,
+      "revenue": 989.16
+    },
+    {
+      "date": "2025-04-14",
+      "title": "Bleach",
+      "views": 52748,
+      "revenue": 1054.96
+    },
+    {
+      "date": "2025-04-14",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 224375,
+      "revenue": 4487.5
+    },
+    {
+      "date": "2025-04-14",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 125968,
+      "revenue": 2519.36
+    },
+    {
+      "date": "2025-04-14",
+      "title": "Great Teacher Onizuka",
+      "views": 50958,
+      "revenue": 1019.16
+    },
+    {
+      "date": "2025-04-14",
+      "title": "Kingdom",
+      "views": 59410,
+      "revenue": 1188.2
+    },
+    {
+      "date": "2025-04-14",
+      "title": "Naruto",
+      "views": 43378,
+      "revenue": 867.5600000000001
+    },
+    {
+      "date": "2025-04-14",
+      "title": "Naruto: Shippuuden",
+      "views": 47402,
+      "revenue": 948.04
+    },
+    {
+      "date": "2025-04-14",
+      "title": "Tokyo Ghoul",
+      "views": 51841,
+      "revenue": 1036.82
+    },
+    {
+      "date": "2025-04-14",
+      "title": "Yu Yu Hakusho",
+      "views": 45662,
+      "revenue": 913.24
+    },
+    {
+      "date": "2025-04-15",
+      "title": "Black Clover",
+      "views": 40416,
+      "revenue": 808.32
+    },
+    {
+      "date": "2025-04-15",
+      "title": "Bleach",
+      "views": 51319,
+      "revenue": 1026.38
+    },
+    {
+      "date": "2025-04-15",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 198351,
+      "revenue": 3967.02
+    },
+    {
+      "date": "2025-04-15",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 137318,
+      "revenue": 2746.36
+    },
+    {
+      "date": "2025-04-15",
+      "title": "Great Teacher Onizuka",
+      "views": 47529,
+      "revenue": 950.58
+    },
+    {
+      "date": "2025-04-15",
+      "title": "Kingdom",
+      "views": 56450,
+      "revenue": 1129
+    },
+    {
+      "date": "2025-04-15",
+      "title": "Naruto",
+      "views": 54556,
+      "revenue": 1091.1200000000001
+    },
+    {
+      "date": "2025-04-15",
+      "title": "Naruto: Shippuuden",
+      "views": 53899,
+      "revenue": 1077.98
+    },
+    {
+      "date": "2025-04-15",
+      "title": "Tokyo Ghoul",
+      "views": 51590,
+      "revenue": 1031.8
+    },
+    {
+      "date": "2025-04-15",
+      "title": "Yu Yu Hakusho",
+      "views": 52869,
+      "revenue": 1057.38
+    },
+    {
+      "date": "2025-04-16",
+      "title": "Black Clover",
+      "views": 50141,
+      "revenue": 1002.82
+    },
+    {
+      "date": "2025-04-16",
+      "title": "Bleach",
+      "views": 48774,
+      "revenue": 975.48
+    },
+    {
+      "date": "2025-04-16",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 233855,
+      "revenue": 4677.1
+    },
+    {
+      "date": "2025-04-16",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 149768,
+      "revenue": 2995.36
+    },
+    {
+      "date": "2025-04-16",
+      "title": "Great Teacher Onizuka",
+      "views": 42077,
+      "revenue": 841.54
+    },
+    {
+      "date": "2025-04-16",
+      "title": "Kingdom",
+      "views": 42379,
+      "revenue": 847.58
+    },
+    {
+      "date": "2025-04-16",
+      "title": "Naruto",
+      "views": 42998,
+      "revenue": 859.96
+    },
+    {
+      "date": "2025-04-16",
+      "title": "Naruto: Shippuuden",
+      "views": 47438,
+      "revenue": 948.76
+    },
+    {
+      "date": "2025-04-16",
+      "title": "Tokyo Ghoul",
+      "views": 43177,
+      "revenue": 863.54
+    },
+    {
+      "date": "2025-04-16",
+      "title": "Yu Yu Hakusho",
+      "views": 42519,
+      "revenue": 850.38
+    },
+    {
+      "date": "2025-04-17",
+      "title": "Black Clover",
+      "views": 51277,
+      "revenue": 1025.54
+    },
+    {
+      "date": "2025-04-17",
+      "title": "Bleach",
+      "views": 54425,
+      "revenue": 1088.5
+    },
+    {
+      "date": "2025-04-17",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 166938,
+      "revenue": 3338.76
+    },
+    {
+      "date": "2025-04-17",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 156630,
+      "revenue": 3132.6
+    },
+    {
+      "date": "2025-04-17",
+      "title": "Great Teacher Onizuka",
+      "views": 59312,
+      "revenue": 1186.24
+    },
+    {
+      "date": "2025-04-17",
+      "title": "Kingdom",
+      "views": 48081,
+      "revenue": 961.62
+    },
+    {
+      "date": "2025-04-17",
+      "title": "Naruto",
+      "views": 58901,
+      "revenue": 1178.02
+    },
+    {
+      "date": "2025-04-17",
+      "title": "Naruto: Shippuuden",
+      "views": 54364,
+      "revenue": 1087.28
+    },
+    {
+      "date": "2025-04-17",
+      "title": "Tokyo Ghoul",
+      "views": 40124,
+      "revenue": 802.48
+    },
+    {
+      "date": "2025-04-17",
+      "title": "Yu Yu Hakusho",
+      "views": 58743,
+      "revenue": 1174.8600000000001
+    },
+    {
+      "date": "2025-04-18",
+      "title": "Black Clover",
+      "views": 59152,
+      "revenue": 1183.04
+    },
+    {
+      "date": "2025-04-18",
+      "title": "Bleach",
+      "views": 58963,
+      "revenue": 1179.26
+    },
+    {
+      "date": "2025-04-18",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 171911,
+      "revenue": 3438.2200000000003
+    },
+    {
+      "date": "2025-04-18",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 126568,
+      "revenue": 2531.36
+    },
+    {
+      "date": "2025-04-18",
+      "title": "Great Teacher Onizuka",
+      "views": 50915,
+      "revenue": 1018.3000000000001
+    },
+    {
+      "date": "2025-04-18",
+      "title": "Kingdom",
+      "views": 53148,
+      "revenue": 1062.96
+    },
+    {
+      "date": "2025-04-18",
+      "title": "Naruto",
+      "views": 42308,
+      "revenue": 846.16
+    },
+    {
+      "date": "2025-04-18",
+      "title": "Naruto: Shippuuden",
+      "views": 42427,
+      "revenue": 848.54
+    },
+    {
+      "date": "2025-04-18",
+      "title": "Tokyo Ghoul",
+      "views": 52966,
+      "revenue": 1059.32
+    },
+    {
+      "date": "2025-04-18",
+      "title": "Yu Yu Hakusho",
+      "views": 50619,
+      "revenue": 1012.38
+    },
+    {
+      "date": "2025-04-19",
+      "title": "Black Clover",
+      "views": 50979,
+      "revenue": 1019.58
+    },
+    {
+      "date": "2025-04-19",
+      "title": "Bleach",
+      "views": 50861,
+      "revenue": 1017.22
+    },
+    {
+      "date": "2025-04-19",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 191513,
+      "revenue": 3830.26
+    },
+    {
+      "date": "2025-04-19",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 151103,
+      "revenue": 3022.06
+    },
+    {
+      "date": "2025-04-19",
+      "title": "Great Teacher Onizuka",
+      "views": 58668,
+      "revenue": 1173.3600000000001
+    },
+    {
+      "date": "2025-04-19",
+      "title": "Kingdom",
+      "views": 48668,
+      "revenue": 973.36
+    },
+    {
+      "date": "2025-04-19",
+      "title": "Naruto",
+      "views": 49544,
+      "revenue": 990.88
+    },
+    {
+      "date": "2025-04-19",
+      "title": "Naruto: Shippuuden",
+      "views": 48550,
+      "revenue": 971
+    },
+    {
+      "date": "2025-04-19",
+      "title": "Tokyo Ghoul",
+      "views": 59392,
+      "revenue": 1187.84
+    },
+    {
+      "date": "2025-04-19",
+      "title": "Yu Yu Hakusho",
+      "views": 40052,
+      "revenue": 801.04
+    },
+    {
+      "date": "2025-04-20",
+      "title": "Black Clover",
+      "views": 51467,
+      "revenue": 1029.34
+    },
+    {
+      "date": "2025-04-20",
+      "title": "Bleach",
+      "views": 55497,
+      "revenue": 1109.94
+    },
+    {
+      "date": "2025-04-20",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 216419,
+      "revenue": 4328.38
+    },
+    {
+      "date": "2025-04-20",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 128580,
+      "revenue": 2571.6
+    },
+    {
+      "date": "2025-04-20",
+      "title": "Great Teacher Onizuka",
+      "views": 44695,
+      "revenue": 893.9
+    },
+    {
+      "date": "2025-04-20",
+      "title": "Kingdom",
+      "views": 56080,
+      "revenue": 1121.6000000000001
+    },
+    {
+      "date": "2025-04-20",
+      "title": "Naruto",
+      "views": 52215,
+      "revenue": 1044.3
+    },
+    {
+      "date": "2025-04-20",
+      "title": "Naruto: Shippuuden",
+      "views": 41164,
+      "revenue": 823.28
+    },
+    {
+      "date": "2025-04-20",
+      "title": "Tokyo Ghoul",
+      "views": 54490,
+      "revenue": 1089.8
+    },
+    {
+      "date": "2025-04-20",
+      "title": "Yu Yu Hakusho",
+      "views": 58847,
+      "revenue": 1176.94
+    },
+    {
+      "date": "2025-04-21",
+      "title": "Black Clover",
+      "views": 55502,
+      "revenue": 1110.04
+    },
+    {
+      "date": "2025-04-21",
+      "title": "Bleach",
+      "views": 46343,
+      "revenue": 926.86
+    },
+    {
+      "date": "2025-04-21",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 208141,
+      "revenue": 4162.82
+    },
+    {
+      "date": "2025-04-21",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 162768,
+      "revenue": 3255.36
+    },
+    {
+      "date": "2025-04-21",
+      "title": "Great Teacher Onizuka",
+      "views": 40201,
+      "revenue": 804.02
+    },
+    {
+      "date": "2025-04-21",
+      "title": "Kingdom",
+      "views": 56047,
+      "revenue": 1120.94
+    },
+    {
+      "date": "2025-04-21",
+      "title": "Naruto",
+      "views": 51885,
+      "revenue": 1037.7
+    },
+    {
+      "date": "2025-04-21",
+      "title": "Naruto: Shippuuden",
+      "views": 49050,
+      "revenue": 981
+    },
+    {
+      "date": "2025-04-21",
+      "title": "Tokyo Ghoul",
+      "views": 51261,
+      "revenue": 1025.22
+    },
+    {
+      "date": "2025-04-21",
+      "title": "Yu Yu Hakusho",
+      "views": 46742,
+      "revenue": 934.84
+    },
+    {
+      "date": "2025-04-22",
+      "title": "Black Clover",
+      "views": 43241,
+      "revenue": 864.82
+    },
+    {
+      "date": "2025-04-22",
+      "title": "Bleach",
+      "views": 40662,
+      "revenue": 813.24
+    },
+    {
+      "date": "2025-04-22",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 191402,
+      "revenue": 3828.04
+    },
+    {
+      "date": "2025-04-22",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 173609,
+      "revenue": 3472.1800000000003
+    },
+    {
+      "date": "2025-04-22",
+      "title": "Great Teacher Onizuka",
+      "views": 44707,
+      "revenue": 894.14
+    },
+    {
+      "date": "2025-04-22",
+      "title": "Kingdom",
+      "views": 45509,
+      "revenue": 910.1800000000001
+    },
+    {
+      "date": "2025-04-22",
+      "title": "Naruto",
+      "views": 57868,
+      "revenue": 1157.3600000000001
+    },
+    {
+      "date": "2025-04-22",
+      "title": "Naruto: Shippuuden",
+      "views": 57946,
+      "revenue": 1158.92
+    },
+    {
+      "date": "2025-04-22",
+      "title": "Tokyo Ghoul",
+      "views": 50794,
+      "revenue": 1015.88
+    },
+    {
+      "date": "2025-04-22",
+      "title": "Yu Yu Hakusho",
+      "views": 40176,
+      "revenue": 803.52
+    },
+    {
+      "date": "2025-04-23",
+      "title": "Black Clover",
+      "views": 42390,
+      "revenue": 847.8000000000001
+    },
+    {
+      "date": "2025-04-23",
+      "title": "Bleach",
+      "views": 48193,
+      "revenue": 963.86
+    },
+    {
+      "date": "2025-04-23",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 219697,
+      "revenue": 4393.9400000000005
+    },
+    {
+      "date": "2025-04-23",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 156525,
+      "revenue": 3130.5
+    },
+    {
+      "date": "2025-04-23",
+      "title": "Great Teacher Onizuka",
+      "views": 44866,
+      "revenue": 897.32
+    },
+    {
+      "date": "2025-04-23",
+      "title": "Kingdom",
+      "views": 59910,
+      "revenue": 1198.2
+    },
+    {
+      "date": "2025-04-23",
+      "title": "Naruto",
+      "views": 40662,
+      "revenue": 813.24
+    },
+    {
+      "date": "2025-04-23",
+      "title": "Naruto: Shippuuden",
+      "views": 57904,
+      "revenue": 1158.08
+    },
+    {
+      "date": "2025-04-23",
+      "title": "Tokyo Ghoul",
+      "views": 51626,
+      "revenue": 1032.52
+    },
+    {
+      "date": "2025-04-23",
+      "title": "Yu Yu Hakusho",
+      "views": 51177,
+      "revenue": 1023.5400000000001
+    },
+    {
+      "date": "2025-04-24",
+      "title": "Black Clover",
+      "views": 48092,
+      "revenue": 961.84
+    },
+    {
+      "date": "2025-04-24",
+      "title": "Bleach",
+      "views": 51192,
+      "revenue": 1023.84
+    },
+    {
+      "date": "2025-04-24",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 231421,
+      "revenue": 4628.42
+    },
+    {
+      "date": "2025-04-24",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 155032,
+      "revenue": 3100.64
+    },
+    {
+      "date": "2025-04-24",
+      "title": "Great Teacher Onizuka",
+      "views": 54867,
+      "revenue": 1097.34
+    },
+    {
+      "date": "2025-04-24",
+      "title": "Kingdom",
+      "views": 47380,
+      "revenue": 947.6
+    },
+    {
+      "date": "2025-04-24",
+      "title": "Naruto",
+      "views": 53629,
+      "revenue": 1072.58
+    },
+    {
+      "date": "2025-04-24",
+      "title": "Naruto: Shippuuden",
+      "views": 53885,
+      "revenue": 1077.7
+    },
+    {
+      "date": "2025-04-24",
+      "title": "Tokyo Ghoul",
+      "views": 46473,
+      "revenue": 929.46
+    },
+    {
+      "date": "2025-04-24",
+      "title": "Yu Yu Hakusho",
+      "views": 49118,
+      "revenue": 982.36
+    },
+    {
+      "date": "2025-04-25",
+      "title": "Black Clover",
+      "views": 40544,
+      "revenue": 810.88
+    },
+    {
+      "date": "2025-04-25",
+      "title": "Bleach",
+      "views": 42969,
+      "revenue": 859.38
+    },
+    {
+      "date": "2025-04-25",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 169059,
+      "revenue": 3381.1800000000003
+    },
+    {
+      "date": "2025-04-25",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 121867,
+      "revenue": 2437.34
+    },
+    {
+      "date": "2025-04-25",
+      "title": "Great Teacher Onizuka",
+      "views": 41649,
+      "revenue": 832.98
+    },
+    {
+      "date": "2025-04-25",
+      "title": "Kingdom",
+      "views": 44057,
+      "revenue": 881.14
+    },
+    {
+      "date": "2025-04-25",
+      "title": "Naruto",
+      "views": 53469,
+      "revenue": 1069.38
+    },
+    {
+      "date": "2025-04-25",
+      "title": "Naruto: Shippuuden",
+      "views": 55122,
+      "revenue": 1102.44
+    },
+    {
+      "date": "2025-04-25",
+      "title": "Tokyo Ghoul",
+      "views": 43883,
+      "revenue": 877.66
+    },
+    {
+      "date": "2025-04-25",
+      "title": "Yu Yu Hakusho",
+      "views": 41956,
+      "revenue": 839.12
+    },
+    {
+      "date": "2025-04-26",
+      "title": "Black Clover",
+      "views": 52986,
+      "revenue": 1059.72
+    },
+    {
+      "date": "2025-04-26",
+      "title": "Bleach",
+      "views": 45079,
+      "revenue": 901.58
+    },
+    {
+      "date": "2025-04-26",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 203981,
+      "revenue": 4079.62
+    },
+    {
+      "date": "2025-04-26",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 137382,
+      "revenue": 2747.64
+    },
+    {
+      "date": "2025-04-26",
+      "title": "Great Teacher Onizuka",
+      "views": 57847,
+      "revenue": 1156.94
+    },
+    {
+      "date": "2025-04-26",
+      "title": "Kingdom",
+      "views": 44666,
+      "revenue": 893.32
+    },
+    {
+      "date": "2025-04-26",
+      "title": "Naruto",
+      "views": 43060,
+      "revenue": 861.2
+    },
+    {
+      "date": "2025-04-26",
+      "title": "Naruto: Shippuuden",
+      "views": 55649,
+      "revenue": 1112.98
+    },
+    {
+      "date": "2025-04-26",
+      "title": "Tokyo Ghoul",
+      "views": 45624,
+      "revenue": 912.48
+    },
+    {
+      "date": "2025-04-26",
+      "title": "Yu Yu Hakusho",
+      "views": 57297,
+      "revenue": 1145.94
+    },
+    {
+      "date": "2025-04-27",
+      "title": "Black Clover",
+      "views": 47856,
+      "revenue": 957.12
+    },
+    {
+      "date": "2025-04-27",
+      "title": "Bleach",
+      "views": 57498,
+      "revenue": 1149.96
+    },
+    {
+      "date": "2025-04-27",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 169693,
+      "revenue": 3393.86
+    },
+    {
+      "date": "2025-04-27",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 173265,
+      "revenue": 3465.3
+    },
+    {
+      "date": "2025-04-27",
+      "title": "Great Teacher Onizuka",
+      "views": 46251,
+      "revenue": 925.02
+    },
+    {
+      "date": "2025-04-27",
+      "title": "Kingdom",
+      "views": 51823,
+      "revenue": 1036.46
+    },
+    {
+      "date": "2025-04-27",
+      "title": "Naruto",
+      "views": 49901,
+      "revenue": 998.02
+    },
+    {
+      "date": "2025-04-27",
+      "title": "Naruto: Shippuuden",
+      "views": 50072,
+      "revenue": 1001.44
+    },
+    {
+      "date": "2025-04-27",
+      "title": "Tokyo Ghoul",
+      "views": 57787,
+      "revenue": 1155.74
+    },
+    {
+      "date": "2025-04-27",
+      "title": "Yu Yu Hakusho",
+      "views": 50214,
+      "revenue": 1004.28
+    },
+    {
+      "date": "2025-04-28",
+      "title": "Black Clover",
+      "views": 52658,
+      "revenue": 1053.16
+    },
+    {
+      "date": "2025-04-28",
+      "title": "Bleach",
+      "views": 55109,
+      "revenue": 1102.18
+    },
+    {
+      "date": "2025-04-28",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 164032,
+      "revenue": 3280.64
+    },
+    {
+      "date": "2025-04-28",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 175067,
+      "revenue": 3501.34
+    },
+    {
+      "date": "2025-04-28",
+      "title": "Great Teacher Onizuka",
+      "views": 41201,
+      "revenue": 824.02
+    },
+    {
+      "date": "2025-04-28",
+      "title": "Kingdom",
+      "views": 41253,
+      "revenue": 825.0600000000001
+    },
+    {
+      "date": "2025-04-28",
+      "title": "Naruto",
+      "views": 51805,
+      "revenue": 1036.1
+    },
+    {
+      "date": "2025-04-28",
+      "title": "Naruto: Shippuuden",
+      "views": 53447,
+      "revenue": 1068.94
+    },
+    {
+      "date": "2025-04-28",
+      "title": "Tokyo Ghoul",
+      "views": 53179,
+      "revenue": 1063.58
+    },
+    {
+      "date": "2025-04-28",
+      "title": "Yu Yu Hakusho",
+      "views": 53739,
+      "revenue": 1074.78
+    },
+    {
+      "date": "2025-04-29",
+      "title": "Black Clover",
+      "views": 51766,
+      "revenue": 1035.32
+    },
+    {
+      "date": "2025-04-29",
+      "title": "Bleach",
+      "views": 40647,
+      "revenue": 812.94
+    },
+    {
+      "date": "2025-04-29",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 170533,
+      "revenue": 3410.66
+    },
+    {
+      "date": "2025-04-29",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 138648,
+      "revenue": 2772.96
+    },
+    {
+      "date": "2025-04-29",
+      "title": "Great Teacher Onizuka",
+      "views": 47838,
+      "revenue": 956.76
+    },
+    {
+      "date": "2025-04-29",
+      "title": "Kingdom",
+      "views": 41514,
+      "revenue": 830.28
+    },
+    {
+      "date": "2025-04-29",
+      "title": "Naruto",
+      "views": 58162,
+      "revenue": 1163.24
+    },
+    {
+      "date": "2025-04-29",
+      "title": "Naruto: Shippuuden",
+      "views": 50535,
+      "revenue": 1010.7
+    },
+    {
+      "date": "2025-04-29",
+      "title": "Tokyo Ghoul",
+      "views": 53711,
+      "revenue": 1074.22
+    },
+    {
+      "date": "2025-04-29",
+      "title": "Yu Yu Hakusho",
+      "views": 55421,
+      "revenue": 1108.42
+    },
+    {
+      "date": "2025-04-30",
+      "title": "Black Clover",
+      "views": 44605,
+      "revenue": 892.1
+    },
+    {
+      "date": "2025-04-30",
+      "title": "Bleach",
+      "views": 41483,
+      "revenue": 829.66
+    },
+    {
+      "date": "2025-04-30",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 173650,
+      "revenue": 3473
+    },
+    {
+      "date": "2025-04-30",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 152785,
+      "revenue": 3055.7000000000003
+    },
+    {
+      "date": "2025-04-30",
+      "title": "Great Teacher Onizuka",
+      "views": 57865,
+      "revenue": 1157.3
+    },
+    {
+      "date": "2025-04-30",
+      "title": "Kingdom",
+      "views": 56108,
+      "revenue": 1122.16
+    },
+    {
+      "date": "2025-04-30",
+      "title": "Naruto",
+      "views": 58522,
+      "revenue": 1170.44
+    },
+    {
+      "date": "2025-04-30",
+      "title": "Naruto: Shippuuden",
+      "views": 45250,
+      "revenue": 905
+    },
+    {
+      "date": "2025-04-30",
+      "title": "Tokyo Ghoul",
+      "views": 43504,
+      "revenue": 870.08
+    },
+    {
+      "date": "2025-04-30",
+      "title": "Yu Yu Hakusho",
+      "views": 59762,
+      "revenue": 1195.24
+    },
+    {
+      "date": "2025-05-01",
+      "title": "Black Clover",
+      "views": 42828,
+      "revenue": 856.5600000000001
+    },
+    {
+      "date": "2025-05-01",
+      "title": "Bleach",
+      "views": 45341,
+      "revenue": 906.82
+    },
+    {
+      "date": "2025-05-01",
+      "title": "Bleach: Sennen Kessen-hen",
+      "views": 239525,
+      "revenue": 4790.5
+    },
+    {
+      "date": "2025-05-01",
+      "title": "Boruto: Naruto Next Generations",
+      "views": 138893,
+      "revenue": 2777.86
+    },
+    {
+      "date": "2025-05-01",
+      "title": "Great Teacher Onizuka",
+      "views": 48001,
+      "revenue": 960.02
+    },
+    {
+      "date": "2025-05-01",
+      "title": "Kingdom",
+      "views": 55679,
+      "revenue": 1113.58
+    },
+    {
+      "date": "2025-05-01",
+      "title": "Naruto",
+      "views": 43054,
+      "revenue": 861.08
+    },
+    {
+      "date": "2025-05-01",
+      "title": "Naruto: Shippuuden",
+      "views": 41273,
+      "revenue": 825.46
+    },
+    {
+      "date": "2025-05-01",
+      "title": "Tokyo Ghoul",
+      "views": 57548,
+      "revenue": 1150.96
+    },
+    {
+      "date": "2025-05-01",
+      "title": "Yu Yu Hakusho",
+      "views": 48402,
+      "revenue": 968.04
     }
   ]
 }

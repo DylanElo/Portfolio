@@ -1,68 +1,68 @@
 # 2️⃣ Executive Requirements Document
 
-**(Version “simple” orientée direction)**
+**(Executive / Management View)**
 
-**Titre** : Amélioration de la performance des animés récents – Vue exécutive  
-**Sponsor** : Direction Studio Pierrot  
-**Responsable** : BI Analyst
+**Title**: Recent Anime Performance Improvement – Executive View
+**Sponsor**: Studio Pierrot Management
+**Owner**: BI Analyst
 
-## 1. Problème à résoudre
+## 1. Problem Statement
 
-Les animés récents du studio semblent moins bien fonctionner que les franchises historiques, en termes de :
-*   Engagement des fans (notes, reviews)
-*   Audience (chute progressive au fil des épisodes)
-*   Image de marque (bad buzz autour des fillers / animation / rythme)
+Recent anime titles from the studio seem to be underperforming compared to historical franchises in terms of:
+*   **Fan Engagement** (ratings, reviews)
+*   **Audience Retention** (progressive drop-off over episodes)
+*   **Brand Image** (negative buzz regarding fillers / animation / pacing)
 
-La direction a besoin d’une vue consolidée et objective pour comprendre les causes probables de cette sous-performance.
+Management needs a consolidated and objective view to understand the probable causes of this underperformance.
 
-## 2. Objectifs du projet
+## 2. Project Objectives
 
-*   Fournir un diagnostic data-driven de la performance des animés récents vs historiques.
-*   Mettre en évidence les facteurs de succès ou d’échec (format, fillers, qualité, diffusion, marketing).
-*   Proposer des recommandations concrètes pour les prochains projets.
-*   Livrer un dashboard exécutif permettant de suivre l’évolution des KPIs dans le temps.
+*   Provide a data-driven diagnostic of recent vs. historical anime performance.
+*   Highlight success or failure factors (format, fillers, quality, broadcasting, marketing).
+*   Propose concrete recommendations for future projects.
+*   Deliver an executive dashboard to track KPI evolution over time.
 
-## 3. Périmètre
+## 3. Scope
 
-**Inclus :**
-*   Un échantillon de 4–6 animés majeurs (anciens et récents).
-*   **Données :**
-    *   Notes moyennes & nombre de votes.
-    *   Volume & tonalité des commentaires (sentiment).
-    *   Nombre d’épisodes / fillers (estimé).
-    *   Indicateurs de production et marketing (simulés).
-*   Création d’un dashboard BI (Tableau / Power BI / Looker Studio).
+**Included:**
+*   A sample of 4–6 major anime (legacy and recent).
+*   **Data:**
+    *   Average ratings & vote counts.
+    *   Volume & sentiment of comments.
+    *   Number of episodes / fillers (estimated).
+    *   Production and marketing indicators (simulated).
+*   Creation of a BI dashboard (Tableau / Power BI / Looker Studio / Web).
 
-**Exclus (phase 1) :**
-*   Analyse détaillée par marché géographique.
-*   Analyse financière détaillée (ROI, coûts réels).
-*   Intégration temps réel avec les systèmes internes.
+**Excluded (Phase 1):**
+*   Detailed analysis by geographic market.
+*   Detailed financial analysis (ROI, actual costs).
+*   Real-time integration with internal systems.
 
-## 4. Livrables
+## 4. Deliverables
 
 1.  **Stakeholder Requirements Document**
-2.  **Dashboard exécutif avec :**
-    *   Vue comparée anciens vs récents.
-    *   Top / flop animés.
-    *   Vue drop-off et sentiments.
-3.  **Note de synthèse / Présentation :**
-    *   3–5 insights clés.
-    *   3–5 recommandations business.
-4.  **Documentation technique légère :**
-    *   Source des données.
-    *   Modèle de données (dim/fact).
-    *   Définitions des KPIs.
+2.  **Executive Dashboard featuring:**
+    *   Legacy vs. Recent comparison.
+    *   Top / Flop anime.
+    *   Drop-off and sentiment view.
+3.  **Synthesis Note / Presentation:**
+    *   3–5 key insights.
+    *   3–5 business recommendations.
+4.  **Light Technical Documentation:**
+    *   Data sources.
+    *   Data model (dim/fact).
+    *   KPI definitions.
 
-## 5. KPIs clés (Executive view)
+## 5. Key KPIs (Executive View)
 
-*   Note moyenne par anime.
-*   % d’animés récents sous un certain seuil de note (ex : < 7.0).
-*   Taux moyen de drop-off par épisode.
-*   Sentiment moyen des fans (score global).
-*   % d’épisodes fillers par série.
+*   Average rating per anime.
+*   % of recent anime below a certain rating threshold (e.g., < 7.0).
+*   Average drop-off rate per episode.
+*   Average fan sentiment (global score).
+*   % of filler episodes per series.
 
-## 6. Facteurs de succès
+## 6. Success Factors
 
-*   Avoir des visualisations simples, interprétables par les non-tech.
-*   Fournir au moins 3 recommandations concrètes directement actionnables.
-*   Être transparent sur les limites des données (publiques + simulées).
+*   Simple visualizations, interpretable by non-tech users.
+*   Provide at least 3 concrete, directly actionable recommendations.
+*   Be transparent about data limitations (public + simulated).

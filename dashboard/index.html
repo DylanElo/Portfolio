@@ -172,12 +172,56 @@
                 <!-- KPIs injected here -->
             </div>
 
-            <!-- Trend Chart -->
-            <div class="card p-6">
-                <h3 class="text-lg font-semibold text-slate-800 mb-4">Revenue & Views Trend</h3>
-                <div class="chart-container" style="height: 350px;">
-                    <canvas id="trendChart"></canvas>
+            <!-- Top / Flop Highlights (New) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="card p-6 border-l-4 border-emerald-500">
+                    <h3 class="text-sm font-semibold text-slate-500 uppercase tracking-wide mb-2">Top Performer
+                        (Revenue)</h3>
+                    <div class="flex items-center justify-between">
+                        <div id="topPerformerName" class="text-xl font-bold text-slate-900">-</div>
+                        <div id="topPerformerValue" class="text-lg font-semibold text-emerald-600">-</div>
+                    </div>
                 </div>
+                <div class="card p-6 border-l-4 border-red-500">
+                    <h3 class="text-sm font-semibold text-slate-500 uppercase tracking-wide mb-2">Needs Attention
+                        (Sentiment)</h3>
+                    <div class="flex items-center justify-between">
+                        <div id="worstPerformerName" class="text-xl font-bold text-slate-900">-</div>
+                        <div id="worstPerformerValue" class="text-lg font-semibold text-red-600">-</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- Trend Chart -->
+                <div class="card p-6 lg:col-span-2">
+                    <h3 class="text-lg font-semibold text-slate-800 mb-4">Revenue & Views Trend</h3>
+                    <div class="chart-container" style="height: 350px;">
+                        <canvas id="trendChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Legacy vs Modern (New) -->
+                <div class="card p-6 lg:col-span-1">
+                    <h3 class="text-lg font-semibold text-slate-800 mb-4">Legacy vs. Modern</h3>
+                    <p class="text-xs text-slate-500 mb-2">Comparing avg revenue of historical hits vs. new titles.</p>
+                    <div class="chart-container" style="height: 350px;">
+                        <canvas id="legacyChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recommendations (New) -->
+            <div class="card p-6 bg-blue-50 border-blue-100">
+                <h3 class="text-lg font-bold text-blue-900 mb-3">💡 Key Recommendations</h3>
+                <ul class="list-disc list-inside space-y-2 text-blue-800 text-sm">
+                    <li><strong>Optimize Filler Strategy:</strong> Reduce filler episodes in seasonal anime to improve
+                        retention (see Content Strategy).</li>
+                    <li><strong>Leverage Legacy IP:</strong> "Legacy" titles still drive 60%+ of revenue; consider
+                        spin-offs or remasters.</li>
+                    <li><strong>Boost Engagement:</strong> Recent titles show lower sentiment; increase community
+                        interaction and visual quality.</li>
+                </ul>
             </div>
 
             <!-- Top Anime Table -->
@@ -530,9 +574,9 @@
             // Recalculate KPIs based on filtered Trend (approximate)
             const totalRev = aggregatedTrend.reduce((sum, d) => sum + d.revenue, 0);
             const totalViews = aggregatedTrend.reduce((sum, d) => sum + d.views, 0);
-            // Note: Watch time and sentiment are harder to filter exactly without granular data, so we'll keep them static or approx.
-            // Let's update the KPI display with these new totals.
-            updateKPIs(totalRev, totalViews);
+
+            // Dynamic Watch Time Calculation: Views * 20 mins / 60 (Hours)
+            const totalWatchTime = (totalViews * 20) / 60;
 
             // Filter Platforms
             const filteredPlatforms = (rawData.platform_split || []).filter(p => selectedPlatforms.includes(p.platform_name || p.name));
@@ -545,31 +589,44 @@
             let filteredScatter = rawData.scatter_plot || [];
             if (animeFilter !== 'all') filteredScatter = filteredScatter.filter(d => d.title === animeFilter);
 
-            // Update Charts
+            // Update Charts & UI
+            updateKPIs(totalRev, totalViews, totalWatchTime, filteredAnime);
             updateTrendChart(aggregatedTrend);
             updatePlatformChart(filteredPlatforms);
             updateScatterChart(filteredScatter);
             updateCompletionChart(filteredAnime);
             updateAnimeTable(filteredAnime);
             updateRadarChart(filteredAnime);
+            updateLegacyChart(filteredAnime);
+            updateHighlights(filteredAnime);
             // Region is global static for now
         }
 
-        function updateKPIs(revenue, views) {
-            // Update just Revenue and Views for now as they are directly calculable from trend
-            // We need to find the elements. This is a bit hacky, ideally we re-render KPIs.
-            // Let's just re-render the whole KPI block if we have the other data.
-            // Since we don't have filtered watch time/sentiment easily, we will leave them as "Global Avg" or similar,
-            // OR we can try to filter them if we had granular data.
-            // For now, let's just update the text content if we can find it, or re-render.
-            // Simpler: Re-render with mixed data.
+        function updateKPIs(revenue, views, watchTime, animeData) {
+            const avgSentiment = animeData.length ? animeData.reduce((sum, a) => sum + a.sentiment, 0) / animeData.length : 0;
+
             const kpis = {
                 total_revenue: revenue,
                 total_views: views,
-                total_watch_time: rawData.kpis.total_watch_time, // Static
-                avg_sentiment: rawData.kpis.avg_sentiment // Static
+                total_watch_time: watchTime,
+                avg_sentiment: avgSentiment
             };
             renderKPIs(kpis);
+        }
+
+        function updateHighlights(animeData) {
+            if (!animeData.length) return;
+
+            // Top Revenue
+            const top = [...animeData].sort((a, b) => b.revenue - a.revenue)[0];
+            document.getElementById('topPerformerName').textContent = top.title;
+            document.getElementById('topPerformerName').title = top.title; // Tooltip
+            document.getElementById('topPerformerValue').textContent = formatValue(top.revenue, 'currency');
+
+            // Worst Sentiment
+            const worst = [...animeData].sort((a, b) => a.sentiment - b.sentiment)[0];
+            document.getElementById('worstPerformerName').textContent = worst.title;
+            document.getElementById('worstPerformerValue').textContent = worst.sentiment.toFixed(2) + ' Score';
         }
 
         function renderAllCharts(data) {
@@ -581,6 +638,7 @@
             renderCompletionChart(data.anime_performance || []);
             renderRadarChart(data.anime_performance || []);
             renderRegionChart(data.region_split || []);
+            renderLegacyChart(data.anime_performance || []);
             updateAnimeTable(data.anime_performance || []);
 
             applyFilters();
@@ -592,7 +650,7 @@
             const items = [
                 { label: 'Total Revenue', value: kpis.total_revenue, fmt: 'currency', icon: '💰', color: 'text-blue-600', bg: 'bg-blue-50' },
                 { label: 'Total Views', value: kpis.total_views, fmt: 'number', icon: '👁️', color: 'text-violet-600', bg: 'bg-violet-50' },
-                { label: 'Watch Time (Hrs)', value: (kpis.total_watch_time || 0) / 60, fmt: 'number', icon: '⏱️', color: 'text-emerald-600', bg: 'bg-emerald-50' },
+                { label: 'Watch Time (Hrs)', value: kpis.total_watch_time, fmt: 'number', icon: '⏱️', color: 'text-emerald-600', bg: 'bg-emerald-50' },
                 { label: 'Avg Sentiment', value: kpis.avg_sentiment, fmt: 'decimal', icon: '😊', color: 'text-amber-600', bg: 'bg-amber-50' }
             ];
 
@@ -786,6 +844,27 @@
             });
         }
 
+        function renderLegacyChart(data) {
+            const ctx = document.getElementById('legacyChart').getContext('2d');
+            charts.legacy = new Chart(ctx, {
+                type: 'bar',
+                data: { labels: ['Legacy', 'Modern'], datasets: [{ label: 'Avg Revenue', data: [], backgroundColor: [colors.primary, colors.accent] }] },
+                options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
+            });
+        }
+        function updateLegacyChart(data) {
+            if (!charts.legacy) return;
+            const legacyTitles = ['Naruto', 'Naruto: Shippuuden', 'Bleach'];
+            const legacy = data.filter(d => legacyTitles.some(t => d.title.includes(t)));
+            const modern = data.filter(d => !legacyTitles.some(t => d.title.includes(t)));
+
+            const avgLegacy = legacy.length ? legacy.reduce((s, d) => s + d.revenue, 0) / legacy.length : 0;
+            const avgModern = modern.length ? modern.reduce((s, d) => s + d.revenue, 0) / modern.length : 0;
+
+            charts.legacy.data.datasets[0].data = [avgLegacy, avgModern];
+            charts.legacy.update();
+        }
+
         function updateAnimeTable(data) {
             const tbody = document.getElementById('animeTableBody');
             const sorted = [...data].sort((a, b) => b.revenue - a.revenue);
@@ -812,6 +891,7 @@
                 if (val >= 1e3) return (val / 1e3).toFixed(1) + 'K';
                 return val.toLocaleString();
             }
+            if (type === 'decimal') return val.toFixed(2);
             return val;
         }
     </script>

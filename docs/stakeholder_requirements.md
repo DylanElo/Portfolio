@@ -1,90 +1,90 @@
 # 1️⃣ Stakeholder Requirements Document
 
-**Projet** : Diagnostic performance des animés récents de Studio Pierrot  
-**Rôle** : BI Analyst  
-**Date** : 2024-11-22
+**Project**: Performance Diagnostic of Recent Studio Pierrot Anime
+**Role**: BI Analyst
+**Date**: 2024-11-22
 
-## 1. Contexte
+## 1. Context
 
-Studio Pierrot constate une baisse de performance sur plusieurs animés récents (audience, notes, perception fans), en comparaison avec ses franchises historiques (ex. Naruto Shippuden, Bleach).
-La direction souhaite comprendre ce qui ne fonctionne plus et identifier des leviers concrets pour améliorer la performance des futurs projets.
+Studio Pierrot is noticing a performance decline in several recent anime titles (viewership, ratings, fan perception) compared to its historical franchises (e.g., Naruto Shippuden, Bleach).
+Management wants to understand what is no longer working and identify concrete levers to improve the performance of future projects.
 
-## 2. Objectifs business (haut niveau)
+## 2. Business Objectives (High Level)
 
-*   Identifier les facteurs clés associés à la sous-performance des animés récents (contenu, format, production, marketing, diffusion, etc.).
-*   Comparer la performance des nouveaux titres avec celle des franchises historiques du studio.
-*   Prioriser 3–5 recommandations actionnables pour les futurs projets (format, nombre d’épisodes, gestion des fillers, qualité visuelle, etc.).
-*   Mettre à disposition un dashboard simple permettant aux équipes métier de suivre ces indicateurs dans le temps.
+*   Identify key factors associated with the underperformance of recent anime (content, format, production, marketing, broadcasting, etc.).
+*   Compare the performance of new titles with that of the studio's historical franchises.
+*   Prioritize 3–5 actionable recommendations for future projects (format, episode count, filler management, visual quality, etc.).
+*   Provide a simple dashboard allowing business teams to track these indicators over time.
 
-## 3. Stakeholders principaux
+## 3. Key Stakeholders
 
-| Stakeholder | Rôle / Fonction | Intérêt principal |
+| Stakeholder | Role / Function | Main Interest |
 | :--- | :--- | :--- |
-| **Directeur de production** | Supervise l’ensemble des animés | Comprendre l’impact du planning & des fillers |
-| **Producteur exécutif** | Responsable des grandes licences | Protéger la valeur des IP, arbitrer les investissements |
-| **Responsable marketing** | Gère promo & campagnes | Optimiser les campagnes selon le potentiel des séries |
-| **Responsable diffusion** | Gère horaires / chaînes / plateformes | Maximiser l’audience par créneau & plateforme |
-| **Finance / Direction** | Vision globale de rentabilité | Décider où investir, arrêter ou pivoter certains projets |
-| **BI / Data team lead** | Porte le projet data | S’assurer que les KPIs sont fiables et réutilisables |
+| **Production Director** | Supervises all anime | Understanding the impact of planning & fillers |
+| **Executive Producer** | Responsible for major IPs | Protecting IP value, arbitrating investments |
+| **Marketing Manager** | Manages promo & campaigns | Optimizing campaigns based on series potential |
+| **Broadcasting Manager** | Manages schedules / channels / platforms | Maximizing viewership by slot & platform |
+| **Finance / Management** | Global profitability vision | Deciding where to invest, stop, or pivot projects |
+| **BI / Data Team Lead** | Leads the data project | Ensuring KPIs are reliable and reusable |
 
-## 4. Besoins par stakeholder
+## 4. Needs by Stakeholder
 
-### Directeur de production
+### Production Director
 
-**Questions :**
-*   Quels animés récents ont les plus fortes chutes d’audience par épisode ?
-*   Y a-t-il corrélation entre % d’épisodes fillers et baisse des notes/sentiment fans ?
-*   Les changements de staff ou de planning (rush) impactent-ils la perception des fans ?
+**Questions:**
+*   Which recent anime have the steepest viewership drop-off per episode?
+*   Is there a correlation between % of filler episodes and a drop in ratings/fan sentiment?
+*   Do staff changes or planning issues (rush) impact fan perception?
 
-**Besoins :**
-*   Vue comparant la performance des animés récents vs anciens.
-*   KPIs : drop-off par épisode, % fillers, “production stability index”.
-*   Drilldown par série / épisode.
+**Needs:**
+*   View comparing performance of recent vs. legacy anime.
+*   KPIs: Drop-off per episode, % fillers, "production stability index".
+*   Drilldown by series / episode.
 
-### Responsable marketing
+### Marketing Manager
 
-**Questions :**
-*   Quels animés génèrent le plus de buzz positif vs bad buzz ?
-*   Quelles campagnes (teasers, collabs, OP/ED) sont associées à de bonnes performances ?
-*   Quels segments d’audience (jeunes, fans historiques, plateformes) réagissent le mieux ?
+**Questions:**
+*   Which anime generate the most positive buzz vs. bad buzz?
+*   Which campaigns (teasers, collabs, OP/ED) are associated with good performance?
+*   Which audience segments (youth, legacy fans, platforms) react best?
 
-**Besoins :**
-*   KPIs : sentiment score, volume de commentaires, évolution avant / pendant / après diffusion.
-*   Segmentation par série, période, type de campagne.
+**Needs:**
+*   KPIs: Sentiment score, comment volume, evolution before / during / after broadcast.
+*   Segmentation by series, period, campaign type.
 
-### Responsable diffusion
+### Broadcasting Manager
 
-**Questions :**
-*   Quels créneaux / saisons de diffusion produisent la meilleure rétention d’audience ?
-*   Les animés récents souffrent-ils d’une concurrence plus forte sur certains slots ?
+**Questions:**
+*   Which time slots / broadcast seasons produce the best audience retention?
+*   Do recent anime suffer from stronger competition in certain slots?
 
-**Besoins :**
-*   Vue par série + créneau horaire + plateforme.
-*   KPIs : audience moyenne, taux de complétion, drop-off.
+**Needs:**
+*   View by series + time slot + platform.
+*   KPIs: Average viewership, completion rate, drop-off.
 
-### Finance / Direction
+### Finance / Management
 
-**Questions :**
-*   Quelles séries sont “sous-performantes” par rapport à leur budget / importance stratégique ?
-*   Quels types de projets faudrait-il prioriser à l’avenir ?
+**Questions:**
+*   Which series are "underperforming" relative to their budget / strategic importance?
+*   What types of projects should be prioritized in the future?
 
-**Besoins :**
-*   Vue synthétique : top / flop des animés récents.
-*   3–5 recommandations claires avec impact estimé (ex : réduire les fillers, passer à des saisons plus courtes).
+**Needs:**
+*   Synthetic view: Top / Flop of recent anime.
+*   3–5 clear recommendations with estimated impact (e.g., reduce fillers, switch to shorter seasons).
 
-## 5. Questions analytiques prioritaires (cross-stakeholders)
+## 5. Priority Analytical Questions (Cross-Stakeholder)
 
-*   Comment la performance des animés récents (audience, notes, sentiment) se compare-t-elle à celle des anciens succès de Pierrot ?
-*   Quel est le pattern de drop-off entre les épisodes (à quel moment les spectateurs décrochent) ?
-*   Quel est l’impact :
-    *   du nombre d’épisodes,
-    *   des fillers,
-    *   des problèmes de production (simulés),
-    *   sur la satisfaction fans (notes, sentiment) ?
-*   Comment les décisions de diffusion et marketing influencent-elles la performance globale ?
+*   How does the performance of recent anime (viewership, ratings, sentiment) compare to Pierrot's legacy hits?
+*   What is the drop-off pattern between episodes (when do viewers drop out)?
+*   What is the impact of:
+    *   Episode count,
+    *   Fillers,
+    *   Production issues (simulated),
+    *   On fan satisfaction (ratings, sentiment)?
+*   How do broadcasting and marketing decisions influence overall performance?
 
-## 6. Contraintes & hypothèses
+## 6. Constraints & Assumptions
 
-*   Certaines données sont publiques (notes, votes, dates, etc.), d’autres sont simulées (budget, problèmes de prod, campagnes marketing).
-*   Le périmètre initial se concentre sur 4–6 animés clés pour un POC (Naruto Shippuden, Bleach, Boruto, Tokyo Ghoul:re, etc.).
-*   Le projet est réalisé à des fins d’illustration BI (portfolio) et ne reflète pas les données internes réelles de Studio Pierrot.
+*   Some data is public (ratings, votes, dates, etc.), while other data is simulated (budget, production issues, marketing campaigns).
+*   The initial scope focuses on 4–6 key anime for a POC (Naruto Shippuden, Bleach, Boruto, Tokyo Ghoul:re, etc.).
+*   The project is conducted for BI illustration purposes (portfolio) and does not reflect actual internal data of Studio Pierrot.
