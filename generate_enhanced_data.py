@@ -169,6 +169,16 @@ PLATFORM_EXCLUSIVES = {
 # DATA GENERATION FUNCTIONS
 # ============================================================================
 
+def get_generation(start_year):
+    if start_year < 2016:
+        return "Legacy (Pre-2016)"
+    elif 2016 <= start_year <= 2019:
+        return "Gen 1 (2016-2019)"
+    elif 2020 <= start_year <= 2022:
+        return "Gen 2 (2020-2022)"
+    else:
+        return "Gen 3 (2023-Present)"
+
 def calculate_realistic_views(anime: Dict, platform_split: Dict) -> int:
     """Calculate realistic view counts based on MAL score, episodes, tier"""
     base_views = {
@@ -194,7 +204,7 @@ def calculate_realistic_views(anime: Dict, platform_split: Dict) -> int:
     views *= score_multiplier
     
     # Modern anime get platform boost
-    if anime.get("category") == "modern":
+    if anime.get("start_year", 2000) >= 2016:
         views *= 1.3
     
     # Add realistic variance
@@ -330,6 +340,7 @@ def generate_enhanced_dataset():
             "completion_rate": random.uniform(0.65, 0.95) if anime["tier"] in ["S", "A"] else random.uniform(0.45, 0.70),
             "roi": random.uniform(250, 450) if anime["tier"] == "S" else random.uniform(150, 300),
             "category": anime["category"],
+            "generation": get_generation(anime["start_year"]),
             "tier": anime["tier"],
         }
         all_anime_performance.append(performance)
@@ -371,6 +382,7 @@ def generate_enhanced_dataset():
                 "studio": studio_name,
                 "start_year": anime["start_year"],
                 "end_year": anime["end_year"],
+                "generation": get_generation(anime["start_year"]),
                 "views": views,
                 "revenue": revenue,
                 "sentiment": anime["mal_score"] / 10,
@@ -401,17 +413,62 @@ def generate_enhanced_dataset():
     for p in all_anime_performance:
         # Find original metadata for year
         meta = next((a for a in STUDIO_PIERROT_ANIME if a["title"] == p["title"]), None)
+        start_year = meta["start_year"] if meta else 2000
         competitor_raw_data.append({
             "title": p["title"],
             "studio": "Studio Pierrot",
-            "start_year": meta["start_year"] if meta else 2000,
+            "start_year": start_year,
             "end_year": meta["end_year"] if meta else 2024,
+            "generation": get_generation(start_year),
             "views": p["views"],
             "revenue": p["revenue"],
             "sentiment": p["sentiment"],
             "tier": p["tier"]
         })
     
+    # Generate Sankey Data (Studio -> Platform -> Region)
+    print("  Generating Sankey flows...")
+    sankey_flows = {}
+    
+    # 1. Studio -> Platform
+    for entry in competitor_raw_data:
+        studio = entry["studio"]
+        # Re-estimate platform split for this entry since we didn't save it
+        # This is a simplification, ideally we'd save it.
+        # But for aggregate flow it's okay to re-generate based on title/tier
+        platforms = generate_platform_split(entry["title"])
+        
+        for plat, share in platforms.items():
+            flow = int(entry["views"] * share)
+            key = f"{studio}|{plat}"
+            sankey_flows[key] = sankey_flows.get(key, 0) + flow
+
+    sankey_data = []
+    platform_totals = {}
+    
+    for key, flow in sankey_flows.items():
+        studio, plat = key.split("|")
+        sankey_data.append({"from": studio, "to": plat, "flow": flow})
+        platform_totals[plat] = platform_totals.get(plat, 0) + flow
+
+    # 2. Platform -> Region (Estimated)
+    # Define regional affinity for platforms
+    platform_regions = {
+        "Crunchyroll": {"North America": 0.45, "Europe": 0.30, "Japan": 0.05, "Asia (Other)": 0.10, "Other": 0.10},
+        "Netflix": {"North America": 0.30, "Europe": 0.25, "Japan": 0.15, "Asia (Other)": 0.20, "Other": 0.10},
+        "Hulu": {"North America": 0.95, "Japan": 0.05, "Europe": 0.0, "Asia (Other)": 0.0, "Other": 0.0},
+        "Disney+": {"North America": 0.35, "Europe": 0.30, "Japan": 0.15, "Asia (Other)": 0.15, "Other": 0.05},
+        "Funimation": {"North America": 0.80, "Europe": 0.15, "Japan": 0.0, "Asia (Other)": 0.0, "Other": 0.05},
+        "Amazon Prime": {"North America": 0.30, "Europe": 0.30, "Japan": 0.20, "Asia (Other)": 0.15, "Other": 0.05},
+    }
+
+    for plat, total_flow in platform_totals.items():
+        regions = platform_regions.get(plat, platform_regions["Netflix"]) # Default to Netflix distribution
+        for region, share in regions.items():
+            flow = int(total_flow * share)
+            if flow > 0:
+                sankey_data.append({"from": plat, "to": region, "flow": flow})
+
     # Generate final dataset
     dataset = {
         "kpis": {
@@ -449,7 +506,8 @@ def generate_enhanced_dataset():
             {"region_name": "Other", "views": sum(p["views"] for p in all_anime_performance) * 0.05, "revenue": sum(p["revenue"] for p in all_anime_performance) * 0.02},
         ],
         "studio_comparison": studio_comparison,
-        "competitor_raw_data": competitor_raw_data
+        "competitor_raw_data": competitor_raw_data,
+        "sankey_data": sankey_data
     }
     
     # Aggregate daily trend by date
