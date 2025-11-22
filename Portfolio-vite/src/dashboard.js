@@ -662,12 +662,13 @@ function applyFilters() {
   // Filter Studio Comparison Data
   let filteredStudioData = [];
   if (rawData.competitor_raw_data) {
-    const startYear = startDate ? new Date(startDate).getFullYear() : 2000;
-    const endYear = endDate ? new Date(endDate).getFullYear() : 2024;
+    // const startYear = startDate ? new Date(startDate).getFullYear() : 2000;
+    // const endYear = endDate ? new Date(endDate).getFullYear() : 2024;
 
-    const filteredRaw = rawData.competitor_raw_data.filter(d =>
-      d.start_year >= startYear && d.start_year <= endYear
-    );
+    // SHOW ALL DATA by default (Fix for "only 2 studios" issue)
+    // The date filter was restricting to only anime starting in the last 30 days (2024),
+    // which hid 90% of the data.
+    const filteredRaw = rawData.competitor_raw_data; // .filter(d => d.start_year >= startYear && d.start_year <= endYear);
 
     // Aggregate by Studio
     const studioAgg = {};
