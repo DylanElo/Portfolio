@@ -52,26 +52,6 @@ Live metrics for understanding international fan sentiment:
 ### 3️⃣ Domestic (Japan) Lens (Modeled)
 **Simulated based on industry standards:**
 - TV Tokyo broadcast ratings
-- Blu-ray/DVD sales (Oricon rankings)
-- Merchandise and licensing revenue
-- Production costs (per episode, based on animation quality tiers)
-
-**Why Simulate?** Private studio financials are not publicly available, but we can model realistic scenarios using:
-- Industry benchmarks (e.g., ~$34B global anime market in 2024)
-- Known patterns (late-night vs prime-time slots, filler impact on BD sales)
-
-
-**What's Live:**
-- ✅ Real-time MAL metrics for 12 Studio Pierrot titles
-- ✅ KPI cards: Top Rated, Most Popular, Fan Favorite
-- ✅ Charts: Critical Reception (Score), Popularity vs Engagement
-- ✅ Detailed metrics table with sortable data
-
-**What's Ready (Phase 2 Data Files):**
-- ✅ **Domestic (Japan) Data:** `domestic_data.js` - TV ratings, Blu-ray sales (Oricon), merchandise revenue
-- ✅ **Streaming Analytics:** `streaming_data.js` - Netflix/Crunchyroll market share, global demand index, regional revenue
-- ✅ **Production Metrics:** `production_data.js` - Filler impact analysis, arc quality scores, production budgets
-
 All Phase 2 data is **calibrated against real benchmarks** (Netflix reports, Parrot Analytics, industry standards) and ready for dashboard integration.
 
 **What's Acknowledged:**
