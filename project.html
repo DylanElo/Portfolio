@@ -21,6 +21,63 @@
             <ul class="nav-links">
                 <li><a href="index.html#home">Home</a></li>
                 <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Project Hero -->
+        <section class="section" style="padding-top: 10rem; padding-bottom: 4rem;">
+            <div class="container" style="text-align: center;">
+                <span class="greeting" style="margin-bottom: 1rem; display: inline-block;">Business Intelligence Case
+                    Study</span>
+                <h1 class="gradient-text" style="font-size: 3rem; margin-bottom: 1.5rem;">Studio Pierrot Analysis</h1>
+                <p class="hero-description" style="max-width: 800px; margin: 0 auto 2rem;">
+                    Acting as a BI Analyst at Studio Pierrot Japan, I analyze why our flagship IPs struggle to capture
+                    the same global momentum as Jujutsu Kaisen (MAPPA) and Demon Slayer (ufotable)—and propose
+                    actionable strategies.
+                </p>
+
+                <div class="tech-stack" style="justify-content: center; margin-bottom: 3rem;">
+                    <span class="tech-stack-tag">Python ETL</span>
+                    <span class="tech-stack-tag">Jikan API</span>
+                    <span class="tech-stack-tag">Chart.js</span>
+                    <span class="tech-stack-tag">Strategic Analysis</span>
+                </div>
+
+                <div class="glass p-8"
+                    style="padding: 2rem; border-radius: 1rem; max-width: 900px; margin: 0 auto 3rem;">
+                    <h3 style="margin-bottom: 1rem;">🚀 Interactive Dashboard (Phase 1: Global Fandom Lens)</h3>
+                    <p style="margin-bottom: 1.5rem;">Explore live MAL data: real-time scores, popularity rankings, and
+                        engagement metrics for 12 Pierrot titles.</p>
+                    <a href="projects/studio-pierrot-bi/dashboard/index.html" class="btn btn-primary"
+                        style="font-size: 1.1rem; padding: 1rem 2rem;">Launch Dashboard</a>
+                </div>
+
+                <div
+                    style="max-width: 800px; margin: 0 auto; padding: 1.5rem; background: rgba(59, 130, 246, 0.1); border-left: 4px solid #3B82F6; border-radius: 0.5rem; text-align: left;">
+                    <h4 style="color: #3B82F6; margin-bottom: 0.5rem;">📊 Three-Lens Approach</h4>
+                    <p style="font-size: 0.95rem; margin-bottom: 0.5rem;">This project simulates a comprehensive BI
+                        environment by combining:</p>
+                    <ul style="list-style: disc; margin-left: 1.5rem; font-size: 0.9rem; color: var(--text-muted);">
+                        <li><strong>Global Fandom</strong> (Phase 1 - Live): MyAnimeList metrics via Jikan API</li>
+                        <li><strong>International Streaming</strong> (Roadmap): Netflix/Crunchyroll analytics, regional
+                            growth</li>
+                        <li><strong>Domestic (Japan)</strong> (Roadmap): TV ratings, Blu-ray sales, merchandise revenue
+                        </li>
+                    </ul>
+                    <p style="font-size: 0.85rem; margin-top: 1rem; font-style: italic;">See <a
+                            href="projects/studio-pierrot-bi/ROADMAP_PHASE_2.md" target="_blank"
+                            style="color: #3B82F6; text-decoration: underline;">Phase 2 Roadmap</a> for full vision.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strategic Documents -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title fade-in">📚 Strategic Documentation</h2>
                 <p
                     style="text-align: center; color: var(--text-muted); margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">
                     Complete business documentation demonstrating the full BI workflow from requirements to strategy.
@@ -34,8 +91,9 @@
                                 studio leadership.</p>
                             <p style="font-size: 0.9rem; margin-top: 0.5rem;">Contents: Strategic goals, KPIs, and
                                 executive-level questions.</p>
-                            <a href="docs/executive_requirements.md" class="btn btn-secondary"
-                                style="margin-top: 1.5rem; width: 100%;" target="_blank">View Document</a>
+                            <a href="projects/studio-pierrot-bi/docs/executive_requirements.md"
+                                class="btn btn-secondary" style="margin-top: 1.5rem; width: 100%;" target="_blank">View
+                                Document</a>
                         </div>
                     </div>
 
@@ -46,19 +104,163 @@
                                 Finance teams.</p>
                             <p style="font-size: 0.9rem; margin-top: 0.5rem;">Contents: Specific questions, required
                                 metrics, and data granularity.</p>
-                            <a href="docs/stakeholder_requirements.md" class="btn btn-secondary"
-                                style="margin-top: 1.5rem; width: 100%;" target="_blank">View Document</a>
+                            <a href="projects/studio-pierrot-bi/docs/stakeholder_requirements.md"
+                                class="btn btn-secondary" style="margin-top: 1.5rem; width: 100%;" target="_blank">View
+                                Document</a>
                         </div>
                     </div>
 
                     <div class="project-card glass">
                         <div class="project-info">
-                            <div class="container">
-                                <p>&copy; 2024 Dylan Elo. Built with Glassmorphism & ❤️.</p>
-                            </div>
-                            </footer>
+                            <h3>🎯 Strategy Document</h3>
+                            <p><strong>Purpose:</strong> Technical implementation roadmap and BI approach.</p>
+                            <p style="font-size: 0.9rem; margin-top: 0.5rem;">Contents: Data sources, tech stack,
+                                pipeline architecture, and timeline.</p>
+                            <a href="projects/studio-pierrot-bi/docs/strategy_document.md" class="btn btn-secondary"
+                                style="margin-top: 1.5rem; width: 100%;" target="_blank">View Document</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                            <script type="module" src="./src/main.js"></script>
+        <!-- Key Findings -->
+        <section class="section" style="background: rgba(255,255,255,0.02);">
+            <div class="container">
+                <h2 class="section-title fade-in">🔍 Key Findings (Phase 1: Global Fandom Lens)</h2>
+                <p
+                    style="text-align: center; color: var(--text-muted); margin-bottom: 3rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+                    Based on MyAnimeList data via Jikan API. <strong>Note:</strong> MAL has a Western/international
+                    bias. Full strategic insights require domestic (Japan) and streaming platform data (see Phase 2
+                    Roadmap).
+                </p>
+                <div class="projects-grid">
+                    <div class="project-card glass">
+                        <div class="project-info">
+                            <h3>🏛️ Legacy IP Strength</h3>
+                            <p style="margin-bottom: 1rem;"><strong>Question:</strong> How do our historical hits
+                                compare to new titles?</p>
+                            <p style="color: var(--text-main);"><strong>Finding:</strong> Top legacy franchises (Naruto
+                                Shippuden: 8.28, Bleach TYBW: 8.99) score competitively with new-wave anime. Legacy IP
+                                maintains <strong>2.6M+ MAL members</strong>.</p>
+                            <p
+                                style="font-size: 0.85rem; margin-top: 0.5rem; font-style: italic; color: var(--text-muted);">
+                                Aligns with Netflix data: Naruto Shippuden = #1 anime globally in H1 2025 (40M views).
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="project-card glass">
+                        <div class="project-info">
+                            <h3>📉 New Title Underperformance</h3>
+                            <p style="margin-bottom: 1rem;"><strong>Question:</strong> Why do newer Pierrot titles
+                                struggle?</p>
+                            <p style="color: var(--text-main);"><strong>Finding:</strong> Boruto (5.98) and Tokyo Ghoul
+                                √A (7.03) score <strong>significantly below</strong> competitor benchmarks (JJK: 8.6+,
+                                Demon Slayer: 8.7+).</p>
+                            <p
+                                style="font-size: 0.85rem; margin-top: 0.5rem; font-style: italic; color: var(--text-muted);">
+                                Hypothesis: High filler % + inconsistent production quality damage fan perception.</p>
+                        </div>
+                    </div>
+
+                    <div class="project-card glass">
+                        <div class="project-info">
+                            <h3>🌍 Global Competition Gap</h3>
+                            <p style="margin-bottom: 1rem;"><strong>Question:</strong> How do we compare to
+                                MAPPA/ufotable?</p>
+                            <p style="color: var(--text-main);"><strong>Context:</strong> Jujutsu Kaisen was named "Most
+                                in-demand TV series globally" in 2023 at <strong>71.2x average demand</strong> (Parrot
+                                Analytics). Pierrot's new titles don't match this momentum.</p>
+                            <p
+                                style="font-size: 0.85rem; margin-top: 0.5rem; font-style: italic; color: var(--text-muted);">
+                                Strategic implication: Quality perception matters more than quantity of episodes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommendations -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title fade-in">💡 Strategic Recommendations</h2>
+                <p
+                    style="text-align: center; color: var(--text-muted); margin-bottom: 3rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+                    Based on Phase 1 analysis + industry benchmarks. Full implementation requires Phase 2 data
+                    integration (see Roadmap).
+                </p>
+                <div class="projects-grid">
+                    <div class="project-card glass" style="border-left: 4px solid var(--primary);">
+                        <div class="project-info">
+                            <h3>🎬 Shift to Seasonal Production</h3>
+                            <p><strong>Action:</strong> Move from long-running formats (Boruto: 293 episodes) to
+                                seasonal arcs (JJK: 24 episodes/season). Cap filler at <strong>10% max</strong> vs
+                                current 40%+.</p>
+                            <p
+                                style="font-size: 0.85rem; margin-top: 0.5rem; font-style: italic; color: var(--text-muted);">
+                                <strong>Why:</strong> JJK/Demon Slayer model = higher production quality + better MAL
+                                scores.</p>
+                        </div>
+                    </div>
+
+                    <div class="project-card glass" style="border-left: 4px solid var(--secondary);">
+                        <div class="project-info">
+                            <h3>📺 Leverage Legacy IP on Netflix</h3>
+                            <p><strong>Action:</strong> Prioritize licensing deals for Naruto/Bleach on Netflix (current
+                                #1 anime globally). Use revenue to fund high-quality new IP development.</p>
+                            <p
+                                style="font-size: 0.85rem; margin-top: 0.5rem; font-style: italic; color: var(--text-muted);">
+                                <strong>Why:</strong> Legacy IP dominates streaming but new IP (Boruto) fails to retain
+                                audience.</p>
+                        </div>
+                    </div>
+
+                    <div class="project-card glass" style="border-left: 4px solid #10B981;">
+                        <div class="project-info">
+                            <h3>🌏 Compete Globally, Not Just Domestically</h3>
+                            <p><strong>Action:</strong> Develop 1-2 new "premium quality" IPs targeting international
+                                streaming platforms (Netflix, Crunchyroll). Study MAPPA/ufotable production strategies.
+                            </p>
+                            <p
+                                style="font-size: 0.85rem; margin-top: 0.5rem; font-style: italic; color: var(--text-muted);">
+                                <strong>Why:</strong> Streaming market projected to grow from $3.7B (2023) to $12.5B
+                                (2030). Pierrot needs competitive new IP.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    style="max-width: 800px; margin: 3rem auto 0; padding: 1.5rem; background: rgba(245, 158, 11, 0.1); border-left: 4px solid #F59E0B; border-radius: 0.5rem; text-align: left;">
+                    <h4 style="color: #F59E0B; margin-bottom: 0.5rem;">⚠️ Next Steps for Full Analysis</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">
+                        Phase 1 (MAL data) provides valuable fandom sentiment, but strategic decisions require:
+                    </p>
+                    <ul
+                        style="list-style: disc; margin-left: 1.5rem; font-size: 0.9rem; color: var(--text-muted); margin-top: 0.5rem;">
+                        <li><strong>Domestic data:</strong> TV Tokyo ratings, Blu-ray sales (Oricon), merchandise
+                            revenue</li>
+                        <li><strong>Streaming analytics:</strong> Netflix Top 10, Crunchyroll market share, regional
+                            revenue</li>
+                        <li><strong>Production metrics:</strong> Budget allocation, filler % impact on ROI</li>
+                    </ul>
+                    <p style="font-size: 0.85rem; margin-top: 1rem;">See <a
+                            href="projects/studio-pierrot-bi/ROADMAP_PHASE_2.md" target="_blank"
+                            style="color: #F59E0B; text-decoration: underline;">Phase 2 Roadmap</a> for detailed
+                        implementation plan.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Dylan Elo. Built with Glassmorphism & ❤️.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="./src/main.js"></script>
 </body>
 
 </html>
