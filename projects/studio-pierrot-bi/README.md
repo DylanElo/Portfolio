@@ -1,52 +1,52 @@
-# Studio Pierrot – Turnaround Strategy (BI Capstone)
+# Studio Pierrot BI Analysis
 
-A complete Business‑Intelligence pipeline that extracts data from the MyAnimeList (Jikan) API, stores it in a normalized SQLite warehouse, and visualises key performance metrics on a web dashboard.
+**A Business Intelligence project analyzing the performance of Studio Pierrot's anime franchises.**
 
-## 📚 Overview
-- **ETL** – Python scripts under `etl/` pull anime metadata, ratings, and episode data.
-- **Warehouse** – SQLite DB (`warehouse/studio_pierrot.db`) implements a **full dimensional model**:
-  - **Dimensions**: `dim_anime`, `dim_season`, `dim_episode`, `dim_date`, `dim_platform`, `dim_region`, `dim_campaign`, `dim_staff`, `dim_user_segment`, …
-  - **Bridge tables**: `bridge_episode_staff`, `bridge_episode_revenue_type`, …
-  - **Facts**: `fact_rating_snapshot`, `fact_mal_stats_snapshot`, `fact_production_episode`, `fact_sentiment_daily`, `fact_audience_episode`, `fact_revenue_stream`, `fact_costs`, `fact_campaign_performance`, …
-- **Dashboard** – `dashboard.html` (Tailwind‑CDN + Chart.js) visualises:
-  - Revenue & view trends
-  - Sentiment heat‑maps (matrix chart)
-  - Episode‑level performance
-  - Campaign ROI
+This project demonstrates a complete BI workflow, from data extraction (ETL) to strategic analysis and visualization. It focuses on identifying actionable insights to improve production ROI for one of Japan's most legendary animation studios.
 
-## 📂 Folder structure
+## 🚀 Project Status: Phase 1 (Live)
+
+The project is currently in **Phase 1**, focusing on establishing a reliable data pipeline and visualizing core metrics using real-world data.
+
+*   **Data Source:** [Jikan API](https://jikan.moe/) (Unofficial MyAnimeList API).
+*   **Data Warehouse:** SQLite (Local) / JSON (Web).
+*   **Visualization:** Custom HTML/JS Dashboard (Chart.js).
+*   **Key Metrics:** Score, Popularity (Members), Favorites, Airing Status.
+
+## 📂 Project Structure
+
 ```
-studio-pierrot-bi/
-├─ README.md                # This file
-├─ etl/                     # Python ETL scripts
-├─ data/                    # Raw JSON dumps (cached API responses)
-├─ model/                   # Data‑model spec (SQL DDL)
-├─ sql/                     # Helper queries & view definitions
-├─ warehouse/               # SQLite DB (studio_pierrot.db)
-├─ dashboard/               # Front‑end assets (HTML, CSS, JS)
-│   ├─ dashboard.html
-│   ├─ dashboard.js
-│   └─ dashboard-style.css
-└─ docs/                    # Optional design docs, diagrams
+projects/studio-pierrot-bi/
+├── dashboard/          # Interactive Web Dashboard
+│   ├── index.html      # Dashboard UI
+│   ├── dashboard.js    # Visualization Logic
+│   └── data.js         # Processed Data (JSON)
+├── etl/                # Data Engineering
+│   └── fetch_data.js   # Script to fetch real data from Jikan API
+├── data/               # Raw Data Storage
+│   └── raw_jikan_data.json
+└── README.md           # This file
 ```
 
-## 🚀 How to run locally
-```bash
-# 1️⃣ Install Python deps (inside the repo root)
-pip install -r requirements.txt   # includes requests, pandas, etc.
+## 📊 Dashboard
 
-# 2️⃣ Run the ETL (creates/updates the SQLite DB)
-python etl/run_all.py
+The interactive dashboard provides a snapshot of franchise performance.
 
-# 3️⃣ Serve the dashboard (simple HTTP server)
-cd dashboard
-python -m http.server 8000   # then open http://localhost:8000/dashboard.html
-```
+**[Launch Dashboard](./dashboard/index.html)**
 
-## 📈 Future work
-- Add **campaign** dimension & cost‑tracking facts.
-- Replace the static CSV/JSON data with a scheduled CI job that refreshes nightly.
-- Migrate the dashboard to a Vite‑based SPA for a better dev experience.
+### Key Views
+1.  **KPI Overview:** Top performing titles by Score, Popularity, and Engagement.
+2.  **Comparative Analysis:** Bar charts comparing critical reception (Score) vs. Audience Size (Members).
+3.  **Franchise Deep Dive:** Detailed stats for key franchises (Naruto, Bleach, Tokyo Ghoul, etc.).
 
----
-*Feel free to open an issue or PR if you’d like to contribute or suggest improvements!*
+## 🗺️ Roadmap
+
+### Phase 2: Enhanced Analytics (Planned)
+*   **Revenue Modeling:** Integrate estimated revenue data based on box office and disc sales (simulated where actuals are unavailable).
+*   **Production Metrics:** Correlate animation quality (filler ratio, staff credits) with audience sentiment.
+*   **Regional Analysis:** Break down popularity by region (Domestic vs. International) using Google Trends data.
+
+## 🛠️ Tech Stack
+*   **ETL:** Node.js (Axios)
+*   **Frontend:** Vanilla JS, Chart.js, TailwindCSS
+*   **Version Control:** Git

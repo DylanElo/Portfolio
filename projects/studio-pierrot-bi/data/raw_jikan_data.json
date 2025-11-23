@@ -1,0 +1,2080 @@
+[
+  {
+    "mal_id": 20,
+    "url": "https://myanimelist.net/anime/20/Naruto",
+    "images": {
+      "jpg": {
+        "image_url": "https://cdn.myanimelist.net/images/anime/1141/142503.jpg",
+        "small_image_url": "https://cdn.myanimelist.net/images/anime/1141/142503t.jpg",
+        "large_image_url": "https://cdn.myanimelist.net/images/anime/1141/142503l.jpg"
+      },
+      "webp": {
+        "image_url": "https://cdn.myanimelist.net/images/anime/1141/142503.webp",
+        "small_image_url": "https://cdn.myanimelist.net/images/anime/1141/142503t.webp",
+        "large_image_url": "https://cdn.myanimelist.net/images/anime/1141/142503l.webp"
+      }
+    },
+    "trailer": {
+      "youtube_id": null,
+      "url": null,
+      "embed_url": null,
+      "images": {
+        "image_url": null,
+        "small_image_url": null,
+        "medium_image_url": null,
+        "large_image_url": null,
+        "maximum_image_url": null
+      }
+    },
+    "approved": true,
+    "titles": [
+      {
+        "type": "Default",
+        "title": "Naruto"
+      },
+      {
+        "type": "Synonym",
+        "title": "NARUTO"
+      },
+      {
+        "type": "Japanese",
+        "title": "ナルト"
+      },
+      {
+        "type": "English",
+        "title": "Naruto"
+      }
+    ],
+    "title": "Naruto",
+    "title_english": "Naruto",
+    "title_japanese": "ナルト",
+    "title_synonyms": [
+      "NARUTO"
+    ],
+    "type": "TV",
+    "source": "Manga",
+    "episodes": 220,
+    "status": "Finished Airing",
+    "airing": false,
+    "aired": {
+      "from": "2002-10-03T00:00:00+00:00",
+      "to": "2007-02-08T00:00:00+00:00",
+      "prop": {
+        "from": {
+          "day": 3,
+          "month": 10,
+          "year": 2002
+        },
+        "to": {
+          "day": 8,
+          "month": 2,
+          "year": 2007
+        }
+      },
+      "string": "Oct 3, 2002 to Feb 8, 2007"
+    },
+    "duration": "23 min per ep",
+    "rating": "PG-13 - Teens 13 or older",
+    "score": 8.02,
+    "scored_by": 2098834,
+    "rank": 667,
+    "popularity": 9,
+    "members": 3051388,
+    "favorites": 84822,
+    "synopsis": "Twelve years ago, a colossal demon fox terrorized the world. During the monster's attack on the Hidden Leaf Village, the Hokage—the village's leader and most powerful ninja—sacrifices himself to seal the beast inside a newborn, relieving civilization from destruction while dooming the baby to a lonely life.\n\nNow, after years of being shunned and bullied, Naruto Uzumaki pesters the village with elaborate pranks and vandalism. Despite these antics, he works hard to achieve his dream: to become the Hokage and earn the acknowledgement of those who have mistreated him for his entire life. Naruto joins Team 7, a ninja squad made up of two of his peers—prodigy Sasuke Uchiha and clever Sakura Haruno.\n\nUnder the aloof Kakashi Hatake's leadership, Team 7 takes on a series of difficult missions, forcing its members to grow in strength and comradery despite their many differences. Naruto strives to stand out in his rivalry with Sasuke and earn the romantic affection of Sakura. But as the trio brush against danger and death, their tragic pasts threaten to tear them apart.\n\n[Written by MAL Rewrite]",
+    "background": "Naruto received numerous awards during its airing, including the Best Full-Length Animation Program Award in the third UStv Awards and the 38th Best Animated Show in IGN's Top 100 Animated Series. The anime was released on DVD in 16 volumes by VIZ Media from July 4, 2006, to September 22, 2009. The company rereleased it in eight volumes from October 6, 2009, to December 14, 2010. VIZ Media also made available a Blu-ray version in eight volumes from November 3, 2020, to October 18, 2022. The series adapts the first 27 volumes of the original manga.",
+    "season": "fall",
+    "year": 2002,
+    "broadcast": {
+      "day": "Thursdays",
+      "time": "19:30",
+      "timezone": "Asia/Tokyo",
+      "string": "Thursdays at 19:30 (JST)"
+    },
+    "producers": [
+      {
+        "mal_id": 16,
+        "type": "anime",
+        "name": "TV Tokyo",
+        "url": "https://myanimelist.net/anime/producer/16/TV_Tokyo"
+      },
+      {
+        "mal_id": 17,
+        "type": "anime",
+        "name": "Aniplex",
+        "url": "https://myanimelist.net/anime/producer/17/Aniplex"
+      }
+    ],
+    "licensors": [
+      {
+        "mal_id": 119,
+        "type": "anime",
+        "name": "VIZ Media",
+        "url": "https://myanimelist.net/anime/producer/119/VIZ_Media"
+      }
+    ],
+    "studios": [
+      {
+        "mal_id": 1,
+        "type": "anime",
+        "name": "Studio Pierrot",
+        "url": "https://myanimelist.net/anime/producer/1/Studio_Pierrot"
+      }
+    ],
+    "genres": [
+      {
+        "mal_id": 1,
+        "type": "anime",
+        "name": "Action",
+        "url": "https://myanimelist.net/anime/genre/1/Action"
+      },
+      {
+        "mal_id": 2,
+        "type": "anime",
+        "name": "Adventure",
+        "url": "https://myanimelist.net/anime/genre/2/Adventure"
+      },
+      {
+        "mal_id": 10,
+        "type": "anime",
+        "name": "Fantasy",
+        "url": "https://myanimelist.net/anime/genre/10/Fantasy"
+      }
+    ],
+    "explicit_genres": [],
+    "themes": [
+      {
+        "mal_id": 17,
+        "type": "anime",
+        "name": "Martial Arts",
+        "url": "https://myanimelist.net/anime/genre/17/Martial_Arts"
+      }
+    ],
+    "demographics": [
+      {
+        "mal_id": 27,
+        "type": "anime",
+        "name": "Shounen",
+        "url": "https://myanimelist.net/anime/genre/27/Shounen"
+      }
+    ]
+  },
+  {
+    "mal_id": 1735,
+    "url": "https://myanimelist.net/anime/1735/Naruto__Shippuuden",
+    "images": {
+      "jpg": {
+        "image_url": "https://cdn.myanimelist.net/images/anime/1565/111305.jpg",
+        "small_image_url": "https://cdn.myanimelist.net/images/anime/1565/111305t.jpg",
+        "large_image_url": "https://cdn.myanimelist.net/images/anime/1565/111305l.jpg"
+      },
+      "webp": {
+        "image_url": "https://cdn.myanimelist.net/images/anime/1565/111305.webp",
+        "small_image_url": "https://cdn.myanimelist.net/images/anime/1565/111305t.webp",
+        "large_image_url": "https://cdn.myanimelist.net/images/anime/1565/111305l.webp"
+      }
+    },
+    "trailer": {
+      "youtube_id": null,
+      "url": null,
+      "embed_url": "https://www.youtube-nocookie.com/embed/1dy2zPPrKD0?enablejsapi=1&wmode=opaque&autoplay=1",
+      "images": {
+        "image_url": null,
+        "small_image_url": null,
+        "medium_image_url": null,
+        "large_image_url": null,
+        "maximum_image_url": null
+      }
+    },
+    "approved": true,
+    "titles": [
+      {
+        "type": "Default",
+        "title": "Naruto: Shippuuden"
+      },
+      {
+        "type": "Synonym",
+        "title": "Naruto Hurricane Chronicles"
+      },
+      {
+        "type": "Japanese",
+        "title": "-ナルト- 疾風伝"
+      },
+      {
+        "type": "English",
+        "title": "Naruto Shippuden"
+      },
+      {
+        "type": "German",
+        "title": "Naruto Shippuden"
+      },
+      {
+        "type": "Spanish",
+        "title": "Naruto Shippuden"
+      },
+      {
+        "type": "French",
+        "title": "Naruto Shippuden"
+      }
+    ],
+    "title": "Naruto: Shippuuden",
+    "title_english": "Naruto Shippuden",
+    "title_japanese": "-ナルト- 疾風伝",
+    "title_synonyms": [
+      "Naruto Hurricane Chronicles"
+    ],
+    "type": "TV",
+    "source": "Manga",
+    "episodes": 500,
+    "status": "Finished Airing",
+    "airing": false,
+    "aired": {
+      "from": "2007-02-15T00:00:00+00:00",
+      "to": "2017-03-23T00:00:00+00:00",
+      "prop": {
+        "from": {
+          "day": 15,
+          "month": 2,
+          "year": 2007
+        },
+        "to": {
+          "day": 23,
+          "month": 3,
+          "year": 2017
+        }
+      },
+      "string": "Feb 15, 2007 to Mar 23, 2017"
+    },
+    "duration": "23 min per ep",
+    "rating": "PG-13 - Teens 13 or older",
+    "score": 8.28,
+    "scored_by": 1782586,
+    "rank": 325,
+    "popularity": 15,
+    "members": 2683877,
+    "favorites": 118518,
+    "synopsis": "It has been two and a half years since Naruto Uzumaki left Konohagakure, the Hidden Leaf Village, for intense training following events which fueled his desire to be stronger. Now Akatsuki, the mysterious organization of elite rogue ninja, is closing in on their grand plan which may threaten the safety of the entire shinobi world.\n \nAlthough Naruto is older and sinister events loom on the horizon, he has changed little in personality—still rambunctious and childish—though he is now far more confident and possesses an even greater determination to protect his friends and home. Come whatever may, Naruto will carry on with the fight for what is important to him, even at the expense of his own body, in the continuation of the saga about the boy who wishes to become Hokage.\n\n[Written by MAL Rewrite]",
+    "background": "",
+    "season": "winter",
+    "year": 2007,
+    "broadcast": {
+      "day": "Thursdays",
+      "time": "19:30",
+      "timezone": "Asia/Tokyo",
+      "string": "Thursdays at 19:30 (JST)"
+    },
+    "producers": [
+      {
+        "mal_id": 16,
+        "type": "anime",
+        "name": "TV Tokyo",
+        "url": "https://myanimelist.net/anime/producer/16/TV_Tokyo"
+      },
+      {
+        "mal_id": 17,
+        "type": "anime",
+        "name": "Aniplex",
+        "url": "https://myanimelist.net/anime/producer/17/Aniplex"
+      },
+      {
+        "mal_id": 50,
+        "type": "anime",
+        "name": "KSS",
+        "url": "https://myanimelist.net/anime/producer/50/KSS"
+      },
+      {
+        "mal_id": 211,
+        "type": "anime",
+        "name": "Rakuonsha",
+        "url": "https://myanimelist.net/anime/producer/211/Rakuonsha"
+      },
+      {
+        "mal_id": 717,
+        "type": "anime",
+        "name": "TV Tokyo Music",
+        "url": "https://myanimelist.net/anime/producer/717/TV_Tokyo_Music"
+      }
+    ],
+    "licensors": [
+      {
+        "mal_id": 119,
+        "type": "anime",
+        "name": "VIZ Media",
+        "url": "https://myanimelist.net/anime/producer/119/VIZ_Media"
+      }
+    ],
+    "studios": [
+      {
+        "mal_id": 1,
+        "type": "anime",
+        "name": "Studio Pierrot",
+        "url": "https://myanimelist.net/anime/producer/1/Studio_Pierrot"
+      }
+    ],
+    "genres": [
+      {
+        "mal_id": 1,
+        "type": "anime",
+        "name": "Action",
+        "url": "https://myanimelist.net/anime/genre/1/Action"
+      },
+      {
+        "mal_id": 2,
+        "type": "anime",
+        "name": "Adventure",
+        "url": "https://myanimelist.net/anime/genre/2/Adventure"
+      },
+      {
+        "mal_id": 10,
+        "type": "anime",
+        "name": "Fantasy",
+        "url": "https://myanimelist.net/anime/genre/10/Fantasy"
+      }
+    ],
+    "explicit_genres": [],
+    "themes": [
+      {
+        "mal_id": 17,
+        "type": "anime",
+        "name": "Martial Arts",
+        "url": "https://myanimelist.net/anime/genre/17/Martial_Arts"
+      }
+    ],
+    "demographics": [
+      {
+        "mal_id": 27,
+        "type": "anime",
+        "name": "Shounen",
+        "url": "https://myanimelist.net/anime/genre/27/Shounen"
+      }
+    ]
+  },
+  {
+    "mal_id": 34566,
+    "url": "https://myanimelist.net/anime/34566/Boruto__Naruto_Next_Generations",
+    "images": {
+      "jpg": {
+        "image_url": "https://cdn.myanimelist.net/images/anime/1091/99847.jpg",
+        "small_image_url": "https://cdn.myanimelist.net/images/anime/1091/99847t.jpg",
+        "large_image_url": "https://cdn.myanimelist.net/images/anime/1091/99847l.jpg"
+      },
+      "webp": {
+        "image_url": "https://cdn.myanimelist.net/images/anime/1091/99847.webp",
+        "small_image_url": "https://cdn.myanimelist.net/images/anime/1091/99847t.webp",
+        "large_image_url": "https://cdn.myanimelist.net/images/anime/1091/99847l.webp"
+      }
+    },
+    "trailer": {
+      "youtube_id": null,
+      "url": null,
+      "embed_url": null,
+      "images": {
+        "image_url": null,
+        "small_image_url": null,
+        "medium_image_url": null,
+        "large_image_url": null,
+        "maximum_image_url": null
+      }
+    },
+    "approved": true,
+    "titles": [
+      {
+        "type": "Default",
+        "title": "Boruto: Naruto Next Generations"
+      },
+      {
+        "type": "Japanese",
+        "title": "BORUTO -NARUTO NEXT GENERATIONS-"
+      },
+      {
+        "type": "English",
+        "title": "Boruto: Naruto Next Generations"
+      }
+    ],
+    "title": "Boruto: Naruto Next Generations",
+    "title_english": "Boruto: Naruto Next Generations",
+    "title_japanese": "BORUTO -NARUTO NEXT GENERATIONS-",
+    "title_synonyms": [],
+    "type": "TV",
+    "source": "Manga",
+    "episodes": 293,
+    "status": "Finished Airing",
+    "airing": false,
+    "aired": {
+      "from": "2017-04-05T00:00:00+00:00",
+      "to": "2023-03-26T00:00:00+00:00",
+      "prop": {
+        "from": {
+          "day": 5,
+          "month": 4,
+          "year": 2017
+        },
+        "to": {
+          "day": 26,
+          "month": 3,
+          "year": 2023
+        }
+      },
+      "string": "Apr 5, 2017 to Mar 26, 2023"
+    },
+    "duration": "23 min per ep",
+    "rating": "PG-13 - Teens 13 or older",
+    "score": 5.98,
+    "scored_by": 469082,
+    "rank": 10329,
+    "popularity": 215,
+    "members": 916874,
+    "favorites": 7422,
+    "synopsis": "Following the successful end of the Fourth Shinobi World War, Konohagakure has been enjoying a period of peace, prosperity, and extraordinary technological advancement. This is all due to the efforts of the Allied Shinobi Forces and the village's Seventh Hokage, Naruto Uzumaki. Now resembling a modern metropolis, Konohagakure has changed, particularly the life of a shinobi. Under the watchful eye of Naruto and his old comrades, a new generation of shinobi has stepped up to learn the ways of the ninja.\n\nBoruto Uzumaki is often the center of attention as the son of the Seventh Hokage. Despite having inherited Naruto's boisterous and stubborn demeanor, Boruto is considered a prodigy and is able to unleash his potential with the help of supportive friends and family. Unfortunately, this has only worsened his arrogance and his desire to surpass Naruto which, along with his father's busy lifestyle, has strained their relationship. However, a sinister force brewing within the village may threaten Boruto's carefree life.\n\nNew friends and familiar faces join Boruto as a new story begins.\n\n[Written by MAL Rewrite]",
+    "background": "",
+    "season": "spring",
+    "year": 2017,
+    "broadcast": {
+      "day": "Sundays",
+      "time": "17:30",
+      "timezone": "Asia/Tokyo",
+      "string": "Sundays at 17:30 (JST)"
+    },
+    "producers": [
+      {
+        "mal_id": 16,
+        "type": "anime",
+        "name": "TV Tokyo",
+        "url": "https://myanimelist.net/anime/producer/16/TV_Tokyo"
+      },
+      {
+        "mal_id": 17,
+        "type": "anime",
+        "name": "Aniplex",
+        "url": "https://myanimelist.net/anime/producer/17/Aniplex"
+      },
+      {
+        "mal_id": 211,
+        "type": "anime",
+        "name": "Rakuonsha",
+        "url": "https://myanimelist.net/anime/producer/211/Rakuonsha"
+      },
+      {
+        "mal_id": 1365,
+        "type": "anime",
+        "name": "Shueisha",
+        "url": "https://myanimelist.net/anime/producer/1365/Shueisha"
+      }
+    ],
+    "licensors": [
+      {
+        "mal_id": 119,
+        "type": "anime",
+        "name": "VIZ Media",
+        "url": "https://myanimelist.net/anime/producer/119/VIZ_Media"
+      }
+    ],
+    "studios": [
+      {
+        "mal_id": 1,
+        "type": "anime",
+        "name": "Studio Pierrot",
+        "url": "https://myanimelist.net/anime/producer/1/Studio_Pierrot"
+      }
+    ],
+    "genres": [
+      {
+        "mal_id": 1,
+        "type": "anime",
+        "name": "Action",
+        "url": "https://myanimelist.net/anime/genre/1/Action"
+      },
+      {
+        "mal_id": 2,
+        "type": "anime",
+        "name": "Adventure",
+        "url": "https://myanimelist.net/anime/genre/2/Adventure"
+      },
+      {
+        "mal_id": 10,
+        "type": "anime",
+        "name": "Fantasy",
+        "url": "https://myanimelist.net/anime/genre/10/Fantasy"
+      }
+    ],
+    "explicit_genres": [],
+    "themes": [
+      {
+        "mal_id": 17,
+        "type": "anime",
+        "name": "Martial Arts",
+        "url": "https://myanimelist.net/anime/genre/17/Martial_Arts"
+      }
+    ],
+    "demographics": [
+      {
+        "mal_id": 27,
+        "type": "anime",
+        "name": "Shounen",
+        "url": "https://myanimelist.net/anime/genre/27/Shounen"
+      }
+    ]
+  },
+  {
+    "mal_id": 269,
+    "url": "https://myanimelist.net/anime/269/Bleach",
+    "images": {
+      "jpg": {
+        "image_url": "https://cdn.myanimelist.net/images/anime/1541/147774.jpg",
+        "small_image_url": "https://cdn.myanimelist.net/images/anime/1541/147774t.jpg",
+        "large_image_url": "https://cdn.myanimelist.net/images/anime/1541/147774l.jpg"
+      },
+      "webp": {
+        "image_url": "https://cdn.myanimelist.net/images/anime/1541/147774.webp",
+        "small_image_url": "https://cdn.myanimelist.net/images/anime/1541/147774t.webp",
+        "large_image_url": "https://cdn.myanimelist.net/images/anime/1541/147774l.webp"
+      }
+    },
+    "trailer": {
+      "youtube_id": null,
+      "url": null,
+      "embed_url": "https://www.youtube-nocookie.com/embed/0yk5H6vvfG4?enablejsapi=1&wmode=opaque&autoplay=1",
+      "images": {
+        "image_url": null,
+        "small_image_url": null,
+        "medium_image_url": null,
+        "large_image_url": null,
+        "maximum_image_url": null
+      }
+    },
+    "approved": true,
+    "titles": [
+      {
+        "type": "Default",
+        "title": "Bleach"
+      },
+      {
+        "type": "Japanese",
+        "title": "BLEACH - ブリーチ -"
+      },
+      {
+        "type": "English",
+        "title": "Bleach"
+      }
+    ],
+    "title": "Bleach",
+    "title_english": "Bleach",
+    "title_japanese": "BLEACH - ブリーチ -",
+    "title_synonyms": [],
+    "type": "TV",
+    "source": "Manga",
+    "episodes": 366,
+    "status": "Finished Airing",
+    "airing": false,
+    "aired": {
+      "from": "2004-10-05T00:00:00+00:00",
+      "to": "2012-03-27T00:00:00+00:00",
+      "prop": {
+        "from": {
+          "day": 5,
+          "month": 10,
+          "year": 2004
+        },
+        "to": {
+          "day": 27,
+          "month": 3,
+          "year": 2012
+        }
+      },
+      "string": "Oct 5, 2004 to Mar 27, 2012"
+    },
+    "duration": "24 min per ep",
+    "rating": "PG-13 - Teens 13 or older",
+    "score": 7.98,
+    "scored_by": 1229234,
+    "rank": 723,
+    "popularity": 35,
+    "members": 2148800,
+    "favorites": 81237,
+    "synopsis": "Ichigo Kurosaki is an ordinary high schooler—until his family is attacked by a Hollow, a corrupt spirit that seeks to devour human souls. It is then that he meets a Soul Reaper named Rukia Kuchiki, who gets injured while protecting Ichigo's family from the assailant. To save his family, Ichigo accepts Rukia's offer of taking her powers and becomes a Soul Reaper as a result.\n\nHowever, as Rukia is unable to regain her powers, Ichigo is given the daunting task of hunting down the Hollows that plague their town. However, he is not alone in his fight, as he is later joined by his friends—classmates Orihime Inoue, Yasutora Sado, and Uryuu Ishida—who each have their own unique abilities. As Ichigo and his comrades get used to their new duties and support each other on and off the battlefield, the young Soul Reaper soon learns that the Hollows are not the only real threat to the human world.\n\n[Written by MAL Rewrite]",
+    "background": "Bleach adapts the first 54 volumes of Tite Kubo's manga series of the same name. In addition, 4 anime-original arcs were broadcast in-between and during the adaptations of original arcs of the manga.",
+    "season": "fall",
+    "year": 2004,
+    "broadcast": {
+      "day": "Tuesdays",
+      "time": "18:00",
+      "timezone": "Asia/Tokyo",
+      "string": "Tuesdays at 18:00 (JST)"
+    },
+    "producers": [
+      {
+        "mal_id": 16,
+        "type": "anime",
+        "name": "TV Tokyo",
+        "url": "https://myanimelist.net/anime/producer/16/TV_Tokyo"
+      },
+      {
+        "mal_id": 17,
+        "type": "anime",
+        "name": "Aniplex",
+        "url": "https://myanimelist.net/anime/producer/17/Aniplex"
+      },
+      {
+        "mal_id": 53,
+        "type": "anime",
+        "name": "Dentsu",
+        "url": "https://myanimelist.net/anime/producer/53/Dentsu"
+      },
+      {
+        "mal_id": 717,
+        "type": "anime",
+        "name": "TV Tokyo Music",
+        "url": "https://myanimelist.net/anime/producer/717/TV_Tokyo_Music"
+      },
+      {
+        "mal_id": 1365,
+        "type": "anime",
+        "name": "Shueisha",
+        "url": "https://myanimelist.net/anime/producer/1365/Shueisha"
+      }
+    ],
+    "licensors": [
+      {
+        "mal_id": 119,
+        "type": "anime",
+        "name": "VIZ Media",
+        "url": "https://myanimelist.net/anime/producer/119/VIZ_Media"
+      }
+    ],
+    "studios": [
+      {
+        "mal_id": 1,
+        "type": "anime",
+        "name": "Studio Pierrot",
+        "url": "https://myanimelist.net/anime/producer/1/Studio_Pierrot"
+      }
+    ],
+    "genres": [
+      {
+        "mal_id": 1,
+        "type": "anime",
+        "name": "Action",
+        "url": "https://myanimelist.net/anime/genre/1/Action"
+      },
+      {
+        "mal_id": 2,
+        "type": "anime",
+        "name": "Adventure",
+        "url": "https://myanimelist.net/anime/genre/2/Adventure"
+      },
+      {
+        "mal_id": 37,
+        "type": "anime",
+        "name": "Supernatural",
+        "url": "https://myanimelist.net/anime/genre/37/Supernatural"
+      }
+    ],
+    "explicit_genres": [],
+    "themes": [],
+    "demographics": [
+      {
+        "mal_id": 27,
+        "type": "anime",
+        "name": "Shounen",
+        "url": "https://myanimelist.net/anime/genre/27/Shounen"
+      }
+    ]
+  },
+  {
+    "mal_id": 41467,
+    "url": "https://myanimelist.net/anime/41467/Bleach__Sennen_Kessen-hen",
+    "images": {
+      "jpg": {
+        "image_url": "https://cdn.myanimelist.net/images/anime/1908/135431.jpg",
+        "small_image_url": "https://cdn.myanimelist.net/images/anime/1908/135431t.jpg",
+        "large_image_url": "https://cdn.myanimelist.net/images/anime/1908/135431l.jpg"
+      },
+      "webp": {
+        "image_url": "https://cdn.myanimelist.net/images/anime/1908/135431.webp",
+        "small_image_url": "https://cdn.myanimelist.net/images/anime/1908/135431t.webp",
+        "large_image_url": "https://cdn.myanimelist.net/images/anime/1908/135431l.webp"
+      }
+    },
+    "trailer": {
+      "youtube_id": null,
+      "url": null,
+      "embed_url": "https://www.youtube-nocookie.com/embed/e8YBesRKq_U?enablejsapi=1&wmode=opaque&autoplay=1",
+      "images": {
+        "image_url": null,
+        "small_image_url": null,
+        "medium_image_url": null,
+        "large_image_url": null,
+        "maximum_image_url": null
+      }
+    },
+    "approved": true,
+    "titles": [
+      {
+        "type": "Default",
+        "title": "Bleach: Sennen Kessen-hen"
+      },
+      {
+        "type": "Synonym",
+        "title": "Bleach: Thousand-Year Blood War Arc"
+      },
+      {
+        "type": "Japanese",
+        "title": "BLEACH 千年血戦篇"
+      },
+      {
+        "type": "English",
+        "title": "Bleach: Thousand-Year Blood War"
+      }
+    ],
+    "title": "Bleach: Sennen Kessen-hen",
+    "title_english": "Bleach: Thousand-Year Blood War",
+    "title_japanese": "BLEACH 千年血戦篇",
+    "title_synonyms": [
+      "Bleach: Thousand-Year Blood War Arc"
+    ],
+    "type": "TV",
+    "source": "Manga",
+    "episodes": 13,
+    "status": "Finished Airing",
+    "airing": false,
+    "aired": {
+      "from": "2022-10-11T00:00:00+00:00",
+      "to": "2022-12-27T00:00:00+00:00",
+      "prop": {
+        "from": {
+          "day": 11,
+          "month": 10,
+          "year": 2022
+        },
+        "to": {
+          "day": 27,
+          "month": 12,
+          "year": 2022
+        }
+      },
+      "string": "Oct 11, 2022 to Dec 27, 2022"
+    },
+    "duration": "24 min per ep",
+    "rating": "R - 17+ (violence & profanity)",
+    "score": 8.99,
+    "scored_by": 358696,
+    "rank": 14,
+    "popularity": 354,
+    "members": 668904,
+    "favorites": 22723,
+    "synopsis": "Substitute Soul Reaper Ichigo Kurosaki spends his days fighting against Hollows, dangerous evil spirits that threaten Karakura Town. Ichigo carries out his quest with his closest allies: Orihime Inoue, his childhood friend with a talent for healing; Yasutora Sado, his high school classmate with superhuman strength; and Uryuu Ishida, Ichigo's Quincy rival.\n\nIchigo's vigilante routine is disrupted by the sudden appearance of Asguiaro Ebern, a dangerous Arrancar who heralds the return of Yhwach, an ancient Quincy king. Yhwach seeks to reignite the historic blood feud between Soul Reaper and Quincy, and he sets his sights on erasing both the human world and the Soul Society for good.\n\nYhwach launches a two-pronged invasion into both the Soul Society and Hueco Mundo, the home of Hollows and Arrancar. In retaliation, Ichigo and his friends must fight alongside old allies and enemies alike to end Yhwach's campaign of carnage before the world itself comes to an end.\n\n[Written by MAL Rewrite]",
+    "background": "Bleach: Sennen Kessen-hen adapts volume 55 to volume 61 of the original manga. It was released on Blu-ray on April 26, 2023.",
+    "season": "fall",
+    "year": 2022,
+    "broadcast": {
+      "day": "Tuesdays",
+      "time": "00:00",
+      "timezone": "Asia/Tokyo",
+      "string": "Tuesdays at 00:00 (JST)"
+    },
+    "producers": [
+      {
+        "mal_id": 16,
+        "type": "anime",
+        "name": "TV Tokyo",
+        "url": "https://myanimelist.net/anime/producer/16/TV_Tokyo"
+      },
+      {
+        "mal_id": 17,
+        "type": "anime",
+        "name": "Aniplex",
+        "url": "https://myanimelist.net/anime/producer/17/Aniplex"
+      },
+      {
+        "mal_id": 53,
+        "type": "anime",
+        "name": "Dentsu",
+        "url": "https://myanimelist.net/anime/producer/53/Dentsu"
+      },
+      {
+        "mal_id": 1365,
+        "type": "anime",
+        "name": "Shueisha",
+        "url": "https://myanimelist.net/anime/producer/1365/Shueisha"
+      }
+    ],
+    "licensors": [
+      {
+        "mal_id": 119,
+        "type": "anime",
+        "name": "VIZ Media",
+        "url": "https://myanimelist.net/anime/producer/119/VIZ_Media"
+      }
+    ],
+    "studios": [
+      {
+        "mal_id": 1,
+        "type": "anime",
+        "name": "Studio Pierrot",
+        "url": "https://myanimelist.net/anime/producer/1/Studio_Pierrot"
+      }
+    ],
+    "genres": [
+      {
+        "mal_id": 1,
+        "type": "anime",
+        "name": "Action",
+        "url": "https://myanimelist.net/anime/genre/1/Action"
+      },
+      {
+        "mal_id": 2,
+        "type": "anime",
+        "name": "Adventure",
+        "url": "https://myanimelist.net/anime/genre/2/Adventure"
+      },
+      {
+        "mal_id": 37,
+        "type": "anime",
+        "name": "Supernatural",
+        "url": "https://myanimelist.net/anime/genre/37/Supernatural"
+      }
+    ],
+    "explicit_genres": [],
+    "themes": [],
+    "demographics": [
+      {
+        "mal_id": 27,
+        "type": "anime",
+        "name": "Shounen",
+        "url": "https://myanimelist.net/anime/genre/27/Shounen"
+      }
+    ]
+  },
+  {
+    "mal_id": 22319,
+    "url": "https://myanimelist.net/anime/22319/Tokyo_Ghoul",
+    "images": {
+      "jpg": {
+        "image_url": "https://cdn.myanimelist.net/images/anime/1498/134443.jpg",
+        "small_image_url": "https://cdn.myanimelist.net/images/anime/1498/134443t.jpg",
+        "large_image_url": "https://cdn.myanimelist.net/images/anime/1498/134443l.jpg"
+      },
+      "webp": {
+        "image_url": "https://cdn.myanimelist.net/images/anime/1498/134443.webp",
+        "small_image_url": "https://cdn.myanimelist.net/images/anime/1498/134443t.webp",
+        "large_image_url": "https://cdn.myanimelist.net/images/anime/1498/134443l.webp"
+      }
+    },
+    "trailer": {
+      "youtube_id": null,
+      "url": null,
+      "embed_url": "https://www.youtube-nocookie.com/embed/vGuQeQsoRgU?enablejsapi=1&wmode=opaque&autoplay=1",
+      "images": {
+        "image_url": null,
+        "small_image_url": null,
+        "medium_image_url": null,
+        "large_image_url": null,
+        "maximum_image_url": null
+      }
+    },
+    "approved": true,
+    "titles": [
+      {
+        "type": "Default",
+        "title": "Tokyo Ghoul"
+      },
+      {
+        "type": "Synonym",
+        "title": "Tokyo Kushu"
+      },
+      {
+        "type": "Synonym",
+        "title": "Toukyou Kushu"
+      },
+      {
+        "type": "Synonym",
+        "title": "Toukyou Ghoul"
+      },
+      {
+        "type": "Japanese",
+        "title": "東京喰種-トーキョーグール-"
+      },
+      {
+        "type": "English",
+        "title": "Tokyo Ghoul"
+      }
+    ],
+    "title": "Tokyo Ghoul",
+    "title_english": "Tokyo Ghoul",
+    "title_japanese": "東京喰種-トーキョーグール-",
+    "title_synonyms": [
+      "Tokyo Kushu",
+      "Toukyou Kushu",
+      "Toukyou Ghoul"
+    ],
+    "type": "TV",
+    "source": "Manga",
+    "episodes": 12,
+    "status": "Finished Airing",
+    "airing": false,
+    "aired": {
+      "from": "2014-07-04T00:00:00+00:00",
+      "to": "2014-09-19T00:00:00+00:00",
+      "prop": {
+        "from": {
+          "day": 4,
+          "month": 7,
+          "year": 2014
+        },
+        "to": {
+          "day": 19,
+          "month": 9,
+          "year": 2014
+        }
+      },
+      "string": "Jul 4, 2014 to Sep 19, 2014"
+    },
+    "duration": "24 min per ep",
+    "rating": "R - 17+ (violence & profanity)",
+    "score": 7.79,
+    "scored_by": 1968768,
+    "rank": 1111,
+    "popularity": 10,
+    "members": 2999107,
+    "favorites": 52440,
+    "synopsis": "A sinister threat is invading Tokyo: flesh-eating \"ghouls\" who appear identical to humans and blend into their population. Reserved college student Ken Kaneki buries his nose in books and avoids the news of the growing crisis. However, the appearance of an attractive woman named Rize Kamishiro shatters his solitude when she forwardly asks him on a date.\n\nWhile walking Rize home, Kaneki discovers she isn't as kind as she first appeared, and she has led him on with sinister intent. After a tragic struggle, he later awakens in a hospital to learn his life was saved by transplanting the now deceased Rize's organs into his own body.\n\nKaneki's body begins to change in horrifying ways, and he transforms into a human-ghoul hybrid. As he embarks on his new dreadful journey, Kaneki clings to his humanity in the evolving bloody conflict between society's new monsters and the government agents who hunt them.\n\n[Written by MAL Rewrite]",
+    "background": "",
+    "season": "summer",
+    "year": 2014,
+    "broadcast": {
+      "day": "Fridays",
+      "time": "00:00",
+      "timezone": "Asia/Tokyo",
+      "string": "Fridays at 00:00 (JST)"
+    },
+    "producers": [
+      {
+        "mal_id": 751,
+        "type": "anime",
+        "name": "Marvelous AQL",
+        "url": "https://myanimelist.net/anime/producer/751/Marvelous_AQL"
+      },
+      {
+        "mal_id": 1283,
+        "type": "anime",
+        "name": "TC Entertainment",
+        "url": "https://myanimelist.net/anime/producer/1283/TC_Entertainment"
+      },
+      {
+        "mal_id": 1365,
+        "type": "anime",
+        "name": "Shueisha",
+        "url": "https://myanimelist.net/anime/producer/1365/Shueisha"
+      }
+    ],
+    "licensors": [
+      {
+        "mal_id": 102,
+        "type": "anime",
+        "name": "Funimation",
+        "url": "https://myanimelist.net/anime/producer/102/Funimation"
+      }
+    ],
+    "studios": [
+      {
+        "mal_id": 1,
+        "type": "anime",
+        "name": "Studio Pierrot",
+        "url": "https://myanimelist.net/anime/producer/1/Studio_Pierrot"
+      }
+    ],
+    "genres": [
+      {
+        "mal_id": 1,
+        "type": "anime",
+        "name": "Action",
+        "url": "https://myanimelist.net/anime/genre/1/Action"
+      },
+      {
+        "mal_id": 10,
+        "type": "anime",
+        "name": "Fantasy",
+        "url": "https://myanimelist.net/anime/genre/10/Fantasy"
+      },
+      {
+        "mal_id": 14,
+        "type": "anime",
+        "name": "Horror",
+        "url": "https://myanimelist.net/anime/genre/14/Horror"
+      },
+      {
+        "mal_id": 41,
+        "type": "anime",
+        "name": "Suspense",
+        "url": "https://myanimelist.net/anime/genre/41/Suspense"
+      }
+    ],
+    "explicit_genres": [],
+    "themes": [
+      {
+        "mal_id": 58,
+        "type": "anime",
+        "name": "Gore",
+        "url": "https://myanimelist.net/anime/genre/58/Gore"
+      },
+      {
+        "mal_id": 40,
+        "type": "anime",
+        "name": "Psychological",
+        "url": "https://myanimelist.net/anime/genre/40/Psychological"
+      },
+      {
+        "mal_id": 82,
+        "type": "anime",
+        "name": "Urban Fantasy",
+        "url": "https://myanimelist.net/anime/genre/82/Urban_Fantasy"
+      }
+    ],
+    "demographics": [
+      {
+        "mal_id": 42,
+        "type": "anime",
+        "name": "Seinen",
+        "url": "https://myanimelist.net/anime/genre/42/Seinen"
+      }
+    ]
+  },
+  {
+    "mal_id": 27899,
+    "url": "https://myanimelist.net/anime/27899/Tokyo_Ghoul_√A",
+    "images": {
+      "jpg": {
+        "image_url": "https://cdn.myanimelist.net/images/anime/1889/123307.jpg",
+        "small_image_url": "https://cdn.myanimelist.net/images/anime/1889/123307t.jpg",
+        "large_image_url": "https://cdn.myanimelist.net/images/anime/1889/123307l.jpg"
+      },
+      "webp": {
+        "image_url": "https://cdn.myanimelist.net/images/anime/1889/123307.webp",
+        "small_image_url": "https://cdn.myanimelist.net/images/anime/1889/123307t.webp",
+        "large_image_url": "https://cdn.myanimelist.net/images/anime/1889/123307l.webp"
+      }
+    },
+    "trailer": {
+      "youtube_id": null,
+      "url": null,
+      "embed_url": "https://www.youtube-nocookie.com/embed/M2DObpz2174?enablejsapi=1&wmode=opaque&autoplay=1",
+      "images": {
+        "image_url": null,
+        "small_image_url": null,
+        "medium_image_url": null,
+        "large_image_url": null,
+        "maximum_image_url": null
+      }
+    },
+    "approved": true,
+    "titles": [
+      {
+        "type": "Default",
+        "title": "Tokyo Ghoul √A"
+      },
+      {
+        "type": "Synonym",
+        "title": "Tokyo Ghoul Root A"
+      },
+      {
+        "type": "Synonym",
+        "title": "Tokyo Ghoul 2nd Season"
+      },
+      {
+        "type": "Synonym",
+        "title": "Tokyo Ghoul Second Season"
+      },
+      {
+        "type": "Japanese",
+        "title": "東京喰種√A"
+      },
+      {
+        "type": "English",
+        "title": "Tokyo Ghoul √A"
+      }
+    ],
+    "title": "Tokyo Ghoul √A",
+    "title_english": "Tokyo Ghoul √A",
+    "title_japanese": "東京喰種√A",
+    "title_synonyms": [
+      "Tokyo Ghoul Root A",
+      "Tokyo Ghoul 2nd Season",
+      "Tokyo Ghoul Second Season"
+    ],
+    "type": "TV",
+    "source": "Manga",
+    "episodes": 12,
+    "status": "Finished Airing",
+    "airing": false,
+    "aired": {
+      "from": "2015-01-09T00:00:00+00:00",
+      "to": "2015-03-27T00:00:00+00:00",
+      "prop": {
+        "from": {
+          "day": 9,
+          "month": 1,
+          "year": 2015
+        },
+        "to": {
+          "day": 27,
+          "month": 3,
+          "year": 2015
+        }
+      },
+      "string": "Jan 9, 2015 to Mar 27, 2015"
+    },
+    "duration": "24 min per ep",
+    "rating": "R - 17+ (violence & profanity)",
+    "score": 7.03,
+    "scored_by": 1254802,
+    "rank": 4403,
+    "popularity": 52,
+    "members": 1870035,
+    "favorites": 10723,
+    "synopsis": "Ken Kaneki has finally come to accept the monstrous, flesh-craving part of himself that he has feared and despised for so long. After escaping captivity and torture, Kaneki joins Aogiri Tree—the very militant ghoul organization that had abducted him, leading his friends to question his true motive and loyalty.\n\nAs tension between the government and the ghouls continues to rise, the Commission of Counter Ghoul, the government's specialized anti-ghoul agency, has intensified their efforts to completely purge Tokyo of ghouls. This threatens the transient peace of Kaneki's friends and former comrades—the ghouls at the Anteiku coffee shop. Aware of the dangerous situation, Kaneki faces several battles that puts his precious fleeting humanity on the line.\n\n[Written by MAL Rewrite]",
+    "background": "Both the Tokyo Ghoul manga and Tokyo Ghoul √A anime concluded with the same last arc, but how the anime arrived at that ending diverged greatly from the source material. Besides changing the ending fight scene and the main major plot of the manga, which was the focus of many chapters in the manga, Tokyo Ghoul √A also features a watered-down and greatly changed version of the source manga's final arc. Episode 1 was previewed at a screening at TOHO Cinemas, Nihonbashi on January 4, 2015. Regular broadcasting began on January 9, 2015.",
+    "season": "winter",
+    "year": 2015,
+    "broadcast": {
+      "day": "Fridays",
+      "time": "00:00",
+      "timezone": "Asia/Tokyo",
+      "string": "Fridays at 00:00 (JST)"
+    },
+    "producers": [
+      {
+        "mal_id": 751,
+        "type": "anime",
+        "name": "Marvelous AQL",
+        "url": "https://myanimelist.net/anime/producer/751/Marvelous_AQL"
+      },
+      {
+        "mal_id": 1365,
+        "type": "anime",
+        "name": "Shueisha",
+        "url": "https://myanimelist.net/anime/producer/1365/Shueisha"
+      }
+    ],
+    "licensors": [
+      {
+        "mal_id": 102,
+        "type": "anime",
+        "name": "Funimation",
+        "url": "https://myanimelist.net/anime/producer/102/Funimation"
+      }
+    ],
+    "studios": [
+      {
+        "mal_id": 1,
+        "type": "anime",
+        "name": "Studio Pierrot",
+        "url": "https://myanimelist.net/anime/producer/1/Studio_Pierrot"
+      }
+    ],
+    "genres": [
+      {
+        "mal_id": 1,
+        "type": "anime",
+        "name": "Action",
+        "url": "https://myanimelist.net/anime/genre/1/Action"
+      },
+      {
+        "mal_id": 10,
+        "type": "anime",
+        "name": "Fantasy",
+        "url": "https://myanimelist.net/anime/genre/10/Fantasy"
+      },
+      {
+        "mal_id": 14,
+        "type": "anime",
+        "name": "Horror",
+        "url": "https://myanimelist.net/anime/genre/14/Horror"
+      },
+      {
+        "mal_id": 41,
+        "type": "anime",
+        "name": "Suspense",
+        "url": "https://myanimelist.net/anime/genre/41/Suspense"
+      }
+    ],
+    "explicit_genres": [],
+    "themes": [
+      {
+        "mal_id": 58,
+        "type": "anime",
+        "name": "Gore",
+        "url": "https://myanimelist.net/anime/genre/58/Gore"
+      },
+      {
+        "mal_id": 40,
+        "type": "anime",
+        "name": "Psychological",
+        "url": "https://myanimelist.net/anime/genre/40/Psychological"
+      },
+      {
+        "mal_id": 82,
+        "type": "anime",
+        "name": "Urban Fantasy",
+        "url": "https://myanimelist.net/anime/genre/82/Urban_Fantasy"
+      }
+    ],
+    "demographics": [
+      {
+        "mal_id": 42,
+        "type": "anime",
+        "name": "Seinen",
+        "url": "https://myanimelist.net/anime/genre/42/Seinen"
+      }
+    ]
+  },
+  {
+    "mal_id": 34572,
+    "url": "https://myanimelist.net/anime/34572/Black_Clover",
+    "images": {
+      "jpg": {
+        "image_url": "https://cdn.myanimelist.net/images/anime/2/88336.jpg",
+        "small_image_url": "https://cdn.myanimelist.net/images/anime/2/88336t.jpg",
+        "large_image_url": "https://cdn.myanimelist.net/images/anime/2/88336l.jpg"
+      },
+      "webp": {
+        "image_url": "https://cdn.myanimelist.net/images/anime/2/88336.webp",
+        "small_image_url": "https://cdn.myanimelist.net/images/anime/2/88336t.webp",
+        "large_image_url": "https://cdn.myanimelist.net/images/anime/2/88336l.webp"
+      }
+    },
+    "trailer": {
+      "youtube_id": null,
+      "url": null,
+      "embed_url": "https://www.youtube-nocookie.com/embed/vUjAxk1qYzQ?enablejsapi=1&wmode=opaque&autoplay=1",
+      "images": {
+        "image_url": null,
+        "small_image_url": null,
+        "medium_image_url": null,
+        "large_image_url": null,
+        "maximum_image_url": null
+      }
+    },
+    "approved": true,
+    "titles": [
+      {
+        "type": "Default",
+        "title": "Black Clover"
+      },
+      {
+        "type": "Japanese",
+        "title": "ブラッククローバー"
+      },
+      {
+        "type": "English",
+        "title": "Black Clover"
+      }
+    ],
+    "title": "Black Clover",
+    "title_english": "Black Clover",
+    "title_japanese": "ブラッククローバー",
+    "title_synonyms": [],
+    "type": "TV",
+    "source": "Manga",
+    "episodes": 170,
+    "status": "Finished Airing",
+    "airing": false,
+    "aired": {
+      "from": "2017-10-03T00:00:00+00:00",
+      "to": "2021-03-30T00:00:00+00:00",
+      "prop": {
+        "from": {
+          "day": 3,
+          "month": 10,
+          "year": 2017
+        },
+        "to": {
+          "day": 30,
+          "month": 3,
+          "year": 2021
+        }
+      },
+      "string": "Oct 3, 2017 to Mar 30, 2021"
+    },
+    "duration": "23 min per ep",
+    "rating": "PG-13 - Teens 13 or older",
+    "score": 8.14,
+    "scored_by": 952301,
+    "rank": 500,
+    "popularity": 55,
+    "members": 1845824,
+    "favorites": 50007,
+    "synopsis": "Asta and Yuno were abandoned at the same church on the same day. Raised together as children, they came to know of the \"Wizard King\"—a title given to the strongest mage in the kingdom—and promised that they would compete against each other for the position of the next Wizard King. However, as they grew up, the stark difference between them became evident. While Yuno is able to wield magic with amazing power and control, Asta cannot use magic at all and desperately tries to awaken his powers by training physically.\n\nWhen they reach the age of 15, Yuno is bestowed a spectacular Grimoire with a four-leaf clover, while Asta receives nothing. However, soon after, Yuno is attacked by a person named Lebuty, whose main purpose is to obtain Yuno's Grimoire. Asta tries to fight Lebuty, but he is outmatched. Though without hope and on the brink of defeat, he finds the strength to continue when he hears Yuno's voice. Unleashing his inner emotions in a rage, Asta receives a five-leaf clover Grimoire, a \"Black Clover\" giving him enough power to defeat Lebuty. A few days later, the two friends head out into the world, both seeking the same goal—to become the Wizard King!\n\n[Written by MAL Rewrite]",
+    "background": "Black Clover adapts the first 27 volumes of the original manga.",
+    "season": "fall",
+    "year": 2017,
+    "broadcast": {
+      "day": "Tuesdays",
+      "time": "18:25",
+      "timezone": "Asia/Tokyo",
+      "string": "Tuesdays at 18:25 (JST)"
+    },
+    "producers": [
+      {
+        "mal_id": 16,
+        "type": "anime",
+        "name": "TV Tokyo",
+        "url": "https://myanimelist.net/anime/producer/16/TV_Tokyo"
+      },
+      {
+        "mal_id": 1284,
+        "type": "anime",
+        "name": "Avex Pictures",
+        "url": "https://myanimelist.net/anime/producer/1284/Avex_Pictures"
+      },
+      {
+        "mal_id": 1365,
+        "type": "anime",
+        "name": "Shueisha",
+        "url": "https://myanimelist.net/anime/producer/1365/Shueisha"
+      }
+    ],
+    "licensors": [
+      {
+        "mal_id": 102,
+        "type": "anime",
+        "name": "Funimation",
+        "url": "https://myanimelist.net/anime/producer/102/Funimation"
+      },
+      {
+        "mal_id": 1468,
+        "type": "anime",
+        "name": "Crunchyroll",
+        "url": "https://myanimelist.net/anime/producer/1468/Crunchyroll"
+      }
+    ],
+    "studios": [
+      {
+        "mal_id": 1,
+        "type": "anime",
+        "name": "Studio Pierrot",
+        "url": "https://myanimelist.net/anime/producer/1/Studio_Pierrot"
+      }
+    ],
+    "genres": [
+      {
+        "mal_id": 1,
+        "type": "anime",
+        "name": "Action",
+        "url": "https://myanimelist.net/anime/genre/1/Action"
+      },
+      {
+        "mal_id": 10,
+        "type": "anime",
+        "name": "Fantasy",
+        "url": "https://myanimelist.net/anime/genre/10/Fantasy"
+      }
+    ],
+    "explicit_genres": [],
+    "themes": [],
+    "demographics": [
+      {
+        "mal_id": 27,
+        "type": "anime",
+        "name": "Shounen",
+        "url": "https://myanimelist.net/anime/genre/27/Shounen"
+      }
+    ]
+  },
+  {
+    "mal_id": 392,
+    "url": "https://myanimelist.net/anime/392/Yuu☆Yuu☆Hakusho",
+    "images": {
+      "jpg": {
+        "image_url": "https://cdn.myanimelist.net/images/anime/1228/111372.jpg",
+        "small_image_url": "https://cdn.myanimelist.net/images/anime/1228/111372t.jpg",
+        "large_image_url": "https://cdn.myanimelist.net/images/anime/1228/111372l.jpg"
+      },
+      "webp": {
+        "image_url": "https://cdn.myanimelist.net/images/anime/1228/111372.webp",
+        "small_image_url": "https://cdn.myanimelist.net/images/anime/1228/111372t.webp",
+        "large_image_url": "https://cdn.myanimelist.net/images/anime/1228/111372l.webp"
+      }
+    },
+    "trailer": {
+      "youtube_id": null,
+      "url": null,
+      "embed_url": "https://www.youtube-nocookie.com/embed/ZJEv4d2TYQ4?enablejsapi=1&wmode=opaque&autoplay=1",
+      "images": {
+        "image_url": null,
+        "small_image_url": null,
+        "medium_image_url": null,
+        "large_image_url": null,
+        "maximum_image_url": null
+      }
+    },
+    "approved": true,
+    "titles": [
+      {
+        "type": "Default",
+        "title": "Yuu☆Yuu☆Hakusho"
+      },
+      {
+        "type": "Synonym",
+        "title": "Yu Yu Hakusho"
+      },
+      {
+        "type": "Synonym",
+        "title": "Ghost Fighter"
+      },
+      {
+        "type": "Synonym",
+        "title": "Poltergeist Report"
+      },
+      {
+        "type": "Synonym",
+        "title": "YuYu Hakusho"
+      },
+      {
+        "type": "Japanese",
+        "title": "幽☆遊☆白書"
+      },
+      {
+        "type": "English",
+        "title": "Yu Yu Hakusho: Ghost Files"
+      },
+      {
+        "type": "Spanish",
+        "title": "Yu Yu Hakusho"
+      },
+      {
+        "type": "French",
+        "title": "Yu Yu Hakusho"
+      }
+    ],
+    "title": "Yuu☆Yuu☆Hakusho",
+    "title_english": "Yu Yu Hakusho: Ghost Files",
+    "title_japanese": "幽☆遊☆白書",
+    "title_synonyms": [
+      "Yu Yu Hakusho",
+      "Ghost Fighter",
+      "Poltergeist Report",
+      "YuYu Hakusho"
+    ],
+    "type": "TV",
+    "source": "Manga",
+    "episodes": 112,
+    "status": "Finished Airing",
+    "airing": false,
+    "aired": {
+      "from": "1992-10-10T00:00:00+00:00",
+      "to": "1995-01-07T00:00:00+00:00",
+      "prop": {
+        "from": {
+          "day": 10,
+          "month": 10,
+          "year": 1992
+        },
+        "to": {
+          "day": 7,
+          "month": 1,
+          "year": 1995
+        }
+      },
+      "string": "Oct 10, 1992 to Jan 7, 1995"
+    },
+    "duration": "23 min per ep",
+    "rating": "PG-13 - Teens 13 or older",
+    "score": 8.46,
+    "scored_by": 352372,
+    "rank": 168,
+    "popularity": 302,
+    "members": 739689,
+    "favorites": 24341,
+    "synopsis": "One fateful day, Yuusuke Urameshi, a 14-year-old delinquent with a dim future, gets a miraculous chance to turn it all around when he throws himself in front of a moving car to save a young boy. His ultimate sacrifice is so out of character that the authorities of the spirit realm are not yet prepared to let him pass on. Koenma, heir to the throne of the spirit realm, offers Yuusuke an opportunity to regain his life through completion of a series of tasks. With the guidance of the death god Botan, he is to thwart evil presences on Earth as a Spirit Detective.\n\nTo help him on his venture, Yuusuke enlists ex-rival Kazuma Kuwabara, and two demons, Hiei and Kurama, who have criminal pasts. Together, they train and battle against enemies who would threaten humanity's very existence.\n\n[Written by MAL Rewrite]",
+    "background": "Yuu☆Yuu☆Hakusho was voted as the second best anime of the year in 1993 and best anime of the year in 1994 and 1995 at the Animage Anime Grand Prix.",
+    "season": "fall",
+    "year": 1992,
+    "broadcast": {
+      "day": "Saturdays",
+      "time": "18:30",
+      "timezone": "Asia/Tokyo",
+      "string": "Saturdays at 18:30 (JST)"
+    },
+    "producers": [
+      {
+        "mal_id": 127,
+        "type": "anime",
+        "name": "Yomiko Advertising",
+        "url": "https://myanimelist.net/anime/producer/127/Yomiko_Advertising"
+      },
+      {
+        "mal_id": 169,
+        "type": "anime",
+        "name": "Fuji TV",
+        "url": "https://myanimelist.net/anime/producer/169/Fuji_TV"
+      }
+    ],
+    "licensors": [
+      {
+        "mal_id": 102,
+        "type": "anime",
+        "name": "Funimation",
+        "url": "https://myanimelist.net/anime/producer/102/Funimation"
+      }
+    ],
+    "studios": [
+      {
+        "mal_id": 1,
+        "type": "anime",
+        "name": "Studio Pierrot",
+        "url": "https://myanimelist.net/anime/producer/1/Studio_Pierrot"
+      }
+    ],
+    "genres": [
+      {
+        "mal_id": 1,
+        "type": "anime",
+        "name": "Action",
+        "url": "https://myanimelist.net/anime/genre/1/Action"
+      },
+      {
+        "mal_id": 37,
+        "type": "anime",
+        "name": "Supernatural",
+        "url": "https://myanimelist.net/anime/genre/37/Supernatural"
+      }
+    ],
+    "explicit_genres": [],
+    "themes": [
+      {
+        "mal_id": 17,
+        "type": "anime",
+        "name": "Martial Arts",
+        "url": "https://myanimelist.net/anime/genre/17/Martial_Arts"
+      },
+      {
+        "mal_id": 6,
+        "type": "anime",
+        "name": "Mythology",
+        "url": "https://myanimelist.net/anime/genre/6/Mythology"
+      }
+    ],
+    "demographics": [
+      {
+        "mal_id": 27,
+        "type": "anime",
+        "name": "Shounen",
+        "url": "https://myanimelist.net/anime/genre/27/Shounen"
+      }
+    ]
+  },
+  {
+    "mal_id": 245,
+    "url": "https://myanimelist.net/anime/245/Great_Teacher_Onizuka",
+    "images": {
+      "jpg": {
+        "image_url": "https://cdn.myanimelist.net/images/anime/13/11460.jpg",
+        "small_image_url": "https://cdn.myanimelist.net/images/anime/13/11460t.jpg",
+        "large_image_url": "https://cdn.myanimelist.net/images/anime/13/11460l.jpg"
+      },
+      "webp": {
+        "image_url": "https://cdn.myanimelist.net/images/anime/13/11460.webp",
+        "small_image_url": "https://cdn.myanimelist.net/images/anime/13/11460t.webp",
+        "large_image_url": "https://cdn.myanimelist.net/images/anime/13/11460l.webp"
+      }
+    },
+    "trailer": {
+      "youtube_id": null,
+      "url": null,
+      "embed_url": null,
+      "images": {
+        "image_url": null,
+        "small_image_url": null,
+        "medium_image_url": null,
+        "large_image_url": null,
+        "maximum_image_url": null
+      }
+    },
+    "approved": true,
+    "titles": [
+      {
+        "type": "Default",
+        "title": "Great Teacher Onizuka"
+      },
+      {
+        "type": "Synonym",
+        "title": "GTO"
+      },
+      {
+        "type": "Synonym",
+        "title": "GTO - The Animation"
+      },
+      {
+        "type": "Japanese",
+        "title": "グレート・ティーチャー・オニヅカ"
+      },
+      {
+        "type": "English",
+        "title": "Great Teacher Onizuka"
+      }
+    ],
+    "title": "Great Teacher Onizuka",
+    "title_english": "Great Teacher Onizuka",
+    "title_japanese": "グレート・ティーチャー・オニヅカ",
+    "title_synonyms": [
+      "GTO",
+      "GTO - The Animation"
+    ],
+    "type": "TV",
+    "source": "Manga",
+    "episodes": 43,
+    "status": "Finished Airing",
+    "airing": false,
+    "aired": {
+      "from": "1999-06-30T00:00:00+00:00",
+      "to": "2000-09-17T00:00:00+00:00",
+      "prop": {
+        "from": {
+          "day": 30,
+          "month": 6,
+          "year": 1999
+        },
+        "to": {
+          "day": 17,
+          "month": 9,
+          "year": 2000
+        }
+      },
+      "string": "Jun 30, 1999 to Sep 17, 2000"
+    },
+    "duration": "25 min per ep",
+    "rating": "R - 17+ (violence & profanity)",
+    "score": 8.68,
+    "scored_by": 439725,
+    "rank": 71,
+    "popularity": 219,
+    "members": 899011,
+    "favorites": 28230,
+    "synopsis": "Twenty-two-year-old Eikichi Onizuka—ex-biker gang leader, conqueror of Shonan, and virgin—has a dream: to become the greatest high school teacher in all of Japan. This isn't because of a passion for teaching, but because he wants a loving teenage wife when he's old and gray. Still, for a perverted, greedy, and lazy delinquent, there is more to Onizuka than meets the eye. So when he lands a job as the homeroom teacher of the Class 3-4 at the prestigious Holy Forest Academy—despite suplexing the Vice Principal—all of his talents are put to the test, as this class is particularly infamous.\n\nDue to their utter contempt for all teachers, the class' students use psychological warfare to mentally break any new homeroom teacher they get, forcing them to quit and leave school. However, Onizuka isn't your average teacher, and he's ready for any challenge in his way.\n\nBullying, suicide, and sexual harassment are just a few of the issues his students face daily. By tackling the roots of their problems, Onizuka supports them with his unpredictable and unconventional methods—even if it means jumping off a building to save a suicidal child. Thanks to his eccentric charm and fun-loving nature, Class 3-4 slowly learns just how enjoyable school can be when you're the pupils of the Great Teacher Onizuka.\n\n[Written by MAL Rewrite]",
+    "background": "First episode has a duration of 48 minutes, standard length is 24 minutes.",
+    "season": "summer",
+    "year": 1999,
+    "broadcast": {
+      "day": "Wednesdays",
+      "time": "19:30",
+      "timezone": "Asia/Tokyo",
+      "string": "Wednesdays at 19:30 (JST)"
+    },
+    "producers": [
+      {
+        "mal_id": 17,
+        "type": "anime",
+        "name": "Aniplex",
+        "url": "https://myanimelist.net/anime/producer/17/Aniplex"
+      },
+      {
+        "mal_id": 169,
+        "type": "anime",
+        "name": "Fuji TV",
+        "url": "https://myanimelist.net/anime/producer/169/Fuji_TV"
+      }
+    ],
+    "licensors": [
+      {
+        "mal_id": 467,
+        "type": "anime",
+        "name": "Discotek Media",
+        "url": "https://myanimelist.net/anime/producer/467/Discotek_Media"
+      },
+      {
+        "mal_id": 484,
+        "type": "anime",
+        "name": "Tokyopop",
+        "url": "https://myanimelist.net/anime/producer/484/Tokyopop"
+      }
+    ],
+    "studios": [
+      {
+        "mal_id": 1,
+        "type": "anime",
+        "name": "Studio Pierrot",
+        "url": "https://myanimelist.net/anime/producer/1/Studio_Pierrot"
+      }
+    ],
+    "genres": [
+      {
+        "mal_id": 4,
+        "type": "anime",
+        "name": "Comedy",
+        "url": "https://myanimelist.net/anime/genre/4/Comedy"
+      }
+    ],
+    "explicit_genres": [],
+    "themes": [
+      {
+        "mal_id": 55,
+        "type": "anime",
+        "name": "Delinquents",
+        "url": "https://myanimelist.net/anime/genre/55/Delinquents"
+      },
+      {
+        "mal_id": 23,
+        "type": "anime",
+        "name": "School",
+        "url": "https://myanimelist.net/anime/genre/23/School"
+      },
+      {
+        "mal_id": 48,
+        "type": "anime",
+        "name": "Workplace",
+        "url": "https://myanimelist.net/anime/genre/48/Workplace"
+      }
+    ],
+    "demographics": [
+      {
+        "mal_id": 27,
+        "type": "anime",
+        "name": "Shounen",
+        "url": "https://myanimelist.net/anime/genre/27/Shounen"
+      }
+    ]
+  },
+  {
+    "mal_id": 12031,
+    "url": "https://myanimelist.net/anime/12031/Kingdom",
+    "images": {
+      "jpg": {
+        "image_url": "https://cdn.myanimelist.net/images/anime/13/39511.jpg",
+        "small_image_url": "https://cdn.myanimelist.net/images/anime/13/39511t.jpg",
+        "large_image_url": "https://cdn.myanimelist.net/images/anime/13/39511l.jpg"
+      },
+      "webp": {
+        "image_url": "https://cdn.myanimelist.net/images/anime/13/39511.webp",
+        "small_image_url": "https://cdn.myanimelist.net/images/anime/13/39511t.webp",
+        "large_image_url": "https://cdn.myanimelist.net/images/anime/13/39511l.webp"
+      }
+    },
+    "trailer": {
+      "youtube_id": null,
+      "url": null,
+      "embed_url": "https://www.youtube-nocookie.com/embed/ZmDorgdAG4g?enablejsapi=1&wmode=opaque&autoplay=1",
+      "images": {
+        "image_url": null,
+        "small_image_url": null,
+        "medium_image_url": null,
+        "large_image_url": null,
+        "maximum_image_url": null
+      }
+    },
+    "approved": true,
+    "titles": [
+      {
+        "type": "Default",
+        "title": "Kingdom"
+      },
+      {
+        "type": "Japanese",
+        "title": "キングダム"
+      },
+      {
+        "type": "English",
+        "title": "Kingdom"
+      }
+    ],
+    "title": "Kingdom",
+    "title_english": "Kingdom",
+    "title_japanese": "キングダム",
+    "title_synonyms": [],
+    "type": "TV",
+    "source": "Manga",
+    "episodes": 38,
+    "status": "Finished Airing",
+    "airing": false,
+    "aired": {
+      "from": "2012-06-04T00:00:00+00:00",
+      "to": "2013-02-25T00:00:00+00:00",
+      "prop": {
+        "from": {
+          "day": 4,
+          "month": 6,
+          "year": 2012
+        },
+        "to": {
+          "day": 25,
+          "month": 2,
+          "year": 2013
+        }
+      },
+      "string": "Jun 4, 2012 to Feb 25, 2013"
+    },
+    "duration": "25 min per ep",
+    "rating": "R - 17+ (violence & profanity)",
+    "score": 7.88,
+    "scored_by": 86280,
+    "rank": 914,
+    "popularity": 1084,
+    "members": 250370,
+    "favorites": 2186,
+    "synopsis": "China’s Warring States period, a raging dragon that would raze the land for 500 years, saw many kingdoms rise and fall, making way for the next generation of kings and generals to fight for supremacy. Eventually, seven powerful states emerged from the endless cycle of warfare.\n\nIn the kingdom of Qin, Xin, a war-orphaned slave, trains vigorously with fellow slave and best friend, Piao, who shares his proud dream of one day becoming a Great General of the Heavens. However, the two are suddenly forced to part ways when Piao is recruited to work in the royal palace by a retainer of the King.\n\nAfter a fierce coup d'état unfolds, Piao returns to Xin, half dead, with a mission that will lead him to a meeting with China's young King, Ying Zheng, who bears a striking resemblance to Piao. Kingdom follows Xin as he takes his first steps into the great blood-soaked pages of China's history. He must carve his own path to glory on his long quest to become a Great General of the historic Seven Warring States.\n\n[Written by MAL Rewrite]",
+    "background": "Kingdom adapts chapters 1-173 of the original manga.",
+    "season": "summer",
+    "year": 2012,
+    "broadcast": {
+      "day": "Mondays",
+      "time": "19:00",
+      "timezone": "Asia/Tokyo",
+      "string": "Mondays at 19:00 (JST)"
+    },
+    "producers": [
+      {
+        "mal_id": 111,
+        "type": "anime",
+        "name": "NHK",
+        "url": "https://myanimelist.net/anime/producer/111/NHK"
+      },
+      {
+        "mal_id": 161,
+        "type": "anime",
+        "name": "Sogo Vision",
+        "url": "https://myanimelist.net/anime/producer/161/Sogo_Vision"
+      }
+    ],
+    "licensors": [
+      {
+        "mal_id": 102,
+        "type": "anime",
+        "name": "Funimation",
+        "url": "https://myanimelist.net/anime/producer/102/Funimation"
+      }
+    ],
+    "studios": [
+      {
+        "mal_id": 1,
+        "type": "anime",
+        "name": "Studio Pierrot",
+        "url": "https://myanimelist.net/anime/producer/1/Studio_Pierrot"
+      }
+    ],
+    "genres": [
+      {
+        "mal_id": 1,
+        "type": "anime",
+        "name": "Action",
+        "url": "https://myanimelist.net/anime/genre/1/Action"
+      }
+    ],
+    "explicit_genres": [],
+    "themes": [
+      {
+        "mal_id": 13,
+        "type": "anime",
+        "name": "Historical",
+        "url": "https://myanimelist.net/anime/genre/13/Historical"
+      },
+      {
+        "mal_id": 38,
+        "type": "anime",
+        "name": "Military",
+        "url": "https://myanimelist.net/anime/genre/38/Military"
+      }
+    ],
+    "demographics": [
+      {
+        "mal_id": 42,
+        "type": "anime",
+        "name": "Seinen",
+        "url": "https://myanimelist.net/anime/genre/42/Seinen"
+      }
+    ]
+  },
+  {
+    "mal_id": 41433,
+    "url": "https://myanimelist.net/anime/41433/Akudama_Drive",
+    "images": {
+      "jpg": {
+        "image_url": "https://cdn.myanimelist.net/images/anime/1468/109172.jpg",
+        "small_image_url": "https://cdn.myanimelist.net/images/anime/1468/109172t.jpg",
+        "large_image_url": "https://cdn.myanimelist.net/images/anime/1468/109172l.jpg"
+      },
+      "webp": {
+        "image_url": "https://cdn.myanimelist.net/images/anime/1468/109172.webp",
+        "small_image_url": "https://cdn.myanimelist.net/images/anime/1468/109172t.webp",
+        "large_image_url": "https://cdn.myanimelist.net/images/anime/1468/109172l.webp"
+      }
+    },
+    "trailer": {
+      "youtube_id": null,
+      "url": null,
+      "embed_url": "https://www.youtube-nocookie.com/embed/41k3bjceNIU?enablejsapi=1&wmode=opaque&autoplay=1",
+      "images": {
+        "image_url": null,
+        "small_image_url": null,
+        "medium_image_url": null,
+        "large_image_url": null,
+        "maximum_image_url": null
+      }
+    },
+    "approved": true,
+    "titles": [
+      {
+        "type": "Default",
+        "title": "Akudama Drive"
+      },
+      {
+        "type": "Japanese",
+        "title": "アクダマドライブ"
+      },
+      {
+        "type": "English",
+        "title": "Akudama Drive"
+      }
+    ],
+    "title": "Akudama Drive",
+    "title_english": "Akudama Drive",
+    "title_japanese": "アクダマドライブ",
+    "title_synonyms": [],
+    "type": "TV",
+    "source": "Original",
+    "episodes": 12,
+    "status": "Finished Airing",
+    "airing": false,
+    "aired": {
+      "from": "2020-10-08T00:00:00+00:00",
+      "to": "2020-12-24T00:00:00+00:00",
+      "prop": {
+        "from": {
+          "day": 8,
+          "month": 10,
+          "year": 2020
+        },
+        "to": {
+          "day": 24,
+          "month": 12,
+          "year": 2020
+        }
+      },
+      "string": "Oct 8, 2020 to Dec 24, 2020"
+    },
+    "duration": "24 min per ep",
+    "rating": "R - 17+ (violence & profanity)",
+    "score": 7.57,
+    "scored_by": 221413,
+    "rank": 1769,
+    "popularity": 526,
+    "members": 478653,
+    "favorites": 4003,
+    "synopsis": "The bustling metropolis of Kansai, where cybernetic screens litter the neon landscape, may seem like a technological utopia at first glance. But in the dark alleys around the brightly-lit buildings, an unforgiving criminal underbelly still exists in the form of fugitives known as \"Akudama.\" \n\nNo stranger to these individuals, Kansai police begin the countdown to the public execution of an infamous Akudama \"Cutthroat,\" guilty of killing 999 people. However, a mysterious message is sent to several elite Akudama, enlisting them to free Cutthroat for a substantial amount of money. An invisible hand seeks to gather these dangerous personas in one place, ensuring that the execution is well underway to becoming a full-blown bloodbath.\n\n[Written by MAL Rewrite]",
+    "background": "Each episode of the series shares a title with famous movies whose story shares themes and plot elements with the episode.",
+    "season": "fall",
+    "year": 2020,
+    "broadcast": {
+      "day": "Thursdays",
+      "time": "21:30",
+      "timezone": "Asia/Tokyo",
+      "string": "Thursdays at 21:30 (JST)"
+    },
+    "producers": [
+      {
+        "mal_id": 82,
+        "type": "anime",
+        "name": "Marvelous Entertainment",
+        "url": "https://myanimelist.net/anime/producer/82/Marvelous_Entertainment"
+      },
+      {
+        "mal_id": 127,
+        "type": "anime",
+        "name": "Yomiko Advertising",
+        "url": "https://myanimelist.net/anime/producer/127/Yomiko_Advertising"
+      },
+      {
+        "mal_id": 711,
+        "type": "anime",
+        "name": "Delfi Sound",
+        "url": "https://myanimelist.net/anime/producer/711/Delfi_Sound"
+      },
+      {
+        "mal_id": 1113,
+        "type": "anime",
+        "name": "NBCUniversal Entertainment Japan",
+        "url": "https://myanimelist.net/anime/producer/1113/NBCUniversal_Entertainment_Japan"
+      },
+      {
+        "mal_id": 1313,
+        "type": "anime",
+        "name": "Amuse",
+        "url": "https://myanimelist.net/anime/producer/1313/Amuse"
+      },
+      {
+        "mal_id": 1345,
+        "type": "anime",
+        "name": "Sammy",
+        "url": "https://myanimelist.net/anime/producer/1345/Sammy"
+      },
+      {
+        "mal_id": 1554,
+        "type": "anime",
+        "name": "Contents Seed",
+        "url": "https://myanimelist.net/anime/producer/1554/Contents_Seed"
+      },
+      {
+        "mal_id": 1680,
+        "type": "anime",
+        "name": "BS NTV",
+        "url": "https://myanimelist.net/anime/producer/1680/BS_NTV"
+      },
+      {
+        "mal_id": 1886,
+        "type": "anime",
+        "name": "Aeon Entertainment",
+        "url": "https://myanimelist.net/anime/producer/1886/Aeon_Entertainment"
+      }
+    ],
+    "licensors": [
+      {
+        "mal_id": 102,
+        "type": "anime",
+        "name": "Funimation",
+        "url": "https://myanimelist.net/anime/producer/102/Funimation"
+      }
+    ],
+    "studios": [
+      {
+        "mal_id": 1,
+        "type": "anime",
+        "name": "Studio Pierrot",
+        "url": "https://myanimelist.net/anime/producer/1/Studio_Pierrot"
+      }
+    ],
+    "genres": [
+      {
+        "mal_id": 1,
+        "type": "anime",
+        "name": "Action",
+        "url": "https://myanimelist.net/anime/genre/1/Action"
+      },
+      {
+        "mal_id": 24,
+        "type": "anime",
+        "name": "Sci-Fi",
+        "url": "https://myanimelist.net/anime/genre/24/Sci-Fi"
+      },
+      {
+        "mal_id": 41,
+        "type": "anime",
+        "name": "Suspense",
+        "url": "https://myanimelist.net/anime/genre/41/Suspense"
+      }
+    ],
+    "explicit_genres": [],
+    "themes": [
+      {
+        "mal_id": 50,
+        "type": "anime",
+        "name": "Adult Cast",
+        "url": "https://myanimelist.net/anime/genre/50/Adult_Cast"
+      },
+      {
+        "mal_id": 58,
+        "type": "anime",
+        "name": "Gore",
+        "url": "https://myanimelist.net/anime/genre/58/Gore"
+      }
+    ],
+    "demographics": []
+  }
+]
