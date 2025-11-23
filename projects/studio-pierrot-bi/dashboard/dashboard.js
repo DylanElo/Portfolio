@@ -6,40 +6,18 @@ import { tvRatings, bdSales, merchRevenue } from './domestic_data.js';
 import { platformShare, globalDemand, streamingRevenue } from './streaming_data.js';
 import { arcAnalysis, fillerImpact, productionModels } from './production_data.js';
 
-console.log('Multi-tab dashboard loaded');
+// Update KPI Cards
+if (topRated) updateKPI('kpi-top-rated', topRated.score, topRated.title);
+if (mostMembers) updateKPI('kpi-most-popular', formatNumber(mostMembers.members), mostMembers.title);
+if (mostFavorited) updateKPI('kpi-most-favorited', formatNumber(mostFavorited.favorites), mostFavorited.title);
 
-// Initialize Phase 1 dashboard on page load
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM loaded, initializing Phase 1 dashboard...');
+// Render Phase 1 charts immediately (fandom tab active by default)
+renderPhase1ScoreChart(animeData);
+renderPhase1PopularityChart(animeData);
+populatePhase1Table(animeData);
 
-    if (!animeData || animeData.length === 0) {
-        console.error('No anime data found!');
-        document.getElementById('kpi-top-rated-value').textContent = 'Error';
-        return;
-    }
-
-    console.log('Anime data loaded:', animeData.length, 'entries');
-    initPhase1Dashboard();
-});
-
-function initPhase1Dashboard() {
-    // Calculate KPIs
-    const topRated = [...animeData].sort((a, b) => b.score - a.score)[0];
-    const mostMembers = [...animeData].sort((a, b) => b.members - a.members)[0];
-    const mostFavorited = [...animeData].sort((a, b) => b.favorites - a.favorites)[0];
-
-    // Update KPI Cards
-    if (topRated) updateKPI('kpi-top-rated', topRated.score, topRated.title);
-    if (mostMembers) updateKPI('kpi-most-popular', formatNumber(mostMembers.members), mostMembers.title);
-    if (mostFavorited) updateKPI('kpi-most-favorited', formatNumber(mostFavorited.favorites), mostFavorited.title);
-
-    // Render Phase 1 charts immediately (fandom tab active by default)
-    renderPhase1ScoreChart(animeData);
-    renderPhase1PopularityChart(animeData);
-    populatePhase1Table(animeData);
-
-    // Mark fandom tab as initialized
-    initializedTabs.fandom = true;
+// Mark fandom tab as initialized
+initializedTabs.fandom = true;
 }
 
 function updateKPI(idPrefix, value, title) {
