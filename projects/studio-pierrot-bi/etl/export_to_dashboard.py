@@ -14,46 +14,35 @@ def get_latest_data():
     conn.row_factory = sqlite3.Row
     cursor = conn.cursor()
     
-    # Get latest date_id
-    cursor.execute('SELECT MAX(date_id) FROM dim_date')
-    latest_date_id = cursor.fetchone()[0]
-    
-    if not latest_date_id:
-        print("❌ No data found in dim_date")
-        return []
-
-    # Query joined data
+    # Query latest metrics from fact_anime_metrics
     query = '''
     SELECT 
         a.mal_id as id,
         a.title,
-        a.type,
+        'TV' as type,
         a.episodes,
-        a.status,
-        r.mal_score as score,
-        r.mal_members as members,
-        r.mal_favorites as favorites,
-        r.mal_rank as rank,
-        a.air_date_start as aired_from
-    FROM fact_rating_snapshot r
-    JOIN dim_anime a ON r.anime_id = a.anime_id
-    WHERE r.date_id = ?
-    ORDER BY r.mal_score DESC
+        'Finished Airing' as status,
+        m.score,
+        m.members,
+        m.favorites,
+        m.rank,
+        a.start_date as aired_from,
+        m.scored_by,
+        m.popularity,
+        'Unknown' as rating
+    FROM fact_anime_metrics m
+    JOIN dim_anime a ON m.anime_id = a.anime_id
+    ORDER BY m.score DESC
     '''
     
-    cursor.execute(query, (latest_date_id,))
+    cursor.execute(query)
     rows = cursor.fetchall()
     
     # Convert to list of dicts
     data = []
     for row in rows:
         item = dict(row)
-        # Add static fields that might be missing from warehouse but needed for UI
-        # In a real app, these would also be in the warehouse
-        item['scored_by'] = 0 # Placeholder
-        item['popularity'] = 0 # Placeholder
-        item['rating'] = 'Unknown'
-        item['image_url'] = '' # Placeholder
+        item['image_url'] = ''  # Placeholder for future
         item['url'] = f"https://myanimelist.net/anime/{item['id']}"
         data.append(item)
         
