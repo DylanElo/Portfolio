@@ -2,9 +2,11 @@ import sqlite3
 import json
 import os
 from datetime import datetime
+from pathlib import Path
 
-DB_PATH = 'warehouse/pierrot_bi.db'
-OUTPUT_PATH = 'dashboard/data.js'
+# Configuration
+DB_PATH = Path(__file__).parent.parent / 'studio_pierrot.db'
+OUTPUT_PATH = Path(__file__).parent.parent / 'dashboard' / 'data.js'
 
 def get_latest_data():
     """Query warehouse for latest anime metrics"""
