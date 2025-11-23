@@ -125,16 +125,15 @@ ORDER BY s.season_type;
 SELECT 
     a.title,
     SUBSTR(a.start_date, 1, 4) AS year,
-    f.production_cost,
-    f.marketing_cost,
-    f.estimated_revenue,
-    f.estimated_revenue - f.production_cost - f.marketing_cost AS profit,
-    ROUND((f.estimated_revenue - f.production_cost - f.marketing_cost) / 
-          NULLIF(f.production_cost + f.marketing_cost, 0) * 100, 1) AS roi_pct,
+    f.tier,
+    f.production_budget,
+    f.total_revenue,
+    f.profit,
+    ROUND(f.roi * 100, 1) AS roi_pct,
     m.score,
     m.members
 FROM dim_anime a
-JOIN fact_financials f ON a.anime_id = f.anime_id
+JOIN fact_finance f ON a.anime_id = f.anime_id
 JOIN fact_anime_metrics m ON a.anime_id = m.anime_id
 ORDER BY profit DESC;
 
@@ -170,8 +169,8 @@ SELECT
     ROUND(CAST(m.dropped AS REAL) / NULLIF(m.members, 0) * 100, 2) AS drop_rate_pct,
     s.filler_ratio,
     s.production_stability,
-    f.estimated_revenue - f.production_cost - f.marketing_cost AS profit,
-    CASE 
+    f.profit,
+    CASE
         WHEN m.score < 7.5 THEN '⚠ Low Score'
         WHEN CAST(m.dropped AS REAL) / NULLIF(m.members, 0) > 0.15 THEN '⚠ High Drop Rate'
         WHEN s.filler_ratio > 0.40 THEN '⚠ High Filler'
@@ -181,7 +180,7 @@ SELECT
 FROM dim_anime a
 JOIN fact_anime_metrics m ON a.anime_id = m.anime_id
 JOIN dim_season s ON a.anime_id = s.anime_id
-JOIN fact_financials f ON a.anime_id = f.anime_id
+JOIN fact_finance f ON a.anime_id = f.anime_id
 WHERE CAST(SUBSTR(a.start_date, 1, 4) AS INTEGER) >= 2015
 ORDER BY m.score ASC, drop_rate_pct DESC;
 
@@ -196,11 +195,11 @@ SELECT
     ROUND(AVG(m.score), 2) AS avg_score,
     ROUND(AVG(m.members), 0) AS avg_members,
     ROUND(AVG(s.filler_ratio * 100), 1) AS avg_filler_pct,
-    ROUND(AVG(f.estimated_revenue - f.production_cost - f.marketing_cost), 0) AS avg_profit
+    ROUND(AVG(f.profit), 0) AS avg_profit
 FROM dim_anime a
 JOIN fact_anime_metrics m ON a.anime_id = m.anime_id
 LEFT JOIN dim_season s ON a.anime_id = s.anime_id
-LEFT JOIN fact_financials f ON a.anime_id = f.anime_id
+LEFT JOIN fact_finance f ON a.anime_id = f.anime_id
 GROUP BY a.studio
 HAVING COUNT(DISTINCT a.anime_id) >= 2
 ORDER BY avg_score DESC;

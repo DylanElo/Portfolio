@@ -46,6 +46,14 @@ Structure data around:
 
 *Note: These data points are used as realistic proxies for a BI exercise.*
 
+### ROI Modeling Approach (Finance Lens)
+> ROI Modeling Approach
+> – True per-title budgets & revenues are not public.
+> – I use real fandom data (MAL score + members) to estimate demand.
+> – Production costs are modeled via tiers (S/A/B/C) and episodes.
+> – Revenues are modeled via streaming, discs, and merch with transparent rules calibrated to public industry ranges.
+> – ROI, profit per episode, and other KPIs are computed from this model and used only as directional indicators for strategic decisions.
+
 ## 4. Tools & Stack
 
 *   **Collection / Transformation**: Python + Pandas / SQL.

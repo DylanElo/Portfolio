@@ -48,3 +48,21 @@ Future phases will introduce simulated or scraped data to support deeper analysi
 *   `filler_count`: Number of filler episodes.
 *   `filler_ratio`: Percentage of filler content.
 *   `studio_primary`: Main studio responsible (if co-produced).
+
+## Phase 3: Finance ROI Layer (New)
+
+The latest ETL adds a deterministic finance model to keep ROI assumptions transparent and reproducible.
+
+### `dim_anime` additions
+*   `mal_score` – MAL score used for tiering.
+*   `mal_members` – MAL members used as demand proxy.
+*   `tier` – S/A/B/C band derived from score + members thresholds.
+
+### `fact_finance`
+*   `base_budget_per_episode` – Starting production budget.
+*   `tier_multiplier` – Cost multiplier based on tier (S=1.6, A=1.3, B=1.0, C=0.7).
+*   `production_budget` / `total_cost` – Modeled cost using episode count and tier multiplier.
+*   `streaming_revenue` – (MAL members / 100k) × 150k constant.
+*   `disc_revenue` – Tier-based disc units × 60 price (with 10% bonus for 9.0+ scores).
+*   `merch_revenue` – Streaming revenue × tier-specific merch factor.
+*   `total_revenue`, `profit`, `roi`, `profit_per_episode` – Derived finance KPIs for dashboard use.

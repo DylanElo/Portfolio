@@ -80,6 +80,12 @@ This document defines the target dimensional model (Star Schema) for the Studio 
     *   Metrics: `amount`.
     *   Grain: Transaction or aggregated daily cost.
 
+*   **fact_finance (deterministic ROI model)**:
+    *   Keys: `finance_id` (PK), `anime_id` (FK).
+    *   Attributes: `tier`, `tier_multiplier`, `episodes`, `base_budget_per_episode`.
+    *   Metrics: `production_budget`, `total_cost`, `streaming_revenue`, `disc_revenue`, `merch_revenue`, `total_revenue`, `profit`, `roi`, `profit_per_episode`.
+    *   Grain: One record per anime title.
+
 *   **fact_campaign_performance**:
     *   Keys: `performance_id` (PK), `campaign_id` (FK), `date_id` (FK).
     *   Metrics: `spend`, `impressions`, `clicks`, `conversions`, `roi`.

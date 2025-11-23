@@ -5,6 +5,9 @@ CREATE TABLE dim_anime (
     anime_id INTEGER PRIMARY KEY,
     mal_id INTEGER UNIQUE,
     title TEXT NOT NULL,
+    mal_score REAL,
+    mal_members INTEGER,
+    tier TEXT,
     studio TEXT,
     episodes INTEGER,
     start_date TEXT,
@@ -52,11 +55,21 @@ CREATE TABLE fact_marketing (
 );
 
 -- Fact: Financials (simulated)
-CREATE TABLE fact_financials (
-    financial_id INTEGER PRIMARY KEY,
+CREATE TABLE fact_finance (
+    finance_id INTEGER PRIMARY KEY,
     anime_id INTEGER REFERENCES dim_anime(anime_id),
-    production_cost REAL,
-    marketing_cost REAL,
-    estimated_revenue REAL,
+    tier TEXT,
+    tier_multiplier REAL,
+    episodes INTEGER,
+    base_budget_per_episode REAL,
+    production_budget REAL,
+    total_cost REAL,
+    streaming_revenue REAL,
+    disc_revenue REAL,
+    merch_revenue REAL,
+    total_revenue REAL,
+    profit REAL,
+    roi REAL,
+    profit_per_episode REAL,
     record_date TEXT DEFAULT (datetime('now'))
 );
