@@ -10,12 +10,15 @@ erDiagram
     dim_anime ||--o{ dim_season : "has seasons"
     dim_anime ||--o{ fact_anime_metrics : "performance"
     dim_anime ||--o{ fact_marketing : "campaigns"
-    dim_anime ||--o{ fact_financials : "costs/revenue"
+    dim_anime ||--o{ fact_finance : "costs/revenue"
     
     dim_anime {
         int anime_id PK
         int mal_id UK
         text title
+        real mal_score
+        int mal_members
+        text tier
         text studio
         int episodes
         text start_date
@@ -59,12 +62,22 @@ erDiagram
         text record_date
     }
     
-    fact_financials {
-        int financial_id PK
+    fact_finance {
+        int finance_id PK
         int anime_id FK
-        real production_cost
-        real marketing_cost
-        real estimated_revenue
+        text tier
+        real tier_multiplier
+        int episodes
+        real base_budget_per_episode
+        real production_budget
+        real total_cost
+        real streaming_revenue
+        real disc_revenue
+        real merch_revenue
+        real total_revenue
+        real profit
+        real roi
+        real profit_per_episode
         text record_date
     }
 ```
@@ -87,6 +100,9 @@ Core anime attributes from MyAnimeList.
 | `end_date` | TEXT | Last air date (ISO format) |
 | `genre` | TEXT | Comma-separated genres |
 | `demographic` | TEXT | Target demographic (shounen, seinen, etc.) |
+| `mal_score` | REAL | MAL score at ingestion time |
+| `mal_members` | INTEGER | MAL members used as demand proxy |
+| `tier` | TEXT | S/A/B/C tier derived from score + members |
 
 #### `dim_season`
 Season-level production metadata (simulated internal data).
@@ -134,16 +150,26 @@ Simulated marketing campaign data.
 | `impressions` | INTEGER | Total impressions |
 | `record_date` | TEXT | Campaign date (ISO format) |
 
-#### `fact_financials`
-Simulated cost and revenue data.
+#### `fact_finance`
+Deterministic ROI model based on MAL demand tiers.
 
 | Column | Type | Description |
 |--------|------|-------------|
-| `financial_id` | INTEGER | Primary key |
+| `finance_id` | INTEGER | Primary key |
 | `anime_id` | INTEGER | Foreign key to `dim_anime` |
-| `production_cost` | REAL | Production cost (USD) |
-| `marketing_cost` | REAL | Marketing cost (USD) |
-| `estimated_revenue` | REAL | Estimated revenue (USD) |
+| `tier` | TEXT | S/A/B/C demand tier |
+| `tier_multiplier` | REAL | Budget multiplier applied to base budget |
+| `episodes` | INTEGER | Episode count used in budget scaling |
+| `base_budget_per_episode` | REAL | Starting budget per episode |
+| `production_budget` | REAL | Modeled production budget |
+| `total_cost` | REAL | Current total cost assumption (production budget) |
+| `streaming_revenue` | REAL | Revenue from streaming demand proxy |
+| `disc_revenue` | REAL | Revenue from disc sales model |
+| `merch_revenue` | REAL | Revenue from merch factor |
+| `total_revenue` | REAL | Combined revenue from all streams |
+| `profit` | REAL | Profit = total_revenue - total_cost |
+| `roi` | REAL | ROI ratio (profit / total_cost) |
+| `profit_per_episode` | REAL | Profit normalized by episode count |
 | `record_date` | TEXT | Record date (ISO format) |
 
 ## Business Questions

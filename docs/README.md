@@ -49,6 +49,15 @@ This folder contains the complete business documentation that preceded the techn
 
 ---
 
+### 4. Rapport industrie (2020–2024)
+**File**: [animation_industry_report_2020_2024.md](animation_industry_report_2020_2024.md)
+
+**Purpose**: Synthèse en français de l'évolution du marché de l'animation japonaise (2020–2024), couvrant croissance, structure des revenus, coûts de production et rôle croissant des audiences internationales.
+
+**Audience**: Parties prenantes business, partenaires internationaux, évaluateurs francophones.
+
+---
+
 ## 🎯 How These Documents Work Together
 
 ```

@@ -99,14 +99,16 @@ def main():
         
         # Q6: ROI Analysis
         run_query(conn, "Q6: Top 5 Anime by ROI", """
-            SELECT 
+            SELECT
                 a.title,
                 SUBSTR(a.start_date, 1, 4) AS year,
-                f.estimated_revenue - f.production_cost - f.marketing_cost AS profit,
-                ROUND((f.estimated_revenue - f.production_cost - f.marketing_cost) / 
-                      NULLIF(f.production_cost + f.marketing_cost, 0) * 100, 1) AS roi_pct
+                f.tier,
+                f.production_budget,
+                f.total_revenue,
+                f.profit,
+                ROUND(f.roi * 100, 1) AS roi_pct
             FROM dim_anime a
-            JOIN fact_financials f ON a.anime_id = f.anime_id
+            JOIN fact_finance f ON a.anime_id = f.anime_id
             ORDER BY profit DESC
             LIMIT 5
         """)

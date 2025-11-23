@@ -24,18 +24,30 @@ def clear_tables(conn):
     """Clear all warehouse tables."""
     cursor = conn.cursor()
     tables = [
-        "fact_financials",
+        "fact_finance",
         "fact_marketing",
         "fact_anime_metrics",
         "dim_season",
         "dim_anime"
     ]
-    
+
     for table in tables:
         cursor.execute(f"DELETE FROM {table}")
-    
+
     conn.commit()
     print("✓ Cleared all warehouse tables")
+
+
+def determine_tier(score: float, members: int) -> str:
+    """Return S/A/B/C tier based on MAL score and membership counts."""
+
+    if score >= 8.5 and members >= 1_000_000:
+        return "S"
+    if score >= 8.0 and members >= 300_000:
+        return "A"
+    if score >= 7.0:
+        return "B"
+    return "C"
 
 def load_dim_anime(conn, anime_data):
     """Load dimension table: dim_anime."""
@@ -45,12 +57,15 @@ def load_dim_anime(conn, anime_data):
     for idx, anime in enumerate(anime_data, start=1):
         mal_id = anime.get("mal_id")
         title = anime.get("title", "")
+        score = anime.get("score") or 0
+        members = anime.get("members") or 0
+        tier = determine_tier(score, members)
         
         # Extract studio names
         studios = anime.get("studios", [])
         studio = ", ".join([s.get("name", "") for s in studios]) if studios else "Unknown"
         
-        episodes = anime.get("episodes")
+        episodes = anime.get("episodes") or 12  # default to a single cour when missing
         
         # Extract dates
         aired = anime.get("aired", {})
@@ -69,6 +84,9 @@ def load_dim_anime(conn, anime_data):
             idx,  # anime_id is our surrogate key
             mal_id,
             title,
+            score,
+            members,
+            tier,
             studio,
             episodes,
             start_date,
@@ -76,10 +94,10 @@ def load_dim_anime(conn, anime_data):
             genre,
             demographic
         ))
-    
+
     cursor.executemany("""
-        INSERT INTO dim_anime (anime_id, mal_id, title, studio, episodes, start_date, end_date, genre, demographic)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+        INSERT INTO dim_anime (anime_id, mal_id, title, mal_score, mal_members, tier, studio, episodes, start_date, end_date, genre, demographic)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     """, anime_records)
     
     conn.commit()
@@ -183,34 +201,47 @@ def load_fact_marketing(conn, marketing_data, mal_to_anime_id):
     conn.commit()
     print(f"✓ Loaded {len(marketing_records)} records into fact_marketing")
 
-def load_fact_financials(conn, financial_data, mal_to_anime_id):
-    """Load fact table: fact_financials."""
+def load_fact_finance(conn, financial_data, mal_to_anime_id):
+    """Load fact table: fact_finance."""
     cursor = conn.cursor()
-    
+
     financial_records = []
     record_date = datetime.now().isoformat()
-    
+
     for row in financial_data:
         mal_id = int(row["mal_id"])
         anime_id = mal_to_anime_id.get(mal_id)
-        
+
         if anime_id:
             financial_records.append((
-                int(row["financial_id"]),
+                int(row["finance_id"]),
                 anime_id,
-                float(row["production_cost"]),
-                float(row["marketing_cost"]),
-                float(row["estimated_revenue"]),
+                row["tier"],
+                float(row["tier_multiplier"]),
+                int(float(row["episodes"])),
+                float(row["base_budget_per_episode"]),
+                float(row["production_budget"]),
+                float(row["total_cost"]),
+                float(row["streaming_revenue"]),
+                float(row["disc_revenue"]),
+                float(row["merch_revenue"]),
+                float(row["total_revenue"]),
+                float(row["profit"]),
+                float(row["roi"]),
+                float(row["profit_per_episode"]),
                 record_date
             ))
-    
+
     cursor.executemany("""
-        INSERT INTO fact_financials (financial_id, anime_id, production_cost, marketing_cost, estimated_revenue, record_date)
-        VALUES (?, ?, ?, ?, ?, ?)
+        INSERT INTO fact_finance (
+            finance_id, anime_id, tier, tier_multiplier, episodes, base_budget_per_episode,
+            production_budget, total_cost, streaming_revenue, disc_revenue, merch_revenue,
+            total_revenue, profit, roi, profit_per_episode, record_date)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     """, financial_records)
-    
+
     conn.commit()
-    print(f"✓ Loaded {len(financial_records)} records into fact_financials")
+    print(f"✓ Loaded {len(financial_records)} records into fact_finance")
 
 def main():
     """Main ETL process."""
@@ -247,7 +278,7 @@ def main():
         print("Loading fact tables...")
         load_fact_anime_metrics(conn, anime_data, mal_to_anime_id)
         load_fact_marketing(conn, marketing_data, mal_to_anime_id)
-        load_fact_financials(conn, financial_data, mal_to_anime_id)
+        load_fact_finance(conn, financial_data, mal_to_anime_id)
         print()
         
         # Verification
@@ -261,7 +292,7 @@ def main():
             ("dim_season", "Season/production records"),
             ("fact_anime_metrics", "MAL performance metrics"),
             ("fact_marketing", "Marketing campaigns"),
-            ("fact_financials", "Financial records")
+            ("fact_finance", "Financial records")
         ]
         
         for table_name, description in tables:

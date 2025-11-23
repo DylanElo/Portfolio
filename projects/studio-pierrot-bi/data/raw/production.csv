@@ -1,20 +1,25 @@
 season_id,mal_id,title,season_type,filler_ratio,production_stability,quality_score_internal
-1,20,Naruto,long,0.41,0.87,7.8
-2,1735,Naruto: Shippuuden,long,0.41,0.722,7.81
-3,269,Bleach,long,0.45,0.858,8.43
-4,22319,Tokyo Ghoul,short,0.15,0.719,8.04
-5,36511,Tokyo Ghoul:re,short,0.15,0.54,5.92
-6,34566,Boruto: Naruto Next Generations,long,0.41,0.564,5.9
-7,34572,Black Clover,long,0.12,0.612,8.41
-8,392,Yuu☆Yuu☆Hakusho,long,0.1,0.874,8.01
-9,12031,Kingdom,short,0.08,0.775,7.89
-10,37510,Mob Psycho 100 II,short,0.147,0.844,8.55
-11,11061,Hunter x Hunter (2011),long,0.08,0.639,8.92
-12,19,Monster,short,0.02,0.748,8.9
-13,16498,Shingeki no Kyojin,short,0.05,0.723,8.57
-14,918,Gintama,long,0.06,0.711,9.31
-15,40748,Jujutsu Kaisen,short,0.072,0.806,8.41
-16,21,One Piece,short,0.09,0.86,8.84
-17,31964,Boku no Hero Academia,short,0.05,0.671,7.76
-18,44511,Chainsaw Man,short,0.142,0.658,8.37
-19,38000,Kimetsu no Yaiba,short,0.088,0.81,8.0
+1,20,Naruto,long,0.4,0.69,7.4
+2,1735,Naruto: Shippuuden,long,0.4,0.698,7.52
+3,269,Bleach,long,0.12,0.69,7.4
+4,22319,Tokyo Ghoul,short,0.06,0.682,7.28
+5,36511,Tokyo Ghoul:re,short,0.06,0.65,6.8
+6,34566,Boruto: Naruto Next Generations,long,0.4,0.634,6.56
+7,34572,Black Clover,long,0.12,0.694,7.46
+8,392,Yuu☆Yuu☆Hakusho,long,0.12,0.71,7.7
+9,12031,Kingdom,short,0.06,0.698,7.52
+10,16498,Shingeki no Kyojin,short,0.06,0.71,7.7
+11,40748,Jujutsu Kaisen,short,0.06,0.714,7.76
+12,31964,Boku no Hero Academia,short,0.06,0.69,7.4
+13,44511,Chainsaw Man,short,0.06,0.714,7.76
+14,38000,Kimetsu no Yaiba,short,0.06,0.71,7.7
+15,21,One Piece,long,0.12,0.718,7.82
+16,50265,Spy x Family,short,0.06,0.714,7.76
+17,49596,Blue Lock,short,0.06,0.702,7.58
+18,40961,Tokyo Revengers,short,0.06,0.69,7.4
+19,52034,Oshi no Ko,short,0.06,0.722,7.88
+20,49387,Vinland Saga Season 2,short,0.06,0.718,7.82
+21,54898,Ore dake Level Up na Ken,short,0.06,0.698,7.52
+22,57198,Kaijuu 8-gou,short,0.06,0.69,7.4
+23,52991,Sousou no Frieren,short,0.06,0.73,8.0
+24,37510,Mob Psycho 100 II,short,0.06,0.722,7.88
