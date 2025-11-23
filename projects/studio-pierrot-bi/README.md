@@ -110,14 +110,65 @@ Based on MAL data analysis:
 
 ---
 
+## 🏗️ Data Engineering (Phase 3: SQL Warehouse)
+
+To support scalable analysis, I implemented a **dimensional data warehouse** using SQLite and Python ETL.
+
+### Schema Design (Star Schema)
+- **Fact Tables:** `fact_rating_snapshot`, `fact_revenue_stream`, `fact_production_episode`
+- **Dimension Tables:** `dim_anime`, `dim_date`, `dim_platform`, `dim_region`
+
+### ETL Pipeline
+1. **Extract:** Python script (`etl/extract_mal.py`) fetches raw JSON from Jikan API
+2. **Transform:** Data cleaning and standardization (handling missing values, date parsing)
+3. **Load:** Python script (`etl/load.py`) populates the SQLite warehouse (`warehouse/pierrot_bi.db`) with upsert logic
+
+### Example SQL Analysis
+
+**1. Top 5 Highest Rated Pierrot Titles**
+```sql
+SELECT 
+    a.title,
+    r.mal_score,
+    r.mal_members
+FROM fact_rating_snapshot r
+JOIN dim_anime a ON r.anime_id = a.anime_id
+WHERE r.date_id = (SELECT MAX(date_id) FROM dim_date)
+ORDER BY r.mal_score DESC
+LIMIT 5;
+```
+
+**2. Revenue by Stream Type (Simulated)**
+```sql
+SELECT 
+    revenue_type,
+    SUM(revenue_amount) as total_revenue,
+    COUNT(DISTINCT anime_id) as num_titles
+FROM fact_revenue_stream
+GROUP BY revenue_type
+ORDER BY total_revenue DESC;
+```
+
+---
+
 ## 🛠️ How to Run
 
 1. **View the Dashboard:** Open `dashboard/index.html` or visit the [live deployment](https://dylanelo.github.io/Portfolio/projects/studio-pierrot-bi/dashboard/index.html)
-2. **Run ETL Pipeline:**
+
+2. **Run Python ETL Pipeline (Phase 3):**
+   ```bash
+   # 1. Extract fresh data from MAL
+   python etl/extract_mal.py
+   
+   # 2. Load into SQL Warehouse
+   python etl/load.py
+   ```
+   *Requires Python 3.x and `requests` library*
+
+3. **Run Legacy JS ETL (Phase 1):**
    ```bash
    node etl/fetch_data.js
    ```
-   *Requires Node.js 16+*
 
 ---
 
