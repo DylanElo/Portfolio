@@ -65,107 +65,165 @@
 
   <!-- Navigation -->
   <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
-    <div class="flex justify-between items-start">
-      <div>
-        <p class="text-sm font-medium text-slate-500 uppercase tracking-wider">Top Rated</p>
-        <h3 class="mt-1 text-2xl font-bold text-slate-900" id="kpi-top-rated-value">-</h3>
-        <p class="text-sm text-indigo-600 font-medium mt-1" id="kpi-top-rated-title">-</p>
-      </div>
-      <div class="p-2 bg-indigo-50 rounded-lg">
-        <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z">
-          </path>
-        </svg>
-      </div>
-    </div>
-    </div>
-
-    <!-- Most Popular -->
-    <div class="card p-6 border-l-4 border-purple-500">
-      <div class="flex justify-between items-start">
-        <div>
-          <p class="text-sm font-medium text-slate-500 uppercase tracking-wider">Most Popular</p>
-          <h3 class="mt-1 text-2xl font-bold text-slate-900" id="kpi-most-popular-value">-</h3>
-          <p class="text-sm text-purple-600 font-medium mt-1" id="kpi-most-popular-title">-</p>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex items-center">
+          <span class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">
+            Studio Pierrot BI
+          </span>
+          <span class="ml-4 px-2 py-1 text-xs font-semibold text-indigo-700 bg-indigo-100 rounded-full">Phase
+            3:
+            Audit Response</span>
         </div>
-        <div class="p-2 bg-purple-50 rounded-lg">
-          <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
-            </path>
-          </svg>
+        <div class="flex items-center space-x-4">
+          <a href="../../../index.html" class="text-slate-500 hover:text-slate-900 font-medium">Back to
+            Portfolio</a>
         </div>
       </div>
     </div>
+  </nav>
 
-    <!-- Most Favorited -->
-    <div class="card p-6 border-l-4 border-pink-500">
-      <div class="flex justify-between items-start">
-        <div>
-          <p class="text-sm font-medium text-slate-500 uppercase tracking-wider">Fan Favorite</p>
-          <h3 class="mt-1 text-2xl font-bold text-slate-900" id="kpi-most-favorited-value">-</h3>
-          <p class="text-sm text-pink-600 font-medium mt-1" id="kpi-most-favorited-title">-</p>
-        </div>
-        <div class="p-2 bg-pink-50 rounded-lg">
-          <svg class="w-6 h-6 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
-            </path>
-          </svg>
-        </div>
-      </div>
-    </div>
+  <!-- Main Content -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+    <!-- Header -->
+    <div class="mb-8">
+      <h1 class="text-3xl font-bold text-slate-900">Strategic Performance Dashboard</h1>
+      <p class="mt-2 text-slate-600">Multi-lens analysis combining global fandom, streaming, domestic, and
+        production
+        data.</p>
     </div>
 
-    <!-- Charts Grid -->
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+    <!-- Tab Navigation -->
+    <div class="mb-8 border-b border-slate-200">
+      <nav class="flex space-x-2">
+        <button onclick="switchTab('fandom')" class="tab-btn active" id="tab-fandom">
+          🌐 Global Fandom
+        </button>
+        <button onclick="switchTab('streaming')" class="tab-btn" id="tab-streaming">
+          🎬 Streaming Analytics
+        </button>
+        <button onclick="switchTab('domestic')" class="tab-btn" id="tab-domestic">
+          🇯🇵 Domestic (Japan)
+        </button>
+        <button onclick="switchTab('production')" class="tab-btn" id="tab-production">
+          🎨 Production Insights
+        </button>
+      </nav>
+    </div>
 
-      <!-- Score vs Anime -->
-      <div class="card p-6">
-        <h3 class="text-lg font-bold text-slate-900 mb-4">Critical Reception (MAL Score)</h3>
-        <div class="relative h-80">
-          <canvas id="scoreChart"></canvas>
+    <!-- Tab 1: Global Fandom (Phase 1 - Real MAL Data) -->
+    <div id="content-fandom" class="tab-content active">
+      <div class="mb-6 p-4 bg-blue-50 border-l-4 border-blue-500 text-blue-700 text-sm">
+        <p class="font-bold">Data Source: MyAnimeList (Jikan API)</p>
+        <p>Real-time metrics for 12 Studio Pierrot titles. Note: MAL has a Western/international bias.</p>
+      </div>
+
+      <!-- KPI Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <!-- Top Rated -->
+        <div class="card p-6 border-l-4 border-indigo-500">
+          <div class="flex justify-between items-start">
+            <div>
+              <p class="text-sm font-medium text-slate-500 uppercase tracking-wider">Top Rated</p>
+              <h3 class="mt-1 text-2xl font-bold text-slate-900" id="kpi-top-rated-value">-</h3>
+              <p class="text-sm text-indigo-600 font-medium mt-1" id="kpi-top-rated-title">-</p>
+            </div>
+            <div class="p-2 bg-indigo-50 rounded-lg">
+              <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z">
+                </path>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Most Popular -->
+        <div class="card p-6 border-l-4 border-purple-500">
+          <div class="flex justify-between items-start">
+            <div>
+              <p class="text-sm font-medium text-slate-500 uppercase tracking-wider">Most Popular</p>
+              <h3 class="mt-1 text-2xl font-bold text-slate-900" id="kpi-most-popular-value">-</h3>
+              <p class="text-sm text-purple-600 font-medium mt-1" id="kpi-most-popular-title">-</p>
+            </div>
+            <div class="p-2 bg-purple-50 rounded-lg">
+              <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+                </path>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Most Favorited -->
+        <div class="card p-6 border-l-4 border-pink-500">
+          <div class="flex justify-between items-start">
+            <div>
+              <p class="text-sm font-medium text-slate-500 uppercase tracking-wider">Fan Favorite</p>
+              <h3 class="mt-1 text-2xl font-bold text-slate-900" id="kpi-most-favorited-value">-</h3>
+              <p class="text-sm text-pink-600 font-medium mt-1" id="kpi-most-favorited-title">-</p>
+            </div>
+            <div class="p-2 bg-pink-50 rounded-lg">
+              <svg class="w-6 h-6 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
+                </path>
+              </svg>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- Popularity vs Engagement -->
-      <div class="card p-6">
-        <h3 class="text-lg font-bold text-slate-900 mb-4">Popularity vs. Engagement</h3>
-        <div class="relative h-80">
-          <canvas id="popularityChart"></canvas>
+      <!-- Charts Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+
+        <!-- Score vs Anime -->
+        <div class="card p-6">
+          <h3 class="text-lg font-bold text-slate-900 mb-4">Critical Reception (MAL Score)</h3>
+          <div class="relative h-80">
+            <canvas id="scoreChart"></canvas>
+          </div>
+        </div>
+
+        <!-- Popularity vs Engagement -->
+        <div class="card p-6">
+          <h3 class="text-lg font-bold text-slate-900 mb-4">Popularity vs. Engagement</h3>
+          <div class="relative h-80">
+            <canvas id="popularityChart"></canvas>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Data Table -->
+      <div class="card overflow-hidden">
+        <div class="px-6 py-4 border-b border-slate-200">
+          <h3 class="text-lg font-bold text-slate-900">Detailed Metrics</h3>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="min-w-full divide-y divide-slate-200">
+            <thead class="bg-slate-50">
+              <tr>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">
+                  Title</th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">
+                  Type</th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">
+                  Score</th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">
+                  Members</th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">
+                  Status</th>
+              </tr>
+            </thead>
+            <tbody class="bg-white divide-y divide-slate-200" id="metrics-table-body">
+              <!-- Rows will be populated by JS -->
+            </tbody>
+          </table>
         </div>
       </div>
-
-    </div>
-
-    <!-- Data Table -->
-    <div class="card overflow-hidden">
-      <div class="px-6 py-4 border-b border-slate-200">
-        <h3 class="text-lg font-bold text-slate-900">Detailed Metrics</h3>
-      </div>
-      <div class="overflow-x-auto">
-        <table class="min-w-full divide-y divide-slate-200">
-          <thead class="bg-slate-50">
-            <tr>
-              <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">
-                Title</th>
-              <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">
-                Type</th>
-              <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">
-                Score</th>
-              <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">
-                Members</th>
-              <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">
-                Status</th>
-            </tr>
-          </thead>
-          <tbody class="bg-white divide-y divide-slate-200" id="metrics-table-body">
-            <!-- Rows will be populated by JS -->
-          </tbody>
-        </table>
-      </div>
-    </div>
     </div>
 
     <!-- Tab 2: Streaming Analytics (Phase 2 - Simulated) -->
@@ -246,23 +304,25 @@
       </div>
     </div>
 
-    </main>
+  </main>
 
-    <footer class="bg-white border-t border-slate-200 mt-12 py-8">
-      <div class="max-w-7xl mx-auto px-4 text-center text-slate-500 text-sm">
-        <p class="font-semibold text-slate-700 mb-2">Data Sources & Transparency</p>
-        <p><strong>Phase 1 (Global Fandom):</strong> Real data from <a href="https://jikan.moe/"
-            class="text-indigo-600 hover:underline" target="_blank">Jikan
-            API</a> (MyAnimeList). Note: MAL has Western/international bias.</p>
-        <p class="mt-1"><strong>Phase 2 (Streaming, Domestic, Production):</strong> Simulated data calibrated against
-          industry benchmarks
-          (Parrot Analytics, Netflix reports, Oricon charts). Not actual Studio Pierrot financials.</p>
-        <p class="mt-4">&copy; 2024 Dylan Elo. All rights reserved.</p>
-      </div>
-    </footer>
+  <footer class="bg-white border-t border-slate-200 mt-12 py-8">
+    <div class="max-w-7xl mx-auto px-4 text-center text-slate-500 text-sm">
+      <p class="font-semibold text-slate-700 mb-2">Data Sources & Transparency</p>
+      <p><strong>Phase 1 (Global Fandom):</strong> Real data from <a href="https://jikan.moe/"
+          class="text-indigo-600 hover:underline" target="_blank">Jikan
+          API</a> (MyAnimeList). Note: MAL has Western/international bias.</p>
+      <p class="mt-1"><strong>Phase 2 (Streaming, Domestic, Production):</strong> Simulated data calibrated against
+        industry benchmarks
+        (Parrot Analytics, Netflix reports, Oricon charts). Not actual Studio Pierrot financials.</p>
+      <p class="mt-1"><strong>Phase 3 (SQL Warehouse):</strong> Data stored in SQLite dimensional warehouse (Star
+        Schema). See repo for ETL code.</p>
+      <p class="mt-4">&copy; 2024 Dylan Elo. All rights reserved.</p>
+    </div>
+  </footer>
 
 
-    <script type="module" src="./dashboard.js"></script>
+  <script type="module" src="./dashboard.js"></script>
 </body>
 
 </html>
