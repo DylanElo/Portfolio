@@ -61,11 +61,13 @@ def load_dim_anime(conn, anime_data):
         members = anime.get("members") or 0
         tier = determine_tier(score, members)
         
-        # Extract studio names
-        studios = anime.get("studios", [])
-        studio = ", ".join([s.get("name", "") for s in studios]) if studios else "Unknown"
-        
         episodes = anime.get("episodes") or 12  # default to a single cour when missing
+        
+        # Extract studio (use primary_studio from generated data if available)
+        studio = anime.get("primary_studio")
+        if not studio:
+            studios = anime.get("studios", [])
+            studio = ", ".join([s.get("name", "") for s in studios]) if studios else "Unknown"
         
         # Extract dates
         aired = anime.get("aired", {})

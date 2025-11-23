@@ -1,193 +1,301 @@
-campaign_id,mal_id,title,campaign_type,channel,cost,impressions
-1,20,Naruto,Social Media,Instagram,66061.47,3412235
-2,20,Naruto,Influencer Partnership,Instagram Influencers,104926.48,7996852
-3,20,Naruto,Digital Display,Crunchyroll,67252.43,3977506
-4,20,Naruto,Social Media,Twitter/X,32290.24,2713359
-5,20,Naruto,TV Commercial,TV Tokyo,442967.22,8704465
-6,20,Naruto,Convention/Event,Comic-Con,127712.56,1588809
-7,20,Naruto,TV Commercial,Nippon TV,586552.06,12233913
-8,20,Naruto,Social Media,YouTube,44601.47,5417751
-9,20,Naruto,Influencer Partnership,YouTube Creators,97401.72,5472501
-10,20,Naruto,Digital Display,Google Display Network,124665.04,11102497
-11,20,Naruto,Influencer Partnership,YouTube Creators,71859.51,4689803
-12,1735,Naruto: Shippuuden,Streaming Platform,Hulu,59167.73,1701843
-13,1735,Naruto: Shippuuden,Print Media,Anime magazines,13166.47,246382
-14,1735,Naruto: Shippuuden,Influencer Partnership,Instagram Influencers,52514.88,2427397
-15,1735,Naruto: Shippuuden,Influencer Partnership,YouTube Creators,24535.8,1876682
-16,1735,Naruto: Shippuuden,Print Media,Newtype,11400.14,226256
-17,1735,Naruto: Shippuuden,TV Commercial,TBS,266650.24,4650178
-18,1735,Naruto: Shippuuden,Influencer Partnership,Twitch Streamers,33695.11,1573035
-19,1735,Naruto: Shippuuden,Print Media,Shonen Jump,11851.52,111408
-20,1735,Naruto: Shippuuden,Streaming Platform,Crunchyroll,176122.74,4005424
-21,269,Bleach,Social Media,Facebook,31762.28,2608517
-22,269,Bleach,Social Media,Twitter/X,45061.48,3308488
-23,269,Bleach,Convention/Event,Comiket,130470.97,1482144
-24,269,Bleach,Social Media,YouTube,55973.32,2544836
-25,269,Bleach,Digital Display,MyAnimeList,14629.56,766063
-26,269,Bleach,Print Media,Shonen Jump,19524.65,302733
-27,269,Bleach,Print Media,Animedia,82514.1,907303
-28,269,Bleach,TV Commercial,Fuji TV,313240.39,9342680
-29,269,Bleach,Influencer Partnership,Instagram Influencers,112114.91,12451507
-30,269,Bleach,Influencer Partnership,YouTube Creators,69289.61,4772327
-31,269,Bleach,Print Media,Anime magazines,51274.53,1376886
-32,269,Bleach,TV Commercial,TBS,172357.13,4408314
-33,269,Bleach,Print Media,Animedia,98521.09,1689847
-34,269,Bleach,Streaming Platform,Crunchyroll,260190.54,7414218
-35,269,Bleach,Influencer Partnership,YouTube Creators,108533.48,7180565
-36,22319,Tokyo Ghoul,Digital Display,AnimePlanet,37140.53,2395243
-37,22319,Tokyo Ghoul,Social Media,Instagram,23506.5,2940294
-38,22319,Tokyo Ghoul,Print Media,Newtype,11188.27,165959
-39,22319,Tokyo Ghoul,Digital Display,Crunchyroll,52012.73,3424078
-40,22319,Tokyo Ghoul,Print Media,Newtype,13729.45,311290
-41,22319,Tokyo Ghoul,Influencer Partnership,YouTube Creators,23026.19,1762133
-42,22319,Tokyo Ghoul,Social Media,TikTok,16694.5,1398048
-43,22319,Tokyo Ghoul,TV Commercial,Fuji TV,125890.57,1802214
-44,36511,Tokyo Ghoul:re,Convention/Event,Anime Expo,132234.28,1330829
-45,36511,Tokyo Ghoul:re,Digital Display,Google Display Network,66155.81,4818713
-46,36511,Tokyo Ghoul:re,TV Commercial,TV Tokyo,507622.84,7746462
-47,36511,Tokyo Ghoul:re,Influencer Partnership,Twitch Streamers,174496.09,10092577
-48,36511,Tokyo Ghoul:re,Convention/Event,Comic-Con,67764.87,445206
-49,36511,Tokyo Ghoul:re,TV Commercial,TV Tokyo,1138567.61,23967865
-50,36511,Tokyo Ghoul:re,Social Media,TikTok,29245.99,2183849
-51,36511,Tokyo Ghoul:re,Influencer Partnership,Instagram Influencers,80871.1,5107888
-52,36511,Tokyo Ghoul:re,Convention/Event,Comiket,310602.34,3767077
-53,36511,Tokyo Ghoul:re,Influencer Partnership,YouTube Creators,149986.68,14672818
-54,34566,Boruto: Naruto Next Generations,TV Commercial,Fuji TV,550922.38,11008282
-55,34566,Boruto: Naruto Next Generations,Print Media,Newtype,109717.06,1231623
-56,34566,Boruto: Naruto Next Generations,TV Commercial,TBS,431275.73,10201459
-57,34566,Boruto: Naruto Next Generations,Convention/Event,Comic-Con,77224.9,1180171
-58,34566,Boruto: Naruto Next Generations,Influencer Partnership,Twitch Streamers,34580.6,2653607
-59,34566,Boruto: Naruto Next Generations,Streaming Platform,Funimation,140271.49,5195605
-60,34572,Black Clover,Digital Display,MyAnimeList,96162.79,5549792
-61,34572,Black Clover,Influencer Partnership,YouTube Creators,76476.89,6784160
-62,34572,Black Clover,Social Media,TikTok,92687.64,11446300
-63,34572,Black Clover,Streaming Platform,Hulu,295481.03,10684638
-64,34572,Black Clover,Streaming Platform,Netflix,453386.44,22657013
-65,34572,Black Clover,Convention/Event,Comiket,61028.14,332679
-66,34572,Black Clover,TV Commercial,Fuji TV,756403.56,18902065
-67,34572,Black Clover,TV Commercial,Nippon TV,440258.71,6929367
-68,34572,Black Clover,Social Media,Instagram,97294.87,13734038
-69,392,Yuu☆Yuu☆Hakusho,Social Media,YouTube,52568.32,7949171
-70,392,Yuu☆Yuu☆Hakusho,Digital Display,MyAnimeList,96823.47,6677226
-71,392,Yuu☆Yuu☆Hakusho,Influencer Partnership,YouTube Creators,63527.55,5134684
-72,392,Yuu☆Yuu☆Hakusho,TV Commercial,TBS,80332.87,2092232
-73,392,Yuu☆Yuu☆Hakusho,Print Media,Shonen Jump,80612.44,1883349
-74,392,Yuu☆Yuu☆Hakusho,Streaming Platform,Crunchyroll,193438.27,12671372
-75,392,Yuu☆Yuu☆Hakusho,Convention/Event,Comiket,106556.98,1077416
-76,12031,Kingdom,Digital Display,MyAnimeList,80672.7,5645484
-77,12031,Kingdom,Digital Display,Crunchyroll,74526.29,4444066
-78,12031,Kingdom,Digital Display,MyAnimeList,44575.21,3825294
-79,12031,Kingdom,Convention/Event,Anime Expo,73471.88,976917
-80,12031,Kingdom,Influencer Partnership,YouTube Creators,39225.57,3947622
-81,12031,Kingdom,Influencer Partnership,Twitch Streamers,21813.41,2572276
-82,12031,Kingdom,Influencer Partnership,YouTube Creators,75083.62,5447112
-83,37510,Mob Psycho 100 II,Social Media,Facebook,22600.6,2421933
-84,37510,Mob Psycho 100 II,Digital Display,Google Display Network,131942.58,10109431
-85,37510,Mob Psycho 100 II,Streaming Platform,Crunchyroll,188671.21,5364921
-86,37510,Mob Psycho 100 II,Convention/Event,Comiket,133430.1,2048426
-87,37510,Mob Psycho 100 II,Print Media,Shonen Jump,25722.76,362970
-88,37510,Mob Psycho 100 II,Influencer Partnership,YouTube Creators,27405.12,1747592
-89,37510,Mob Psycho 100 II,TV Commercial,TV Tokyo,128248.82,3677717
-90,37510,Mob Psycho 100 II,Influencer Partnership,YouTube Creators,79023.42,6541489
-91,37510,Mob Psycho 100 II,Streaming Platform,Netflix,133393.92,6014363
-92,37510,Mob Psycho 100 II,Convention/Event,Comic-Con,215900.55,1866604
-93,37510,Mob Psycho 100 II,Influencer Partnership,Twitch Streamers,83845.59,4831163
-94,37510,Mob Psycho 100 II,Influencer Partnership,YouTube Creators,91533.27,8765594
-95,37510,Mob Psycho 100 II,Streaming Platform,Crunchyroll,315260.76,20407804
-96,37510,Mob Psycho 100 II,Convention/Event,AnimeJapan,222574.77,2711637
-97,37510,Mob Psycho 100 II,Streaming Platform,Crunchyroll,238925.34,7436630
-98,11061,Hunter x Hunter (2011),Streaming Platform,Hulu,122585.04,5917169
-99,11061,Hunter x Hunter (2011),Streaming Platform,Crunchyroll,141475.15,5126925
-100,11061,Hunter x Hunter (2011),TV Commercial,TBS,440303.3,7981396
-101,11061,Hunter x Hunter (2011),Digital Display,MyAnimeList,99821.85,5297806
-102,11061,Hunter x Hunter (2011),Social Media,Facebook,17030.45,1858085
-103,11061,Hunter x Hunter (2011),Influencer Partnership,Twitch Streamers,48512.84,2796176
-104,11061,Hunter x Hunter (2011),Digital Display,Google Display Network,84877.1,4074200
-105,11061,Hunter x Hunter (2011),Social Media,TikTok,58028.04,7778479
-106,19,Monster,Streaming Platform,Netflix,71028.67,1866450
-107,19,Monster,Influencer Partnership,Twitch Streamers,95435.66,13095994
-108,19,Monster,Print Media,Anime magazines,19864.49,236719
-109,19,Monster,TV Commercial,TBS,572228.08,8806681
-110,19,Monster,Convention/Event,AnimeJapan,149857.46,892456
-111,19,Monster,Influencer Partnership,Instagram Influencers,77342.72,9139180
-112,19,Monster,Influencer Partnership,Twitch Streamers,20040.46,2332389
-113,19,Monster,Digital Display,AnimePlanet,66486.56,1890515
-114,19,Monster,Convention/Event,Anime Expo,76035.67,606128
-115,19,Monster,Influencer Partnership,Instagram Influencers,55100.36,7313827
-116,16498,Shingeki no Kyojin,Streaming Platform,Hulu,144116.15,7033947
-117,16498,Shingeki no Kyojin,Convention/Event,Comic-Con,49312.73,215090
-118,16498,Shingeki no Kyojin,TV Commercial,Nippon TV,429221.76,9839324
-119,16498,Shingeki no Kyojin,Social Media,TikTok,13058.49,1020301
-120,16498,Shingeki no Kyojin,Influencer Partnership,Instagram Influencers,90809.67,10828995
-121,16498,Shingeki no Kyojin,TV Commercial,Fuji TV,378197.03,5680234
-122,16498,Shingeki no Kyojin,TV Commercial,TV Tokyo,270664.54,5036182
-123,16498,Shingeki no Kyojin,Convention/Event,AnimeJapan,48184.05,430527
-124,16498,Shingeki no Kyojin,Print Media,Animedia,38599.34,759914
-125,16498,Shingeki no Kyojin,Convention/Event,AnimeJapan,148451.24,1349256
-126,16498,Shingeki no Kyojin,Streaming Platform,Hulu,199429.37,6178935
-127,16498,Shingeki no Kyojin,Social Media,YouTube,7022.12,986838
-128,16498,Shingeki no Kyojin,Digital Display,Google Display Network,88540.06,5899363
-129,16498,Shingeki no Kyojin,Social Media,Facebook,59474.71,7560727
-130,918,Gintama,Social Media,Instagram,36848.63,5533284
-131,918,Gintama,Streaming Platform,Netflix,201687.94,3972891
-132,918,Gintama,Convention/Event,Comiket,42672.38,513875
-133,918,Gintama,Influencer Partnership,Instagram Influencers,77883.12,8740348
-134,918,Gintama,Convention/Event,Comic-Con,83034.05,421494
-135,918,Gintama,Social Media,Instagram,51077.55,3282703
-136,918,Gintama,Digital Display,AnimePlanet,102033.95,7999370
-137,918,Gintama,Influencer Partnership,Twitch Streamers,18794.19,1888841
-138,40748,Jujutsu Kaisen,Convention/Event,AnimeJapan,105510.49,1050464
-139,40748,Jujutsu Kaisen,Print Media,Anime magazines,51581.76,1387662
-140,40748,Jujutsu Kaisen,TV Commercial,Nippon TV,426077.38,10011888
-141,40748,Jujutsu Kaisen,Digital Display,Crunchyroll,65213.23,4858086
-142,40748,Jujutsu Kaisen,Influencer Partnership,YouTube Creators,96687.22,9336685
-143,40748,Jujutsu Kaisen,Streaming Platform,Netflix,176211.02,6600310
-144,40748,Jujutsu Kaisen,Print Media,Newtype,80060.29,2676153
-145,40748,Jujutsu Kaisen,Social Media,YouTube,18082.31,826302
-146,40748,Jujutsu Kaisen,Influencer Partnership,YouTube Creators,41592.96,4026807
-147,40748,Jujutsu Kaisen,Influencer Partnership,YouTube Creators,71628.72,4168495
-148,21,One Piece,Print Media,Animedia,40271.95,537204
-149,21,One Piece,Digital Display,Google Display Network,78458.15,4042705
-150,21,One Piece,Print Media,Newtype,34499.84,936990
-151,21,One Piece,Streaming Platform,Netflix,60366.04,2937168
-152,21,One Piece,TV Commercial,TV Tokyo,223234.2,4754002
-153,21,One Piece,TV Commercial,Nippon TV,621303.41,10808844
-154,21,One Piece,TV Commercial,Fuji TV,263882.35,4847472
-155,21,One Piece,Social Media,Instagram,15555.19,2423114
-156,21,One Piece,Streaming Platform,Crunchyroll,67568.34,2700574
-157,21,One Piece,TV Commercial,TBS,82750.27,1482240
-158,21,One Piece,Print Media,Shonen Jump,35134.35,832911
-159,21,One Piece,TV Commercial,TV Tokyo,108033.28,1882527
-160,31964,Boku no Hero Academia,Digital Display,Crunchyroll,124779.03,9757741
-161,31964,Boku no Hero Academia,Influencer Partnership,Instagram Influencers,153646.23,19832859
-162,31964,Boku no Hero Academia,Influencer Partnership,YouTube Creators,106842.07,5411287
-163,31964,Boku no Hero Academia,Social Media,Twitter/X,79203.06,5024647
-164,31964,Boku no Hero Academia,Influencer Partnership,Twitch Streamers,147734.02,6869673
-165,31964,Boku no Hero Academia,Digital Display,Crunchyroll,81004.51,5370748
-166,31964,Boku no Hero Academia,Social Media,Facebook,28877.59,2014510
-167,31964,Boku no Hero Academia,Influencer Partnership,YouTube Creators,37363.96,2387460
-168,31964,Boku no Hero Academia,Digital Display,Google Display Network,123982.51,6729850
-169,31964,Boku no Hero Academia,Streaming Platform,Crunchyroll,298154.65,12215021
-170,31964,Boku no Hero Academia,Convention/Event,Comic-Con,194967.81,1146492
-171,44511,Chainsaw Man,Social Media,Twitter/X,78087.71,10169792
-172,44511,Chainsaw Man,Streaming Platform,Netflix,302356.97,16656661
-173,44511,Chainsaw Man,Influencer Partnership,Twitch Streamers,35904.02,1381976
-174,44511,Chainsaw Man,Print Media,Newtype,138979.86,4136374
-175,44511,Chainsaw Man,Streaming Platform,Hulu,383439.71,20513076
-176,44511,Chainsaw Man,Streaming Platform,Hulu,224334.03,7102463
-177,44511,Chainsaw Man,TV Commercial,Nippon TV,846118.36,11908050
-178,44511,Chainsaw Man,Social Media,Twitter/X,49050.46,5787262
-179,44511,Chainsaw Man,Convention/Event,AnimeJapan,99842.95,823381
-180,44511,Chainsaw Man,TV Commercial,TV Tokyo,186213.37,2822940
-181,44511,Chainsaw Man,Convention/Event,Anime Expo,72368.33,525489
-182,38000,Kimetsu no Yaiba,Social Media,Instagram,105327.1,9419968
-183,38000,Kimetsu no Yaiba,Social Media,Facebook,67741.83,10573333
-184,38000,Kimetsu no Yaiba,Streaming Platform,Crunchyroll,322055.22,7933547
-185,38000,Kimetsu no Yaiba,Influencer Partnership,Instagram Influencers,112838.04,8840737
-186,38000,Kimetsu no Yaiba,TV Commercial,Fuji TV,271044.82,6695526
-187,38000,Kimetsu no Yaiba,Streaming Platform,Crunchyroll,308378.42,12183672
-188,38000,Kimetsu no Yaiba,Streaming Platform,Crunchyroll,384709.56,16995143
-189,38000,Kimetsu no Yaiba,TV Commercial,Fuji TV,286143.0,5828694
-190,38000,Kimetsu no Yaiba,Influencer Partnership,YouTube Creators,53904.35,2310132
-191,38000,Kimetsu no Yaiba,Social Media,Facebook,39388.92,3359097
-192,38000,Kimetsu no Yaiba,Influencer Partnership,Twitch Streamers,173864.14,9087433
+campaign_id,mal_id,campaign_type,channel,cost,impressions
+1,20,Launch,Social Media,1525694.0,30513880
+2,22319,Launch,Social Media,1499553.5,29991070
+3,1735,Launch,Social Media,1341938.5,26838770
+4,269,Launch,Social Media,1074499.5,21489990
+5,27899,Launch,Social Media,935017.5,18700350
+6,34572,Launch,Social Media,922912.0,18458240
+7,36511,Launch,Social Media,638894.0,12777880
+8,37799,Launch,Social Media,481984.0,9639680
+9,25013,Launch,Social Media,459328.5,9186570
+10,34566,Launch,Social Media,458437.0,9168740
+11,245,Launch,Social Media,449547.0,8990940
+12,392,Launch,Social Media,369844.5,7396890
+13,41467,Launch,Social Media,334452.0,6689040
+14,16870,Launch,Social Media,327639.0,6552780
+15,9513,Launch,Social Media,312244.5,6244890
+16,32105,Launch,Social Media,272489.5,5449790
+17,28755,Launch,Social Media,245317.5,4906350
+18,41433,Launch,Social Media,239326.5,4786530
+19,44961,Launch,Social Media,206342.0,4126840
+20,53998,Launch,Social Media,192461.0,3849220
+21,13667,Launch,Social Media,186973.0,3739460
+22,22101,Launch,Social Media,168061.0,3361220
+23,442,Launch,Social Media,157715.0,3154300
+24,2472,Launch,Social Media,157226.5,3144530
+25,1686,Launch,Social Media,148707.0,2974140
+26,4437,Launch,Social Media,142138.5,2842770
+27,8246,Launch,Social Media,137223.5,2744470
+28,10589,Launch,Social Media,135184.5,2703690
+29,30458,Launch,Social Media,134057.0,2681140
+30,56784,Launch,Social Media,132867.0,2657340
+31,2889,Launch,Social Media,131209.5,2624190
+32,48585,Launch,Social Media,129182.5,2583650
+33,936,Launch,Social Media,125335.0,2506700
+34,12031,Launch,Social Media,125227.5,2504550
+35,4835,Launch,Social Media,124923.5,2498470
+36,1281,Launch,Social Media,122275.5,2445510
+37,31297,Launch,Social Media,115500.5,2310010
+38,8247,Launch,Social Media,115396.0,2307920
+39,2144,Launch,Social Media,111575.0,2231500
+40,6325,Launch,Social Media,110289.5,2205790
+41,57892,Launch,Social Media,106683.0,2133660
+42,31174,Launch,Social Media,90074.5,1801490
+43,330,Launch,Social Media,90011.0,1800220
+44,31710,Launch,Social Media,86931.0,1738620
+45,153,Launch,Social Media,84390.0,1687800
+46,687,Launch,Social Media,82676.0,1653520
+47,21185,Launch,Social Media,82574.0,1651480
+48,53865,Launch,Social Media,74130.0,1482600
+49,135,Launch,Social Media,73957.0,1479140
+50,17389,Launch,Social Media,72171.5,1443430
+51,30370,Launch,Social Media,72141.0,1442820
+52,762,Launch,Social Media,67221.0,1344420
+53,123,Launch,Social Media,63595.0,1271900
+54,6444,Launch,Social Media,63288.5,1265770
+55,40682,Launch,Social Media,63241.5,1264830
+56,834,Launch,Social Media,61646.0,1232920
+57,32365,Launch,Social Media,61588.0,1231760
+58,58271,Launch,Social Media,59878.5,1197570
+59,51680,Launch,Social Media,55041.0,1100820
+60,12979,Launch,Social Media,52819.5,1056390
+61,35434,Launch,Social Media,52678.0,1053560
+62,12815,Launch,Social Media,50600.0,1012000
+63,9834,Launch,Social Media,49541.5,990830
+64,1293,Launch,Social Media,48745.0,974900
+65,27663,Launch,Social Media,47761.0,955220
+66,594,Launch,Social Media,47441.0,948820
+67,761,Launch,Social Media,45607.0,912140
+68,6586,Launch,Social Media,44960.5,899210
+69,10686,Launch,Social Media,42750.0,855000
+70,1074,Launch,Social Media,42335.5,846710
+71,50160,Launch,Social Media,42049.5,840990
+72,2248,Launch,Social Media,40505.0,810100
+73,19511,Launch,Social Media,39308.0,786160
+74,53621,Launch,Social Media,38841.5,776830
+75,5835,Launch,Social Media,36307.0,726140
+76,238,Launch,Social Media,35792.0,715840
+77,55153,Launch,Social Media,35411.0,708220
+78,55877,Launch,Social Media,34780.0,695600
+79,4134,Launch,Social Media,34127.5,682550
+80,34839,Launch,Social Media,33399.0,667980
+81,8311,Launch,Social Media,33368.0,667360
+82,104,Launch,Social Media,32837.5,656750
+83,54726,Launch,Social Media,32556.5,651130
+84,345,Launch,Social Media,32137.0,642740
+85,25859,Launch,Social Media,31528.5,630570
+86,129,Launch,Social Media,29217.5,584350
+87,37958,Launch,Social Media,29113.5,582270
+88,2142,Launch,Social Media,29090.5,581810
+89,10659,Launch,Social Media,29030.5,580610
+90,35067,Launch,Social Media,28697.0,573940
+91,56980,Launch,Social Media,28623.0,572460
+92,7367,Launch,Social Media,28332.0,566640
+93,53223,Launch,Social Media,28030.5,560610
+94,10075,Launch,Social Media,27616.0,552320
+95,59421,Launch,Social Media,26898.0,537960
+96,61967,Launch,Social Media,26678.5,533570
+97,1087,Launch,Social Media,26484.0,529680
+98,32878,Launch,Social Media,25358.5,507170
+99,1642,Launch,Social Media,23595.0,471900
+100,9441,Launch,Social Media,22273.0,445460
+101,40748,Launch,Social Media,1454235.0,29084700
+102,40028,Launch,Social Media,1109595.0,22191900
+103,44511,Launch,Social Media,925973.0,18519460
+104,34933,Launch,Social Media,796955.0,15939100
+105,48583,Launch,Social Media,748590.0,14971800
+106,37520,Launch,Social Media,671881.0,13437620
+107,51009,Launch,Social Media,640644.0,12812880
+108,23283,Launch,Social Media,627832.0,12556640
+109,48561,Launch,Social Media,588638.5,11772770
+110,41353,Launch,Social Media,491633.0,9832660
+111,36649,Launch,Social Media,470786.0,9415720
+112,32995,Launch,Social Media,469015.5,9380310
+113,46569,Launch,Social Media,436538.0,8730760
+114,37086,Launch,Social Media,413225.0,8264500
+115,51535,Launch,Social Media,407896.0,8157920
+116,49387,Launch,Social Media,399482.5,7989650
+117,34542,Launch,Social Media,346129.0,6922580
+118,38668,Launch,Social Media,307205.5,6144110
+119,48556,Launch,Social Media,279942.0,5598840
+120,37976,Launch,Social Media,262774.5,5255490
+121,21843,Launch,Social Media,217000.5,4340010
+122,12531,Launch,Social Media,205335.0,4106700
+123,53446,Launch,Social Media,155281.0,3105620
+124,19647,Launch,Social Media,145351.5,2907030
+125,57555,Launch,Social Media,134914.0,2698280
+126,30736,Launch,Social Media,128374.5,2567490
+127,28617,Launch,Social Media,121613.5,2432270
+128,29854,Launch,Social Media,118424.5,2368490
+129,40174,Launch,Social Media,116905.5,2338110
+130,56038,Launch,Social Media,115212.0,2304240
+131,42625,Launch,Social Media,103307.5,2066150
+132,15227,Launch,Social Media,102419.5,2048390
+133,55825,Launch,Social Media,94926.5,1898530
+134,57658,Launch,Social Media,79095.5,1581910
+135,58502,Launch,Social Media,77641.5,1552830
+136,59145,Launch,Social Media,76374.5,1527490
+137,32494,Launch,Social Media,75295.5,1505910
+138,23311,Launch,Social Media,75257.5,1505150
+139,39199,Launch,Social Media,73721.5,1474430
+140,48406,Launch,Social Media,73667.5,1473350
+141,37426,Launch,Social Media,70709.0,1414180
+142,31098,Launch,Social Media,69704.5,1394090
+143,50339,Launch,Social Media,62703.5,1254070
+144,49303,Launch,Social Media,59640.5,1192810
+145,55358,Launch,Social Media,54062.5,1081250
+146,48702,Launch,Social Media,52036.5,1040730
+147,35382,Launch,Social Media,45270.5,905410
+148,43697,Launch,Social Media,44938.0,898760
+149,57025,Launch,Social Media,43194.5,863890
+150,34547,Launch,Social Media,41796.5,835930
+151,38000,Launch,Social Media,1675289.0,33505780
+152,40456,Launch,Social Media,862178.5,17243570
+153,47778,Launch,Social Media,837145.5,16742910
+154,10087,Launch,Social Media,789635.5,15792710
+155,11741,Launch,Social Media,588551.0,11771020
+156,22297,Launch,Social Media,575959.5,11519190
+157,51019,Launch,Social Media,528728.5,10574570
+158,49926,Launch,Social Media,465779.5,9315590
+159,28701,Launch,Social Media,452529.0,9050580
+160,55701,Launch,Social Media,355940.5,7118810
+161,27631,Launch,Social Media,284488.0,5689760
+162,25537,Launch,Social Media,252143.0,5042860
+163,2593,Launch,Social Media,224231.0,4484620
+164,33049,Launch,Social Media,212931.0,4258620
+165,33050,Launch,Social Media,196746.5,3934930
+166,27821,Launch,Social Media,170878.5,3417570
+167,30911,Launch,Social Media,170663.0,3413260
+168,59192,Launch,Social Media,144692.0,2893840
+169,3782,Launch,Social Media,126120.5,2522410
+170,4282,Launch,Social Media,125257.0,2505140
+171,3783,Launch,Social Media,119862.5,2397250
+172,4280,Launch,Social Media,118512.0,2370240
+173,5205,Launch,Social Media,108271.0,2165420
+174,5204,Launch,Social Media,100464.0,2009280
+175,34086,Launch,Social Media,84384.5,1687690
+176,37033,Launch,Social Media,70862.0,1417240
+177,33018,Launch,Social Media,65011.0,1300220
+178,6954,Launch,Social Media,64196.5,1283930
+179,14807,Launch,Social Media,62013.0,1240260
+180,31389,Launch,Social Media,61186.5,1223730
+181,10417,Launch,Social Media,32772.5,655450
+182,33558,Launch,Social Media,32228.5,644570
+183,1731,Launch,Social Media,27223.0,544460
+184,22763,Launch,Social Media,26471.0,529420
+185,6624,Launch,Social Media,25314.0,506280
+186,47398,Launch,Social Media,24605.0,492100
+187,24459,Launch,Social Media,22524.5,450490
+188,13263,Launch,Social Media,19785.5,395710
+189,36064,Launch,Social Media,19370.0,387400
+190,229,Launch,Social Media,18632.0,372640
+191,10470,Launch,Social Media,18547.0,370940
+192,1858,Launch,Social Media,16695.0,333900
+193,126,Launch,Social Media,16609.0,332180
+194,5306,Launch,Social Media,16544.5,330890
+195,50668,Launch,Social Media,14424.5,288490
+196,13183,Launch,Social Media,13372.5,267450
+197,8995,Launch,Social Media,12669.0,253380
+198,19165,Launch,Social Media,11528.5,230570
+199,1194,Launch,Social Media,11238.5,224770
+200,36914,Launch,Social Media,10787.5,215750
+201,5114,Launch,Social Media,1798715.0,35974300
+202,31964,Launch,Social Media,1615749.0,32314980
+203,33486,Launch,Social Media,1339249.0,26784980
+204,36456,Launch,Social Media,1165713.0,23314260
+205,20507,Launch,Social Media,1141300.5,22826010
+206,32182,Launch,Social Media,1131339.5,22626790
+207,38408,Launch,Social Media,930240.5,18604810
+208,3588,Launch,Social Media,866177.5,17323550
+209,37510,Launch,Social Media,841206.0,16824120
+210,121,Launch,Social Media,768913.5,15378270
+211,30503,Launch,Social Media,768829.0,15376580
+212,31478,Launch,Social Media,760935.0,15218700
+213,41587,Launch,Social Media,656184.0,13123680
+214,853,Launch,Social Media,603685.0,12073700
+215,2025,Launch,Social Media,497064.5,9941290
+216,32867,Launch,Social Media,468229.0,9364580
+217,24439,Launch,Social Media,465662.5,9313250
+218,50172,Launch,Social Media,410205.5,8204110
+219,36896,Launch,Social Media,398915.0,7978300
+220,49918,Launch,Social Media,387698.0,7753960
+221,30123,Launch,Social Media,363305.5,7266110
+222,38003,Launch,Social Media,347291.0,6945820
+223,14075,Launch,Social Media,310634.5,6212690
+224,42923,Launch,Social Media,308496.0,6169920
+225,39565,Launch,Social Media,308376.5,6167530
+226,48580,Launch,Social Media,304491.5,6089830
+227,8425,Launch,Social Media,296344.0,5926880
+228,40787,Launch,Social Media,253427.5,5068550
+229,34451,Launch,Social Media,234257.0,4685140
+230,10161,Launch,Social Media,228973.0,4579460
+231,237,Launch,Social Media,227233.5,4544670
+232,6573,Launch,Social Media,212905.5,4258110
+233,54789,Launch,Social Media,212159.5,4243190
+234,5,Launch,Social Media,202098.0,4041960
+235,20853,Launch,Social Media,199804.5,3996090
+236,20057,Launch,Social Media,192199.0,3843980
+237,31173,Launch,Social Media,192041.0,3840820
+238,2418,Launch,Social Media,175114.0,3502280
+239,202,Launch,Social Media,174021.0,3480420
+240,37435,Launch,Social Media,173568.0,3471360
+241,50330,Launch,Social Media,173089.0,3461780
+242,430,Launch,Social Media,171803.0,3436060
+243,59062,Launch,Social Media,169263.0,3385260
+244,20767,Launch,Social Media,168500.0,3370000
+245,49114,Launch,Social Media,167375.5,3347510
+246,6211,Launch,Social Media,155530.5,3110610
+247,34944,Launch,Social Media,154017.0,3080340
+248,44200,Launch,Social Media,140113.5,2802270
+249,30885,Launch,Social Media,134985.0,2699700
+250,7338,Launch,Social Media,133580.0,2671600
+251,1535,Launch,Social Media,2098369.0,41967380
+252,30276,Launch,Social Media,1725888.5,34517770
+253,11061,Launch,Social Media,1551085.0,31021700
+254,19815,Launch,Social Media,1261196.0,25223920
+255,22535,Launch,Social Media,1001672.0,20033440
+256,28223,Launch,Social Media,943741.0,18874820
+257,29803,Launch,Social Media,861014.0,17220280
+258,8074,Launch,Social Media,793744.0,15874880
+259,19,Launch,Social Media,639157.5,12783150
+260,52991,Launch,Social Media,629796.0,12595920
+261,20785,Launch,Social Media,566463.0,11329260
+262,35073,Launch,Social Media,554518.0,11090360
+263,889,Launch,Social Media,543448.0,10868960
+264,777,Launch,Social Media,499363.5,9987270
+265,37675,Launch,Social Media,495231.5,9904630
+266,33674,Launch,Social Media,467298.0,9345960
+267,14345,Launch,Social Media,448507.5,8970150
+268,12355,Launch,Social Media,427959.5,8559190
+269,2236,Launch,Social Media,414219.0,8284380
+270,6,Launch,Social Media,408253.0,8165060
+271,437,Launch,Social Media,396798.5,7935970
+272,877,Launch,Social Media,377910.0,7558200
+273,28297,Launch,Social Media,361397.0,7227940
+274,1818,Launch,Social Media,356315.0,7126300
+275,263,Launch,Social Media,335842.0,6716840
+276,48895,Launch,Social Media,307144.5,6142890
+277,1943,Launch,Social Media,297026.0,5940520
+278,1519,Launch,Social Media,282615.0,5652300
+279,48556,Launch,Social Media,279942.0,5598840
+280,35839,Launch,Social Media,272188.5,5443770
+281,5681,Launch,Social Media,271763.5,5435270
+282,53126,Launch,Social Media,259166.5,5183330
+283,59,Launch,Social Media,253675.5,5073510
+284,10800,Launch,Social Media,244526.5,4890530
+285,7785,Launch,Social Media,242517.0,4850340
+286,232,Launch,Social Media,238849.0,4776980
+287,323,Launch,Social Media,230532.0,4610640
+288,6114,Launch,Social Media,209592.5,4191850
+289,6675,Launch,Social Media,207709.0,4154180
+290,3002,Launch,Social Media,191997.0,3839940
+291,57,Launch,Social Media,183918.0,3678360
+292,48849,Launch,Social Media,181550.5,3631010
+293,31764,Launch,Social Media,171523.5,3430470
+294,31772,Launch,Social Media,171456.0,3429120
+295,31704,Launch,Social Media,170426.5,3408530
+296,1726,Launch,Social Media,169205.0,3384100
+297,4901,Launch,Social Media,161971.5,3239430
+298,759,Launch,Social Media,160581.0,3211620
+299,9515,Launch,Social Media,160083.0,3201660
+300,5258,Launch,Social Media,158902.5,3178050
