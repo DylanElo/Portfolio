@@ -60,29 +60,6 @@ Live metrics for understanding international fan sentiment:
 - Industry benchmarks (e.g., ~$34B global anime market in 2024)
 - Known patterns (late-night vs prime-time slots, filler impact on BD sales)
 
----
-
-## 🗂️ Project Structure
-
-```text
-/
-├── dashboard/          # Interactive Dashboard (Phase 1: Live MAL Data)
-│   ├── index.html      # Dashboard UI
-│   ├── dashboard.js    # Chart.js logic & Data binding
-│   └── data.js         # Auto-generated from Jikan API
-├── docs/               # Strategic Documentation (Google BI Framework)
-│   ├── executive_requirements.md    # High-level business goals
-│   ├── stakeholder_requirements.md  # Production, Marketing, Finance needs
-│   └── strategy_document.md         # BI implementation roadmap
-├── etl/                # Data Pipeline
-│   └── fetch_data.js   # Node.js script to fetch Jikan data
-├── ROADMAP_PHASE_2.md  # Future vision: Full 3-lens integration
-└── README.md           # This file
-```
-
----
-
-## 🔍 Current State (Phase 1)
 
 **What's Live:**
 - ✅ Real-time MAL metrics for 12 Studio Pierrot titles
@@ -90,10 +67,17 @@ Live metrics for understanding international fan sentiment:
 - ✅ Charts: Critical Reception (Score), Popularity vs Engagement
 - ✅ Detailed metrics table with sortable data
 
+**What's Ready (Phase 2 Data Files):**
+- ✅ **Domestic (Japan) Data:** `domestic_data.js` - TV ratings, Blu-ray sales (Oricon), merchandise revenue
+- ✅ **Streaming Analytics:** `streaming_data.js` - Netflix/Crunchyroll market share, global demand index, regional revenue
+- ✅ **Production Metrics:** `production_data.js` - Filler impact analysis, arc quality scores, production budgets
+
+All Phase 2 data is **calibrated against real benchmarks** (Netflix reports, Parrot Analytics, industry standards) and ready for dashboard integration.
+
 **What's Acknowledged:**
-- ⚠️ MAL data alone is insufficient for strategic decisions
-- ⚠️ Financial metrics (Revenue, ROI) referenced in case study are **simulated** for demonstration purposes
-- ⚠️ Domestic (Japan) data is not yet integrated
+- ⚠️ MAL data alone is insufficient for strategic decisions (Phase 2 expands this)
+- ⚠️ Financial metrics referenced in case study are **simulated** for demonstration
+- ⚠️ Phase 2 multi-tab dashboard UI is planned (data layer complete)
 
 **Dashboard Disclaimer:**
 The live dashboard clearly states: *"Public metrics (Score, Members, Favorites) are fetched live from the Jikan API. Financial data (Revenue, ROI) referenced in the case study is simulated for demonstration purposes."*
