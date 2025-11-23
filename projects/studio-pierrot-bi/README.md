@@ -1,52 +1,51 @@
 # Studio Pierrot BI Analysis
 
-**A Business Intelligence project analyzing the performance of Studio Pierrot's anime franchises.**
+A strategic Business Intelligence project analyzing 10 iconic anime franchises to identify actionable insights for improving production ROI.
 
-This project demonstrates a complete BI workflow, from data extraction (ETL) to strategic analysis and visualization. It focuses on identifying actionable insights to improve production ROI for one of Japan's most legendary animation studios.
+## 📊 Data Architecture
 
-## 🚀 Project Status: Phase 1 (Live)
+This project uses a hybrid data approach to simulate a real-world BI environment:
 
-The project is currently in **Phase 1**, focusing on establishing a reliable data pipeline and visualizing core metrics using real-world data.
+### 1. Real-Time Metrics (Jikan API)
+We fetch live public data from MyAnimeList via the [Jikan API](https://jikan.moe/) for the following metrics:
+- **Score:** Critical reception (0-10 scale).
+- **Members:** Total audience size/reach.
+- **Favorites:** Core fanbase engagement.
+- **Popularity:** Relative ranking by member count.
 
-*   **Data Source:** [Jikan API](https://jikan.moe/) (Unofficial MyAnimeList API).
-*   **Data Warehouse:** SQLite (Local) / JSON (Web).
-*   **Visualization:** Custom HTML/JS Dashboard (Chart.js).
-*   **Key Metrics:** Score, Popularity (Members), Favorites, Airing Status.
+**ETL Process:**
+- Script: `etl/fetch_data.js`
+- Source: Jikan API (REST)
+- Output: `dashboard/data.js` (JSON object used by the frontend)
 
-## 📂 Project Structure
+### 2. Simulated Financial Data
+To demonstrate business analysis capabilities without access to private studio financials, we have modeled the following metrics based on industry standards:
+- **Revenue:** Estimated earnings from broadcast, streaming, and merchandise.
+- **Production Cost:** Estimated budget based on episode count and animation quality.
+- **ROI:** Calculated Return on Investment.
 
-```
-projects/studio-pierrot-bi/
-├── dashboard/          # Interactive Web Dashboard
+## 🗂️ Project Structure
+
+```text
+/
+├── dashboard/          # Interactive Dashboard
 │   ├── index.html      # Dashboard UI
-│   ├── dashboard.js    # Visualization Logic
-│   └── data.js         # Processed Data (JSON)
-├── etl/                # Data Engineering
-│   └── fetch_data.js   # Script to fetch real data from Jikan API
-├── data/               # Raw Data Storage
-│   └── raw_jikan_data.json
+│   ├── dashboard.js    # Chart.js logic & Data binding
+│   └── data.js         # Generated data file
+├── docs/               # Strategic Documentation
+│   ├── executive_requirements.md
+│   ├── stakeholder_requirements.md
+│   └── strategy_document.md
+├── etl/                # Data Pipeline
+│   └── fetch_data.js   # Node.js script to fetch Jikan data
 └── README.md           # This file
 ```
 
-## 📊 Dashboard
+## 🚀 How to Run
 
-The interactive dashboard provides a snapshot of franchise performance.
-
-**[Launch Dashboard](./dashboard/index.html)**
-
-### Key Views
-1.  **KPI Overview:** Top performing titles by Score, Popularity, and Engagement.
-2.  **Comparative Analysis:** Bar charts comparing critical reception (Score) vs. Audience Size (Members).
-3.  **Franchise Deep Dive:** Detailed stats for key franchises (Naruto, Bleach, Tokyo Ghoul, etc.).
-
-## 🗺️ Roadmap
-
-### Phase 2: Enhanced Analytics (Planned)
-*   **Revenue Modeling:** Integrate estimated revenue data based on box office and disc sales (simulated where actuals are unavailable).
-*   **Production Metrics:** Correlate animation quality (filler ratio, staff credits) with audience sentiment.
-*   **Regional Analysis:** Break down popularity by region (Domestic vs. International) using Google Trends data.
-
-## 🛠️ Tech Stack
-*   **ETL:** Node.js (Axios)
-*   **Frontend:** Vanilla JS, Chart.js, TailwindCSS
-*   **Version Control:** Git
+1. **View the Dashboard:** Open `dashboard/index.html` in your browser.
+2. **Run ETL Pipeline:**
+   ```bash
+   node etl/fetch_data.js
+   ```
+   *Note: Requires Node.js installed.*

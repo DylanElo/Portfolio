@@ -1,7 +1,20 @@
 import { animeData } from './data.js';
 
+console.log('Dashboard script loaded');
+
 document.addEventListener('DOMContentLoaded', () => {
-  initDashboard();
+  console.log('DOM loaded, initializing dashboard...');
+  try {
+    if (!animeData || animeData.length === 0) {
+      console.error('No anime data found!');
+      document.getElementById('kpi-top-rated-value').textContent = 'Error';
+      return;
+    }
+    console.log('Anime data loaded:', animeData.length, 'entries');
+    initDashboard();
+  } catch (error) {
+    console.error('Error initializing dashboard:', error);
+  }
 });
 
 function initDashboard() {
