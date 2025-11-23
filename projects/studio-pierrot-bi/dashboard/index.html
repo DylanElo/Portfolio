@@ -109,6 +109,9 @@
         <button onclick="switchTab('production')" class="tab-btn" id="tab-production">
           🎨 Production Insights
         </button>
+        <button onclick="switchTab('financial')" class="tab-btn" id="tab-financial">
+          💰 Financial Performance
+        </button>
       </nav>
     </div>
 
@@ -300,6 +303,85 @@
           <div class="relative h-80">
             <canvas id="modelChart"></canvas>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 5: Financial Performance (Phase 3 - ROI Model) -->
+    <div id="content-financial" class="tab-content">
+      <div class="mb-6 p-4 bg-emerald-50 border-l-4 border-emerald-500 text-emerald-700 text-sm">
+        <p class="font-bold">Data Source: SQL Warehouse (fact_finance table)</p>
+        <p>ROI model based on S/A/B/C tiers, production budgets, and multi-stream revenue (streaming + discs + merch).
+        </p>
+      </div>
+
+      <!-- Financial KPI Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div class="card p-6 border-l-4 border-emerald-500">
+          <p class="text-sm font-medium text-slate-500 uppercase tracking-wider">Average ROI</p>
+          <h3 class="mt-1 text-2xl font-bold text-slate-900" id="kpi-avg-roi">-</h3>
+          <p class="text-sm text-emerald-600 font-medium mt-1">Portfolio Performance</p>
+        </div>
+        <div class="card p-6 border-l-4 border-green-500">
+          <p class="text-sm font-medium text-slate-500 uppercase tracking-wider">Best ROI</p>
+          <h3 class="mt-1 text-2xl font-bold text-slate-900" id="kpi-best-roi">-</h3>
+          <p class="text-sm text-green-600 font-medium mt-1" id="kpi-best-roi-title">-</p>
+        </div>
+        <div class="card p-6 border-l-4 border-red-500">
+          <p class="text-sm font-medium text-slate-500 uppercase tracking-wider">Worst ROI</p>
+          <h3 class="mt-1 text-2xl font-bold text-slate-900" id="kpi-worst-roi">-</h3>
+          <p class="text-sm text-red-600 font-medium mt-1" id="kpi-worst-roi-title">-</p>
+        </div>
+      </div>
+
+      <!-- Charts -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+        <div class="card p-6">
+          <h3 class="text-lg font-bold text-slate-900 mb-4">ROI by Tier</h3>
+          <div class="relative h-80">
+            <canvas id="roiTierChart"></canvas>
+          </div>
+        </div>
+        <div class="card p-6">
+          <h3 class="text-lg font-bold text-slate-900 mb-4">Budget vs Revenue</h3>
+          <div class="relative h-80">
+            <canvas id="budgetRevenueChart"></canvas>
+          </div>
+        </div>
+        <div class="card p-6">
+          <h3 class="text-lg font-bold text-slate-900 mb-4">Top 8 by Profit per Episode</h3>
+          <div class="relative h-80">
+            <canvas id="profitPerEpChart"></canvas>
+          </div>
+        </div>
+        <div class="card p-6">
+          <h3 class="text-lg font-bold text-slate-900 mb-4">Revenue Breakdown</h3>
+          <div class="relative h-80">
+            <canvas id="revenueBreakdownChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Financial Data Table -->
+      <div class="card overflow-hidden">
+        <div class="px-6 py-4 border-b border-slate-200">
+          <h3 class="text-lg font-bold text-slate-900">Financial Details</h3>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="min-w-full divide-y divide-slate-200">
+            <thead class="bg-slate-50">
+              <tr>
+                <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase">Title</th>
+                <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase">Tier</th>
+                <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase">Budget</th>
+                <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase">Revenue</th>
+                <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase">Profit</th>
+                <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase">ROI</th>
+              </tr>
+            </thead>
+            <tbody class="bg-white divide-y divide-slate-200" id="financial-table-body">
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
