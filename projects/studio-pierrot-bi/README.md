@@ -1,8 +1,42 @@
 # Studio Pierrot BI Analysis
 
-> **Project Context:** I am acting as a BI Analyst at Studio Pierrot Japan, tasked with answering a critical strategic question: *Why are our flagship IPs (Naruto, Bleach, Tokyo Ghoul, Black Clover) struggling to capture the same global momentum as newer titles like Jujutsu Kaisen (MAPPA), Demon Slayer (ufotable), and Attack on Titan—and what should we do about it?*
+## 📋 Project Context
 
-This project simulates a real-world Business Intelligence environment where I combine **domestic (Japan), international (streaming), and global fandom data** to provide actionable recommendations to studio leadership.
+**Role:** BI Analyst at Studio Pierrot (Tokyo, Japan)
+
+**Business Question:** *Why are our flagship IPs (Naruto, Bleach, Tokyo Ghoul, Black Clover) struggling to capture the same global momentum as newer titles like Jujutsu Kaisen (MAPPA) and Demon Slayer (ufotable)—and what should we do about it?*
+
+This project simulates a real-world Business Intelligence environment where I combine **domestic (Japan), international streaming, and global fandom data** to provide actionable recommendations to studio leadership.
+
+**Strategic Context:**
+- Global anime market: $34B (2024) → projected $60B+ by 2030
+- International streaming revenue: $3.7B → $12.5B by 2030
+- Jujutsu Kaisen (MAPPA) was named "Most in-demand TV series in the world" in 2023 at 71.2x average demand
+- Netflix + Crunchyroll control >80% of overseas anime streaming market
+- Pierrot's legacy IPs dominate Netflix, but new titles fail to match MAPPA/ufotable quality perception
+
+---
+
+## 📊 Data Sources & Limitations
+
+### Real Data (Phase 1: Global Fandom Lens)
+**Source:** MyAnimeList via [Jikan API](https://jikan.moe/)
+- Live scores, members, favorites, popularity rankings for 12 Studio Pierrot titles
+- **Limitation:** MAL has a Western/international bias; Japanese domestic fans rarely use it
+- **Use Case:** Proxy for global online anime fandom sentiment
+
+### Market Context (Public Reports)
+**Sources:** Parrot Analytics, Netflix reports, industry publications
+- Platform market share (Netflix ~52% anime watchers, Crunchyroll ~85% anime-focused)
+- Global demand indices (JJK 71.2x benchmark)
+- Streaming revenue projections and regional growth rates
+- **Use Case:** Calibrate simulated data against real industry trends
+
+### Simulated Data (Phase 2: Domestic & Streaming Lenses)
+**Note:** Production costs, TV ratings, BD sales, merchandise revenue are **modeled for this project**
+- Calibrated against known market sizes (e.g., Oricon BD sales rankings, standard production budgets)
+- **Not actual Studio Pierrot financials**
+- **Transparency:** All Phase 2 data clearly marked as "simulated" in dashboard and documentation
 
 ---
 
