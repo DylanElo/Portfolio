@@ -1,0 +1,60 @@
+name: Daily BI Pipeline Update
+
+on:
+  schedule:
+    # Run at 00:00 UTC every day
+    - cron: '0 0 * * *'
+  workflow_dispatch: # Allow manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        if [ -f projects/studio-pierrot-bi/requirements.txt ]; then pip install -r projects/studio-pierrot-bi/requirements.txt; fi
+        
+    - name: Run ETL Pipeline
+      working-directory: projects/studio-pierrot-bi
+      run: |
+        echo "🚀 Starting ETL Pipeline..."
+        
+        echo "1️⃣ Extracting data from Jikan API..."
+        python etl/extract_mal.py
+        
+        echo "2️⃣ Loading data into SQL Warehouse..."
+        python etl/load.py
+        
+        echo "3️⃣ Exporting to Dashboard..."
+        python etl/export_to_dashboard.py
+        
+        echo "✅ Pipeline complete."
+        
+    - name: Commit and Push changes
+      run: |
+        git config --global user.name 'GitHub Action'
+        git config --global user.email 'action@github.com'
+        git add projects/studio-pierrot-bi/data/
+        git add projects/studio-pierrot-bi/warehouse/
+        git add projects/studio-pierrot-bi/dashboard/data.js
+        
+        # Only commit if there are changes
+        if git diff --staged --quiet; then
+          echo "No changes to commit"
+        else
+          git commit -m "🤖 Auto-update: Daily BI Data Refresh"
+          git push
+        fi
