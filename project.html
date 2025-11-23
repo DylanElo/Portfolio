@@ -1,394 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<header class="header">
-    <nav class="nav-container">
-        <a href="index.html" class="logo">Portfolio.</a>
-        <button class="mobile-menu-btn" aria-label="Toggle menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <ul class="nav-links">
-            <li><a href="index.html#home">Home</a></li>
-            <li><a href="index.html#projects">Projects</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Pierrot BI Analysis | Dylan Elo</title>
+    <link rel="stylesheet" href="./src/style.css?v=3">
+</head>
 
-<main>
-    <!-- Hero Section -->
-    <section class="section" style="padding-top: 8rem;">
-        <div class="container">
-            <h1 class="hero-title">Studio Pierrot BI Analysis</h1>
-            <p class="hero-subtitle">
-                A strategic Business Intelligence project analyzing 10 iconic anime franchises to identify
-                actionable insights for improving production ROI.
-            </p>
-            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
-                <span class="tech-stack-tag">Python ETL</span>
-                <span class="tech-stack-tag">SQL Warehouse</span>
-                <h2 class="section-title">📚 Strategic Documents</h2>
-                <p style="text-align: center; color: #cbd5e1; margin-top: 1rem; margin-bottom: 2rem;">
+<body>
+
+    <header class="header glass-panel">
+        <nav class="nav-container">
+            <a href="index.html" class="logo">Dylan.</a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Project Hero -->
+        <section class="section" style="padding-top: 10rem; padding-bottom: 4rem;">
+            <div class="container" style="text-align: center;">
+                <span class="greeting" style="margin-bottom: 1rem; display: inline-block;">Business Intelligence Case
+                    Study</span>
+                <h1 class="gradient-text" style="font-size: 3rem; margin-bottom: 1.5rem;">Studio Pierrot Analysis</h1>
+                <p class="hero-description">
+                    A strategic Business Intelligence project analyzing 10 iconic anime franchises to identify
+                    actionable insights for improving production ROI.
+                </p>
+
+                <div class="tech-stack" style="justify-content: center; margin-bottom: 3rem;">
+                    <span class="tech-stack-tag">Python ETL</span>
+                    <span class="tech-stack-tag">SQL Warehouse</span>
+                    <span class="tech-stack-tag">Chart.js</span>
+                    <span class="tech-stack-tag">Data Modeling</span>
+                </div>
+
+                <div class="glass p-8" style="padding: 2rem; border-radius: 1rem; max-width: 800px; margin: 0 auto;">
+                    <h3 style="margin-bottom: 1rem;">🚀 Interactive Dashboard</h3>
+                    <p style="margin-bottom: 1.5rem;">Explore the live data, filter by franchise, and see the insights
+                        in action.</p>
+                    <a href="projects/studio-pierrot-bi/dashboard/index.html" class="btn btn-primary"
+                        style="font-size: 1.1rem; padding: 1rem 2rem;">Launch Dashboard</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strategic Documents -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title fade-in">📚 Strategic Documentation</h2>
+                <p
+                    style="text-align: center; color: var(--text-muted); margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">
                     Complete business documentation demonstrating the full BI workflow from requirements to strategy.
                 </p>
-                <div class="projects-grid" style="margin-top: 3rem;">
-                    <div class="project-card">
+
+                <div class="projects-grid">
+                    <div class="project-card glass">
                         <div class="project-info">
                             <h3>📋 Executive Requirements</h3>
-                            <p>
-                                <strong>Purpose:</strong> High-level business objectives and success metrics defined by
-                                studio leadership.
-                                <br><br>
-                                <strong>Contents:</strong> Strategic goals, key performance indicators, and
-                                executive-level questions
-                                that drive the entire analysis.
-                            </p>
-                            <div style="margin-top: 1.5rem;">
-                                <a href="docs/executive_requirements.md" class="btn btn-primary" target="_blank">View
-                                    Document</a>
-                            </div>
+                            <p><strong>Purpose:</strong> High-level business objectives and success metrics defined by
+                                studio leadership.</p>
+                            <p style="font-size: 0.9rem; margin-top: 0.5rem;">Contents: Strategic goals, KPIs, and
+                                executive-level questions.</p>
+                            <a href="docs/executive_requirements.md" class="btn btn-secondary"
+                                style="margin-top: 1.5rem; width: 100%;" target="_blank">View Document</a>
                         </div>
                     </div>
 
-                    <div class="project-card">
+                    <div class="project-card glass">
                         <div class="project-info">
                             <h3>👥 Stakeholder Requirements</h3>
-                            <p>
-                                <strong>Purpose:</strong> Detailed analytical needs from Production, Marketing, and
-                                Finance teams.
-                                <br><br>
-                                <strong>Contents:</strong> Specific questions from each department, required metrics,
-                                and data granularity needs.
-                            </p>
-                            <div style="margin-top: 1.5rem;">
-                                <a href="docs/stakeholder_requirements.md" class="btn btn-primary" target="_blank">View
-                                    Document</a>
-                            </div>
+                            <p><strong>Purpose:</strong> Detailed analytical needs from Production, Marketing, and
+                                Finance teams.</p>
+                            <p style="font-size: 0.9rem; margin-top: 0.5rem;">Contents: Specific questions, required
+                                metrics, and data granularity.</p>
+                            <a href="docs/stakeholder_requirements.md" class="btn btn-secondary"
+                                style="margin-top: 1.5rem; width: 100%;" target="_blank">View Document</a>
                         </div>
                     </div>
 
-                    <div class="project-card">
+                    <div class="project-card glass">
                         <div class="project-info">
                             <h3>🎯 Strategy Document</h3>
-                            <p>
-                                <strong>Purpose:</strong> Technical implementation roadmap and BI approach.
-                                <br><br>
-                                <strong>Contents:</strong> Data sources, tech stack selection, pipeline architecture,
-                                and project timeline.
+                            <p><strong>Purpose:</strong> Technical implementation roadmap and BI approach.</p>
+                            <p style="font-size: 0.9rem; margin-top: 0.5rem;">Contents: Data sources, tech stack,
+                                pipeline architecture, and timeline.</p>
+                            <a href="docs/strategy_document.md" class="btn btn-secondary"
+                                style="margin-top: 1.5rem; width: 100%;" target="_blank">View Document</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Analyses -->
+        <section class="section" style="background: rgba(255,255,255,0.02);">
+            <div class="container">
+                <h2 class="section-title fade-in">🔍 Key Findings</h2>
+                <div class="projects-grid">
+                    <div class="project-card glass">
+                        <div class="project-info">
+                            <h3>🏛️ Legacy vs. Modern</h3>
+                            <p style="margin-bottom: 1rem;"><strong>Question:</strong> Are new titles performing as well
+                                as historical hits?</p>
+                            <p style="color: var(--text-main);"><strong>Finding:</strong> "Legacy" franchises (Naruto,
+                                Bleach) still drive <strong>60%+ of total revenue</strong>. Modern titles show higher
+                                volatility.</p>
+                        </div>
+                    </div>
+
+                    <div class="project-card glass">
+                        <div class="project-info">
+                            <h3>📈 Top vs. Flop</h3>
+                            <p style="margin-bottom: 1rem;"><strong>Question:</strong> What distinguishes a hit from a
+                                miss?</p>
+                            <p style="color: var(--text-main);"><strong>Finding:</strong> Top performers correlate
+                                strongly with <strong>high sentiment scores (>8.5)</strong>. Flops often suffer from
+                                high filler percentages.</p>
+                        </div>
+                    </div>
+
+                    <div class="project-card glass">
+                        <div class="project-info">
+                            <h3>🌍 Regional Growth</h3>
+                            <p style="margin-bottom: 1rem;"><strong>Question:</strong> Where is the audience growing?
                             </p>
-                            <div style="margin-top: 1.5rem;">
-                                <a href="docs/strategy_document.md" class="btn btn-primary" target="_blank">View
-                                    Document</a>
-                            </div>
+                            <p style="color: var(--text-main);"><strong>Finding:</strong> International Streaming (North
+                                America, Europe) is the fastest-growing revenue segment, outpacing domestic broadcast.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
-    </section>
+        </section>
 
-    <!-- Key Analyses -->
-    <section class="section">
+        <!-- Recommendations -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title fade-in">💡 Strategic Recommendations</h2>
+                <div class="projects-grid">
+                    <div class="project-card glass" style="border-left: 4px solid var(--primary);">
+                        <div class="project-info">
+                            <h3>📉 Optimize Filler Strategy</h3>
+                            <p><strong>Action:</strong> Cap filler content at 10% max. Invest in seasonal breaks rather
+                                than low-quality padding to maintain ROI.</p>
+                        </div>
+                    </div>
+
+                    <div class="project-card glass" style="border-left: 4px solid var(--secondary);">
+                        <div class="project-info">
+                            <h3>🔄 Leverage Legacy IP</h3>
+                            <p><strong>Action:</strong> Prioritize spin-offs, remasters, or high-quality continuations
+                                of established franchises over risky new IPs.</p>
+                        </div>
+                    </div>
+
+                    <div class="project-card glass" style="border-left: 4px solid #10B981;">
+                        <div class="project-info">
+                            <h3>💬 Boost Engagement</h3>
+                            <p><strong>Action:</strong> Increase investment in community interaction and global
+                                marketing campaigns to improve brand perception.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
         <div class="container">
-            <h2 class="section-title">🔍 Key Analyses</h2>
-            <p style="text-align: center; color: #cbd5e1; margin-top: 1rem; margin-bottom: 2rem;">
-                Deep dives into specific business questions answered by the dashboard.
-            </p>
-            <div class="projects-grid" style="margin-top: 3rem;">
-                <div class="project-card">
-                    <div class="project-info">
-                        <h3>🏛️ Legacy vs. Modern</h3>
-                        <p>
-                            <strong>Question:</strong> Are new titles performing as well as historical hits?
-                            <br><br>
-                            <strong>Finding:</strong> "Legacy" franchises (Naruto, Bleach) still drive <strong>60%+
-                                of total revenue</strong>. Modern titles show higher volatility and lower average
-                            retention.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-info">
-                        <h3>📈 Top vs. Flop</h3>
-                        <p>
-                            <strong>Question:</strong> What distinguishes a hit from a miss?
-                            <br><br>
-                            <strong>Finding:</strong> Top performers (Revenue) correlate strongly with <strong>high
-                                sentiment scores (>0.85)</strong>. "Flops" often suffer from high filler percentages
-                            (>40%) and negative community sentiment.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-info">
-                        <h3>🌍 Regional Growth</h3>
-                        <p>
-                            <strong>Question:</strong> Where is the audience growing?
-                            <br><br>
-                            <strong>Finding:</strong> While Japan remains a core market, <strong>International
-                                Streaming</strong> (North America, Europe) is the fastest-growing revenue segment,
-                            outpacing domestic broadcast.
-                        </p>
-                    </div>
-                </div>
-            </div>
+            <p>&copy; 2024 Dylan Elo. Built with Glassmorphism & ❤️.</p>
         </div>
-    </section>
+    </footer>
 
-    <!-- Strategic Recommendations -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">💡 Strategic Recommendations</h2>
-            <p style="text-align: center; color: #cbd5e1; margin-top: 1rem; margin-bottom: 2rem;">
-                Data-driven insights translated into actionable business strategies.
-            </p>
-            <div class="projects-grid" style="margin-top: 3rem;">
-                <div class="project-card">
-                    <div class="project-info">
-                        <h3>📉 Optimize Filler Strategy</h3>
-                        <p>
-                            <strong>Insight:</strong> Data confirms a direct correlation: titles with >40% filler
-                            (e.g., Boruto) see a <strong>35% drop in ROI</strong> compared to faithful adaptations.
-                            <br><br><strong>Action:</strong> Cap filler content at 10% max. Invest in seasonal
-                            breaks rather than low-quality padding.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-info">
-                        <h3>🔄 Leverage Legacy IP</h3>
-                        <p>
-                            <strong>Insight:</strong> "Legacy" titles are the financial backbone. "Bleach: TYBW"
-                            proved that reviving classic IP with high budgets yields massive returns.
-                            <br><br><strong>Action:</strong> Prioritize spin-offs, remasters, or high-quality
-                            continuations of established franchises over risky new IPs.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-info">
-                        <h3>💬 Boost Engagement</h3>
-                        <p>
-                            <strong>Insight:</strong> Recent titles show lower sentiment scores. Community
-                            engagement is a leading indicator of long-term retention.
-                            <br><br><strong>Action:</strong> Increase investment in community interaction, visual
-                            quality, and global marketing campaigns to improve brand perception.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Technical Implementation -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">⚙️ Technical Implementation</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>Architecture</h3>
-                    Actions</strong>
-                    for seamless updates.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-</main>
-```html
-<section class="section" style="padding-top: 8rem;">
-    <div class="container">
-        <h1 class="hero-title">Studio Pierrot BI Analysis</h1>
-        <p class="hero-subtitle">
-            A strategic Business Intelligence project analyzing 10 iconic anime franchises to identify
-            actionable insights for improving production ROI.
-        </p>
-        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
-            <span class="tech-stack-tag">Python ETL</span>
-            <span class="tech-stack-tag">SQL Warehouse</span>
-            <span class="tech-stack-tag">Chart.js</span>
-            Complete business documentation demonstrating the full BI workflow from requirements to strategy.
-            </p>
-            <div class="projects-grid" style="margin-top: 3rem;">
-                <div class="project-card">
-                    <div class="project-info">
-                        <h3>📋 Executive Requirements</h3>
-                        <p>
-                            <strong>Purpose:</strong> High-level business objectives and success metrics defined by
-                            studio leadership.
-                            <br><br>
-                            <strong>Contents:</strong> Strategic goals, key performance indicators, and
-                            executive-level questions
-                            that drive the entire analysis.
-                        </p>
-                        <div style="margin-top: 1.5rem;">
-                            <a href="docs/executive_requirements.md" class="btn btn-primary" target="_blank">View
-                                Document</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-info">
-                        <h3>👥 Stakeholder Requirements</h3>
-                        <p>
-                            <strong>Purpose:</strong> Detailed analytical needs from Production, Marketing, and
-                            Finance teams.
-                            <br><br>
-                            <strong>Contents:</strong> Specific questions from each department, required metrics,
-                            and data granularity needs.
-                        </p>
-                        <div style="margin-top: 1.5rem;">
-                            <a href="docs/stakeholder_requirements.md" class="btn btn-primary" target="_blank">View
-                                Document</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-info">
-                        <h3>🎯 Strategy Document</h3>
-                        <p>
-                            <strong>Purpose:</strong> Technical implementation roadmap and BI approach.
-                            <br><br>
-                            <strong>Contents:</strong> Data sources, tech stack selection, pipeline architecture,
-                            and project timeline.
-                        </p>
-                        <div style="margin-top: 1.5rem;">
-                            <a href="docs/strategy_document.md" class="btn btn-primary" target="_blank">View
-                                Document</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-</section>
-
-<!-- Key Analyses -->
-<section class="section">
-    <div class="container">
-        <h2 class="section-title">🔍 Key Analyses</h2>
-        <p style="text-align: center; color: #cbd5e1; margin-top: 1rem; margin-bottom: 2rem;">
-            Deep dives into specific business questions answered by the dashboard.
-        </p>
-        <div class="projects-grid" style="margin-top: 3rem;">
-            <div class="project-card">
-                <div class="project-info">
-                    <h3>🏛️ Legacy vs. Modern</h3>
-                    <p>
-                        <strong>Question:</strong> Are new titles performing as well as historical hits?
-                        <br><br>
-                        <strong>Finding:</strong> "Legacy" franchises (Naruto, Bleach) still drive <strong>60%+
-                            of total revenue</strong>. Modern titles show higher volatility and lower average
-                        retention.
-                    </p>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-info">
-                    <h3>📈 Top vs. Flop</h3>
-                    <p>
-                        <strong>Question:</strong> What distinguishes a hit from a miss?
-                        <br><br>
-                        <strong>Finding:</strong> Top performers (Revenue) correlate strongly with <strong>high
-                            sentiment scores (>0.85)</strong>. "Flops" often suffer from high filler percentages
-                        (>40%) and negative community sentiment.
-                    </p>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-info">
-                    <h3>🌍 Regional Growth</h3>
-                    <p>
-                        <strong>Question:</strong> Where is the audience growing?
-                        <br><br>
-                        <strong>Finding:</strong> While Japan remains a core market, <strong>International
-                            Streaming</strong> (North America, Europe) is the fastest-growing revenue segment,
-                        outpacing domestic broadcast.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Strategic Recommendations -->
-<section class="section">
-    <div class="container">
-        <h2 class="section-title">💡 Strategic Recommendations</h2>
-        <p style="text-align: center; color: #cbd5e1; margin-top: 1rem; margin-bottom: 2rem;">
-            Data-driven insights translated into actionable business strategies.
-        </p>
-        <div class="projects-grid" style="margin-top: 3rem;">
-            <div class="project-card">
-                <div class="project-info">
-                    <h3>📉 Optimize Filler Strategy</h3>
-                    <p>
-                        <strong>Insight:</strong> Data confirms a direct correlation: titles with >40% filler
-                        (e.g., Boruto) see a <strong>35% drop in ROI</strong> compared to faithful adaptations.
-                        <br><br><strong>Action:</strong> Cap filler content at 10% max. Invest in seasonal
-                        breaks rather than low-quality padding.
-                    </p>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-info">
-                    <h3>🔄 Leverage Legacy IP</h3>
-                    <p>
-                        <strong>Insight:</strong> "Legacy" titles are the financial backbone. "Bleach: TYBW"
-                        proved that reviving classic IP with high budgets yields massive returns.
-                        <br><br><strong>Action:</strong> Prioritize spin-offs, remasters, or high-quality
-                        continuations of established franchises over risky new IPs.
-                    </p>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-info">
-                    <h3>💬 Boost Engagement</h3>
-                    <p>
-                        <strong>Insight:</strong> Recent titles show lower sentiment scores. Community
-                        engagement is a leading indicator of long-term retention.
-                        <br><br><strong>Action:</strong> Increase investment in community interaction, visual
-                        quality, and global marketing campaigns to improve brand perception.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Technical Implementation -->
-<section class="section">
-    <div class="container">
-        <h2 class="section-title">⚙️ Technical Implementation</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <h3>Architecture</h3>
-                Actions</strong>
-                for seamless updates.</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-</main>
-
-<footer class="footer">
-    <p>&copy; 2024 Dylan Elo. All rights reserved.</p>
-</footer>
-
-<link rel="stylesheet" href="./src/style.css?v=2">
-<script type="module" src="./src/main.js"></script>
+    <script type="module" src="./src/main.js"></script>
 </body>
 
 </html>
-```
