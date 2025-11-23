@@ -1,5 +1,6 @@
 // Import Phase 1 data (MAL)
-import { animeData } from './data.js';
+// Import Phase 1 data (MAL)
+import { animeData, lastUpdated } from './data.js';
 
 // Import Phase 2 data
 import { tvRatings, bdSales, merchRevenue } from './domestic_data.js';
@@ -19,6 +20,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     console.log('Anime data loaded:', animeData.length, 'entries');
+
+    // Display Last Updated timestamp
+    if (lastUpdated) {
+        const footer = document.querySelector('footer div');
+        if (footer) {
+            const date = new Date(lastUpdated).toLocaleString();
+            const p = document.createElement('p');
+            p.className = 'mt-2 text-xs text-slate-400';
+            p.innerHTML = `🔄 <strong>Data Last Refreshed:</strong> ${date} (Source: SQL Warehouse)`;
+            footer.appendChild(p);
+        }
+    }
+
     initPhase1Dashboard();
 });
 
