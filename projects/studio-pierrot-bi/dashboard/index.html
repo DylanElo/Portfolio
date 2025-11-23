@@ -2,53 +2,125 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Studio Pierrot BI Dashboard</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #f8fafc;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Pierrot BI Dashboard - Three Lenses</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
 
-    .card {
-      background: white;
-      border-radius: 0.75rem;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-      transition: transform 0.2s;
-    }
+        .card {
+            background: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
 
-    .card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-  </style>
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .tab-btn {
+            position: relative;
+            padding: 0.75rem 1.5rem;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .tab-btn.active {
+            color: #4F46E5;
+            border-bottom-color: #4F46E5 !important;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 
 <body class="text-slate-800">
 
-  <!-- Navigation -->
-  <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
-  </nav>
+    <!-- Navigation -->
+    <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span
+                        class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">
+                        Studio Pierrot BI
+                    </span>
+                    <span class="ml-4 px-2 py-1 text-xs font-semibold text-indigo-700 bg-indigo-100 rounded-full">Phase
+                        2:
+                        Three-Lens</span>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="../../../index.html" class="text-slate-500 hover:text-slate-900 font-medium">Back to
+                        Portfolio</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-  <!-- Main Content -->
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
 
-    <!-- Header -->
-    <div class="mb-8">
-      <h1 class="text-3xl font-bold text-slate-900">Franchise Performance Overview</h1>
-      <p class="mt-2 text-slate-600">Real-time metrics from MyAnimeList (Jikan API) for key Studio Pierrot titles.</p>
-      <div class="mt-4 p-4 bg-blue-50 border-l-4 border-blue-500 text-blue-700 text-sm">
-        <p class="font-bold">Note on Data Sources:</p>
-        <p>Public metrics (Score, Members, Favorites) are fetched live from the Jikan API. Financial data (Revenue, ROI)
-          referenced in the case study is <strong>simulated</strong> for demonstration purposes.</p>
-      </div>
-    </div>
+        <!-- Header -->
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold text-slate-900">Strategic Performance Dashboard</h1>
+            <p class="mt-2 text-slate-600">Multi-lens analysis combining global fandom, streaming, domestic, and
+                production
+                data.</p>
+        </div>
 
-    <!-- KPI Cards -->
+        <!-- Tab Navigation -->
+        <div class="mb-8 border-b border-slate-200">
+            <nav class="flex space-x-2">
+                <button onclick="switchTab('fandom')" class="tab-btn active" id="tab-fandom">
+                    🌐 Global Fandom
+                </button>
+                <button onclick="switchTab('streaming')" class="tab-btn" id="tab-streaming">
+                    🎬 Streaming Analytics
+                </button>
+                <button onclick="switchTab('domestic')" class="tab-btn" id="tab-domestic">
+                    🇯🇵 Domestic (Japan)
+                </button>
+                <button onclick="switchTab('production')" class="tab-btn" id="tab-production">
+                    🎨 Production Insights
+                </button>
+            </nav>
+        </div>
+
+        <!-- Tab 1: Global Fandom (Phase 1 - Real MAL Data) -->
+        <div id="content-fandom" class="tab-content active">
+            <div class="mb-6 p-4 bg-blue-50 border-l-4 border-blue-500 text-blue-700 text-sm">
+                <p class="font-bold">Data Source: MyAnimeList (Jikan API)</p>
+                <p>Real-time metrics for 12 Studio Pierrot titles. Note: MAL has a Western/international bias.</p>
+            </div>
+
+            <!-- KPI Cards -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
       <!-- Top Rated -->
       <div class="card p-6 border-l-4 border-indigo-500">
@@ -153,18 +225,98 @@
         </table>
       </div>
     </div>
+        </div>
 
-  </main>
+        <!-- Tab 2: Streaming Analytics (Phase 2 - Simulated) -->
+        <div id="content-streaming" class="tab-content">
+            <div class="mb-6 p-4 bg-purple-50 border-l-4 border-purple-500 text-purple-700 text-sm">
+                <p class="font-bold">Data Source: Simulated (Calibrated against Netflix reports, Parrot Analytics)</p>
+                <p>International streaming platform analytics and global demand metrics.</p>
+            </div>
 
-  <footer class="bg-white border-t border-slate-200 mt-12 py-8">
-    <div class="max-w-7xl mx-auto px-4 text-center text-slate-500 text-sm">
-      <p>Data provided by <a href="https://jikan.moe/" class="text-indigo-600 hover:underline" target="_blank">Jikan
-          API</a> (MyAnimeList).</p>
-      <p class="mt-2">&copy; 2024 Dylan Elo. All rights reserved.</p>
-    </div>
-  </footer>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+                <!-- Chart 1: Global Demand Comparison -->
+                <div class="card p-6">
+                    <h3 class="text-lg font-bold text-slate-900 mb-4">Global Demand: Pierrot vs Competitors</h3>
+                    <div class="relative h-80">
+                        <canvas id="demandChart"></canvas>
+                    </div>
+                </div>
 
-  <script type="module" src="./dashboard.js?v=2"></script>
+                <!-- Chart 2: Platform Market Share -->
+                <div class="card p-6">
+                    <h3 class="text-lg font-bold text-slate-900 mb-4">Streaming Platform Dominance</h3>
+                    <div class="relative h-80">
+                        <canvas id="platformChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab 3: Domestic (Japan) Performance (Phase 2 - Simulated) -->
+        <div id="content-domestic" class="tab-content">
+            <div class="mb-6 p-4 bg-green-50 border-l-4 border-green-500 text-green-700 text-sm">
+                <p class="font-bold">Data Source: Simulated (Calibrated against Oricon charts, industry benchmarks)</p>
+                <p>Japanese domestic market: TV ratings, Blu-ray sales, merchandise revenue.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+                <!-- Chart 1: BD Sales vs MAL Score -->
+                <div class="card p-6">
+                    <h3 class="text-lg font-bold text-slate-900 mb-4">BD Sales vs MAL Score</h3>
+                    <div class="relative h-80">
+                        <canvas id="bdSalesChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Chart 2: Merchandise Revenue Comparison -->
+                <div class="card p-6">
+                    <h3 class="text-lg font-bold text-slate-900 mb-4">Merchandise Revenue (Legacy vs New IP)</h3>
+                    <div class="relative h-80">
+                        <canvas id="merchChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab 4: Production Insights (Phase 2 - Simulated) -->
+        <div id="content-production" class="tab-content">
+            <div class="mb-6 p-4 bg-orange-50 border-l-4 border-orange-500 text-orange-700 text-sm">
+                <p class="font-bold">Data Source: Simulated (Calibrated against fan wikis, industry budget ranges)</p>
+                <p>Production quality metrics: filler impact, budget efficiency, arc performance.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+                <!-- Chart 1: Filler vs MAL Score -->
+                <div class="card p-6">
+                    <h3 class="text-lg font-bold text-slate-900 mb-4">Filler % Impact on MAL Score</h3>
+                    <div class="relative h-80">
+                        <canvas id="fillerChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Chart 2: Production Model Comparison -->
+                <div class="card p-6">
+                    <h3 class="text-lg font-bold text-slate-900 mb-4">Production Model: Seasonal vs Long-Running</h3>
+                    <div class="relative h-80">
+                        <canvas id="modelChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 mt-12 py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center text-slate-500 text-sm">
+            <p>Phase 1 data from <a href="https://jikan.moe/" class="text-indigo-600 hover:underline"
+                    target="_blank">Jikan
+                    API</a>. Phase 2 data simulated for demonstration.</p>
+            <p class="mt-2">&copy; 2024 Dylan Elo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="./dashboard-multitab.js"></script>
 </body>
 
 </html>
