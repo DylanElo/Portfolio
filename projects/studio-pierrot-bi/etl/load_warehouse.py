@@ -35,7 +35,7 @@ def clear_tables(conn):
         cursor.execute(f"DELETE FROM {table}")
 
     conn.commit()
-    print("✓ Cleared all warehouse tables")
+    print("[OK] Cleared all warehouse tables")
 
 
 def determine_tier(score: float, members: int) -> str:
@@ -53,8 +53,19 @@ def load_dim_anime(conn, anime_data):
     """Load dimension table: dim_anime."""
     cursor = conn.cursor()
     
+    # Deduplicate by mal_id (keep first occurrence)
+    seen_ids = set()
+    unique_anime = []
+    for anime in anime_data:
+        mal_id = anime.get("mal_id")
+        if mal_id not in seen_ids:
+            seen_ids.add(mal_id)
+            unique_anime.append(anime)
+    
+    print(f"Deduplication: {len(anime_data)} -> {len(unique_anime)} unique anime")
+    
     anime_records = []
-    for idx, anime in enumerate(anime_data, start=1):
+    for idx, anime in enumerate(unique_anime, start=1):
         mal_id = anime.get("mal_id")
         title = anime.get("title", "")
         score = anime.get("score") or 0
@@ -103,7 +114,7 @@ def load_dim_anime(conn, anime_data):
     """, anime_records)
     
     conn.commit()
-    print(f"✓ Loaded {len(anime_records)} records into dim_anime")
+    print(f"[OK] Loaded {len(anime_records)} records into dim_anime")
     return {anime[1]: anime[0] for anime in anime_records}  # mal_id -> anime_id mapping
 
 def load_dim_season(conn, production_data, mal_to_anime_id):
@@ -131,7 +142,7 @@ def load_dim_season(conn, production_data, mal_to_anime_id):
     """, season_records)
    
     conn.commit()
-    print(f"✓ Loaded {len(season_records)} records into dim_season")
+    print(f"[OK] Loaded {len(season_records)} records into dim_season")
 
 def load_fact_anime_metrics(conn, anime_data, mal_to_anime_id):
     """Load fact table: fact_anime_metrics."""
@@ -171,7 +182,7 @@ def load_fact_anime_metrics(conn, anime_data, mal_to_anime_id):
     """, metric_records)
     
     conn.commit()
-    print(f"✓ Loaded {len(metric_records)} records into fact_anime_metrics")
+    print(f"[OK] Loaded {len(metric_records)} records into fact_anime_metrics")
 
 def load_fact_marketing(conn, marketing_data, mal_to_anime_id):
     """Load fact table: fact_marketing."""
@@ -201,7 +212,7 @@ def load_fact_marketing(conn, marketing_data, mal_to_anime_id):
     """, marketing_records)
     
     conn.commit()
-    print(f"✓ Loaded {len(marketing_records)} records into fact_marketing")
+    print(f"[OK] Loaded {len(marketing_records)} records into fact_marketing")
 
 def load_fact_finance(conn, financial_data, mal_to_anime_id):
     """Load fact table: fact_finance."""
@@ -243,7 +254,7 @@ def load_fact_finance(conn, financial_data, mal_to_anime_id):
     """, financial_records)
 
     conn.commit()
-    print(f"✓ Loaded {len(financial_records)} records into fact_finance")
+    print(f"[OK] Loaded {len(financial_records)} records into fact_finance")
 
 def main():
     """Main ETL process."""
@@ -267,7 +278,7 @@ def main():
         production_data = load_csv_data("production.csv")
         marketing_data = load_csv_data("marketing.csv")
         financial_data = load_csv_data("financials.csv")
-        print(f"✓ Loaded all raw data files")
+        print(f"[OK] Loaded all raw data files")
         print()
         
         # Load dimensions first
@@ -303,7 +314,7 @@ def main():
             print(f"{table_name:25} | {count:>6} {description}")
         
         print("=" * 70)
-        print("✓ Data warehouse load complete!")
+        print("[OK] Data warehouse load complete!")
         
     finally:
         conn.close()
