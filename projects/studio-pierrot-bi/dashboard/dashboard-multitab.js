@@ -1,9 +1,186 @@
+// Import Phase 1 data (MAL)
+import { animeData } from './data.js';
+
 // Import Phase 2 data
 import { tvRatings, bdSales, merchRevenue } from './domestic_data.js';
 import { platformShare, globalDemand, streamingRevenue } from './streaming_data.js';
 import { arcAnalysis, fillerImpact, productionModels } from './production_data.js';
 
 console.log('Multi-tab dashboard loaded');
+
+// Initialize Phase 1 dashboard on page load
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM loaded, initializing Phase 1 dashboard...');
+
+    if (!animeData || animeData.length === 0) {
+        console.error('No anime data found!');
+        document.getElementById('kpi-top-rated-value').textContent = 'Error';
+        return;
+    }
+
+    console.log('Anime data loaded:', animeData.length, 'entries');
+    initPhase1Dashboard();
+});
+
+function initPhase1Dashboard() {
+    // Calculate KPIs
+    const topRated = [...animeData].sort((a, b) => b.score - a.score)[0];
+    const mostMembers = [...animeData].sort((a, b) => b.members - a.members)[0];
+    const mostFavorited = [...animeData].sort((a, b) => b.favorites - a.favorites)[0];
+
+    // Update KPI Cards
+    if (topRated) updateKPI('kpi-top-rated', topRated.score, topRated.title);
+    if (mostMembers) updateKPI('kpi-most-popular', formatNumber(mostMembers.members), mostMembers.title);
+    if (mostFavorited) updateKPI('kpi-most-favorited', formatNumber(mostFavorited.favorites), mostFavorited.title);
+
+    // Render Phase 1 charts immediately (fandom tab active by default)
+    renderPhase1ScoreChart(animeData);
+    renderPhase1PopularityChart(animeData);
+    populatePhase1Table(animeData);
+
+    // Mark fandom tab as initialized
+    initializedTabs.fandom = true;
+}
+
+function updateKPI(idPrefix, value, title) {
+    const valueEl = document.getElementById(`${idPrefix}-value`);
+    const titleEl = document.getElementById(`${idPrefix}-title`);
+    if (valueEl) valueEl.textContent = value;
+    if (titleEl) titleEl.textContent = title;
+}
+
+function formatNumber(num) {
+    if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
+    if (num >= 1000) return (num / 1000).toFixed(1) + 'K';
+    return num.toString();
+}
+
+function renderPhase1ScoreChart(data) {
+    const ctx = document.getElementById('scoreChart')?.getContext('2d');
+    if (!ctx) return;
+
+    const sortedData = [...data].sort((a, b) => b.score - a.score);
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: sortedData.map(d => d.title),
+            datasets: [{
+                label: 'MAL Score',
+                data: sortedData.map(d => d.score),
+                backgroundColor: 'rgba(99, 102, 241, 0.8)',
+                borderColor: 'rgba(99, 102, 241, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: false,
+                    min: 6,
+                    max: 10
+                },
+                x: {
+                    ticks: {
+                        autoSkip: false,
+                        maxRotation: 45,
+                        minRotation: 45
+                    }
+                }
+            },
+            plugins: {
+                legend: { display: false }
+            }
+        }
+    });
+}
+
+function renderPhase1PopularityChart(data) {
+    const ctx = document.getElementById('popularityChart')?.getContext('2d');
+    if (!ctx) return;
+
+    const sortedData = [...data].sort((a, b) => b.members - a.members);
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: sortedData.map(d => d.title),
+            datasets: [{
+                label: 'Members',
+                data: sortedData.map(d => d.members),
+                backgroundColor: 'rgba(168, 85, 247, 0.8)',
+                borderColor: 'rgba(168, 85, 247, 1)',
+                borderWidth: 1,
+                yAxisID: 'y'
+            }, {
+                label: 'Favorites',
+                data: sortedData.map(d => d.favorites),
+                backgroundColor: 'rgba(236, 72, 153, 0.8)',
+                borderColor: 'rgba(236, 72, 153, 1)',
+                borderWidth: 1,
+                yAxisID: 'y1'
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    type: 'linear',
+                    display: true,
+                    position: 'left',
+                    title: { display: true, text: 'Members' }
+                },
+                y1: {
+                    type: 'linear',
+                    display: true,
+                    position: 'right',
+                    title: { display: true, text: 'Favorites' },
+                    grid: { drawOnChartArea: false }
+                },
+                x: {
+                    ticks: {
+                        autoSkip: false,
+                        maxRotation: 45,
+                        minRotation: 45
+                    }
+                }
+            }
+        }
+    });
+}
+
+function populatePhase1Table(data) {
+    const tbody = document.getElementById('metrics-table-body');
+    if (!tbody) return;
+
+    tbody.innerHTML = '';
+    data.forEach(anime => {
+        const row = document.createElement('tr');
+        row.className = 'hover:bg-slate-50 transition';
+        row.innerHTML = `
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-slate-900">${anime.title}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500">${anime.type}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-900 font-bold">${anime.score}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500">${formatNumber(anime.members)}</td>
+            <td class="px-6 py-4 whitespace-nowrap">
+                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${getStatusColor(anime.status)}">
+                    ${anime.status}
+                </span>
+            </td>
+        `;
+        tbody.appendChild(row);
+    });
+}
+
+function getStatusColor(status) {
+    if (status.includes('Finished')) return 'bg-green-100 text-green-800';
+    if (status.includes('Airing')) return 'bg-blue-100 text-blue-800';
+    return 'bg-gray-100 text-gray-800';
+}
+
 
 // Tab switching function
 window.switchTab = function (tabName) {
