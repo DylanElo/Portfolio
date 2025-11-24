@@ -80,6 +80,16 @@ def load_dim_anime(conn, anime_data):
         demographics = anime.get("demographics", [])
         demographic = demographics[0].get("name", "") if demographics else None
         
+        # Infer type and status since they are missing from curated JSON
+        anime_type = anime.get("type", "TV")  # Default to TV
+        
+        status = anime.get("status")
+        if not status:
+            if end_date:
+                status = "Finished Airing"
+            else:
+                status = "Currently Airing"
+        
         anime_records.append((
             idx,  # anime_id is our surrogate key
             mal_id,
@@ -93,8 +103,8 @@ def load_dim_anime(conn, anime_data):
             end_date,
             genre,
             demographic,
-            anime.get("type"),
-            anime.get("status")
+            anime_type,
+            status
         ))
 
     cursor.executemany("""
