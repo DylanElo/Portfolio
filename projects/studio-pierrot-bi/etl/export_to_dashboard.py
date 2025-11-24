@@ -30,8 +30,19 @@ def get_latest_data():
     cursor.execute(query)
     rows = cursor.fetchall()
     
-    # Convert to list of dicts
-    data = [dict(row) for row in rows]
+    # Convert to list of dicts and fill missing values
+    data = []
+    for i, row in enumerate(rows, 1):
+        item = dict(row)
+        # Estimate favorites if missing (approx 1.5% of members)
+        if not item['favorites']:
+            item['favorites'] = int(item['members'] * 0.015) if item['members'] else 0
+        
+        # Estimate rank if missing (based on current sort order by score)
+        if not item['rank']:
+            item['rank'] = i
+            
+        data.append(item)
         
     conn.close()
     return data
