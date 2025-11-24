@@ -239,6 +239,7 @@ function initializeTabCharts(tabName) {
         case 'production':
             renderFillerChart();
             renderModelChart();
+            renderReleaseYearChart(animeData);
             break;
         case 'financial':
             initFinancialDashboard();
@@ -743,3 +744,88 @@ function populateFinancialTable() {
 // Initialize on load (Fandom tab loaded by default in Phase 1)
 console.log('Dashboard ready. Switch tabs to view Phase 2 data visualizations.');
 
+
+function renderReleaseYearChart(data) {
+    const ctx = document.getElementById('releaseYearChart')?.getContext('2d');
+    if (!ctx) return;
+
+    // Group data by year
+    const yearGroups = {};
+    data.forEach(anime => {
+        if (!anime.air_date_start) return;
+        const year = new Date(anime.air_date_start).getFullYear();
+        if (!yearGroups[year]) {
+            yearGroups[year] = { totalScore: 0, count: 0, titles: [] };
+        }
+        yearGroups[year].totalScore += anime.score;
+        yearGroups[year].count += 1;
+        yearGroups[year].titles.push(anime.title);
+    });
+
+    // Calculate averages and sort by year
+    const years = Object.keys(yearGroups).sort();
+    const avgScores = years.map(year => (yearGroups[year].totalScore / yearGroups[year].count).toFixed(2));
+    const counts = years.map(year => yearGroups[year].count);
+
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: years,
+            datasets: [
+                {
+                    label: 'Average MAL Score',
+                    data: avgScores,
+                    borderColor: 'rgba(249, 115, 22, 1)', // Orange-500
+                    backgroundColor: 'rgba(249, 115, 22, 0.2)',
+                    borderWidth: 2,
+                    tension: 0.3,
+                    yAxisID: 'y'
+                },
+                {
+                    label: 'Releases Count',
+                    data: counts,
+                    type: 'bar',
+                    backgroundColor: 'rgba(203, 213, 225, 0.5)', // Slate-300
+                    yAxisID: 'y1'
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            interaction: {
+                mode: 'index',
+                intersect: false,
+            },
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        afterBody: function (context) {
+                            const year = context[0].label;
+                            const titles = yearGroups[year].titles.slice(0, 5); // Show top 5
+                            return `Releases: ${titles.join(', ')}${titles.length > 5 ? '...' : ''}`;
+                        }
+                    }
+                }
+            },
+            scales: {
+                y: {
+                    type: 'linear',
+                    display: true,
+                    position: 'left',
+                    title: { display: true, text: 'Avg Score' },
+                    min: 6,
+                    max: 10
+                },
+                y1: {
+                    type: 'linear',
+                    display: true,
+                    position: 'right',
+                    title: { display: true, text: 'Count' },
+                    grid: { drawOnChartArea: false },
+                    min: 0
+                }
+            }
+        }
+    });
+}

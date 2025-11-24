@@ -21,7 +21,11 @@ def get_latest_data():
         f.members,
         f.favorites,
         f.rank,
-        a.episodes
+        f.rank,
+        a.episodes,
+        a.type,
+        a.status,
+        a.start_date as air_date_start
     FROM fact_anime_metrics f
     JOIN dim_anime a ON f.anime_id = a.anime_id
     ORDER BY f.score DESC

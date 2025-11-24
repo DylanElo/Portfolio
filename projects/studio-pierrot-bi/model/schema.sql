@@ -13,7 +13,9 @@ CREATE TABLE dim_anime (
     start_date TEXT,
     end_date TEXT,
     genre TEXT,
-    demographic TEXT
+    demographic TEXT,
+    type TEXT,
+    status TEXT
 );
 
 -- Dimension: Season (long vs short)

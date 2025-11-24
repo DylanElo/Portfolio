@@ -92,12 +92,14 @@ def load_dim_anime(conn, anime_data):
             start_date,
             end_date,
             genre,
-            demographic
+            demographic,
+            anime.get("type"),
+            anime.get("status")
         ))
 
     cursor.executemany("""
-        INSERT INTO dim_anime (anime_id, mal_id, title, mal_score, mal_members, tier, studio, episodes, start_date, end_date, genre, demographic)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        INSERT INTO dim_anime (anime_id, mal_id, title, mal_score, mal_members, tier, studio, episodes, start_date, end_date, genre, demographic, type, status)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     """, anime_records)
     
     conn.commit()
