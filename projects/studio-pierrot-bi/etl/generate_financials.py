@@ -39,7 +39,18 @@ def calculate_budget(episodes: int, tier: str) -> tuple[float, float]:
     """Calculate production budget and total cost for the series."""
 
     tier_multiplier = TIER_MULTIPLIERS.get(tier, 1.0)
-    production_budget = episodes * BASE_BUDGET_PER_EPISODE * tier_multiplier
+    
+    # Long-running shows have economies of scale - lower per-episode cost
+    episode_scaling = 1.0
+    if episodes >= 300:  # Very long-running (Naruto, One Piece level)
+        episode_scaling = 0.5  # 50% cost per episode
+    elif episodes >= 150:  # Long-running
+        episode_scaling = 0.65
+    elif episodes >= 50:  # Multi-season
+        episode_scaling = 0.8
+    
+    adjusted_base = BASE_BUDGET_PER_EPISODE * episode_scaling
+    production_budget = episodes * adjusted_base * tier_multiplier
     total_cost = production_budget  # marketing could be layered on later
     return production_budget, total_cost
 
