@@ -44,19 +44,33 @@ def calculate_budget(episodes: int, tier: str) -> tuple[float, float]:
     return production_budget, total_cost
 
 
-def calculate_revenue(score: float, members: int, tier: str) -> tuple[float, float, float, float]:
-    """Calculate revenue components based on the ROI model."""
+def calculate_revenue(score: float, members: int, tier: str, episodes: int) -> tuple[float, float, float, float]:
+    """Calculate revenue components based on the ROI model with legacy franchise adjustments."""
 
+    # Base streaming revenue from fandom
     global_fandom_index = members / 100_000
     streaming_revenue = global_fandom_index * STREAMING_RATE_PER_INDEX
 
+    # Disc sales by tier
     disc_units = DISC_UNITS_BY_TIER.get(tier, 1_500)
     if score >= 9.0:
         disc_units *= 1.1  # modest lift for standout hits
     disc_revenue = disc_units * DISC_PRICE
 
+    # Merchandise - scale with BOTH tier AND member base for realism
     merch_factor = MERCH_FACTOR_BY_TIER.get(tier, 0.1)
-    merch_revenue = streaming_revenue * merch_factor
+    base_merch = streaming_revenue * merch_factor
+    
+    # Legacy franchise multiplier for long-running shows with massive fanbases
+    legacy_multiplier = 1.0
+    if members >= 2_000_000:  # Mega franchises (Naruto, One Piece level)
+        legacy_multiplier = 15.0 if episodes > 100 else 8.0
+    elif members >= 1_000_000:  # Major hits (Attack on Titan, JJK level)
+        legacy_multiplier = 8.0 if episodes > 50 else 4.0
+    elif members >= 500_000:  # Popular series
+        legacy_multiplier = 3.0 if episodes > 50 else 2.0
+    
+    merch_revenue = base_merch * legacy_multiplier
 
     total_revenue = streaming_revenue + disc_revenue + merch_revenue
     return streaming_revenue, disc_revenue, merch_revenue, total_revenue
@@ -77,7 +91,7 @@ def generate_financial_data(anime_data):
 
         tier = determine_tier(score, members)
         production_budget, total_cost = calculate_budget(episodes, tier)
-        streaming_revenue, disc_revenue, merch_revenue, total_revenue = calculate_revenue(score, members, tier)
+        streaming_revenue, disc_revenue, merch_revenue, total_revenue = calculate_revenue(score, members, tier, episodes)
 
         profit = total_revenue - total_cost
         roi = profit / total_cost if total_cost else 0
