@@ -3,7 +3,7 @@ import json
 import os
 from datetime import datetime
 
-DB_PATH = 'warehouse/pierrot_bi.db'
+DB_PATH = 'studio_pierrot.db'
 OUTPUT_PATH = 'dashboard/data.js'
 
 def get_latest_data():
