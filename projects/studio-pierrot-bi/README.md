@@ -25,6 +25,8 @@ This project simulates a real-world Business Intelligence environment where I co
 - **Limitation:** MAL has a Western/international bias; Japanese domestic fans rarely use it
 - **Use Case:** Proxy for global online anime fandom sentiment
 
+**Curation for readability:** the working dataset is intentionally scoped to **the full Studio Pierrot catalog** (Naruto, Bleach, Tokyo Ghoul, Black Clover, Boruto, etc.) **plus 15 récents blockbusters** (Jujutsu Kaisen, Demon Slayer, Spy x Family, Blue Lock, Tokyo Revengers, Oshi no Ko, Solo Leveling, Kaiju No. 8, Frieren, etc.). This keeps the dashboards legible while still contrasting Pierrot IPs against today’s market leaders.
+
 ### Market Context (Public Reports)
 **Sources:** Parrot Analytics, Netflix reports, industry publications
 - Platform market share (Netflix ~52% anime watchers, Crunchyroll ~85% anime-focused)
