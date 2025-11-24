@@ -36,7 +36,7 @@ jobs:
         python etl/extract_mal.py
         
         echo "2️⃣ Loading data into SQL Warehouse..."
-        python etl/load_warehouse.py
+        python etl/load.py
         
         echo "3️⃣ Exporting to Dashboard..."
         python etl/export_to_dashboard.py

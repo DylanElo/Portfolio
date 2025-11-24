@@ -100,8 +100,7 @@ def extract_all():
             print(f"✅ Fetched: {data.get('title')}")
     
     # Save raw data
-    os.makedirs('data/raw', exist_ok=True)
-    output_file = 'data/raw/mal_anime.json'
+    output_file = 'data/raw_mal_data.json'
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(results, f, indent=2, ensure_ascii=False)
     
