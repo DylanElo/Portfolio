@@ -17,6 +17,8 @@ def get_latest_data():
     SELECT 
         a.mal_id as id,
         a.title,
+        a.studio,
+        a.is_pierrot,
         f.score,
         f.members,
         f.favorites,
@@ -30,6 +32,7 @@ def get_latest_data():
     JOIN dim_anime a ON f.anime_id = a.anime_id
     ORDER BY f.score DESC
     '''
+
     
     cursor.execute(query)
     rows = cursor.fetchall()

@@ -12,6 +12,7 @@ CREATE TABLE IF NOT EXISTS dim_anime (
     title TEXT NOT NULL,
     title_english TEXT,
     studio TEXT DEFAULT 'Pierrot',
+    is_pierrot BOOLEAN DEFAULT 1,
     type TEXT, -- TV, Movie, OVA
     episodes INTEGER,
     status TEXT, -- Finished Airing, Currently Airing
@@ -20,6 +21,7 @@ CREATE TABLE IF NOT EXISTS dim_anime (
     source TEXT, -- Manga, Light Novel, Original
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
 
 CREATE TABLE IF NOT EXISTS dim_date (
     date_id INTEGER PRIMARY KEY AUTOINCREMENT,
