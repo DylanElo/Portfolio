@@ -123,6 +123,121 @@ function initializeTabCharts(tabName) {
     initializedTabs[tabName] = true;
 }
 
+// ===== PHASE 1: GLOBAL FANDOM CHARTS =====
+
+function renderPhase1ScoreChart(data) {
+    const ctx = document.getElementById('scoreChart')?.getContext('2d');
+    if (!ctx) return;
+
+    // Sort by score and take top 10
+    const topAnime = [...data].sort((a, b) => b.score - a.score).slice(0, 10);
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: topAnime.map(a => a.title.length > 20 ? a.title.substring(0, 20) + '...' : a.title),
+            datasets: [{
+                label: 'MAL Score',
+                data: topAnime.map(a => a.score),
+                backgroundColor: 'rgba(99, 102, 241, 0.8)', // Indigo-500
+                borderRadius: 4
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            indexAxis: 'y',
+            plugins: {
+                legend: { display: false },
+                title: {
+                    display: true,
+                    text: 'Top Rated Studio Pierrot Anime (MAL)',
+                    color: '#94a3b8'
+                }
+            },
+            scales: {
+                x: {
+                    min: 7,
+                    max: 10,
+                    grid: { color: 'rgba(255, 255, 255, 0.05)' },
+                    ticks: { color: '#94a3b8' }
+                },
+                y: {
+                    grid: { display: false },
+                    ticks: { color: '#f8fafc' }
+                }
+            }
+        }
+    });
+}
+
+function renderPhase1PopularityChart(data) {
+    const ctx = document.getElementById('popularityChart')?.getContext('2d');
+    if (!ctx) return;
+
+    // Sort by members and take top 10
+    const popularAnime = [...data].sort((a, b) => b.members - a.members).slice(0, 10);
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: popularAnime.map(a => a.title.length > 15 ? a.title.substring(0, 15) + '...' : a.title),
+            datasets: [{
+                label: 'Members',
+                data: popularAnime.map(a => a.members),
+                backgroundColor: 'rgba(139, 92, 246, 0.8)', // Violet-500
+                borderRadius: 4
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false },
+                title: {
+                    display: true,
+                    text: 'Most Popular Titles (Member Count)',
+                    color: '#94a3b8'
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    grid: { color: 'rgba(255, 255, 255, 0.05)' },
+                    ticks: {
+                        color: '#94a3b8',
+                        callback: function (value) {
+                            return (value / 1000000).toFixed(1) + 'M';
+                        }
+                    }
+                },
+                x: {
+                    grid: { display: false },
+                    ticks: { color: '#f8fafc' }
+                }
+            }
+        }
+    });
+}
+
+function populatePhase1Table(data) {
+    const tbody = document.getElementById('anime-table-body');
+    if (!tbody) return;
+
+    // Sort by score descending
+    const sortedData = [...data].sort((a, b) => b.score - a.score);
+
+    tbody.innerHTML = sortedData.map(anime => `
+        <tr class="hover:bg-slate-700/30 transition-colors">
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-slate-200">${anime.title}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-400">${anime.score}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-400">${formatNumber(anime.members)}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-400">${anime.episodes || '?'}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-400">${anime.year || 'N/A'}</td>
+        </tr>
+    `).join('');
+}
+
 // ===== STREAMING ANALYTICS CHARTS =====
 
 function renderDemandChart() {
