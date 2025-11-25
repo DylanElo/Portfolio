@@ -7,12 +7,17 @@
   <title>Studio Pierrot BI Dashboard - Dylan Elo</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Inter', -apple-system, sans-serif;
+    }
+
+    /* Force fixed heights for chart containers */
+    .chart-container {
+      position: relative;
+      height: 300px;
+      width: 100%;
     }
   </style>
 </head>
@@ -40,9 +45,7 @@
   <div class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <h2 class="text-3xl font-bold mb-2">Business Intelligence Case Study</h2>
-      <p class="text-indigo-100 text-lg">
-        Strategic Analysis & Data-Driven Insights for Studio Pierrot
-      </p>
+      <p class="text-indigo-100 text-lg">Strategic Analysis & Data-Driven Insights for Studio Pierrot</p>
     </div>
   </div>
 
@@ -72,12 +75,12 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
       <div class="bg-white rounded-lg shadow p-6">
         <div class="text-sm font-medium text-slate-600 mb-1">Top Rated (Pierrot)</div>
-        <div class="text-3xl font-bold text-indigo-600">8.9</div>
+        <div class="text-3xl font-bold text-indigo-600">8.99</div>
         <div class="text-xs text-slate-500 mt-1">Bleach: TYBW</div>
       </div>
       <div class="bg-white rounded-lg shadow p-6">
         <div class="text-sm font-medium text-slate-600 mb-1">Top Competitor</div>
-        <div class="text-3xl font-bold text-purple-600">9.1</div>
+        <div class="text-3xl font-bold text-purple-600">9.08</div>
         <div class="text-xs text-slate-500 mt-1">JJK S2 (MAPPA)</div>
       </div>
       <div class="bg-white rounded-lg shadow p-6">
@@ -87,19 +90,28 @@
       </div>
     </div>
 
-    <!-- Charts -->
+    <!-- Charts with FIXED HEIGHT -->
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+
+      <!-- Score Comparison Chart -->
       <div class="bg-white rounded-lg shadow p-6">
-        <h3 class="text-lg font-semibold mb-4">Studio Comparison: MAL Scores</h3>
-        <canvas id="studioChart" style="height: 300px;"></canvas>
+        <h3 class="text-lg font-semibold mb-4">MAL Score Comparison</h3>
+        <div class="chart-container">
+          <canvas id="scoreChart"></canvas>
+        </div>
       </div>
+
+      <!-- Popularity Chart -->
       <div class="bg-white rounded-lg shadow p-6">
-        <h3 class="text-lg font-semibold mb-4">Pierrot Portfolio Distribution</h3>
-        <canvas id="portfolioChart" style="height: 300px;"></canvas>
+        <h3 class="text-lg font-semibold mb-4">Member Base Distribution</h3>
+        <div class="chart-container">
+          <canvas id="popularityChart"></canvas>
+        </div>
       </div>
+
     </div>
 
-    <!-- Detailed Comparison Table -->
+    <!-- Comparison Table -->
     <div class="bg-white rounded-lg shadow overflow-hidden mb-8">
       <div class="px-6 py-4 border-b border-slate-200">
         <h3 class="text-lg font-semibold">Pierrot vs Competitors - Detailed Comparison</h3>
@@ -112,44 +124,57 @@
               <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase">Studio</th>
               <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase">Score</th>
               <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase">Members</th>
+              <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase">Type</th>
             </tr>
           </thead>
           <tbody class="bg-white divide-y divide-slate-200">
             <tr class="bg-indigo-50">
               <td class="px-6 py-4 font-medium text-slate-900">Bleach: TYBW</td>
               <td class="px-6 py-4 text-sm text-indigo-600 font-semibold">Pierrot</td>
-              <td class="px-6 py-4 text-sm">8.99</td>
+              <td class="px-6 py-4 text-sm font-semibold text-green-600">8.99</td>
               <td class="px-6 py-4 text-sm">284,000</td>
+              <td class="px-6 py-4 text-xs"><span class="px-2 py-1 bg-green-100 text-green-800 rounded">Seasonal</span>
+              </td>
             </tr>
             <tr>
               <td class="px-6 py-4 font-medium text-slate-900">Jujutsu Kaisen S2</td>
               <td class="px-6 py-4 text-sm text-slate-600">MAPPA</td>
-              <td class="px-6 py-4 text-sm">9.08</td>
+              <td class="px-6 py-4 text-sm font-semibold text-green-600">9.08</td>
               <td class="px-6 py-4 text-sm">1,200,000</td>
+              <td class="px-6 py-4 text-xs"><span class="px-2 py-1 bg-green-100 text-green-800 rounded">Seasonal</span>
+              </td>
             </tr>
             <tr class="bg-indigo-50">
               <td class="px-6 py-4 font-medium text-slate-900">Naruto: Shippuden</td>
               <td class="px-6 py-4 text-sm text-indigo-600 font-semibold">Pierrot</td>
-              <td class="px-6 py-4 text-sm">8.28</td>
+              <td class="px-6 py-4 text-sm font-semibold text-yellow-600">8.28</td>
               <td class="px-6 py-4 text-sm">2,400,000</td>
+              <td class="px-6 py-4 text-xs"><span
+                  class="px-2 py-1 bg-orange-100 text-orange-800 rounded">Continuous</span></td>
             </tr>
             <tr>
               <td class="px-6 py-4 font-medium text-slate-900">Demon Slayer S3</td>
               <td class="px-6 py-4 text-sm text-slate-600">ufotable</td>
-              <td class="px-6 py-4 text-sm">8.95</td>
+              <td class="px-6 py-4 text-sm font-semibold text-green-600">8.95</td>
               <td class="px-6 py-4 text-sm">850,000</td>
+              <td class="px-6 py-4 text-xs"><span class="px-2 py-1 bg-green-100 text-green-800 rounded">Seasonal</span>
+              </td>
             </tr>
             <tr class="bg-indigo-50">
               <td class="px-6 py-4 font-medium text-slate-900">Tokyo Ghoul</td>
               <td class="px-6 py-4 text-sm text-indigo-600 font-semibold">Pierrot</td>
-              <td class="px-6 py-4 text-sm">7.80</td>
+              <td class="px-6 py-4 text-sm font-semibold text-yellow-600">7.80</td>
               <td class="px-6 py-4 text-sm">1,500,000</td>
+              <td class="px-6 py-4 text-xs"><span class="px-2 py-1 bg-green-100 text-green-800 rounded">Seasonal</span>
+              </td>
             </tr>
             <tr class="bg-indigo-50">
               <td class="px-6 py-4 font-medium text-slate-900">Boruto</td>
               <td class="px-6 py-4 text-sm text-indigo-600 font-semibold">Pierrot</td>
-              <td class="px-6 py-4 text-sm">5.98</td>
+              <td class="px-6 py-4 text-sm font-semibold text-red-600">5.98</td>
               <td class="px-6 py-4 text-sm">450,000</td>
+              <td class="px-6 py-4 text-xs"><span
+                  class="px-2 py-1 bg-orange-100 text-orange-800 rounded">Continuous</span></td>
             </tr>
           </tbody>
         </table>
@@ -157,32 +182,46 @@
     </div>
 
     <!-- Strategic Recommendations -->
-    <div class="bg-white rounded-lg shadow p-6">
+    <div class="bg-white rounded-lg shadow p-6 mb-8">
       <h3 class="text-lg font-semibold mb-4">📈 Strategic Recommendations</h3>
-      <ul class="space-y-3">
-        <li class="flex items-start">
-          <span class="text-green-500 mr-2 text-xl">✓</span>
-          <div>
-            <strong class="text-slate-900">Prioritize quality over quantity:</strong>
-            <span class="text-slate-700"> Bleach TYBW demonstrates that Pierrot can compete with MAPPA/ufotable when
-              given proper resources</span>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="p-4 bg-green-50 rounded-lg border border-green-200">
+          <div class="flex items-start">
+            <span class="text-green-600 mr-3 text-2xl">✓</span>
+            <div>
+              <h4 class="font-semibold text-slate-900 mb-1">Prioritize Quality</h4>
+              <p class="text-sm text-slate-700">Bleach TYBW proves Pierrot can compete when resourced properly</p>
+            </div>
           </div>
-        </li>
-        <li class="flex items-start">
-          <span class="text-green-500 mr-2 text-xl">✓</span>
-          <div>
-            <strong class="text-slate-900">Reduce filler in new productions:</strong>
-            <span class="text-slate-700"> Seasonal model outperforms continuous production in engagement metrics</span>
+        </div>
+        <div class="p-4 bg-blue-50 rounded-lg border border-blue-200">
+          <div class="flex items-start">
+            <span class="text-blue-600 mr-3 text-2xl">✓</span>
+            <div>
+              <h4 class="font-semibold text-slate-900 mb-1">Adopt Seasonal Model</h4>
+              <p class="text-sm text-slate-700">Reduce filler to <10% - continuous model hurts engagement</p>
+            </div>
           </div>
-        </li>
-        <li class="flex items-start">
-          <span class="text-green-500 mr-2 text-xl">✓</span>
-          <div>
-            <strong class="text-slate-900">Leverage legacy IP strategically:</strong>
-            <span class="text-slate-700"> Naruto franchise retains massive member base despite lower scores</span>
+        </div>
+        <div class="p-4 bg-purple-50 rounded-lg border border-purple-200">
+          <div class="flex items-start">
+            <span class="text-purple-600 mr-3 text-2xl">✓</span>
+            <div>
+              <h4 class="font-semibold text-slate-900 mb-1">Leverage Legacy IP</h4>
+              <p class="text-sm text-slate-700">Naruto retains 2.4M members despite lower scores</p>
+            </div>
           </div>
-        </li>
-      </ul>
+        </div>
+        <div class="p-4 bg-orange-50 rounded-lg border border-orange-200">
+          <div class="flex items-start">
+            <span class="text-orange-600 mr-3 text-2xl">✓</span>
+            <div>
+              <h4 class="font-semibold text-slate-900 mb-1">Develop Premium New IP</h4>
+              <p class="text-sm text-slate-700">Compete with MAPPA/ufotable in streaming era</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
   </div>
@@ -197,29 +236,30 @@
   </footer>
 
   <script>
-    // Studio Comparison Chart
-    new Chart(document.getElementById('studioChart'), {
+    // Score Comparison Chart with FIXED HEIGHT
+    new Chart(document.getElementById('scoreChart'), {
       type: 'bar',
       data: {
-        labels: ['Bleach TYBW\n(Pierrot)', 'JJK S2\n(MAPPA)', 'Demon Slayer\n(ufotable)', 'Naruto Ship.\n(Pierrot)', 'Tokyo Ghoul\n(Pierrot)'],
+        labels: ['JJK S2\n(MAPPA)', 'Bleach TYBW\n(Pierrot)', 'Demon Slayer\n(ufotable)', 'Naruto Ship.\n(Pierrot)', 'Tokyo Ghoul\n(Pierrot)', 'Boruto\n(Pierrot)'],
         datasets: [{
           label: 'MAL Score',
-          data: [8.99, 9.08, 8.95, 8.28, 7.80],
+          data: [9.08, 8.99, 8.95, 8.28, 7.80, 5.98],
           backgroundColor: function (context) {
-            // Color Pierrot titles differently
-            const pierrotIndices = [0, 3, 4];
+            const pierrotIndices = [1, 3, 4, 5];
             return pierrotIndices.includes(context.dataIndex) ? '#6366F1' : '#94A3B8';
-          }
+          },
+          borderRadius: 4
         }]
       },
       options: {
+        indexAxis: 'y',
         responsive: true,
         maintainAspectRatio: false,
         plugins: {
           legend: { display: false }
         },
         scales: {
-          y: {
+          x: {
             beginAtZero: true,
             max: 10
           }
@@ -227,14 +267,14 @@
       }
     });
 
-    // Portfolio Distribution Chart
-    new Chart(document.getElementById('portfolioChart'), {
+    // Popularity Chart with FIXED HEIGHT
+    new Chart(document.getElementById('popularityChart'), {
       type: 'doughnut',
       data: {
-        labels: ['Bleach TYBW', 'Naruto Shippuden', 'Tokyo Ghoul', 'Black Clover', 'Boruto', 'Others'],
+        labels: ['Naruto Shippuden', 'Tokyo Ghoul', 'JJK S2', 'Demon Slayer', 'Black Clover', 'Boruto'],
         datasets: [{
-          data: [284000, 2400000, 1500000, 580000, 450000, 786000],
-          backgroundColor: ['#6366F1', '#8B5CF6', '#EC4899', '#10B981', '#F59E0B', '#94A3B8']
+          data: [2400000, 1500000, 1200000, 850000, 580000, 450000],
+          backgroundColor: ['#6366F1', '#8B5CF6', '#94A3B8', '#CBD5E1', '#EC4899', '#F59E0B']
         }]
       },
       options: {
