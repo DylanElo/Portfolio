@@ -60,7 +60,6 @@
 
 <body class="bg-slate-50">
 
-  <!-- Navigation -->
   <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-16">
@@ -71,13 +70,12 @@
         </div>
         <div class="flex items-center space-x-4">
           <span class="px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800">Production Ready</span>
-          <a href="../../../index.html" class="text-slate-600 hover:text-slate-900 font-medium">← Back to Portfolio</a>
+          <a href="../../../index.html" class="text-slate-600 hover:text-slate-900 font-medium">← Back</a>
         </div>
       </div>
     </div>
   </nav>
 
-  <!-- Header -->
   <div class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <h2 class="text-3xl font-bold mb-2">Business Intelligence Case Study</h2>
@@ -85,11 +83,10 @@
     </div>
   </div>
 
-  <!-- Tabs -->
   <div class="bg-white border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex space-x-8 overflow-x-auto">
-        <button class="tab-btn active py-4 px-2 font-medium whitespace-nowrap" onclick="switchTab('fandom')">🌍 Global
+        <button class="tab-btn active py-4 px-2 font-medium whitespace-nowrap" onclick="switchTab('fandom')">🌍
           Fandom</button>
         <button class="tab-btn py-4 px-2 font-medium whitespace-nowrap" onclick="switchTab('timeline')">📈
           Timeline</button>
@@ -103,271 +100,246 @@
     </div>
   </div>
 
-  <!-- Content Container -->
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-8">
 
-    <!-- TAB 1: Global Fandom -->
     <div id="fandom-tab" class="tab-content active">
-
-      <div class="mb-6 p-4 bg-slate-100 border-l-4 border-slate-400 rounded-r-lg">
-        <h4 class="font-bold text-slate-800 mb-2">📋 Data Source & Methodology</h4>
-        <p class="text-slate-700 text-sm"><strong>Real MyAnimeList (MAL) data</strong> - snapshot 2024. Proxy for
-          international engaged fandom (Western-biased).</p>
-        <p class="text-slate-700 text-sm mt-2"><em>Note: Some titles like Naruto Shippuden have finished airing but are
-            treated as <strong>legacy evergreen IP</strong> due to ongoing revenue through streaming and merchandise.
-            Financial metrics are simulated for portfolio demonstration.</em></p>
-      </div>
-
-      <div class="mb-6 p-4 bg-blue-50 border-l-4 border-blue-500 rounded-r-lg">
-        <h4 class="font-bold text-blue-900 mb-2">💡 Key Insight: Legacy Quality Still Competitive</h4>
-        <p class="text-blue-800 text-sm">Bleach TYBW (8.99) matches JJK quality benchmarks, proving Pierrot can compete
-          with MAPPA/ufotable when properly resourced. However, new IP like Boruto (5.98) underperforms. Quality
-          perception matters more than episode quantity.</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-        <div class="bg-white rounded-lg shadow p-6">
-          <div class="text-sm font-medium text-slate-600 mb-1">Top Rated (Pierrot)</div>
-          <div class="text-3xl font-bold text-indigo-600">8.99</div>
-          <div class="text-xs text-slate-500 mt-1">Bleach: TYBW</div>
-          <span class="inline-block mt-2 px-2 py-1 bg-indigo-100 text-indigo-700 rounded text-xs">Revival Hit</span>
-        </div>
-        <div class="bg-white rounded-lg shadow p-6">
-          <div class="text-sm font-medium text-slate-600 mb-1">Top Competitor</div>
-          <div class="text-3xl font-bold text-purple-600">9.08</div>
-          <div class="text-xs text-slate-500 mt-1">JJK S2 (MAPPA)</div>
-          <span class="inline-block mt-2 px-2 py-1 bg-green-100 text-green-700 rounded text-xs">Recent Hit</span>
-        </div>
-        <div class="bg-white rounded-lg shadow p-6">
-          <div class="text-sm font-medium text-slate-600 mb-1">Legacy Pillar</div>
-          <div class="text-3xl font-bold text-pink-600">2.4M</div>
-          <div class="text-xs text-slate-500 mt-1">Naruto Shippuden</div>
-          <span class="inline-block mt-2 px-2 py-1 bg-purple-100 text-purple-700 rounded text-xs">Legacy
-            Evergreen</span>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-        <div class="bg-white rounded-lg shadow p-6">
-          <h3 class="text-lg font-semibold mb-4">MAL Score Comparison</h3>
-          <div class="chart-container"><canvas id="scoreChart"></canvas></div>
-        </div>
-        <div class="bg-white rounded-lg shadow p-6">
-          <h3 class="text-lg font-semibold mb-4">Member Base Distribution</h3>
-          <div class="chart-container"><canvas id="memberChart"></canvas></div>
-        </div>
-      </div>
-
-      <div class="bg-white rounded-lg shadow overflow-hidden">
-        <div class="px-6 py-4 border-b border-slate-200">
-          <h3 class="text-lg font-semibold">Detailed Comparison</h3>
-        </div>
-        <div class="overflow-x-auto">
-          <table class="min-w-full divide-y divide-slate-200">
-            <thead class="bg-slate-50">
-              <tr>
-                <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase">Title</th>
-                <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase">Studio</th>
-                <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase">Score</th>
-                <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase">Profile</th>
-              </tr>
-            </thead>
-            <tbody class="bg-white divide-y divide-slate-200">
-              <tr class="bg-indigo-50">
-                <td class="px-6 py-4 font-medium">Bleach: TYBW</td>
-                <td class="px-6 py-4 text-sm text-indigo-600 font-semibold">Pierrot</td>
-                <td class="px-6 py-4 text-sm font-semibold text-green-600">8.99</td>
-                <td class="px-6 py-4"><span class="px-2 py-1 bg-indigo-100 text-indigo-700 rounded text-xs">Revival
-                    Hit</span></td>
-              </tr>
-              <tr>
-                <td class="px-6 py-4 font-medium">JJK S2</td>
-                <td class="px-6 py-4 text-sm">MAPPA</td>
-                <td class="px-6 py-4 text-sm font-semibold text-green-600">9.08</td>
-                <td class="px-6 py-4"><span class="px-2 py-1 bg-green-100 text-green-700 rounded text-xs">Recent
-                    Hit</span></td>
-              </tr>
-              <tr class="bg-indigo-50">
-                <td class="px-6 py-4 font-medium">Naruto: Shippuden</td>
-                <td class="px-6 py-4 text-sm text-indigo-600 font-semibold">Pierrot</td>
-                <td class="px-6 py-4 text-sm font-semibold text-yellow-600">8.28</td>
-                <td class="px-6 py-4"><span class="px-2 py-1 bg-purple-100 text-purple-700 rounded text-xs">Legacy
-                    Evergreen</span></td>
-              </tr>
-              <tr class="bg-indigo-50">
-                <td class="px-6 py-4 font-medium">Boruto</td>
-                <td class="px-6 py-4 text-sm text-indigo-600 font-semibold">Pierrot</td>
-                <td class="px-6 py-4 text-sm font-semibold text-red-600">5.98</td>
-                <td class="px-6 py-4"><span
-                    class="px-2 py-1 bg-orange-100 text-orange-700 rounded text-xs">Long-Run</span></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- TAB 2: Timeline Analysis -->
-    <div id="timeline-tab" class="tab-content">
-
       <div class="mb-6 p-4 bg-slate-100 border-l-4 border-slate-400 rounded-r-lg">
         <h4 class="font-bold text-slate-800 mb-2">📋 Data Source</h4>
-        <p class="text-slate-700 text-sm"><strong>Revenue 2020-2024 is simulated</strong> to reflect typical market
-          patterns: legacy IPs slowly declining but stable, while recent hits show sharp ramp-up. Calibrated to industry
-          benchmarks.</p>
+        <p class="text-slate-700 text-sm"><strong>Real MAL data.</strong> Note: Titles like Naruto are finished airing
+          but treated as <strong>legacy evergreen IP</strong> for ongoing revenue.</p>
       </div>
 
-      <div class="mb-6 p-4 bg-indigo-50 border-l-4 border-indigo-500 rounded-r-lg">
-        <h4 class="font-bold text-indigo-900 mb-2">💡 Key Insight: Revenue Momentum Shift</h4>
-        <p class="text-indigo-800 text-sm">Legacy Pierrot IP (Naruto Shippuden: $42M→$34M) maintains strong long-tail
-          but is declining. Meanwhile, new competitor hits (JJK: $20M→$48M, Demon Slayer: $38M→$50M) drive market
-          growth. Bleach TYBW revival demonstrates Pierrot CAN capture new momentum when investing in quality seasonal
-          production.</p>
-      </div>
+      <div class="chart-container"><canvas id="scoreChart"></canvas></div>
+    </div>
+    <div class="bg-white rounded-lg shadow p-6">
+      <h3 class="text-lg font-semibold mb-4">Member Base</h3>
+      <div class="chart-container"><canvas id="memberChart"></canvas></div>
+    </div>
+  </div>
+  </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-        <div class="bg-white rounded-lg shadow p-6">
-          <div class="text-sm font-medium text-slate-600 mb-1">Naruto Revenue (2024)</div>
-          <div class="text-3xl font-bold text-purple-600">$34M</div>
-          <div class="text-xs text-slate-500 mt-1">Down from $42M (2020)</div>
-          <div class="text-xs text-red-600 mt-1">-19% over 4 years</div>
-        </div>
-        <div class="bg-white rounded-lg shadow p-6">
-          <div class="text-sm font-medium text-slate-600 mb-1">JJK Peak (2023)</div>
-          <div class="text-3xl font-bold text-green-600">$48M</div>
-          <div class="text-xs text-slate-500 mt-1">Up from $20M (2020)</div>
-          <div class="text-xs text-green-600 mt-1">+140% growth</div>
-        </div>
-        <div class="bg-white rounded-lg shadow p-6">
-          <div class="text-sm font-medium text-slate-600 mb-1">Bleach TYBW (2024)</div>
-          <div class="text-3xl font-bold text-indigo-600">$32M</div>
-          <div class="text-xs text-slate-500 mt-1">From $0 (2021)</div>
-          <div class="text-xs text-indigo-600 mt-1">Successful revival</div>
-        </div>
-      </div>
+  <div id="timeline-tab" class="tab-content">
+    <div class="mb-6 p-4 bg-slate-100 border-l-4 border-slate-400 rounded-r-lg">
+      <h4 class="font-bold text-slate-800 mb-2">📋 Data Source</h4>
+      <p class="text-slate-700 text-sm"><strong>Simulated revenue 2020-2024</strong> showing typical patterns.</p>
+    </div>
 
-      <div class="bg-white rounded-lg shadow p-6 mb-8">
-        <h3 class="text-lg font-semibold mb-4">Revenue Evolution 2020-2024</h3>
-        <div class="chart-container-timeline"><canvas id="timelineChart"></canvas></div>
-      </div>
+    <div class="mb-6 p-4 bg-indigo-50 border-l-4 border-indigo-500 rounded-r-lg">
+      <h4 class="font-bold text-indigo-900 mb-2">💡 Revenue Momentum Shift</h4>
+      <p class="text-indigo-800 text-sm">Naruto ($42M→$34M) declining. JJK ($20M→$48M) surging. Bleach TYBW revival
+        proves Pierrot CAN compete.</p>
+    </div>
 
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
       <div class="bg-white rounded-lg shadow p-6">
-        <h3 class="text-lg font-semibold mb-4">📊 Revenue Profile Taxonomy</h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div class="p-4 bg-purple-50 rounded border border-purple-200">
-            <h4 class="font-semibold text-purple-900 mb-1">Legacy Evergreen</h4>
-            <p class="text-sm text-purple-800">Finished airing but maintains strong long-tail monetization</p>
-            <p class="text-xs text-purple-600 mt-2">Ex: Naruto Shippuden, Attack on Titan</p>
-          </div>
-          <div class="p-4 bg-green-50 rounded border border-green-200">
-            <h4 class="font-semibold text-green-900 mb-1">Recent Hit</h4>
-            <p class="text-sm text-green-800">Currently airing or recent with high momentum and growth</p>
-            <p class="text-xs text-green-600 mt-2">Ex: JJK, Demon Slayer</p>
-          </div>
-          <div class="p-4 bg-indigo-50 rounded border border-indigo-200">
-            <h4 class="font-semibold text-indigo-900 mb-1">Revival Success</h4>
-            <p class="text-sm text-indigo-800">Returning franchise with renewed production and comeback</p>
-            <p class="text-xs text-indigo-600 mt-2">Ex: Bleach TYBW</p>
-          </div>
-          <div class="p-4 bg-orange-50 rounded border border-orange-200">
-            <h4 class="font-semibold text-orange-900 mb-1">Long-Run Series</h4>
-            <p class="text-sm text-orange-800">Ongoing continuous production with stable but moderate performance</p>
-            <p class="text-xs text-orange-600 mt-2">Ex: Boruto, Black Clover</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- TAB 3: Streaming / TAB 4: Domestic / TAB 5: Production - keep same as before -->
-    <!-- (Reusing previous content for brevity - streaming, domestic, production tabs remain unchanged) -->
-
-    <div id="streaming-tab" class="tab-content">
-      <div class="mb-6 p-4 bg-slate-100 border-l-4 border-slate-400 rounded-r-lg">
-        <h4 class="font-bold text-slate-800 mb-2">📋 Data Source</h4>
-        <p class="text-slate-700 text-sm"><strong>Simulated streaming data</strong> calibrated to industry benchmarks
-          (Parrot Analytics, Netflix subscriber data).</p>
-      </div>
-      <div class="mb-6 p-4 bg-purple-50 border-l-4 border-purple-500 rounded-r-lg">
-        <h4 class="font-bold text-purple-900 mb-2">💡 Key Insight: Competitive Gap vs MAPPA/ufotable</h4>
-        <p class="text-purple-800 text-sm">JJK dominates at 71.2x average demand vs Pierrot titles at 2-12x. Netflix +
-          Crunchyroll control >80% of overseas market—Pierrot needs premium-quality new IP to compete globally.</p>
+        <div class="text-sm font-medium text-slate-600 mb-1">Naruto (2024)</div>
+        <div class="text-3xl font-bold text-purple-600">$34M</div>
+        <div class="text-xs text-red-600 mt-1">-19% decline</div>
       </div>
       <div class="bg-white rounded-lg shadow p-6">
-        <h3 class="text-lg font-semibold mb-4">📺 Platform Dominance</h3>
-        <p class="text-slate-600 text-sm">International anime streaming controlled by Netflix (~40%) and Crunchyroll
-          (~35%). Securing premium placement on both platforms critical for global success.</p>
+        <div class="text-sm font-medium text-slate-600 mb-1">JJK Peak</div>
+        <div class="text-3xl font-bold text-green-600">$48M</div>
+        <div class="text-xs text-green-600 mt-1">+140% growth</div>
+      </div>
+      <div class="bg-white rounded-lg shadow p-6">
+        <div class="text-sm font-medium text-slate-600 mb-1">Bleach TYBW</div>
+        <div class="text-3xl font-bold text-indigo-600">$32M</div>
+        <div class="text-xs text-indigo-600 mt-1">Revival success</div>
       </div>
     </div>
 
-    <div id="domestic-tab" class="tab-content">
-      <div class="mb-6 p-4 bg-slate-100 border-l-4 border-slate-400 rounded-r-lg">
-        <h4 class="font-bold text-slate-800 mb-2">📋 Data Source</h4>
-        <p class="text-slate-700 text-sm"><strong>Simulated domestic data</strong> calibrated to Japanese TV ratings and
-          Oricon BD sales patterns.</p>
+    <div class="bg-white rounded-lg shadow p-6 mb-8">
+      <h3 class="text-lg font-semibold mb-4">Revenue Evolution 2020-2024</h3>
+      <div class="chart-container-timeline"><canvas id="timelineChart"></canvas></div>
+    </div>
+  </div>
+
+  <div id="streaming-tab" class="tab-content">
+    <div class="mb-6 p-4 bg-slate-100 border-l-4 border-slate-400 rounded-r-lg">
+      <h4 class="font-bold text-slate-800 mb-2">📋 Data Source</h4>
+      <p class="text-slate-700 text-sm"><strong>Simulated streaming data</strong> calibrated to Parrot Analytics.</p>
+    </div>
+
+    <div class="mb-6 p-4 bg-purple-50 border-l-4 border-purple-500 rounded-r-lg">
+      <h4 class="font-bold text-purple-900 mb-2">💡 Competitive Gap vs MAPPA/ufotable</h4>
+      <p class="text-purple-800 text-sm">JJK 71.2x demand vs Pierrot 2-12x. Netflix+CR control 80% overseas market.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+      <div class="bg-white rounded-lg shadow p-6">
+        <div class="text-sm font-medium text-slate-600 mb-1">JJK Demand</div>
+        <div class="text-3xl font-bold text-purple-600">71.2x</div>
+        <div class="text-xs text-slate-500 mt-1">Most in-demand 2023</div>
       </div>
-      <div class="mb-6 p-4 bg-green-50 border-l-4 border-green-500 rounded-r-lg">
-        <h4 class="font-bold text-green-900 mb-2">💡 Key Insight: Strong MAL-BD Sales Correlation</h4>
-        <p class="text-green-800 text-sm">Clear linear relationship (R² > 0.7): Higher MAL score = Better BD sales.
-          Bleach TYBW (8.99, 48K units) vs Boruto (5.98, 6K units). Invest in quality for domestic monetization.</p>
+      <div class="bg-white rounded-lg shadow p-6">
+        <div class="text-sm font-medium text-slate-600 mb-1">Naruto Demand</div>
+        <div class="text-3xl font-bold text-indigo-600">12.5x</div>
+        <div class="text-xs text-slate-500 mt-1">Strong legacy</div>
+      </div>
+      <div class="bg-white rounded-lg shadow p-6">
+        <div class="text-sm font-medium text-slate-600 mb-1">Boruto Demand</div>
+        <div class="text-3xl font-bold text-red-600">2.3x</div>
+        <div class="text-xs text-slate-500 mt-1">Struggling</div>
       </div>
     </div>
 
-    <div id="production-tab" class="tab-content">
-      <div class="mb-6 p-4 bg-slate-100 border-l-4 border-slate-400 rounded-r-lg">
-        <h4 class="font-bold text-slate-800 mb-2">📋 Data Source</h4>
-        <p class="text-slate-700 text-sm"><strong>Simulated production data</strong> based on known filler percentages
-          (fan wikis) and industry budget ranges.</p>
+    <div class="bg-white rounded-lg shadow p-6">
+      <h3 class="text-lg font-semibold mb-4">Platform Market Share</h3>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="p-4 bg-red-50 rounded">
+          <div class="text-2xl font-bold text-red-600">40%</div>
+          <div class="text-sm">Netflix</div>
+        </div>
+        <div class="p-4 bg-orange-50 rounded">
+          <div class="text-2xl font-bold text-orange-600">35%</div>
+          <div class="text-sm">Crunchyroll</div>
+        </div>
       </div>
-      <div class="mb-6 p-4 bg-orange-50 border-l-4 border-orange-500 rounded-r-lg">
-        <h4 class="font-bold text-orange-900 mb-2">💡 Key Insight: Filler Kills Engagement</h4>
-        <p class="text-orange-800 text-sm">Seasonal model (JJK/TYBW: <10% filler, 8.7 avg score) vastly outperforms
-            continuous production (Boruto: 42% filler, 6.1 score). Cap filler at 10% max.</p>
+    </div>
+  </div>
+
+  <div id="domestic-tab" class="tab-content">
+    <div class="mb-6 p-4 bg-slate-100 border-l-4 border-slate-400 rounded-r-lg">
+      <h4 class="font-bold text-slate-800 mb-2">📋 Data Source</h4>
+      <p class="text-slate-700 text-sm"><strong>Simulated domestic data</strong> calibrated to TV ratings & BD sales.
+      </p>
+    </div>
+
+    <div class="mb-6 p-4 bg-green-50 border-l-4 border-green-500 rounded-r-lg">
+      <h4 class="font-bold text-green-900 mb-2">💡 MAL-BD Sales Correlation</h4>
+      <p class="text-green-800 text-sm">Higher MAL score = Better BD sales (R² > 0.7). TYBW 48K vs Boruto 6K units.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+      <div class="bg-white rounded-lg shadow p-6">
+        <div class="text-sm font-medium text-slate-600 mb-1">TYBW BD Sales</div>
+        <div class="text-3xl font-bold text-green-600">48K</div>
+        <div class="text-xs text-slate-500 mt-1">Units/volume</div>
+      </div>
+      <div class="bg-white rounded-lg shadow p-6">
+        <div class="text-sm font-medium text-slate-600 mb-1">Naruto Merch</div>
+        <div class="text-3xl font-bold text-indigo-600">¥1.2B</div>
+        <div class="text-xs text-slate-500 mt-1">Per quarter</div>
+      </div>
+      <div class="bg-white rounded-lg shadow p-6">
+        <div class="text-sm font-medium text-slate-600 mb-1">Boruto BD Sales</div>
+        <div class="text-3xl font-bold text-red-600">6K</div>
+        <div class="text-xs text-slate-500 mt-1">Units/volume</div>
       </div>
     </div>
 
-    <!-- Strategic Recommendations -->
-    <div class="bg-white rounded-lg shadow p-6 mt-8">
-      <h3 class="text-lg font-semibold mb-4">📈 Strategic Recommendations</h3>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div class="p-4 bg-green-50 rounded-lg border border-green-200">
-          <span class="text-green-600 text-2xl">✓</span>
-          <h4 class="font-semibold text-slate-900 mt-2 mb-1">Prioritize Quality</h4>
-          <p class="text-sm text-slate-700">Bleach TYBW proves Pierrot can compete when resourced</p>
+    <div class="bg-white rounded-lg shadow p-6">
+      <h3 class="text-lg font-semibold mb-4">Revenue Streams</h3>
+      <div class="space-y-3">
+        <div class="flex justify-between p-3 bg-indigo-50 rounded">
+          <div class="font-semibold">BD/DVD Sales</div>
+          <div class="text-indigo-600 font-bold">35%</div>
         </div>
-        <div class="p-4 bg-blue-50 rounded-lg border border-blue-200">
-          <span class="text-blue-600 text-2xl">✓</span>
-          <h4 class="font-semibold text-slate-900 mt-2 mb-1">Adopt Seasonal Model</h4>
-          <p class="text-sm text-slate-700">Reduce filler to <10% for better engagement</p>
+        <div class="flex justify-between p-3 bg-purple-50 rounded">
+          <div class="font-semibold">Merchandise</div>
+          <div class="text-purple-600 font-bold">40%</div>
         </div>
-        <div class="p-4 bg-purple-50 rounded-lg border border-purple-200">
-          <span class="text-purple-600 text-2xl">✓</span>
-          <h4 class="font-semibold text-slate-900 mt-2 mb-1">Leverage Legacy IP</h4>
-          <p class="text-sm text-slate-700">Naruto maintains strong long-tail revenue</p>
-        </div>
-        <div class="p-4 bg-orange-50 rounded-lg border border-orange-200">
-          <span class="text-orange-600 text-2xl">✓</span>
-          <h4 class="font-semibold text-slate-900 mt-2 mb-1">Develop Premium New IP</h4>
-          <p class="text-sm text-slate-700">Compete with MAPPA/ufotable in streaming era</p>
+        <div class="flex justify-between p-3 bg-pink-50 rounded">
+          <div class="font-semibold">Licensing & Events</div>
+          <div class="text-pink-600 font-bold">25%</div>
         </div>
       </div>
     </div>
+  </div>
+
+  <div id="production-tab" class="tab-content">
+    <div class="mb-6 p-4 bg-slate-100 border-l-4 border-slate-400 rounded-r-lg">
+      <h4 class="font-bold text-slate-800 mb-2">📋 Data Source</h4>
+      <p class="text-slate-700 text-sm"><strong>Simulated production data</strong> based on known filler % and
+        budgets.</p>
+    </div>
+
+    <div class="mb-6 p-4 bg-orange-50 border-l-4 border-orange-500 rounded-r-lg">
+      <h4 class="font-bold text-orange-900 mb-2">💡 Filler Kills Engagement</h4>
+      <p class="text-orange-800 text-sm">Seasonal (<10% filler, 8.7 score) vs Continuous (42% filler, 6.1 score).</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+      <div class="bg-white rounded-lg shadow p-6">
+        <div class="text-sm font-medium text-slate-600 mb-1">TYBW Budget</div>
+        <div class="text-3xl font-bold text-green-600">$380K</div>
+        <div class="text-xs text-slate-500 mt-1">Per episode</div>
+      </div>
+      <div class="bg-white rounded-lg shadow p-6">
+        <div class="text-sm font-medium text-slate-600 mb-1">TYBW Filler</div>
+        <div class="text-3xl font-bold text-green-600">0%</div>
+        <div class="text-xs text-slate-500 mt-1">Seasonal model</div>
+      </div>
+      <div class="bg-white rounded-lg shadow p-6">
+        <div class="text-sm font-medium text-slate-600 mb-1">Boruto Filler</div>
+        <div class="text-3xl font-bold text-red-600">42%</div>
+        <div class="text-xs text-slate-500 mt-1">Continuous model</div>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-lg shadow p-6">
+      <h3 class="text-lg font-semibold mb-4">Production Model Comparison</h3>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="p-4 bg-green-50 rounded border border-green-200">
+          <h4 class="font-semibold text-green-900 mb-2">✅ Seasonal</h4>
+          <ul class="text-sm text-green-800 space-y-1">
+            <li>• <10% filler</li>
+            <li>• Higher budget/ep</li>
+            <li>• Better scores (8.5+)</li>
+          </ul>
+        </div>
+        <div class="p-4 bg-red-50 rounded border border-red-200">
+          <h4 class="font-semibold text-red-900 mb-2">❌ Continuous</h4>
+          <ul class="text-sm text-red-800 space-y-1">
+            <li>• 40%+ filler</li>
+            <li>• Lower budget/ep</li>
+            <li>• Worse scores (<7.0)< /li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-white rounded-lg shadow p-6 mt-8">
+    <h3 class="text-lg font-semibold mb-4">📈 Strategic Recommendations</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="p-4 bg-green-50 rounded-lg border border-green-200">
+        <span class="text-green-600 text-2xl">✓</span>
+        <h4 class="font-semibold mt-2 mb-1">Prioritize Quality</h4>
+        <p class="text-sm text-slate-700">Bleach TYBW proves Pierrot can compete</p>
+      </div>
+      <div class="p-4 bg-blue-50 rounded-lg border border-blue-200">
+        <span class="text-blue-600 text-2xl">✓</span>
+        <h4 class="font-semibold mt-2 mb-1">Adopt Seasonal Model</h4>
+        <p class="text-sm text-slate-700">Reduce filler to <10%< /p>
+      </div>
+      <div class="p-4 bg-purple-50 rounded-lg border border-purple-200">
+        <span class="text-purple-600 text-2xl">✓</span>
+        <h4 class="font-semibold mt-2 mb-1">Leverage Legacy IP</h4>
+        <p class="text-sm text-slate-700">Naruto maintains strong tail</p>
+      </div>
+      <div class="p-4 bg-orange-50 rounded-lg border border-orange-200">
+        <span class="text-orange-600 text-2xl">✓</span>
+        <h4 class="font-semibold mt-2 mb-1">Develop Premium New IP</h4>
+        <p class="text-sm text-slate-700">Compete in streaming era</p>
+      </div>
+    </div>
+  </div>
 
   </div>
 
-  <!-- Footer -->
   <footer class="bg-white border-t border-slate-200 mt-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center">
-      <p class="text-slate-600">© 2024 Dylan Elo - Business Intelligence Case Study</p>
-      <p class="text-xs text-slate-400 mt-2">💼 Multi-lens BI analysis with time-series perspective (2020-2024)</p>
+      <p class="text-slate-600">© 2024 Dylan Elo - BI Case Study</p>
+      <p class="text-xs text-slate-400 mt-2">Multi-lens analysis with time-series perspective</p>
     </div>
   </footer>
 
   <script type="module">
     import { timelineData } from './timeline_data.js';
 
-    // Tab Switching
     window.switchTab = function (tabName) {
       document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
       document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -375,18 +347,14 @@
       event.target.classList.add('active');
     };
 
-    // Fandom Tab Charts
     new Chart(document.getElementById('scoreChart'), {
       type: 'bar',
       data: {
-        labels: ['JJK S2\n(MAPPA)', 'Bleach TYBW\n(Pierrot)', 'Demon Slayer\n(ufotable)', 'Naruto Ship.\n(Pierrot)', 'Tokyo Ghoul\n(Pierrot)', 'Boruto\n(Pierrot)'],
+        labels: ['JJK\\n(MAPPA)', 'TYBW\\n(Pierrot)', 'Demon Slayer\\n(ufotable)', 'Naruto\\n(Pierrot)', 'TG\\n(Pierrot)', 'Boruto\\n(Pierrot)'],
         datasets: [{
-          label: 'MAL Score',
+          label: 'Score',
           data: [9.08, 8.99, 8.95, 8.28, 7.80, 5.98],
-          backgroundColor: function (context) {
-            const pierrotIndices = [1, 3, 4, 5];
-            return pierrotIndices.includes(context.dataIndex) ? '#6366F1' : '#94A3B8';
-          },
+          backgroundColor: ctx => [1, 3, 4, 5].includes(ctx.dataIndex) ? '#6366F1' : '#94A3B8',
           borderRadius: 4
         }]
       },
@@ -402,7 +370,7 @@
     new Chart(document.getElementById('memberChart'), {
       type: 'doughnut',
       data: {
-        labels: ['Naruto Shippuden', 'Tokyo Ghoul', 'JJK S2', 'Demon Slayer', 'Black Clover', 'Boruto'],
+        labels: ['Naruto', 'Tokyo Ghoul', 'JJK', 'Demon Slayer', 'Black Clover', 'Boruto'],
         datasets: [{
           data: [2400000, 1500000, 1200000, 850000, 580000, 450000],
           backgroundColor: ['#6366F1', '#8B5CF6', '#94A3B8', '#CBD5E1', '#EC4899', '#F59E0B']
@@ -415,7 +383,6 @@
       }
     });
 
-    // Timeline Chart
     const timelineByYear = {};
     timelineData.forEach(d => {
       if (!timelineByYear[d.year]) timelineByYear[d.year] = {};
@@ -423,15 +390,13 @@
     });
 
     const years = [2020, 2021, 2022, 2023, 2024];
-    const titles = ['Naruto Shippuden', 'Jujutsu Kaisen', 'Demon Slayer', 'Bleach TYBW', 'Boruto', 'Black Clover', 'Attack on Titan'];
+    const titles = ['Naruto Shippuden', 'Jujutsu Kaisen', 'Demon Slayer', 'Bleach TYBW', 'Boruto'];
     const colors = {
       'Naruto Shippuden': '#8B5CF6',
       'Jujutsu Kaisen': '#10B981',
       'Demon Slayer': '#F59E0B',
       'Bleach TYBW': '#6366F1',
-      'Boruto': '#EF4444',
-      'Black Clover': '#EC4899',
-      'Attack on Titan': '#94A3B8'
+      'Boruto': '#EF4444'
     };
 
     new Chart(document.getElementById('timelineChart'), {
@@ -442,25 +407,16 @@
           label: title,
           data: years.map(year => timelineByYear[year]?.[title] || 0),
           borderColor: colors[title],
-          backgroundColor: colors[title] + '20',
-          tension: 0.3,
-          fill: false
+          tension: 0.3
         }))
       },
       options: {
         responsive: true,
         maintainAspectRatio: false,
-        plugins: {
-          legend: { position: 'bottom' }
-        },
+        plugins: { legend: { position: 'bottom' } },
         scales: {
-          y: {
-            beginAtZero: true,
-            title: { display: true, text: 'Revenue (Millions USD)' }
-          },
-          x: {
-            title: { display: true, text: 'Year' }
-          }
+          y: { beginAtZero: true, title: { display: true, text: 'Revenue ($M)' } },
+          x: { title: { display: true, text: 'Year' } }
         }
       }
     });
