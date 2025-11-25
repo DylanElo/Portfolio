@@ -331,9 +331,6 @@ a {
   margin-bottom: 3rem;
 }
 
-color: var(--text-main);
-}
-
 .nav-links a::after {
   content: '';
   position: absolute;
