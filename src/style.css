@@ -117,29 +117,28 @@ a {
   margin: 0 auto;
 }
 
-/* Header & Navigation */
+/* Header & Navigation - FIXED */
 .header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-  transition: all 0.3s ease;
 }
 
 .nav-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  height: 80px;
-  padding: 0 2rem;
+  justify-content: space-between;
+  padding: 1rem 3rem;
   max-width: 1400px;
   margin: 0 auto;
+  height: 80px;
 }
 
 .logo {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--primary);
   letter-spacing: -0.05em;
 }
@@ -148,11 +147,14 @@ a {
   display: flex;
   gap: 2rem;
   list-style: none;
-  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links li {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links a {
@@ -161,7 +163,7 @@ a {
   color: var(--text-muted);
   position: relative;
   padding: 0.5rem 0;
-  display: block;
+  display: inline-block;
 }
 
 .nav-links a:hover,
