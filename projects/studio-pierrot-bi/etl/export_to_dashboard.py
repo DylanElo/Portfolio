@@ -3,8 +3,10 @@ import json
 import os
 from datetime import datetime
 
-DB_PATH = 'studio_pierrot.db'
-OUTPUT_PATH = 'dashboard/data.js'
+# Get absolute path to project directory (one level up from etl/)
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DB_PATH = os.path.join(BASE_DIR, 'studio_pierrot.db')
+OUTPUT_PATH = os.path.join(BASE_DIR, 'dashboard', 'data.js')
 
 def get_latest_data():
     """Query warehouse for latest anime metrics"""
@@ -18,7 +20,6 @@ def get_latest_data():
         a.mal_id as id,
         a.title,
         a.studio,
-        a.is_pierrot,
         f.score,
         f.members,
         f.favorites,
