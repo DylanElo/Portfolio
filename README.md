@@ -52,28 +52,6 @@ Key documentation in `docs/`:
 **Role:** BI Analyst at Studio Pierrot (simulated scenario, Tokyo, Japan)
 **Business Question:** how can Studio Pierrot compete with MAPPA / ufotable in the streaming era while leveraging its legacy IP?
 
-### What this project demonstrates
-
-* End-to-end BI workflow:
-
-  1. **Requirements & Strategy** – stakeholder docs and industry analysis
-  2. **Data Modeling** – `warehouse/schema.sql` star schema
-  3. **ETL Pipeline** – Python scripts in `etl/` + `data/raw/` inputs
-  4. **Warehouse Export** – `export_to_dashboard.py` generates `dashboard/data.js`
-  5. **Dashboards** – `dashboard/index.html` + `dashboard.js`
-
-* Multi-lens analysis:
-
-  * **Global fandom** (real MAL/Jikan data)
-  * **Domestic TV ratings** (simulated, calibrated on public benchmarks)
-  * **Streaming & financials** (simulated revenues, profit, ROI per title)
-  * Comparison of **Studio Pierrot IP** vs **benchmark competitors** (MAPPA, ufotable, etc.)
-
-* Transparency on data:
-
-  * Public metrics (score, members, favorites) = **real**
-  * Financial & production metrics = **simulated for portfolio use**, documented in
-
     * `README.md` (this folder)
     * `DATA_DICTIONARY.md`
     * `PHASE3B_DASHBOARD_INSIGHTS.md`
