@@ -1,4 +1,7 @@
 -- ============================================================================
+-- DEPRECATED: This XXL schema is a draft/experimental version
+-- See warehouse/schema.sql for the current production star schema
+-- ============================================================================
 -- STUDIO PIERROT BI - STAR SCHEMA V2 (XXL)
 -- ============================================================================
 

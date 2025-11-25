@@ -1,3 +1,8 @@
+-- ============================================================================
+-- DEPRECATED: This schema is superseded by warehouse/schema.sql
+-- See warehouse/schema.sql for the current production star schema
+-- ============================================================================
+
 -- Star Schema for Studio Pierrot Anime BI
 
 -- Dimension: Anime

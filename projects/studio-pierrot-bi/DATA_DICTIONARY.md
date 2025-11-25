@@ -3,6 +3,23 @@
 ## Overview
 This document describes all data tables used in the Studio Pierrot BI Analysis project, including both Phase 1 (live MAL data) and Phase 2 (simulated domestic, streaming, and production data).
 
+## Dataset Scope
+
+**Anime Titles:** ~30 titles total
+- **7 Studio Pierrot titles:** Naruto, Naruto Shippuden, Boruto, Bleach, Bleach TYBW, Tokyo Ghoul, Black Clover
+- **Competitor benchmarks:** JJK (MAPPA), Demon Slayer (ufotable), Attack on Titan (WIT/MAPPA), My Hero Academia (Bones), and others
+
+**Time Period:** Focus on 2010–2024 with emphasis on recent years (2020–2024)
+- Mix of long-running series (Naruto, One Piece) and seasonal hits (JJK, Demon Slayer, Bleach TYBW)
+
+**Data Philosophy:**
+- **Global Fandom (MAL):** Real data serving as proxy for international engaged fandom (Western-biased)
+- **Domestic TV Ratings:** Simulated data calibrated to Japanese TV Tokyo patterns
+- **Streaming & Finance:** Simulated data calibrated to industry benchmarks (Netflix subscriber data, Parrot Analytics demand metrics)
+- **Production Metrics:** Simulated data based on known filler percentages and industry budget ranges
+
+This multi-lens approach addresses MAL's Western bias by complementing it with simulated domestic (Japan), streaming (global platforms), and production quality data.
+
 ---
 
 ## Phase 1: Global Fandom Data (Live)
