@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japan Inbound Travel Intelligence Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Japan Inbound Travel Intelligence Hub</h1>
+            <p class="subtitle">Live Analytics: Visitor Arrivals, Market Trends & Seasonality</p>
+        </header>
+
+        <div class="kpi-grid">
+            <div class="card kpi-card">
+                <h3>Total Visitors (2024)</h3>
+                <p class="kpi-value" id="kpi-total-2024">Loading...</p>
+            </div>
+            <div class="card kpi-card">
+                <h3>Top Market</h3>
+                <p class="kpi-value" id="kpi-top-market">Loading...</p>
+            </div>
+            <div class="card kpi-card">
+                <h3>Recovery vs 2019</h3>
+                <p class="kpi-value" id="kpi-recovery">Loading...</p>
+            </div>
+        </div>
+
+        <div class="charts-grid">
+            <div class="card chart-card full-width">
+                <h2>Monthly Visitor Trend (2019-2024)</h2>
+                <div class="chart-container">
+                    <canvas id="trendChart"></canvas>
+                </div>
+            </div>
+
+            <div class="card chart-card">
+                <h2>Top 10 Markets (2024)</h2>
+                <div class="chart-container">
+                    <canvas id="marketChart"></canvas>
+                </div>
+            </div>
+
+            <div class="card chart-card">
+                <h2>Seasonality Patterns</h2>
+                <div class="chart-container">
+                    <canvas id="seasonalityChart"></canvas>
+                </div>
+            </div>
+
+            <div class="card chart-card full-width">
+                <h2>FX Impact: JPY/USD Rate vs Visitor Volume</h2>
+                <div class="chart-container">
+                    <canvas id="fxChart"></canvas>
+                </div>
+            </div>
+
+            <div class="card chart-card full-width">
+                <h2>Weather Risk Monitor (Tokyo)</h2>
+                <div class="chart-container">
+                    <canvas id="weatherChart"></canvas>
+                </div>
+            </div>
+
+            <div class="card chart-card full-width">
+                <h2>Airport Capacity: Monthly Inbound Flights</h2>
+                <div class="chart-container">
+                    <canvas id="flightsChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

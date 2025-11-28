@@ -1,0 +1,24 @@
+# Project Tasks: Japan Inbound Travel Intelligence Hub
+
+- [x] **Phase 1: JNTO Core**
+    - [x] Setup Python Environment (`requirements.txt`)
+    - [x] Create `etl/01_fetch_jnto_arrivals.py`
+    - [x] Create `etl/10_build_dimensions.py` (Country, Month, Date)
+    - [x] Create `etl/20_build_fact_inbound_arrivals.py`
+    - [x] Create SQLite Database & Schema
+    - [x] Build Basic Dashboard (Volume & Seasonality)
+- [x] **Phase 2: FX Impact**
+    - [x] Create `etl/02_fetch_fx_rates.py`
+    - [x] Update Schema (`fact_fx_rate_daily`, `dim_fx_currency`)
+    - [x] Build FX Dashboard
+- [x] **Phase 3: Weather & Seasonality**
+    - [x] Create `etl/03_fetch_weather_daily.py`
+    - [x] Update Schema (`fact_weather_daily`, `dim_weather_location`)
+    - [x] Build Weather Risk Dashboard
+- [x] **Phase 4: Operational Capacity**
+    - [x] Create `etl/04_fetch_opensky_flights.py`
+    - [x] Update Schema (`fact_flights_daily`, `dim_airport`)
+    - [x] Build Operations Dashboard
+- [x] **Phase 5: Documentation & Polish**
+    - [x] Finalize Strategy Document
+    - [x] Create Case Study Page
