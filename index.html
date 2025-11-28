@@ -5,14 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dylan Elo | Technical Support & BI Transition</title>
-  <link rel="stylesheet" href="./src/style.css?v=3">
+  <link rel="stylesheet" href="./src/style.css?v=4">
 </head>
 
 <body>
-
-  <header class="header glass-panel">
-    <nav class="nav-container">
-      <a href="index.html" class="logo">Dylan.</a>
+  <header>
+    <div class="container nav">
+      <a href="#home" class="logo">Dylan<span>.</span></a>
       <button class="mobile-menu-btn" aria-label="Toggle menu">
         <span></span>
         <span></span>
@@ -25,242 +24,227 @@
         <li><a href="#resume">Resume</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-    </nav>
+    </div>
   </header>
 
   <main>
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-      <div class="hero-content fade-in">
-        <span class="greeting">Hello, I'm</span>
-        <h1 class="gradient-text">Dylan Elo</h1>
-        <p class="hero-description">
-          Technical Support & Implementation specialist transitioning into Business Intelligence through the Google BI
-          Professional Certificate and self-directed analytics projects.
-        </p>
-        <div class="hero-buttons">
-          <a href="#projects" class="btn btn-primary">View My Work</a>
-          <a href="#contact" class="btn btn-secondary">Get in Touch</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section">
-      <div class="container">
-        <h2 class="section-title fade-in">About Me</h2>
-        <div class="about-content fade-in">
-          <p style="max-width: 800px; margin-bottom: 1.5rem;">
-            I currently work in <strong>technical support and project implementation</strong> for travel systems in
-            Japan (EXO Travel Japan via Infosys). My day-to-day is about keeping complex tools like
-            <strong>Tourplan</strong> and its ecosystem (bed banks, channel managers, internal tools) running smoothly,
-            investigating issues, and helping operations teams understand what the system is actually doing.
+    <section id="home" class="hero">
+      <div class="container hero-grid fade-in">
+        <div class="hero-copy">
+          <p class="eyebrow">Technical Support → Business Intelligence</p>
+          <h1>Hi, I'm Dylan Elo, turning support insights into <span class="accent">data-driven stories</span>.</h1>
+          <p>
+            Technical Support & Implementation specialist evolving into Business Intelligence. I translate hands-on
+            incident patterns into dashboards, data models, and decision-ready visuals.
           </p>
+          <div class="btn-row">
+            <a href="#projects" class="btn btn-primary">See the portfolio</a>
+            <a href="#contact" class="btn btn-ghost">Let's talk</a>
+          </div>
+        </div>
 
-          <ul style="max-width: 800px; margin-bottom: 1.5rem; padding-left: 1.5rem; color: var(--text-muted);">
-            <li><strong>Support & implementation:</strong> Keep Tourplan and connected tools stable while guiding new
-              features or integrations into production.</li>
-            <li><strong>Reporting & analytics:</strong> Build <strong>reports and small analytics workflows</strong> in
-              the Google ecosystem to answer operations questions.</li>
-            <li><strong>Business Intelligence transition:</strong> Pursuing the Google BI Professional Certificate and
-              self-directed case studies like the Studio Pierrot anime analytics project.</li>
-          </ul>
-
-          <p style="max-width: 800px; margin-bottom: 3rem;">
-            My goal is to move from "putting out fires" in support to <strong>designing better systems, data models and
-              dashboards</strong> that prevent those fires in the first place.
+        <div class="hero-card">
+          <span class="hero-pill">Live from Tokyo → Cameroon → Remote</span>
+          <p style="color: var(--muted);">
+            Currently stabilizing travel systems at EXO Travel Japan (via Infosys) while building BI projects in the
+            Google ecosystem and Python/SQL.
           </p>
-
-          <h3 style="margin-bottom: 1.5rem;">Core Competencies</h3>
-          <div class="skills-grid">
-            <div class="skill-item">Technical Support</div>
-            <div class="skill-item">System Implementation</div>
-            <div class="skill-item">Data Analysis</div>
-            <div class="skill-item">Python & SQL</div>
-            <div class="skill-item">Dashboard Development</div>
-            <div class="skill-item">Data Visualization</div>
+          <div class="hero-highlight">
+            <div class="stat">
+              <div class="label">Focus</div>
+              <div class="value">BI & Analytics</div>
+            </div>
+            <div class="stat">
+              <div class="label">Toolkit</div>
+              <div class="value">Python · SQL · Chart.js</div>
+            </div>
+            <div class="stat">
+              <div class="label">Currently</div>
+              <div class="value">Google BI Cert</div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section">
+    <section id="about" class="fade-in">
       <div class="container">
-        <h2 class="section-title fade-in">Featured Projects</h2>
-        <div class="projects-grid fade-in">
-          <!-- Studio Pierrot BI Project -->
-          <div class="project-card glass">
-            <div class="project-image">
-              <div
-                style="background: linear-gradient(135deg, #1e293b 0%, #334155 100%); display: flex; align-items: center; justify-content: center; height: 100%;">
-                <span style="font-size: 3rem;">📊</span>
-              </div>
-            </div>
-            <div class="project-info">
-              <h3>Studio Pierrot Anime Analytics – BI Case Study</h3>
-              <p>
-                Self-directed Business Intelligence case study built while transitioning into BI. Designed a dimensional
-                model, built a SQLite warehouse with Python ETL, and created dashboards to analyze anime IP performance
-                (legacy titles vs recent hits, fandom, streaming, and simulated financials).
-              </p>
-              <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.75rem;">
-                <em>Personal learning project – not affiliated with Studio Pierrot. Built alongside the Google BI
-                  Professional Certificate.</em>
-              </p>
-              <div class="tech-stack">
-                <span class="tech-stack-tag">Python</span>
-                <span class="tech-stack-tag">SQL</span>
-                <span class="tech-stack-tag">Data Viz</span>
-              </div>
-              <a href="project.html" class="btn btn-secondary">View Case Study</a>
-            </div>
+        <div class="section-header">About</div>
+        <h2 class="section-title">From incident triage to proactive intelligence</h2>
+        <p class="section-subtitle">I keep travel tech systems healthy and translate operational questions into
+          dashboards. My goal: design data experiences that prevent fires instead of just putting them out.</p>
+
+        <div class="split-grid">
+          <div class="card">
+            <h3>What I do today</h3>
+            <p>Technical Support & Implementation for Tourplan and connected tools across EXO Travel Japan, ensuring
+              integrations and features launch smoothly.</p>
+            <ul class="timeline-item" style="list-style: disc; margin-left: 1rem; gap: 0.35rem; display: grid;">
+              <li>Diagnose and document incidents for developers and vendors.</li>
+              <li>Guide production rollouts and UAT for new features.</li>
+              <li>Build quick reports and dashboards for ops teams.</li>
+            </ul>
           </div>
 
-          <!-- Japan Inbound BI Project -->
-          <div class="project-card glass">
-            <div class="project-image">
-              <div
-                style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); display: flex; align-items: center; justify-content: center; height: 100%;">
-                <span style="font-size: 3rem;">🗾</span>
-              </div>
-            </div>
-            <div class="project-info">
-              <h3>Japan Inbound Travel Intelligence Hub – BI Capstone</h3>
-              <p>
-                Business Intelligence capstone for a Japan Destination Management Company (DMC). Built a central
-                inbound travel intelligence hub with demand dashboards, supplier performance views, and operational
-                health monitoring to support decision-making for the 2025 inbound surge.
-              </p>
-              <div class="tech-stack">
-                <span class="tech-stack-tag">Python</span>
-                <span class="tech-stack-tag">SQL</span>
-                <span class="tech-stack-tag">Chart.js</span>
-              </div>
-              <a href="projects/inbound-japan-bi/dashboard/index.html" class="btn btn-secondary">View Dashboard</a>
+          <div class="card">
+            <h3>Transitioning to BI</h3>
+            <p>Pursuing the Google BI Professional Certificate and designing self-directed analytics cases that combine
+              dimensional modeling, ETL, and visualization.</p>
+            <div class="skills">
+              <span class="skill-chip">Data Modeling</span>
+              <span class="skill-chip">ETL / SQLite</span>
+              <span class="skill-chip">Dashboard Design</span>
+              <span class="skill-chip">Python + SQL</span>
+              <span class="skill-chip">Stakeholder Docs</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Resume Section -->
-    <section id="resume" class="section">
+    <section id="projects" class="fade-in">
       <div class="container">
-        <h2 class="section-title fade-in">Experience & Education</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8"
-          style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem;">
+        <div class="section-header">Projects</div>
+        <h2 class="section-title">BI work that blends support instincts and storytelling</h2>
+        <p class="section-subtitle">Case studies and dashboards that practice the full loop: modeling, ETL, validation,
+          and clean visuals for decision-makers.</p>
 
-          <!-- Experience -->
-          <div class="resume-block fade-in">
-            <h3>Professional Experience</h3>
-
-            <div class="resume-item">
-              <span class="date">May 2025 - Present</span>
-              <h4>Technical Support & Project Implementation – Travel Systems</h4>
-              <p style="color: var(--text-main);">EXO Travel Japan (via Infosys)</p>
-              <ul
-                style="list-style: disc; margin-left: 1rem; margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-muted);">
-                <li>Provide <strong>technical support</strong> for the Tourplan platform and connected tools (bed banks,
-                  channel managers, internal tools like Oishi) used by operations teams.</li>
-                <li><strong>Investigate incidents</strong>, reproduce issues, document findings and follow up with
-                  developers or vendors to get fixes implemented.</li>
-                <li>Support <strong>project implementation</strong> for new features or integrations, clarifying
-                  requirements with operations and testing changes before rollout.</li>
-                <li>Produce <strong>ad-hoc reports and small dashboards</strong> in the Google ecosystem to help teams
-                  understand bookings, inventory or operational issues.</li>
-              </ul>
+        <div class="card-grid">
+          <div class="card">
+            <h3>Studio Pierrot Anime Analytics — BI Case Study</h3>
+            <p>Designed a dimensional model, built a SQLite warehouse via Python ETL, and created dashboards analyzing
+              IP performance (legacy titles vs recent hits) with simulated financials.</p>
+            <p style="color: var(--muted); font-size: 0.95rem;">
+              Personal learning project — not affiliated with Studio Pierrot. Built alongside the Google BI Professional
+              Certificate.
+            </p>
+            <div class="tech-list">
+              <span>Python</span>
+              <span>SQL</span>
+              <span>Data Viz</span>
             </div>
+            <a href="project.html" class="btn btn-ghost">View case study</a>
+          </div>
 
-            <div class="resume-item">
-              <span class="date">Sep 2023 - Mar 2024</span>
-              <h4>Customer Support - Incident Analyst</h4>
-              <p style="color: var(--text-main);">Maviance PLC, Douala Cameroon</p>
-              <ul
-                style="list-style: disc; margin-left: 1rem; margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-muted);">
-                <li>Analyzed incident trends and provided insights to product and engineering teams.</li>
-                <li>Successfully implemented a trend analysis framework, reducing incident rates.</li>
-              </ul>
+          <div class="card">
+            <h3>Japan Inbound Travel Intelligence Hub — BI Capstone</h3>
+            <p>Built a central intelligence hub for a Japan DMC with demand dashboards, supplier performance, and
+              operational health monitoring to prep for the 2025 inbound surge.</p>
+            <div class="tech-list">
+              <span>Python</span>
+              <span>SQL</span>
+              <span>Chart.js</span>
             </div>
+            <a href="projects/inbound-japan-bi/dashboard/index.html" class="btn btn-ghost">View dashboard</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <div class="resume-item">
-              <span class="date">Sep 2021 - Jul 2023</span>
-              <h4>Technical Support</h4>
-              <p style="color: var(--text-main);">Meels & Beez, Douala, Cameroon</p>
-              <ul
-                style="list-style: disc; margin-left: 1rem; margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-muted);">
-                <li>Engaged with engineering teams to troubleshoot and remediate technical issues.</li>
-                <li>Leveraged deep knowledge of financial technology solutions for API integration support.</li>
-              </ul>
-            </div>
+    <section id="resume" class="fade-in">
+      <div class="container">
+        <div class="section-header">Experience & Education</div>
+        <h2 class="section-title">Roots in support, growing into BI</h2>
+        <p class="section-subtitle">A timeline that mixes incident analysis, implementation, and formal learning to
+          steer decisions with data.</p>
 
-            <div class="resume-item">
-              <span class="date">Jan 2021 - Jul 2021</span>
-              <h4>IT Business Unit Intern</h4>
-              <p style="color: var(--text-main);">Atlantique Insurrances IARDT</p>
-              <ul
-                style="list-style: disc; margin-left: 1rem; margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-muted);">
-                <li>Spearheaded a cross-departmental project to implement analytical tools (30% reduction in recurring
-                  incidents).</li>
-              </ul>
+        <div class="split-grid">
+          <div>
+            <h3 class="section-title" style="font-size: 1.4rem; margin-bottom: 1rem;">Experience</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="date">May 2025 - Present</div>
+                <h4>Technical Support & Project Implementation — Travel Systems</h4>
+                <p style="color: var(--muted);">EXO Travel Japan (via Infosys)</p>
+                <ul>
+                  <li>Investigate incidents across Tourplan and connected tools, documenting for dev/vend teams.</li>
+                  <li>Lead UAT and rollout coordination for new features and integrations.</li>
+                  <li>Create ad-hoc reports and dashboards in the Google ecosystem for ops visibility.</li>
+                </ul>
+              </div>
+
+              <div class="timeline-item">
+                <div class="date">Sep 2023 - Mar 2024</div>
+                <h4>Customer Support — Incident Analyst</h4>
+                <p style="color: var(--muted);">Maviance PLC, Douala Cameroon</p>
+                <ul>
+                  <li>Implemented trend analysis to reduce incident recurrence.</li>
+                  <li>Delivered insights to product and engineering teams for faster remediation.</li>
+                </ul>
+              </div>
+
+              <div class="timeline-item">
+                <div class="date">Sep 2021 - Jul 2023</div>
+                <h4>Technical Support</h4>
+                <p style="color: var(--muted);">Meels & Beez, Douala, Cameroon</p>
+                <ul>
+                  <li>Partnered with engineering to troubleshoot and remediate issues.</li>
+                  <li>Specialized in API integration support for financial technology tools.</li>
+                </ul>
+              </div>
+
+              <div class="timeline-item">
+                <div class="date">Jan 2021 - Jul 2021</div>
+                <h4>IT Business Unit Intern</h4>
+                <p style="color: var(--muted);">Atlantique Insurrances IARDT</p>
+                <ul>
+                  <li>Introduced analytical tools to cut recurring incidents by ~30%.</li>
+                </ul>
+              </div>
             </div>
           </div>
 
-          <!-- Education -->
-          <div class="resume-block fade-in">
-            <h3>Education</h3>
+          <div>
+            <h3 class="section-title" style="font-size: 1.4rem; margin-bottom: 1rem;">Education</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="date">In progress</div>
+                <h4>Google Business Intelligence Professional Certificate</h4>
+                <p style="color: var(--muted);">Google / Coursera — <a href="https://coursera.org/share/b176de8792abf0e41b227cbd00d07eab"
+                    target="_blank" rel="noopener">View Coursera credential (Course 1)</a></p>
+                <p style="color: var(--muted); margin-top: 0.4rem;">Coursework in data modeling, ETL pipelines,
+                  dashboards, and stakeholder communication.</p>
+              </div>
 
-            <div class="resume-item">
-              <span class="date">In progress</span>
-              <h4>Google Business Intelligence Professional Certificate</h4>
-              <p>Google / Coursera — <a href="https://coursera.org/share/b176de8792abf0e41b227cbd00d07eab" target="_blank"
-                  rel="noopener">View Coursera credential (Course 1)</a></p>
-              <p style="font-size: 0.9rem; margin-top: 0.5rem;">Coursework covers data modeling, ETL pipelines,
-                dashboards, and stakeholder communication.</p>
-            </div>
+              <div class="timeline-item">
+                <div class="date">Sep 2017 - Jul 2019</div>
+                <h4>Software Engineering</h4>
+                <p style="color: var(--muted);">ESPRIT, Tunis, Tunisia</p>
+                <p style="color: var(--muted); margin-top: 0.35rem;">Projects-based learning: web development, software
+                  architecture, project management.</p>
+              </div>
 
-            <div class="resume-item">
-              <span class="date">Sep 2017 - Jul 2019</span>
-              <h4>Software Engineering</h4>
-              <p>ESPRIT, Tunis, Tunisia</p>
-              <p style="font-size: 0.9rem; margin-top: 0.5rem;">Projects-based learning: Web development, software
-                architecture, project management</p>
-            </div>
-
-            <div class="resume-item">
-              <span class="date">Sep 2016 - Jul 2017</span>
-              <h4>Bachelor's in Applied Mathematics</h4>
-              <p>Le Mans Université, Le Mans, France</p>
-              <p style="font-size: 0.9rem; margin-top: 0.5rem;">Focus: Finance, Insurance, and Healthcare</p>
+              <div class="timeline-item">
+                <div class="date">Sep 2016 - Jul 2017</div>
+                <h4>Bachelor's in Applied Mathematics</h4>
+                <p style="color: var(--muted);">Le Mans Université, Le Mans, France</p>
+                <p style="color: var(--muted); margin-top: 0.35rem;">Focus: Finance, Insurance, and Healthcare.</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-      <div class="container" style="text-align: center;">
-        <h2 class="section-title fade-in">Get In Touch</h2>
-        <p style="max-width: 600px; margin: 0 auto 2rem;">
-          I'm currently open to new opportunities. Whether you have a question or just want to say hi, I'll try my best
-          to get back to you!
-        </p>
-        <a href="mailto:dylanelo18@gmail.com" class="btn btn-primary" style="font-size: 1.2rem; padding: 1rem 2rem;">Say
-          Hello</a>
-
-        <div style="margin-top: 4rem; display: flex; justify-content: center; gap: 2rem;">
-          <a href="https://github.com/DylanElo" class="social-link" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://www.linkedin.com/in/dylanelo" class="social-link" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://x.com/DylanElo18" class="social-link" target="_blank" rel="noopener">Twitter</a>
+    <section id="contact" class="fade-in">
+      <div class="container contact-card">
+        <div class="section-header" style="justify-content: center;">Contact</div>
+        <h2 class="section-title">Let's build the next dashboard together</h2>
+        <p>Open to BI roles, analytics projects, and collaborations. If you have a question or just want to say hi, drop
+          a line.</p>
+        <a href="mailto:dylanelo18@gmail.com" class="btn btn-primary" style="margin-top: 0.5rem;">Say hello</a>
+        <div class="contact-links">
+          <a href="https://github.com/DylanElo" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/dylanelo" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://x.com/DylanElo18" target="_blank" rel="noopener">Twitter</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
+  <footer>
     <div class="container">
-      <p>&copy; 2025 Dylan Elo. Built with Glassmorphism & ❤️.</p>
+      <p>&copy; 2025 Dylan Elo — crafted with gradients, data stories, and caffeine.</p>
     </div>
   </footer>
 
