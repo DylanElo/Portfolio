@@ -13,10 +13,10 @@ function initDashboard(data) {
     renderKPIs(data);
     renderTrendChart(data.monthly_trend);
     renderMarketChart(data.top_countries_2024);
+    renderSeasonalityChart(data.seasonality);
     renderFXChart(data.fx_impact);
     renderWeatherChart(data.weather_risk);
     renderFlightsChart(data.airport_capacity);
-    // renderSeasonalityChart(data.seasonality); // Placeholder for now
 }
 
 function renderKPIs(data) {
@@ -94,6 +94,63 @@ function renderMarketChart(marketData) {
             maintainAspectRatio: false,
             plugins: {
                 legend: { display: false }
+            }
+        }
+    });
+}
+
+function renderSeasonalityChart(seasonalityData) {
+    const ctx = document.getElementById('seasonalityChart').getContext('2d');
+
+    // Aggregate by country and month
+    const countryMonthMap = {};
+    seasonalityData.forEach(d => {
+        if (!countryMonthMap[d.country_name_en]) {
+            countryMonthMap[d.country_name_en] = Array(12).fill(0);
+        }
+        countryMonthMap[d.country_name_en][d.month - 1] = d.avg_visitors;
+    });
+
+    // Pick top 5 markets by total visitors
+    const topCountries = Object.entries(countryMonthMap)
+        .map(([country, months]) => ({
+            country,
+            months,
+            total: months.reduce((sum, v) => sum + v, 0)
+        }))
+        .sort((a, b) => b.total - a.total)
+        .slice(0, 5);
+
+    const monthLabels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const colors = ['#36a2eb', '#ff6384', '#4bc0c0', '#ff9f40', '#9966ff'];
+
+    const datasets = topCountries.map((item, idx) => ({
+        label: item.country,
+        data: item.months,
+        backgroundColor: colors[idx % colors.length],
+        stack: 'seasonality'
+    }));
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: monthLabels,
+            datasets
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                x: { stacked: true },
+                y: { stacked: true, beginAtZero: true, title: { display: true, text: 'Avg Visitors per Month' } }
+            },
+            plugins: {
+                legend: { position: 'bottom' },
+                tooltip: {
+                    callbacks: {
+                        label: (context) => `${context.dataset.label}: ${context.parsed.y.toLocaleString()}`
+                    }
+                }
             }
         }
     });
