@@ -1,3 +1,16 @@
+import pandas as pd
+import sqlite3
+from pathlib import Path
+
+# Config - cross-platform path resolution
+DB_PATH = Path(__file__).parent.parent / "data" / "inbound_japan.db"
+RAW_FILE = Path(__file__).parent.parent / "data" / "raw" / "fx_rates.csv"
+
+def main():
+    conn = sqlite3.connect(DB_PATH)
+    
+    if not RAW_FILE.exists():
+        print("⚠️ Raw FX data not found. Run 02_fetch_fx_rates.py first.")
         return
 
     # Load Raw

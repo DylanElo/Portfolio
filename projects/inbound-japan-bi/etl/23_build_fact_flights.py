@@ -1,3 +1,16 @@
+import pandas as pd
+import sqlite3
+from pathlib import Path
+
+# Config - cross-platform path resolution
+DB_PATH = Path(__file__).parent.parent / "data" / "inbound_japan.db"
+RAW_FILE = Path(__file__).parent.parent / "data" / "raw" / "flights_daily.csv"
+
+def main():
+    conn = sqlite3.connect(DB_PATH)
+    
+    if not RAW_FILE.exists():
+        print("⚠️ Raw Flight data not found. Run 04_fetch_opensky_flights.py first.")
         return
 
     # Load Raw

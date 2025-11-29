@@ -1,3 +1,16 @@
+import pandas as pd
+import sqlite3
+import json
+from pathlib import Path
+
+# Config - cross-platform path resolution
+DB_PATH = Path(__file__).parent.parent / "data" / "inbound_japan.db"
+OUTPUT_DIR = Path(__file__).parent.parent / "dashboard" / "data"
+OUTPUT_FILE = OUTPUT_DIR / "dashboard_data.json"
+
+def main():
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+        
     conn = sqlite3.connect(DB_PATH)
     
     # Query 1: Total Monthly Visitors
