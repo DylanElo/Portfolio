@@ -90,6 +90,36 @@
                     <canvas id="flightsChart"></canvas>
                 </div>
             </div>
+
+            <!-- NEW: Prescriptive Analytics Section -->
+            <div class="card chart-card full-width"
+                style="background: linear-gradient(135deg, rgba(22, 160, 133, 0.05), rgba(52, 152, 219, 0.05)); border-left: 4px solid #16a085;">
+                <h2>🎯 2025 Marketing Priority Matrix</h2>
+                <p class="chart-insight"><strong>Action Required:</strong> These markets show the highest growth
+                    momentum (2023→2024). Allocate marketing budget accordingly.</p>
+                <div class="chart-container">
+                    <canvas id="marketingChart"></canvas>
+                </div>
+            </div>
+
+            <div class="card chart-card full-width">
+                <h2>👥 Staffing Forecast (Seasonal Planning)</h2>
+                <p class="chart-insight"><strong>Action Required:</strong> Projected demand by month based on 5-year
+                    seasonal averages. Hire guides during peak months (Mar-Apr, Oct-Nov).</p>
+                <div class="chart-container">
+                    <canvas id="staffingChart"></canvas>
+                </div>
+            </div>
+
+            <div class="card chart-card full-width"
+                style="background: linear-gradient(135deg, rgba(255, 193, 7, 0.05), rgba(255, 87, 34, 0.05)); border-left: 4px solid #f39c12;">
+                <h2>⚠️ Airport Capacity Health Check</h2>
+                <p class="chart-insight"><strong>Risk Alert:</strong> Airports nearing 85% utilization may face delays
+                    and service quality issues. Diversify supplier partnerships.</p>
+                <div class="chart-container" style="height: 250px;">
+                    <canvas id="capacityChart"></canvas>
+                </div>
+            </div>
         </div>
     </div>
     <script src="app.js"></script>

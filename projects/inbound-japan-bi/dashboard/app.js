@@ -17,6 +17,10 @@ function initDashboard(data) {
     renderFXChart(data.fx_impact);
     renderWeatherChart(data.weather_risk);
     renderFlightsChart(data.airport_capacity);
+    // NEW: Prescriptive analytics
+    renderMarketingChart(data.marketing_recommendations);
+    renderStaffingChart(data.staffing_forecast);
+    renderCapacityChart(data.capacity_health);
 }
 
 function renderKPIs(data) {
@@ -313,6 +317,158 @@ function renderFlightsChart(flightsData) {
             scales: {
                 x: { stacked: true },
                 y: { stacked: true, beginAtZero: true }
+            }
+        }
+    });
+}
+
+// NEW: Marketing Recommendations Chart
+function renderMarketingChart(marketingData) {
+    const ctx = document.getElementById('marketingChart').getContext('2d');
+
+    const labels = marketingData.map(d => d.country_name_en);
+    const growthRates = marketingData.map(d => d.growth_rate);
+    const colors = marketingData.map(d => {
+        if (d.recommendation === 'High Priority') return '#16a085';
+        if (d.recommendation === 'Medium Priority') return '#3498db';
+        return '#95a5a6';
+    });
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'YoY Growth Rate (%)',
+                data: growthRates,
+                backgroundColor: colors
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            indexAxis: 'y',
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        label: (context) => `${context.parsed.x}% growth`
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    title: { display: true, text: 'Growth Rate (%)' },
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+}
+
+// NEW: Staffing Forecast Chart
+function renderStaffingChart(staffingData) {
+    const ctx = document.getElementById('staffingChart').getContext('2d');
+
+    const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const labels = staffingData.map(d => monthNames[d.month - 1]);
+    const projectedVisitors = staffingData.map(d => d.projected_visitors);
+    const recommendedStaff = staffingData.map(d => d.recommended_staff);
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [
+                {
+                    label: 'Projected Visitors',
+                    data: projectedVisitors,
+                    backgroundColor: '#3498db',
+                    yAxisID: 'y',
+                    order: 2
+                },
+                {
+                    label: 'Recommended Staff',
+                    data: recommendedStaff,
+                    borderColor: '#e74c3c',
+                    backgroundColor: 'rgba(231, 76, 60, 0.1)',
+                    type: 'line',
+                    yAxisID: 'y1',
+                    order: 1,
+                    tension: 0.4
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    type: 'linear',
+                    position: 'left',
+                    title: { display: true, text: 'Visitors' },
+                    beginAtZero: true
+                },
+                y1: {
+                    type: 'linear',
+                    position: 'right',
+                    title: { display: true, text: 'Staff Count' },
+                    grid: { drawOnChartArea: false },
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+}
+
+// NEW: Capacity Health Chart
+function renderCapacityChart(capacityData) {
+    const ctx = document.getElementById('capacityChart').getContext('2d');
+
+    const labels = capacityData.map(d => `${d.airport_code} (${d.airport_name})`);
+    const utilization = capacityData.map(d => d.utilization_pct);
+    const colors = capacityData.map(d => {
+        if (d.status === 'Critical') return '#e74c3c';
+        if (d.status === 'Warning') return '#f39c12';
+        return '#2ecc71';
+    });
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Utilization (%)',
+                data: utilization,
+                backgroundColor: colors
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            indexAxis: 'y',
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        label: (context) => {
+                            const item = capacityData[context.dataIndex];
+                            return [
+                                `Utilization: ${item.utilization_pct}%`,
+                                `Current: ${item.current_flights} flights/month`,
+                                `Capacity: ${item.max_capacity} flights/month`,
+                                `Status: ${item.status}`
+                            ];
+                        }
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    max: 100,
+                    title: { display: true, text: 'Utilization (%)' },
+                    beginAtZero: true
+                }
             }
         }
     });
