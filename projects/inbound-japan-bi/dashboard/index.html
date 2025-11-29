@@ -11,6 +11,11 @@
 
 <body>
     <div class="container">
+        <!-- Navigation -->
+        <nav class="top-nav">
+            <a href="../../../index.html" class="btn-back">← Return to Portfolio</a>
+        </nav>
+
         <header>
             <h1>Japan Inbound Travel Intelligence Hub</h1>
             <p class="subtitle">Live Analytics: Visitor Arrivals, Market Trends & Seasonality</p>
@@ -34,6 +39,8 @@
         <div class="charts-grid">
             <div class="card chart-card full-width">
                 <h2>Monthly Visitor Trend (2019-2024)</h2>
+                <p class="chart-insight"><strong>Insight:</strong> V-shaped recovery visible from late 2022. 2024
+                    volumes have consistently surpassed 2019 baselines, indicating a full market rebound.</p>
                 <div class="chart-container">
                     <canvas id="trendChart"></canvas>
                 </div>
@@ -41,6 +48,8 @@
 
             <div class="card chart-card">
                 <h2>Top 10 Markets (2024)</h2>
+                <p class="chart-insight"><strong>Insight:</strong> South Korea remains the dominant source market,
+                    followed by Taiwan and China. US tourism has grown significantly due to the strong dollar.</p>
                 <div class="chart-container">
                     <canvas id="marketChart"></canvas>
                 </div>
@@ -48,6 +57,8 @@
 
             <div class="card chart-card">
                 <h2>Seasonality Patterns</h2>
+                <p class="chart-insight"><strong>Insight:</strong> Cherry blossom season (April) and Autumn foliage
+                    (October) remain the peak travel windows across all major markets.</p>
                 <div class="chart-container">
                     <canvas id="seasonalityChart"></canvas>
                 </div>
@@ -55,6 +66,8 @@
 
             <div class="card chart-card full-width">
                 <h2>FX Impact: JPY/USD Rate vs Visitor Volume</h2>
+                <p class="chart-insight"><strong>Insight:</strong> Strong correlation observed between Yen weakness
+                    (rising JPY/USD) and increased visitor arrival volumes, particularly from Western markets.</p>
                 <div class="chart-container">
                     <canvas id="fxChart"></canvas>
                 </div>
@@ -62,6 +75,8 @@
 
             <div class="card chart-card full-width">
                 <h2>Weather Risk Monitor (Tokyo)</h2>
+                <p class="chart-insight"><strong>Insight:</strong> Summer heatwaves (July-Aug) pose a growing risk to
+                    tourist satisfaction. Typhoon season peaks in September.</p>
                 <div class="chart-container">
                     <canvas id="weatherChart"></canvas>
                 </div>
@@ -69,6 +84,8 @@
 
             <div class="card chart-card full-width">
                 <h2>Airport Capacity: Monthly Inbound Flights</h2>
+                <p class="chart-insight"><strong>Insight:</strong> Narita (NRT) and Haneda (HND) handle >60% of traffic.
+                    Kansai (KIX) capacity is recovering slower than Kanto airports.</p>
                 <div class="chart-container">
                     <canvas id="flightsChart"></canvas>
                 </div>

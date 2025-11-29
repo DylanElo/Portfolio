@@ -85,3 +85,39 @@ h1 {
     height: 300px;
     width: 100%;
 }
+
+/* Navigation */
+.top-nav {
+    margin-bottom: 20px;
+}
+
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.btn-back:hover {
+    color: var(--accent-color);
+}
+
+/* Insights */
+.chart-insight {
+    font-size: 13px;
+    color: var(--text-secondary);
+    background: #f8f9fa;
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin: -10px 0 15px 0;
+    border-left: 3px solid var(--accent-color);
+    line-height: 1.4;
+}
+
+.chart-insight strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
