@@ -154,35 +154,39 @@ def main():
     # Query 8: Staffing Forecast (2026 Projection Based on 2025 Actuals)
     # Using 2024→2025 growth to project 2026 demand
     query_staffing = """
-    WITH growth_rate AS (
-        SELECT 
-            AVG((visitors_2025 * 1.0 / NULLIF(visitors_2024, 0))) as avg_growth
-        FROM (
-            SELECT 
-                SUM(CASE WHEN m.year = 2025 THEN f.visitors_total ELSE 0 END) as visitors_2025,
-                SUM(CASE WHEN m.year = 2024 THEN f.visitors_total ELSE 0 END) as visitors_2024
-            FROM fact_inbound_arrivals_monthly f
-            JOIN dim_month m ON f.month_id = m.month_id
-            WHERE m.year IN (2024, 2025) AND m.month <= 11  -- Only use Jan-Nov for fair comparison
-        )
-    ),
-    base_2025 AS (
+    WITH base_2024 AS (
         SELECT 
             m.month,
-            SUM(f.visitors_total) as actual_2025
+            SUM(f.visitors_total) as actual_2024
         FROM fact_inbound_arrivals_monthly f
         JOIN dim_month m ON f.month_id = m.month_id
-        WHERE m.year = 2025
+        WHERE m.year = 2024
         GROUP BY m.month
+    ),
+    growth_factor AS (
+        -- Calculate average growth rate from available 2025 data
+        SELECT 
+            CASE 
+                WHEN SUM(total_2024) > 0 THEN AVG(total_2025 * 1.0 / NULLIF(total_2024, 0))
+                ELSE 1.08  -- Default 8% growth if no data
+            END as growth
+        FROM (
+            SELECT 
+                SUM(CASE WHEN m.year = 2025 THEN f.visitors_total ELSE 0 END) as total_2025,
+                SUM(CASE WHEN m.year = 2024 AND m.month <= 11 THEN f.visitors_total ELSE 0 END) as total_2024
+            FROM fact_inbound_arrivals_monthly f
+            JOIN dim_month m ON f.month_id = m.month_id
+            WHERE m.year IN (2024, 2025)
+        )
     )
     SELECT 
         b.month,
-        ROUND(b.actual_2025 * g.avg_growth) as projected_2026_visitors,
+        ROUND(b.actual_2024 * g.growth) as projected_2026_visitors,
         CASE 
-            WHEN b.month IN (3, 4, 10, 11) THEN ROUND((b.actual_2025 * g.avg_growth) / 80)  -- Peak months: 1 guide per 80
-            ELSE ROUND((b.actual_2025 * g.avg_growth) / 120)  -- Off-peak: 1 per 120
+            WHEN b.month IN (3, 4, 10, 11) THEN ROUND((b.actual_2024 * g.growth) / 80)
+            ELSE ROUND((b.actual_2024 * g.growth) / 120)
         END as recommended_staff
-    FROM base_2025 b, growth_rate g
+    FROM base_2024 b, growth_factor g
     ORDER BY b.month
     """
     df_staffing = pd.read_sql(query_staffing, conn)
