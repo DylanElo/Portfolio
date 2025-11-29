@@ -25,9 +25,9 @@ def generate_mock_data():
         'Canada', 'Italy', 'Spain', 'Russia', 'India'
     ]
     
-    # Generate monthly data from Jan 2019 to Dec 2024
+    # Generate monthly data from Jan 2019 to Nov 2025 (current)
     start_date = datetime(2019, 1, 1)
-    end_date = datetime(2024, 12, 1)
+    end_date = datetime(2025, 11, 1)  # Through November 2025
     
     records = []
     current_date = start_date

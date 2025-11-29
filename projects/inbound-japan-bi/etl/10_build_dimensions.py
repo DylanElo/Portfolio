@@ -14,7 +14,7 @@ def create_connection():
 
 def build_dim_date(conn):
     start_date = datetime(2019, 1, 1)
-    end_date = datetime(2025, 12, 31)
+    end_date = datetime(2026, 12, 31)  # Extended through 2026 for forecasting
     
     dates = []
     current = start_date
@@ -36,9 +36,9 @@ def build_dim_date(conn):
     print(f"✅ dim_date created: {len(df)} rows")
 
 def build_dim_month(conn):
-    # Generate months from 2019 to 2025
+    # Generate months from 2019 to 2026
     months = []
-    for year in range(2019, 2026):
+    for year in range(2019, 2027):  # Extended through 2026
         for month in range(1, 13):
             months.append({
                 'month_id': int(f"{year}{month:02d}"),

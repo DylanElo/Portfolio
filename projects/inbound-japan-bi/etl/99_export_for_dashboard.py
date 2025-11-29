@@ -122,56 +122,68 @@ def main():
 
     # ==== NEW: PRESCRIPTIVE ANALYTICS ====
     
-    # Query 7: Marketing Recommendations (Growth + FX Scoring)
+    # Query 7: Marketing Recommendations (2025 Growth + FX Scoring)
     query_marketing_priority = """
     WITH country_growth AS (
         SELECT 
             c.country_name_en,
-            SUM(CASE WHEN m.year = 2024 THEN f.visitors_total ELSE 0 END) as visitors_2024,
-            SUM(CASE WHEN m.year = 2023 THEN f.visitors_total ELSE 0 END) as visitors_2023
+            SUM(CASE WHEN m.year = 2025 AND m.month <= 11 THEN f.visitors_total ELSE 0 END) as visitors_2025_ytd,
+            SUM(CASE WHEN m.year = 2024 AND m.month <= 11 THEN f.visitors_total ELSE 0 END) as visitors_2024_ytd
         FROM fact_inbound_arrivals_monthly f
         JOIN dim_country c ON f.country_id = c.country_id
         JOIN dim_month m ON f.month_id = m.month_id
-        WHERE m.year IN (2023, 2024)
+        WHERE m.year IN (2024, 2025)
         GROUP BY c.country_name_en
     )
     SELECT 
         country_name_en,
-        visitors_2024,
-        ROUND((visitors_2024 * 1.0 / NULLIF(visitors_2023, 0) - 1) * 100, 1) as growth_rate,
+        visitors_2025_ytd,
+        ROUND((visitors_2025_ytd * 1.0 / NULLIF(visitors_2024_ytd, 0) - 1) * 100, 1) as growth_rate,
         CASE 
-            WHEN (visitors_2024 * 1.0 / NULLIF(visitors_2023, 0) - 1) >= 0.15 THEN 'High Priority'
-            WHEN (visitors_2024 * 1.0 / NULLIF(visitors_2023, 0) - 1) >= 0.05 THEN 'Medium Priority'
+            WHEN (visitors_2025_ytd * 1.0 / NULLIF(visitors_2024_ytd, 0) - 1) >= 0.15 THEN 'High Priority'
+            WHEN (visitors_2025_ytd * 1.0 / NULLIF(visitors_2024_ytd, 0) - 1) >= 0.05 THEN 'Medium Priority'
             ELSE 'Maintain'
         END as recommendation
     FROM country_growth
-    WHERE visitors_2023 > 0
+    WHERE visitors_2024_ytd > 0
     ORDER BY growth_rate DESC
     LIMIT 8
     """
     df_marketing = pd.read_sql(query_marketing_priority, conn)
     
-    # Query 8: Staffing Forecast (Next 6 Months Based on Seasonal Average)
-    # Using 2019-2024 averages to project demand
+    # Query 8: Staffing Forecast (2026 Projection Based on 2025 Actuals)
+    # Using 2024→2025 growth to project 2026 demand
     query_staffing = """
-    WITH seasonal_avg AS (
+    WITH growth_rate AS (
+        SELECT 
+            AVG((visitors_2025 * 1.0 / NULLIF(visitors_2024, 0))) as avg_growth
+        FROM (
+            SELECT 
+                SUM(CASE WHEN m.year = 2025 THEN f.visitors_total ELSE 0 END) as visitors_2025,
+                SUM(CASE WHEN m.year = 2024 THEN f.visitors_total ELSE 0 END) as visitors_2024
+            FROM fact_inbound_arrivals_monthly f
+            JOIN dim_month m ON f.month_id = m.month_id
+            WHERE m.year IN (2024, 2025) AND m.month <= 11  -- Only use Jan-Nov for fair comparison
+        )
+    ),
+    base_2025 AS (
         SELECT 
             m.month,
-            AVG(f.visitors_total) as avg_monthly_visitors
+            SUM(f.visitors_total) as actual_2025
         FROM fact_inbound_arrivals_monthly f
         JOIN dim_month m ON f.month_id = m.month_id
-        WHERE m.year >= 2019 AND m.year <= 2024
+        WHERE m.year = 2025
         GROUP BY m.month
     )
     SELECT 
-        month,
-        ROUND(avg_monthly_visitors) as projected_visitors,
+        b.month,
+        ROUND(b.actual_2025 * g.avg_growth) as projected_2026_visitors,
         CASE 
-            WHEN month IN (3, 4, 10, 11) THEN ROUND(avg_monthly_visitors / 80)  -- Peak months: 1 guide per 80 visitors
-            ELSE ROUND(avg_monthly_visitors / 120)  -- Off-peak: 1 guide per 120
+            WHEN b.month IN (3, 4, 10, 11) THEN ROUND((b.actual_2025 * g.avg_growth) / 80)  -- Peak months: 1 guide per 80
+            ELSE ROUND((b.actual_2025 * g.avg_growth) / 120)  -- Off-peak: 1 per 120
         END as recommended_staff
-    FROM seasonal_avg
-    ORDER BY month
+    FROM base_2025 b, growth_rate g
+    ORDER BY b.month
     """
     df_staffing = pd.read_sql(query_staffing, conn)
     
