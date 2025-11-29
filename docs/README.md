@@ -1,100 +1,16 @@
-# Studio Pierrot BI Project - Strategic Documents
+# BI Portfolio Documentation Index
 
-This folder contains the complete business documentation that preceded the technical implementation of the BI dashboard.
+This folder now serves as a quick index for the two BI case studies in this portfolio. Detailed documentation lives alongside each project so recruiters and reviewers always see the current source of truth.
 
-## 📋 Documents Overview
+## Studio Pierrot Anime Analytics (BI Case Study)
+- **Docs:** `projects/studio-pierrot-bi/docs/`
+- **Dashboard:** `projects/studio-pierrot-bi/dashboard/index.html`
+- **Warehouse & ETL:** See `projects/studio-pierrot-bi/README.md` for the star schema, scripts, and run instructions.
 
-### 1. Executive Requirements
-**File**: [executive_requirements.md](executive_requirements.md)
+## Japan Inbound Travel Intelligence Hub (BI Capstone)
+- **Docs:** `projects/inbound-japan-bi/docs/`
+- **Dashboard:** `projects/inbound-japan-bi/dashboard/index.html`
+- **Warehouse & ETL:** See `projects/inbound-japan-bi/README.md` for data source notes and step-by-step ETL.
 
-**Purpose**: Defines the high-level business objectives and success metrics from the perspective of studio leadership.
-
-**Key Contents**:
-- Strategic goals and vision
-- Executive-level KPIs
-- Critical business questions
-- Expected ROI and impact measurements
-
-**Audience**: C-level executives, studio directors, board members
-
----
-
-### 2. Stakeholder Requirements
-**File**: [stakeholder_requirements.md](stakeholder_requirements.md)
-
-**Purpose**: Documents detailed analytical needs from each department within the organization.
-
-**Key Contents**:
-- **Production Team**: Episode performance, filler impact, budget allocation
-- **Marketing Team**: Platform distribution, audience engagement, sentiment analysis
-- **Finance Team**: Revenue forecasting, cost-benefit analysis, profitability metrics
-
-**Audience**: Department heads, team leads, operational managers
-
----
-
-### 3. Strategy Document
-**File**: [strategy_document.md](strategy_document.md)
-
-**Purpose**: Outlines the technical implementation strategy and BI approach.
-
-**Key Contents**:
-- Vision and approach
-- Data sources and methodology
-- Tech stack selection and justification
-- Implementation roadmap and timeline
-- Tools and technologies used
-
-**Audience**: Data analysts, data engineers, technical stakeholders
-
----
-
-### 4. Rapport industrie (2020–2024)
-**File**: [animation_industry_report_2020_2024.md](animation_industry_report_2020_2024.md)
-
-**Purpose**: Synthèse en français de l'évolution du marché de l'animation japonaise (2020–2024), couvrant croissance, structure des revenus, coûts de production et rôle croissant des audiences internationales.
-
-**Audience**: Parties prenantes business, partenaires internationaux, évaluateurs francophones.
-
----
-
-## 🎯 How These Documents Work Together
-
-```
-Executive Requirements (WHAT)
-        ↓
-Stakeholder Requirements (WHY & DETAILS)
-        ↓
-Strategy Document (HOW)
-        ↓
-Technical Implementation (DATA MODEL + ETL + DASHBOARD)
-```
-
-1. **Executive Requirements** establish the business goals
-2. **Stakeholder Requirements** break down specific needs by department
-3. **Strategy Document** defines the technical approach
-4. **Implementation** delivers the solution
-
----
-
-## 💡 Why This Documentation Matters
-
-In real-world BI projects, **requirements gathering** is often the most critical phase. These documents demonstrate:
-
-- **Stakeholder Alignment**: Ensuring all parties agree on objectives before development
-- **Scope Definition**: Clear boundaries prevent scope creep
-- **Success Metrics**: Measurable criteria for project success
-- **Business Context**: Connecting technical work to business value
-
----
-
-## 🔗 Related Files
-
-- **Main README**: [../README.md](../README.md)
-- **Live Dashboard**: [../dashboard/index.html](../dashboard/index.html)
-- **Data Model**: [../model/schema_v2.sql](../model/schema_v2.sql)
-- **ETL Scripts**: [../etl/](../etl/)
-
----
-
-*These documents are part of Dylan Elo's Business Intelligence portfolio project.*
+## Why this index exists
+The earlier version of this folder duplicated Studio Pierrot docs and linked to deprecated paths. Those files have been removed to reduce confusion. Use the project-level docs above for the latest requirements, strategy, and data model notes.
