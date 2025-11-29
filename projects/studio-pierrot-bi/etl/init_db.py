@@ -1,6 +1,8 @@
 """
-Initialize the Studio Pierrot data warehouse.
-Reads schema.sql and creates all tables in the SQLite database.
+Legacy initializer for the pre-star-schema warehouse (model/schema.sql).
+Prefer `etl/load.py`, which builds the current star schema in
+`warehouse/pierrot_bi.db`. This script is kept for historical reference and
+tests against the archived schema.
 """
 import sqlite3
 from pathlib import Path

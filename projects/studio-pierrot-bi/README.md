@@ -76,10 +76,11 @@ This project demonstrates a complete BI workflow from requirements to dashboard 
 - **Dimensions:** `dim_anime` (with `revenue_profile`, `broadcast_status`), `dim_date`, `dim_platform`, `dim_region`
 
 ### ETL Pipeline
-1. **Extract:** Python script (`et/extract_mal.py`) fetches raw JSON from Jikan API
-2. **Transform:** Data cleaning, standardization, revenue profile classification
-3. **Load:** Python script (`etl/load_warehouse.py`) populates SQLite warehouse with upsert logic
-4. **Export:** Dashboard data (`etl/export_to_dashboard.py`) and Tableau CSVs (`tableau_exports/`)
+1. **Extract:** `etl/extract_mal.py` pulls fresh Jikan API data into `data/raw_mal_data.json`.
+2. **Load (recommended):** `etl/load.py` initializes the star schema in `warehouse/pierrot_bi.db` and seeds it from the raw MAL snapshot.
+3. **Validate:** `etl/verify_db.py` runs sanity checks on row counts and keys.
+
+> Legacy pipeline (archived for transparency): `etl/init_db.py` + `etl/load_warehouse.py` + `etl/export_dashboard_data.py` target the older `studio_pierrot.db` schema. Use the star schema path above for the current experience.
 
 ### Dashboard Stack
 - **Frontend:** Vanilla JS + Chart.js for interactive visualizations
@@ -99,17 +100,22 @@ This project demonstrates a complete BI workflow from requirements to dashboard 
 # Navigate to project directory
 cd projects/studio-pierrot-bi
 
-# 1. Extract fresh data from MAL
+# 1. Initialize/refresh star schema and seed from the bundled MAL snapshot
+python etl/load.py
+
+# 2. (Optional) Pull fresh MAL data
 python etl/extract_mal.py
 
-# 2. Load into SQL Warehouse
-python etl/load_warehouse.py
+# 3. Reload the star schema from the refreshed snapshot
+python etl/load.py
 
-# 3. Export to dashboard
-python etl/export_to_dashboard.py
+# 4. (Optional) Run integrity checks
+python etl/verify_db.py
 ```
 
 *Requires Python 3.x and `requests` library*
+
+> For the legacy/archived warehouse (`studio_pierrot.db`), run `python etl/init_db.py && python etl/load_warehouse.py` followed by `python etl/export_dashboard_data.py`. These scripts are kept for historical context but are not required for the current dashboard assets.
 
 ### Tableau Integration
 1. Import CSVs from `tableau_exports/` directory
