@@ -23,7 +23,7 @@ This project serves as a centralized intelligence hub for a Japanese Destination
 ### Dashboard Highlights
 
 1. **Executive Overview**: KPIs + Monthly visitor trend showing COVID recovery
-2. **Top Markets**: Bar chart of top 10 source countries for 2024
+2. **Top Markets**: Bar chart of top 10 source countries for the latest year (mock: 2025)
 3. **FX Impact**: Dual-axis chart showing Yen weakness correlating with visitor surge
 4. **Weather Risk**: Temperature + extreme event monitoring (heatwaves, typhoons)
 5. **Airport Capacity**: Stacked bar chart of inbound flights by airport
@@ -50,10 +50,10 @@ This project serves as a centralized intelligence hub for a Japanese Destination
 - `dim_airport` (5 rows): Major airports
 
 **Facts**:
-- `fact_inbound_arrivals_monthly`: Visitor counts (1440 rows)
-- `fact_fx_rate_daily`: Exchange rates (2166 rows)
-- `fact_weather_daily`: Weather conditions (12,620 rows)
-- `fact_flights_daily`: Flight arrivals (12,620 rows)
+- `fact_inbound_arrivals_monthly`: Visitor counts (1680 rows)
+- `fact_fx_rate_daily`: Exchange rates (15,150 rows)
+- `fact_weather_daily`: Weather conditions (12,625 rows)
+- `fact_flights_daily`: Flight arrivals (12,625 rows)
 
 ### ETL Pipeline
 
@@ -120,6 +120,8 @@ python 99_export_for_dashboard.py
 # Open dashboard
 # Open ../dashboard/index.html in your browser
 ```
+
+> **Note:** The ETL run will regenerate raw CSVs, the SQLite warehouse, and the dashboard export locally. These artifacts are now Git-ignored to prevent binary files from blocking pull request creation.
 
 ## Documentation
 

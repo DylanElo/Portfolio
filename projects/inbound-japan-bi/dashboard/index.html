@@ -18,8 +18,8 @@
 
         <div class="kpi-grid">
             <div class="card kpi-card">
-                <h3>Total Visitors (2024)</h3>
-                <p class="kpi-value" id="kpi-total-2024">Loading...</p>
+                <h3>Total Visitors (<span id="kpi-year-label"></span>)</h3>
+                <p class="kpi-value" id="kpi-total-latest">Loading...</p>
             </div>
             <div class="card kpi-card">
                 <h3>Top Market</h3>
@@ -33,14 +33,14 @@
 
         <div class="charts-grid">
             <div class="card chart-card full-width">
-                <h2>Monthly Visitor Trend (2019-2024)</h2>
+                <h2 id="trend-title">Monthly Visitor Trend (<span id="trend-start-year"></span>-<span id="trend-end-year"></span>)</h2>
                 <div class="chart-container">
                     <canvas id="trendChart"></canvas>
                 </div>
             </div>
 
             <div class="card chart-card">
-                <h2>Top 10 Markets (2024)</h2>
+                <h2 id="market-title">Top 10 Markets (<span id="market-year-label"></span>)</h2>
                 <div class="chart-container">
                     <canvas id="marketChart"></canvas>
                 </div>

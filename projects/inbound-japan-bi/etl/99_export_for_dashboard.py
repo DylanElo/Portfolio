@@ -3,8 +3,9 @@ import sqlite3
 import json
 import os
 
-DB_PATH = r"..\data\inbound_japan.db"
-OUTPUT_DIR = r"..\dashboard\data"
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+DB_PATH = os.path.join(BASE_DIR, "data", "inbound_japan.db")
+OUTPUT_DIR = os.path.join(BASE_DIR, "dashboard", "data")
 OUTPUT_FILE = os.path.join(OUTPUT_DIR, "dashboard_data.json")
 
 def main():
@@ -24,21 +25,22 @@ def main():
     ORDER BY m.year, m.month
     """
     df_monthly = pd.read_sql(query_monthly, conn)
+    latest_year = int(df_monthly["year"].max()) if not df_monthly.empty else None
     
     # Query 2: Top Countries (Latest Year)
     query_countries = """
-    SELECT 
+    SELECT
         c.country_name_en,
         SUM(f.visitors_total) as total_visitors
     FROM fact_inbound_arrivals_monthly f
     JOIN dim_country c ON f.country_id = c.country_id
     JOIN dim_month m ON f.month_id = m.month_id
-    WHERE m.year = 2024
+    WHERE m.year = ?
     GROUP BY c.country_name_en
     ORDER BY total_visitors DESC
     LIMIT 10
     """
-    df_countries = pd.read_sql(query_countries, conn)
+    df_countries = pd.read_sql(query_countries, conn, params=[latest_year]) if latest_year else pd.DataFrame()
     
     # Query 3: Seasonality Heatmap Data (Avg visitors per month per country)
     query_seasonality = """
@@ -121,8 +123,9 @@ def main():
     df_flights = pd.read_sql(query_flights, conn)
 
     data = {
+        "latest_year": latest_year,
         "monthly_trend": df_monthly.to_dict(orient="records"),
-        "top_countries_2024": df_countries.to_dict(orient="records"),
+        "top_countries": df_countries.to_dict(orient="records"),
         "seasonality": df_seasonality.to_dict(orient="records"),
         "fx_impact": df_fx_impact.to_dict(orient="records"),
         "weather_risk": df_weather.to_dict(orient="records"),

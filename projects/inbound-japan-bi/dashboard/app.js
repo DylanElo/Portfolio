@@ -10,35 +10,53 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 function initDashboard(data) {
-    renderKPIs(data);
+    const years = data.monthly_trend.map(d => d.year);
+    const latestYear = data.latest_year ?? Math.max(...years);
+    const startYear = Math.min(...years);
+
+    updateHeadings(startYear, latestYear);
+
+    renderKPIs(data, latestYear);
     renderTrendChart(data.monthly_trend);
-    renderMarketChart(data.top_countries_2024);
+    renderMarketChart(data.top_countries, latestYear);
     renderSeasonalityChart(data.seasonality);
     renderFXChart(data.fx_impact);
     renderWeatherChart(data.weather_risk);
     renderFlightsChart(data.airport_capacity);
 }
 
-function renderKPIs(data) {
-    // Calculate Total 2024
-    const total2024 = data.monthly_trend
-        .filter(d => d.year === 2024)
+function renderKPIs(data, latestYear) {
+    // Calculate Total Latest Year
+    const totalLatest = data.monthly_trend
+        .filter(d => d.year === latestYear)
         .reduce((sum, d) => sum + d.total_visitors, 0);
 
-    document.getElementById('kpi-total-2024').textContent = total2024.toLocaleString();
+    document.getElementById('kpi-total-latest').textContent = totalLatest.toLocaleString();
 
     // Top Market
-    const topMarket = data.top_countries_2024[0];
+    const topMarket = data.top_countries[0];
     document.getElementById('kpi-top-market').textContent = topMarket ? topMarket.country_name_en : "N/A";
 
-    // Recovery (2024 vs 2019) - simplified
+    // Recovery (Latest vs 2019) - simplified
     const total2019 = data.monthly_trend
         .filter(d => d.year === 2019)
         .reduce((sum, d) => sum + d.total_visitors, 0);
 
-    // Assuming 2024 is full year or YTD comparison (simplified for mock)
-    const recovery = total2019 > 0 ? (total2024 / total2019 * 100).toFixed(1) + "%" : "N/A";
+    const recovery = total2019 > 0 ? (totalLatest / total2019 * 100).toFixed(1) + "%" : "N/A";
     document.getElementById('kpi-recovery').textContent = recovery;
+}
+
+function updateHeadings(startYear, latestYear) {
+    const yearLabel = document.getElementById('kpi-year-label');
+    if (yearLabel) yearLabel.textContent = latestYear ?? 'N/A';
+
+    const trendStart = document.getElementById('trend-start-year');
+    const trendEnd = document.getElementById('trend-end-year');
+    if (trendStart) trendStart.textContent = startYear ?? '';
+    if (trendEnd) trendEnd.textContent = latestYear ?? '';
+
+    const marketYear = document.getElementById('market-year-label');
+    if (marketYear) marketYear.textContent = latestYear ?? 'Latest';
 }
 
 function renderTrendChart(trendData) {
@@ -73,7 +91,7 @@ function renderTrendChart(trendData) {
     });
 }
 
-function renderMarketChart(marketData) {
+function renderMarketChart(marketData, latestYear) {
     const ctx = document.getElementById('marketChart').getContext('2d');
 
     const labels = marketData.map(d => d.country_name_en);
@@ -84,7 +102,7 @@ function renderMarketChart(marketData) {
         data: {
             labels: labels,
             datasets: [{
-                label: 'Visitors (2024)',
+                label: `Visitors (${latestYear})`,
                 data: values,
                 backgroundColor: '#36a2eb'
             }]

@@ -6,7 +6,7 @@
 This Business Intelligence solution was developed to provide a Japanese Destination Management Company (DMC) with comprehensive, data-driven insights into inbound tourism trends. The hub integrates multiple data sources—official visitor statistics, foreign exchange rates, weather conditions, and flight capacity—into a unified analytical platform that empowers decision-making across Sales, Product, and Operations teams.
 
 **Key Outcomes:**
-- Unified view of 20+ source markets with 6-year historical trends (2019-2024)
+- Unified view of 20+ source markets with 7-year historical trends (2019-2025)
 - Real-time correlation analysis between Yen exchange rates and visitor demand
 - Proactive risk identification through weather and capacity monitoring
 - Scalable Star Schema data warehouse supporting multi-dimensional analysis
@@ -54,7 +54,7 @@ DMCs must navigate this volatility while optimizing revenue, managing operationa
 
 | Source | Type | Refresh | Coverage |
 | :--- | :--- | :--- | :--- |
-| **JNTO Statistics** | CSV/Portal | Monthly | Visitor arrivals by country, 2019-2024 |
+| **JNTO Statistics** | CSV/Portal | Monthly | Visitor arrivals by country, 2019-2025 |
 | **Frankfurter API** | REST | Daily | FX rates (JPY vs 6 currencies) |
 | **Mock Weather** | Generated | Daily | Temperature, precipitation for 5 cities |
 | **Mock Flights** | Generated | Daily | Inbound flights for 5 airports |
@@ -74,10 +74,10 @@ DMCs must navigate this volatility while optimizing revenue, managing operationa
 - `dim_airport` (5 rows): Major international gateways
 
 **Facts**:
-- `fact_inbound_arrivals_monthly` (1440 rows): Visitor counts by month × country
-- `fact_fx_rate_daily` (2166 rows): Daily exchange rates
-- `fact_weather_daily` (12,620 rows): Daily weather conditions
-- `fact_flights_daily` (12,620 rows): Daily flight arrivals
+- `fact_inbound_arrivals_monthly` (1680 rows): Visitor counts by month × country
+- `fact_fx_rate_daily` (15,150 rows): Daily exchange rates
+- `fact_weather_daily` (12,625 rows): Daily weather conditions
+- `fact_flights_daily` (12,625 rows): Daily flight arrivals
 
 **Total Data Volume**: ~30K rows across all facts (suitable for SQLite; would use PostgreSQL/Snowflake in production).
 
@@ -111,12 +111,12 @@ The solution provides **4 core dashboards** addressing each stakeholder's needs:
 #### 1. Executive Overview
 **Audience**: C-Suite, Investors
 **KPIs**:
-- Total Visitors (2024 YTD)
+- Total Visitors (latest year, e.g., 2025 YTD)
 - Top Source Market
 - Recovery Rate vs 2019
 
 **Charts**:
-- Monthly Visitor Trend (2019-2024): Shows COVID collapse and V-shaped recovery
+- Monthly Visitor Trend (2019-2025): Shows COVID collapse and V-shaped recovery
 - Regional Mix (Stacked Area): Asia dominates, but US/EU growing
 
 **Insight**: Japan has **surpassed 2019 levels** in total visitors (mock data shows ~105% recovery), driven primarily by Asian markets (Korea, Taiwan, China).

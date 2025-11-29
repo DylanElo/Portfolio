@@ -9,7 +9,7 @@ Integrate flight data to monitor inbound capacity and identify operational bottl
 #### [NEW] `projects/inbound-japan-bi/etl/04_fetch_opensky_flights.py`
 - **Function**: Fetch daily inbound flight counts for major airports (NRT, HND, KIX, CTS, FUK).
 - **Source**: `OpenSky Network` API (REST) or **Mock Data**.
-    - *Note*: OpenSky historical data often requires a paid research license or has strict rate limits for anonymous users. For this portfolio project, I will generate **Mock Flight Data** that realistically reflects the post-COVID recovery curve (2022-2024).
+    - *Note*: OpenSky historical data often requires a paid research license or has strict rate limits for anonymous users. For this portfolio project, I will generate **Mock Flight Data** that realistically reflects the post-COVID recovery curve (2022-2025).
 - **Output**: `data/raw/flights_daily.csv`
 
 #### [MODIFY] `projects/inbound-japan-bi/etl/10_build_dimensions.py`

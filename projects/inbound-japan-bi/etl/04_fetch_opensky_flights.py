@@ -4,7 +4,8 @@ import os
 from datetime import datetime, timedelta
 
 # Config
-RAW_DIR = r"..\data\raw"
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+RAW_DIR = os.path.join(BASE_DIR, "data", "raw")
 OUTPUT_FILE = os.path.join(RAW_DIR, "flights_daily.csv")
 START_DATE = "2019-01-01"
 END_DATE = datetime.now().strftime("%Y-%m-%d")

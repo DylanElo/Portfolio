@@ -5,7 +5,8 @@ from datetime import datetime, timedelta
 import time
 
 # Config
-RAW_DIR = r"..\data\raw"
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+RAW_DIR = os.path.join(BASE_DIR, "data", "raw")
 OUTPUT_FILE = os.path.join(RAW_DIR, "fx_rates.csv")
 BASE_CURRENCY = "JPY" # Frankfurter gives rates FROM Base. We want JPY per USD, so we might need to invert if we use USD as base. 
 # Actually, standard is usually "How many JPY for 1 USD". 
