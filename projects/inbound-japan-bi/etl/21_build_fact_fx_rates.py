@@ -1,15 +1,3 @@
-import pandas as pd
-import sqlite3
-import os
-
-DB_PATH = r"..\data\inbound_japan.db"
-RAW_FILE = r"..\data\raw\fx_rates.csv"
-
-def main():
-    conn = sqlite3.connect(DB_PATH)
-    
-    if not os.path.exists(RAW_FILE):
-        print("⚠️ Raw FX data not found. Run 02_fetch_fx_rates.py first.")
         return
 
     # Load Raw

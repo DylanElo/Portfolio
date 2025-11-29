@@ -28,6 +28,10 @@ This project serves as a centralized intelligence hub for a Japanese Destination
 4. **Weather Risk**: Temperature + extreme event monitoring (heatwaves, typhoons)
 5. **Airport Capacity**: Stacked bar chart of inbound flights by airport
 
+## 📊 Dashboard Preview
+
+![Japan Inbound BI Dashboard](./docs/images/dashboard_preview.png)
+
 ## Data Sources
 
 1.  **JNTO (Japan National Tourism Organization)**: Monthly visitor arrivals and behavior statistics.

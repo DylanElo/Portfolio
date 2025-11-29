@@ -3,9 +3,10 @@ import pandas as pd
 import os
 from datetime import datetime, timedelta
 import time
+from pathlib import Path
 
-# Config
-RAW_DIR = r"..\data\raw"
+# Config - cross-platform path resolution
+RAW_DIR = Path(__file__).parent.parent / "data" / "raw"
 OUTPUT_FILE = os.path.join(RAW_DIR, "fx_rates.csv")
 BASE_CURRENCY = "JPY" # Frankfurter gives rates FROM Base. We want JPY per USD, so we might need to invert if we use USD as base. 
 # Actually, standard is usually "How many JPY for 1 USD". 

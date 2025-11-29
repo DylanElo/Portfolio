@@ -1,15 +1,3 @@
-import pandas as pd
-import sqlite3
-import os
-
-DB_PATH = r"..\data\inbound_japan.db"
-RAW_FILE = r"..\data\raw\jnto_arrivals.csv"
-
-def main():
-    conn = sqlite3.connect(DB_PATH)
-    
-    if not os.path.exists(RAW_FILE):
-        print("⚠️ Raw data not found. Run 01_fetch_jnto_arrivals.py first.")
         return
 
     # Load Raw

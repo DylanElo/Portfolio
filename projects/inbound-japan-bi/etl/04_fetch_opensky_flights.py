@@ -1,11 +1,12 @@
 import pandas as pd
 import numpy as np
-import os
 from datetime import datetime, timedelta
+import os
+from pathlib import Path
 
-# Config
-RAW_DIR = r"..\data\raw"
-OUTPUT_FILE = os.path.join(RAW_DIR, "flights_daily.csv")
+# Config - cross-platform path resolution
+RAW_DIR = Path(__file__).parent.parent / "data" / "raw"
+OUTPUT_FILE = RAW_DIR / "flights_daily.csv"
 START_DATE = "2019-01-01"
 END_DATE = datetime.now().strftime("%Y-%m-%d")
 
@@ -18,11 +19,10 @@ AIRPORTS = {
 }
 
 def ensure_directories():
-    if not os.path.exists(RAW_DIR):
-        os.makedirs(RAW_DIR)
+    RAW_DIR.mkdir(parents=True, exist_ok=True)
 
 def generate_flight_data():
-    print("✈️ Generating mock Flight data...")
+    print("✈️ Gener ating mock Flight data...")
     
     dates = pd.date_range(start=START_DATE, end=END_DATE)
     records = []

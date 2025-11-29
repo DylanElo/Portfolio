@@ -2,10 +2,11 @@ import pandas as pd
 import sqlite3
 import os
 from datetime import datetime, timedelta
+from pathlib import Path
 
-# Config
-DB_PATH = r"..\data\inbound_japan.db"
-RAW_FILE = r"..\data\raw\jnto_arrivals.csv"
+# Config - cross-platform path resolution
+DB_PATH = Path(__file__).parent.parent / "data" / "inbound_japan.db"
+RAW_FILE = Path(__file__).parent.parent / "data" / "raw" / "jnto_arrivals.csv"
 
 def create_connection():
     conn = sqlite3.connect(DB_PATH)
@@ -59,7 +60,7 @@ def get_season(month):
 
 def build_dim_country(conn):
     # Read raw data to get unique countries
-    if not os.path.exists(RAW_FILE):
+    if not RAW_FILE.exists():
         print("⚠️ Raw data not found. Run 01_fetch_jnto_arrivals.py first.")
         return
 

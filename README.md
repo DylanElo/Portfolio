@@ -1,8 +1,19 @@
 # Dylan Elo – Portfolio
 
+> **Technical Support → BI/Analytics Professional**
+
+## 👉 Quick Start
+
+* **Live Portfolio:** [dylanelo.github.io/Portfolio](https://dylanelo.github.io/Portfolio/)
+* **Flagship BI Case Studies:**
+  * [Studio Pierrot Anime Analytics](./projects/studio-pierrot-bi/) – Multi-lens BI dashboard analyzing global momentum, revenue trends, and production quality
+  * [Japan Inbound Travel Intelligence](./projects/inbound-japan-bi/) – Real-time travel demand forecasting with FX, weather, and flight data integration
+
+---
+
 Modern portfolio for my work as a **Software Engineer & BI / Data Analyst**.
 
-The repository contains both the source code for this website and a full **end-to-end Business Intelligence case study** built around the anime industry and Studio Pierrot.
+The repository contains both the source code for this website and **end-to-end Business Intelligence case studies** demonstrating complete BI workflows from requirements to delivery.
 
 ---
 

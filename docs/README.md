@@ -1,100 +1,112 @@
-# Studio Pierrot BI Project - Strategic Documents
+# Business Intelligence Projects – Documentation Hub
 
-This folder contains the complete business documentation that preceded the technical implementation of the BI dashboard.
-
-## 📋 Documents Overview
-
-### 1. Executive Requirements
-**File**: [executive_requirements.md](executive_requirements.md)
-
-**Purpose**: Defines the high-level business objectives and success metrics from the perspective of studio leadership.
-
-**Key Contents**:
-- Strategic goals and vision
-- Executive-level KPIs
-- Critical business questions
-- Expected ROI and impact measurements
-
-**Audience**: C-level executives, studio directors, board members
+Welcome to Dylan Elo's BI portfolio documentation. This directory serves as the central hub for strategic and technical documentation across multiple BI case studies.
 
 ---
 
-### 2. Stakeholder Requirements
-**File**: [stakeholder_requirements.md](stakeholder_requirements.md)
+## 📊 Featured BI Projects
 
-**Purpose**: Documents detailed analytical needs from each department within the organization.
+### 1. Studio Pierrot Anime Analytics
+**Path:** [../projects/studio-pierrot-bi/](../projects/studio-pierrot-bi/)
 
-**Key Contents**:
-- **Production Team**: Episode performance, filler impact, budget allocation
-- **Marketing Team**: Platform distribution, audience engagement, sentiment analysis
-- **Finance Team**: Revenue forecasting, cost-benefit analysis, profitability metrics
+**Strategic Question:** Why are Studio Pierrot's flagship IPs struggling to capture the same global momentum as newer titles like Jujutsu Kaisen—and what should they do about it?
 
-**Audience**: Department heads, team leads, operational managers
+**Capabilities:**
+- Multi-lens BI dashboard (Global Fandom, Revenue Timeline, Streaming, Domestic, Production)
+- Star schema data warehouse with SQLite
+- Python ETL pipeline (Jikan API → Transform → Load)
+- Tableau export package with 4 CSV files
+- Strategic documentation (executive requirements, stakeholder specs, strategy doc)
 
----
+**Key Insights:**
+- Production Model Impact: Seasonal (<10% filler) = 8.7 avg score vs Continuous (42% filler) = 6.1
+- Revenue Momentum: Legacy IP declining (-19% for Naruto) while competitor hits surge (+140% for JJK)
+- Streaming Gap: JJK 71.2x demand vs Pierrot portfolio 2-12x
+- Revival Success: Bleach TYBW proves Pierrot CAN compete with 8.99 score
 
-### 3. Strategy Document
-**File**: [strategy_document.md](strategy_document.md)
+**Live Dashboard:** [View on GitHub Pages](https://dylanelo.github.io/Portfolio/projects/studio-pierrot-bi/dashboard/index.html)
 
-**Purpose**: Outlines the technical implementation strategy and BI approach.
-
-**Key Contents**:
-- Vision and approach
-- Data sources and methodology
-- Tech stack selection and justification
-- Implementation roadmap and timeline
-- Tools and technologies used
-
-**Audience**: Data analysts, data engineers, technical stakeholders
-
----
-
-### 4. Rapport industrie (2020–2024)
-**File**: [animation_industry_report_2020_2024.md](animation_industry_report_2020_2024.md)
-
-**Purpose**: Synthèse en français de l'évolution du marché de l'animation japonaise (2020–2024), couvrant croissance, structure des revenus, coûts de production et rôle croissant des audiences internationales.
-
-**Audience**: Parties prenantes business, partenaires internationaux, évaluateurs francophones.
+**Documentation:**
+- [Executive Requirements](../projects/studio-pierrot-bi/docs/executive_requirements.md) – C-level dashboard expectations
+- [Stakeholder Requirements](../projects/studio-pierrot-bi/docs/stakeholder_requirements.md) – Cross-functional team needs
+- [Strategy Document](../projects/studio-pierrot-bi/docs/strategy_document.md) – Project goals, success metrics
+- [Data Model Specification](../projects/studio-pierrot-bi/docs/data_model_spec.md) – Star schema design
 
 ---
 
-## 🎯 How These Documents Work Together
+### 2. Japan Inbound Travel Intelligence Hub
+**Path:** [../projects/inbound-japan-bi/](../projects/inbound-japan-bi/)
+
+**Business Context:** DMC (Destination Management Company) BI platform for forecasting inbound travel demand to Japan across multiple data lenses.
+
+**Capabilities:**
+- Multi-source ETL pipeline (JNTO arrivals, Frankfurter FX, weather, flight data)
+- Dimensional warehouse with star schema
+- Real-time dashboard with demand forecasting
+- Seasonal risk analysis (typhoons, heatwaves)
+- Airport capacity vs demand tracking
+
+**Data Sources:**
+- **Real:** JNTO monthly arrivals (2019-2024), Frankfurter FX rates
+- **Mock (realistic):** Weather patterns, daily flight volumes
+
+**Live Dashboard:** [View on GitHub Pages](https://dylanelo.github.io/Portfolio/projects/inbound-japan-bi/dashboard/index.html)
+
+**Documentation:**
+- [Strategy Document](../projects/inbound-japan-bi/docs/strategy_document.md) – Project vision and approach
+- [Stakeholder Requirements](../projects/inbound-japan-bi/docs/stakeholder_requirements.md) – Cross-functional needs
+- [Technical Specification](../projects/inbound-japan-bi/docs/technical_spec.md) – Architecture and implementation
+- [Phase Walkthroughs](../projects/inbound-japan-bi/docs/) – Phased implementation guides (Phase 1-5)
+
+---
+
+## 🎯 BI Methodology Demonstrated
+
+These projects showcase a complete Business Intelligence workflow aligned with Google BI Professional Certificate best practices:
 
 ```
-Executive Requirements (WHAT)
+Requirements Gathering
         ↓
-Stakeholder Requirements (WHY & DETAILS)
+Strategy & Planning
         ↓
-Strategy Document (HOW)
+Data Modeling (Star Schema)
         ↓
-Technical Implementation (DATA MODEL + ETL + DASHBOARD)
+ETL Pipeline Development
+        ↓
+Dashboard Development
+        ↓
+Stakeholder Delivery
 ```
 
-1. **Executive Requirements** establish the business goals
-2. **Stakeholder Requirements** break down specific needs by department
-3. **Strategy Document** defines the technical approach
-4. **Implementation** delivers the solution
+Each project includes:
+- ✅ **Executive Requirements** – Business goals and success metrics
+- ✅ **Stakeholder Requirements** – Departmental analytical needs
+- ✅ **Strategy Document** – Technical approach and roadmap
+- ✅ **Data Model Specifications** – Dimensional design (facts & dimensions)
+- ✅ **ETL Pipeline** – Automated data extraction, transformation, loading
+- ✅ **Interactive Dashboards** – Multi-lens analytical views
+- ✅ **Documentation** – Data dictionaries, technical specs, walkthroughs
 
 ---
 
 ## 💡 Why This Documentation Matters
 
-In real-world BI projects, **requirements gathering** is often the most critical phase. These documents demonstrate:
+In real-world BI projects, **requirements gathering and strategic planning** are often the most critical phases. This documentation demonstrates:
 
-- **Stakeholder Alignment**: Ensuring all parties agree on objectives before development
-- **Scope Definition**: Clear boundaries prevent scope creep
-- **Success Metrics**: Measurable criteria for project success
-- **Business Context**: Connecting technical work to business value
-
----
-
-## 🔗 Related Files
-
-- **Main README**: [../README.md](../README.md)
-- **Live Dashboard**: [../dashboard/index.html](../dashboard/index.html)
-- **Data Model**: [../model/schema_v2.sql](../model/schema_v2.sql)
-- **ETL Scripts**: [../etl/](../etl/)
+- **Stakeholder Alignment:** Ensuring all parties agree on objectives before development
+- **Scope Definition:** Clear boundaries prevent scope creep
+- **Success Metrics:** Measurable criteria for project success
+- **Business Context:** Connecting technical work to business value
+- **Technical Rigor:** Dimensional modeling, ETL design, data quality standards
 
 ---
 
-*These documents are part of Dylan Elo's Business Intelligence portfolio project.*
+## 🔗 Related Links
+
+- **Main Portfolio:** [../index.html](../index.html)
+- **Portfolio README:** [../README.md](../README.md)
+- **Project Overview Page:** [../project.html](../project.html)
+
+---
+
+*These BI case studies are part of Dylan Elo's professional portfolio, demonstrating end-to-end Business Intelligence capabilities from requirements to delivery.*

@@ -2,14 +2,14 @@ import pandas as pd
 import os
 import numpy as np
 from datetime import datetime, timedelta
+from pathlib import Path
 
-# Configuration
-RAW_DIR = r"..\data\raw"
-OUTPUT_FILE = os.path.join(RAW_DIR, "jnto_arrivals.csv")
+# Configuration - cross-platform path resolution
+RAW_DIR = Path(__file__).parent.parent / "data" / "raw"
+OUTPUT_FILE = RAW_DIR / "jnto_arrivals.csv"
 
 def ensure_directories():
-    if not os.path.exists(RAW_DIR):
-        os.makedirs(RAW_DIR)
+    RAW_DIR.mkdir(parents=True, exist_ok=True)
 
 def generate_mock_data():
     """
@@ -93,7 +93,7 @@ def generate_mock_data():
 def main():
     ensure_directories()
     
-    if os.path.exists(OUTPUT_FILE):
+    if OUTPUT_FILE.exists():
         print(f"✅ Found existing data at: {OUTPUT_FILE}")
     else:
         generate_mock_data()

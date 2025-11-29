@@ -1,4 +1,13 @@
 """
+⚠️ LEGACY SCRIPT - FOR REFERENCE ONLY ⚠️
+
+This script uses the DEPRECATED schema from model/schema.sql.
+For the current production pipeline, use: etl/load.py instead.
+
+This file is kept for transparency and version history only.
+
+---
+
 Initialize the Studio Pierrot data warehouse.
 Reads schema.sql and creates all tables in the SQLite database.
 """

@@ -1,16 +1,3 @@
-import pandas as pd
-import sqlite3
-import json
-import os
-
-DB_PATH = r"..\data\inbound_japan.db"
-OUTPUT_DIR = r"..\dashboard\data"
-OUTPUT_FILE = os.path.join(OUTPUT_DIR, "dashboard_data.json")
-
-def main():
-    if not os.path.exists(OUTPUT_DIR):
-        os.makedirs(OUTPUT_DIR)
-        
     conn = sqlite3.connect(DB_PATH)
     
     # Query 1: Total Monthly Visitors

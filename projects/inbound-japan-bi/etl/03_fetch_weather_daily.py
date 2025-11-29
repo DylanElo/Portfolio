@@ -1,11 +1,12 @@
 import pandas as pd
 import numpy as np
-import os
 from datetime import datetime, timedelta
+import os
+from pathlib import Path
 
-# Config
-RAW_DIR = r"..\data\raw"
-OUTPUT_FILE = os.path.join(RAW_DIR, "weather_daily.csv")
+# Config - cross-platform path resolution
+RAW_DIR = Path(__file__).parent.parent / "data" / "raw"
+OUTPUT_FILE = RAW_DIR / "weather_daily.csv"
 START_DATE = "2019-01-01"
 END_DATE = datetime.now().strftime("%Y-%m-%d")
 
@@ -18,8 +19,7 @@ CITIES = {
 }
 
 def ensure_directories():
-    if not os.path.exists(RAW_DIR):
-        os.makedirs(RAW_DIR)
+    RAW_DIR.mkdir(parents=True, exist_ok=True)
 
 def generate_weather_data():
     print("🌦️ Generating mock Weather data...")

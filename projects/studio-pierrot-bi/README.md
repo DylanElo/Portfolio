@@ -21,6 +21,8 @@ This project demonstrates end-to-end BI workflow by combining **domestic (Japan)
 
 ## 🎯 Delivered Capabilities
 
+![Studio Pierrot BI Dashboard](./docs/images/dashboard_preview.png)
+
 This project demonstrates a complete BI workflow from requirements to dashboard delivery:
 
 ### 📊 Interactive Multi-Tab Dashboard
@@ -95,21 +97,46 @@ This project demonstrates a complete BI workflow from requirements to dashboard 
 - **Live:** Visit [GitHub Pages deployment](https://dylanelo.github.io/Portfolio/projects/studio-pierrot-bi/dashboard/index.html)
 
 ### Run ETL Pipeline
+
+> **Note:** The ETL pipeline has been streamlined for ease of use. All commands below should work on first try.
+
 ```bash
 # Navigate to project directory
 cd projects/studio-pierrot-bi
 
-# 1. Extract fresh data from MAL
+# Install dependencies (one-time setup)
+pip install requests
+
+# === OPTION A: Quick Start (All-in-One) ===
+# This initializes the database and loads sample data in one step
+python etl/load.py
+
+# === OPTION B: Full Pipeline (Recommended for fresh data) ===
+# Step 1: Initialize database with warehouse schema (first time only)
+python etl/load.py
+
+# Step 2: Extract fresh data from MyAnimeList
 python etl/extract_mal.py
 
-# 2. Load into SQL Warehouse
+# Step 3: Load extracted data into warehouse
 python etl/load_warehouse.py
 
-# 3. Export to dashboard
-python etl/export_to_dashboard.py
+# Step 4: Export data for dashboard visualization
+python etl/export_dashboard_data.py
 ```
 
+**What each script does:**
+- `load.py` – Initializes SQLite database with `warehouse/schema.sql`, loads sample MAL data
+- `extract_mal.py` – Fetches latest anime data from Jikan API into `data/raw_mal_data.json`
+- `load_warehouse.py` – Transforms and loads data into star schema tables
+- `export_dashboard_data.py` – Exports warehouse data to `dashboard/data.js` for visualization
+
+**Legacy Scripts (For Reference Only):**
+- `etl/init_db.py` – Uses deprecated `model/schema.sql`; kept for transparency
+- `model/schema_v2.sql` – Experimental version; not used in production pipeline
+
 *Requires Python 3.x and `requests` library*
+
 
 ### Tableau Integration
 1. Import CSVs from `tableau_exports/` directory
