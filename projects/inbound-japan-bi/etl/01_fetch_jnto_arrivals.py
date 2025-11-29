@@ -4,7 +4,8 @@ import numpy as np
 from datetime import datetime, timedelta
 
 # Configuration
-RAW_DIR = r"..\data\raw"
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+RAW_DIR = os.path.join(BASE_DIR, "data", "raw")
 OUTPUT_FILE = os.path.join(RAW_DIR, "jnto_arrivals.csv")
 
 def ensure_directories():
@@ -25,9 +26,9 @@ def generate_mock_data():
         'Canada', 'Italy', 'Spain', 'Russia', 'India'
     ]
     
-    # Generate monthly data from Jan 2019 to Dec 2024
+    # Generate monthly data from Jan 2019 to Dec 2025
     start_date = datetime(2019, 1, 1)
-    end_date = datetime(2024, 12, 1)
+    end_date = datetime(2025, 12, 1)
     
     records = []
     current_date = start_date

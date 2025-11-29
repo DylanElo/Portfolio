@@ -27,3 +27,9 @@ projects/studio-pierrot-bi/warehouse/pierrot_bi.sqlite
 *.njsproj
 *.sln
 *.sw?
+# Inbound BI artifacts
+projects/inbound-japan-bi/data/**/*.csv
+projects/inbound-japan-bi/data/**/*.db
+projects/inbound-japan-bi/data/**/*.parquet
+projects/inbound-japan-bi/warehouse/*.sqlite
+projects/inbound-japan-bi/dashboard/data/*.json
