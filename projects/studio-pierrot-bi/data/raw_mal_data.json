@@ -88,11 +88,11 @@
     "duration": "23 min per ep",
     "rating": "PG-13 - Teens 13 or older",
     "score": 8.29,
-    "scored_by": 1795614,
+    "scored_by": 1796057,
     "rank": 320,
     "popularity": 15,
-    "members": 2703327,
-    "favorites": 119110,
+    "members": 2703983,
+    "favorites": 119125,
     "synopsis": "It has been two and a half years since Naruto Uzumaki left Konohagakure, the Hidden Leaf Village, for intense training following events which fueled his desire to be stronger. Now Akatsuki, the mysterious organization of elite rogue ninja, is closing in on their grand plan which may threaten the safety of the entire shinobi world.\n \nAlthough Naruto is older and sinister events loom on the horizon, he has changed little in personality—still rambunctious and childish—though he is now far more confident and possesses an even greater determination to protect his friends and home. Come whatever may, Naruto will carry on with the fight for what is important to him, even at the expense of his own body, in the continuation of the saga about the boy who wishes to become Hokage.\n\n[Written by MAL Rewrite]",
     "background": "",
     "season": "winter",
@@ -536,11 +536,11 @@
     "duration": "23 min per ep",
     "rating": "PG-13 - Teens 13 or older",
     "score": 8.02,
-    "scored_by": 2112264,
+    "scored_by": 2112794,
     "rank": 686,
     "popularity": 9,
-    "members": 3071206,
-    "favorites": 85331,
+    "members": 3071977,
+    "favorites": 85342,
     "synopsis": "Twelve years ago, a colossal demon fox terrorized the world. During the monster's attack on the Hidden Leaf Village, the Hokage—the village's leader and most powerful ninja—sacrifices himself to seal the beast inside a newborn, relieving civilization from destruction while dooming the baby to a lonely life.\n\nNow, after years of being shunned and bullied, Naruto Uzumaki pesters the village with elaborate pranks and vandalism. Despite these antics, he works hard to achieve his dream: to become the Hokage and earn the acknowledgement of those who have mistreated him for his entire life. Naruto joins Team 7, a ninja squad made up of two of his peers—prodigy Sasuke Uchiha and clever Sakura Haruno.\n\nUnder the aloof Kakashi Hatake's leadership, Team 7 takes on a series of difficult missions, forcing its members to grow in strength and comradery despite their many differences. Naruto strives to stand out in his rivalry with Sasuke and earn the romantic affection of Sakura. But as the trio brush against danger and death, their tragic pasts threaten to tear them apart.\n\n[Written by MAL Rewrite]",
     "background": "Naruto received numerous awards during its airing, including the Best Full-Length Animation Program Award in the third UStv Awards and the 38th Best Animated Show in IGN's Top 100 Animated Series. The anime was released on DVD in 16 volumes by VIZ Media from July 4, 2006, to September 22, 2009. The company rereleased it in eight volumes from October 6, 2009, to December 14, 2010. VIZ Media also made available a Blu-ray version in eight volumes from November 3, 2020, to October 18, 2022. The series adapts the first 27 volumes of the original manga.",
     "season": "fall",
@@ -770,6 +770,655 @@
     ]
   },
   {
+    "mal_id": 269,
+    "url": "https://myanimelist.net/anime/269/Bleach",
+    "images": {
+      "jpg": {
+        "image_url": "https://cdn.myanimelist.net/images/anime/1541/147774.jpg",
+        "small_image_url": "https://cdn.myanimelist.net/images/anime/1541/147774t.jpg",
+        "large_image_url": "https://cdn.myanimelist.net/images/anime/1541/147774l.jpg"
+      },
+      "webp": {
+        "image_url": "https://cdn.myanimelist.net/images/anime/1541/147774.webp",
+        "small_image_url": "https://cdn.myanimelist.net/images/anime/1541/147774t.webp",
+        "large_image_url": "https://cdn.myanimelist.net/images/anime/1541/147774l.webp"
+      }
+    },
+    "trailer": {
+      "youtube_id": null,
+      "url": null,
+      "embed_url": "https://www.youtube-nocookie.com/embed/0yk5H6vvfG4?enablejsapi=1&wmode=opaque&autoplay=1",
+      "images": {
+        "image_url": null,
+        "small_image_url": null,
+        "medium_image_url": null,
+        "large_image_url": null,
+        "maximum_image_url": null
+      }
+    },
+    "approved": true,
+    "titles": [
+      {
+        "type": "Default",
+        "title": "Bleach"
+      },
+      {
+        "type": "Japanese",
+        "title": "BLEACH - ブリーチ -"
+      },
+      {
+        "type": "English",
+        "title": "Bleach"
+      }
+    ],
+    "title": "Bleach",
+    "title_english": "Bleach",
+    "title_japanese": "BLEACH - ブリーチ -",
+    "title_synonyms": [],
+    "type": "TV",
+    "source": "Manga",
+    "episodes": 366,
+    "status": "Finished Airing",
+    "airing": false,
+    "aired": {
+      "from": "2004-10-05T00:00:00+00:00",
+      "to": "2012-03-27T00:00:00+00:00",
+      "prop": {
+        "from": {
+          "day": 5,
+          "month": 10,
+          "year": 2004
+        },
+        "to": {
+          "day": 27,
+          "month": 3,
+          "year": 2012
+        }
+      },
+      "string": "Oct 5, 2004 to Mar 27, 2012"
+    },
+    "duration": "24 min per ep",
+    "rating": "PG-13 - Teens 13 or older",
+    "score": 7.98,
+    "scored_by": 1239680,
+    "rank": 736,
+    "popularity": 35,
+    "members": 2167374,
+    "favorites": 82075,
+    "synopsis": "Ichigo Kurosaki is an ordinary high schooler—until his family is attacked by a Hollow, a corrupt spirit that seeks to devour human souls. It is then that he meets a Soul Reaper named Rukia Kuchiki, who gets injured while protecting Ichigo's family from the assailant. To save his family, Ichigo accepts Rukia's offer of taking her powers and becomes a Soul Reaper as a result.\n\nHowever, as Rukia is unable to regain her powers, Ichigo is given the daunting task of hunting down the Hollows that plague their town. However, he is not alone in his fight, as he is later joined by his friends—classmates Orihime Inoue, Yasutora Sado, and Uryuu Ishida—who each have their own unique abilities. As Ichigo and his comrades get used to their new duties and support each other on and off the battlefield, the young Soul Reaper soon learns that the Hollows are not the only real threat to the human world.\n\n[Written by MAL Rewrite]",
+    "background": "Bleach adapts the first 54 volumes of Tite Kubo's manga series of the same name. In addition, 4 anime-original arcs were broadcast in-between and during the adaptations of original arcs of the manga.",
+    "season": "fall",
+    "year": 2004,
+    "broadcast": {
+      "day": "Tuesdays",
+      "time": "18:00",
+      "timezone": "Asia/Tokyo",
+      "string": "Tuesdays at 18:00 (JST)"
+    },
+    "producers": [
+      {
+        "mal_id": 16,
+        "type": "anime",
+        "name": "TV Tokyo",
+        "url": "https://myanimelist.net/anime/producer/16/TV_Tokyo"
+      },
+      {
+        "mal_id": 17,
+        "type": "anime",
+        "name": "Aniplex",
+        "url": "https://myanimelist.net/anime/producer/17/Aniplex"
+      },
+      {
+        "mal_id": 53,
+        "type": "anime",
+        "name": "Dentsu",
+        "url": "https://myanimelist.net/anime/producer/53/Dentsu"
+      },
+      {
+        "mal_id": 717,
+        "type": "anime",
+        "name": "TV Tokyo Music",
+        "url": "https://myanimelist.net/anime/producer/717/TV_Tokyo_Music"
+      },
+      {
+        "mal_id": 1365,
+        "type": "anime",
+        "name": "Shueisha",
+        "url": "https://myanimelist.net/anime/producer/1365/Shueisha"
+      }
+    ],
+    "licensors": [
+      {
+        "mal_id": 119,
+        "type": "anime",
+        "name": "VIZ Media",
+        "url": "https://myanimelist.net/anime/producer/119/VIZ_Media"
+      }
+    ],
+    "studios": [
+      {
+        "mal_id": 1,
+        "type": "anime",
+        "name": "Studio Pierrot",
+        "url": "https://myanimelist.net/anime/producer/1/Studio_Pierrot"
+      }
+    ],
+    "genres": [
+      {
+        "mal_id": 1,
+        "type": "anime",
+        "name": "Action",
+        "url": "https://myanimelist.net/anime/genre/1/Action"
+      },
+      {
+        "mal_id": 2,
+        "type": "anime",
+        "name": "Adventure",
+        "url": "https://myanimelist.net/anime/genre/2/Adventure"
+      },
+      {
+        "mal_id": 37,
+        "type": "anime",
+        "name": "Supernatural",
+        "url": "https://myanimelist.net/anime/genre/37/Supernatural"
+      }
+    ],
+    "explicit_genres": [],
+    "themes": [],
+    "demographics": [
+      {
+        "mal_id": 27,
+        "type": "anime",
+        "name": "Shounen",
+        "url": "https://myanimelist.net/anime/genre/27/Shounen"
+      }
+    ],
+    "relations": [
+      {
+        "relation": "Sequel",
+        "entry": [
+          {
+            "mal_id": 41467,
+            "type": "anime",
+            "name": "Bleach: Sennen Kessen-hen",
+            "url": "https://myanimelist.net/anime/41467/Bleach__Sennen_Kessen-hen"
+          }
+        ]
+      },
+      {
+        "relation": "Adaptation",
+        "entry": [
+          {
+            "mal_id": 12,
+            "type": "manga",
+            "name": "Bleach",
+            "url": "https://myanimelist.net/manga/12/Bleach"
+          }
+        ]
+      },
+      {
+        "relation": "Side Story",
+        "entry": [
+          {
+            "mal_id": 762,
+            "type": "anime",
+            "name": "Bleach: Memories in the Rain",
+            "url": "https://myanimelist.net/anime/762/Bleach__Memories_in_the_Rain"
+          },
+          {
+            "mal_id": 834,
+            "type": "anime",
+            "name": "Bleach: The Sealed Sword Frenzy",
+            "url": "https://myanimelist.net/anime/834/Bleach__The_Sealed_Sword_Frenzy"
+          },
+          {
+            "mal_id": 1686,
+            "type": "anime",
+            "name": "Bleach Movie 1: Memories of Nobody",
+            "url": "https://myanimelist.net/anime/1686/Bleach_Movie_1__Memories_of_Nobody"
+          },
+          {
+            "mal_id": 2889,
+            "type": "anime",
+            "name": "Bleach Movie 2: The DiamondDust Rebellion - Mou Hitotsu no Hyourinmaru",
+            "url": "https://myanimelist.net/anime/2889/Bleach_Movie_2__The_DiamondDust_Rebellion_-_Mou_Hitotsu_no_Hyourinmaru"
+          },
+          {
+            "mal_id": 35118,
+            "type": "anime",
+            "name": "Bleach KaraBuri!: Gotei Juusan Yatai Daisakusen!",
+            "url": "https://myanimelist.net/anime/35118/Bleach_KaraBuri__Gotei_Juusan_Yatai_Daisakusen"
+          },
+          {
+            "mal_id": 4835,
+            "type": "anime",
+            "name": "Bleach Movie 3: Fade to Black - Kimi no Na wo Yobu",
+            "url": "https://myanimelist.net/anime/4835/Bleach_Movie_3__Fade_to_Black_-_Kimi_no_Na_wo_Yobu"
+          },
+          {
+            "mal_id": 8247,
+            "type": "anime",
+            "name": "Bleach Movie 4: Jigoku-hen",
+            "url": "https://myanimelist.net/anime/8247/Bleach_Movie_4__Jigoku-hen"
+          }
+        ]
+      },
+      {
+        "relation": "Summary",
+        "entry": [
+          {
+            "mal_id": 54171,
+            "type": "anime",
+            "name": "Bleach: Shuku! Rukia Dakkan! Kagayaku! Shinigami Juuban Shoubu! Mitai Shinigami Doon to Misemasu Special",
+            "url": "https://myanimelist.net/anime/54171/Bleach__Shuku_Rukia_Dakkan_Kagayaku_Shinigami_Juuban_Shoubu_Mitai_Shinigami_Doon_to_Misemasu_Special"
+          }
+        ]
+      },
+      {
+        "relation": "Alternative Setting",
+        "entry": [
+          {
+            "mal_id": 41468,
+            "type": "anime",
+            "name": "Burn the Witch",
+            "url": "https://myanimelist.net/anime/41468/Burn_the_Witch"
+          }
+        ]
+      },
+      {
+        "relation": "Other",
+        "entry": [
+          {
+            "mal_id": 38810,
+            "type": "anime",
+            "name": "Bleach: Gotei 13 Omake",
+            "url": "https://myanimelist.net/anime/38810/Bleach__Gotei_13_Omake"
+          },
+          {
+            "mal_id": 60048,
+            "type": "anime",
+            "name": "Bleach 20th PV",
+            "url": "https://myanimelist.net/anime/60048/Bleach_20th_PV"
+          }
+        ]
+      }
+    ],
+    "theme": {
+      "openings": [
+        "1: \"*Asterisk (*～アスタリスク～)\" by Orange Range (eps 1-25)",
+        "2: \"D-tecnolife\" by UVERworld (eps 26-51)",
+        "3: \"Ichirin no Hana (一輪の花)\" by High and Mighty Color (eps 52-74)",
+        "4: \"Tonight, Tonight, Tonight\" by Beat Crusaders (eps 75-97)",
+        "5: \"Rolling star\" by YUI (eps 98-120)",
+        "6: \"ALONES\" by Aqua Timez (eps 121-143)",
+        "7: \"After Dark (アフターダーク)\" by Asian Kung-Fu Generation (eps 144-167)",
+        "8: \"CHU-BURA\" by Kelun (eps 168-189)",
+        "9: \"Velonica\" by Aqua Timez (eps 190-214)",
+        "10: \"Shoujo S (少女S)\" by Scandal (eps 215-242)",
+        "11: \"Anima Rossa (アニマロッサ)\" by Porno Graffitti (eps 243-265)",
+        "12: \"chAngE\" by miwa (eps 266-291)",
+        "13: \"Ranbu no Melody (乱舞のメロディ)\" by SID (eps 292-316)",
+        "14: \"BLUE\" by ViViD (eps 317-342)",
+        "15: \"HARUKAZE\" by Scandal (eps 343-366)"
+      ],
+      "endings": [
+        "1: \"Life is Like a Boat\" by Rie Fu (eps 1-13)",
+        "2: \"Thank You!! (サンキュー!!)\" by HOME MADE KAZOKU (eps 14-26)",
+        "3: \"Houkiboshi (ほうき星)\" by Younha (eps 26-38)",
+        "4: \"Happy People\" by Skoop on Somebody (eps 39-51)",
+        "5: \"Life\" by YUI (eps 52-63)",
+        "6: \"My Pace (マイペース)\" by SunSet Swish (eps 64-74)",
+        "7: \"Hanabi\" by Ikimonogakari (eps 75-86)",
+        "8: \"MOVIN!!\" by Takacha (eps 87-97)",
+        "9: \"Baby It's You\" by JUNE (eps 98-109)",
+        "10: \"Sakura Biyori (桜日和)\" by Mai Hoshimura (eps 110120)",
+        "11: \"Tsumasaki (爪先)\" by Ore Ska Band (eps 121-131)",
+        "12: \"Daidai (橙)\" by chatmonchy (eps 132-143)",
+        "13: \"Tane wo Maku Hibi (種をまく日々)\" by Atari Kousuke (eps 144-154)",
+        "14: \"Kansha. (感謝.)\" by RSP a.k.a Real Street Project (eps 155-167)",
+        "15: \"Orange (オレンジ)\" by Lil'B a.k.a MIE&AILA (eps 168-179)",
+        "16: \"Gallop (ギャロップ)\" by pe'zmoku (eps 180-189)",
+        "17: \"Hitohira no Hanabira (ヒトヒラのハナビラ)\" by STEREOPONY (eps 190-201)",
+        "18: \"Sky Chord ~Otona ni Naru Kimi he~ (Sky chord~大人になる君へ~)\" by Tsuji Shion (eps 202-214)",
+        "19: \"Kimi wo Mamotte, Kimi wo Aishite (君を守って, 君を愛して)\" by Sambomaster (eps 215-229)",
+        "20: \"Mad Surfer\" by Kenichi Asai (eps 230-242)",
+        "21: \"Sakurabito (さくらびと)\" by SunSet Swish (eps 243-255)",
+        "22: \"Tabidatsu Kimi e (旅立つキミへ)\" by RSP (eps 256-265)",
+        "23: \"Stay Beautiful\" by Diggy-MO' (eps 266-278)",
+        "24: \"Echoes\" by universe (eps 279-291)",
+        "25: \"Last Moment\" by SPYAIR (eps 292-303)",
+        "26: \"Song for...\" by ROOKiEZ is PUNK’D (eps 304-316)",
+        "27: \"Aoi Tori (アオイトリ)\" by fumika (eps 317-329)",
+        "28: \"Haruka Kanata (ハルカカナタ)\" by UNLIMITS (eps 330-342)",
+        "29: \"Re:pray\" by Aimer (eps 343-354)",
+        "30: \"Mask\" by Aqua Timez (eps 355-366)"
+      ]
+    },
+    "external": [
+      {
+        "name": "Official Site",
+        "url": "http://www.tv-tokyo.co.jp/anime/bleach/"
+      },
+      {
+        "name": "AniDB",
+        "url": "https://anidb.net/perl-bin/animedb.pl?show=anime&aid=2369"
+      },
+      {
+        "name": "ANN",
+        "url": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=4240"
+      },
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Bleach_(TV_series)"
+      },
+      {
+        "name": "Bangumi",
+        "url": "https://bangumi.tv/subject/1600"
+      }
+    ],
+    "streaming": [
+      {
+        "name": "Crunchyroll",
+        "url": "http://www.crunchyroll.com/series-42854"
+      },
+      {
+        "name": "Netflix",
+        "url": "https://www.netflix.com/title/70204957"
+      },
+      {
+        "name": "Animax Mongolia",
+        "url": "https://www.animax.app/"
+      },
+      {
+        "name": "Shahid",
+        "url": "https://shahid.mbc.net/en/series/Bleach/series-913427"
+      }
+    ]
+  },
+  {
+    "mal_id": 41467,
+    "url": "https://myanimelist.net/anime/41467/Bleach__Sennen_Kessen-hen",
+    "images": {
+      "jpg": {
+        "image_url": "https://cdn.myanimelist.net/images/anime/1908/135431.jpg",
+        "small_image_url": "https://cdn.myanimelist.net/images/anime/1908/135431t.jpg",
+        "large_image_url": "https://cdn.myanimelist.net/images/anime/1908/135431l.jpg"
+      },
+      "webp": {
+        "image_url": "https://cdn.myanimelist.net/images/anime/1908/135431.webp",
+        "small_image_url": "https://cdn.myanimelist.net/images/anime/1908/135431t.webp",
+        "large_image_url": "https://cdn.myanimelist.net/images/anime/1908/135431l.webp"
+      }
+    },
+    "trailer": {
+      "youtube_id": null,
+      "url": null,
+      "embed_url": "https://www.youtube-nocookie.com/embed/e8YBesRKq_U?enablejsapi=1&wmode=opaque&autoplay=1",
+      "images": {
+        "image_url": null,
+        "small_image_url": null,
+        "medium_image_url": null,
+        "large_image_url": null,
+        "maximum_image_url": null
+      }
+    },
+    "approved": true,
+    "titles": [
+      {
+        "type": "Default",
+        "title": "Bleach: Sennen Kessen-hen"
+      },
+      {
+        "type": "Synonym",
+        "title": "Bleach: Thousand-Year Blood War Arc"
+      },
+      {
+        "type": "Japanese",
+        "title": "BLEACH 千年血戦篇"
+      },
+      {
+        "type": "English",
+        "title": "Bleach: Thousand-Year Blood War"
+      }
+    ],
+    "title": "Bleach: Sennen Kessen-hen",
+    "title_english": "Bleach: Thousand-Year Blood War",
+    "title_japanese": "BLEACH 千年血戦篇",
+    "title_synonyms": [
+      "Bleach: Thousand-Year Blood War Arc"
+    ],
+    "type": "TV",
+    "source": "Manga",
+    "episodes": 13,
+    "status": "Finished Airing",
+    "airing": false,
+    "aired": {
+      "from": "2022-10-11T00:00:00+00:00",
+      "to": "2022-12-27T00:00:00+00:00",
+      "prop": {
+        "from": {
+          "day": 11,
+          "month": 10,
+          "year": 2022
+        },
+        "to": {
+          "day": 27,
+          "month": 12,
+          "year": 2022
+        }
+      },
+      "string": "Oct 11, 2022 to Dec 27, 2022"
+    },
+    "duration": "24 min per ep",
+    "rating": "R - 17+ (violence & profanity)",
+    "score": 8.98,
+    "scored_by": 366116,
+    "rank": 13,
+    "popularity": 348,
+    "members": 680398,
+    "favorites": 22915,
+    "synopsis": "Substitute Soul Reaper Ichigo Kurosaki spends his days fighting against Hollows, dangerous evil spirits that threaten Karakura Town. Ichigo carries out his quest with his closest allies: Orihime Inoue, his childhood friend with a talent for healing; Yasutora Sado, his high school classmate with superhuman strength; and Uryuu Ishida, Ichigo's Quincy rival.\n\nIchigo's vigilante routine is disrupted by the sudden appearance of Asguiaro Ebern, a dangerous Arrancar who heralds the return of Yhwach, an ancient Quincy king. Yhwach seeks to reignite the historic blood feud between Soul Reaper and Quincy, and he sets his sights on erasing both the human world and the Soul Society for good.\n\nYhwach launches a two-pronged invasion into both the Soul Society and Hueco Mundo, the home of Hollows and Arrancar. In retaliation, Ichigo and his friends must fight alongside old allies and enemies alike to end Yhwach's campaign of carnage before the world itself comes to an end.\n\n[Written by MAL Rewrite]",
+    "background": "Bleach: Sennen Kessen-hen adapts volume 55 to volume 61 of the original manga. It was released on Blu-ray on April 26, 2023.",
+    "season": "fall",
+    "year": 2022,
+    "broadcast": {
+      "day": "Tuesdays",
+      "time": "00:00",
+      "timezone": "Asia/Tokyo",
+      "string": "Tuesdays at 00:00 (JST)"
+    },
+    "producers": [
+      {
+        "mal_id": 16,
+        "type": "anime",
+        "name": "TV Tokyo",
+        "url": "https://myanimelist.net/anime/producer/16/TV_Tokyo"
+      },
+      {
+        "mal_id": 17,
+        "type": "anime",
+        "name": "Aniplex",
+        "url": "https://myanimelist.net/anime/producer/17/Aniplex"
+      },
+      {
+        "mal_id": 53,
+        "type": "anime",
+        "name": "Dentsu",
+        "url": "https://myanimelist.net/anime/producer/53/Dentsu"
+      },
+      {
+        "mal_id": 1365,
+        "type": "anime",
+        "name": "Shueisha",
+        "url": "https://myanimelist.net/anime/producer/1365/Shueisha"
+      }
+    ],
+    "licensors": [
+      {
+        "mal_id": 119,
+        "type": "anime",
+        "name": "VIZ Media",
+        "url": "https://myanimelist.net/anime/producer/119/VIZ_Media"
+      }
+    ],
+    "studios": [
+      {
+        "mal_id": 1,
+        "type": "anime",
+        "name": "Studio Pierrot",
+        "url": "https://myanimelist.net/anime/producer/1/Studio_Pierrot"
+      }
+    ],
+    "genres": [
+      {
+        "mal_id": 1,
+        "type": "anime",
+        "name": "Action",
+        "url": "https://myanimelist.net/anime/genre/1/Action"
+      },
+      {
+        "mal_id": 2,
+        "type": "anime",
+        "name": "Adventure",
+        "url": "https://myanimelist.net/anime/genre/2/Adventure"
+      },
+      {
+        "mal_id": 37,
+        "type": "anime",
+        "name": "Supernatural",
+        "url": "https://myanimelist.net/anime/genre/37/Supernatural"
+      }
+    ],
+    "explicit_genres": [],
+    "themes": [],
+    "demographics": [
+      {
+        "mal_id": 27,
+        "type": "anime",
+        "name": "Shounen",
+        "url": "https://myanimelist.net/anime/genre/27/Shounen"
+      }
+    ],
+    "relations": [
+      {
+        "relation": "Prequel",
+        "entry": [
+          {
+            "mal_id": 269,
+            "type": "anime",
+            "name": "Bleach",
+            "url": "https://myanimelist.net/anime/269/Bleach"
+          }
+        ]
+      },
+      {
+        "relation": "Sequel",
+        "entry": [
+          {
+            "mal_id": 53998,
+            "type": "anime",
+            "name": "Bleach: Sennen Kessen-hen - Ketsubetsu-tan",
+            "url": "https://myanimelist.net/anime/53998/Bleach__Sennen_Kessen-hen_-_Ketsubetsu-tan"
+          }
+        ]
+      },
+      {
+        "relation": "Adaptation",
+        "entry": [
+          {
+            "mal_id": 12,
+            "type": "manga",
+            "name": "Bleach",
+            "url": "https://myanimelist.net/manga/12/Bleach"
+          }
+        ]
+      },
+      {
+        "relation": "Other",
+        "entry": [
+          {
+            "mal_id": 51060,
+            "type": "anime",
+            "name": "Rapport",
+            "url": "https://myanimelist.net/anime/51060/Rapport"
+          },
+          {
+            "mal_id": 60049,
+            "type": "anime",
+            "name": "Reaper",
+            "url": "https://myanimelist.net/anime/60049/Reaper"
+          }
+        ]
+      }
+    ],
+    "theme": {
+      "openings": [
+        "\"Scar (スカー)\" by Tatsuya Kitani (キタニタツヤ) (eps 2-13)"
+      ],
+      "endings": [
+        "1: \"Rapport\" by Tatsuya Kitani (キタニタツヤ) (eps 1)",
+        "2: \"Saihate (最果て)\" by SennaRin (eps 2-12)",
+        "3: \"Number One - Bankai\" by Hazel Fernandes (eps 13)"
+      ]
+    },
+    "external": [
+      {
+        "name": "Official Site",
+        "url": "https://bleach-anime.com/"
+      },
+      {
+        "name": "@BLEACHanimation",
+        "url": "https://twitter.com/BLEACHanimation"
+      },
+      {
+        "name": "AniDB",
+        "url": "https://anidb.net/perl-bin/animedb.pl?show=anime&aid=15449"
+      },
+      {
+        "name": "ANN",
+        "url": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=25066"
+      },
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Bleach:_Thousand-Year_Blood_War"
+      },
+      {
+        "name": "Wikipedia",
+        "url": "https://ja.wikipedia.org/wiki/BLEACH_(アニメ)"
+      },
+      {
+        "name": "Syoboi",
+        "url": "https://cal.syoboi.jp/tid/6487"
+      },
+      {
+        "name": "Bangumi",
+        "url": "https://bangumi.tv/subject/302286"
+      }
+    ],
+    "streaming": [
+      {
+        "name": "Disney+",
+        "url": "https://www.disneyplus.com/"
+      },
+      {
+        "name": "Bahamut Anime Crazy",
+        "url": "https://ani.gamer.com.tw/"
+      },
+      {
+        "name": "Bilibili Global",
+        "url": "https://www.bilibili.tv/en/index"
+      },
+      {
+        "name": "Hulu",
+        "url": "https://www.hulu.com/"
+      },
+      {
+        "name": "Shahid",
+        "url": "https://shahid.mbc.net/"
+      }
+    ]
+  },
+  {
     "mal_id": 34572,
     "url": "https://myanimelist.net/anime/34572/Black_Clover",
     "images": {
@@ -840,11 +1489,11 @@
     "duration": "23 min per ep",
     "rating": "PG-13 - Teens 13 or older",
     "score": 8.14,
-    "scored_by": 962958,
-    "rank": 499,
+    "scored_by": 963162,
+    "rank": 495,
     "popularity": 55,
-    "members": 1863641,
-    "favorites": 50369,
+    "members": 1863978,
+    "favorites": 50373,
     "synopsis": "Asta and Yuno were abandoned at the same church on the same day. Raised together as children, they came to know of the \"Wizard King\"—a title given to the strongest mage in the kingdom—and promised that they would compete against each other for the position of the next Wizard King. However, as they grew up, the stark difference between them became evident. While Yuno is able to wield magic with amazing power and control, Asta cannot use magic at all and desperately tries to awaken his powers by training physically.\n\nWhen they reach the age of 15, Yuno is bestowed a spectacular Grimoire with a four-leaf clover, while Asta receives nothing. However, soon after, Yuno is attacked by a person named Lebuty, whose main purpose is to obtain Yuno's Grimoire. Asta tries to fight Lebuty, but he is outmatched. Though without hope and on the brink of defeat, he finds the strength to continue when he hears Yuno's voice. Unleashing his inner emotions in a rage, Asta receives a five-leaf clover Grimoire, a \"Black Clover\" giving him enough power to defeat Lebuty. A few days later, the two friends head out into the world, both seeking the same goal—to become the Wizard King!\n\n[Written by MAL Rewrite]",
     "background": "Black Clover adapts the first 27 volumes of the original manga.",
     "season": "fall",
@@ -1150,11 +1799,11 @@
     "duration": "24 min per ep",
     "rating": "R - 17+ (violence & profanity)",
     "score": 7.79,
-    "scored_by": 1979593,
-    "rank": 1136,
+    "scored_by": 1979923,
+    "rank": 1130,
     "popularity": 10,
-    "members": 3016424,
-    "favorites": 52622,
+    "members": 3016964,
+    "favorites": 52625,
     "synopsis": "A sinister threat is invading Tokyo: flesh-eating \"ghouls\" who appear identical to humans and blend into their population. Reserved college student Ken Kaneki buries his nose in books and avoids the news of the growing crisis. However, the appearance of an attractive woman named Rize Kamishiro shatters his solitude when she forwardly asks him on a date.\n\nWhile walking Rize home, Kaneki discovers she isn't as kind as she first appeared, and she has led him on with sinister intent. After a tragic struggle, he later awakens in a hospital to learn his life was saved by transplanting the now deceased Rize's organs into his own body.\n\nKaneki's body begins to change in horrifying ways, and he transforms into a human-ghoul hybrid. As he embarks on his new dreadful journey, Kaneki clings to his humanity in the evolving bloody conflict between society's new monsters and the government agents who hunt them.\n\n[Written by MAL Rewrite]",
     "background": "",
     "season": "summer",
@@ -1430,11 +2079,11 @@
     "duration": "24 min per ep",
     "rating": "R - 17+ (violence & profanity)",
     "score": 7.03,
-    "scored_by": 1260322,
-    "rank": 4475,
+    "scored_by": 1260420,
+    "rank": 4464,
     "popularity": 53,
-    "members": 1878981,
-    "favorites": 10747,
+    "members": 1879149,
+    "favorites": 10748,
     "synopsis": "Ken Kaneki has finally come to accept the monstrous, flesh-craving part of himself that he has feared and despised for so long. After escaping captivity and torture, Kaneki joins Aogiri Tree—the very militant ghoul organization that had abducted him, leading his friends to question his true motive and loyalty.\n\nAs tension between the government and the ghouls continues to rise, the Commission of Counter Ghoul, the government's specialized anti-ghoul agency, has intensified their efforts to completely purge Tokyo of ghouls. This threatens the transient peace of Kaneki's friends and former comrades—the ghouls at the Anteiku coffee shop. Aware of the dangerous situation, Kaneki faces several battles that puts his precious fleeting humanity on the line.\n\n[Written by MAL Rewrite]",
     "background": "Both the Tokyo Ghoul manga and Tokyo Ghoul √A anime concluded with the same last arc, but how the anime arrived at that ending diverged greatly from the source material. Besides changing the ending fight scene and the main major plot of the manga, which was the focus of many chapters in the manga, Tokyo Ghoul √A also features a watered-down and greatly changed version of the source manga's final arc. Episode 1 was previewed at a screening at TOHO Cinemas, Nihonbashi on January 4, 2015. Regular broadcasting began on January 9, 2015.",
     "season": "winter",
@@ -1607,6 +2256,931 @@
     ]
   },
   {
+    "mal_id": 34566,
+    "url": "https://myanimelist.net/anime/34566/Boruto__Naruto_Next_Generations",
+    "images": {
+      "jpg": {
+        "image_url": "https://cdn.myanimelist.net/images/anime/1091/99847.jpg",
+        "small_image_url": "https://cdn.myanimelist.net/images/anime/1091/99847t.jpg",
+        "large_image_url": "https://cdn.myanimelist.net/images/anime/1091/99847l.jpg"
+      },
+      "webp": {
+        "image_url": "https://cdn.myanimelist.net/images/anime/1091/99847.webp",
+        "small_image_url": "https://cdn.myanimelist.net/images/anime/1091/99847t.webp",
+        "large_image_url": "https://cdn.myanimelist.net/images/anime/1091/99847l.webp"
+      }
+    },
+    "trailer": {
+      "youtube_id": null,
+      "url": null,
+      "embed_url": null,
+      "images": {
+        "image_url": null,
+        "small_image_url": null,
+        "medium_image_url": null,
+        "large_image_url": null,
+        "maximum_image_url": null
+      }
+    },
+    "approved": true,
+    "titles": [
+      {
+        "type": "Default",
+        "title": "Boruto: Naruto Next Generations"
+      },
+      {
+        "type": "Japanese",
+        "title": "BORUTO -NARUTO NEXT GENERATIONS-"
+      },
+      {
+        "type": "English",
+        "title": "Boruto: Naruto Next Generations"
+      }
+    ],
+    "title": "Boruto: Naruto Next Generations",
+    "title_english": "Boruto: Naruto Next Generations",
+    "title_japanese": "BORUTO -NARUTO NEXT GENERATIONS-",
+    "title_synonyms": [],
+    "type": "TV",
+    "source": "Manga",
+    "episodes": 293,
+    "status": "Finished Airing",
+    "airing": false,
+    "aired": {
+      "from": "2017-04-05T00:00:00+00:00",
+      "to": "2023-03-26T00:00:00+00:00",
+      "prop": {
+        "from": {
+          "day": 5,
+          "month": 4,
+          "year": 2017
+        },
+        "to": {
+          "day": 26,
+          "month": 3,
+          "year": 2023
+        }
+      },
+      "string": "Apr 5, 2017 to Mar 26, 2023"
+    },
+    "duration": "23 min per ep",
+    "rating": "PG-13 - Teens 13 or older",
+    "score": 5.98,
+    "scored_by": 472070,
+    "rank": 10539,
+    "popularity": 215,
+    "members": 921542,
+    "favorites": 7428,
+    "synopsis": "Following the successful end of the Fourth Shinobi World War, Konohagakure has been enjoying a period of peace, prosperity, and extraordinary technological advancement. This is all due to the efforts of the Allied Shinobi Forces and the village's Seventh Hokage, Naruto Uzumaki. Now resembling a modern metropolis, Konohagakure has changed, particularly the life of a shinobi. Under the watchful eye of Naruto and his old comrades, a new generation of shinobi has stepped up to learn the ways of the ninja.\n\nBoruto Uzumaki is often the center of attention as the son of the Seventh Hokage. Despite having inherited Naruto's boisterous and stubborn demeanor, Boruto is considered a prodigy and is able to unleash his potential with the help of supportive friends and family. Unfortunately, this has only worsened his arrogance and his desire to surpass Naruto which, along with his father's busy lifestyle, has strained their relationship. However, a sinister force brewing within the village may threaten Boruto's carefree life.\n\nNew friends and familiar faces join Boruto as a new story begins.\n\n[Written by MAL Rewrite]",
+    "background": "",
+    "season": "spring",
+    "year": 2017,
+    "broadcast": {
+      "day": "Sundays",
+      "time": "17:30",
+      "timezone": "Asia/Tokyo",
+      "string": "Sundays at 17:30 (JST)"
+    },
+    "producers": [
+      {
+        "mal_id": 16,
+        "type": "anime",
+        "name": "TV Tokyo",
+        "url": "https://myanimelist.net/anime/producer/16/TV_Tokyo"
+      },
+      {
+        "mal_id": 17,
+        "type": "anime",
+        "name": "Aniplex",
+        "url": "https://myanimelist.net/anime/producer/17/Aniplex"
+      },
+      {
+        "mal_id": 211,
+        "type": "anime",
+        "name": "Rakuonsha",
+        "url": "https://myanimelist.net/anime/producer/211/Rakuonsha"
+      },
+      {
+        "mal_id": 1365,
+        "type": "anime",
+        "name": "Shueisha",
+        "url": "https://myanimelist.net/anime/producer/1365/Shueisha"
+      }
+    ],
+    "licensors": [
+      {
+        "mal_id": 119,
+        "type": "anime",
+        "name": "VIZ Media",
+        "url": "https://myanimelist.net/anime/producer/119/VIZ_Media"
+      }
+    ],
+    "studios": [
+      {
+        "mal_id": 1,
+        "type": "anime",
+        "name": "Studio Pierrot",
+        "url": "https://myanimelist.net/anime/producer/1/Studio_Pierrot"
+      }
+    ],
+    "genres": [
+      {
+        "mal_id": 1,
+        "type": "anime",
+        "name": "Action",
+        "url": "https://myanimelist.net/anime/genre/1/Action"
+      },
+      {
+        "mal_id": 2,
+        "type": "anime",
+        "name": "Adventure",
+        "url": "https://myanimelist.net/anime/genre/2/Adventure"
+      },
+      {
+        "mal_id": 10,
+        "type": "anime",
+        "name": "Fantasy",
+        "url": "https://myanimelist.net/anime/genre/10/Fantasy"
+      }
+    ],
+    "explicit_genres": [],
+    "themes": [
+      {
+        "mal_id": 17,
+        "type": "anime",
+        "name": "Martial Arts",
+        "url": "https://myanimelist.net/anime/genre/17/Martial_Arts"
+      }
+    ],
+    "demographics": [
+      {
+        "mal_id": 27,
+        "type": "anime",
+        "name": "Shounen",
+        "url": "https://myanimelist.net/anime/genre/27/Shounen"
+      }
+    ],
+    "relations": [
+      {
+        "relation": "Prequel",
+        "entry": [
+          {
+            "mal_id": 1735,
+            "type": "anime",
+            "name": "Naruto: Shippuuden",
+            "url": "https://myanimelist.net/anime/1735/Naruto__Shippuuden"
+          }
+        ]
+      },
+      {
+        "relation": "Sequel",
+        "entry": [
+          {
+            "mal_id": 54687,
+            "type": "anime",
+            "name": "Boruto: Naruto Next Generations Part 2",
+            "url": "https://myanimelist.net/anime/54687/Boruto__Naruto_Next_Generations_Part_2"
+          }
+        ]
+      },
+      {
+        "relation": "Adaptation",
+        "entry": [
+          {
+            "mal_id": 87866,
+            "type": "manga",
+            "name": "Naruto Gaiden: Nanadaime Hokage to Akairo no Hanatsuzuki",
+            "url": "https://myanimelist.net/manga/87866/Naruto_Gaiden__Nanadaime_Hokage_to_Akairo_no_Hanatsuzuki"
+          },
+          {
+            "mal_id": 95210,
+            "type": "manga",
+            "name": "Boruto: Naruto Next Generations",
+            "url": "https://myanimelist.net/manga/95210/Boruto__Naruto_Next_Generations"
+          },
+          {
+            "mal_id": 98462,
+            "type": "manga",
+            "name": "Naruto Shinden Series",
+            "url": "https://myanimelist.net/manga/98462/Naruto_Shinden_Series"
+          }
+        ]
+      },
+      {
+        "relation": "Side Story",
+        "entry": [
+          {
+            "mal_id": 35072,
+            "type": "anime",
+            "name": "Boruto: Jump Festa 2016 Special",
+            "url": "https://myanimelist.net/anime/35072/Boruto__Jump_Festa_2016_Special"
+          }
+        ]
+      },
+      {
+        "relation": "Alternative Version",
+        "entry": [
+          {
+            "mal_id": 28755,
+            "type": "anime",
+            "name": "Boruto: Naruto the Movie",
+            "url": "https://myanimelist.net/anime/28755/Boruto__Naruto_the_Movie"
+          },
+          {
+            "mal_id": 32365,
+            "type": "anime",
+            "name": "Boruto: Naruto the Movie - Naruto ga Hokage ni Natta Hi",
+            "url": "https://myanimelist.net/anime/32365/Boruto__Naruto_the_Movie_-_Naruto_ga_Hokage_ni_Natta_Hi"
+          }
+        ]
+      },
+      {
+        "relation": "Other",
+        "entry": [
+          {
+            "mal_id": 36564,
+            "type": "anime",
+            "name": "Kamiusagi Rope x Boruto: Naruto Next Generations",
+            "url": "https://myanimelist.net/anime/36564/Kamiusagi_Rope_x_Boruto__Naruto_Next_Generations"
+          }
+        ]
+      }
+    ],
+    "theme": {
+      "openings": [
+        "1: \"Baton Road (バトンロード)\" by KANA-BOON (eps 1-26)",
+        "2: \"OVER\" by Little Glee Monster (eps 27-51)",
+        "3: \"It's all in the game\" by Qyoto (eps 52-75)",
+        "4: \"Lonely Go!\" by Brian the Sun (eps 76-100)",
+        "5: \"Golden Time\" by Fujifabric (eps 101-126)",
+        "6: \"Teenage Dream (ティーンエイジドリーム)\" by miwa (eps 127-150)",
+        "7: \"Hajimatteiku Takamatteiku (はじまっていく たかまっていく)\" by Sambomaster (eps 151-180)",
+        "8: \"BAKU\" by ikimonogakari (いきものがかり) (eps 181-205)",
+        "9: \"Gamushara (我武者羅)\" by CHiCO with HoneyWorks (eps 206-230)",
+        "10: \"GOLD\" by FLOW (eps 231-255)",
+        "11: \"Kirarirari (きらりらり)\" by KANA-BOON (eps 256-281)",
+        "12: \"Shukuen (宿縁)\" by ASIAN KUNG-FU GENERATION (eps 282-293)"
+      ],
+      "endings": [
+        "1: \"Dreamy Journey (ドリーミージャーニー)\" by the peggies (eps 1-13)",
+        "2: \"Sayonara Moon Town (サヨナラムーンタウン)\" by Scenarioart (eps 14-26)",
+        "3: \"Boku wa Hashiritsuzukeru (僕は走り続ける)\" by Melofloat (メロフロート) (eps 27-39)",
+        "4: \"Denshin Tamashii (デンシンタマシイ)\" by Game Jikkyousha Wakuwaku Band (ゲーム実況者わくわくバンド) (eps 40-51)",
+        "5: \"Kachou Fuugetsu (花鳥風月)\" by Coala Mode. (eps 52-63)",
+        "6: \"Laika (ライカ)\" by Bird Bear Hare and Fish (eps 64-75)",
+        "7: \"Polaris (ポラリス)\" by hitorie (eps 76-87)",
+        "8: \"Tsuyogari LOSER (強がりLOSER)\" by ЯeaL (eps 88-100)",
+        "9: \"Ride or Die\" by Sky Peace (eps 101-113)",
+        "10: \"Mikansei na Hikari-tachi (未完成な光たち)\" by Haruka Fukuhara (福原遥) (eps 114-126)",
+        "11: \"Wish on\" by LONGMAN (eps 127-138)",
+        "12: \"Fireworks\" by FlowBack (eps 139-150)",
+        "13: \"Maybe I\" by Seven Billion Dots (eps 151-167)",
+        "14: \"Central (セントラル)\" by Ami Sakaguchi (坂口有望) (eps 168-180)",
+        "15: \"Answers\" by mol-74 (eps 181-192)",
+        "16: \"Kimi ga Ita Shirushi (キミがいたしるし)\" by halca (eps 193-205)",
+        "17: \"Who are you?\" by PELICAN FANCLUB (eps 206-218)",
+        "18: \"Prologue\" by JO1 (eps 219-230)",
+        "19: \"VOLTAGE\" by Anly (eps 231-242)",
+        "20: \"Twilight Fuzz\" by This Is Japan (eps 243-255)",
+        "21: \"Bibouroku (ビボウロク)\" by Lenny code fiction (eps 256-268)",
+        "22: \"Ladder\" by Anonymouz (eps 269-281)",
+        "23: \"Mata ne (またね)\" by Humbreaders (ハンブレッダーズ) (eps 282-293)"
+      ]
+    },
+    "external": [
+      {
+        "name": "Official Site",
+        "url": "http://www.tv-tokyo.co.jp/anime/boruto/"
+      },
+      {
+        "name": "@NARUTOtoBORUTO",
+        "url": "https://twitter.com/NARUTOtoBORUTO"
+      },
+      {
+        "name": "AniDB",
+        "url": "https://anidb.net/perl-bin/animedb.pl?show=anime&aid=12661"
+      },
+      {
+        "name": "ANN",
+        "url": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=18934"
+      },
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Boruto:_Naruto_Next_Generations"
+      },
+      {
+        "name": "Wikipedia",
+        "url": "https://ja.wikipedia.org/wiki/BORUTO-%E3%83%9C%E3%83%AB%E3%83%88-_-NARUTO_NEXT_GENERATIONS-"
+      }
+    ],
+    "streaming": [
+      {
+        "name": "Crunchyroll",
+        "url": "http://www.crunchyroll.com/series-282132"
+      },
+      {
+        "name": "Netflix",
+        "url": "https://www.netflix.com/"
+      }
+    ]
+  },
+  {
+    "mal_id": 40356,
+    "url": "https://myanimelist.net/anime/40356/Tate_no_Yuusha_no_Nariagari_Season_2",
+    "images": {
+      "jpg": {
+        "image_url": "https://cdn.myanimelist.net/images/anime/1143/121873.jpg",
+        "small_image_url": "https://cdn.myanimelist.net/images/anime/1143/121873t.jpg",
+        "large_image_url": "https://cdn.myanimelist.net/images/anime/1143/121873l.jpg"
+      },
+      "webp": {
+        "image_url": "https://cdn.myanimelist.net/images/anime/1143/121873.webp",
+        "small_image_url": "https://cdn.myanimelist.net/images/anime/1143/121873t.webp",
+        "large_image_url": "https://cdn.myanimelist.net/images/anime/1143/121873l.webp"
+      }
+    },
+    "trailer": {
+      "youtube_id": null,
+      "url": null,
+      "embed_url": "https://www.youtube-nocookie.com/embed/TA4OjH-RSeA?enablejsapi=1&wmode=opaque&autoplay=1",
+      "images": {
+        "image_url": null,
+        "small_image_url": null,
+        "medium_image_url": null,
+        "large_image_url": null,
+        "maximum_image_url": null
+      }
+    },
+    "approved": true,
+    "titles": [
+      {
+        "type": "Default",
+        "title": "Tate no Yuusha no Nariagari Season 2"
+      },
+      {
+        "type": "Synonym",
+        "title": "Tate no Yuusha no Nariagari 2nd Season"
+      },
+      {
+        "type": "Japanese",
+        "title": "盾の勇者の成り上がり Season2"
+      },
+      {
+        "type": "English",
+        "title": "The Rising of the Shield Hero Season 2"
+      }
+    ],
+    "title": "Tate no Yuusha no Nariagari Season 2",
+    "title_english": "The Rising of the Shield Hero Season 2",
+    "title_japanese": "盾の勇者の成り上がり Season2",
+    "title_synonyms": [
+      "Tate no Yuusha no Nariagari 2nd Season"
+    ],
+    "type": "TV",
+    "source": "Light novel",
+    "episodes": 13,
+    "status": "Finished Airing",
+    "airing": false,
+    "aired": {
+      "from": "2022-04-06T00:00:00+00:00",
+      "to": "2022-06-29T00:00:00+00:00",
+      "prop": {
+        "from": {
+          "day": 6,
+          "month": 4,
+          "year": 2022
+        },
+        "to": {
+          "day": 29,
+          "month": 6,
+          "year": 2022
+        }
+      },
+      "string": "Apr 6, 2022 to Jun 29, 2022"
+    },
+    "duration": "23 min per ep",
+    "rating": "PG-13 - Teens 13 or older",
+    "score": 6.53,
+    "scored_by": 324511,
+    "rank": 7223,
+    "popularity": 248,
+    "members": 853354,
+    "favorites": 12329,
+    "synopsis": "With another Wave happening in a week, Naofumi Iwatani and his party have no time to waste. However, when bat familiars raid Lurolona Village and the Wave countdown comes to a halt, the Four Cardinal Heroes reconvene with the queen, Mirelia Q Melromarc, for a quick briefing. The queen presumes that the odd occurrences are linked to the Spirit Tortoise—a threatening creature that has awakened from its slumber, back to cause havoc once again. A plan to put the Spirit Tortoise to rest is devised—but out of the four men, only the cursed Shield Hero agrees to help.\n\n[Written by MAL Rewrite]",
+    "background": "Tate no Yuusha no Nariagari Season 2 was set to premiere in October 2021, but was postponed due to various reasons. The series was released on Blu-ray and DVD in three volumes from July 27, 2022 to September 28, 2022.",
+    "season": "spring",
+    "year": 2022,
+    "broadcast": {
+      "day": "Wednesdays",
+      "time": "22:00",
+      "timezone": "Asia/Tokyo",
+      "string": "Wednesdays at 22:00 (JST)"
+    },
+    "producers": [
+      {
+        "mal_id": 61,
+        "type": "anime",
+        "name": "Frontier Works",
+        "url": "https://myanimelist.net/anime/producer/61/Frontier_Works"
+      },
+      {
+        "mal_id": 238,
+        "type": "anime",
+        "name": "AT-X",
+        "url": "https://myanimelist.net/anime/producer/238/AT-X"
+      },
+      {
+        "mal_id": 323,
+        "type": "anime",
+        "name": "Nippon Columbia",
+        "url": "https://myanimelist.net/anime/producer/323/Nippon_Columbia"
+      },
+      {
+        "mal_id": 1255,
+        "type": "anime",
+        "name": "Glovision",
+        "url": "https://myanimelist.net/anime/producer/1255/Glovision"
+      },
+      {
+        "mal_id": 1261,
+        "type": "anime",
+        "name": "Good Smile Company",
+        "url": "https://myanimelist.net/anime/producer/1261/Good_Smile_Company"
+      },
+      {
+        "mal_id": 1345,
+        "type": "anime",
+        "name": "Sammy",
+        "url": "https://myanimelist.net/anime/producer/1345/Sammy"
+      },
+      {
+        "mal_id": 1468,
+        "type": "anime",
+        "name": "Crunchyroll",
+        "url": "https://myanimelist.net/anime/producer/1468/Crunchyroll"
+      },
+      {
+        "mal_id": 1551,
+        "type": "anime",
+        "name": "Kadokawa Media House",
+        "url": "https://myanimelist.net/anime/producer/1551/Kadokawa_Media_House"
+      },
+      {
+        "mal_id": 1614,
+        "type": "anime",
+        "name": "NTT Plala",
+        "url": "https://myanimelist.net/anime/producer/1614/NTT_Plala"
+      },
+      {
+        "mal_id": 1696,
+        "type": "anime",
+        "name": "Kadokawa",
+        "url": "https://myanimelist.net/anime/producer/1696/Kadokawa"
+      }
+    ],
+    "licensors": [],
+    "studios": [
+      {
+        "mal_id": 290,
+        "type": "anime",
+        "name": "Kinema Citrus",
+        "url": "https://myanimelist.net/anime/producer/290/Kinema_Citrus"
+      },
+      {
+        "mal_id": 1575,
+        "type": "anime",
+        "name": "DR Movie",
+        "url": "https://myanimelist.net/anime/producer/1575/DR_Movie"
+      }
+    ],
+    "genres": [
+      {
+        "mal_id": 1,
+        "type": "anime",
+        "name": "Action",
+        "url": "https://myanimelist.net/anime/genre/1/Action"
+      },
+      {
+        "mal_id": 2,
+        "type": "anime",
+        "name": "Adventure",
+        "url": "https://myanimelist.net/anime/genre/2/Adventure"
+      },
+      {
+        "mal_id": 8,
+        "type": "anime",
+        "name": "Drama",
+        "url": "https://myanimelist.net/anime/genre/8/Drama"
+      },
+      {
+        "mal_id": 10,
+        "type": "anime",
+        "name": "Fantasy",
+        "url": "https://myanimelist.net/anime/genre/10/Fantasy"
+      }
+    ],
+    "explicit_genres": [],
+    "themes": [
+      {
+        "mal_id": 62,
+        "type": "anime",
+        "name": "Isekai",
+        "url": "https://myanimelist.net/anime/genre/62/Isekai"
+      }
+    ],
+    "demographics": [],
+    "relations": [
+      {
+        "relation": "Prequel",
+        "entry": [
+          {
+            "mal_id": 35790,
+            "type": "anime",
+            "name": "Tate no Yuusha no Nariagari",
+            "url": "https://myanimelist.net/anime/35790/Tate_no_Yuusha_no_Nariagari"
+          }
+        ]
+      },
+      {
+        "relation": "Sequel",
+        "entry": [
+          {
+            "mal_id": 40357,
+            "type": "anime",
+            "name": "Tate no Yuusha no Nariagari Season 3",
+            "url": "https://myanimelist.net/anime/40357/Tate_no_Yuusha_no_Nariagari_Season_3"
+          }
+        ]
+      },
+      {
+        "relation": "Adaptation",
+        "entry": [
+          {
+            "mal_id": 67615,
+            "type": "manga",
+            "name": "Tate no Yuusha no Nariagari",
+            "url": "https://myanimelist.net/manga/67615/Tate_no_Yuusha_no_Nariagari"
+          },
+          {
+            "mal_id": 67617,
+            "type": "manga",
+            "name": "Tate no Yuusha no Nariagari",
+            "url": "https://myanimelist.net/manga/67617/Tate_no_Yuusha_no_Nariagari"
+          }
+        ]
+      }
+    ],
+    "theme": {
+      "openings": [
+        "\"Bring Back\" by MADKID"
+      ],
+      "endings": [
+        "\"Yuzurenai (ゆずれない)\" by Chiai Fujikawa"
+      ]
+    },
+    "external": [
+      {
+        "name": "Official Site",
+        "url": "http://shieldhero-anime.jp/"
+      },
+      {
+        "name": "@shieldheroanime",
+        "url": "https://twitter.com/shieldheroanime"
+      },
+      {
+        "name": "AniDB",
+        "url": "https://anidb.net/perl-bin/animedb.pl?show=anime&aid=15070"
+      },
+      {
+        "name": "ANN",
+        "url": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=23602"
+      },
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/The_Rising_of_the_Shield_Hero#Anime"
+      },
+      {
+        "name": "Wikipedia",
+        "url": "https://ja.wikipedia.org/wiki/%E7%9B%BE%E3%81%AE%E5%8B%87%E8%80%85%E3%81%AE%E6%88%90%E3%82%8A%E4%B8%8A%E3%81%8C%E3%82%8A#%E3%83%86%E3%83%AC%E3%83%93%E3%82%A2%E3%83%8B%E3%83%A1"
+      },
+      {
+        "name": "Syoboi",
+        "url": "https://cal.syoboi.jp/tid/6321"
+      }
+    ],
+    "streaming": [
+      {
+        "name": "Crunchyroll",
+        "url": "http://www.crunchyroll.com/series-277339"
+      },
+      {
+        "name": "Netflix",
+        "url": "https://www.netflix.com/"
+      },
+      {
+        "name": "Ani-One Asia",
+        "url": "https://www.youtube.com/channel/UC0wNSTMWIL3qaorLx0jie6A"
+      },
+      {
+        "name": "Aniplus Asia",
+        "url": "https://www.aniplus-asia.com/"
+      },
+      {
+        "name": "Aniplus TV",
+        "url": "http://www.aniplustv.com/"
+      },
+      {
+        "name": "Bahamut Anime Crazy",
+        "url": "https://ani.gamer.com.tw/"
+      },
+      {
+        "name": "Bilibili Global",
+        "url": "https://www.bilibili.tv/en/index"
+      },
+      {
+        "name": "Hulu",
+        "url": "https://www.hulu.com/"
+      },
+      {
+        "name": "Laftel",
+        "url": "https://laftel.net/"
+      },
+      {
+        "name": "iQIYI",
+        "url": "https://www.iq.com/"
+      }
+    ]
+  },
+  {
+    "mal_id": 129,
+    "url": "https://myanimelist.net/anime/129/Gensoumaden_Saiyuuki",
+    "images": {
+      "jpg": {
+        "image_url": "https://cdn.myanimelist.net/images/anime/11/75282.jpg",
+        "small_image_url": "https://cdn.myanimelist.net/images/anime/11/75282t.jpg",
+        "large_image_url": "https://cdn.myanimelist.net/images/anime/11/75282l.jpg"
+      },
+      "webp": {
+        "image_url": "https://cdn.myanimelist.net/images/anime/11/75282.webp",
+        "small_image_url": "https://cdn.myanimelist.net/images/anime/11/75282t.webp",
+        "large_image_url": "https://cdn.myanimelist.net/images/anime/11/75282l.webp"
+      }
+    },
+    "trailer": {
+      "youtube_id": null,
+      "url": null,
+      "embed_url": null,
+      "images": {
+        "image_url": null,
+        "small_image_url": null,
+        "medium_image_url": null,
+        "large_image_url": null,
+        "maximum_image_url": null
+      }
+    },
+    "approved": true,
+    "titles": [
+      {
+        "type": "Default",
+        "title": "Gensoumaden Saiyuuki"
+      },
+      {
+        "type": "Synonym",
+        "title": "Gensou Maden Saiyuki"
+      },
+      {
+        "type": "Japanese",
+        "title": "幻想魔伝 最遊記"
+      },
+      {
+        "type": "English",
+        "title": "Saiyuki"
+      },
+      {
+        "type": "German",
+        "title": "Saiyuki"
+      },
+      {
+        "type": "Spanish",
+        "title": "Saiyuki"
+      }
+    ],
+    "title": "Gensoumaden Saiyuuki",
+    "title_english": "Saiyuki",
+    "title_japanese": "幻想魔伝 最遊記",
+    "title_synonyms": [
+      "Gensou Maden Saiyuki"
+    ],
+    "type": "TV",
+    "source": "Manga",
+    "episodes": 50,
+    "status": "Finished Airing",
+    "airing": false,
+    "aired": {
+      "from": "2000-04-04T00:00:00+00:00",
+      "to": "2001-03-27T00:00:00+00:00",
+      "prop": {
+        "from": {
+          "day": 4,
+          "month": 4,
+          "year": 2000
+        },
+        "to": {
+          "day": 27,
+          "month": 3,
+          "year": 2001
+        }
+      },
+      "string": "Apr 4, 2000 to Mar 27, 2001"
+    },
+    "duration": "23 min per ep",
+    "rating": "R - 17+ (violence & profanity)",
+    "score": 7.53,
+    "scored_by": 22174,
+    "rank": 1957,
+    "popularity": 3216,
+    "members": 58647,
+    "favorites": 800,
+    "synopsis": "Many years ago, humans and demons lived in harmony. But that unity ended when demons started attacking humans and plotted a mission to unleash Gyumao—an evil demon imprisoned for thousands of years. Now, Genjo Sanzo, a rogue priest, must team up with three demons—Sha Gojyo, Son Goku, and Cho Hakkai—and embark on a perilous journey to the west to stop these demons from resurrecting Gyumao and restore the balance between humans and demons on Earth.\n\n(Source: ANN)",
+    "background": "",
+    "season": "spring",
+    "year": 2000,
+    "broadcast": {
+      "day": "Tuesdays",
+      "time": "18:30",
+      "timezone": "Asia/Tokyo",
+      "string": "Tuesdays at 18:30 (JST)"
+    },
+    "producers": [
+      {
+        "mal_id": 16,
+        "type": "anime",
+        "name": "TV Tokyo",
+        "url": "https://myanimelist.net/anime/producer/16/TV_Tokyo"
+      },
+      {
+        "mal_id": 53,
+        "type": "anime",
+        "name": "Dentsu",
+        "url": "https://myanimelist.net/anime/producer/53/Dentsu"
+      },
+      {
+        "mal_id": 86,
+        "type": "anime",
+        "name": "Group TAC",
+        "url": "https://myanimelist.net/anime/producer/86/Group_TAC"
+      }
+    ],
+    "licensors": [
+      {
+        "mal_id": 97,
+        "type": "anime",
+        "name": "ADV Films",
+        "url": "https://myanimelist.net/anime/producer/97/ADV_Films"
+      }
+    ],
+    "studios": [
+      {
+        "mal_id": 1,
+        "type": "anime",
+        "name": "Studio Pierrot",
+        "url": "https://myanimelist.net/anime/producer/1/Studio_Pierrot"
+      }
+    ],
+    "genres": [
+      {
+        "mal_id": 1,
+        "type": "anime",
+        "name": "Action",
+        "url": "https://myanimelist.net/anime/genre/1/Action"
+      },
+      {
+        "mal_id": 2,
+        "type": "anime",
+        "name": "Adventure",
+        "url": "https://myanimelist.net/anime/genre/2/Adventure"
+      },
+      {
+        "mal_id": 8,
+        "type": "anime",
+        "name": "Drama",
+        "url": "https://myanimelist.net/anime/genre/8/Drama"
+      },
+      {
+        "mal_id": 10,
+        "type": "anime",
+        "name": "Fantasy",
+        "url": "https://myanimelist.net/anime/genre/10/Fantasy"
+      }
+    ],
+    "explicit_genres": [],
+    "themes": [],
+    "demographics": [
+      {
+        "mal_id": 27,
+        "type": "anime",
+        "name": "Shounen",
+        "url": "https://myanimelist.net/anime/genre/27/Shounen"
+      }
+    ],
+    "relations": [
+      {
+        "relation": "Prequel",
+        "entry": [
+          {
+            "mal_id": 2143,
+            "type": "anime",
+            "name": "Saiyuuki Reload: Burial",
+            "url": "https://myanimelist.net/anime/2143/Saiyuuki_Reload__Burial"
+          }
+        ]
+      },
+      {
+        "relation": "Sequel",
+        "entry": [
+          {
+            "mal_id": 130,
+            "type": "anime",
+            "name": "Saiyuuki Reload",
+            "url": "https://myanimelist.net/anime/130/Saiyuuki_Reload"
+          }
+        ]
+      },
+      {
+        "relation": "Adaptation",
+        "entry": [
+          {
+            "mal_id": 509,
+            "type": "manga",
+            "name": "Saiyuuki",
+            "url": "https://myanimelist.net/manga/509/Saiyuuki"
+          }
+        ]
+      },
+      {
+        "relation": "Side Story",
+        "entry": [
+          {
+            "mal_id": 3218,
+            "type": "anime",
+            "name": "Saiyuuki (OVA)",
+            "url": "https://myanimelist.net/anime/3218/Saiyuuki_OVA"
+          },
+          {
+            "mal_id": 484,
+            "type": "anime",
+            "name": "Gensoumaden Saiyuuki Movie: Requiem - Erabarezaru Mono e no Chinkonka",
+            "url": "https://myanimelist.net/anime/484/Gensoumaden_Saiyuuki_Movie__Requiem_-_Erabarezaru_Mono_e_no_Chinkonka"
+          },
+          {
+            "mal_id": 4476,
+            "type": "anime",
+            "name": "Gensoumaden Saiyuuki: Kibou no Zaika",
+            "url": "https://myanimelist.net/anime/4476/Gensoumaden_Saiyuuki__Kibou_no_Zaika"
+          }
+        ]
+      }
+    ],
+    "theme": {
+      "openings": [
+        "1: \"For Real\" by Hidenori Tokuyama (eps 1-26)",
+        "2: \"Still Time\" by Hidenori Tokuyama (eps 27-50)"
+      ],
+      "endings": [
+        "1: \"Tightrope\" by Charcoal Filter (eps 1-26)",
+        "2: \"Alone\" by Mikuni Shimokawa (eps 27-50)"
+      ]
+    },
+    "external": [
+      {
+        "name": "Official Site",
+        "url": "http://www.tv-tokyo.co.jp/saiyuki/"
+      },
+      {
+        "name": "AniDB",
+        "url": "https://anidb.net/perl-bin/animedb.pl?show=anime&aid=488"
+      },
+      {
+        "name": "ANN",
+        "url": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=965"
+      },
+      {
+        "name": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Gensomaden_Saiyuki"
+      }
+    ],
+    "streaming": [
+      {
+        "name": "HIDIVE",
+        "url": "https://www.hidive.com/tv/saiyuki"
+      },
+      {
+        "name": "Netflix",
+        "url": "https://www.netflix.com/"
+      }
+    ]
+  },
+  {
     "mal_id": 226,
     "url": "https://myanimelist.net/anime/226/Elfen_Lied",
     "images": {
@@ -1693,11 +3267,11 @@
     "duration": "25 min per ep",
     "rating": "R+ - Mild Nudity",
     "score": 7.46,
-    "scored_by": 915390,
-    "rank": 2220,
+    "scored_by": 915456,
+    "rank": 2243,
     "popularity": 80,
-    "members": 1600019,
-    "favorites": 24980,
+    "members": 1600150,
+    "favorites": 24986,
     "synopsis": "Lucy is a special breed of human referred to as Diclonius, born with a short pair of horns and invisible telekinetic hands that lands her as a victim of inhumane scientific experimentation by the government. However, once circumstances present her an opportunity to escape, Lucy, corrupted by the confinement and torture, unleashes a torrent of bloodshed as she escapes her captors.\n\nDuring her breakout, she receives a crippling head injury that leaves her with a split personality: someone with the mentality of a harmless child possessing limited speech capacity. In this state of instability, she stumbles upon two college students, Kouta and his cousin Yuka, who unknowingly take an injured fugitive into their care, unaware of her murderous tendencies. This act of kindness will change their lives, as they soon find themselves dragged into the shadowy world of government secrecy and conspiracy.\n\n[Written by MAL Rewrite]",
     "background": "Elfen Lied follows the source manga through the first seven volumes, with several alterations to the story, and concludes with an original ending. In an interview, director Mamoru Kanbe expressed his disappointment in having to condense the story into 13 episodes and felt that more were needed to include significant plot details that would have made the series more emotive. The artistic design of both the opening and ending sequences are heavily inspired by the works of Austrian symbolist painter Gustav Klimt. Colors and patterns resembling Klimt's distinct style were used and characters of the series were drawn to recreate several paintings from the artist's golden period, including The Kiss. The opening theme, \"LILIUM,\" which is sung in Ecclesiastical Latin, uses lyrics taken from The Bible, the Renaissance hymn \"Ave mundi spes Maria,\" as well as the alchemical compendium Theatrum Chemicum.",
     "season": "summer",
@@ -1970,11 +3544,11 @@
     "duration": "23 min per ep",
     "rating": "R - 17+ (violence & profanity)",
     "score": 8.52,
-    "scored_by": 1939474,
+    "scored_by": 1940353,
     "rank": 148,
     "popularity": 13,
-    "members": 2945444,
-    "favorites": 94869,
+    "members": 2946724,
+    "favorites": 94893,
     "synopsis": "Idly indulging in baseless paranormal activities with the Occult Club, high schooler Yuuji Itadori spends his days at either the clubroom or the hospital, where he visits his bedridden grandfather. However, this leisurely lifestyle soon takes a turn for the strange when he unknowingly encounters a cursed item. Triggering a chain of supernatural occurrences, Yuuji finds himself suddenly thrust into the world of Curses—dreadful beings formed from human malice and negativity—after swallowing the said item, revealed to be a finger belonging to the demon Sukuna Ryoumen, the King of Curses.\n\nYuuji experiences first-hand the threat these Curses pose to society as he discovers his own newfound powers. Introduced to the Tokyo Prefectural Jujutsu High School, he begins to walk down a path from which he cannot return—the path of a Jujutsu sorcerer.\n\n[Written by MAL Rewrite]",
     "background": "Winner of the Anime of the Year (TV Series) at the 2022 Tokyo Anime Award Festival (TAAF).",
     "season": "fall",
@@ -2277,11 +3851,11 @@
     "duration": "23 min per ep",
     "rating": "R - 17+ (violence & profanity)",
     "score": 8.42,
-    "scored_by": 2320973,
-    "rank": 202,
+    "scored_by": 2321617,
+    "rank": 208,
     "popularity": 5,
-    "members": 3380718,
-    "favorites": 94392,
+    "members": 3381674,
+    "favorites": 94395,
     "synopsis": "Ever since the death of his father, the burden of supporting the family has fallen upon Tanjirou Kamado's shoulders. Though living impoverished on a remote mountain, the Kamado family are able to enjoy a relatively peaceful and happy life. One day, Tanjirou decides to go down to the local village to make a little money selling charcoal. On his way back, night falls, forcing Tanjirou to take shelter in the house of a strange man, who warns him of the existence of flesh-eating demons that lurk in the woods at night.\n\nWhen he finally arrives back home the next day, he is met with a horrifying sight—his whole family has been slaughtered. Worse still, the sole survivor is his sister Nezuko, who has been turned into a bloodthirsty demon. Consumed by rage and hatred, Tanjirou swears to avenge his family and stay by his only remaining sibling. Alongside the mysterious group calling themselves the Demon Slayer Corps, Tanjirou will do whatever it takes to slay the demons and protect the remnants of his beloved sister's humanity.\n\n[Written by MAL Rewrite]",
     "background": "The anime covers chapters 1 to 53 of the manga. Kimetsu no Yaiba won the Animation of the Year award in the Television category at the Tokyo Anime Award Festival in 2020.",
     "season": "spring",
