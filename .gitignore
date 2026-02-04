@@ -16,9 +16,6 @@ dist-ssr
 projects/studio-pierrot-bi/**/*.db
 projects/studio-pierrot-bi/data/processed/**
 projects/studio-pierrot-bi/warehouse/pierrot_bi.sqlite
-projects/booking-calendar-bi/**/*.db
-projects/booking-calendar-bi/data/looker_export/
-
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
@@ -29,5 +26,4 @@ projects/booking-calendar-bi/data/looker_export/
 *.njsproj
 *.sln
 *.sw?
-projects/booking-calendar-bi/app/__pycache__/
 __pycache__/
