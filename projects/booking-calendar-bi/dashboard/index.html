@@ -11,138 +11,161 @@
 
 <body>
     <div class="container">
-        <!-- Navigation -->
         <nav class="top-nav">
             <a href="../../../index.html" class="btn-back">&larr; Return to Portfolio</a>
         </nav>
 
         <header>
             <h1>Booking Calendar BI Dashboard</h1>
-            <p class="subtitle">Operational Intelligence: Bookings, Revenue, Clients & Agent Performance</p>
-            <p class="pipeline-info">Data pipeline: VBA Export (CSV) &rarr; SQLite (Star Schema) &rarr; Dashboard</p>
+            <p class="subtitle">Operational Intelligence &mdash; Japan DMC Booking Calendar Analysis</p>
+            <p class="pipeline-info">Pipeline: VBA Export (21 CSVs, 1M+ rows) &rarr; SQLite Star Schema &rarr;
+                Dashboard</p>
         </header>
 
         <!-- KPI Cards -->
         <div class="kpi-grid">
             <div class="card kpi-card">
-                <h3>Total Bookings (Latest Year)</h3>
-                <p class="kpi-value" id="kpi-bookings">Loading...</p>
-            </div>
-            <div class="card kpi-card">
-                <h3>Total Revenue</h3>
-                <p class="kpi-value" id="kpi-revenue">Loading...</p>
+                <h3>Total Bookings</h3>
+                <p class="kpi-value" id="kpi-bookings">--</p>
             </div>
             <div class="card kpi-card">
                 <h3>Total PAX</h3>
-                <p class="kpi-value" id="kpi-pax">Loading...</p>
+                <p class="kpi-value" id="kpi-pax">--</p>
             </div>
             <div class="card kpi-card">
-                <h3>Avg Margin</h3>
-                <p class="kpi-value" id="kpi-margin">Loading...</p>
+                <h3>Total Service Lines</h3>
+                <p class="kpi-value" id="kpi-services">--</p>
             </div>
             <div class="card kpi-card">
-                <h3>Avg Booking Value</h3>
-                <p class="kpi-value" id="kpi-avg-value">Loading...</p>
+                <h3>Avg Trip Length</h3>
+                <p class="kpi-value" id="kpi-trip-days">--</p>
+            </div>
+            <div class="card kpi-card">
+                <h3>Bookings 2024</h3>
+                <p class="kpi-value" id="kpi-2024">--</p>
+            </div>
+            <div class="card kpi-card">
+                <h3>Bookings 2025</h3>
+                <p class="kpi-value" id="kpi-2025">--</p>
             </div>
         </div>
 
         <!-- Charts -->
         <div class="charts-grid">
 
-            <!-- Monthly Revenue + Bookings Trend -->
             <div class="card chart-card full-width">
-                <h2>Monthly Revenue & Booking Volume</h2>
-                <p class="chart-insight"><strong>Insight:</strong> Tracks seasonal demand patterns and revenue
-                    trajectory. COVID impact visible in 2020-2021, with recovery and growth from 2022 onwards.</p>
+                <h2>Monthly Booking Volume &amp; PAX</h2>
+                <p class="chart-insight"><strong>Insight:</strong> COVID impact clearly visible in 2020-2021.
+                    Strong recovery from 2023 with 2024-2025 exceeding pre-pandemic levels.</p>
                 <div class="chart-container">
                     <canvas id="monthlyTrendChart"></canvas>
                 </div>
             </div>
 
-            <!-- Year over Year -->
             <div class="card chart-card">
                 <h2>Year-over-Year Performance</h2>
-                <p class="chart-insight"><strong>Insight:</strong> Annual revenue and booking growth trajectory,
-                    showing post-COVID recovery and business expansion.</p>
+                <p class="chart-insight"><strong>Insight:</strong> Annual bookings, PAX, and service volumes showing
+                    the business growth trajectory across the full dataset.</p>
                 <div class="chart-container">
                     <canvas id="yoyChart"></canvas>
                 </div>
             </div>
 
-            <!-- Service Category Breakdown -->
             <div class="card chart-card">
-                <h2>Revenue by Service Category</h2>
-                <p class="chart-insight"><strong>Insight:</strong> Accommodation drives the highest revenue per
-                    booking, while tours lead in volume. Transfer services have the lowest margin.</p>
+                <h2>Service Type Distribution</h2>
+                <p class="chart-insight"><strong>Insight:</strong> Ground Transport leads in volume, while
+                    Accommodation and Guide services are the core offerings.</p>
                 <div class="chart-container">
                     <canvas id="serviceChart"></canvas>
                 </div>
             </div>
 
-            <!-- Top Clients -->
             <div class="card chart-card full-width">
-                <h2>Top 15 Clients by Revenue</h2>
-                <p class="chart-insight"><strong>Insight:</strong> Client concentration analysis. Color indicates
-                    client type: Agency (blue), Corporate (teal), Individual (orange).</p>
+                <h2>Top 20 Travel Agents by Bookings</h2>
+                <p class="chart-insight"><strong>Insight:</strong> Agent concentration analysis. Trailfinders and
+                    Audley Travel account for the majority of bookings.</p>
                 <div class="chart-container chart-container-lg">
-                    <canvas id="clientChart"></canvas>
-                </div>
-            </div>
-
-            <!-- Agent Performance -->
-            <div class="card chart-card">
-                <h2>Agent Performance</h2>
-                <p class="chart-insight"><strong>Insight:</strong> Revenue generated per agent. Bars show total
-                    revenue, line shows average margin percentage.</p>
-                <div class="chart-container">
                     <canvas id="agentChart"></canvas>
                 </div>
             </div>
 
-            <!-- Destination Performance -->
             <div class="card chart-card">
-                <h2>Revenue by Destination</h2>
-                <p class="chart-insight"><strong>Insight:</strong> Paris dominates as a destination, but
-                    diversification into regional destinations shows healthy portfolio spread.</p>
+                <h2>Source Markets (Agent Country)</h2>
+                <p class="chart-insight"><strong>Insight:</strong> UK dominates as the primary source market (~63%),
+                    followed by Germany and the US. Diversification opportunities exist.</p>
                 <div class="chart-container">
-                    <canvas id="destChart"></canvas>
+                    <canvas id="countryChart"></canvas>
                 </div>
             </div>
 
-            <!-- Booking Status -->
+            <div class="card chart-card">
+                <h2>Japan Regions</h2>
+                <p class="chart-insight"><strong>Insight:</strong> Kanto (Tokyo) and Kansai (Kyoto/Osaka) dominate,
+                    but Chubu and Chugoku show healthy secondary demand.</p>
+                <div class="chart-container">
+                    <canvas id="regionChart"></canvas>
+                </div>
+            </div>
+
+            <div class="card chart-card full-width">
+                <h2>Top 20 Destinations (Locations)</h2>
+                <p class="chart-insight"><strong>Insight:</strong> Tokyo and Kyoto are by far the most serviced
+                    locations. Color indicates region grouping.</p>
+                <div class="chart-container chart-container-lg">
+                    <canvas id="locationChart"></canvas>
+                </div>
+            </div>
+
             <div class="card chart-card">
                 <h2>Booking Status Distribution</h2>
-                <p class="chart-insight"><strong>Insight:</strong> Cancellation rate is a key operational metric.
-                    High pending ratio may indicate conversion opportunities.</p>
+                <p class="chart-insight"><strong>Insight:</strong> IV (Invoice) is the dominant status. Cancellation
+                    rate (CX) is a key operational metric to monitor.</p>
                 <div class="chart-container">
                     <canvas id="statusChart"></canvas>
                 </div>
             </div>
 
-            <!-- Lead Time -->
             <div class="card chart-card">
-                <h2>Booking Lead Time Distribution</h2>
-                <p class="chart-insight"><strong>Insight:</strong> How far in advance clients book. Longer lead
-                    times typically correlate with higher booking values and group sizes.</p>
+                <h2>Booking Lead Time</h2>
+                <p class="chart-insight"><strong>Insight:</strong> How far in advance bookings are made. Longer lead
+                    times may correlate with larger group sizes and more complex itineraries.</p>
                 <div class="chart-container">
                     <canvas id="leadTimeChart"></canvas>
                 </div>
             </div>
 
-            <!-- Seasonality Heatmap -->
             <div class="card chart-card full-width">
-                <h2>Seasonality by Region</h2>
-                <p class="chart-insight"><strong>Insight:</strong> Booking volume distribution across months by
-                    client region. Useful for staffing and inventory planning.</p>
+                <h2>Top 15 Suppliers</h2>
+                <p class="chart-insight"><strong>Insight:</strong> Supplier concentration across guides, transport
+                    and accommodation providers.</p>
+                <div class="chart-container chart-container-lg">
+                    <canvas id="supplierChart"></canvas>
+                </div>
+            </div>
+
+            <div class="card chart-card full-width">
+                <h2>Seasonality by Source Market</h2>
+                <p class="chart-insight"><strong>Insight:</strong> Booking patterns by month across top source
+                    countries. Key for staffing and inventory planning.</p>
                 <div class="chart-container chart-container-lg">
                     <canvas id="seasonChart"></canvas>
                 </div>
             </div>
+
+            <div class="card chart-card">
+                <h2>Department Breakdown</h2>
+                <p class="chart-insight"><strong>Insight:</strong> Booking distribution across internal departments.
+                </p>
+                <div class="chart-container">
+                    <canvas id="deptChart"></canvas>
+                </div>
+            </div>
+
         </div>
 
         <footer>
-            <p>Data pipeline: Excel VBA &rarr; CSV &rarr; SQLite (Star Schema) &rarr; JSON &rarr; Chart.js</p>
-            <p>Also exports to <strong>bookings_flat.csv</strong> for Looker Studio import.</p>
+            <p>Data: 1,048,575 service records | 39,091 bookings | 2015&ndash;2027</p>
+            <p>Pipeline: Excel VBA &rarr; 21 CSVs &rarr; SQLite Star Schema &rarr; JSON &rarr; Chart.js</p>
         </footer>
     </div>
     <script src="js/app.js"></script>

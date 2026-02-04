@@ -13,51 +13,55 @@ function initDashboard(data) {
     renderMonthlyTrend(data.monthly_trend);
     renderYoY(data.yearly_summary);
     renderServiceBreakdown(data.service_breakdown);
-    renderTopClients(data.top_clients);
-    renderAgentPerformance(data.agent_performance);
-    renderDestinations(data.destination_performance);
+    renderTopAgents(data.top_agents);
+    renderCountries(data.agent_countries);
+    renderRegions(data.region_distribution);
+    renderLocations(data.top_locations);
     renderStatusChart(data.status_breakdown);
     renderLeadTime(data.lead_time);
+    renderSuppliers(data.top_suppliers);
     renderSeasonality(data.seasonality);
+    renderDepartments(data.department_breakdown);
 }
 
 // --- KPIs ---
 function renderKPIs(kpis) {
-    document.getElementById('kpi-bookings').textContent =
-        kpis.total_bookings ? kpis.total_bookings.toLocaleString() : 'N/A';
-    document.getElementById('kpi-revenue').textContent =
-        kpis.total_revenue ? '\u20ac' + Number(kpis.total_revenue).toLocaleString() : 'N/A';
-    document.getElementById('kpi-pax').textContent =
-        kpis.total_pax ? kpis.total_pax.toLocaleString() : 'N/A';
-    document.getElementById('kpi-margin').textContent =
-        kpis.avg_margin_pct ? kpis.avg_margin_pct + '%' : 'N/A';
-    document.getElementById('kpi-avg-value').textContent =
-        kpis.avg_booking_value ? '\u20ac' + Number(kpis.avg_booking_value).toLocaleString() : 'N/A';
+    setText('kpi-bookings', fmt(kpis.total_bookings));
+    setText('kpi-pax', fmt(kpis.total_pax));
+    setText('kpi-services', fmt(kpis.total_services));
+    setText('kpi-trip-days', kpis.avg_trip_days + ' days');
+    setText('kpi-2024', fmt(kpis.bookings_2024));
+    setText('kpi-2025', fmt(kpis.bookings_2025));
 }
 
-// --- Monthly Revenue + Booking Trend ---
+function setText(id, val) {
+    document.getElementById(id).textContent = val || '--';
+}
+
+function fmt(n) {
+    return n != null ? Number(n).toLocaleString() : '--';
+}
+
+// --- Monthly Trend ---
 function renderMonthlyTrend(data) {
     const ctx = document.getElementById('monthlyTrendChart').getContext('2d');
-
     const labels = data.map(d => d.year + '-' + String(d.month).padStart(2, '0'));
-    const revenue = data.map(d => d.total_revenue);
-    const bookings = data.map(d => d.total_bookings);
 
     new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: labels,
+            labels,
             datasets: [
                 {
-                    label: 'Revenue (\u20ac)',
-                    data: revenue,
+                    label: 'Bookings',
+                    data: data.map(d => d.total_bookings),
                     backgroundColor: 'rgba(37, 99, 235, 0.6)',
                     yAxisID: 'y',
                     order: 2
                 },
                 {
-                    label: 'Bookings',
-                    data: bookings,
+                    label: 'PAX',
+                    data: data.map(d => d.total_pax),
                     borderColor: '#ff6384',
                     backgroundColor: 'rgba(255, 99, 132, 0.1)',
                     type: 'line',
@@ -73,18 +77,13 @@ function renderMonthlyTrend(data) {
             interaction: { mode: 'index', intersect: false },
             scales: {
                 y: {
-                    type: 'linear',
                     position: 'left',
-                    title: { display: true, text: 'Revenue (\u20ac)' },
-                    beginAtZero: true,
-                    ticks: {
-                        callback: v => '\u20ac' + (v / 1000).toFixed(0) + 'k'
-                    }
+                    title: { display: true, text: 'Bookings' },
+                    beginAtZero: true
                 },
                 y1: {
-                    type: 'linear',
                     position: 'right',
-                    title: { display: true, text: 'Bookings' },
+                    title: { display: true, text: 'PAX' },
                     grid: { drawOnChartArea: false },
                     beginAtZero: true
                 }
@@ -103,151 +102,18 @@ function renderYoY(data) {
             labels: data.map(d => d.year),
             datasets: [
                 {
-                    label: 'Revenue (\u20ac)',
-                    data: data.map(d => d.total_revenue),
+                    label: 'Bookings',
+                    data: data.map(d => d.total_bookings),
                     backgroundColor: '#2563eb',
                     yAxisID: 'y'
                 },
                 {
-                    label: 'Margin (\u20ac)',
-                    data: data.map(d => d.total_margin),
-                    backgroundColor: '#16a085',
-                    yAxisID: 'y'
-                }
-            ]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: { legend: { position: 'bottom' } },
-            scales: {
-                y: {
-                    beginAtZero: true,
-                    ticks: {
-                        callback: v => '\u20ac' + (v / 1000000).toFixed(1) + 'M'
-                    }
-                }
-            }
-        }
-    });
-}
-
-// --- Service Category ---
-function renderServiceBreakdown(data) {
-    const ctx = document.getElementById('serviceChart').getContext('2d');
-    const colors = ['#2563eb', '#ff6384', '#4bc0c0', '#ff9f40'];
-
-    new Chart(ctx, {
-        type: 'doughnut',
-        data: {
-            labels: data.map(d => d.service_category),
-            datasets: [{
-                data: data.map(d => d.total_revenue),
-                backgroundColor: colors,
-                borderWidth: 2,
-                borderColor: '#fff'
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: {
-                legend: { position: 'bottom' },
-                tooltip: {
-                    callbacks: {
-                        label: ctx => {
-                            const item = data[ctx.dataIndex];
-                            return [
-                                ctx.label + ': \u20ac' + Number(item.total_revenue).toLocaleString(),
-                                'Bookings: ' + item.booking_count,
-                                'Margin: ' + item.avg_margin_pct + '%'
-                            ];
-                        }
-                    }
-                }
-            }
-        }
-    });
-}
-
-// --- Top Clients ---
-function renderTopClients(data) {
-    const ctx = document.getElementById('clientChart').getContext('2d');
-
-    const typeColors = {
-        'Agency': '#2563eb',
-        'Corporate': '#16a085',
-        'Individual': '#ff9f40'
-    };
-
-    new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: data.map(d => d.client_name),
-            datasets: [{
-                label: 'Revenue (\u20ac)',
-                data: data.map(d => d.total_revenue),
-                backgroundColor: data.map(d => typeColors[d.client_type] || '#95a5a6')
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            indexAxis: 'y',
-            plugins: {
-                legend: { display: false },
-                tooltip: {
-                    callbacks: {
-                        label: ctx => {
-                            const item = data[ctx.dataIndex];
-                            return [
-                                'Revenue: \u20ac' + Number(item.total_revenue).toLocaleString(),
-                                'Type: ' + item.client_type,
-                                'Region: ' + item.client_region,
-                                'Bookings: ' + item.booking_count,
-                                'Margin: ' + item.avg_margin_pct + '%'
-                            ];
-                        }
-                    }
-                }
-            },
-            scales: {
-                x: {
-                    beginAtZero: true,
-                    ticks: {
-                        callback: v => '\u20ac' + (v / 1000).toFixed(0) + 'k'
-                    }
-                }
-            }
-        }
-    });
-}
-
-// --- Agent Performance ---
-function renderAgentPerformance(data) {
-    const ctx = document.getElementById('agentChart').getContext('2d');
-
-    new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: data.map(d => d.agent_name),
-            datasets: [
-                {
-                    label: 'Revenue (\u20ac)',
-                    data: data.map(d => d.total_revenue),
-                    backgroundColor: '#2563eb',
-                    yAxisID: 'y',
-                    order: 2
-                },
-                {
-                    label: 'Margin %',
-                    data: data.map(d => d.avg_margin_pct),
+                    label: 'Avg Trip Days',
+                    data: data.map(d => d.avg_trip_days),
                     borderColor: '#16a085',
-                    backgroundColor: 'rgba(22, 160, 133, 0.1)',
                     type: 'line',
                     yAxisID: 'y1',
-                    tension: 0.4,
-                    order: 1
+                    tension: 0.4
                 }
             ]
         },
@@ -255,46 +121,32 @@ function renderAgentPerformance(data) {
             responsive: true,
             maintainAspectRatio: false,
             interaction: { mode: 'index', intersect: false },
-            plugins: {
-                tooltip: {
-                    callbacks: {
-                        afterBody: ctx => {
-                            const item = data[ctx[0].dataIndex];
-                            return 'Team: ' + item.team + '\nBookings: ' + item.booking_count;
-                        }
-                    }
-                }
-            },
+            plugins: { legend: { position: 'bottom' } },
             scales: {
-                y: {
-                    position: 'left',
-                    beginAtZero: true,
-                    ticks: { callback: v => '\u20ac' + (v / 1000000).toFixed(1) + 'M' }
-                },
+                y: { beginAtZero: true, title: { display: true, text: 'Bookings' } },
                 y1: {
                     position: 'right',
                     grid: { drawOnChartArea: false },
-                    min: 0,
-                    max: 50,
-                    ticks: { callback: v => v + '%' }
+                    title: { display: true, text: 'Avg Trip Days' }
                 }
             }
         }
     });
 }
 
-// --- Destinations ---
-function renderDestinations(data) {
-    const ctx = document.getElementById('destChart').getContext('2d');
+// --- Service Type ---
+function renderServiceBreakdown(data) {
+    const ctx = document.getElementById('serviceChart').getContext('2d');
     const colors = ['#2563eb', '#ff6384', '#4bc0c0', '#ff9f40', '#9966ff',
-                    '#ff6b6b', '#51cf66', '#ffd43b', '#845ef7', '#339af0'];
+        '#ff6b6b', '#51cf66', '#ffd43b', '#845ef7', '#339af0',
+        '#20c997', '#f06595', '#94d82d', '#ffa94d', '#748ffc'];
 
     new Chart(ctx, {
-        type: 'pie',
+        type: 'doughnut',
         data: {
-            labels: data.map(d => d.destination),
+            labels: data.map(d => d.service_type),
             datasets: [{
-                data: data.map(d => d.total_revenue),
+                data: data.map(d => d.service_count),
                 backgroundColor: colors.slice(0, data.length),
                 borderWidth: 2,
                 borderColor: '#fff'
@@ -310,9 +162,8 @@ function renderDestinations(data) {
                         label: ctx => {
                             const item = data[ctx.dataIndex];
                             return [
-                                ctx.label + ': \u20ac' + Number(item.total_revenue).toLocaleString(),
-                                'Bookings: ' + item.booking_count,
-                                'PAX: ' + item.total_pax
+                                ctx.label + ': ' + fmt(item.service_count) + ' services',
+                                'In ' + fmt(item.booking_count) + ' bookings'
                             ];
                         }
                     }
@@ -322,24 +173,59 @@ function renderDestinations(data) {
     });
 }
 
-// --- Status Distribution ---
-function renderStatusChart(data) {
-    const ctx = document.getElementById('statusChart').getContext('2d');
-
-    const statusColors = {
-        'Completed': '#16a085',
-        'Confirmed': '#2563eb',
-        'Pending': '#ff9f40',
-        'Cancelled': '#e74c3c'
-    };
+// --- Top Agents ---
+function renderTopAgents(data) {
+    const ctx = document.getElementById('agentChart').getContext('2d');
 
     new Chart(ctx, {
-        type: 'doughnut',
+        type: 'bar',
         data: {
-            labels: data.map(d => d.status_name),
+            labels: data.map(d => d.agent_name),
             datasets: [{
-                data: data.map(d => d.count),
-                backgroundColor: data.map(d => statusColors[d.status_name] || '#95a5a6'),
+                label: 'Bookings',
+                data: data.map(d => d.booking_count),
+                backgroundColor: '#2563eb'
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            indexAxis: 'y',
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        label: ctx => {
+                            const item = data[ctx.dataIndex];
+                            return [
+                                'Bookings: ' + fmt(item.booking_count),
+                                'Country: ' + item.agent_country,
+                                'PAX: ' + fmt(item.total_pax),
+                                'Avg trip: ' + item.avg_trip_days + ' days'
+                            ];
+                        }
+                    }
+                }
+            },
+            scales: { x: { beginAtZero: true } }
+        }
+    });
+}
+
+// --- Source Countries ---
+function renderCountries(data) {
+    const ctx = document.getElementById('countryChart').getContext('2d');
+    const colors = ['#2563eb', '#ff6384', '#4bc0c0', '#ff9f40', '#9966ff',
+        '#ff6b6b', '#51cf66', '#ffd43b', '#845ef7', '#339af0',
+        '#20c997', '#f06595', '#94d82d', '#ffa94d', '#748ffc'];
+
+    new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: data.map(d => d.agent_country),
+            datasets: [{
+                data: data.map(d => d.booking_count),
+                backgroundColor: colors.slice(0, data.length),
                 borderWidth: 2,
                 borderColor: '#fff'
             }]
@@ -348,17 +234,137 @@ function renderStatusChart(data) {
             responsive: true,
             maintainAspectRatio: false,
             plugins: {
-                legend: { position: 'bottom' },
+                legend: { position: 'right', labels: { font: { size: 11 } } },
                 tooltip: {
                     callbacks: {
                         label: ctx => {
                             const item = data[ctx.dataIndex];
-                            const total = data.reduce((s, d) => s + d.count, 0);
-                            const pct = ((item.count / total) * 100).toFixed(1);
+                            const total = data.reduce((s, d) => s + d.booking_count, 0);
+                            const pct = ((item.booking_count / total) * 100).toFixed(1);
+                            return item.agent_country + ': ' + fmt(item.booking_count) + ' (' + pct + '%)';
+                        }
+                    }
+                }
+            }
+        }
+    });
+}
+
+// --- Regions ---
+function renderRegions(data) {
+    const ctx = document.getElementById('regionChart').getContext('2d');
+    const colors = ['#2563eb', '#ff6384', '#4bc0c0', '#ff9f40', '#9966ff',
+        '#ff6b6b', '#51cf66', '#ffd43b', '#845ef7', '#339af0', '#20c997'];
+
+    new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: data.map(d => d.region),
+            datasets: [{
+                data: data.map(d => d.service_count),
+                backgroundColor: colors.slice(0, data.length),
+                borderWidth: 2,
+                borderColor: '#fff'
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { position: 'right', labels: { font: { size: 11 } } },
+                tooltip: {
+                    callbacks: {
+                        label: ctx => {
+                            const item = data[ctx.dataIndex];
                             return [
-                                item.status_name + ': ' + item.count + ' (' + pct + '%)',
-                                'Revenue: \u20ac' + Number(item.revenue).toLocaleString()
+                                item.region + ': ' + fmt(item.service_count) + ' services',
+                                fmt(item.booking_count) + ' bookings'
                             ];
+                        }
+                    }
+                }
+            }
+        }
+    });
+}
+
+// --- Locations ---
+function renderLocations(data) {
+    const ctx = document.getElementById('locationChart').getContext('2d');
+
+    const regionColors = {
+        'Kanto': '#2563eb', 'Kansai': '#ff6384', 'Chubu': '#4bc0c0',
+        'Chugoku': '#ff9f40', 'Kyushu': '#9966ff', 'Hokkaido': '#51cf66',
+        'Others': '#95a5a6', 'Shikoku': '#ffd43b', 'Tohoku': '#845ef7',
+        'HokkaidoD': '#51cf66', 'OkinawaD': '#20c997'
+    };
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: data.map(d => d.location_name),
+            datasets: [{
+                label: 'Services',
+                data: data.map(d => d.service_count),
+                backgroundColor: data.map(d => regionColors[d.region] || '#95a5a6')
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            indexAxis: 'y',
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        label: ctx => {
+                            const item = data[ctx.dataIndex];
+                            return [
+                                'Services: ' + fmt(item.service_count),
+                                'Bookings: ' + fmt(item.booking_count),
+                                'Region: ' + item.region
+                            ];
+                        }
+                    }
+                }
+            },
+            scales: { x: { beginAtZero: true } }
+        }
+    });
+}
+
+// --- Status Distribution ---
+function renderStatusChart(data) {
+    const ctx = document.getElementById('statusChart').getContext('2d');
+
+    const statusColors = {
+        'IV': '#2563eb', 'CF': '#16a085', 'CX': '#e74c3c',
+        'CP': '#27ae60', 'CC': '#f39c12', 'IX': '#95a5a6', 'FC': '#8e44ad'
+    };
+
+    new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: data.map(d => d.status_code + ' (' + d.status_name + ')'),
+            datasets: [{
+                data: data.map(d => d.booking_count),
+                backgroundColor: data.map(d => statusColors[d.status_code] || '#95a5a6'),
+                borderWidth: 2,
+                borderColor: '#fff'
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { position: 'bottom', labels: { font: { size: 11 } } },
+                tooltip: {
+                    callbacks: {
+                        label: ctx => {
+                            const item = data[ctx.dataIndex];
+                            const total = data.reduce((s, d) => s + d.booking_count, 0);
+                            const pct = ((item.booking_count / total) * 100).toFixed(1);
+                            return item.status_name + ': ' + fmt(item.booking_count) + ' (' + pct + '%)';
                         }
                     }
                 }
@@ -383,8 +389,8 @@ function renderLeadTime(data) {
                     yAxisID: 'y'
                 },
                 {
-                    label: 'Avg Revenue (\u20ac)',
-                    data: data.map(d => d.avg_revenue),
+                    label: 'Avg Trip Days',
+                    data: data.map(d => d.avg_trip_days),
                     borderColor: '#ff6384',
                     type: 'line',
                     yAxisID: 'y1',
@@ -397,73 +403,129 @@ function renderLeadTime(data) {
             maintainAspectRatio: false,
             interaction: { mode: 'index', intersect: false },
             scales: {
-                y: {
-                    position: 'left',
-                    beginAtZero: true,
-                    title: { display: true, text: 'Count' }
-                },
+                y: { position: 'left', beginAtZero: true, title: { display: true, text: 'Bookings' } },
                 y1: {
                     position: 'right',
                     grid: { drawOnChartArea: false },
-                    beginAtZero: true,
-                    title: { display: true, text: 'Avg Revenue (\u20ac)' }
+                    title: { display: true, text: 'Avg Trip Days' }
                 }
             }
         }
     });
 }
 
-// --- Seasonality by Region ---
+// --- Top Suppliers ---
+function renderSuppliers(data) {
+    const ctx = document.getElementById('supplierChart').getContext('2d');
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: data.map(d => d.supplier_name),
+            datasets: [{
+                label: 'Services',
+                data: data.map(d => d.service_count),
+                backgroundColor: '#2563eb'
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            indexAxis: 'y',
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        label: ctx => {
+                            const item = data[ctx.dataIndex];
+                            return [
+                                'Services: ' + fmt(item.service_count),
+                                'Bookings: ' + fmt(item.booking_count)
+                            ];
+                        }
+                    }
+                }
+            },
+            scales: { x: { beginAtZero: true } }
+        }
+    });
+}
+
+// --- Seasonality by Source Market ---
 function renderSeasonality(data) {
     const ctx = document.getElementById('seasonChart').getContext('2d');
-
     const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-                        'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-    // Group by region
-    const regionMap = {};
+    const countryMap = {};
     data.forEach(d => {
-        if (!regionMap[d.client_region]) {
-            regionMap[d.client_region] = Array(12).fill(0);
-        }
-        regionMap[d.client_region][d.month - 1] += d.booking_count;
+        if (!countryMap[d.agent_country]) countryMap[d.agent_country] = Array(12).fill(0);
+        countryMap[d.agent_country][d.month - 1] += d.booking_count;
     });
 
-    const colors = ['#2563eb', '#ff6384', '#4bc0c0', '#ff9f40', '#9966ff', '#ff6b6b'];
-    const regions = Object.keys(regionMap);
-
-    const datasets = regions.map((region, i) => ({
-        label: region,
-        data: regionMap[region],
-        backgroundColor: colors[i % colors.length],
-        stack: 'seasonality'
-    }));
+    const colors = ['#2563eb', '#ff6384', '#4bc0c0', '#ff9f40', '#9966ff',
+        '#ff6b6b', '#51cf66', '#ffd43b'];
+    const countries = Object.keys(countryMap);
 
     new Chart(ctx, {
         type: 'bar',
         data: {
             labels: monthNames,
-            datasets: datasets
+            datasets: countries.map((country, i) => ({
+                label: country,
+                data: countryMap[country],
+                backgroundColor: colors[i % colors.length],
+                stack: 'seasonality'
+            }))
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { position: 'bottom' } },
+            scales: {
+                x: { stacked: true },
+                y: { stacked: true, beginAtZero: true, title: { display: true, text: 'Bookings' } }
+            }
+        }
+    });
+}
+
+// --- Departments ---
+function renderDepartments(data) {
+    const ctx = document.getElementById('deptChart').getContext('2d');
+    const colors = ['#2563eb', '#ff6384', '#4bc0c0', '#ff9f40', '#9966ff',
+        '#ff6b6b', '#51cf66', '#ffd43b', '#845ef7', '#339af0',
+        '#20c997', '#f06595', '#94d82d', '#ffa94d', '#748ffc',
+        '#e64980', '#12b886', '#fab005', '#7048e8'];
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: data.map(d => d.department),
+            datasets: [{
+                label: 'Bookings',
+                data: data.map(d => d.booking_count),
+                backgroundColor: colors.slice(0, data.length)
+            }]
         },
         options: {
             responsive: true,
             maintainAspectRatio: false,
             plugins: {
-                legend: { position: 'bottom' },
+                legend: { display: false },
                 tooltip: {
                     callbacks: {
-                        label: ctx => ctx.dataset.label + ': ' + ctx.parsed.y.toLocaleString() + ' bookings'
+                        label: ctx => {
+                            const item = data[ctx.dataIndex];
+                            return [
+                                'Bookings: ' + fmt(item.booking_count),
+                                'PAX: ' + fmt(item.total_pax)
+                            ];
+                        }
                     }
                 }
             },
-            scales: {
-                x: { stacked: true },
-                y: {
-                    stacked: true,
-                    beginAtZero: true,
-                    title: { display: true, text: 'Bookings' }
-                }
-            }
+            scales: { y: { beginAtZero: true } }
         }
     });
 }

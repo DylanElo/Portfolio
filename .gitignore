@@ -17,6 +17,7 @@ projects/studio-pierrot-bi/**/*.db
 projects/studio-pierrot-bi/data/processed/**
 projects/studio-pierrot-bi/warehouse/pierrot_bi.sqlite
 projects/booking-calendar-bi/**/*.db
+projects/booking-calendar-bi/data/looker_export/
 
 # Editor directories and files
 .vscode/*
