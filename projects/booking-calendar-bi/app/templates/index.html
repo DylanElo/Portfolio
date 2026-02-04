@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Calendar BI</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Booking Calendar BI</h1>
+            <p class="subtitle">Interactive Dashboard &mdash; Japan DMC Operations</p>
+            <nav class="dash-nav">
+                <a href="/" class="nav-link active">Overview</a>
+                <a href="/supplier" class="nav-link">Supplier Drill-Down</a>
+            </nav>
+        </header>
+
+        <!-- Global Filters -->
+        <div class="card filter-bar">
+            <div class="filter-group">
+                <label for="date-from">From</label>
+                <input type="date" id="date-from" value="2020-01-01">
+            </div>
+            <div class="filter-group">
+                <label for="date-to">To</label>
+                <input type="date" id="date-to" value="2025-12-31">
+            </div>
+            <div class="filter-group">
+                <label for="country-filter">Source Market</label>
+                <select id="country-filter"><option value="">All</option></select>
+            </div>
+            <button class="btn-apply" id="btn-apply">Apply Filters</button>
+        </div>
+
+        <!-- KPIs -->
+        <div class="kpi-grid">
+            <div class="card kpi-card">
+                <h3>Bookings</h3>
+                <p class="kpi-value" id="kpi-bookings">--</p>
+            </div>
+            <div class="card kpi-card">
+                <h3>PAX</h3>
+                <p class="kpi-value" id="kpi-pax">--</p>
+            </div>
+            <div class="card kpi-card">
+                <h3>Services</h3>
+                <p class="kpi-value" id="kpi-services">--</p>
+            </div>
+            <div class="card kpi-card">
+                <h3>Avg Trip</h3>
+                <p class="kpi-value" id="kpi-trip">--</p>
+            </div>
+            <div class="card kpi-card">
+                <h3>Active Agents</h3>
+                <p class="kpi-value" id="kpi-agents">--</p>
+            </div>
+        </div>
+
+        <!-- Charts -->
+        <div class="charts-grid">
+            <div class="card chart-card full-width">
+                <h2>Monthly Booking Trend</h2>
+                <div class="chart-container"><canvas id="monthlyChart"></canvas></div>
+            </div>
+
+            <div class="card chart-card">
+                <h2>Top Suppliers</h2>
+                <div class="filter-inline">
+                    <select id="supplier-svc-type"><option value="">All Types</option></select>
+                </div>
+                <div class="chart-container chart-container-lg"><canvas id="supplierChart"></canvas></div>
+            </div>
+
+            <div class="card chart-card">
+                <h2>Quick Supplier Lookup</h2>
+                <p class="chart-insight">Select a supplier to see their daily booking calendar</p>
+                <div class="supplier-search">
+                    <input type="text" id="supplier-search" placeholder="Type to search suppliers..."
+                           list="supplier-list" autocomplete="off">
+                    <datalist id="supplier-list"></datalist>
+                    <button class="btn-apply" id="btn-go-supplier">View Daily</button>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Data: 1,048,575 service records | 39,091 bookings | 2015-2027</p>
+        </footer>
+    </div>
+    <script src="/static/js/overview.js"></script>
+</body>
+</html>
