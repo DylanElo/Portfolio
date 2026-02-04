@@ -1,0 +1,1446 @@
+{
+  "kpis": {
+    "total_bookings": 1724,
+    "total_pax": 11184,
+    "total_revenue": 5389067.29,
+    "total_margin": 1734884.2,
+    "avg_margin_pct": 32.4,
+    "avg_booking_value": 3125.91
+  },
+  "monthly_trend": [
+    {
+      "year": 2020,
+      "month": 1,
+      "month_name": "January",
+      "total_bookings": 28,
+      "total_pax": 167,
+      "total_revenue": 56776.95,
+      "total_margin": 19068.88,
+      "avg_margin_pct": 32.6
+    },
+    {
+      "year": 2020,
+      "month": 2,
+      "month_name": "February",
+      "total_bookings": 16,
+      "total_pax": 109,
+      "total_revenue": 51834.27,
+      "total_margin": 13882.46,
+      "avg_margin_pct": 30.2
+    },
+    {
+      "year": 2020,
+      "month": 3,
+      "month_name": "March",
+      "total_bookings": 35,
+      "total_pax": 243,
+      "total_revenue": 210458.19,
+      "total_margin": 64203.33,
+      "avg_margin_pct": 31.7
+    },
+    {
+      "year": 2020,
+      "month": 4,
+      "month_name": "April",
+      "total_bookings": 53,
+      "total_pax": 362,
+      "total_revenue": 178277.35,
+      "total_margin": 58193.03,
+      "avg_margin_pct": 31.8
+    },
+    {
+      "year": 2020,
+      "month": 5,
+      "month_name": "May",
+      "total_bookings": 39,
+      "total_pax": 248,
+      "total_revenue": 234425.7,
+      "total_margin": 73457.03,
+      "avg_margin_pct": 32.8
+    },
+    {
+      "year": 2020,
+      "month": 6,
+      "month_name": "June",
+      "total_bookings": 51,
+      "total_pax": 302,
+      "total_revenue": 161405.58,
+      "total_margin": 57881.07,
+      "avg_margin_pct": 31.6
+    },
+    {
+      "year": 2020,
+      "month": 7,
+      "month_name": "July",
+      "total_bookings": 58,
+      "total_pax": 388,
+      "total_revenue": 203485.86,
+      "total_margin": 62587.73,
+      "avg_margin_pct": 30.8
+    },
+    {
+      "year": 2020,
+      "month": 8,
+      "month_name": "August",
+      "total_bookings": 44,
+      "total_pax": 291,
+      "total_revenue": 130390.75,
+      "total_margin": 43154.98,
+      "avg_margin_pct": 33.1
+    },
+    {
+      "year": 2020,
+      "month": 9,
+      "month_name": "September",
+      "total_bookings": 43,
+      "total_pax": 265,
+      "total_revenue": 132461.12,
+      "total_margin": 36973.82,
+      "avg_margin_pct": 30.4
+    },
+    {
+      "year": 2020,
+      "month": 10,
+      "month_name": "October",
+      "total_bookings": 37,
+      "total_pax": 268,
+      "total_revenue": 100608.76,
+      "total_margin": 36922.58,
+      "avg_margin_pct": 32.5
+    },
+    {
+      "year": 2020,
+      "month": 11,
+      "month_name": "November",
+      "total_bookings": 25,
+      "total_pax": 153,
+      "total_revenue": 108355.12,
+      "total_margin": 31915.98,
+      "avg_margin_pct": 32.6
+    },
+    {
+      "year": 2020,
+      "month": 12,
+      "month_name": "December",
+      "total_bookings": 28,
+      "total_pax": 196,
+      "total_revenue": 63552.34,
+      "total_margin": 20365.92,
+      "avg_margin_pct": 32.6
+    },
+    {
+      "year": 2021,
+      "month": 1,
+      "month_name": "January",
+      "total_bookings": 37,
+      "total_pax": 281,
+      "total_revenue": 219463.46,
+      "total_margin": 82061.99,
+      "avg_margin_pct": 34.1
+    },
+    {
+      "year": 2021,
+      "month": 2,
+      "month_name": "February",
+      "total_bookings": 45,
+      "total_pax": 296,
+      "total_revenue": 192435.18,
+      "total_margin": 56807.65,
+      "avg_margin_pct": 33.2
+    },
+    {
+      "year": 2021,
+      "month": 3,
+      "month_name": "March",
+      "total_bookings": 51,
+      "total_pax": 361,
+      "total_revenue": 175059.59,
+      "total_margin": 58232.33,
+      "avg_margin_pct": 34.0
+    },
+    {
+      "year": 2021,
+      "month": 4,
+      "month_name": "April",
+      "total_bookings": 76,
+      "total_pax": 484,
+      "total_revenue": 263078.78,
+      "total_margin": 80259.5,
+      "avg_margin_pct": 32.9
+    },
+    {
+      "year": 2021,
+      "month": 5,
+      "month_name": "May",
+      "total_bookings": 84,
+      "total_pax": 592,
+      "total_revenue": 230444.66,
+      "total_margin": 73699.82,
+      "avg_margin_pct": 33.3
+    },
+    {
+      "year": 2021,
+      "month": 6,
+      "month_name": "June",
+      "total_bookings": 84,
+      "total_pax": 538,
+      "total_revenue": 344556.31,
+      "total_margin": 111221.34,
+      "avg_margin_pct": 34.1
+    },
+    {
+      "year": 2021,
+      "month": 7,
+      "month_name": "July",
+      "total_bookings": 91,
+      "total_pax": 618,
+      "total_revenue": 258659.35,
+      "total_margin": 83340.63,
+      "avg_margin_pct": 33.7
+    },
+    {
+      "year": 2021,
+      "month": 8,
+      "month_name": "August",
+      "total_bookings": 71,
+      "total_pax": 492,
+      "total_revenue": 199554.78,
+      "total_margin": 70262.62,
+      "avg_margin_pct": 32.8
+    },
+    {
+      "year": 2021,
+      "month": 9,
+      "month_name": "September",
+      "total_bookings": 76,
+      "total_pax": 469,
+      "total_revenue": 214751.01,
+      "total_margin": 71147.57,
+      "avg_margin_pct": 33.5
+    },
+    {
+      "year": 2021,
+      "month": 10,
+      "month_name": "October",
+      "total_bookings": 44,
+      "total_pax": 283,
+      "total_revenue": 143958.99,
+      "total_margin": 41659.22,
+      "avg_margin_pct": 32.0
+    },
+    {
+      "year": 2021,
+      "month": 11,
+      "month_name": "November",
+      "total_bookings": 35,
+      "total_pax": 191,
+      "total_revenue": 113127.72,
+      "total_margin": 38796.48,
+      "avg_margin_pct": 33.2
+    },
+    {
+      "year": 2021,
+      "month": 12,
+      "month_name": "December",
+      "total_bookings": 44,
+      "total_pax": 254,
+      "total_revenue": 152392.26,
+      "total_margin": 49752.49,
+      "avg_margin_pct": 32.4
+    },
+    {
+      "year": 2022,
+      "month": 1,
+      "month_name": "January",
+      "total_bookings": 58,
+      "total_pax": 405,
+      "total_revenue": 171867.66,
+      "total_margin": 54140.77,
+      "avg_margin_pct": 31.8
+    },
+    {
+      "year": 2022,
+      "month": 2,
+      "month_name": "February",
+      "total_bookings": 53,
+      "total_pax": 374,
+      "total_revenue": 89347.93,
+      "total_margin": 31997.39,
+      "avg_margin_pct": 32.4
+    },
+    {
+      "year": 2022,
+      "month": 3,
+      "month_name": "March",
+      "total_bookings": 93,
+      "total_pax": 633,
+      "total_revenue": 345514.99,
+      "total_margin": 110486.21,
+      "avg_margin_pct": 32.7
+    },
+    {
+      "year": 2022,
+      "month": 4,
+      "month_name": "April",
+      "total_bookings": 115,
+      "total_pax": 800,
+      "total_revenue": 291127.36,
+      "total_margin": 100512.52,
+      "avg_margin_pct": 32.6
+    },
+    {
+      "year": 2022,
+      "month": 5,
+      "month_name": "May",
+      "total_bookings": 123,
+      "total_pax": 832,
+      "total_revenue": 446135.31,
+      "total_margin": 141847.26,
+      "avg_margin_pct": 32.8
+    },
+    {
+      "year": 2022,
+      "month": 6,
+      "month_name": "June",
+      "total_bookings": 142,
+      "total_pax": 812,
+      "total_revenue": 663320.06,
+      "total_margin": 210229.01,
+      "avg_margin_pct": 33.1
+    },
+    {
+      "year": 2022,
+      "month": 7,
+      "month_name": "July",
+      "total_bookings": 143,
+      "total_pax": 871,
+      "total_revenue": 486511.75,
+      "total_margin": 152256.3,
+      "avg_margin_pct": 32.1
+    },
+    {
+      "year": 2022,
+      "month": 8,
+      "month_name": "August",
+      "total_bookings": 126,
+      "total_pax": 823,
+      "total_revenue": 474754.05,
+      "total_margin": 154723.16,
+      "avg_margin_pct": 32.6
+    },
+    {
+      "year": 2022,
+      "month": 9,
+      "month_name": "September",
+      "total_bookings": 107,
+      "total_pax": 651,
+      "total_revenue": 285651.34,
+      "total_margin": 91305.93,
+      "avg_margin_pct": 31.6
+    },
+    {
+      "year": 2022,
+      "month": 10,
+      "month_name": "October",
+      "total_bookings": 76,
+      "total_pax": 534,
+      "total_revenue": 257122.36,
+      "total_margin": 86032.15,
+      "avg_margin_pct": 32.3
+    },
+    {
+      "year": 2022,
+      "month": 11,
+      "month_name": "November",
+      "total_bookings": 67,
+      "total_pax": 451,
+      "total_revenue": 234945.64,
+      "total_margin": 71343.12,
+      "avg_margin_pct": 32.3
+    },
+    {
+      "year": 2022,
+      "month": 12,
+      "month_name": "December",
+      "total_bookings": 66,
+      "total_pax": 369,
+      "total_revenue": 179271.47,
+      "total_margin": 56457.7,
+      "avg_margin_pct": 33.0
+    },
+    {
+      "year": 2023,
+      "month": 1,
+      "month_name": "January",
+      "total_bookings": 58,
+      "total_pax": 311,
+      "total_revenue": 122359.88,
+      "total_margin": 40894.63,
+      "avg_margin_pct": 31.7
+    },
+    {
+      "year": 2023,
+      "month": 2,
+      "month_name": "February",
+      "total_bookings": 67,
+      "total_pax": 385,
+      "total_revenue": 120365.82,
+      "total_margin": 39841.59,
+      "avg_margin_pct": 32.7
+    },
+    {
+      "year": 2023,
+      "month": 3,
+      "month_name": "March",
+      "total_bookings": 109,
+      "total_pax": 768,
+      "total_revenue": 406345.41,
+      "total_margin": 130840.17,
+      "avg_margin_pct": 32.7
+    },
+    {
+      "year": 2023,
+      "month": 4,
+      "month_name": "April",
+      "total_bookings": 153,
+      "total_pax": 979,
+      "total_revenue": 421849.98,
+      "total_margin": 143625.16,
+      "avg_margin_pct": 33.6
+    },
+    {
+      "year": 2023,
+      "month": 5,
+      "month_name": "May",
+      "total_bookings": 156,
+      "total_pax": 1009,
+      "total_revenue": 505324.55,
+      "total_margin": 171954.82,
+      "avg_margin_pct": 32.7
+    },
+    {
+      "year": 2023,
+      "month": 6,
+      "month_name": "June",
+      "total_bookings": 158,
+      "total_pax": 1059,
+      "total_revenue": 578826.74,
+      "total_margin": 182887.94,
+      "avg_margin_pct": 32.3
+    },
+    {
+      "year": 2023,
+      "month": 7,
+      "month_name": "July",
+      "total_bookings": 190,
+      "total_pax": 1250,
+      "total_revenue": 551002.01,
+      "total_margin": 167056.69,
+      "avg_margin_pct": 32.1
+    },
+    {
+      "year": 2023,
+      "month": 8,
+      "month_name": "August",
+      "total_bookings": 153,
+      "total_pax": 952,
+      "total_revenue": 348999.94,
+      "total_margin": 117837.29,
+      "avg_margin_pct": 33.0
+    },
+    {
+      "year": 2023,
+      "month": 9,
+      "month_name": "September",
+      "total_bookings": 137,
+      "total_pax": 902,
+      "total_revenue": 412663.8,
+      "total_margin": 130173.94,
+      "avg_margin_pct": 31.1
+    },
+    {
+      "year": 2023,
+      "month": 10,
+      "month_name": "October",
+      "total_bookings": 118,
+      "total_pax": 809,
+      "total_revenue": 351907.93,
+      "total_margin": 118346.41,
+      "avg_margin_pct": 32.9
+    },
+    {
+      "year": 2023,
+      "month": 11,
+      "month_name": "November",
+      "total_bookings": 68,
+      "total_pax": 461,
+      "total_revenue": 205948.78,
+      "total_margin": 72868.44,
+      "avg_margin_pct": 33.0
+    },
+    {
+      "year": 2023,
+      "month": 12,
+      "month_name": "December",
+      "total_bookings": 93,
+      "total_pax": 644,
+      "total_revenue": 342979.94,
+      "total_margin": 112019.39,
+      "avg_margin_pct": 32.8
+    },
+    {
+      "year": 2024,
+      "month": 1,
+      "month_name": "January",
+      "total_bookings": 68,
+      "total_pax": 472,
+      "total_revenue": 225278.0,
+      "total_margin": 80284.87,
+      "avg_margin_pct": 34.0
+    },
+    {
+      "year": 2024,
+      "month": 2,
+      "month_name": "February",
+      "total_bookings": 82,
+      "total_pax": 475,
+      "total_revenue": 220333.0,
+      "total_margin": 67707.31,
+      "avg_margin_pct": 32.2
+    },
+    {
+      "year": 2024,
+      "month": 3,
+      "month_name": "March",
+      "total_bookings": 125,
+      "total_pax": 765,
+      "total_revenue": 371405.86,
+      "total_margin": 118242.45,
+      "avg_margin_pct": 32.0
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "month_name": "April",
+      "total_bookings": 156,
+      "total_pax": 1014,
+      "total_revenue": 445850.36,
+      "total_margin": 142202.19,
+      "avg_margin_pct": 32.8
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "month_name": "May",
+      "total_bookings": 181,
+      "total_pax": 1165,
+      "total_revenue": 684328.93,
+      "total_margin": 224509.27,
+      "avg_margin_pct": 32.6
+    },
+    {
+      "year": 2024,
+      "month": 6,
+      "month_name": "June",
+      "total_bookings": 202,
+      "total_pax": 1347,
+      "total_revenue": 704823.83,
+      "total_margin": 237094.86,
+      "avg_margin_pct": 31.9
+    },
+    {
+      "year": 2024,
+      "month": 7,
+      "month_name": "July",
+      "total_bookings": 197,
+      "total_pax": 1334,
+      "total_revenue": 636947.0,
+      "total_margin": 219974.88,
+      "avg_margin_pct": 32.9
+    },
+    {
+      "year": 2024,
+      "month": 8,
+      "month_name": "August",
+      "total_bookings": 177,
+      "total_pax": 1168,
+      "total_revenue": 466182.6,
+      "total_margin": 164634.35,
+      "avg_margin_pct": 34.1
+    },
+    {
+      "year": 2024,
+      "month": 9,
+      "month_name": "September",
+      "total_bookings": 160,
+      "total_pax": 1035,
+      "total_revenue": 593898.76,
+      "total_margin": 198712.59,
+      "avg_margin_pct": 32.0
+    },
+    {
+      "year": 2024,
+      "month": 10,
+      "month_name": "October",
+      "total_bookings": 123,
+      "total_pax": 827,
+      "total_revenue": 346190.83,
+      "total_margin": 112690.19,
+      "avg_margin_pct": 32.8
+    },
+    {
+      "year": 2024,
+      "month": 11,
+      "month_name": "November",
+      "total_bookings": 89,
+      "total_pax": 588,
+      "total_revenue": 267202.78,
+      "total_margin": 89482.52,
+      "avg_margin_pct": 32.1
+    },
+    {
+      "year": 2024,
+      "month": 12,
+      "month_name": "December",
+      "total_bookings": 94,
+      "total_pax": 657,
+      "total_revenue": 335010.01,
+      "total_margin": 102803.63,
+      "avg_margin_pct": 31.7
+    },
+    {
+      "year": 2025,
+      "month": 1,
+      "month_name": "January",
+      "total_bookings": 67,
+      "total_pax": 444,
+      "total_revenue": 254033.72,
+      "total_margin": 79391.5,
+      "avg_margin_pct": 32.7
+    },
+    {
+      "year": 2025,
+      "month": 2,
+      "month_name": "February",
+      "total_bookings": 85,
+      "total_pax": 510,
+      "total_revenue": 225462.48,
+      "total_margin": 76447.12,
+      "avg_margin_pct": 32.4
+    },
+    {
+      "year": 2025,
+      "month": 3,
+      "month_name": "March",
+      "total_bookings": 145,
+      "total_pax": 923,
+      "total_revenue": 477430.73,
+      "total_margin": 153384.77,
+      "avg_margin_pct": 33.1
+    },
+    {
+      "year": 2025,
+      "month": 4,
+      "month_name": "April",
+      "total_bookings": 184,
+      "total_pax": 1151,
+      "total_revenue": 571892.06,
+      "total_margin": 178207.73,
+      "avg_margin_pct": 32.5
+    },
+    {
+      "year": 2025,
+      "month": 5,
+      "month_name": "May",
+      "total_bookings": 205,
+      "total_pax": 1338,
+      "total_revenue": 611524.45,
+      "total_margin": 199851.63,
+      "avg_margin_pct": 32.6
+    },
+    {
+      "year": 2025,
+      "month": 6,
+      "month_name": "June",
+      "total_bookings": 215,
+      "total_pax": 1460,
+      "total_revenue": 707523.23,
+      "total_margin": 228963.41,
+      "avg_margin_pct": 32.5
+    },
+    {
+      "year": 2025,
+      "month": 7,
+      "month_name": "July",
+      "total_bookings": 225,
+      "total_pax": 1487,
+      "total_revenue": 807511.03,
+      "total_margin": 270119.19,
+      "avg_margin_pct": 32.1
+    },
+    {
+      "year": 2025,
+      "month": 8,
+      "month_name": "August",
+      "total_bookings": 201,
+      "total_pax": 1304,
+      "total_revenue": 663687.2,
+      "total_margin": 219589.47,
+      "avg_margin_pct": 32.5
+    },
+    {
+      "year": 2025,
+      "month": 9,
+      "month_name": "September",
+      "total_bookings": 161,
+      "total_pax": 1012,
+      "total_revenue": 436236.71,
+      "total_margin": 131979.37,
+      "avg_margin_pct": 32.6
+    },
+    {
+      "year": 2025,
+      "month": 10,
+      "month_name": "October",
+      "total_bookings": 140,
+      "total_pax": 885,
+      "total_revenue": 342583.4,
+      "total_margin": 105495.09,
+      "avg_margin_pct": 31.5
+    },
+    {
+      "year": 2025,
+      "month": 11,
+      "month_name": "November",
+      "total_bookings": 96,
+      "total_pax": 670,
+      "total_revenue": 291182.28,
+      "total_margin": 91454.92,
+      "avg_margin_pct": 31.0
+    }
+  ],
+  "service_breakdown": [
+    {
+      "service_category": "Accommodation",
+      "booking_count": 1784,
+      "total_pax": 11538,
+      "total_revenue": 18939964.71,
+      "avg_margin_pct": 32.6
+    },
+    {
+      "service_category": "Tour",
+      "booking_count": 4339,
+      "total_pax": 28428,
+      "total_revenue": 3561276.49,
+      "avg_margin_pct": 32.6
+    },
+    {
+      "service_category": "Transfer",
+      "booking_count": 1079,
+      "total_pax": 7000,
+      "total_revenue": 618936.83,
+      "avg_margin_pct": 32.3
+    }
+  ],
+  "top_clients": [
+    {
+      "client_name": "Mumbai Getaways Pvt",
+      "client_type": "Agency",
+      "client_region": "Asia-Pacific",
+      "booking_count": 382,
+      "total_revenue": 1352876.17,
+      "avg_margin_pct": 32.4
+    },
+    {
+      "client_name": "Southern Cross Holidays",
+      "client_type": "Agency",
+      "client_region": "Oceania",
+      "booking_count": 349,
+      "total_revenue": 1288292.52,
+      "avg_margin_pct": 32.3
+    },
+    {
+      "client_name": "Andalucia Sun Tours",
+      "client_type": "Agency",
+      "client_region": "Europe",
+      "booking_count": 361,
+      "total_revenue": 1255823.04,
+      "avg_margin_pct": 32.8
+    },
+    {
+      "client_name": "Sakura Travel Group",
+      "client_type": "Agency",
+      "client_region": "Asia-Pacific",
+      "booking_count": 386,
+      "total_revenue": 1246554.44,
+      "avg_margin_pct": 32.0
+    },
+    {
+      "client_name": "Nordic Explorers AB",
+      "client_type": "Agency",
+      "client_region": "Europe",
+      "booking_count": 323,
+      "total_revenue": 1240190.87,
+      "avg_margin_pct": 32.9
+    },
+    {
+      "client_name": "Maple Leaf Journeys",
+      "client_type": "Agency",
+      "client_region": "North America",
+      "booking_count": 371,
+      "total_revenue": 1237420.52,
+      "avg_margin_pct": 32.7
+    },
+    {
+      "client_name": "Pacific Coast Tours",
+      "client_type": "Agency",
+      "client_region": "North America",
+      "booking_count": 346,
+      "total_revenue": 1193198.52,
+      "avg_margin_pct": 32.3
+    },
+    {
+      "client_name": "Direct Client - Walk-in",
+      "client_type": "Individual",
+      "client_region": "Europe",
+      "booking_count": 365,
+      "total_revenue": 1187318.33,
+      "avg_margin_pct": 32.0
+    },
+    {
+      "client_name": "Alpine Adventures GmbH",
+      "client_type": "Agency",
+      "client_region": "Europe",
+      "booking_count": 364,
+      "total_revenue": 1164146.21,
+      "avg_margin_pct": 33.1
+    },
+    {
+      "client_name": "Horizon Corp Events",
+      "client_type": "Corporate",
+      "client_region": "Europe",
+      "booking_count": 390,
+      "total_revenue": 1163387.97,
+      "avg_margin_pct": 32.0
+    },
+    {
+      "client_name": "Swiss Premium Tours",
+      "client_type": "Agency",
+      "client_region": "Europe",
+      "booking_count": 341,
+      "total_revenue": 1139036.95,
+      "avg_margin_pct": 32.2
+    },
+    {
+      "client_name": "Voyages Lumiere",
+      "client_type": "Agency",
+      "client_region": "Europe",
+      "booking_count": 367,
+      "total_revenue": 1137151.07,
+      "avg_margin_pct": 32.2
+    },
+    {
+      "client_name": "Thai Smile Holidays",
+      "client_type": "Agency",
+      "client_region": "Asia-Pacific",
+      "booking_count": 342,
+      "total_revenue": 1111730.13,
+      "avg_margin_pct": 33.0
+    },
+    {
+      "client_name": "Beijing Star International",
+      "client_type": "Agency",
+      "client_region": "Asia-Pacific",
+      "booking_count": 368,
+      "total_revenue": 1100180.08,
+      "avg_margin_pct": 33.0
+    },
+    {
+      "client_name": "Gulf Luxury Travel",
+      "client_type": "Corporate",
+      "client_region": "Middle East",
+      "booking_count": 347,
+      "total_revenue": 1084584.81,
+      "avg_margin_pct": 32.3
+    }
+  ],
+  "status_breakdown": [
+    {
+      "status_name": "Completed",
+      "count": 6153,
+      "revenue": 19818131.47
+    },
+    {
+      "status_name": "Cancelled",
+      "count": 1038,
+      "revenue": 3260952.99
+    },
+    {
+      "status_name": "Pending",
+      "count": 6,
+      "revenue": 4133.96
+    },
+    {
+      "status_name": "Confirmed",
+      "count": 5,
+      "revenue": 36959.61
+    }
+  ],
+  "agent_performance": [
+    {
+      "agent_name": "Sophie Laurent",
+      "team": "Inbound Asia",
+      "booking_count": 938,
+      "total_pax": 6108,
+      "total_revenue": 3175492.05,
+      "avg_margin_pct": 32.5
+    },
+    {
+      "agent_name": "Isabelle Leroy",
+      "team": "Inbound Europe",
+      "booking_count": 944,
+      "total_pax": 6307,
+      "total_revenue": 3055973.93,
+      "avg_margin_pct": 32.5
+    },
+    {
+      "agent_name": "Pierre Martin",
+      "team": "Inbound Europe",
+      "booking_count": 894,
+      "total_pax": 5679,
+      "total_revenue": 2992109.97,
+      "avg_margin_pct": 32.3
+    },
+    {
+      "agent_name": "Nicolas Petit",
+      "team": "Inbound Asia",
+      "booking_count": 898,
+      "total_pax": 5913,
+      "total_revenue": 2856091.55,
+      "avg_margin_pct": 32.6
+    },
+    {
+      "agent_name": "Camille Moreau",
+      "team": "Corporate",
+      "booking_count": 893,
+      "total_pax": 5955,
+      "total_revenue": 2851272.11,
+      "avg_margin_pct": 32.5
+    },
+    {
+      "agent_name": "Marie Dubois",
+      "team": "Inbound Europe",
+      "booking_count": 885,
+      "total_pax": 5764,
+      "total_revenue": 2831064.84,
+      "avg_margin_pct": 32.8
+    },
+    {
+      "agent_name": "Jean-Luc Bernard",
+      "team": "Inbound Americas",
+      "booking_count": 873,
+      "total_pax": 5611,
+      "total_revenue": 2701798.43,
+      "avg_margin_pct": 32.3
+    },
+    {
+      "agent_name": "Thomas Roux",
+      "team": "Inbound Americas",
+      "booking_count": 877,
+      "total_pax": 5629,
+      "total_revenue": 2656375.15,
+      "avg_margin_pct": 32.8
+    }
+  ],
+  "destination_performance": [
+    {
+      "destination": "Nice",
+      "booking_count": 1086,
+      "total_pax": 7032,
+      "total_revenue": 7986849.19
+    },
+    {
+      "destination": "Paris",
+      "booking_count": 1455,
+      "total_pax": 9541,
+      "total_revenue": 4718279.95
+    },
+    {
+      "destination": "Lyon",
+      "booking_count": 732,
+      "total_pax": 4824,
+      "total_revenue": 4177224.57
+    },
+    {
+      "destination": "Bordeaux",
+      "booking_count": 688,
+      "total_pax": 4428,
+      "total_revenue": 3774762.88
+    },
+    {
+      "destination": "Chamonix",
+      "booking_count": 699,
+      "total_pax": 4450,
+      "total_revenue": 554479.92
+    },
+    {
+      "destination": "Multi-city",
+      "booking_count": 722,
+      "total_pax": 4704,
+      "total_revenue": 419045.11
+    },
+    {
+      "destination": "Normandy",
+      "booking_count": 377,
+      "total_pax": 2509,
+      "total_revenue": 326257.59
+    },
+    {
+      "destination": "Marseille",
+      "booking_count": 367,
+      "total_pax": 2477,
+      "total_revenue": 305781.74
+    },
+    {
+      "destination": "Versailles",
+      "booking_count": 347,
+      "total_pax": 2359,
+      "total_revenue": 290078.94
+    },
+    {
+      "destination": "Provence",
+      "booking_count": 373,
+      "total_pax": 2402,
+      "total_revenue": 288152.23
+    },
+    {
+      "destination": "Strasbourg",
+      "booking_count": 356,
+      "total_pax": 2240,
+      "total_revenue": 279265.91
+    }
+  ],
+  "seasonality": [
+    {
+      "client_region": "Asia-Pacific",
+      "month": 1,
+      "booking_count": 80,
+      "revenue": 301378.75
+    },
+    {
+      "client_region": "Asia-Pacific",
+      "month": 2,
+      "booking_count": 101,
+      "revenue": 302643.41
+    },
+    {
+      "client_region": "Asia-Pacific",
+      "month": 3,
+      "booking_count": 134,
+      "revenue": 568466.11
+    },
+    {
+      "client_region": "Asia-Pacific",
+      "month": 4,
+      "booking_count": 186,
+      "revenue": 587133.21
+    },
+    {
+      "client_region": "Asia-Pacific",
+      "month": 5,
+      "booking_count": 203,
+      "revenue": 576258.66
+    },
+    {
+      "client_region": "Asia-Pacific",
+      "month": 6,
+      "booking_count": 233,
+      "revenue": 759318.78
+    },
+    {
+      "client_region": "Asia-Pacific",
+      "month": 7,
+      "booking_count": 232,
+      "revenue": 654405.69
+    },
+    {
+      "client_region": "Asia-Pacific",
+      "month": 8,
+      "booking_count": 170,
+      "revenue": 491256.86
+    },
+    {
+      "client_region": "Asia-Pacific",
+      "month": 9,
+      "booking_count": 188,
+      "revenue": 546487.92
+    },
+    {
+      "client_region": "Asia-Pacific",
+      "month": 10,
+      "booking_count": 153,
+      "revenue": 388954.55
+    },
+    {
+      "client_region": "Asia-Pacific",
+      "month": 11,
+      "booking_count": 90,
+      "revenue": 303268.05
+    },
+    {
+      "client_region": "Asia-Pacific",
+      "month": 12,
+      "booking_count": 89,
+      "revenue": 382697.79
+    },
+    {
+      "client_region": "Europe",
+      "month": 1,
+      "booking_count": 135,
+      "revenue": 460783.6
+    },
+    {
+      "client_region": "Europe",
+      "month": 2,
+      "booking_count": 132,
+      "revenue": 284960.66
+    },
+    {
+      "client_region": "Europe",
+      "month": 3,
+      "booking_count": 242,
+      "revenue": 820423.7
+    },
+    {
+      "client_region": "Europe",
+      "month": 4,
+      "booking_count": 282,
+      "revenue": 769576.56
+    },
+    {
+      "client_region": "Europe",
+      "month": 5,
+      "booking_count": 304,
+      "revenue": 1029101.11
+    },
+    {
+      "client_region": "Europe",
+      "month": 6,
+      "booking_count": 349,
+      "revenue": 1411867.96
+    },
+    {
+      "client_region": "Europe",
+      "month": 7,
+      "booking_count": 372,
+      "revenue": 1211207.34
+    },
+    {
+      "client_region": "Europe",
+      "month": 8,
+      "booking_count": 316,
+      "revenue": 924494.99
+    },
+    {
+      "client_region": "Europe",
+      "month": 9,
+      "booking_count": 266,
+      "revenue": 912130.1
+    },
+    {
+      "client_region": "Europe",
+      "month": 10,
+      "booking_count": 204,
+      "revenue": 588589.34
+    },
+    {
+      "client_region": "Europe",
+      "month": 11,
+      "booking_count": 151,
+      "revenue": 508295.45
+    },
+    {
+      "client_region": "Europe",
+      "month": 12,
+      "booking_count": 118,
+      "revenue": 375418.62
+    },
+    {
+      "client_region": "Middle East",
+      "month": 1,
+      "booking_count": 9,
+      "revenue": 10412.45
+    },
+    {
+      "client_region": "Middle East",
+      "month": 2,
+      "booking_count": 15,
+      "revenue": 48630.29
+    },
+    {
+      "client_region": "Middle East",
+      "month": 3,
+      "booking_count": 33,
+      "revenue": 99017.54
+    },
+    {
+      "client_region": "Middle East",
+      "month": 4,
+      "booking_count": 34,
+      "revenue": 67948.96
+    },
+    {
+      "client_region": "Middle East",
+      "month": 5,
+      "booking_count": 36,
+      "revenue": 61930.72
+    },
+    {
+      "client_region": "Middle East",
+      "month": 6,
+      "booking_count": 36,
+      "revenue": 189659.13
+    },
+    {
+      "client_region": "Middle East",
+      "month": 7,
+      "booking_count": 47,
+      "revenue": 239808.93
+    },
+    {
+      "client_region": "Middle East",
+      "month": 8,
+      "booking_count": 38,
+      "revenue": 89984.23
+    },
+    {
+      "client_region": "Middle East",
+      "month": 9,
+      "booking_count": 36,
+      "revenue": 85924.88
+    },
+    {
+      "client_region": "Middle East",
+      "month": 10,
+      "booking_count": 30,
+      "revenue": 119794.85
+    },
+    {
+      "client_region": "Middle East",
+      "month": 11,
+      "booking_count": 15,
+      "revenue": 51322.22
+    },
+    {
+      "client_region": "Middle East",
+      "month": 12,
+      "booking_count": 18,
+      "revenue": 20150.61
+    },
+    {
+      "client_region": "North America",
+      "month": 1,
+      "booking_count": 63,
+      "revenue": 169243.02
+    },
+    {
+      "client_region": "North America",
+      "month": 2,
+      "booking_count": 69,
+      "revenue": 167556.51
+    },
+    {
+      "client_region": "North America",
+      "month": 3,
+      "booking_count": 96,
+      "revenue": 300188.0
+    },
+    {
+      "client_region": "North America",
+      "month": 4,
+      "booking_count": 165,
+      "revenue": 552282.32
+    },
+    {
+      "client_region": "North America",
+      "month": 5,
+      "booking_count": 159,
+      "revenue": 647221.54
+    },
+    {
+      "client_region": "North America",
+      "month": 6,
+      "booking_count": 157,
+      "revenue": 545729.22
+    },
+    {
+      "client_region": "North America",
+      "month": 7,
+      "booking_count": 168,
+      "revenue": 504512.1
+    },
+    {
+      "client_region": "North America",
+      "month": 8,
+      "booking_count": 169,
+      "revenue": 608759.2
+    },
+    {
+      "client_region": "North America",
+      "month": 9,
+      "booking_count": 123,
+      "revenue": 283010.48
+    },
+    {
+      "client_region": "North America",
+      "month": 10,
+      "booking_count": 97,
+      "revenue": 315839.82
+    },
+    {
+      "client_region": "North America",
+      "month": 11,
+      "booking_count": 96,
+      "revenue": 265260.08
+    },
+    {
+      "client_region": "North America",
+      "month": 12,
+      "booking_count": 72,
+      "revenue": 190684.89
+    },
+    {
+      "client_region": "Oceania",
+      "month": 1,
+      "booking_count": 29,
+      "revenue": 107961.85
+    },
+    {
+      "client_region": "Oceania",
+      "month": 2,
+      "booking_count": 31,
+      "revenue": 95987.81
+    },
+    {
+      "client_region": "Oceania",
+      "month": 3,
+      "booking_count": 53,
+      "revenue": 198119.42
+    },
+    {
+      "client_region": "Oceania",
+      "month": 4,
+      "booking_count": 70,
+      "revenue": 195134.84
+    },
+    {
+      "client_region": "Oceania",
+      "month": 5,
+      "booking_count": 86,
+      "revenue": 397671.57
+    },
+    {
+      "client_region": "Oceania",
+      "month": 6,
+      "booking_count": 77,
+      "revenue": 253880.66
+    },
+    {
+      "client_region": "Oceania",
+      "month": 7,
+      "booking_count": 85,
+      "revenue": 334182.94
+    },
+    {
+      "client_region": "Oceania",
+      "month": 8,
+      "booking_count": 79,
+      "revenue": 169074.04
+    },
+    {
+      "client_region": "Oceania",
+      "month": 9,
+      "booking_count": 71,
+      "revenue": 248109.36
+    },
+    {
+      "client_region": "Oceania",
+      "month": 10,
+      "booking_count": 54,
+      "revenue": 129193.71
+    },
+    {
+      "client_region": "Oceania",
+      "month": 11,
+      "booking_count": 28,
+      "revenue": 92616.52
+    },
+    {
+      "client_region": "Oceania",
+      "month": 12,
+      "booking_count": 28,
+      "revenue": 104254.11
+    }
+  ],
+  "yearly_summary": [
+    {
+      "year": 2020,
+      "total_bookings": 457,
+      "total_pax": 2992,
+      "total_revenue": 1632031.99,
+      "total_margin": 518606.81
+    },
+    {
+      "year": 2021,
+      "total_bookings": 738,
+      "total_pax": 4859,
+      "total_revenue": 2507482.09,
+      "total_margin": 817241.64
+    },
+    {
+      "year": 2022,
+      "total_bookings": 1169,
+      "total_pax": 7555,
+      "total_revenue": 3925569.92,
+      "total_margin": 1261331.52
+    },
+    {
+      "year": 2023,
+      "total_bookings": 1460,
+      "total_pax": 9529,
+      "total_revenue": 4368574.78,
+      "total_margin": 1428346.47
+    },
+    {
+      "year": 2024,
+      "total_bookings": 1654,
+      "total_pax": 10847,
+      "total_revenue": 5297451.96,
+      "total_margin": 1758339.11
+    },
+    {
+      "year": 2025,
+      "total_bookings": 1724,
+      "total_pax": 11184,
+      "total_revenue": 5389067.29,
+      "total_margin": 1734884.2
+    }
+  ],
+  "lead_time": [
+    {
+      "lead_time_bucket": "0-7 days",
+      "booking_count": 453,
+      "avg_revenue": 3417.34
+    },
+    {
+      "lead_time_bucket": "8-30 days",
+      "booking_count": 740,
+      "avg_revenue": 2960.06
+    },
+    {
+      "lead_time_bucket": "60+ days",
+      "booking_count": 6009,
+      "avg_revenue": 3225.44
+    }
+  ]
+}

@@ -1,0 +1,739 @@
+booking_id,booking_date,checkin_date,checkout_date,client_id,client_name,service_id,service_name,service_category,destination,agent_id,agent_name,status,pax,nights,revenue,cost,currency
+BK-005001,2021-01-08,2021-01-26,2021-01-27,18,Thai Smile Holidays,13,Private Car Service,Transfer,Multi-city,5,Camille Moreau,Cancelled,11,0,520.18,374.18,EUR
+BK-005002,2021-01-26,2021-04-19,2021-04-20,1,Sakura Travel Group,12,TGV Train Booking,Transfer,Multi-city,3,Sophie Laurent,Completed,2,0,70.03,48.54,EUR
+BK-005003,2021-01-18,2021-01-29,2021-01-30,12,Kiwi Adventures Ltd,10,Mont Blanc Excursion,Tour,Chamonix,4,Jean-Luc Bernard,Completed,7,1,1300.91,992.42,EUR
+BK-005004,2021-01-06,2021-02-04,2021-02-18,9,Maple Leaf Journeys,20,Hotel Negresco Nice,Accommodation,Nice,4,Jean-Luc Bernard,Cancelled,2,14,3611.07,2708.0,EUR
+BK-005005,2021-01-28,2021-04-09,2021-04-10,10,Seoul Wanderers Co.,15,Provence Lavender Tour,Tour,Provence,2,Pierre Martin,Completed,5,0,323.65,236.72,EUR
+BK-005006,2021-01-11,2021-02-26,2021-02-27,4,Voyages Lumiere,5,Wine Tasting Bordeaux,Tour,Bordeaux,5,Camille Moreau,Completed,10,1,604.71,361.84,EUR
+BK-005007,2021-01-11,2021-03-31,2021-04-01,19,Amazon Corp Travel,10,Mont Blanc Excursion,Tour,Chamonix,6,Nicolas Petit,Completed,6,1,1162.79,688.56,EUR
+BK-005008,2021-01-26,2021-02-24,2021-02-26,12,Kiwi Adventures Ltd,14,Versailles Day Trip,Tour,Versailles,3,Sophie Laurent,Completed,11,2,1759.41,1353.82,EUR
+BK-005009,2021-01-12,2021-02-21,2021-03-02,4,Voyages Lumiere,16,Hotel Vieux Lyon,Accommodation,Lyon,3,Sophie Laurent,Cancelled,11,9,24135.16,18353.54,EUR
+BK-005010,2021-01-05,2021-03-15,2021-03-17,3,Pacific Coast Tours,7,Nice Coastal Tour,Tour,Nice,2,Pierre Martin,Completed,1,2,177.44,125.61,EUR
+BK-005011,2021-01-19,2021-03-12,2021-03-13,2,Alpine Adventures GmbH,19,Ski Package Alps,Tour,Chamonix,5,Camille Moreau,Completed,9,1,1656.88,1134.83,EUR
+BK-005012,2021-01-05,2021-02-21,2021-02-22,8,Nordic Explorers AB,13,Private Car Service,Transfer,Multi-city,5,Camille Moreau,Completed,3,0,257.29,174.34,EUR
+BK-005013,2021-01-17,2021-01-19,2021-02-02,20,Swiss Premium Tours,8,Hotel Promenade Nice,Accommodation,Nice,3,Sophie Laurent,Completed,9,14,14855.41,8761.8,EUR
+BK-005014,2021-01-19,2021-04-14,2021-04-17,12,Kiwi Adventures Ltd,5,Wine Tasting Bordeaux,Tour,Bordeaux,1,Marie Dubois,Completed,4,3,656.88,399.34,EUR
+BK-005015,2021-01-08,2021-01-14,2021-01-16,13,Direct Client - Walk-in,7,Nice Coastal Tour,Tour,Nice,8,Thomas Roux,Completed,8,2,1457.86,816.37,EUR
+BK-005016,2021-01-04,2021-03-12,2021-03-14,19,Amazon Corp Travel,9,Lyon Food Tour,Tour,Lyon,3,Sophie Laurent,Completed,7,2,1036.36,664.64,EUR
+BK-005017,2021-01-27,2021-02-06,2021-02-08,13,Direct Client - Walk-in,17,Strasbourg Christmas Tour,Tour,Strasbourg,4,Jean-Luc Bernard,Completed,9,2,997.89,752.72,EUR
+BK-005018,2021-01-26,2021-03-29,2021-03-30,17,Andalucia Sun Tours,20,Hotel Negresco Nice,Accommodation,Nice,3,Sophie Laurent,Completed,8,1,997.71,567.97,EUR
+BK-005019,2021-01-07,2021-01-27,2021-01-30,12,Kiwi Adventures Ltd,6,Chateau Stay Bordeaux,Accommodation,Bordeaux,2,Pierre Martin,Completed,11,3,4692.39,3532.4,EUR
+BK-005020,2021-01-16,2021-04-13,2021-04-21,7,Beijing Star International,16,Hotel Vieux Lyon,Accommodation,Lyon,3,Sophie Laurent,Completed,11,8,26840.75,14913.03,EUR
+BK-005021,2021-01-19,2021-04-05,2021-04-08,17,Andalucia Sun Tours,6,Chateau Stay Bordeaux,Accommodation,Bordeaux,1,Marie Dubois,Cancelled,10,3,3589.61,2123.56,EUR
+BK-005022,2021-01-17,2021-03-10,2021-03-20,1,Sakura Travel Group,20,Hotel Negresco Nice,Accommodation,Nice,5,Camille Moreau,Completed,2,10,2769.6,1943.24,EUR
+BK-005023,2021-01-16,2021-02-07,2021-02-21,14,Direct Client - Web,8,Hotel Promenade Nice,Accommodation,Nice,3,Sophie Laurent,Completed,10,14,42213.13,25136.7,EUR
+BK-005024,2021-01-09,2021-01-31,2021-02-03,20,Swiss Premium Tours,11,D-Day Normandy Tour,Tour,Normandy,2,Pierre Martin,Completed,4,3,426.93,248.92,EUR
+BK-005025,2021-01-17,2021-03-23,2021-03-24,20,Swiss Premium Tours,14,Versailles Day Trip,Tour,Versailles,2,Pierre Martin,Completed,3,1,364.14,256.24,EUR
+BK-005026,2021-01-26,2021-04-05,2021-04-06,3,Pacific Coast Tours,17,Strasbourg Christmas Tour,Tour,Strasbourg,8,Thomas Roux,Completed,11,0,765.04,536.19,EUR
+BK-005027,2021-01-29,2021-04-26,2021-04-29,12,Kiwi Adventures Ltd,14,Versailles Day Trip,Tour,Versailles,1,Marie Dubois,Completed,12,3,1553.67,943.65,EUR
+BK-005028,2021-01-26,2021-03-16,2021-03-17,19,Amazon Corp Travel,12,TGV Train Booking,Transfer,Multi-city,2,Pierre Martin,Completed,7,0,322.46,215.82,EUR
+BK-005029,2021-01-28,2021-02-08,2021-02-11,9,Maple Leaf Journeys,10,Mont Blanc Excursion,Tour,Chamonix,4,Jean-Luc Bernard,Completed,1,3,156.37,116.86,EUR
+BK-005030,2021-01-04,2021-03-12,2021-03-15,7,Beijing Star International,1,City Walking Tour,Tour,Paris,6,Nicolas Petit,Completed,7,3,730.38,429.97,EUR
+BK-005031,2021-01-09,2021-02-12,2021-02-15,19,Amazon Corp Travel,18,Marseille Port Tour,Tour,Marseille,6,Nicolas Petit,Completed,10,3,913.34,657.74,EUR
+BK-005032,2021-01-14,2021-03-26,2021-03-29,6,Southern Cross Holidays,18,Marseille Port Tour,Tour,Marseille,6,Nicolas Petit,Completed,9,3,1199.13,735.6,EUR
+BK-005033,2021-01-12,2021-03-04,2021-03-05,8,Nordic Explorers AB,5,Wine Tasting Bordeaux,Tour,Bordeaux,8,Thomas Roux,Completed,12,0,2308.64,1327.63,EUR
+BK-005034,2021-01-26,2021-03-11,2021-03-12,6,Southern Cross Holidays,18,Marseille Port Tour,Tour,Marseille,7,Isabelle Leroy,Completed,11,0,558.73,320.02,EUR
+BK-005035,2021-01-30,2021-04-17,2021-04-18,3,Pacific Coast Tours,14,Versailles Day Trip,Tour,Versailles,5,Camille Moreau,Completed,4,0,422.5,296.7,EUR
+BK-005036,2021-01-30,2021-03-23,2021-04-03,17,Andalucia Sun Tours,20,Hotel Negresco Nice,Accommodation,Nice,5,Camille Moreau,Completed,12,11,44900.2,25340.14,EUR
+BK-005037,2021-01-06,2021-03-29,2021-04-06,1,Sakura Travel Group,16,Hotel Vieux Lyon,Accommodation,Lyon,4,Jean-Luc Bernard,Completed,11,8,29154.82,19811.82,EUR
+BK-005038,2021-02-17,2021-04-25,2021-05-05,6,Southern Cross Holidays,8,Hotel Promenade Nice,Accommodation,Nice,1,Marie Dubois,Completed,6,10,8675.96,4772.4,EUR
+BK-005039,2021-02-09,2021-04-02,2021-04-03,13,Direct Client - Walk-in,12,TGV Train Booking,Transfer,Multi-city,7,Isabelle Leroy,Completed,10,0,540.37,299.28,EUR
+BK-005040,2021-02-03,2021-04-15,2021-04-17,12,Kiwi Adventures Ltd,10,Mont Blanc Excursion,Tour,Chamonix,5,Camille Moreau,Cancelled,4,2,563.82,337.52,EUR
+BK-005041,2021-02-19,2021-02-20,2021-02-21,14,Direct Client - Web,9,Lyon Food Tour,Tour,Lyon,2,Pierre Martin,Cancelled,9,1,547.72,341.54,EUR
+BK-005042,2021-02-26,2021-05-03,2021-05-05,15,Horizon Corp Events,9,Lyon Food Tour,Tour,Lyon,7,Isabelle Leroy,Completed,10,2,1225.44,748.52,EUR
+BK-005043,2021-02-25,2021-04-25,2021-04-26,16,Mumbai Getaways Pvt,15,Provence Lavender Tour,Tour,Provence,2,Pierre Martin,Cancelled,5,0,300.67,213.0,EUR
+BK-005044,2021-02-22,2021-05-23,2021-06-05,11,Roma Viaggi SRL,8,Hotel Promenade Nice,Accommodation,Nice,7,Isabelle Leroy,Completed,6,13,17117.58,9456.28,EUR
+BK-005045,2021-02-08,2021-03-17,2021-03-24,11,Roma Viaggi SRL,3,Hotel Le Marais,Accommodation,Paris,2,Pierre Martin,Completed,9,7,20883.05,13973.66,EUR
+BK-005046,2021-02-19,2021-03-26,2021-04-07,7,Beijing Star International,6,Chateau Stay Bordeaux,Accommodation,Bordeaux,8,Thomas Roux,Cancelled,12,12,19283.04,14151.0,EUR
+BK-005047,2021-02-07,2021-03-09,2021-03-10,20,Swiss Premium Tours,7,Nice Coastal Tour,Tour,Nice,6,Nicolas Petit,Completed,3,1,500.52,290.29,EUR
+BK-005048,2021-02-22,2021-04-27,2021-04-28,18,Thai Smile Holidays,20,Hotel Negresco Nice,Accommodation,Nice,1,Marie Dubois,Cancelled,8,1,1441.78,906.67,EUR
+BK-005049,2021-02-19,2021-03-27,2021-03-30,17,Andalucia Sun Tours,16,Hotel Vieux Lyon,Accommodation,Lyon,5,Camille Moreau,Completed,7,3,2939.27,2040.34,EUR
+BK-005050,2021-02-26,2021-04-22,2021-05-01,2,Alpine Adventures GmbH,16,Hotel Vieux Lyon,Accommodation,Lyon,6,Nicolas Petit,Completed,7,9,19675.41,14638.03,EUR
+BK-005051,2021-02-04,2021-05-05,2021-05-08,11,Roma Viaggi SRL,17,Strasbourg Christmas Tour,Tour,Strasbourg,1,Marie Dubois,Completed,1,3,151.12,97.45,EUR
+BK-005052,2021-02-12,2021-05-02,2021-05-03,18,Thai Smile Holidays,9,Lyon Food Tour,Tour,Lyon,5,Camille Moreau,Completed,4,1,361.64,285.56,EUR
+BK-005053,2021-02-06,2021-04-11,2021-04-12,14,Direct Client - Web,14,Versailles Day Trip,Tour,Versailles,6,Nicolas Petit,Completed,6,1,1068.89,662.61,EUR
+BK-005054,2021-02-05,2021-04-20,2021-05-04,4,Voyages Lumiere,8,Hotel Promenade Nice,Accommodation,Nice,5,Camille Moreau,Completed,4,14,12876.74,9838.82,EUR
+BK-005055,2021-02-26,2021-03-18,2021-03-31,1,Sakura Travel Group,16,Hotel Vieux Lyon,Accommodation,Lyon,3,Sophie Laurent,Completed,7,13,19555.12,15622.4,EUR
+BK-005056,2021-02-17,2021-04-27,2021-04-30,10,Seoul Wanderers Co.,11,D-Day Normandy Tour,Tour,Normandy,5,Camille Moreau,Completed,9,3,1608.98,904.13,EUR
+BK-005057,2021-02-06,2021-02-14,2021-02-16,16,Mumbai Getaways Pvt,7,Nice Coastal Tour,Tour,Nice,2,Pierre Martin,Completed,8,2,1293.51,795.43,EUR
+BK-005058,2021-02-18,2021-03-23,2021-03-24,1,Sakura Travel Group,12,TGV Train Booking,Transfer,Multi-city,7,Isabelle Leroy,Completed,2,0,144.26,103.85,EUR
+BK-005059,2021-02-19,2021-05-04,2021-05-05,10,Seoul Wanderers Co.,18,Marseille Port Tour,Tour,Marseille,6,Nicolas Petit,Completed,6,1,905.87,608.63,EUR
+BK-005060,2021-02-03,2021-03-24,2021-03-29,15,Horizon Corp Events,20,Hotel Negresco Nice,Accommodation,Nice,3,Sophie Laurent,Completed,3,5,3794.35,2967.72,EUR
+BK-005061,2021-02-20,2021-05-05,2021-05-06,3,Pacific Coast Tours,13,Private Car Service,Transfer,Multi-city,2,Pierre Martin,Completed,3,0,213.71,134.29,EUR
+BK-005062,2021-02-23,2021-03-30,2021-04-10,13,Direct Client - Walk-in,20,Hotel Negresco Nice,Accommodation,Nice,5,Camille Moreau,Completed,8,11,25595.94,20084.94,EUR
+BK-005063,2021-02-17,2021-04-16,2021-04-17,6,Southern Cross Holidays,14,Versailles Day Trip,Tour,Versailles,1,Marie Dubois,Cancelled,3,1,477.5,341.65,EUR
+BK-005064,2021-02-23,2021-03-06,2021-03-07,13,Direct Client - Walk-in,7,Nice Coastal Tour,Tour,Nice,2,Pierre Martin,Completed,2,1,119.14,91.7,EUR
+BK-005065,2021-02-01,2021-03-24,2021-03-25,4,Voyages Lumiere,17,Strasbourg Christmas Tour,Tour,Strasbourg,5,Camille Moreau,Cancelled,10,0,732.91,523.08,EUR
+BK-005066,2021-02-10,2021-03-12,2021-03-24,10,Seoul Wanderers Co.,8,Hotel Promenade Nice,Accommodation,Nice,8,Thomas Roux,Completed,11,12,15065.31,10269.8,EUR
+BK-005067,2021-02-02,2021-04-28,2021-04-29,11,Roma Viaggi SRL,12,TGV Train Booking,Transfer,Multi-city,8,Thomas Roux,Completed,8,0,1175.98,805.72,EUR
+BK-005068,2021-02-15,2021-03-05,2021-03-06,19,Amazon Corp Travel,18,Marseille Port Tour,Tour,Marseille,8,Thomas Roux,Completed,11,1,1785.7,1373.78,EUR
+BK-005069,2021-02-21,2021-05-14,2021-05-16,12,Kiwi Adventures Ltd,18,Marseille Port Tour,Tour,Marseille,8,Thomas Roux,Completed,9,2,756.62,433.08,EUR
+BK-005070,2021-02-14,2021-03-20,2021-03-22,1,Sakura Travel Group,5,Wine Tasting Bordeaux,Tour,Bordeaux,1,Marie Dubois,Completed,9,2,1550.76,1181.66,EUR
+BK-005071,2021-02-16,2021-04-26,2021-04-29,16,Mumbai Getaways Pvt,1,City Walking Tour,Tour,Paris,5,Camille Moreau,Completed,1,3,164.88,123.58,EUR
+BK-005072,2021-02-26,2021-02-27,2021-03-01,7,Beijing Star International,18,Marseille Port Tour,Tour,Marseille,7,Isabelle Leroy,Completed,9,2,1040.09,637.03,EUR
+BK-005073,2021-02-21,2021-04-12,2021-04-13,8,Nordic Explorers AB,13,Private Car Service,Transfer,Multi-city,5,Camille Moreau,Completed,2,0,161.34,98.4,EUR
+BK-005074,2021-02-20,2021-05-20,2021-05-22,18,Thai Smile Holidays,9,Lyon Food Tour,Tour,Lyon,5,Camille Moreau,Completed,7,2,547.4,310.44,EUR
+BK-005075,2021-02-04,2021-04-27,2021-04-30,9,Maple Leaf Journeys,15,Provence Lavender Tour,Tour,Provence,8,Thomas Roux,Cancelled,4,3,392.39,230.74,EUR
+BK-005076,2021-02-01,2021-02-25,2021-02-27,9,Maple Leaf Journeys,4,Seine River Cruise,Tour,Paris,3,Sophie Laurent,Completed,12,2,1389.15,766.88,EUR
+BK-005077,2021-02-01,2021-04-06,2021-04-08,14,Direct Client - Web,7,Nice Coastal Tour,Tour,Nice,5,Camille Moreau,Completed,8,2,1597.56,1063.85,EUR
+BK-005078,2021-02-11,2021-02-22,2021-02-23,9,Maple Leaf Journeys,5,Wine Tasting Bordeaux,Tour,Bordeaux,7,Isabelle Leroy,Cancelled,2,0,262.96,156.57,EUR
+BK-005079,2021-02-09,2021-03-30,2021-03-31,8,Nordic Explorers AB,1,City Walking Tour,Tour,Paris,7,Isabelle Leroy,Completed,8,0,696.59,556.32,EUR
+BK-005080,2021-02-24,2021-03-09,2021-03-10,16,Mumbai Getaways Pvt,17,Strasbourg Christmas Tour,Tour,Strasbourg,7,Isabelle Leroy,Completed,11,1,2136.0,1674.74,EUR
+BK-005081,2021-02-24,2021-03-02,2021-03-03,9,Maple Leaf Journeys,18,Marseille Port Tour,Tour,Marseille,8,Thomas Roux,Completed,11,0,1043.04,667.66,EUR
+BK-005082,2021-02-22,2021-03-22,2021-03-23,14,Direct Client - Web,4,Seine River Cruise,Tour,Paris,6,Nicolas Petit,Completed,1,1,75.1,46.49,EUR
+BK-005083,2021-03-01,2021-03-07,2021-03-10,20,Swiss Premium Tours,19,Ski Package Alps,Tour,Chamonix,3,Sophie Laurent,Completed,6,3,993.72,608.34,EUR
+BK-005084,2021-03-22,2021-06-10,2021-06-11,2,Alpine Adventures GmbH,11,D-Day Normandy Tour,Tour,Normandy,6,Nicolas Petit,Completed,11,0,803.97,549.99,EUR
+BK-005085,2021-03-16,2021-04-15,2021-04-17,15,Horizon Corp Events,11,D-Day Normandy Tour,Tour,Normandy,4,Jean-Luc Bernard,Completed,1,2,153.39,98.1,EUR
+BK-005086,2021-03-29,2021-04-04,2021-04-16,15,Horizon Corp Events,16,Hotel Vieux Lyon,Accommodation,Lyon,5,Camille Moreau,Completed,9,12,28965.62,17305.33,EUR
+BK-005087,2021-03-12,2021-04-23,2021-04-25,20,Swiss Premium Tours,15,Provence Lavender Tour,Tour,Provence,3,Sophie Laurent,Completed,2,2,259.34,171.77,EUR
+BK-005088,2021-03-18,2021-05-04,2021-05-05,17,Andalucia Sun Tours,15,Provence Lavender Tour,Tour,Provence,7,Isabelle Leroy,Cancelled,12,0,933.96,518.05,EUR
+BK-005089,2021-03-25,2021-06-13,2021-06-19,3,Pacific Coast Tours,8,Hotel Promenade Nice,Accommodation,Nice,7,Isabelle Leroy,Completed,4,6,5315.97,3585.02,EUR
+BK-005090,2021-03-20,2021-04-26,2021-04-29,11,Roma Viaggi SRL,11,D-Day Normandy Tour,Tour,Normandy,2,Pierre Martin,Completed,2,3,256.96,145.61,EUR
+BK-005091,2021-03-05,2021-03-28,2021-03-29,7,Beijing Star International,2,Airport Transfer,Transfer,Paris,2,Pierre Martin,Completed,8,0,423.95,236.54,EUR
+BK-005092,2021-03-13,2021-06-06,2021-06-15,20,Swiss Premium Tours,16,Hotel Vieux Lyon,Accommodation,Lyon,5,Camille Moreau,Completed,1,9,1610.24,1129.56,EUR
+BK-005093,2021-03-30,2021-04-26,2021-05-10,3,Pacific Coast Tours,16,Hotel Vieux Lyon,Accommodation,Lyon,8,Thomas Roux,Cancelled,11,14,14843.91,10234.95,EUR
+BK-005094,2021-03-14,2021-05-01,2021-05-02,20,Swiss Premium Tours,2,Airport Transfer,Transfer,Paris,5,Camille Moreau,Completed,9,0,313.91,178.17,EUR
+BK-005095,2021-03-31,2021-04-28,2021-04-29,4,Voyages Lumiere,17,Strasbourg Christmas Tour,Tour,Strasbourg,4,Jean-Luc Bernard,Completed,9,0,970.2,580.45,EUR
+BK-005096,2021-03-19,2021-06-08,2021-06-17,18,Thai Smile Holidays,6,Chateau Stay Bordeaux,Accommodation,Bordeaux,7,Isabelle Leroy,Completed,12,9,11716.79,8314.89,EUR
+BK-005097,2021-03-15,2021-06-13,2021-06-14,6,Southern Cross Holidays,14,Versailles Day Trip,Tour,Versailles,3,Sophie Laurent,Completed,9,0,992.1,629.37,EUR
+BK-005098,2021-03-20,2021-05-16,2021-05-17,11,Roma Viaggi SRL,12,TGV Train Booking,Transfer,Multi-city,6,Nicolas Petit,Completed,6,0,476.89,337.79,EUR
+BK-005099,2021-03-11,2021-05-28,2021-06-07,18,Thai Smile Holidays,8,Hotel Promenade Nice,Accommodation,Nice,4,Jean-Luc Bernard,Completed,7,10,20071.89,15686.92,EUR
+BK-005100,2021-03-31,2021-05-28,2021-05-31,1,Sakura Travel Group,15,Provence Lavender Tour,Tour,Provence,1,Marie Dubois,Cancelled,5,3,696.82,473.42,EUR
+BK-005101,2021-03-10,2021-03-11,2021-03-12,7,Beijing Star International,10,Mont Blanc Excursion,Tour,Chamonix,6,Nicolas Petit,Completed,1,1,165.73,130.24,EUR
+BK-005102,2021-03-30,2021-06-09,2021-06-10,4,Voyages Lumiere,17,Strasbourg Christmas Tour,Tour,Strasbourg,1,Marie Dubois,Completed,8,1,826.79,483.34,EUR
+BK-005103,2021-03-19,2021-04-20,2021-04-25,10,Seoul Wanderers Co.,8,Hotel Promenade Nice,Accommodation,Nice,2,Pierre Martin,Completed,10,5,9397.28,7324.9,EUR
+BK-005104,2021-03-24,2021-05-05,2021-05-08,16,Mumbai Getaways Pvt,16,Hotel Vieux Lyon,Accommodation,Lyon,2,Pierre Martin,Completed,10,3,7602.26,4252.27,EUR
+BK-005105,2021-03-13,2021-03-24,2021-03-25,11,Roma Viaggi SRL,2,Airport Transfer,Transfer,Paris,6,Nicolas Petit,Cancelled,7,0,559.88,429.4,EUR
+BK-005106,2021-03-08,2021-05-31,2021-06-01,13,Direct Client - Walk-in,20,Hotel Negresco Nice,Accommodation,Nice,1,Marie Dubois,Completed,5,1,1107.92,697.8,EUR
+BK-005107,2021-03-11,2021-05-15,2021-05-18,2,Alpine Adventures GmbH,8,Hotel Promenade Nice,Accommodation,Nice,7,Isabelle Leroy,Completed,8,3,6798.4,4716.82,EUR
+BK-005108,2021-03-14,2021-04-21,2021-04-22,5,Gulf Luxury Travel,13,Private Car Service,Transfer,Multi-city,3,Sophie Laurent,Completed,6,0,239.43,165.89,EUR
+BK-005109,2021-03-13,2021-04-16,2021-04-23,17,Andalucia Sun Tours,3,Hotel Le Marais,Accommodation,Paris,7,Isabelle Leroy,Completed,12,7,9676.91,5648.58,EUR
+BK-005110,2021-03-16,2021-05-06,2021-05-07,18,Thai Smile Holidays,19,Ski Package Alps,Tour,Chamonix,4,Jean-Luc Bernard,Completed,4,1,242.99,180.83,EUR
+BK-005111,2021-03-30,2021-06-12,2021-06-14,14,Direct Client - Web,3,Hotel Le Marais,Accommodation,Paris,7,Isabelle Leroy,Completed,6,2,2088.52,1316.15,EUR
+BK-005112,2021-03-01,2021-04-10,2021-04-16,20,Swiss Premium Tours,6,Chateau Stay Bordeaux,Accommodation,Bordeaux,8,Thomas Roux,Completed,10,6,7162.26,4019.6,EUR
+BK-005113,2021-03-07,2021-06-03,2021-06-04,5,Gulf Luxury Travel,12,TGV Train Booking,Transfer,Multi-city,2,Pierre Martin,Completed,2,0,237.5,145.06,EUR
+BK-005114,2021-03-05,2021-04-11,2021-04-13,4,Voyages Lumiere,1,City Walking Tour,Tour,Paris,5,Camille Moreau,Completed,8,2,965.43,611.09,EUR
+BK-005115,2021-03-07,2021-04-03,2021-04-05,18,Thai Smile Holidays,18,Marseille Port Tour,Tour,Marseille,8,Thomas Roux,Completed,10,2,1594.89,933.55,EUR
+BK-005116,2021-03-01,2021-04-19,2021-04-20,9,Maple Leaf Journeys,19,Ski Package Alps,Tour,Chamonix,3,Sophie Laurent,Completed,1,0,92.6,69.2,EUR
+BK-005117,2021-03-02,2021-05-01,2021-05-02,13,Direct Client - Walk-in,1,City Walking Tour,Tour,Paris,5,Camille Moreau,Cancelled,11,0,1955.94,1398.55,EUR
+BK-005118,2021-03-01,2021-04-08,2021-04-09,8,Nordic Explorers AB,13,Private Car Service,Transfer,Multi-city,7,Isabelle Leroy,Completed,9,0,1324.74,761.59,EUR
+BK-005119,2021-03-28,2021-06-13,2021-06-14,6,Southern Cross Holidays,18,Marseille Port Tour,Tour,Marseille,4,Jean-Luc Bernard,Completed,9,0,1755.17,1211.37,EUR
+BK-005120,2021-03-02,2021-04-03,2021-04-05,11,Roma Viaggi SRL,17,Strasbourg Christmas Tour,Tour,Strasbourg,8,Thomas Roux,Completed,7,2,1131.61,627.58,EUR
+BK-005121,2021-03-12,2021-06-01,2021-06-02,17,Andalucia Sun Tours,10,Mont Blanc Excursion,Tour,Chamonix,5,Camille Moreau,Cancelled,1,1,143.87,110.73,EUR
+BK-005122,2021-03-27,2021-03-31,2021-04-02,8,Nordic Explorers AB,18,Marseille Port Tour,Tour,Marseille,3,Sophie Laurent,Completed,6,2,1107.46,790.98,EUR
+BK-005123,2021-03-13,2021-05-19,2021-06-02,8,Nordic Explorers AB,20,Hotel Negresco Nice,Accommodation,Nice,7,Isabelle Leroy,Completed,4,14,13142.23,8629.4,EUR
+BK-005124,2021-03-20,2021-05-02,2021-05-03,7,Beijing Star International,15,Provence Lavender Tour,Tour,Provence,3,Sophie Laurent,Cancelled,10,1,1312.03,984.06,EUR
+BK-005125,2021-03-10,2021-06-07,2021-06-08,14,Direct Client - Web,17,Strasbourg Christmas Tour,Tour,Strasbourg,3,Sophie Laurent,Completed,11,1,2089.5,1628.3,EUR
+BK-005126,2021-03-18,2021-05-26,2021-05-27,11,Roma Viaggi SRL,4,Seine River Cruise,Tour,Paris,3,Sophie Laurent,Cancelled,12,1,653.07,411.22,EUR
+BK-005127,2021-03-31,2021-05-23,2021-05-26,9,Maple Leaf Journeys,10,Mont Blanc Excursion,Tour,Chamonix,3,Sophie Laurent,Completed,4,3,264.06,157.43,EUR
+BK-005128,2021-03-20,2021-06-07,2021-06-08,20,Swiss Premium Tours,9,Lyon Food Tour,Tour,Lyon,4,Jean-Luc Bernard,Completed,4,1,612.43,391.84,EUR
+BK-005129,2021-03-16,2021-04-03,2021-04-06,12,Kiwi Adventures Ltd,17,Strasbourg Christmas Tour,Tour,Strasbourg,3,Sophie Laurent,Completed,7,3,866.02,506.08,EUR
+BK-005130,2021-03-02,2021-04-24,2021-04-26,14,Direct Client - Web,1,City Walking Tour,Tour,Paris,4,Jean-Luc Bernard,Completed,12,2,1808.41,1086.33,EUR
+BK-005131,2021-03-06,2021-05-02,2021-05-10,11,Roma Viaggi SRL,20,Hotel Negresco Nice,Accommodation,Nice,8,Thomas Roux,Completed,4,8,6254.08,4653.37,EUR
+BK-005132,2021-03-27,2021-05-15,2021-05-18,20,Swiss Premium Tours,11,D-Day Normandy Tour,Tour,Normandy,1,Marie Dubois,Cancelled,9,3,597.58,396.93,EUR
+BK-005133,2021-03-29,2021-04-30,2021-05-03,2,Alpine Adventures GmbH,17,Strasbourg Christmas Tour,Tour,Strasbourg,7,Isabelle Leroy,Completed,9,3,1482.97,1172.51,EUR
+BK-005134,2021-04-13,2021-05-22,2021-05-25,6,Southern Cross Holidays,10,Mont Blanc Excursion,Tour,Chamonix,7,Isabelle Leroy,Completed,5,3,709.85,400.1,EUR
+BK-005135,2021-04-05,2021-06-04,2021-06-05,17,Andalucia Sun Tours,15,Provence Lavender Tour,Tour,Provence,2,Pierre Martin,Completed,3,0,500.43,392.57,EUR
+BK-005136,2021-04-05,2021-05-26,2021-05-28,15,Horizon Corp Events,14,Versailles Day Trip,Tour,Versailles,1,Marie Dubois,Cancelled,3,2,354.16,274.17,EUR
+BK-005137,2021-04-29,2021-06-27,2021-07-02,11,Roma Viaggi SRL,3,Hotel Le Marais,Accommodation,Paris,3,Sophie Laurent,Completed,12,5,16678.85,9553.61,EUR
+BK-005138,2021-04-21,2021-06-07,2021-06-16,13,Direct Client - Walk-in,3,Hotel Le Marais,Accommodation,Paris,3,Sophie Laurent,Completed,7,9,14401.38,8078.84,EUR
+BK-005139,2021-04-11,2021-06-23,2021-06-24,5,Gulf Luxury Travel,5,Wine Tasting Bordeaux,Tour,Bordeaux,3,Sophie Laurent,Completed,12,1,692.36,434.12,EUR
+BK-005140,2021-04-15,2021-05-22,2021-05-24,5,Gulf Luxury Travel,6,Chateau Stay Bordeaux,Accommodation,Bordeaux,4,Jean-Luc Bernard,Completed,1,2,496.18,304.3,EUR
+BK-005141,2021-04-28,2021-07-01,2021-07-02,20,Swiss Premium Tours,18,Marseille Port Tour,Tour,Marseille,8,Thomas Roux,Completed,4,0,330.12,235.99,EUR
+BK-005142,2021-04-15,2021-04-26,2021-05-06,1,Sakura Travel Group,20,Hotel Negresco Nice,Accommodation,Nice,4,Jean-Luc Bernard,Completed,9,10,13958.14,9870.62,EUR
+BK-005143,2021-04-07,2021-04-14,2021-04-17,2,Alpine Adventures GmbH,6,Chateau Stay Bordeaux,Accommodation,Bordeaux,6,Nicolas Petit,Completed,1,3,357.75,199.66,EUR
+BK-005144,2021-04-20,2021-05-29,2021-05-30,2,Alpine Adventures GmbH,11,D-Day Normandy Tour,Tour,Normandy,2,Pierre Martin,Completed,7,0,1393.42,822.58,EUR
+BK-005145,2021-04-22,2021-07-20,2021-07-30,18,Thai Smile Holidays,20,Hotel Negresco Nice,Accommodation,Nice,3,Sophie Laurent,Completed,8,10,22585.63,14455.87,EUR
+BK-005146,2021-04-25,2021-06-03,2021-06-05,13,Direct Client - Walk-in,11,D-Day Normandy Tour,Tour,Normandy,2,Pierre Martin,Completed,7,2,1235.48,699.57,EUR
+BK-005147,2021-04-04,2021-07-02,2021-07-04,17,Andalucia Sun Tours,9,Lyon Food Tour,Tour,Lyon,7,Isabelle Leroy,Completed,9,2,733.29,441.63,EUR
+BK-005148,2021-04-19,2021-07-09,2021-07-10,16,Mumbai Getaways Pvt,17,Strasbourg Christmas Tour,Tour,Strasbourg,5,Camille Moreau,Completed,7,0,989.29,622.38,EUR
+BK-005149,2021-04-20,2021-06-05,2021-06-08,17,Andalucia Sun Tours,5,Wine Tasting Bordeaux,Tour,Bordeaux,8,Thomas Roux,Completed,8,3,1369.58,1055.83,EUR
+BK-005150,2021-04-10,2021-05-05,2021-05-06,1,Sakura Travel Group,1,City Walking Tour,Tour,Paris,8,Thomas Roux,Completed,11,0,1864.61,1369.31,EUR
+BK-005151,2021-04-20,2021-06-13,2021-06-14,11,Roma Viaggi SRL,14,Versailles Day Trip,Tour,Versailles,6,Nicolas Petit,Completed,9,0,1538.16,927.64,EUR
+BK-005152,2021-04-23,2021-05-30,2021-05-31,10,Seoul Wanderers Co.,9,Lyon Food Tour,Tour,Lyon,5,Camille Moreau,Completed,9,0,1192.49,884.54,EUR
+BK-005153,2021-04-11,2021-05-25,2021-05-26,19,Amazon Corp Travel,13,Private Car Service,Transfer,Multi-city,1,Marie Dubois,Cancelled,3,0,159.85,121.24,EUR
+BK-005154,2021-04-16,2021-06-16,2021-06-17,5,Gulf Luxury Travel,2,Airport Transfer,Transfer,Paris,8,Thomas Roux,Completed,3,0,315.79,244.11,EUR
+BK-005155,2021-04-11,2021-06-10,2021-06-11,17,Andalucia Sun Tours,14,Versailles Day Trip,Tour,Versailles,5,Camille Moreau,Completed,10,0,1587.45,998.31,EUR
+BK-005156,2021-04-07,2021-06-20,2021-06-22,3,Pacific Coast Tours,11,D-Day Normandy Tour,Tour,Normandy,3,Sophie Laurent,Completed,5,2,880.55,558.96,EUR
+BK-005157,2021-04-18,2021-05-10,2021-05-13,6,Southern Cross Holidays,19,Ski Package Alps,Tour,Chamonix,2,Pierre Martin,Completed,5,3,778.95,489.67,EUR
+BK-005158,2021-04-14,2021-04-26,2021-04-30,12,Kiwi Adventures Ltd,16,Hotel Vieux Lyon,Accommodation,Lyon,8,Thomas Roux,Completed,5,4,2767.16,1731.08,EUR
+BK-005159,2021-04-26,2021-05-01,2021-05-02,15,Horizon Corp Events,7,Nice Coastal Tour,Tour,Nice,1,Marie Dubois,Completed,8,0,1485.95,874.51,EUR
+BK-005160,2021-04-16,2021-06-23,2021-06-25,5,Gulf Luxury Travel,10,Mont Blanc Excursion,Tour,Chamonix,2,Pierre Martin,Completed,9,2,1363.57,795.21,EUR
+BK-005161,2021-04-15,2021-06-04,2021-06-05,1,Sakura Travel Group,17,Strasbourg Christmas Tour,Tour,Strasbourg,5,Camille Moreau,Completed,1,0,153.06,106.92,EUR
+BK-005162,2021-04-15,2021-04-21,2021-04-23,1,Sakura Travel Group,4,Seine River Cruise,Tour,Paris,5,Camille Moreau,Completed,11,2,2022.02,1274.32,EUR
+BK-005163,2021-04-09,2021-06-17,2021-06-20,4,Voyages Lumiere,11,D-Day Normandy Tour,Tour,Normandy,5,Camille Moreau,Cancelled,3,3,220.87,127.8,EUR
+BK-005164,2021-04-18,2021-06-23,2021-06-24,18,Thai Smile Holidays,4,Seine River Cruise,Tour,Paris,6,Nicolas Petit,Completed,9,1,879.95,515.11,EUR
+BK-005165,2021-04-10,2021-06-23,2021-06-26,3,Pacific Coast Tours,8,Hotel Promenade Nice,Accommodation,Nice,5,Camille Moreau,Completed,10,3,9627.17,6596.0,EUR
+BK-005166,2021-04-01,2021-06-01,2021-06-02,4,Voyages Lumiere,2,Airport Transfer,Transfer,Paris,7,Isabelle Leroy,Completed,1,0,40.33,26.13,EUR
+BK-005167,2021-04-29,2021-07-14,2021-07-16,10,Seoul Wanderers Co.,15,Provence Lavender Tour,Tour,Provence,6,Nicolas Petit,Completed,4,2,627.74,450.54,EUR
+BK-005168,2021-04-30,2021-06-29,2021-06-30,3,Pacific Coast Tours,19,Ski Package Alps,Tour,Chamonix,8,Thomas Roux,Completed,2,1,236.68,170.67,EUR
+BK-005169,2021-04-15,2021-06-15,2021-06-19,5,Gulf Luxury Travel,8,Hotel Promenade Nice,Accommodation,Nice,5,Camille Moreau,Completed,6,4,4460.66,3233.55,EUR
+BK-005170,2021-04-26,2021-06-07,2021-06-10,1,Sakura Travel Group,15,Provence Lavender Tour,Tour,Provence,2,Pierre Martin,Completed,8,3,535.46,358.58,EUR
+BK-005171,2021-04-10,2021-05-25,2021-06-04,5,Gulf Luxury Travel,20,Hotel Negresco Nice,Accommodation,Nice,2,Pierre Martin,Completed,7,10,21051.75,15771.75,EUR
+BK-005172,2021-04-21,2021-05-01,2021-05-04,13,Direct Client - Walk-in,10,Mont Blanc Excursion,Tour,Chamonix,7,Isabelle Leroy,Cancelled,4,3,572.52,393.31,EUR
+BK-005173,2021-04-13,2021-04-22,2021-04-23,19,Amazon Corp Travel,11,D-Day Normandy Tour,Tour,Normandy,7,Isabelle Leroy,Completed,7,1,945.57,600.96,EUR
+BK-005174,2021-04-06,2021-06-30,2021-07-12,19,Amazon Corp Travel,3,Hotel Le Marais,Accommodation,Paris,8,Thomas Roux,Completed,2,12,5757.22,3832.74,EUR
+BK-005175,2021-04-27,2021-06-23,2021-06-28,13,Direct Client - Walk-in,6,Chateau Stay Bordeaux,Accommodation,Bordeaux,2,Pierre Martin,Completed,10,5,5468.05,4120.27,EUR
+BK-005176,2021-04-13,2021-05-25,2021-06-05,2,Alpine Adventures GmbH,16,Hotel Vieux Lyon,Accommodation,Lyon,2,Pierre Martin,Cancelled,4,11,13226.36,10208.31,EUR
+BK-005177,2021-04-21,2021-04-22,2021-04-23,15,Horizon Corp Events,5,Wine Tasting Bordeaux,Tour,Bordeaux,5,Camille Moreau,Completed,7,1,996.35,659.37,EUR
+BK-005178,2021-04-29,2021-06-09,2021-06-11,14,Direct Client - Web,10,Mont Blanc Excursion,Tour,Chamonix,6,Nicolas Petit,Completed,2,2,274.82,193.16,EUR
+BK-005179,2021-04-28,2021-05-15,2021-05-16,12,Kiwi Adventures Ltd,10,Mont Blanc Excursion,Tour,Chamonix,1,Marie Dubois,Completed,1,0,155.5,117.43,EUR
+BK-005180,2021-04-28,2021-06-04,2021-06-05,14,Direct Client - Web,1,City Walking Tour,Tour,Paris,7,Isabelle Leroy,Completed,11,1,1074.91,694.07,EUR
+BK-005181,2021-04-18,2021-05-16,2021-05-24,5,Gulf Luxury Travel,6,Chateau Stay Bordeaux,Accommodation,Bordeaux,4,Jean-Luc Bernard,Completed,9,8,13236.53,10339.33,EUR
+BK-005182,2021-04-05,2021-05-12,2021-05-13,1,Sakura Travel Group,5,Wine Tasting Bordeaux,Tour,Bordeaux,2,Pierre Martin,Completed,11,1,575.92,420.61,EUR
+BK-005183,2021-04-14,2021-05-02,2021-05-05,14,Direct Client - Web,3,Hotel Le Marais,Accommodation,Paris,8,Thomas Roux,Completed,12,3,8755.05,5747.04,EUR
+BK-005184,2021-04-17,2021-06-11,2021-06-14,13,Direct Client - Walk-in,18,Marseille Port Tour,Tour,Marseille,6,Nicolas Petit,Completed,4,3,311.47,218.39,EUR
+BK-005185,2021-04-28,2021-05-29,2021-05-31,14,Direct Client - Web,17,Strasbourg Christmas Tour,Tour,Strasbourg,6,Nicolas Petit,Completed,1,2,196.74,136.15,EUR
+BK-005186,2021-04-04,2021-06-18,2021-06-30,3,Pacific Coast Tours,16,Hotel Vieux Lyon,Accommodation,Lyon,3,Sophie Laurent,Cancelled,12,12,39952.68,31798.13,EUR
+BK-005187,2021-04-25,2021-05-31,2021-06-01,17,Andalucia Sun Tours,15,Provence Lavender Tour,Tour,Provence,2,Pierre Martin,Cancelled,4,0,483.47,355.55,EUR
+BK-005188,2021-04-03,2021-06-30,2021-07-02,20,Swiss Premium Tours,18,Marseille Port Tour,Tour,Marseille,1,Marie Dubois,Completed,6,2,781.53,431.95,EUR
+BK-005189,2021-04-29,2021-06-29,2021-07-01,14,Direct Client - Web,19,Ski Package Alps,Tour,Chamonix,6,Nicolas Petit,Cancelled,5,2,466.91,260.92,EUR
+BK-005190,2021-04-24,2021-06-02,2021-06-04,2,Alpine Adventures GmbH,19,Ski Package Alps,Tour,Chamonix,8,Thomas Roux,Cancelled,10,2,753.62,424.22,EUR
+BK-005191,2021-04-26,2021-07-15,2021-07-17,16,Mumbai Getaways Pvt,1,City Walking Tour,Tour,Paris,2,Pierre Martin,Completed,3,2,377.52,288.0,EUR
+BK-005192,2021-04-05,2021-06-23,2021-06-25,9,Maple Leaf Journeys,9,Lyon Food Tour,Tour,Lyon,1,Marie Dubois,Completed,12,2,800.79,475.39,EUR
+BK-005193,2021-04-05,2021-06-29,2021-07-01,6,Southern Cross Holidays,15,Provence Lavender Tour,Tour,Provence,5,Camille Moreau,Completed,12,2,1025.15,610.17,EUR
+BK-005194,2021-04-02,2021-05-16,2021-05-19,20,Swiss Premium Tours,3,Hotel Le Marais,Accommodation,Paris,3,Sophie Laurent,Completed,8,3,6797.89,4440.63,EUR
+BK-005195,2021-04-22,2021-06-18,2021-06-22,19,Amazon Corp Travel,6,Chateau Stay Bordeaux,Accommodation,Bordeaux,6,Nicolas Petit,Completed,1,4,1013.64,748.95,EUR
+BK-005196,2021-04-06,2021-06-05,2021-06-06,16,Mumbai Getaways Pvt,13,Private Car Service,Transfer,Multi-city,5,Camille Moreau,Completed,8,0,956.3,705.85,EUR
+BK-005197,2021-04-13,2021-07-10,2021-07-11,16,Mumbai Getaways Pvt,13,Private Car Service,Transfer,Multi-city,5,Camille Moreau,Completed,3,0,280.96,185.06,EUR
+BK-005198,2021-04-26,2021-06-23,2021-06-24,11,Roma Viaggi SRL,13,Private Car Service,Transfer,Multi-city,1,Marie Dubois,Cancelled,2,0,280.25,198.8,EUR
+BK-005199,2021-04-14,2021-07-02,2021-07-04,9,Maple Leaf Journeys,9,Lyon Food Tour,Tour,Lyon,5,Camille Moreau,Completed,2,2,176.6,122.92,EUR
+BK-005200,2021-04-22,2021-05-23,2021-05-24,17,Andalucia Sun Tours,19,Ski Package Alps,Tour,Chamonix,6,Nicolas Petit,Completed,11,1,1688.96,1004.9,EUR
+BK-005201,2021-04-22,2021-04-24,2021-04-25,14,Direct Client - Web,3,Hotel Le Marais,Accommodation,Paris,2,Pierre Martin,Completed,9,1,972.49,643.29,EUR
+BK-005202,2021-04-10,2021-05-13,2021-05-14,1,Sakura Travel Group,7,Nice Coastal Tour,Tour,Nice,2,Pierre Martin,Completed,1,0,190.78,136.25,EUR
+BK-005203,2021-04-20,2021-07-11,2021-07-12,3,Pacific Coast Tours,4,Seine River Cruise,Tour,Paris,3,Sophie Laurent,Completed,7,0,1039.21,805.36,EUR
+BK-005204,2021-04-06,2021-04-21,2021-04-26,10,Seoul Wanderers Co.,6,Chateau Stay Bordeaux,Accommodation,Bordeaux,8,Thomas Roux,Cancelled,11,5,18302.3,12989.05,EUR
+BK-005205,2021-04-09,2021-06-03,2021-06-05,6,Southern Cross Holidays,11,D-Day Normandy Tour,Tour,Normandy,2,Pierre Martin,Completed,5,2,832.83,537.76,EUR
+BK-005206,2021-04-02,2021-05-06,2021-05-07,15,Horizon Corp Events,9,Lyon Food Tour,Tour,Lyon,2,Pierre Martin,Completed,8,1,1575.31,945.45,EUR
+BK-005207,2021-04-21,2021-06-23,2021-06-24,18,Thai Smile Holidays,4,Seine River Cruise,Tour,Paris,7,Isabelle Leroy,Completed,4,1,568.38,327.71,EUR
+BK-005208,2021-04-09,2021-04-23,2021-04-24,3,Pacific Coast Tours,2,Airport Transfer,Transfer,Paris,2,Pierre Martin,Completed,10,0,1173.05,873.11,EUR
+BK-005209,2021-04-16,2021-05-06,2021-05-07,13,Direct Client - Walk-in,1,City Walking Tour,Tour,Paris,5,Camille Moreau,Completed,3,0,465.02,360.93,EUR
+BK-005210,2021-05-23,2021-07-25,2021-08-01,13,Direct Client - Walk-in,16,Hotel Vieux Lyon,Accommodation,Lyon,2,Pierre Martin,Completed,9,7,8881.65,5738.49,EUR
+BK-005211,2021-05-25,2021-07-26,2021-07-28,11,Roma Viaggi SRL,4,Seine River Cruise,Tour,Paris,5,Camille Moreau,Completed,7,2,407.95,326.06,EUR
+BK-005212,2021-05-12,2021-07-20,2021-07-21,15,Horizon Corp Events,11,D-Day Normandy Tour,Tour,Normandy,5,Camille Moreau,Cancelled,11,0,885.15,609.53,EUR
+BK-005213,2021-05-22,2021-06-16,2021-06-19,4,Voyages Lumiere,10,Mont Blanc Excursion,Tour,Chamonix,6,Nicolas Petit,Completed,8,3,501.83,355.39,EUR
+BK-005214,2021-05-05,2021-05-10,2021-05-11,19,Amazon Corp Travel,7,Nice Coastal Tour,Tour,Nice,4,Jean-Luc Bernard,Completed,8,0,866.52,648.32,EUR
+BK-005215,2021-05-16,2021-07-24,2021-07-25,2,Alpine Adventures GmbH,15,Provence Lavender Tour,Tour,Provence,6,Nicolas Petit,Completed,1,0,100.66,73.51,EUR
+BK-005216,2021-05-07,2021-07-30,2021-08-02,18,Thai Smile Holidays,17,Strasbourg Christmas Tour,Tour,Strasbourg,3,Sophie Laurent,Completed,12,3,1642.82,1283.38,EUR
+BK-005217,2021-05-05,2021-07-07,2021-07-10,20,Swiss Premium Tours,1,City Walking Tour,Tour,Paris,1,Marie Dubois,Completed,4,3,620.78,361.69,EUR
+BK-005218,2021-05-02,2021-06-11,2021-06-14,20,Swiss Premium Tours,4,Seine River Cruise,Tour,Paris,3,Sophie Laurent,Completed,10,3,595.94,449.56,EUR
+BK-005219,2021-05-20,2021-08-07,2021-08-09,7,Beijing Star International,8,Hotel Promenade Nice,Accommodation,Nice,7,Isabelle Leroy,Completed,6,2,3589.33,2855.48,EUR
+BK-005220,2021-05-11,2021-05-27,2021-05-28,11,Roma Viaggi SRL,19,Ski Package Alps,Tour,Chamonix,4,Jean-Luc Bernard,Completed,1,1,138.96,88.08,EUR
+BK-005221,2021-05-05,2021-06-28,2021-07-10,12,Kiwi Adventures Ltd,6,Chateau Stay Bordeaux,Accommodation,Bordeaux,3,Sophie Laurent,Completed,8,12,13995.27,9733.66,EUR
+BK-005222,2021-05-26,2021-08-15,2021-08-22,6,Southern Cross Holidays,20,Hotel Negresco Nice,Accommodation,Nice,1,Marie Dubois,Cancelled,8,7,5700.53,3145.59,EUR
+BK-005223,2021-05-23,2021-08-15,2021-08-17,14,Direct Client - Web,19,Ski Package Alps,Tour,Chamonix,8,Thomas Roux,Completed,12,2,828.41,485.26,EUR
+BK-005224,2021-05-15,2021-07-07,2021-07-10,20,Swiss Premium Tours,8,Hotel Promenade Nice,Accommodation,Nice,1,Marie Dubois,Cancelled,10,3,3858.0,2604.04,EUR
+BK-005225,2021-05-21,2021-06-29,2021-06-30,14,Direct Client - Web,12,TGV Train Booking,Transfer,Multi-city,1,Marie Dubois,Completed,9,0,524.49,303.88,EUR
+BK-005226,2021-05-04,2021-07-23,2021-07-24,18,Thai Smile Holidays,12,TGV Train Booking,Transfer,Multi-city,4,Jean-Luc Bernard,Completed,8,0,979.52,700.19,EUR
+BK-005227,2021-05-07,2021-05-22,2021-05-25,16,Mumbai Getaways Pvt,5,Wine Tasting Bordeaux,Tour,Bordeaux,3,Sophie Laurent,Completed,3,3,451.56,253.23,EUR
+BK-005228,2021-05-10,2021-06-06,2021-06-08,11,Roma Viaggi SRL,14,Versailles Day Trip,Tour,Versailles,8,Thomas Roux,Completed,1,2,65.66,36.97,EUR
+BK-005229,2021-05-06,2021-05-10,2021-05-19,4,Voyages Lumiere,16,Hotel Vieux Lyon,Accommodation,Lyon,2,Pierre Martin,Completed,4,9,9892.04,6906.39,EUR
+BK-005230,2021-05-07,2021-08-02,2021-08-03,4,Voyages Lumiere,11,D-Day Normandy Tour,Tour,Normandy,6,Nicolas Petit,Cancelled,4,1,258.84,190.1,EUR
+BK-005231,2021-05-13,2021-06-11,2021-06-19,19,Amazon Corp Travel,3,Hotel Le Marais,Accommodation,Paris,8,Thomas Roux,Cancelled,1,8,2563.46,1502.79,EUR
+BK-005232,2021-05-15,2021-06-07,2021-06-08,12,Kiwi Adventures Ltd,13,Private Car Service,Transfer,Multi-city,3,Sophie Laurent,Cancelled,8,0,931.03,659.17,EUR
+BK-005233,2021-05-07,2021-06-19,2021-06-20,19,Amazon Corp Travel,5,Wine Tasting Bordeaux,Tour,Bordeaux,1,Marie Dubois,Completed,5,0,352.38,268.84,EUR
+BK-005234,2021-05-06,2021-06-19,2021-06-24,20,Swiss Premium Tours,8,Hotel Promenade Nice,Accommodation,Nice,3,Sophie Laurent,Completed,11,5,18548.49,14400.95,EUR
+BK-005235,2021-05-18,2021-06-17,2021-06-24,17,Andalucia Sun Tours,3,Hotel Le Marais,Accommodation,Paris,8,Thomas Roux,Completed,4,7,6712.35,5096.33,EUR
+BK-005236,2021-05-24,2021-07-18,2021-07-22,11,Roma Viaggi SRL,8,Hotel Promenade Nice,Accommodation,Nice,7,Isabelle Leroy,Cancelled,10,4,5601.99,4380.03,EUR
+BK-005237,2021-05-30,2021-08-12,2021-08-15,2,Alpine Adventures GmbH,1,City Walking Tour,Tour,Paris,1,Marie Dubois,Completed,8,3,1280.17,865.46,EUR
+BK-005238,2021-05-13,2021-07-14,2021-07-17,16,Mumbai Getaways Pvt,4,Seine River Cruise,Tour,Paris,4,Jean-Luc Bernard,Completed,2,3,267.55,147.98,EUR
+BK-005239,2021-05-31,2021-06-28,2021-06-30,10,Seoul Wanderers Co.,5,Wine Tasting Bordeaux,Tour,Bordeaux,4,Jean-Luc Bernard,Completed,11,2,2198.27,1217.8,EUR
+BK-005240,2021-05-06,2021-07-04,2021-07-05,15,Horizon Corp Events,19,Ski Package Alps,Tour,Chamonix,8,Thomas Roux,Completed,3,0,543.39,353.93,EUR
+BK-005241,2021-05-12,2021-08-01,2021-08-02,3,Pacific Coast Tours,15,Provence Lavender Tour,Tour,Provence,7,Isabelle Leroy,Completed,12,0,1199.23,669.38,EUR
+BK-005242,2021-05-09,2021-08-07,2021-08-16,19,Amazon Corp Travel,20,Hotel Negresco Nice,Accommodation,Nice,4,Jean-Luc Bernard,Completed,11,9,10084.04,7766.85,EUR
+BK-005243,2021-05-02,2021-07-07,2021-07-08,2,Alpine Adventures GmbH,12,TGV Train Booking,Transfer,Multi-city,2,Pierre Martin,Completed,7,0,517.1,364.44,EUR
+BK-005244,2021-05-06,2021-07-28,2021-07-29,18,Thai Smile Holidays,18,Marseille Port Tour,Tour,Marseille,4,Jean-Luc Bernard,Completed,3,0,591.56,360.65,EUR
+BK-005245,2021-05-16,2021-07-30,2021-07-31,11,Roma Viaggi SRL,7,Nice Coastal Tour,Tour,Nice,6,Nicolas Petit,Completed,5,1,627.67,411.58,EUR
+BK-005246,2021-05-12,2021-06-26,2021-06-29,17,Andalucia Sun Tours,15,Provence Lavender Tour,Tour,Provence,2,Pierre Martin,Completed,8,3,1251.79,900.76,EUR
+BK-005247,2021-05-10,2021-07-07,2021-07-13,3,Pacific Coast Tours,20,Hotel Negresco Nice,Accommodation,Nice,4,Jean-Luc Bernard,Completed,8,6,4971.52,3219.91,EUR
+BK-005248,2021-05-31,2021-06-10,2021-06-11,9,Maple Leaf Journeys,4,Seine River Cruise,Tour,Paris,2,Pierre Martin,Completed,12,1,866.32,509.07,EUR
+BK-005249,2021-05-31,2021-08-20,2021-08-22,14,Direct Client - Web,1,City Walking Tour,Tour,Paris,3,Sophie Laurent,Completed,8,2,816.04,539.37,EUR
+BK-005250,2021-05-10,2021-06-04,2021-06-05,8,Nordic Explorers AB,3,Hotel Le Marais,Accommodation,Paris,6,Nicolas Petit,Completed,7,1,1653.75,1180.68,EUR
+BK-005251,2021-05-16,2021-07-31,2021-08-03,15,Horizon Corp Events,17,Strasbourg Christmas Tour,Tour,Strasbourg,5,Camille Moreau,Completed,10,3,697.93,521.59,EUR
+BK-005252,2021-05-09,2021-06-08,2021-06-14,10,Seoul Wanderers Co.,16,Hotel Vieux Lyon,Accommodation,Lyon,1,Marie Dubois,Completed,3,6,3156.17,2095.64,EUR
+BK-005253,2021-05-30,2021-06-20,2021-06-22,6,Southern Cross Holidays,18,Marseille Port Tour,Tour,Marseille,3,Sophie Laurent,Completed,12,2,1847.15,1323.65,EUR
+BK-005254,2021-05-08,2021-05-23,2021-05-24,11,Roma Viaggi SRL,2,Airport Transfer,Transfer,Paris,3,Sophie Laurent,Completed,8,0,489.99,292.09,EUR
+BK-005255,2021-05-02,2021-07-27,2021-07-29,5,Gulf Luxury Travel,11,D-Day Normandy Tour,Tour,Normandy,6,Nicolas Petit,Completed,8,2,1047.84,618.91,EUR
+BK-005256,2021-05-30,2021-06-03,2021-06-04,16,Mumbai Getaways Pvt,13,Private Car Service,Transfer,Multi-city,3,Sophie Laurent,Cancelled,8,0,1130.7,666.0,EUR
+BK-005257,2021-05-18,2021-07-22,2021-07-24,16,Mumbai Getaways Pvt,11,D-Day Normandy Tour,Tour,Normandy,5,Camille Moreau,Completed,10,2,1500.33,1125.09,EUR
+BK-005258,2021-05-30,2021-07-26,2021-07-27,16,Mumbai Getaways Pvt,11,D-Day Normandy Tour,Tour,Normandy,1,Marie Dubois,Completed,3,0,455.1,263.6,EUR
+BK-005259,2021-05-20,2021-06-18,2021-06-20,3,Pacific Coast Tours,15,Provence Lavender Tour,Tour,Provence,6,Nicolas Petit,Completed,1,2,141.22,84.56,EUR
+BK-005260,2021-05-26,2021-07-01,2021-07-02,3,Pacific Coast Tours,7,Nice Coastal Tour,Tour,Nice,8,Thomas Roux,Completed,11,0,1658.07,948.16,EUR
+BK-005261,2021-05-07,2021-07-09,2021-07-10,12,Kiwi Adventures Ltd,11,D-Day Normandy Tour,Tour,Normandy,7,Isabelle Leroy,Completed,3,0,472.18,310.18,EUR
+BK-005262,2021-05-01,2021-06-07,2021-06-08,12,Kiwi Adventures Ltd,12,TGV Train Booking,Transfer,Multi-city,5,Camille Moreau,Completed,8,0,1079.33,617.27,EUR
+BK-005263,2021-05-15,2021-07-08,2021-07-10,6,Southern Cross Holidays,15,Provence Lavender Tour,Tour,Provence,7,Isabelle Leroy,Completed,12,2,2213.57,1294.7,EUR
+BK-005264,2021-05-03,2021-05-22,2021-05-24,16,Mumbai Getaways Pvt,7,Nice Coastal Tour,Tour,Nice,6,Nicolas Petit,Completed,2,2,379.95,265.08,EUR
+BK-005265,2021-05-01,2021-06-23,2021-06-26,6,Southern Cross Holidays,9,Lyon Food Tour,Tour,Lyon,8,Thomas Roux,Completed,12,3,1622.25,1263.28,EUR
+BK-005266,2021-05-27,2021-07-15,2021-07-18,2,Alpine Adventures GmbH,10,Mont Blanc Excursion,Tour,Chamonix,5,Camille Moreau,Completed,10,3,955.87,659.38,EUR
+BK-005267,2021-05-01,2021-05-02,2021-05-04,10,Seoul Wanderers Co.,5,Wine Tasting Bordeaux,Tour,Bordeaux,8,Thomas Roux,Completed,2,2,296.14,228.97,EUR
+BK-005268,2021-05-16,2021-08-13,2021-08-14,4,Voyages Lumiere,8,Hotel Promenade Nice,Accommodation,Nice,5,Camille Moreau,Completed,8,1,2787.76,1579.77,EUR
+BK-005269,2021-05-19,2021-07-20,2021-07-23,9,Maple Leaf Journeys,19,Ski Package Alps,Tour,Chamonix,8,Thomas Roux,Completed,12,3,2072.91,1333.5,EUR
+BK-005270,2021-05-01,2021-06-04,2021-06-14,2,Alpine Adventures GmbH,6,Chateau Stay Bordeaux,Accommodation,Bordeaux,3,Sophie Laurent,Completed,6,10,12268.91,8874.36,EUR
+BK-005271,2021-05-02,2021-06-06,2021-06-07,14,Direct Client - Web,12,TGV Train Booking,Transfer,Multi-city,6,Nicolas Petit,Cancelled,1,0,64.78,44.21,EUR
+BK-005272,2021-05-17,2021-06-11,2021-06-24,4,Voyages Lumiere,6,Chateau Stay Bordeaux,Accommodation,Bordeaux,3,Sophie Laurent,Completed,9,13,19551.15,12298.7,EUR
+BK-005273,2021-05-26,2021-07-04,2021-07-06,4,Voyages Lumiere,9,Lyon Food Tour,Tour,Lyon,6,Nicolas Petit,Completed,3,2,155.8,105.87,EUR
+BK-005274,2021-05-16,2021-07-08,2021-07-09,4,Voyages Lumiere,11,D-Day Normandy Tour,Tour,Normandy,4,Jean-Luc Bernard,Completed,3,1,376.52,285.36,EUR
+BK-005275,2021-05-18,2021-08-05,2021-08-06,14,Direct Client - Web,17,Strasbourg Christmas Tour,Tour,Strasbourg,8,Thomas Roux,Completed,2,0,134.97,78.66,EUR
+BK-005276,2021-05-12,2021-06-21,2021-06-22,5,Gulf Luxury Travel,12,TGV Train Booking,Transfer,Multi-city,8,Thomas Roux,Completed,10,0,927.75,735.27,EUR
+BK-005277,2021-05-10,2021-05-14,2021-05-15,5,Gulf Luxury Travel,4,Seine River Cruise,Tour,Paris,3,Sophie Laurent,Completed,12,1,1007.83,585.89,EUR
+BK-005278,2021-05-03,2021-06-27,2021-06-28,1,Sakura Travel Group,4,Seine River Cruise,Tour,Paris,8,Thomas Roux,Completed,7,0,394.64,227.69,EUR
+BK-005279,2021-05-17,2021-08-01,2021-08-02,16,Mumbai Getaways Pvt,2,Airport Transfer,Transfer,Paris,2,Pierre Martin,Completed,5,0,175.97,110.05,EUR
+BK-005280,2021-05-04,2021-05-20,2021-05-24,19,Amazon Corp Travel,20,Hotel Negresco Nice,Accommodation,Nice,4,Jean-Luc Bernard,Completed,3,4,3132.75,1745.93,EUR
+BK-005281,2021-05-24,2021-06-29,2021-07-01,12,Kiwi Adventures Ltd,19,Ski Package Alps,Tour,Chamonix,3,Sophie Laurent,Completed,9,2,1504.08,1057.73,EUR
+BK-005282,2021-05-03,2021-05-16,2021-05-17,17,Andalucia Sun Tours,19,Ski Package Alps,Tour,Chamonix,4,Jean-Luc Bernard,Cancelled,12,0,944.79,586.21,EUR
+BK-005283,2021-05-18,2021-05-19,2021-05-20,17,Andalucia Sun Tours,4,Seine River Cruise,Tour,Paris,8,Thomas Roux,Completed,6,1,928.32,553.54,EUR
+BK-005284,2021-05-04,2021-05-28,2021-05-29,13,Direct Client - Walk-in,12,TGV Train Booking,Transfer,Multi-city,7,Isabelle Leroy,Completed,4,0,366.84,239.14,EUR
+BK-005285,2021-05-11,2021-05-27,2021-05-28,17,Andalucia Sun Tours,15,Provence Lavender Tour,Tour,Provence,3,Sophie Laurent,Completed,8,0,1314.73,954.73,EUR
+BK-005286,2021-05-02,2021-05-13,2021-05-16,4,Voyages Lumiere,11,D-Day Normandy Tour,Tour,Normandy,7,Isabelle Leroy,Completed,5,3,592.71,435.07,EUR
+BK-005287,2021-05-27,2021-07-23,2021-08-01,14,Direct Client - Web,8,Hotel Promenade Nice,Accommodation,Nice,5,Camille Moreau,Completed,7,9,8251.23,4681.77,EUR
+BK-005288,2021-05-16,2021-08-11,2021-08-12,6,Southern Cross Holidays,12,TGV Train Booking,Transfer,Multi-city,1,Marie Dubois,Completed,11,0,978.98,564.18,EUR
+BK-005289,2021-05-22,2021-08-17,2021-08-19,5,Gulf Luxury Travel,3,Hotel Le Marais,Accommodation,Paris,7,Isabelle Leroy,Completed,7,2,3747.24,2976.78,EUR
+BK-005290,2021-05-29,2021-06-20,2021-06-26,7,Beijing Star International,3,Hotel Le Marais,Accommodation,Paris,6,Nicolas Petit,Completed,4,6,5775.35,4606.8,EUR
+BK-005291,2021-05-27,2021-07-21,2021-07-26,19,Amazon Corp Travel,16,Hotel Vieux Lyon,Accommodation,Lyon,5,Camille Moreau,Completed,11,5,18406.89,11762.45,EUR
+BK-005292,2021-05-31,2021-07-22,2021-07-31,9,Maple Leaf Journeys,16,Hotel Vieux Lyon,Accommodation,Lyon,3,Sophie Laurent,Completed,8,9,7860.23,4815.75,EUR
+BK-005293,2021-05-21,2021-06-08,2021-06-09,2,Alpine Adventures GmbH,1,City Walking Tour,Tour,Paris,2,Pierre Martin,Completed,8,0,1213.73,962.51,EUR
+BK-005294,2021-06-05,2021-07-14,2021-07-24,4,Voyages Lumiere,20,Hotel Negresco Nice,Accommodation,Nice,2,Pierre Martin,Completed,11,10,31122.81,23089.8,EUR
+BK-005295,2021-06-07,2021-07-15,2021-07-23,17,Andalucia Sun Tours,16,Hotel Vieux Lyon,Accommodation,Lyon,5,Camille Moreau,Completed,9,8,12439.89,9515.5,EUR
+BK-005296,2021-06-25,2021-06-30,2021-07-01,13,Direct Client - Walk-in,14,Versailles Day Trip,Tour,Versailles,8,Thomas Roux,Completed,6,0,1067.59,705.29,EUR
+BK-005297,2021-06-06,2021-08-17,2021-08-18,16,Mumbai Getaways Pvt,10,Mont Blanc Excursion,Tour,Chamonix,7,Isabelle Leroy,Completed,3,1,290.61,188.1,EUR
+BK-005298,2021-06-19,2021-09-14,2021-09-25,18,Thai Smile Holidays,16,Hotel Vieux Lyon,Accommodation,Lyon,8,Thomas Roux,Completed,8,11,20399.19,12016.71,EUR
+BK-005299,2021-06-09,2021-08-12,2021-08-15,20,Swiss Premium Tours,19,Ski Package Alps,Tour,Chamonix,6,Nicolas Petit,Completed,5,3,490.36,273.15,EUR
+BK-005300,2021-06-27,2021-08-13,2021-08-14,19,Amazon Corp Travel,12,TGV Train Booking,Transfer,Multi-city,1,Marie Dubois,Completed,11,0,780.46,448.25,EUR
+BK-005301,2021-06-12,2021-08-04,2021-08-05,2,Alpine Adventures GmbH,12,TGV Train Booking,Transfer,Multi-city,4,Jean-Luc Bernard,Completed,4,0,232.62,146.09,EUR
+BK-005302,2021-06-23,2021-07-02,2021-07-03,11,Roma Viaggi SRL,10,Mont Blanc Excursion,Tour,Chamonix,3,Sophie Laurent,Completed,1,0,130.76,73.14,EUR
+BK-005303,2021-06-14,2021-08-26,2021-08-29,9,Maple Leaf Journeys,17,Strasbourg Christmas Tour,Tour,Strasbourg,1,Marie Dubois,Completed,12,3,1445.46,803.04,EUR
+BK-005304,2021-06-19,2021-08-08,2021-08-09,16,Mumbai Getaways Pvt,11,D-Day Normandy Tour,Tour,Normandy,2,Pierre Martin,Completed,12,0,1815.2,1150.82,EUR
+BK-005305,2021-06-25,2021-09-19,2021-09-20,20,Swiss Premium Tours,11,D-Day Normandy Tour,Tour,Normandy,5,Camille Moreau,Completed,6,1,1172.48,704.0,EUR
+BK-005306,2021-06-26,2021-07-06,2021-07-07,10,Seoul Wanderers Co.,18,Marseille Port Tour,Tour,Marseille,5,Camille Moreau,Completed,1,1,94.6,65.59,EUR
+BK-005307,2021-06-20,2021-07-02,2021-07-03,19,Amazon Corp Travel,19,Ski Package Alps,Tour,Chamonix,6,Nicolas Petit,Completed,5,0,300.45,225.43,EUR
+BK-005308,2021-06-07,2021-07-22,2021-08-02,10,Seoul Wanderers Co.,3,Hotel Le Marais,Accommodation,Paris,5,Camille Moreau,Completed,7,11,19953.26,12537.4,EUR
+BK-005309,2021-06-09,2021-08-28,2021-08-31,18,Thai Smile Holidays,17,Strasbourg Christmas Tour,Tour,Strasbourg,3,Sophie Laurent,Completed,1,3,144.18,97.91,EUR
+BK-005310,2021-06-16,2021-07-14,2021-07-16,18,Thai Smile Holidays,15,Provence Lavender Tour,Tour,Provence,7,Isabelle Leroy,Completed,10,2,1589.92,898.26,EUR
+BK-005311,2021-06-15,2021-07-04,2021-07-07,10,Seoul Wanderers Co.,8,Hotel Promenade Nice,Accommodation,Nice,7,Isabelle Leroy,Completed,7,3,3486.76,2641.41,EUR
+BK-005312,2021-06-07,2021-07-30,2021-08-01,6,Southern Cross Holidays,9,Lyon Food Tour,Tour,Lyon,5,Camille Moreau,Completed,11,2,1542.03,1004.58,EUR
+BK-005313,2021-06-07,2021-06-11,2021-06-24,10,Seoul Wanderers Co.,8,Hotel Promenade Nice,Accommodation,Nice,8,Thomas Roux,Completed,8,13,24039.89,15843.09,EUR
+BK-005314,2021-06-02,2021-06-28,2021-07-03,5,Gulf Luxury Travel,6,Chateau Stay Bordeaux,Accommodation,Bordeaux,1,Marie Dubois,Completed,5,5,7330.27,4540.68,EUR
+BK-005315,2021-06-21,2021-06-27,2021-07-10,1,Sakura Travel Group,16,Hotel Vieux Lyon,Accommodation,Lyon,1,Marie Dubois,Completed,2,13,4283.61,2675.09,EUR
+BK-005316,2021-06-14,2021-07-31,2021-08-07,5,Gulf Luxury Travel,3,Hotel Le Marais,Accommodation,Paris,4,Jean-Luc Bernard,Completed,2,7,3278.28,2213.04,EUR
+BK-005317,2021-06-22,2021-09-05,2021-09-07,16,Mumbai Getaways Pvt,17,Strasbourg Christmas Tour,Tour,Strasbourg,2,Pierre Martin,Completed,4,2,559.89,416.16,EUR
+BK-005318,2021-06-27,2021-09-10,2021-09-11,8,Nordic Explorers AB,13,Private Car Service,Transfer,Multi-city,7,Isabelle Leroy,Cancelled,4,0,189.25,112.37,EUR
+BK-005319,2021-06-15,2021-08-07,2021-08-08,16,Mumbai Getaways Pvt,9,Lyon Food Tour,Tour,Lyon,6,Nicolas Petit,Completed,12,0,2307.68,1451.81,EUR
+BK-005320,2021-06-22,2021-07-24,2021-07-25,12,Kiwi Adventures Ltd,9,Lyon Food Tour,Tour,Lyon,8,Thomas Roux,Completed,12,1,1261.93,791.28,EUR
+BK-005321,2021-06-29,2021-09-15,2021-09-16,2,Alpine Adventures GmbH,2,Airport Transfer,Transfer,Paris,4,Jean-Luc Bernard,Cancelled,5,0,481.64,302.14,EUR
+BK-005322,2021-06-12,2021-09-08,2021-09-09,15,Horizon Corp Events,4,Seine River Cruise,Tour,Paris,7,Isabelle Leroy,Cancelled,1,1,186.47,120.88,EUR
+BK-005323,2021-06-09,2021-07-18,2021-08-01,8,Nordic Explorers AB,3,Hotel Le Marais,Accommodation,Paris,5,Camille Moreau,Completed,4,14,17474.38,10310.88,EUR
+BK-005324,2021-06-11,2021-09-02,2021-09-03,9,Maple Leaf Journeys,14,Versailles Day Trip,Tour,Versailles,2,Pierre Martin,Completed,8,0,965.31,630.58,EUR
+BK-005325,2021-06-23,2021-08-17,2021-08-18,9,Maple Leaf Journeys,4,Seine River Cruise,Tour,Paris,2,Pierre Martin,Completed,6,1,678.78,497.08,EUR
+BK-005326,2021-06-11,2021-08-09,2021-08-10,6,Southern Cross Holidays,1,City Walking Tour,Tour,Paris,8,Thomas Roux,Completed,11,0,774.55,503.59,EUR
+BK-005327,2021-06-11,2021-08-24,2021-08-26,6,Southern Cross Holidays,3,Hotel Le Marais,Accommodation,Paris,4,Jean-Luc Bernard,Completed,9,2,4907.92,3641.19,EUR
+BK-005328,2021-06-05,2021-08-21,2021-08-23,15,Horizon Corp Events,14,Versailles Day Trip,Tour,Versailles,8,Thomas Roux,Completed,12,2,840.32,498.62,EUR
+BK-005329,2021-06-11,2021-07-18,2021-07-19,14,Direct Client - Web,7,Nice Coastal Tour,Tour,Nice,6,Nicolas Petit,Completed,3,0,327.07,210.74,EUR
+BK-005330,2021-06-19,2021-07-18,2021-07-19,18,Thai Smile Holidays,1,City Walking Tour,Tour,Paris,4,Jean-Luc Bernard,Completed,2,0,392.24,235.17,EUR
+BK-005331,2021-06-06,2021-06-13,2021-06-14,20,Swiss Premium Tours,13,Private Car Service,Transfer,Multi-city,7,Isabelle Leroy,Completed,10,0,612.19,350.34,EUR
+BK-005332,2021-06-19,2021-07-05,2021-07-08,15,Horizon Corp Events,1,City Walking Tour,Tour,Paris,8,Thomas Roux,Cancelled,2,3,167.35,100.54,EUR
+BK-005333,2021-06-27,2021-08-01,2021-08-04,13,Direct Client - Walk-in,10,Mont Blanc Excursion,Tour,Chamonix,3,Sophie Laurent,Cancelled,7,3,1249.15,874.43,EUR
+BK-005334,2021-06-10,2021-09-05,2021-09-08,6,Southern Cross Holidays,7,Nice Coastal Tour,Tour,Nice,7,Isabelle Leroy,Completed,3,3,162.95,129.39,EUR
+BK-005335,2021-06-15,2021-07-17,2021-07-18,19,Amazon Corp Travel,12,TGV Train Booking,Transfer,Multi-city,8,Thomas Roux,Completed,2,0,62.48,36.44,EUR
+BK-005336,2021-06-23,2021-08-13,2021-08-16,14,Direct Client - Web,7,Nice Coastal Tour,Tour,Nice,5,Camille Moreau,Completed,2,3,128.58,72.61,EUR
+BK-005337,2021-06-08,2021-08-08,2021-08-09,20,Swiss Premium Tours,12,TGV Train Booking,Transfer,Multi-city,1,Marie Dubois,Completed,1,0,60.44,42.61,EUR
+BK-005338,2021-06-13,2021-09-07,2021-09-08,5,Gulf Luxury Travel,12,TGV Train Booking,Transfer,Multi-city,1,Marie Dubois,Completed,10,0,515.25,305.27,EUR
+BK-005339,2021-06-11,2021-08-10,2021-08-11,11,Roma Viaggi SRL,5,Wine Tasting Bordeaux,Tour,Bordeaux,7,Isabelle Leroy,Cancelled,3,0,267.18,167.87,EUR
+BK-005340,2021-06-16,2021-07-22,2021-07-23,14,Direct Client - Web,12,TGV Train Booking,Transfer,Multi-city,5,Camille Moreau,Completed,5,0,517.76,383.34,EUR
+BK-005341,2021-06-11,2021-08-06,2021-08-12,16,Mumbai Getaways Pvt,6,Chateau Stay Bordeaux,Accommodation,Bordeaux,3,Sophie Laurent,Completed,9,6,16757.23,11970.61,EUR
+BK-005342,2021-06-02,2021-06-27,2021-06-28,8,Nordic Explorers AB,5,Wine Tasting Bordeaux,Tour,Bordeaux,3,Sophie Laurent,Completed,1,0,120.54,71.23,EUR
+BK-005343,2021-06-04,2021-08-07,2021-08-08,15,Horizon Corp Events,2,Airport Transfer,Transfer,Paris,6,Nicolas Petit,Completed,12,0,1167.63,775.82,EUR
+BK-005344,2021-06-24,2021-07-13,2021-07-15,3,Pacific Coast Tours,4,Seine River Cruise,Tour,Paris,4,Jean-Luc Bernard,Completed,5,2,385.49,228.24,EUR
+BK-005345,2021-06-09,2021-08-21,2021-08-22,19,Amazon Corp Travel,19,Ski Package Alps,Tour,Chamonix,1,Marie Dubois,Cancelled,9,1,1485.24,883.93,EUR
+BK-005346,2021-06-08,2021-08-11,2021-08-13,1,Sakura Travel Group,4,Seine River Cruise,Tour,Paris,5,Camille Moreau,Completed,11,2,2169.2,1259.22,EUR
+BK-005347,2021-06-30,2021-07-14,2021-07-15,1,Sakura Travel Group,11,D-Day Normandy Tour,Tour,Normandy,2,Pierre Martin,Completed,8,1,1396.84,998.58,EUR
+BK-005348,2021-06-09,2021-08-25,2021-08-27,2,Alpine Adventures GmbH,1,City Walking Tour,Tour,Paris,8,Thomas Roux,Cancelled,6,2,1152.68,922.09,EUR
+BK-005349,2021-06-26,2021-09-07,2021-09-08,2,Alpine Adventures GmbH,5,Wine Tasting Bordeaux,Tour,Bordeaux,5,Camille Moreau,Completed,6,1,1018.33,749.44,EUR
+BK-005350,2021-06-20,2021-08-08,2021-08-15,9,Maple Leaf Journeys,3,Hotel Le Marais,Accommodation,Paris,3,Sophie Laurent,Completed,4,7,9535.77,7308.01,EUR
+BK-005351,2021-06-28,2021-07-25,2021-08-01,13,Direct Client - Walk-in,6,Chateau Stay Bordeaux,Accommodation,Bordeaux,5,Camille Moreau,Completed,11,7,21805.69,15558.71,EUR
+BK-005352,2021-06-16,2021-08-11,2021-08-12,12,Kiwi Adventures Ltd,10,Mont Blanc Excursion,Tour,Chamonix,2,Pierre Martin,Cancelled,6,1,761.39,511.96,EUR
+BK-005353,2021-06-16,2021-07-21,2021-07-24,3,Pacific Coast Tours,19,Ski Package Alps,Tour,Chamonix,7,Isabelle Leroy,Completed,6,3,852.48,561.38,EUR
+BK-005354,2021-06-02,2021-08-07,2021-08-10,8,Nordic Explorers AB,11,D-Day Normandy Tour,Tour,Normandy,3,Sophie Laurent,Completed,8,3,1032.73,735.1,EUR
+BK-005355,2021-06-15,2021-08-10,2021-08-23,16,Mumbai Getaways Pvt,3,Hotel Le Marais,Accommodation,Paris,5,Camille Moreau,Completed,3,13,13483.48,9722.65,EUR
+BK-005356,2021-06-08,2021-08-14,2021-08-16,19,Amazon Corp Travel,14,Versailles Day Trip,Tour,Versailles,1,Marie Dubois,Completed,9,2,553.32,310.56,EUR
+BK-005357,2021-06-14,2021-08-06,2021-08-09,19,Amazon Corp Travel,4,Seine River Cruise,Tour,Paris,5,Camille Moreau,Completed,6,3,529.37,301.98,EUR
+BK-005358,2021-06-04,2021-08-28,2021-08-29,6,Southern Cross Holidays,15,Provence Lavender Tour,Tour,Provence,7,Isabelle Leroy,Completed,1,1,62.49,48.07,EUR
+BK-005359,2021-06-19,2021-08-17,2021-08-19,11,Roma Viaggi SRL,15,Provence Lavender Tour,Tour,Provence,3,Sophie Laurent,Completed,4,2,311.05,229.17,EUR
+BK-005360,2021-06-28,2021-09-23,2021-09-26,18,Thai Smile Holidays,4,Seine River Cruise,Tour,Paris,1,Marie Dubois,Completed,1,3,109.24,60.45,EUR
+BK-005361,2021-06-15,2021-09-12,2021-09-13,20,Swiss Premium Tours,13,Private Car Service,Transfer,Multi-city,8,Thomas Roux,Completed,5,0,521.1,413.48,EUR
+BK-005362,2021-06-22,2021-09-19,2021-09-20,10,Seoul Wanderers Co.,13,Private Car Service,Transfer,Multi-city,2,Pierre Martin,Completed,3,0,138.64,82.87,EUR
+BK-005363,2021-06-23,2021-07-18,2021-07-19,16,Mumbai Getaways Pvt,1,City Walking Tour,Tour,Paris,3,Sophie Laurent,Cancelled,11,1,948.94,721.69,EUR
+BK-005364,2021-06-18,2021-07-13,2021-07-18,15,Horizon Corp Events,3,Hotel Le Marais,Accommodation,Paris,3,Sophie Laurent,Cancelled,8,5,7756.3,4491.79,EUR
+BK-005365,2021-06-24,2021-09-22,2021-09-25,16,Mumbai Getaways Pvt,15,Provence Lavender Tour,Tour,Provence,1,Marie Dubois,Completed,8,3,1102.27,661.73,EUR
+BK-005366,2021-06-27,2021-08-17,2021-08-18,11,Roma Viaggi SRL,2,Airport Transfer,Transfer,Paris,1,Marie Dubois,Cancelled,2,0,211.3,153.88,EUR
+BK-005367,2021-06-28,2021-08-31,2021-09-02,2,Alpine Adventures GmbH,19,Ski Package Alps,Tour,Chamonix,8,Thomas Roux,Completed,7,2,860.41,600.36,EUR
+BK-005368,2021-06-22,2021-08-24,2021-09-05,2,Alpine Adventures GmbH,8,Hotel Promenade Nice,Accommodation,Nice,1,Marie Dubois,Completed,7,12,19792.83,13623.68,EUR
+BK-005369,2021-06-21,2021-08-14,2021-08-16,16,Mumbai Getaways Pvt,16,Hotel Vieux Lyon,Accommodation,Lyon,6,Nicolas Petit,Completed,8,2,4293.26,2383.63,EUR
+BK-005370,2021-06-07,2021-08-07,2021-08-08,15,Horizon Corp Events,12,TGV Train Booking,Transfer,Multi-city,4,Jean-Luc Bernard,Completed,9,0,507.28,394.29,EUR
+BK-005371,2021-06-20,2021-09-13,2021-09-14,10,Seoul Wanderers Co.,15,Provence Lavender Tour,Tour,Provence,7,Isabelle Leroy,Completed,7,1,1224.73,879.7,EUR
+BK-005372,2021-06-26,2021-08-26,2021-09-05,7,Beijing Star International,6,Chateau Stay Bordeaux,Accommodation,Bordeaux,5,Camille Moreau,Completed,12,10,33875.84,24280.99,EUR
+BK-005373,2021-06-07,2021-06-28,2021-07-06,4,Voyages Lumiere,20,Hotel Negresco Nice,Accommodation,Nice,7,Isabelle Leroy,Completed,8,8,10367.1,6244.71,EUR
+BK-005374,2021-06-01,2021-07-17,2021-07-19,6,Southern Cross Holidays,9,Lyon Food Tour,Tour,Lyon,3,Sophie Laurent,Completed,9,2,493.16,279.09,EUR
+BK-005375,2021-06-20,2021-07-20,2021-07-21,16,Mumbai Getaways Pvt,4,Seine River Cruise,Tour,Paris,5,Camille Moreau,Completed,6,1,1006.4,747.09,EUR
+BK-005376,2021-06-18,2021-07-23,2021-07-24,2,Alpine Adventures GmbH,5,Wine Tasting Bordeaux,Tour,Bordeaux,8,Thomas Roux,Cancelled,8,0,1555.18,1149.19,EUR
+BK-005377,2021-06-26,2021-09-13,2021-09-26,4,Voyages Lumiere,20,Hotel Negresco Nice,Accommodation,Nice,1,Marie Dubois,Cancelled,9,13,12689.94,8977.9,EUR
+BK-005378,2021-07-06,2021-08-13,2021-08-16,4,Voyages Lumiere,15,Provence Lavender Tour,Tour,Provence,3,Sophie Laurent,Completed,11,3,1150.17,868.14,EUR
+BK-005379,2021-07-07,2021-09-02,2021-09-03,8,Nordic Explorers AB,14,Versailles Day Trip,Tour,Versailles,8,Thomas Roux,Completed,6,0,558.08,330.84,EUR
+BK-005380,2021-07-23,2021-09-15,2021-09-16,8,Nordic Explorers AB,12,TGV Train Booking,Transfer,Multi-city,3,Sophie Laurent,Completed,9,0,725.46,440.39,EUR
+BK-005381,2021-07-14,2021-09-05,2021-09-07,1,Sakura Travel Group,15,Provence Lavender Tour,Tour,Provence,8,Thomas Roux,Completed,3,2,496.57,362.2,EUR
+BK-005382,2021-07-03,2021-07-14,2021-07-16,13,Direct Client - Walk-in,11,D-Day Normandy Tour,Tour,Normandy,3,Sophie Laurent,Completed,7,2,414.54,306.68,EUR
+BK-005383,2021-07-21,2021-08-10,2021-08-11,17,Andalucia Sun Tours,19,Ski Package Alps,Tour,Chamonix,5,Camille Moreau,Completed,7,0,772.1,556.08,EUR
+BK-005384,2021-07-10,2021-08-20,2021-08-21,1,Sakura Travel Group,12,TGV Train Booking,Transfer,Multi-city,5,Camille Moreau,Completed,9,0,929.23,545.19,EUR
+BK-005385,2021-07-21,2021-08-17,2021-08-20,12,Kiwi Adventures Ltd,18,Marseille Port Tour,Tour,Marseille,7,Isabelle Leroy,Completed,4,3,728.58,416.07,EUR
+BK-005386,2021-07-13,2021-07-30,2021-08-01,7,Beijing Star International,17,Strasbourg Christmas Tour,Tour,Strasbourg,2,Pierre Martin,Completed,9,2,1194.91,812.94,EUR
+BK-005387,2021-07-06,2021-07-09,2021-07-11,8,Nordic Explorers AB,1,City Walking Tour,Tour,Paris,5,Camille Moreau,Completed,12,2,1360.94,920.43,EUR
+BK-005388,2021-07-27,2021-09-13,2021-09-15,4,Voyages Lumiere,9,Lyon Food Tour,Tour,Lyon,1,Marie Dubois,Completed,11,2,2103.22,1392.72,EUR
+BK-005389,2021-07-01,2021-08-29,2021-08-30,19,Amazon Corp Travel,11,D-Day Normandy Tour,Tour,Normandy,4,Jean-Luc Bernard,Completed,6,1,569.28,408.02,EUR
+BK-005390,2021-07-19,2021-10-14,2021-10-17,17,Andalucia Sun Tours,5,Wine Tasting Bordeaux,Tour,Bordeaux,4,Jean-Luc Bernard,Completed,2,3,198.35,137.97,EUR
+BK-005391,2021-07-12,2021-09-09,2021-09-10,14,Direct Client - Web,4,Seine River Cruise,Tour,Paris,7,Isabelle Leroy,Completed,2,1,127.67,83.78,EUR
+BK-005392,2021-07-07,2021-09-03,2021-09-09,17,Andalucia Sun Tours,3,Hotel Le Marais,Accommodation,Paris,7,Isabelle Leroy,Cancelled,10,6,13855.29,10318.12,EUR
+BK-005393,2021-07-19,2021-09-21,2021-09-24,16,Mumbai Getaways Pvt,14,Versailles Day Trip,Tour,Versailles,7,Isabelle Leroy,Completed,3,3,214.96,125.06,EUR
+BK-005394,2021-07-05,2021-09-09,2021-09-10,7,Beijing Star International,17,Strasbourg Christmas Tour,Tour,Strasbourg,8,Thomas Roux,Completed,8,0,439.13,258.74,EUR
+BK-005395,2021-07-30,2021-08-15,2021-08-29,14,Direct Client - Web,20,Hotel Negresco Nice,Accommodation,Nice,2,Pierre Martin,Completed,2,14,5034.07,3133.19,EUR
+BK-005396,2021-07-04,2021-08-21,2021-08-23,10,Seoul Wanderers Co.,10,Mont Blanc Excursion,Tour,Chamonix,5,Camille Moreau,Completed,8,2,433.57,253.95,EUR
+BK-005397,2021-07-14,2021-07-21,2021-07-23,7,Beijing Star International,10,Mont Blanc Excursion,Tour,Chamonix,3,Sophie Laurent,Completed,12,2,1479.83,859.16,EUR
+BK-005398,2021-07-28,2021-08-03,2021-08-06,19,Amazon Corp Travel,14,Versailles Day Trip,Tour,Versailles,5,Camille Moreau,Completed,10,3,1178.56,747.74,EUR
+BK-005399,2021-07-27,2021-10-13,2021-10-14,17,Andalucia Sun Tours,5,Wine Tasting Bordeaux,Tour,Bordeaux,8,Thomas Roux,Completed,8,1,1200.66,705.08,EUR
+BK-005400,2021-07-03,2021-09-21,2021-09-28,13,Direct Client - Walk-in,20,Hotel Negresco Nice,Accommodation,Nice,4,Jean-Luc Bernard,Completed,7,7,8404.94,4718.99,EUR
+BK-005401,2021-07-15,2021-08-20,2021-09-03,6,Southern Cross Holidays,3,Hotel Le Marais,Accommodation,Paris,1,Marie Dubois,Completed,10,14,35018.13,26014.93,EUR
+BK-005402,2021-07-21,2021-08-06,2021-08-07,7,Beijing Star International,18,Marseille Port Tour,Tour,Marseille,1,Marie Dubois,Completed,10,0,1282.63,946.12,EUR
+BK-005403,2021-07-01,2021-07-17,2021-07-18,1,Sakura Travel Group,18,Marseille Port Tour,Tour,Marseille,5,Camille Moreau,Cancelled,4,1,347.17,252.19,EUR
+BK-005404,2021-07-15,2021-07-26,2021-07-28,13,Direct Client - Walk-in,18,Marseille Port Tour,Tour,Marseille,1,Marie Dubois,Completed,8,2,1434.37,797.25,EUR
+BK-005405,2021-07-14,2021-07-18,2021-07-20,13,Direct Client - Walk-in,17,Strasbourg Christmas Tour,Tour,Strasbourg,5,Camille Moreau,Completed,2,2,134.39,77.25,EUR
+BK-005406,2021-07-05,2021-07-29,2021-07-30,5,Gulf Luxury Travel,9,Lyon Food Tour,Tour,Lyon,5,Camille Moreau,Cancelled,7,0,1062.54,600.05,EUR
+BK-005407,2021-07-06,2021-07-10,2021-07-11,10,Seoul Wanderers Co.,2,Airport Transfer,Transfer,Paris,7,Isabelle Leroy,Completed,2,0,136.81,89.37,EUR
+BK-005408,2021-07-13,2021-07-29,2021-07-30,7,Beijing Star International,2,Airport Transfer,Transfer,Paris,4,Jean-Luc Bernard,Completed,10,0,1003.23,675.42,EUR
+BK-005409,2021-07-13,2021-07-28,2021-07-29,11,Roma Viaggi SRL,9,Lyon Food Tour,Tour,Lyon,8,Thomas Roux,Completed,9,0,999.55,670.74,EUR
+BK-005410,2021-07-08,2021-07-11,2021-07-12,8,Nordic Explorers AB,9,Lyon Food Tour,Tour,Lyon,3,Sophie Laurent,Completed,5,0,676.18,447.29,EUR
+BK-005411,2021-07-17,2021-08-13,2021-08-15,18,Thai Smile Holidays,5,Wine Tasting Bordeaux,Tour,Bordeaux,3,Sophie Laurent,Cancelled,4,2,522.52,342.74,EUR
+BK-005412,2021-07-15,2021-07-21,2021-07-24,20,Swiss Premium Tours,1,City Walking Tour,Tour,Paris,5,Camille Moreau,Cancelled,11,3,2153.93,1184.95,EUR
+BK-005413,2021-07-16,2021-08-20,2021-08-25,13,Direct Client - Walk-in,20,Hotel Negresco Nice,Accommodation,Nice,6,Nicolas Petit,Completed,11,5,7559.4,5746.44,EUR
+BK-005414,2021-07-06,2021-09-13,2021-09-14,10,Seoul Wanderers Co.,19,Ski Package Alps,Tour,Chamonix,2,Pierre Martin,Completed,7,0,1083.35,820.77,EUR
+BK-005415,2021-07-09,2021-09-03,2021-09-05,11,Roma Viaggi SRL,7,Nice Coastal Tour,Tour,Nice,5,Camille Moreau,Cancelled,12,2,1414.89,865.18,EUR
+BK-005416,2021-07-11,2021-08-07,2021-08-09,1,Sakura Travel Group,15,Provence Lavender Tour,Tour,Provence,3,Sophie Laurent,Completed,11,2,2071.73,1454.76,EUR
+BK-005417,2021-07-01,2021-09-26,2021-10-03,18,Thai Smile Holidays,6,Chateau Stay Bordeaux,Accommodation,Bordeaux,8,Thomas Roux,Completed,7,7,11039.48,8244.57,EUR
+BK-005418,2021-07-03,2021-09-10,2021-09-13,4,Voyages Lumiere,1,City Walking Tour,Tour,Paris,6,Nicolas Petit,Completed,7,3,1218.84,779.44,EUR
+BK-005419,2021-07-25,2021-10-23,2021-10-24,15,Horizon Corp Events,1,City Walking Tour,Tour,Paris,6,Nicolas Petit,Completed,4,0,466.75,282.56,EUR
+BK-005420,2021-07-09,2021-10-05,2021-10-06,7,Beijing Star International,12,TGV Train Booking,Transfer,Multi-city,2,Pierre Martin,Completed,10,0,1050.28,789.92,EUR
+BK-005421,2021-07-16,2021-09-01,2021-09-02,9,Maple Leaf Journeys,2,Airport Transfer,Transfer,Paris,8,Thomas Roux,Completed,12,0,1378.03,829.95,EUR
+BK-005422,2021-07-27,2021-10-17,2021-10-18,4,Voyages Lumiere,13,Private Car Service,Transfer,Multi-city,5,Camille Moreau,Completed,10,0,900.39,533.59,EUR
+BK-005423,2021-07-24,2021-10-05,2021-10-15,6,Southern Cross Holidays,20,Hotel Negresco Nice,Accommodation,Nice,2,Pierre Martin,Completed,10,10,11462.65,6490.87,EUR
+BK-005424,2021-07-19,2021-08-18,2021-08-20,7,Beijing Star International,17,Strasbourg Christmas Tour,Tour,Strasbourg,1,Marie Dubois,Completed,12,2,1819.92,1280.52,EUR
+BK-005425,2021-07-29,2021-09-26,2021-09-29,2,Alpine Adventures GmbH,1,City Walking Tour,Tour,Paris,6,Nicolas Petit,Completed,7,3,1236.56,805.89,EUR
+BK-005426,2021-07-17,2021-09-15,2021-09-21,17,Andalucia Sun Tours,16,Hotel Vieux Lyon,Accommodation,Lyon,1,Marie Dubois,Completed,12,6,10125.22,6272.4,EUR
+BK-005427,2021-07-15,2021-08-25,2021-08-28,7,Beijing Star International,1,City Walking Tour,Tour,Paris,6,Nicolas Petit,Cancelled,2,3,364.03,273.72,EUR
+BK-005428,2021-07-08,2021-10-05,2021-10-06,8,Nordic Explorers AB,14,Versailles Day Trip,Tour,Versailles,4,Jean-Luc Bernard,Completed,3,0,298.15,168.67,EUR
+BK-005429,2021-07-01,2021-09-01,2021-09-02,19,Amazon Corp Travel,14,Versailles Day Trip,Tour,Versailles,6,Nicolas Petit,Cancelled,5,0,435.37,291.0,EUR
+BK-005430,2021-07-27,2021-08-03,2021-08-04,3,Pacific Coast Tours,11,D-Day Normandy Tour,Tour,Normandy,8,Thomas Roux,Completed,2,1,287.6,199.81,EUR
+BK-005431,2021-07-02,2021-07-07,2021-07-08,11,Roma Viaggi SRL,13,Private Car Service,Transfer,Multi-city,2,Pierre Martin,Completed,3,0,112.32,84.31,EUR
+BK-005432,2021-07-20,2021-10-09,2021-10-10,4,Voyages Lumiere,14,Versailles Day Trip,Tour,Versailles,1,Marie Dubois,Completed,9,0,520.47,396.85,EUR
+BK-005433,2021-07-20,2021-09-11,2021-09-25,20,Swiss Premium Tours,8,Hotel Promenade Nice,Accommodation,Nice,1,Marie Dubois,Cancelled,8,14,20569.74,15402.44,EUR
+BK-005434,2021-07-20,2021-08-02,2021-08-03,15,Horizon Corp Events,11,D-Day Normandy Tour,Tour,Normandy,6,Nicolas Petit,Completed,10,0,788.72,454.04,EUR
+BK-005435,2021-07-03,2021-09-17,2021-09-18,17,Andalucia Sun Tours,7,Nice Coastal Tour,Tour,Nice,5,Camille Moreau,Completed,6,1,678.91,496.39,EUR
+BK-005436,2021-07-08,2021-07-26,2021-07-27,2,Alpine Adventures GmbH,2,Airport Transfer,Transfer,Paris,3,Sophie Laurent,Completed,5,0,500.71,339.62,EUR
+BK-005437,2021-07-12,2021-08-21,2021-08-22,5,Gulf Luxury Travel,19,Ski Package Alps,Tour,Chamonix,8,Thomas Roux,Cancelled,5,1,702.5,437.49,EUR
+BK-005438,2021-07-17,2021-10-01,2021-10-02,8,Nordic Explorers AB,5,Wine Tasting Bordeaux,Tour,Bordeaux,1,Marie Dubois,Completed,7,0,711.01,564.63,EUR
+BK-005439,2021-07-07,2021-07-16,2021-07-17,16,Mumbai Getaways Pvt,11,D-Day Normandy Tour,Tour,Normandy,8,Thomas Roux,Completed,10,1,1538.62,1173.97,EUR
+BK-005440,2021-07-11,2021-09-28,2021-10-01,11,Roma Viaggi SRL,10,Mont Blanc Excursion,Tour,Chamonix,3,Sophie Laurent,Completed,2,3,236.29,176.58,EUR
+BK-005441,2021-07-08,2021-07-09,2021-07-21,8,Nordic Explorers AB,8,Hotel Promenade Nice,Accommodation,Nice,8,Thomas Roux,Completed,10,12,16505.69,11061.89,EUR
+BK-005442,2021-07-27,2021-09-08,2021-09-09,7,Beijing Star International,13,Private Car Service,Transfer,Multi-city,7,Isabelle Leroy,Completed,3,0,387.39,213.72,EUR
+BK-005443,2021-07-12,2021-07-16,2021-07-17,5,Gulf Luxury Travel,18,Marseille Port Tour,Tour,Marseille,5,Camille Moreau,Completed,8,0,633.28,441.03,EUR
+BK-005444,2021-07-02,2021-07-06,2021-07-07,10,Seoul Wanderers Co.,7,Nice Coastal Tour,Tour,Nice,3,Sophie Laurent,Completed,4,1,731.23,533.59,EUR
+BK-005445,2021-07-18,2021-08-19,2021-08-23,1,Sakura Travel Group,6,Chateau Stay Bordeaux,Accommodation,Bordeaux,3,Sophie Laurent,Completed,5,4,6517.5,3618.83,EUR
+BK-005446,2021-07-13,2021-10-05,2021-10-07,7,Beijing Star International,4,Seine River Cruise,Tour,Paris,5,Camille Moreau,Completed,8,2,688.18,517.77,EUR
+BK-005447,2021-07-31,2021-10-07,2021-10-14,3,Pacific Coast Tours,20,Hotel Negresco Nice,Accommodation,Nice,2,Pierre Martin,Completed,3,7,6685.04,3895.36,EUR
+BK-005448,2021-07-18,2021-09-05,2021-09-06,11,Roma Viaggi SRL,12,TGV Train Booking,Transfer,Multi-city,7,Isabelle Leroy,Completed,11,0,652.81,366.58,EUR
+BK-005449,2021-07-07,2021-09-14,2021-09-15,11,Roma Viaggi SRL,10,Mont Blanc Excursion,Tour,Chamonix,4,Jean-Luc Bernard,Completed,1,1,144.42,89.54,EUR
+BK-005450,2021-07-17,2021-09-30,2021-10-04,3,Pacific Coast Tours,16,Hotel Vieux Lyon,Accommodation,Lyon,8,Thomas Roux,Completed,11,4,10824.85,6406.78,EUR
+BK-005451,2021-07-29,2021-10-20,2021-10-22,16,Mumbai Getaways Pvt,17,Strasbourg Christmas Tour,Tour,Strasbourg,8,Thomas Roux,Completed,3,2,294.82,189.71,EUR
+BK-005452,2021-07-23,2021-09-25,2021-09-30,19,Amazon Corp Travel,16,Hotel Vieux Lyon,Accommodation,Lyon,7,Isabelle Leroy,Completed,11,5,18079.6,12583.32,EUR
+BK-005453,2021-07-08,2021-08-03,2021-08-04,13,Direct Client - Walk-in,15,Provence Lavender Tour,Tour,Provence,4,Jean-Luc Bernard,Completed,5,1,568.77,366.44,EUR
+BK-005454,2021-07-27,2021-09-13,2021-09-14,5,Gulf Luxury Travel,9,Lyon Food Tour,Tour,Lyon,2,Pierre Martin,Completed,5,0,583.38,372.13,EUR
+BK-005455,2021-07-15,2021-09-19,2021-09-25,14,Direct Client - Web,20,Hotel Negresco Nice,Accommodation,Nice,8,Thomas Roux,Completed,8,6,9445.27,6062.71,EUR
+BK-005456,2021-07-09,2021-08-27,2021-08-28,15,Horizon Corp Events,1,City Walking Tour,Tour,Paris,4,Jean-Luc Bernard,Completed,5,1,734.02,469.61,EUR
+BK-005457,2021-07-27,2021-09-30,2021-10-01,9,Maple Leaf Journeys,17,Strasbourg Christmas Tour,Tour,Strasbourg,4,Jean-Luc Bernard,Completed,2,0,135.58,86.78,EUR
+BK-005458,2021-07-11,2021-08-06,2021-08-08,10,Seoul Wanderers Co.,11,D-Day Normandy Tour,Tour,Normandy,5,Camille Moreau,Cancelled,4,2,623.39,498.4,EUR
+BK-005459,2021-07-25,2021-10-03,2021-10-04,10,Seoul Wanderers Co.,9,Lyon Food Tour,Tour,Lyon,5,Camille Moreau,Completed,6,0,1004.82,654.09,EUR
+BK-005460,2021-07-19,2021-10-11,2021-10-14,17,Andalucia Sun Tours,1,City Walking Tour,Tour,Paris,3,Sophie Laurent,Completed,7,3,588.96,430.43,EUR
+BK-005461,2021-07-08,2021-09-13,2021-09-16,15,Horizon Corp Events,19,Ski Package Alps,Tour,Chamonix,6,Nicolas Petit,Completed,2,3,193.92,115.76,EUR
+BK-005462,2021-07-23,2021-09-15,2021-09-18,15,Horizon Corp Events,7,Nice Coastal Tour,Tour,Nice,1,Marie Dubois,Completed,6,3,425.06,326.63,EUR
+BK-005463,2021-07-24,2021-07-26,2021-08-08,12,Kiwi Adventures Ltd,16,Hotel Vieux Lyon,Accommodation,Lyon,6,Nicolas Petit,Completed,4,13,10044.83,7246.75,EUR
+BK-005464,2021-07-25,2021-10-22,2021-10-24,11,Roma Viaggi SRL,18,Marseille Port Tour,Tour,Marseille,1,Marie Dubois,Completed,10,2,1678.04,1309.77,EUR
+BK-005465,2021-07-31,2021-09-12,2021-09-15,13,Direct Client - Walk-in,19,Ski Package Alps,Tour,Chamonix,4,Jean-Luc Bernard,Completed,7,3,416.89,269.56,EUR
+BK-005466,2021-07-11,2021-09-22,2021-09-24,3,Pacific Coast Tours,15,Provence Lavender Tour,Tour,Provence,3,Sophie Laurent,Completed,2,2,302.47,179.79,EUR
+BK-005467,2021-07-20,2021-09-21,2021-09-22,7,Beijing Star International,1,City Walking Tour,Tour,Paris,2,Pierre Martin,Completed,7,1,648.01,394.16,EUR
+BK-005468,2021-07-03,2021-08-31,2021-09-01,12,Kiwi Adventures Ltd,2,Airport Transfer,Transfer,Paris,1,Marie Dubois,Completed,3,0,207.64,161.43,EUR
+BK-005469,2021-08-05,2021-10-13,2021-10-16,3,Pacific Coast Tours,14,Versailles Day Trip,Tour,Versailles,7,Isabelle Leroy,Completed,4,3,277.96,167.17,EUR
+BK-005470,2021-08-23,2021-11-17,2021-11-20,20,Swiss Premium Tours,16,Hotel Vieux Lyon,Accommodation,Lyon,5,Camille Moreau,Completed,10,3,4044.08,2948.91,EUR
+BK-005471,2021-08-07,2021-08-08,2021-08-11,3,Pacific Coast Tours,5,Wine Tasting Bordeaux,Tour,Bordeaux,7,Isabelle Leroy,Cancelled,10,3,1711.35,1166.22,EUR
+BK-005472,2021-08-29,2021-10-31,2021-11-03,19,Amazon Corp Travel,15,Provence Lavender Tour,Tour,Provence,1,Marie Dubois,Cancelled,12,3,763.98,543.63,EUR
+BK-005473,2021-08-12,2021-11-10,2021-11-13,20,Swiss Premium Tours,10,Mont Blanc Excursion,Tour,Chamonix,3,Sophie Laurent,Completed,7,3,611.59,473.98,EUR
+BK-005474,2021-08-15,2021-10-04,2021-10-16,19,Amazon Corp Travel,6,Chateau Stay Bordeaux,Accommodation,Bordeaux,2,Pierre Martin,Cancelled,7,12,22565.26,12657.22,EUR
+BK-005475,2021-08-06,2021-09-11,2021-09-13,3,Pacific Coast Tours,18,Marseille Port Tour,Tour,Marseille,4,Jean-Luc Bernard,Completed,8,2,893.53,661.63,EUR
+BK-005476,2021-08-12,2021-08-22,2021-08-24,14,Direct Client - Web,4,Seine River Cruise,Tour,Paris,8,Thomas Roux,Completed,3,2,263.74,178.42,EUR
+BK-005477,2021-08-03,2021-10-24,2021-10-27,11,Roma Viaggi SRL,15,Provence Lavender Tour,Tour,Provence,7,Isabelle Leroy,Completed,4,3,438.0,242.08,EUR
+BK-005478,2021-08-30,2021-09-17,2021-09-20,16,Mumbai Getaways Pvt,11,D-Day Normandy Tour,Tour,Normandy,8,Thomas Roux,Completed,2,3,124.76,89.11,EUR
+BK-005479,2021-08-15,2021-09-02,2021-09-16,9,Maple Leaf Journeys,16,Hotel Vieux Lyon,Accommodation,Lyon,3,Sophie Laurent,Completed,3,14,12868.54,9030.46,EUR
+BK-005480,2021-08-04,2021-10-12,2021-10-13,6,Southern Cross Holidays,13,Private Car Service,Transfer,Multi-city,2,Pierre Martin,Completed,11,0,1337.94,962.44,EUR
+BK-005481,2021-08-12,2021-09-04,2021-09-05,18,Thai Smile Holidays,7,Nice Coastal Tour,Tour,Nice,4,Jean-Luc Bernard,Completed,8,0,1236.09,938.35,EUR
+BK-005482,2021-08-21,2021-11-14,2021-11-17,10,Seoul Wanderers Co.,4,Seine River Cruise,Tour,Paris,8,Thomas Roux,Completed,1,3,139.73,78.55,EUR
+BK-005483,2021-08-07,2021-09-08,2021-09-09,8,Nordic Explorers AB,12,TGV Train Booking,Transfer,Multi-city,4,Jean-Luc Bernard,Completed,2,0,63.85,35.56,EUR
+BK-005484,2021-08-27,2021-09-21,2021-09-25,4,Voyages Lumiere,3,Hotel Le Marais,Accommodation,Paris,3,Sophie Laurent,Completed,12,4,6004.93,3926.74,EUR
+BK-005485,2021-08-11,2021-09-22,2021-09-23,20,Swiss Premium Tours,18,Marseille Port Tour,Tour,Marseille,4,Jean-Luc Bernard,Completed,9,1,983.34,646.02,EUR
+BK-005486,2021-08-04,2021-09-19,2021-09-20,1,Sakura Travel Group,11,D-Day Normandy Tour,Tour,Normandy,7,Isabelle Leroy,Completed,11,1,1071.8,693.77,EUR
+BK-005487,2021-08-03,2021-10-27,2021-10-29,2,Alpine Adventures GmbH,9,Lyon Food Tour,Tour,Lyon,2,Pierre Martin,Completed,4,2,446.66,331.37,EUR
+BK-005488,2021-08-04,2021-10-12,2021-10-13,9,Maple Leaf Journeys,19,Ski Package Alps,Tour,Chamonix,2,Pierre Martin,Completed,10,1,986.53,698.19,EUR
+BK-005489,2021-08-30,2021-11-27,2021-11-29,6,Southern Cross Holidays,5,Wine Tasting Bordeaux,Tour,Bordeaux,6,Nicolas Petit,Completed,11,2,1345.52,852.76,EUR
+BK-005490,2021-08-19,2021-10-16,2021-10-17,17,Andalucia Sun Tours,13,Private Car Service,Transfer,Multi-city,4,Jean-Luc Bernard,Completed,9,0,904.47,720.95,EUR
+BK-005491,2021-08-20,2021-09-05,2021-09-06,14,Direct Client - Web,10,Mont Blanc Excursion,Tour,Chamonix,4,Jean-Luc Bernard,Completed,10,1,619.08,361.78,EUR
+BK-005492,2021-08-07,2021-08-27,2021-08-28,7,Beijing Star International,13,Private Car Service,Transfer,Multi-city,1,Marie Dubois,Cancelled,4,0,563.24,394.0,EUR
+BK-005493,2021-08-24,2021-10-06,2021-10-08,11,Roma Viaggi SRL,5,Wine Tasting Bordeaux,Tour,Bordeaux,1,Marie Dubois,Completed,9,2,1518.9,992.94,EUR
+BK-005494,2021-08-25,2021-08-29,2021-09-12,11,Roma Viaggi SRL,8,Hotel Promenade Nice,Accommodation,Nice,6,Nicolas Petit,Cancelled,4,14,7591.96,4278.21,EUR
+BK-005495,2021-08-08,2021-11-04,2021-11-14,13,Direct Client - Walk-in,8,Hotel Promenade Nice,Accommodation,Nice,6,Nicolas Petit,Cancelled,3,10,5983.12,3299.75,EUR
+BK-005496,2021-08-03,2021-08-28,2021-08-29,5,Gulf Luxury Travel,2,Airport Transfer,Transfer,Paris,4,Jean-Luc Bernard,Completed,3,0,123.03,85.89,EUR
+BK-005497,2021-08-30,2021-09-26,2021-10-05,3,Pacific Coast Tours,8,Hotel Promenade Nice,Accommodation,Nice,7,Isabelle Leroy,Completed,12,9,22259.89,13156.48,EUR
+BK-005498,2021-08-14,2021-09-06,2021-09-10,10,Seoul Wanderers Co.,20,Hotel Negresco Nice,Accommodation,Nice,5,Camille Moreau,Completed,10,4,8041.33,5700.51,EUR
+BK-005499,2021-08-26,2021-10-27,2021-11-02,13,Direct Client - Walk-in,3,Hotel Le Marais,Accommodation,Paris,7,Isabelle Leroy,Completed,3,6,3727.67,2444.14,EUR
+BK-005500,2021-08-14,2021-09-03,2021-09-04,13,Direct Client - Walk-in,16,Hotel Vieux Lyon,Accommodation,Lyon,7,Isabelle Leroy,Completed,2,1,569.78,444.65,EUR
+BK-005501,2021-08-05,2021-10-15,2021-10-20,13,Direct Client - Walk-in,6,Chateau Stay Bordeaux,Accommodation,Bordeaux,8,Thomas Roux,Completed,5,5,5061.82,3258.73,EUR
+BK-005502,2021-08-03,2021-09-15,2021-09-18,7,Beijing Star International,5,Wine Tasting Bordeaux,Tour,Bordeaux,3,Sophie Laurent,Completed,4,3,202.51,155.0,EUR
+BK-005503,2021-08-12,2021-10-14,2021-10-15,14,Direct Client - Web,13,Private Car Service,Transfer,Multi-city,7,Isabelle Leroy,Completed,12,0,897.33,603.35,EUR
+BK-005504,2021-08-19,2021-08-29,2021-08-30,4,Voyages Lumiere,14,Versailles Day Trip,Tour,Versailles,7,Isabelle Leroy,Cancelled,10,0,743.54,550.77,EUR
+BK-005505,2021-08-25,2021-10-09,2021-10-12,12,Kiwi Adventures Ltd,17,Strasbourg Christmas Tour,Tour,Strasbourg,1,Marie Dubois,Completed,11,3,1185.8,777.9,EUR
+BK-005506,2021-08-16,2021-08-21,2021-08-22,1,Sakura Travel Group,12,TGV Train Booking,Transfer,Multi-city,3,Sophie Laurent,Completed,5,0,513.26,403.46,EUR
+BK-005507,2021-08-08,2021-10-25,2021-10-26,1,Sakura Travel Group,19,Ski Package Alps,Tour,Chamonix,2,Pierre Martin,Completed,2,1,293.32,228.56,EUR
+BK-005508,2021-08-19,2021-08-30,2021-08-31,14,Direct Client - Web,17,Strasbourg Christmas Tour,Tour,Strasbourg,3,Sophie Laurent,Cancelled,7,1,615.51,385.04,EUR
+BK-005509,2021-08-22,2021-10-10,2021-10-12,14,Direct Client - Web,19,Ski Package Alps,Tour,Chamonix,2,Pierre Martin,Completed,2,2,290.85,216.44,EUR
+BK-005510,2021-08-05,2021-09-09,2021-09-12,10,Seoul Wanderers Co.,7,Nice Coastal Tour,Tour,Nice,1,Marie Dubois,Completed,3,3,517.38,284.76,EUR
+BK-005511,2021-08-23,2021-10-16,2021-10-19,10,Seoul Wanderers Co.,17,Strasbourg Christmas Tour,Tour,Strasbourg,7,Isabelle Leroy,Completed,3,3,229.38,136.85,EUR
+BK-005512,2021-08-16,2021-09-09,2021-09-10,15,Horizon Corp Events,17,Strasbourg Christmas Tour,Tour,Strasbourg,4,Jean-Luc Bernard,Completed,3,0,240.42,177.3,EUR
+BK-005513,2021-08-07,2021-09-10,2021-09-13,20,Swiss Premium Tours,14,Versailles Day Trip,Tour,Versailles,2,Pierre Martin,Completed,11,3,824.11,513.65,EUR
+BK-005514,2021-08-09,2021-08-18,2021-08-19,19,Amazon Corp Travel,11,D-Day Normandy Tour,Tour,Normandy,4,Jean-Luc Bernard,Completed,8,0,982.23,726.98,EUR
+BK-005515,2021-08-09,2021-08-10,2021-08-11,4,Voyages Lumiere,19,Ski Package Alps,Tour,Chamonix,4,Jean-Luc Bernard,Completed,9,0,1518.91,978.05,EUR
+BK-005516,2021-08-31,2021-10-05,2021-10-13,11,Roma Viaggi SRL,16,Hotel Vieux Lyon,Accommodation,Lyon,7,Isabelle Leroy,Cancelled,6,8,8645.38,6678.88,EUR
+BK-005517,2021-08-27,2021-09-27,2021-09-28,13,Direct Client - Walk-in,12,TGV Train Booking,Transfer,Multi-city,7,Isabelle Leroy,Completed,10,0,368.69,235.6,EUR
+BK-005518,2021-08-04,2021-08-05,2021-08-08,5,Gulf Luxury Travel,15,Provence Lavender Tour,Tour,Provence,1,Marie Dubois,Cancelled,10,3,684.34,467.17,EUR
+BK-005519,2021-08-25,2021-09-26,2021-09-27,15,Horizon Corp Events,12,TGV Train Booking,Transfer,Multi-city,8,Thomas Roux,Cancelled,9,0,716.18,427.55,EUR
+BK-005520,2021-08-31,2021-10-12,2021-10-14,2,Alpine Adventures GmbH,1,City Walking Tour,Tour,Paris,6,Nicolas Petit,Completed,11,2,1283.11,900.35,EUR
+BK-005521,2021-08-20,2021-08-31,2021-09-01,14,Direct Client - Web,12,TGV Train Booking,Transfer,Multi-city,8,Thomas Roux,Completed,11,0,1461.37,1134.46,EUR
+BK-005522,2021-08-10,2021-10-27,2021-10-28,17,Andalucia Sun Tours,7,Nice Coastal Tour,Tour,Nice,1,Marie Dubois,Completed,3,1,374.07,213.88,EUR
+BK-005523,2021-08-18,2021-10-17,2021-10-25,4,Voyages Lumiere,6,Chateau Stay Bordeaux,Accommodation,Bordeaux,8,Thomas Roux,Completed,11,8,19886.27,12147.31,EUR
+BK-005524,2021-08-31,2021-11-24,2021-11-26,14,Direct Client - Web,3,Hotel Le Marais,Accommodation,Paris,1,Marie Dubois,Completed,3,2,1984.99,1253.77,EUR
+BK-005525,2021-08-09,2021-09-07,2021-09-10,4,Voyages Lumiere,9,Lyon Food Tour,Tour,Lyon,3,Sophie Laurent,Completed,9,3,1305.29,878.45,EUR
+BK-005526,2021-08-11,2021-09-09,2021-09-10,11,Roma Viaggi SRL,19,Ski Package Alps,Tour,Chamonix,7,Isabelle Leroy,Completed,12,0,1937.34,1416.69,EUR
+BK-005527,2021-08-26,2021-11-06,2021-11-07,8,Nordic Explorers AB,14,Versailles Day Trip,Tour,Versailles,5,Camille Moreau,Completed,2,1,187.29,108.22,EUR
+BK-005528,2021-08-19,2021-09-13,2021-09-15,5,Gulf Luxury Travel,4,Seine River Cruise,Tour,Paris,6,Nicolas Petit,Completed,7,2,955.76,526.07,EUR
+BK-005529,2021-08-18,2021-09-12,2021-09-13,14,Direct Client - Web,13,Private Car Service,Transfer,Multi-city,6,Nicolas Petit,Completed,6,0,754.21,590.91,EUR
+BK-005530,2021-08-22,2021-11-08,2021-11-09,4,Voyages Lumiere,19,Ski Package Alps,Tour,Chamonix,7,Isabelle Leroy,Completed,1,1,130.74,86.96,EUR
+BK-005531,2021-08-31,2021-10-08,2021-10-16,15,Horizon Corp Events,8,Hotel Promenade Nice,Accommodation,Nice,3,Sophie Laurent,Completed,10,8,12521.29,9225.25,EUR
+BK-005532,2021-08-27,2021-11-25,2021-11-26,20,Swiss Premium Tours,2,Airport Transfer,Transfer,Paris,6,Nicolas Petit,Completed,5,0,451.43,326.0,EUR
+BK-005533,2021-08-28,2021-11-10,2021-11-21,7,Beijing Star International,16,Hotel Vieux Lyon,Accommodation,Lyon,8,Thomas Roux,Cancelled,5,11,14856.49,9570.21,EUR
+BK-005534,2021-08-11,2021-08-31,2021-09-01,2,Alpine Adventures GmbH,7,Nice Coastal Tour,Tour,Nice,3,Sophie Laurent,Completed,8,1,1272.87,795.26,EUR
+BK-005535,2021-08-30,2021-09-20,2021-09-23,11,Roma Viaggi SRL,1,City Walking Tour,Tour,Paris,7,Isabelle Leroy,Completed,11,3,1331.15,848.04,EUR
+BK-005536,2021-08-03,2021-10-10,2021-10-12,7,Beijing Star International,10,Mont Blanc Excursion,Tour,Chamonix,7,Isabelle Leroy,Completed,2,2,139.27,102.79,EUR
+BK-005537,2021-08-26,2021-09-02,2021-09-05,6,Southern Cross Holidays,10,Mont Blanc Excursion,Tour,Chamonix,3,Sophie Laurent,Completed,8,3,1235.15,769.21,EUR
+BK-005538,2021-08-07,2021-09-02,2021-09-04,19,Amazon Corp Travel,1,City Walking Tour,Tour,Paris,2,Pierre Martin,Completed,11,2,1846.07,1411.52,EUR
+BK-005539,2021-08-14,2021-11-09,2021-11-10,4,Voyages Lumiere,6,Chateau Stay Bordeaux,Accommodation,Bordeaux,6,Nicolas Petit,Cancelled,8,1,1028.01,578.89,EUR
+BK-005540,2021-09-11,2021-11-26,2021-11-27,13,Direct Client - Walk-in,14,Versailles Day Trip,Tour,Versailles,4,Jean-Luc Bernard,Completed,1,1,67.82,44.03,EUR
+BK-005541,2021-09-20,2021-10-13,2021-10-14,3,Pacific Coast Tours,13,Private Car Service,Transfer,Multi-city,8,Thomas Roux,Completed,11,0,834.37,590.8,EUR
+BK-005542,2021-09-01,2021-09-17,2021-09-18,4,Voyages Lumiere,4,Seine River Cruise,Tour,Paris,8,Thomas Roux,Completed,11,0,1653.51,1120.15,EUR
+BK-005543,2021-09-19,2021-12-02,2021-12-07,4,Voyages Lumiere,16,Hotel Vieux Lyon,Accommodation,Lyon,3,Sophie Laurent,Completed,7,5,7375.61,5245.16,EUR
+BK-005544,2021-09-19,2021-10-06,2021-10-08,3,Pacific Coast Tours,4,Seine River Cruise,Tour,Paris,3,Sophie Laurent,Completed,7,2,1203.51,667.87,EUR
+BK-005545,2021-09-18,2021-11-25,2021-11-27,17,Andalucia Sun Tours,16,Hotel Vieux Lyon,Accommodation,Lyon,2,Pierre Martin,Completed,4,2,2725.87,2110.92,EUR
+BK-005546,2021-09-20,2021-12-18,2021-12-19,18,Thai Smile Holidays,6,Chateau Stay Bordeaux,Accommodation,Bordeaux,8,Thomas Roux,Completed,6,1,679.33,395.51,EUR
+BK-005547,2021-09-06,2021-09-18,2021-09-20,2,Alpine Adventures GmbH,18,Marseille Port Tour,Tour,Marseille,2,Pierre Martin,Completed,2,2,251.84,161.4,EUR
+BK-005548,2021-09-14,2021-12-08,2021-12-09,10,Seoul Wanderers Co.,1,City Walking Tour,Tour,Paris,1,Marie Dubois,Completed,9,1,1671.24,1041.77,EUR
+BK-005549,2021-09-05,2021-11-18,2021-11-30,11,Roma Viaggi SRL,16,Hotel Vieux Lyon,Accommodation,Lyon,6,Nicolas Petit,Completed,10,12,27037.99,16289.3,EUR
+BK-005550,2021-09-27,2021-10-03,2021-10-04,7,Beijing Star International,8,Hotel Promenade Nice,Accommodation,Nice,3,Sophie Laurent,Completed,5,1,1555.71,939.34,EUR
+BK-005551,2021-09-18,2021-10-16,2021-10-18,9,Maple Leaf Journeys,19,Ski Package Alps,Tour,Chamonix,3,Sophie Laurent,Completed,12,2,1720.16,978.07,EUR
+BK-005552,2021-09-13,2021-12-06,2021-12-13,15,Horizon Corp Events,6,Chateau Stay Bordeaux,Accommodation,Bordeaux,2,Pierre Martin,Completed,5,7,9193.17,7217.1,EUR
+BK-005553,2021-09-07,2021-09-17,2021-09-18,12,Kiwi Adventures Ltd,9,Lyon Food Tour,Tour,Lyon,3,Sophie Laurent,Completed,7,1,1212.65,762.87,EUR
+BK-005554,2021-09-13,2021-09-17,2021-09-21,3,Pacific Coast Tours,20,Hotel Negresco Nice,Accommodation,Nice,5,Camille Moreau,Completed,2,4,1787.98,1289.12,EUR
+BK-005555,2021-09-11,2021-12-02,2021-12-08,11,Roma Viaggi SRL,3,Hotel Le Marais,Accommodation,Paris,5,Camille Moreau,Completed,3,6,5662.64,3434.06,EUR
+BK-005556,2021-09-13,2021-10-12,2021-10-13,4,Voyages Lumiere,13,Private Car Service,Transfer,Multi-city,2,Pierre Martin,Completed,3,0,279.53,214.92,EUR
+BK-005557,2021-09-26,2021-11-28,2021-11-30,19,Amazon Corp Travel,4,Seine River Cruise,Tour,Paris,5,Camille Moreau,Completed,9,2,815.92,468.96,EUR
+BK-005558,2021-09-11,2021-10-31,2021-11-06,18,Thai Smile Holidays,6,Chateau Stay Bordeaux,Accommodation,Bordeaux,7,Isabelle Leroy,Completed,8,6,11516.34,7079.85,EUR
+BK-005559,2021-09-23,2021-10-13,2021-10-14,13,Direct Client - Walk-in,5,Wine Tasting Bordeaux,Tour,Bordeaux,5,Camille Moreau,Completed,1,1,187.77,133.28,EUR
+BK-005560,2021-09-25,2021-10-27,2021-11-03,15,Horizon Corp Events,20,Hotel Negresco Nice,Accommodation,Nice,3,Sophie Laurent,Completed,8,7,19392.04,14536.61,EUR
+BK-005561,2021-09-09,2021-11-03,2021-11-04,10,Seoul Wanderers Co.,17,Strasbourg Christmas Tour,Tour,Strasbourg,2,Pierre Martin,Completed,5,1,554.89,348.57,EUR
+BK-005562,2021-09-03,2021-09-13,2021-09-15,6,Southern Cross Holidays,8,Hotel Promenade Nice,Accommodation,Nice,1,Marie Dubois,Completed,2,2,1122.88,773.15,EUR
+BK-005563,2021-09-28,2021-09-30,2021-10-01,16,Mumbai Getaways Pvt,14,Versailles Day Trip,Tour,Versailles,8,Thomas Roux,Completed,9,1,1374.91,988.83,EUR
+BK-005564,2021-09-04,2021-10-26,2021-10-27,1,Sakura Travel Group,1,City Walking Tour,Tour,Paris,7,Isabelle Leroy,Cancelled,12,1,1561.78,993.71,EUR
+BK-005565,2021-09-22,2021-11-29,2021-11-30,20,Swiss Premium Tours,20,Hotel Negresco Nice,Accommodation,Nice,8,Thomas Roux,Completed,3,1,786.36,605.88,EUR
+BK-005566,2021-09-08,2021-10-01,2021-10-07,5,Gulf Luxury Travel,3,Hotel Le Marais,Accommodation,Paris,6,Nicolas Petit,Completed,1,6,1164.81,751.04,EUR
+BK-005567,2021-09-04,2021-10-18,2021-11-01,18,Thai Smile Holidays,8,Hotel Promenade Nice,Accommodation,Nice,2,Pierre Martin,Completed,5,14,11254.46,7015.88,EUR
+BK-005568,2021-09-24,2021-12-14,2021-12-17,7,Beijing Star International,19,Ski Package Alps,Tour,Chamonix,5,Camille Moreau,Cancelled,11,3,1400.62,1083.18,EUR
+BK-005569,2021-09-29,2021-12-18,2021-12-19,12,Kiwi Adventures Ltd,16,Hotel Vieux Lyon,Accommodation,Lyon,1,Marie Dubois,Completed,10,1,2042.96,1276.01,EUR
+BK-005570,2021-09-12,2021-10-06,2021-10-07,12,Kiwi Adventures Ltd,13,Private Car Service,Transfer,Multi-city,1,Marie Dubois,Completed,2,0,163.39,97.93,EUR
+BK-005571,2021-09-29,2021-10-19,2021-10-20,16,Mumbai Getaways Pvt,14,Versailles Day Trip,Tour,Versailles,1,Marie Dubois,Completed,3,0,496.25,303.97,EUR
+BK-005572,2021-09-12,2021-10-21,2021-10-22,14,Direct Client - Web,12,TGV Train Booking,Transfer,Multi-city,3,Sophie Laurent,Completed,9,0,1146.47,661.71,EUR
+BK-005573,2021-09-27,2021-11-23,2021-11-26,12,Kiwi Adventures Ltd,6,Chateau Stay Bordeaux,Accommodation,Bordeaux,7,Isabelle Leroy,Completed,1,3,530.98,407.6,EUR
+BK-005574,2021-09-07,2021-10-14,2021-10-15,5,Gulf Luxury Travel,2,Airport Transfer,Transfer,Paris,7,Isabelle Leroy,Completed,7,0,834.9,647.26,EUR
+BK-005575,2021-09-07,2021-11-08,2021-11-09,14,Direct Client - Web,9,Lyon Food Tour,Tour,Lyon,8,Thomas Roux,Completed,9,0,1119.02,806.18,EUR
+BK-005576,2021-09-25,2021-11-16,2021-11-19,5,Gulf Luxury Travel,17,Strasbourg Christmas Tour,Tour,Strasbourg,2,Pierre Martin,Completed,2,3,337.81,196.45,EUR
+BK-005577,2021-09-01,2021-11-28,2021-11-29,11,Roma Viaggi SRL,8,Hotel Promenade Nice,Accommodation,Nice,7,Isabelle Leroy,Completed,10,1,2791.07,1838.15,EUR
+BK-005578,2021-09-16,2021-09-27,2021-09-28,20,Swiss Premium Tours,14,Versailles Day Trip,Tour,Versailles,3,Sophie Laurent,Completed,12,1,1520.23,930.94,EUR
+BK-005579,2021-09-28,2021-11-01,2021-11-12,14,Direct Client - Web,8,Hotel Promenade Nice,Accommodation,Nice,4,Jean-Luc Bernard,Completed,8,11,23825.51,17928.41,EUR
+BK-005580,2021-09-17,2021-12-05,2021-12-09,19,Amazon Corp Travel,6,Chateau Stay Bordeaux,Accommodation,Bordeaux,3,Sophie Laurent,Completed,4,4,1800.39,1170.83,EUR
+BK-005581,2021-09-07,2021-09-26,2021-09-27,20,Swiss Premium Tours,14,Versailles Day Trip,Tour,Versailles,4,Jean-Luc Bernard,Completed,2,0,359.31,231.79,EUR
+BK-005582,2021-09-23,2021-12-14,2021-12-18,11,Roma Viaggi SRL,8,Hotel Promenade Nice,Accommodation,Nice,7,Isabelle Leroy,Completed,8,4,3090.06,2029.45,EUR
+BK-005583,2021-09-04,2021-10-09,2021-10-10,9,Maple Leaf Journeys,12,TGV Train Booking,Transfer,Multi-city,6,Nicolas Petit,Completed,12,0,962.03,606.04,EUR
+BK-005584,2021-09-02,2021-09-03,2021-09-04,11,Roma Viaggi SRL,2,Airport Transfer,Transfer,Paris,4,Jean-Luc Bernard,Completed,5,0,433.23,336.67,EUR
+BK-005585,2021-09-06,2021-10-09,2021-10-15,11,Roma Viaggi SRL,16,Hotel Vieux Lyon,Accommodation,Lyon,5,Camille Moreau,Completed,2,6,1273.91,705.0,EUR
+BK-005586,2021-09-28,2021-10-15,2021-10-17,12,Kiwi Adventures Ltd,11,D-Day Normandy Tour,Tour,Normandy,6,Nicolas Petit,Completed,4,2,590.15,355.57,EUR
+BK-005587,2021-09-29,2021-10-13,2021-10-14,2,Alpine Adventures GmbH,5,Wine Tasting Bordeaux,Tour,Bordeaux,4,Jean-Luc Bernard,Completed,4,0,622.8,486.64,EUR
+BK-005588,2021-09-18,2021-12-07,2021-12-09,16,Mumbai Getaways Pvt,11,D-Day Normandy Tour,Tour,Normandy,4,Jean-Luc Bernard,Completed,9,2,1423.04,798.26,EUR
+BK-005589,2021-09-18,2021-10-21,2021-10-23,12,Kiwi Adventures Ltd,18,Marseille Port Tour,Tour,Marseille,8,Thomas Roux,Completed,11,2,1733.59,1348.23,EUR
+BK-005590,2021-09-14,2021-11-21,2021-11-22,6,Southern Cross Holidays,17,Strasbourg Christmas Tour,Tour,Strasbourg,5,Camille Moreau,Cancelled,12,0,2341.48,1457.37,EUR
+BK-005591,2021-09-02,2021-11-30,2021-12-03,16,Mumbai Getaways Pvt,7,Nice Coastal Tour,Tour,Nice,2,Pierre Martin,Completed,3,3,346.99,235.02,EUR
+BK-005592,2021-09-13,2021-11-04,2021-11-09,7,Beijing Star International,20,Hotel Negresco Nice,Accommodation,Nice,3,Sophie Laurent,Completed,1,5,616.0,372.34,EUR
+BK-005593,2021-09-29,2021-12-04,2021-12-06,10,Seoul Wanderers Co.,15,Provence Lavender Tour,Tour,Provence,4,Jean-Luc Bernard,Completed,5,2,781.19,537.49,EUR
+BK-005594,2021-09-02,2021-11-10,2021-11-15,2,Alpine Adventures GmbH,8,Hotel Promenade Nice,Accommodation,Nice,3,Sophie Laurent,Completed,5,5,8258.92,5100.78,EUR
+BK-005595,2021-09-21,2021-10-23,2021-10-24,1,Sakura Travel Group,7,Nice Coastal Tour,Tour,Nice,6,Nicolas Petit,Completed,11,0,1548.51,994.57,EUR
+BK-005596,2021-09-23,2021-12-03,2021-12-04,14,Direct Client - Web,9,Lyon Food Tour,Tour,Lyon,5,Camille Moreau,Completed,6,1,1186.74,838.42,EUR
+BK-005597,2021-09-12,2021-10-11,2021-10-12,9,Maple Leaf Journeys,9,Lyon Food Tour,Tour,Lyon,1,Marie Dubois,Cancelled,9,1,1337.38,1025.76,EUR
+BK-005598,2021-09-19,2021-10-03,2021-10-04,9,Maple Leaf Journeys,13,Private Car Service,Transfer,Multi-city,4,Jean-Luc Bernard,Completed,8,0,451.81,278.86,EUR
+BK-005599,2021-09-26,2021-11-16,2021-11-19,8,Nordic Explorers AB,5,Wine Tasting Bordeaux,Tour,Bordeaux,7,Isabelle Leroy,Completed,6,3,433.5,290.34,EUR
+BK-005600,2021-09-15,2021-10-09,2021-10-13,19,Amazon Corp Travel,6,Chateau Stay Bordeaux,Accommodation,Bordeaux,8,Thomas Roux,Completed,12,4,6178.07,3833.56,EUR
+BK-005601,2021-09-29,2021-10-22,2021-10-23,20,Swiss Premium Tours,13,Private Car Service,Transfer,Multi-city,4,Jean-Luc Bernard,Completed,2,0,94.45,62.02,EUR
+BK-005602,2021-09-21,2021-11-12,2021-11-13,1,Sakura Travel Group,4,Seine River Cruise,Tour,Paris,2,Pierre Martin,Completed,7,1,753.19,434.97,EUR
+BK-005603,2021-09-27,2021-12-19,2021-12-20,5,Gulf Luxury Travel,2,Airport Transfer,Transfer,Paris,4,Jean-Luc Bernard,Completed,2,0,124.24,97.48,EUR
+BK-005604,2021-09-26,2021-09-28,2021-09-30,3,Pacific Coast Tours,4,Seine River Cruise,Tour,Paris,4,Jean-Luc Bernard,Completed,3,2,366.19,252.93,EUR
+BK-005605,2021-09-06,2021-10-16,2021-10-19,5,Gulf Luxury Travel,11,D-Day Normandy Tour,Tour,Normandy,4,Jean-Luc Bernard,Completed,1,3,131.53,81.14,EUR
+BK-005606,2021-09-01,2021-09-07,2021-09-09,4,Voyages Lumiere,4,Seine River Cruise,Tour,Paris,7,Isabelle Leroy,Completed,3,2,150.54,91.24,EUR
+BK-005607,2021-09-13,2021-10-02,2021-10-03,10,Seoul Wanderers Co.,12,TGV Train Booking,Transfer,Multi-city,4,Jean-Luc Bernard,Completed,11,0,837.86,646.04,EUR
+BK-005608,2021-09-04,2021-11-06,2021-11-08,8,Nordic Explorers AB,6,Chateau Stay Bordeaux,Accommodation,Bordeaux,2,Pierre Martin,Completed,5,2,1764.73,1242.24,EUR
+BK-005609,2021-09-30,2021-10-11,2021-10-12,20,Swiss Premium Tours,2,Airport Transfer,Transfer,Paris,3,Sophie Laurent,Completed,3,0,244.31,154.82,EUR
+BK-005610,2021-09-14,2021-10-04,2021-10-06,12,Kiwi Adventures Ltd,10,Mont Blanc Excursion,Tour,Chamonix,2,Pierre Martin,Cancelled,5,2,937.18,670.49,EUR
+BK-005611,2021-09-26,2021-10-06,2021-10-07,5,Gulf Luxury Travel,1,City Walking Tour,Tour,Paris,6,Nicolas Petit,Completed,3,1,325.77,237.92,EUR
+BK-005612,2021-09-16,2021-09-25,2021-09-28,9,Maple Leaf Journeys,4,Seine River Cruise,Tour,Paris,3,Sophie Laurent,Completed,2,3,196.92,114.58,EUR
+BK-005613,2021-09-12,2021-10-23,2021-10-30,16,Mumbai Getaways Pvt,16,Hotel Vieux Lyon,Accommodation,Lyon,7,Isabelle Leroy,Completed,10,7,20597.18,13045.56,EUR
+BK-005614,2021-09-21,2021-10-23,2021-10-24,14,Direct Client - Web,13,Private Car Service,Transfer,Multi-city,8,Thomas Roux,Completed,9,0,846.47,578.24,EUR
+BK-005615,2021-09-13,2021-09-24,2021-09-27,17,Andalucia Sun Tours,19,Ski Package Alps,Tour,Chamonix,4,Jean-Luc Bernard,Completed,12,3,757.05,484.84,EUR
+BK-005616,2021-10-12,2021-12-23,2021-12-26,4,Voyages Lumiere,16,Hotel Vieux Lyon,Accommodation,Lyon,1,Marie Dubois,Completed,6,3,3193.77,2434.71,EUR
+BK-005617,2021-10-05,2021-11-12,2021-11-13,18,Thai Smile Holidays,15,Provence Lavender Tour,Tour,Provence,7,Isabelle Leroy,Completed,4,1,326.44,197.87,EUR
+BK-005618,2021-10-04,2022-01-02,2022-01-05,1,Sakura Travel Group,5,Wine Tasting Bordeaux,Tour,Bordeaux,7,Isabelle Leroy,Completed,6,3,348.68,201.01,EUR
+BK-005619,2021-10-16,2022-01-01,2022-01-02,5,Gulf Luxury Travel,6,Chateau Stay Bordeaux,Accommodation,Bordeaux,6,Nicolas Petit,Completed,3,1,303.98,173.05,EUR
+BK-005620,2021-10-27,2021-12-20,2021-12-21,16,Mumbai Getaways Pvt,5,Wine Tasting Bordeaux,Tour,Bordeaux,3,Sophie Laurent,Completed,12,1,1549.41,1219.68,EUR
+BK-005621,2021-10-24,2021-12-07,2021-12-08,10,Seoul Wanderers Co.,15,Provence Lavender Tour,Tour,Provence,2,Pierre Martin,Completed,3,0,177.0,125.78,EUR
+BK-005622,2021-10-06,2021-12-10,2021-12-11,13,Direct Client - Walk-in,6,Chateau Stay Bordeaux,Accommodation,Bordeaux,7,Isabelle Leroy,Completed,11,1,3696.28,2452.76,EUR
+BK-005623,2021-10-09,2021-12-22,2021-12-24,8,Nordic Explorers AB,17,Strasbourg Christmas Tour,Tour,Strasbourg,7,Isabelle Leroy,Completed,3,2,272.32,156.04,EUR
+BK-005624,2021-10-31,2021-11-17,2021-11-20,20,Swiss Premium Tours,7,Nice Coastal Tour,Tour,Nice,1,Marie Dubois,Cancelled,4,3,435.37,328.98,EUR
+BK-005625,2021-10-20,2021-10-30,2021-11-02,11,Roma Viaggi SRL,15,Provence Lavender Tour,Tour,Provence,7,Isabelle Leroy,Completed,7,3,523.07,392.74,EUR
+BK-005626,2021-10-07,2021-11-11,2021-11-12,3,Pacific Coast Tours,4,Seine River Cruise,Tour,Paris,6,Nicolas Petit,Completed,10,0,1668.2,1057.42,EUR
+BK-005627,2021-10-06,2021-12-15,2021-12-16,7,Beijing Star International,4,Seine River Cruise,Tour,Paris,1,Marie Dubois,Cancelled,5,0,390.81,234.65,EUR
+BK-005628,2021-10-08,2021-11-12,2021-11-22,19,Amazon Corp Travel,3,Hotel Le Marais,Accommodation,Paris,1,Marie Dubois,Completed,10,10,34635.34,23238.64,EUR
+BK-005629,2021-10-03,2021-11-12,2021-11-14,10,Seoul Wanderers Co.,1,City Walking Tour,Tour,Paris,7,Isabelle Leroy,Completed,9,2,713.09,526.23,EUR
+BK-005630,2021-10-05,2022-01-03,2022-01-05,14,Direct Client - Web,4,Seine River Cruise,Tour,Paris,2,Pierre Martin,Completed,9,2,1540.12,904.89,EUR
+BK-005631,2021-10-13,2021-12-14,2021-12-15,10,Seoul Wanderers Co.,19,Ski Package Alps,Tour,Chamonix,3,Sophie Laurent,Completed,3,0,457.07,260.39,EUR
+BK-005632,2021-10-31,2021-11-30,2021-12-01,6,Southern Cross Holidays,7,Nice Coastal Tour,Tour,Nice,6,Nicolas Petit,Completed,8,1,1342.42,852.11,EUR
+BK-005633,2021-10-28,2021-12-23,2021-12-24,13,Direct Client - Walk-in,2,Airport Transfer,Transfer,Paris,4,Jean-Luc Bernard,Cancelled,4,0,598.56,420.02,EUR
+BK-005634,2021-10-19,2022-01-08,2022-01-10,1,Sakura Travel Group,16,Hotel Vieux Lyon,Accommodation,Lyon,3,Sophie Laurent,Completed,5,2,2277.27,1804.14,EUR
+BK-005635,2021-10-03,2021-12-06,2021-12-09,11,Roma Viaggi SRL,4,Seine River Cruise,Tour,Paris,3,Sophie Laurent,Completed,5,3,371.1,230.09,EUR
+BK-005636,2021-10-03,2021-10-13,2021-10-25,15,Horizon Corp Events,6,Chateau Stay Bordeaux,Accommodation,Bordeaux,5,Camille Moreau,Completed,8,12,33042.3,24477.29,EUR
+BK-005637,2021-10-30,2021-11-17,2021-11-20,2,Alpine Adventures GmbH,4,Seine River Cruise,Tour,Paris,6,Nicolas Petit,Cancelled,5,3,550.7,420.87,EUR
+BK-005638,2021-10-05,2021-12-01,2021-12-02,17,Andalucia Sun Tours,12,TGV Train Booking,Transfer,Multi-city,6,Nicolas Petit,Completed,6,0,240.11,156.86,EUR
+BK-005639,2021-10-29,2022-01-25,2022-01-26,20,Swiss Premium Tours,2,Airport Transfer,Transfer,Paris,1,Marie Dubois,Completed,12,0,1498.45,1086.28,EUR
+BK-005640,2021-10-05,2021-10-19,2021-10-22,6,Southern Cross Holidays,10,Mont Blanc Excursion,Tour,Chamonix,7,Isabelle Leroy,Completed,2,3,166.92,128.28,EUR
+BK-005641,2021-10-12,2021-12-11,2021-12-14,4,Voyages Lumiere,15,Provence Lavender Tour,Tour,Provence,2,Pierre Martin,Cancelled,3,3,479.3,373.55,EUR
+BK-005642,2021-10-25,2021-12-20,2021-12-23,11,Roma Viaggi SRL,7,Nice Coastal Tour,Tour,Nice,2,Pierre Martin,Completed,6,3,608.18,426.39,EUR
+BK-005643,2021-10-24,2021-12-24,2021-12-26,15,Horizon Corp Events,4,Seine River Cruise,Tour,Paris,1,Marie Dubois,Completed,9,2,660.25,440.71,EUR
+BK-005644,2021-10-11,2021-12-23,2021-12-24,20,Swiss Premium Tours,2,Airport Transfer,Transfer,Paris,7,Isabelle Leroy,Completed,1,0,142.38,91.18,EUR
+BK-005645,2021-10-16,2021-11-13,2021-11-14,7,Beijing Star International,2,Airport Transfer,Transfer,Paris,1,Marie Dubois,Completed,11,0,888.25,544.51,EUR
+BK-005646,2021-10-05,2021-10-14,2021-10-17,3,Pacific Coast Tours,9,Lyon Food Tour,Tour,Lyon,5,Camille Moreau,Completed,12,3,1412.56,925.13,EUR
+BK-005647,2021-10-29,2021-12-02,2021-12-16,2,Alpine Adventures GmbH,6,Chateau Stay Bordeaux,Accommodation,Bordeaux,2,Pierre Martin,Completed,7,14,16889.83,12469.66,EUR
+BK-005648,2021-10-12,2021-12-05,2021-12-13,18,Thai Smile Holidays,16,Hotel Vieux Lyon,Accommodation,Lyon,3,Sophie Laurent,Completed,12,8,19001.44,14785.96,EUR
+BK-005649,2021-10-27,2021-10-29,2021-10-30,3,Pacific Coast Tours,18,Marseille Port Tour,Tour,Marseille,3,Sophie Laurent,Completed,6,1,897.66,678.52,EUR
+BK-005650,2021-10-27,2021-12-07,2021-12-08,15,Horizon Corp Events,1,City Walking Tour,Tour,Paris,3,Sophie Laurent,Cancelled,8,1,1437.16,831.26,EUR
+BK-005651,2021-10-14,2021-11-17,2021-11-18,15,Horizon Corp Events,17,Strasbourg Christmas Tour,Tour,Strasbourg,3,Sophie Laurent,Completed,11,0,1291.39,1023.25,EUR
+BK-005652,2021-10-07,2021-11-01,2021-11-02,20,Swiss Premium Tours,14,Versailles Day Trip,Tour,Versailles,7,Isabelle Leroy,Cancelled,4,1,408.85,322.21,EUR
+BK-005653,2021-10-19,2021-10-21,2021-10-22,12,Kiwi Adventures Ltd,12,TGV Train Booking,Transfer,Multi-city,1,Marie Dubois,Cancelled,5,0,687.99,464.75,EUR
+BK-005654,2021-10-23,2021-12-26,2021-12-29,14,Direct Client - Web,15,Provence Lavender Tour,Tour,Provence,6,Nicolas Petit,Cancelled,6,3,1045.37,686.25,EUR
+BK-005655,2021-10-11,2021-10-26,2021-11-03,14,Direct Client - Web,6,Chateau Stay Bordeaux,Accommodation,Bordeaux,6,Nicolas Petit,Completed,3,8,5501.84,3249.74,EUR
+BK-005656,2021-10-10,2022-01-03,2022-01-05,20,Swiss Premium Tours,14,Versailles Day Trip,Tour,Versailles,2,Pierre Martin,Completed,2,2,341.78,196.85,EUR
+BK-005657,2021-10-20,2021-12-12,2021-12-15,20,Swiss Premium Tours,4,Seine River Cruise,Tour,Paris,2,Pierre Martin,Completed,11,3,1282.77,891.92,EUR
+BK-005658,2021-10-10,2021-12-03,2021-12-04,15,Horizon Corp Events,7,Nice Coastal Tour,Tour,Nice,7,Isabelle Leroy,Completed,2,1,158.67,105.9,EUR
+BK-005659,2021-10-31,2021-12-30,2022-01-02,1,Sakura Travel Group,14,Versailles Day Trip,Tour,Versailles,6,Nicolas Petit,Completed,4,3,504.54,311.25,EUR
+BK-005660,2021-11-27,2022-01-20,2022-01-21,14,Direct Client - Web,8,Hotel Promenade Nice,Accommodation,Nice,1,Marie Dubois,Completed,1,1,87.09,65.11,EUR
+BK-005661,2021-11-17,2022-02-02,2022-02-04,6,Southern Cross Holidays,11,D-Day Normandy Tour,Tour,Normandy,7,Isabelle Leroy,Completed,4,2,533.44,345.58,EUR
+BK-005662,2021-11-13,2021-11-20,2021-11-23,5,Gulf Luxury Travel,19,Ski Package Alps,Tour,Chamonix,7,Isabelle Leroy,Completed,12,3,912.69,708.29,EUR
+BK-005663,2021-11-14,2021-12-14,2021-12-15,17,Andalucia Sun Tours,4,Seine River Cruise,Tour,Paris,2,Pierre Martin,Completed,11,1,1501.94,973.26,EUR
+BK-005664,2021-11-30,2022-01-03,2022-01-04,11,Roma Viaggi SRL,18,Marseille Port Tour,Tour,Marseille,4,Jean-Luc Bernard,Completed,2,1,127.98,84.38,EUR
+BK-005665,2021-11-19,2021-12-09,2021-12-10,19,Amazon Corp Travel,1,City Walking Tour,Tour,Paris,7,Isabelle Leroy,Completed,1,0,161.35,94.01,EUR
+BK-005666,2021-11-21,2022-01-06,2022-01-10,8,Nordic Explorers AB,6,Chateau Stay Bordeaux,Accommodation,Bordeaux,5,Camille Moreau,Completed,4,4,3593.0,2196.45,EUR
+BK-005667,2021-11-26,2022-01-14,2022-01-15,9,Maple Leaf Journeys,9,Lyon Food Tour,Tour,Lyon,2,Pierre Martin,Completed,3,0,432.35,306.79,EUR
+BK-005668,2021-11-04,2021-11-19,2021-11-20,4,Voyages Lumiere,15,Provence Lavender Tour,Tour,Provence,3,Sophie Laurent,Completed,5,0,446.5,265.74,EUR
+BK-005669,2021-11-28,2022-01-14,2022-01-17,4,Voyages Lumiere,7,Nice Coastal Tour,Tour,Nice,8,Thomas Roux,Completed,1,3,112.06,75.26,EUR
+BK-005670,2021-11-07,2022-02-03,2022-02-06,11,Roma Viaggi SRL,14,Versailles Day Trip,Tour,Versailles,8,Thomas Roux,Completed,3,3,230.91,127.59,EUR
+BK-005671,2021-11-19,2022-02-08,2022-02-22,2,Alpine Adventures GmbH,20,Hotel Negresco Nice,Accommodation,Nice,2,Pierre Martin,Completed,6,14,29258.01,19631.47,EUR
+BK-005672,2021-11-18,2021-11-19,2021-11-28,9,Maple Leaf Journeys,6,Chateau Stay Bordeaux,Accommodation,Bordeaux,2,Pierre Martin,Completed,4,9,8771.4,5999.54,EUR
+BK-005673,2021-11-25,2021-12-15,2021-12-17,4,Voyages Lumiere,7,Nice Coastal Tour,Tour,Nice,4,Jean-Luc Bernard,Completed,1,2,99.13,59.97,EUR
+BK-005674,2021-11-05,2021-12-10,2021-12-13,7,Beijing Star International,9,Lyon Food Tour,Tour,Lyon,2,Pierre Martin,Completed,6,3,937.28,668.26,EUR
+BK-005675,2021-11-26,2022-01-29,2022-02-01,7,Beijing Star International,14,Versailles Day Trip,Tour,Versailles,5,Camille Moreau,Completed,3,3,239.04,182.03,EUR
+BK-005676,2021-11-13,2021-11-27,2021-11-29,6,Southern Cross Holidays,19,Ski Package Alps,Tour,Chamonix,4,Jean-Luc Bernard,Completed,12,2,1478.1,1139.19,EUR
+BK-005677,2021-11-24,2021-12-29,2021-12-30,20,Swiss Premium Tours,11,D-Day Normandy Tour,Tour,Normandy,7,Isabelle Leroy,Cancelled,7,0,559.71,357.22,EUR
+BK-005678,2021-11-27,2021-12-06,2021-12-07,2,Alpine Adventures GmbH,15,Provence Lavender Tour,Tour,Provence,5,Camille Moreau,Cancelled,10,1,1114.71,781.38,EUR
+BK-005679,2021-11-17,2022-01-02,2022-01-03,1,Sakura Travel Group,13,Private Car Service,Transfer,Multi-city,2,Pierre Martin,Completed,3,0,381.25,250.61,EUR
+BK-005680,2021-11-08,2021-11-18,2021-11-20,12,Kiwi Adventures Ltd,7,Nice Coastal Tour,Tour,Nice,3,Sophie Laurent,Completed,6,2,410.07,258.2,EUR
+BK-005681,2021-11-11,2021-12-09,2021-12-11,8,Nordic Explorers AB,15,Provence Lavender Tour,Tour,Provence,2,Pierre Martin,Completed,7,2,647.79,390.65,EUR
+BK-005682,2021-11-18,2021-12-24,2022-01-06,3,Pacific Coast Tours,20,Hotel Negresco Nice,Accommodation,Nice,7,Isabelle Leroy,Completed,11,13,40636.93,25578.75,EUR
+BK-005683,2021-11-07,2021-11-14,2021-11-22,2,Alpine Adventures GmbH,16,Hotel Vieux Lyon,Accommodation,Lyon,5,Camille Moreau,Completed,7,8,6283.2,4166.99,EUR
+BK-005684,2021-11-19,2022-01-08,2022-01-18,1,Sakura Travel Group,8,Hotel Promenade Nice,Accommodation,Nice,5,Camille Moreau,Cancelled,1,10,2537.9,1939.02,EUR
+BK-005685,2021-11-30,2022-01-29,2022-01-30,13,Direct Client - Walk-in,10,Mont Blanc Excursion,Tour,Chamonix,1,Marie Dubois,Completed,9,1,1689.35,945.66,EUR
+BK-005686,2021-11-03,2022-01-03,2022-01-06,10,Seoul Wanderers Co.,4,Seine River Cruise,Tour,Paris,5,Camille Moreau,Completed,6,3,978.32,635.99,EUR
+BK-005687,2021-11-11,2022-01-14,2022-01-15,13,Direct Client - Walk-in,20,Hotel Negresco Nice,Accommodation,Nice,5,Camille Moreau,Completed,12,1,4148.05,2793.02,EUR
+BK-005688,2021-11-30,2021-12-16,2021-12-17,20,Swiss Premium Tours,12,TGV Train Booking,Transfer,Multi-city,2,Pierre Martin,Completed,1,0,56.88,43.02,EUR
+BK-005689,2021-11-11,2022-02-08,2022-02-09,6,Southern Cross Holidays,14,Versailles Day Trip,Tour,Versailles,2,Pierre Martin,Completed,4,1,634.46,477.79,EUR
+BK-005690,2021-11-18,2021-11-19,2021-11-20,9,Maple Leaf Journeys,2,Airport Transfer,Transfer,Paris,1,Marie Dubois,Completed,2,0,71.52,44.78,EUR
+BK-005691,2021-11-23,2022-02-10,2022-02-11,9,Maple Leaf Journeys,13,Private Car Service,Transfer,Multi-city,3,Sophie Laurent,Completed,3,0,300.04,174.02,EUR
+BK-005692,2021-11-05,2022-01-19,2022-01-22,4,Voyages Lumiere,14,Versailles Day Trip,Tour,Versailles,4,Jean-Luc Bernard,Completed,10,3,1216.89,818.39,EUR
+BK-005693,2021-11-25,2022-01-26,2022-01-28,9,Maple Leaf Journeys,8,Hotel Promenade Nice,Accommodation,Nice,5,Camille Moreau,Cancelled,12,2,2456.51,1694.08,EUR
+BK-005694,2021-11-22,2022-02-13,2022-02-14,3,Pacific Coast Tours,7,Nice Coastal Tour,Tour,Nice,8,Thomas Roux,Completed,1,0,81.87,58.75,EUR
+BK-005695,2021-12-07,2022-02-08,2022-02-10,7,Beijing Star International,4,Seine River Cruise,Tour,Paris,6,Nicolas Petit,Completed,5,2,781.38,557.77,EUR
+BK-005696,2021-12-04,2021-12-21,2021-12-27,13,Direct Client - Walk-in,8,Hotel Promenade Nice,Accommodation,Nice,8,Thomas Roux,Completed,10,6,13118.12,9773.07,EUR
+BK-005697,2021-12-09,2022-02-02,2022-02-13,10,Seoul Wanderers Co.,6,Chateau Stay Bordeaux,Accommodation,Bordeaux,2,Pierre Martin,Completed,3,11,6747.1,3891.68,EUR
+BK-005698,2021-12-01,2022-01-29,2022-02-03,1,Sakura Travel Group,6,Chateau Stay Bordeaux,Accommodation,Bordeaux,8,Thomas Roux,Completed,11,5,12283.65,7836.84,EUR
+BK-005699,2021-12-18,2021-12-29,2021-12-30,14,Direct Client - Web,12,TGV Train Booking,Transfer,Multi-city,4,Jean-Luc Bernard,Completed,3,0,232.89,153.17,EUR
+BK-005700,2021-12-15,2022-01-19,2022-01-20,4,Voyages Lumiere,12,TGV Train Booking,Transfer,Multi-city,1,Marie Dubois,Completed,11,0,834.93,652.92,EUR
+BK-005701,2021-12-07,2022-01-28,2022-02-07,9,Maple Leaf Journeys,6,Chateau Stay Bordeaux,Accommodation,Bordeaux,8,Thomas Roux,Completed,9,10,17735.64,12774.81,EUR
+BK-005702,2021-12-31,2022-01-15,2022-01-17,2,Alpine Adventures GmbH,8,Hotel Promenade Nice,Accommodation,Nice,1,Marie Dubois,Completed,10,2,3037.36,1720.55,EUR
+BK-005703,2021-12-08,2022-02-26,2022-02-27,13,Direct Client - Walk-in,13,Private Car Service,Transfer,Multi-city,7,Isabelle Leroy,Completed,2,0,112.77,85.26,EUR
+BK-005704,2021-12-16,2022-01-12,2022-01-25,7,Beijing Star International,6,Chateau Stay Bordeaux,Accommodation,Bordeaux,6,Nicolas Petit,Completed,11,13,22559.39,15770.78,EUR
+BK-005705,2021-12-04,2021-12-28,2021-12-31,10,Seoul Wanderers Co.,17,Strasbourg Christmas Tour,Tour,Strasbourg,4,Jean-Luc Bernard,Completed,3,3,291.8,165.56,EUR
+BK-005706,2021-12-29,2022-02-26,2022-02-27,16,Mumbai Getaways Pvt,5,Wine Tasting Bordeaux,Tour,Bordeaux,7,Isabelle Leroy,Cancelled,6,0,318.74,252.95,EUR
+BK-005707,2021-12-06,2022-03-03,2022-03-05,16,Mumbai Getaways Pvt,1,City Walking Tour,Tour,Paris,1,Marie Dubois,Completed,8,2,1447.86,967.38,EUR
+BK-005708,2021-12-01,2022-02-12,2022-02-13,17,Andalucia Sun Tours,10,Mont Blanc Excursion,Tour,Chamonix,3,Sophie Laurent,Completed,3,1,498.87,286.85,EUR
+BK-005709,2021-12-11,2022-02-07,2022-02-19,12,Kiwi Adventures Ltd,16,Hotel Vieux Lyon,Accommodation,Lyon,5,Camille Moreau,Completed,11,12,27898.62,17885.03,EUR
+BK-005710,2021-12-12,2022-01-20,2022-01-23,4,Voyages Lumiere,11,D-Day Normandy Tour,Tour,Normandy,5,Camille Moreau,Completed,11,3,1406.86,998.8,EUR
+BK-005711,2021-12-14,2022-01-12,2022-01-14,16,Mumbai Getaways Pvt,5,Wine Tasting Bordeaux,Tour,Bordeaux,1,Marie Dubois,Completed,4,2,546.55,395.68,EUR
+BK-005712,2021-12-07,2021-12-19,2021-12-22,4,Voyages Lumiere,7,Nice Coastal Tour,Tour,Nice,5,Camille Moreau,Completed,11,3,1670.02,1293.94,EUR
+BK-005713,2021-12-31,2022-03-09,2022-03-14,12,Kiwi Adventures Ltd,6,Chateau Stay Bordeaux,Accommodation,Bordeaux,6,Nicolas Petit,Completed,7,5,8367.45,6579.47,EUR
+BK-005714,2021-12-07,2021-12-13,2021-12-15,20,Swiss Premium Tours,19,Ski Package Alps,Tour,Chamonix,2,Pierre Martin,Completed,7,2,1185.1,819.69,EUR
+BK-005715,2021-12-12,2022-01-18,2022-01-19,16,Mumbai Getaways Pvt,4,Seine River Cruise,Tour,Paris,3,Sophie Laurent,Completed,8,0,1217.11,828.6,EUR
+BK-005716,2021-12-18,2022-03-14,2022-03-19,16,Mumbai Getaways Pvt,6,Chateau Stay Bordeaux,Accommodation,Bordeaux,5,Camille Moreau,Completed,2,5,2959.42,1639.22,EUR
+BK-005717,2021-12-10,2022-02-24,2022-02-25,16,Mumbai Getaways Pvt,4,Seine River Cruise,Tour,Paris,5,Camille Moreau,Completed,1,0,114.55,81.91,EUR
+BK-005718,2021-12-09,2021-12-27,2021-12-28,10,Seoul Wanderers Co.,12,TGV Train Booking,Transfer,Multi-city,3,Sophie Laurent,Completed,2,0,231.17,135.39,EUR
+BK-005719,2021-12-14,2022-02-27,2022-03-04,8,Nordic Explorers AB,3,Hotel Le Marais,Accommodation,Paris,1,Marie Dubois,Completed,8,5,13275.7,8127.15,EUR
+BK-005720,2021-12-13,2022-02-06,2022-02-07,4,Voyages Lumiere,13,Private Car Service,Transfer,Multi-city,5,Camille Moreau,Completed,5,0,508.22,301.54,EUR
+BK-005721,2021-12-29,2022-02-09,2022-02-10,7,Beijing Star International,19,Ski Package Alps,Tour,Chamonix,5,Camille Moreau,Completed,3,1,337.34,202.36,EUR
+BK-005722,2021-12-10,2022-02-21,2022-02-22,13,Direct Client - Walk-in,15,Provence Lavender Tour,Tour,Provence,7,Isabelle Leroy,Completed,2,1,141.58,93.51,EUR
+BK-005723,2021-12-30,2022-03-28,2022-03-29,15,Horizon Corp Events,12,TGV Train Booking,Transfer,Multi-city,6,Nicolas Petit,Completed,7,0,601.9,475.72,EUR
+BK-005724,2021-12-30,2022-03-12,2022-03-15,3,Pacific Coast Tours,1,City Walking Tour,Tour,Paris,3,Sophie Laurent,Completed,10,3,1860.27,1388.99,EUR
+BK-005725,2021-12-12,2021-12-29,2022-01-07,19,Amazon Corp Travel,20,Hotel Negresco Nice,Accommodation,Nice,5,Camille Moreau,Completed,1,9,2555.46,1656.36,EUR
+BK-005726,2021-12-01,2022-01-30,2022-02-02,2,Alpine Adventures GmbH,17,Strasbourg Christmas Tour,Tour,Strasbourg,2,Pierre Martin,Completed,1,3,90.53,72.11,EUR
+BK-005727,2021-12-20,2022-01-02,2022-01-05,11,Roma Viaggi SRL,10,Mont Blanc Excursion,Tour,Chamonix,1,Marie Dubois,Completed,2,3,322.14,231.49,EUR
+BK-005728,2021-12-02,2022-03-02,2022-03-03,18,Thai Smile Holidays,7,Nice Coastal Tour,Tour,Nice,8,Thomas Roux,Cancelled,3,1,250.59,180.15,EUR
+BK-005729,2021-12-10,2022-03-01,2022-03-02,16,Mumbai Getaways Pvt,10,Mont Blanc Excursion,Tour,Chamonix,4,Jean-Luc Bernard,Cancelled,2,0,120.14,70.67,EUR
+BK-005730,2021-12-17,2021-12-30,2022-01-03,4,Voyages Lumiere,8,Hotel Promenade Nice,Accommodation,Nice,8,Thomas Roux,Completed,1,4,1219.34,805.93,EUR
+BK-005731,2021-12-04,2022-01-12,2022-01-13,16,Mumbai Getaways Pvt,13,Private Car Service,Transfer,Multi-city,3,Sophie Laurent,Completed,4,0,524.03,359.84,EUR
+BK-005732,2021-12-22,2022-02-17,2022-02-19,14,Direct Client - Web,20,Hotel Negresco Nice,Accommodation,Nice,3,Sophie Laurent,Completed,11,2,1888.65,1105.66,EUR
+BK-005733,2021-12-08,2021-12-30,2021-12-31,16,Mumbai Getaways Pvt,17,Strasbourg Christmas Tour,Tour,Strasbourg,8,Thomas Roux,Completed,5,1,467.09,268.58,EUR
+BK-005734,2021-12-12,2022-03-08,2022-03-11,13,Direct Client - Walk-in,9,Lyon Food Tour,Tour,Lyon,2,Pierre Martin,Completed,8,3,900.28,590.77,EUR
+BK-005735,2021-12-15,2021-12-31,2022-01-03,1,Sakura Travel Group,19,Ski Package Alps,Tour,Chamonix,5,Camille Moreau,Completed,1,3,146.77,113.5,EUR
+BK-005736,2021-12-02,2022-01-17,2022-01-20,15,Horizon Corp Events,5,Wine Tasting Bordeaux,Tour,Bordeaux,5,Camille Moreau,Cancelled,1,3,197.26,126.14,EUR
+BK-005737,2021-12-17,2022-01-13,2022-01-14,17,Andalucia Sun Tours,12,TGV Train Booking,Transfer,Multi-city,7,Isabelle Leroy,Completed,9,0,337.79,241.18,EUR
+BK-005738,2021-12-24,2022-03-07,2022-03-10,5,Gulf Luxury Travel,11,D-Day Normandy Tour,Tour,Normandy,5,Camille Moreau,Cancelled,11,3,1049.83,680.8,EUR
