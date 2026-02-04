@@ -1,121 +1,85 @@
 """
-Step 1: Merge multiple CSV files into a single staging table in SQLite.
+Step 1: Merge all raw_Bookings_*.csv files into SQLite staging.
 
-This handles the core problem: your VBA script exports booking data into
-multiple CSVs (split by year or by sheet) because of Excel's row limits.
-This script merges them all into one unified staging table.
-
-Usage:
-  - Place your VBA-exported CSVs in data/raw/ (or data/sample/ for demo)
-  - The script auto-detects all bookings_*.csv files and merges them
-  - Reference tables (clients.csv, services.csv, agents.csv) are loaded separately
-
-To use your real data:
-  1. Copy your VBA-exported CSVs into data/raw/
-  2. Update COLUMN_MAP below if your column names differ
-  3. Run: python etl/01_ingest_csvs.py
+Handles:
+  - 21 CSV files (VBA export hit Excel's 1M row limit)
+  - Excel serial date conversion to ISO dates
+  - BOM-encoded UTF-8 from Excel
+  - Multiline text fields in REMARKS, PICKUP, DROPOFF
 """
 
 import pandas as pd
 import sqlite3
-import glob
+from datetime import datetime, timedelta
 from pathlib import Path
 
 # Config
 PROJECT_DIR = Path(__file__).parent.parent
 DB_PATH = PROJECT_DIR / "data" / "bookings.db"
+RAW_DIR = Path(__file__).parent.parent.parent.parent / "public"
 
-# Change this to "raw" when using real data
-DATA_SOURCE = "sample"
-RAW_DIR = PROJECT_DIR / "data" / DATA_SOURCE
-
-# Column mapping: YOUR CSV column name -> our standard name
-# Update the left side to match your VBA export headers
-COLUMN_MAP = {
-    "booking_id": "booking_id",
-    "booking_date": "booking_date",
-    "checkin_date": "checkin_date",
-    "checkout_date": "checkout_date",
-    "client_id": "client_id",
-    "client_name": "client_name",
-    "service_id": "service_id",
-    "service_name": "service_name",
-    "service_category": "service_category",
-    "destination": "destination",
-    "agent_id": "agent_id",
-    "agent_name": "agent_name",
-    "status": "status",
-    "pax": "pax",
-    "nights": "nights",
-    "revenue": "revenue",
-    "cost": "cost",
-    "currency": "currency",
-}
+# Excel serial date epoch
+EXCEL_EPOCH = datetime(1899, 12, 30)
 
 
-def merge_booking_csvs():
-    """Find all bookings_*.csv files and merge into one DataFrame."""
-    csv_files = sorted(RAW_DIR.glob("bookings_*.csv"))
-
-    if not csv_files:
-        print(f"No bookings_*.csv files found in {RAW_DIR}")
-        print("Place your VBA-exported CSVs there first.")
+def excel_serial_to_date(serial):
+    """Convert Excel serial number to YYYY-MM-DD string."""
+    if pd.isna(serial):
         return None
-
-    frames = []
-    for f in csv_files:
-        df = pd.read_csv(f, encoding="utf-8")
-        # Apply column mapping (rename if needed)
-        df = df.rename(columns=COLUMN_MAP)
-        frames.append(df)
-        print(f"  Loaded {f.name}: {len(df)} rows")
-
-    merged = pd.concat(frames, ignore_index=True)
-    print(f"\n  Merged total: {len(merged)} rows")
-    return merged
-
-
-def load_reference_table(filename, table_name, conn):
-    """Load a reference CSV (clients, services, agents) into SQLite."""
-    filepath = RAW_DIR / filename
-    if not filepath.exists():
-        print(f"  {filename} not found, skipping")
-        return
-
-    df = pd.read_csv(filepath, encoding="utf-8")
-    df.to_sql(table_name, conn, if_exists="replace", index=False)
-    print(f"  {table_name}: {len(df)} rows loaded")
+    try:
+        serial = float(serial)
+        dt = EXCEL_EPOCH + timedelta(days=int(serial))
+        if 2010 <= dt.year <= 2030:
+            return dt.strftime("%Y-%m-%d")
+        return None
+    except (ValueError, OverflowError):
+        return None
 
 
 def main():
     DB_PATH.parent.mkdir(parents=True, exist_ok=True)
 
+    csv_files = sorted(RAW_DIR.glob("raw_Bookings_*.csv"))
+    if not csv_files:
+        print(f"No raw_Bookings_*.csv files found in {RAW_DIR}")
+        return
+
     print(f"=== CSV Ingestion ===")
     print(f"Source: {RAW_DIR}\n")
 
-    # Merge all booking CSVs
-    df_bookings = merge_booking_csvs()
-    if df_bookings is None:
-        return
+    frames = []
+    for f in csv_files:
+        df = pd.read_csv(f, encoding="utf-8-sig", low_memory=False)
+        frames.append(df)
+        print(f"  {f.name}: {len(df):,} rows")
 
-    # Parse dates
-    for col in ["booking_date", "checkin_date", "checkout_date"]:
-        df_bookings[col] = pd.to_datetime(df_bookings[col], errors="coerce")
+    df = pd.concat(frames, ignore_index=True)
+    print(f"\n  Merged: {len(df):,} rows, {len(df.columns)} columns")
 
-    # Load into SQLite staging
+    # Convert Excel serial dates to ISO format
+    date_cols = [
+        "PICKUP_DATE", "DROPOFF_DATE", "BOOKING_TRAVEL_DATE",
+        "BOOKING_ENTERED_DATE", "SERVICE_DATE", "DATE OUT"
+    ]
+    for col in date_cols:
+        if col in df.columns:
+            df[col] = pd.to_numeric(df[col], errors="coerce").apply(excel_serial_to_date)
+
+    # Clean up time columns (strip decimal time artifacts)
+    for col in ["PICKUP_TIME", "DROPOFF_TIME"]:
+        if col in df.columns:
+            df[col] = df[col].astype(str).str.strip()
+
+    # Standardize column names (strip whitespace)
+    df.columns = [c.strip() for c in df.columns]
+
+    # Load into SQLite
     conn = sqlite3.connect(DB_PATH)
-
-    df_bookings.to_sql("stg_bookings", conn, if_exists="replace", index=False)
-    print(f"\n  stg_bookings staged in SQLite")
-
-    # Load reference tables
-    print("\nLoading reference tables...")
-    load_reference_table("clients.csv", "stg_clients", conn)
-    load_reference_table("services.csv", "stg_services", conn)
-    load_reference_table("agents.csv", "stg_agents", conn)
-
+    df.to_sql("stg_bookings", conn, if_exists="replace", index=False)
     conn.close()
-    print(f"\nDatabase: {DB_PATH}")
+
+    print(f"\n  Staged to: {DB_PATH}")
+    print(f"  Table: stg_bookings ({len(df):,} rows)")
 
 
 if __name__ == "__main__":
