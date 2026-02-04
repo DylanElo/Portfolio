@@ -29,3 +29,5 @@ projects/booking-calendar-bi/data/looker_export/
 *.njsproj
 *.sln
 *.sw?
+projects/booking-calendar-bi/app/__pycache__/
+__pycache__/

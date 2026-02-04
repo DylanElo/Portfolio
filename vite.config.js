@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 import { resolve } from 'path'
 
 export default defineConfig({
-    base: '/Portfolio/',
+    base: process.env.RAILWAY_PUBLIC_DOMAIN ? '/' : '/Portfolio/',
     build: {
         rollupOptions: {
             input: {
