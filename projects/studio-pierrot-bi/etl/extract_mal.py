@@ -75,7 +75,7 @@ def fetch_anime_data(mal_id):
     """Fetch anime data from Jikan API"""
     url = f"{JIKAN_BASE_URL}/anime/{mal_id}/full"
     try:
-        response = requests.get(url)
+        response = requests.get(url, timeout=15)
         time.sleep(1.5)  # Rate limiting (Jikan is strict)
         
         if response.status_code == 200:

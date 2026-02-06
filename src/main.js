@@ -55,6 +55,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const fadeElements = document.querySelectorAll('.fade-in');
     fadeElements.forEach(el => observer.observe(el));
 
+    // Theme Toggle
+    const themeToggle = document.querySelector('.theme-toggle');
+    if (themeToggle) {
+        // Restore saved theme
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light') {
+            document.body.classList.add('light-theme');
+            themeToggle.textContent = 'Dark';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme');
+            const isLight = document.body.classList.contains('light-theme');
+            themeToggle.textContent = isLight ? 'Dark' : 'Light';
+            localStorage.setItem('theme', isLight ? 'light' : 'dark');
+        });
+    }
+
     // Smooth Scrolling for Anchor Links (only for same-page anchors)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -66,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 e.preventDefault();
                 const headerOffset = 80;
                 const elementPosition = targetElement.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                const offsetPosition = elementPosition + window.scrollY - headerOffset;
 
                 window.scrollTo({
                     top: offsetPosition,

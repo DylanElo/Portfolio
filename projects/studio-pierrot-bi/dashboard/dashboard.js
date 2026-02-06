@@ -1,5 +1,4 @@
 // Import Phase 1 data (MAL)
-// Import Phase 1 data (MAL)
 import { animeData, lastUpdated, financialData } from './data.js';
 
 // Import Phase 2 data
@@ -7,11 +6,10 @@ import { tvRatings, bdSales, merchRevenue } from './domestic_data.js';
 import { platformShare, globalDemand, streamingRevenue } from './streaming_data.js';
 import { arcAnalysis, fillerImpact, productionModels } from './production_data.js';
 
-console.log('Multi-tab dashboard loaded');
+
 
 // Initialize Phase 1 dashboard on page load
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM loaded, initializing Phase 1 dashboard...');
 
     if (!animeData || animeData.length === 0) {
         console.error('No anime data found!');
@@ -19,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
-    console.log('Anime data loaded:', animeData.length, 'entries');
 
     // Display Last Updated timestamp
     if (lastUpdated) {
@@ -28,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const date = new Date(lastUpdated).toLocaleString();
             const p = document.createElement('p');
             p.className = 'mt-2 text-xs text-slate-400';
-            p.innerHTML = `🔄 <strong>Data Last Refreshed:</strong> ${date} (Source: SQL Warehouse)`;
+            p.textContent = `Data Last Refreshed: ${date} (Source: SQL Warehouse)`;
             footer.appendChild(p);
         }
     }
@@ -731,7 +728,6 @@ function populateFinancialTable() {
 }
 
 // Initialize on load (Fandom tab loaded by default in Phase 1)
-console.log('Dashboard ready. Switch tabs to view Phase 2 data visualizations.');
 
 
 function renderReleaseYearChart(data) {

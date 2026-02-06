@@ -15,7 +15,7 @@ jobs:
     
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -30,23 +30,24 @@ jobs:
     - name: Run ETL Pipeline
       working-directory: projects/studio-pierrot-bi
       run: |
-        echo "🚀 Starting ETL Pipeline..."
-        
-        echo "1️⃣ Extracting data from Jikan API..."
+        set -e
+        echo "Starting ETL Pipeline..."
+
+        echo "Step 1: Extracting data from Jikan API..."
         python etl/extract_mal.py
-        
-        echo "2️⃣ Loading data into SQL Warehouse..."
+
+        echo "Step 2: Loading data into SQL Warehouse..."
         python etl/load.py
-        
-        echo "3️⃣ Exporting to Dashboard..."
+
+        echo "Step 3: Exporting to Dashboard..."
         python etl/export_to_dashboard.py
-        
-        echo "✅ Pipeline complete."
+
+        echo "Pipeline complete."
         
     - name: Commit and Push changes
       run: |
-        git config --global user.name 'GitHub Action'
-        git config --global user.email 'action@github.com'
+        git config user.name 'GitHub Action'
+        git config user.email 'action@github.com'
         git add projects/studio-pierrot-bi/data/
         git add projects/studio-pierrot-bi/warehouse/
         git add projects/studio-pierrot-bi/dashboard/data.js

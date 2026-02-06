@@ -36,7 +36,7 @@ def fetch_rates():
             url = f"https://api.frankfurter.app/{START_DATE}..?from={currency}&to=JPY"
             print(f"   Fetching {currency} -> JPY...")
             
-            response = requests.get(url)
+            response = requests.get(url, timeout=15)
             if response.status_code == 200:
                 data = response.json()
                 rates = data.get('rates', {})

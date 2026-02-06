@@ -1,11 +1,20 @@
 document.addEventListener('DOMContentLoaded', async () => {
     try {
         const response = await fetch('data/dashboard_data.json');
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
         const data = await response.json();
-
         initDashboard(data);
     } catch (error) {
-        console.error("Error loading data:", error);
+        const container = document.querySelector('.container');
+        if (container) {
+            const errorDiv = document.createElement('div');
+            errorDiv.className = 'card';
+            errorDiv.style.cssText = 'background:#fee2e2;border-left:4px solid #ef4444;padding:1.5rem;margin:1rem 0;';
+            errorDiv.textContent = 'Failed to load dashboard data. Please try refreshing the page.';
+            container.prepend(errorDiv);
+        }
     }
 });
 

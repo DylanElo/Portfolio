@@ -22,7 +22,7 @@ def ensure_directories():
     RAW_DIR.mkdir(parents=True, exist_ok=True)
 
 def generate_flight_data():
-    print("✈️ Gener ating mock Flight data...")
+    print("Generating mock Flight data...")
     
     dates = pd.date_range(start=START_DATE, end=END_DATE)
     records = []
