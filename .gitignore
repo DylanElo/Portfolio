@@ -16,6 +16,7 @@ dist-ssr
 projects/studio-pierrot-bi/**/*.db
 projects/studio-pierrot-bi/data/processed/**
 projects/studio-pierrot-bi/warehouse/pierrot_bi.sqlite
+projects/inbound-japan-bi/**/*.db
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

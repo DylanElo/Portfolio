@@ -475,6 +475,23 @@ body.light-theme header {
   border-color: rgba(255, 255, 255, 0.2);
 }
 
+.theme-toggle {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--outline);
+  border-radius: 12px;
+  padding: 0.45rem 0.85rem;
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.theme-toggle:hover {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.1);
+}
+
 footer {
   padding: 2.5rem 0 3rem;
   border-top: 1px solid var(--outline);
@@ -498,7 +515,7 @@ footer {
   .nav-links {
     position: fixed;
     inset: 72px 1.5rem auto;
-    background: rgba(15, 23, 42, 0.95);
+    background: rgba(var(--panel-rgb), 0.95);
     border: 1px solid var(--outline);
     border-radius: 16px;
     padding: 1.25rem;

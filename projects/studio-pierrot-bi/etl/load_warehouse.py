@@ -20,20 +20,19 @@ def load_csv_data(filename):
     with open(data_file, 'r', encoding='utf-8') as f:
         return list(csv.DictReader(f))
 
+VALID_TABLES = frozenset([
+    "fact_finance",
+    "fact_marketing",
+    "fact_anime_metrics",
+    "dim_season",
+    "dim_anime",
+])
+
 def clear_tables(conn):
     """Clear all warehouse tables."""
     cursor = conn.cursor()
-    tables = [
-        "fact_finance",
-        "fact_marketing",
-        "fact_anime_metrics",
-        "dim_season",
-        "dim_anime"
-    ]
-
-    for table in tables:
-        cursor.execute(f"DELETE FROM {table}")
-
+    for table in VALID_TABLES:
+        cursor.execute(f"DELETE FROM {table}")  # safe: table names from constant whitelist
     conn.commit()
     print("✓ Cleared all warehouse tables")
 
@@ -308,7 +307,9 @@ def main():
         ]
         
         for table_name, description in tables:
-            cursor.execute(f"SELECT COUNT(*) FROM {table_name}")
+            if table_name not in VALID_TABLES:
+                continue
+            cursor.execute(f"SELECT COUNT(*) FROM {table_name}")  # safe: validated against whitelist
             count = cursor.fetchone()[0]
             print(f"{table_name:25} | {count:>6} {description}")
         

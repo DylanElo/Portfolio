@@ -28,6 +28,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: 'npm'
           
       - name: Install dependencies
         run: |
@@ -38,6 +39,8 @@ jobs:
           npm run build
           mkdir -p dist/projects/studio-pierrot-bi/dashboard
           cp -r projects/studio-pierrot-bi/dashboard/* dist/projects/studio-pierrot-bi/dashboard/
+          mkdir -p dist/projects/inbound-japan-bi/dashboard
+          cp -r projects/inbound-japan-bi/dashboard/* dist/projects/inbound-japan-bi/dashboard/
         
       - name: Setup Pages
         uses: actions/configure-pages@v4

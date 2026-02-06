@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Studio Pierrot BI Dashboard - Dylan Elo</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com" crossorigin="anonymous"></script><!-- Tailwind Play CDN: dev only, replace with build for production -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" crossorigin="anonymous">
   <style>
     body {
       font-family: 'Inter', -apple-system, sans-serif;
@@ -85,16 +85,16 @@
 
   <div class="bg-white border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex space-x-8 overflow-x-auto">
-        <button class="tab-btn active py-4 px-2 font-medium whitespace-nowrap" onclick="switchTab('fandom')">🌍
+      <div class="flex space-x-8 overflow-x-auto" role="tablist" aria-label="Dashboard sections">
+        <button class="tab-btn active py-4 px-2 font-medium whitespace-nowrap" role="tab" aria-selected="true" aria-controls="fandom-tab" data-tab="fandom"><span aria-hidden="true">🌍</span>
           Fandom</button>
-        <button class="tab-btn py-4 px-2 font-medium whitespace-nowrap" onclick="switchTab('timeline')">📈
+        <button class="tab-btn py-4 px-2 font-medium whitespace-nowrap" role="tab" aria-selected="false" aria-controls="timeline-tab" data-tab="timeline"><span aria-hidden="true">📈</span>
           Timeline</button>
-        <button class="tab-btn py-4 px-2 font-medium whitespace-nowrap" onclick="switchTab('streaming')">📺
+        <button class="tab-btn py-4 px-2 font-medium whitespace-nowrap" role="tab" aria-selected="false" aria-controls="streaming-tab" data-tab="streaming"><span aria-hidden="true">📺</span>
           Streaming</button>
-        <button class="tab-btn py-4 px-2 font-medium whitespace-nowrap" onclick="switchTab('domestic')">🇯🇵
+        <button class="tab-btn py-4 px-2 font-medium whitespace-nowrap" role="tab" aria-selected="false" aria-controls="domestic-tab" data-tab="domestic"><span aria-hidden="true">🇯🇵</span>
           Domestic</button>
-        <button class="tab-btn py-4 px-2 font-medium whitespace-nowrap" onclick="switchTab('production')">🎬
+        <button class="tab-btn py-4 px-2 font-medium whitespace-nowrap" role="tab" aria-selected="false" aria-controls="production-tab" data-tab="production"><span aria-hidden="true">🎬</span>
           Production</button>
       </div>
     </div>
@@ -102,7 +102,7 @@
 
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-8">
 
-    <div id="fandom-tab" class="tab-content active">
+    <div id="fandom-tab" class="tab-content active" role="tabpanel" aria-label="Global Fandom analytics">
       <div class="mb-6 p-4 bg-slate-100 border-l-4 border-slate-400 rounded-r-lg">
         <h4 class="font-bold text-slate-800 mb-2">📋 Data Source</h4>
         <p class="text-slate-700 text-sm"><strong>Real MAL data.</strong> Note: Titles like Naruto are finished airing
@@ -142,16 +142,16 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
         <div class="bg-white rounded-lg shadow p-6">
           <h3 class="text-lg font-semibold mb-4">MAL Score Comparison</h3>
-          <div class="chart-container"><canvas id="scoreChart"></canvas></div>
+          <div class="chart-container"><canvas id="scoreChart" aria-label="MAL score comparison bar chart for Studio Pierrot anime"></canvas></div>
         </div>
         <div class="bg-white rounded-lg shadow p-6">
           <h3 class="text-lg font-semibold mb-4">Member Base</h3>
-          <div class="chart-container"><canvas id="memberChart"></canvas></div>
+          <div class="chart-container"><canvas id="memberChart" aria-label="Member base doughnut chart showing fandom size per anime title"></canvas></div>
         </div>
       </div>
     </div>
 
-    <div id="timeline-tab" class="tab-content">
+    <div id="timeline-tab" class="tab-content" role="tabpanel" aria-label="Revenue timeline analytics">
       <div class="mb-6 p-4 bg-slate-100 border-l-4 border-slate-400 rounded-r-lg">
         <h4 class="font-bold text-slate-800 mb-2">📋 Data Source</h4>
         <p class="text-slate-700 text-sm"><strong>Simulated revenue 2020-2024</strong> showing typical patterns.</p>
@@ -183,7 +183,7 @@
 
       <div class="bg-white rounded-lg shadow p-6 mb-8">
         <h3 class="text-lg font-semibold mb-4">Revenue Evolution 2020-2024</h3>
-        <div class="chart-container-timeline"><canvas id="timelineChart"></canvas></div>
+        <div class="chart-container-timeline"><canvas id="timelineChart" aria-label="Revenue evolution line chart from 2020 to 2024"></canvas></div>
       </div>
     </div>
 

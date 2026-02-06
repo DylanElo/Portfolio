@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Japan Inbound Travel Intelligence Hub — Live analytics for visitor arrivals, market trends, FX impact, and seasonal patterns.">
     <title>Japan Inbound Travel Intelligence Hub</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -24,15 +25,15 @@
         <div class="kpi-grid">
             <div class="card kpi-card">
                 <h3>Total Visitors (2025 YTD)</h3>
-                <p class="kpi-value" id="kpi-total-2024">Loading...</p>
+                <p class="kpi-value" id="kpi-total-2024" aria-live="polite">Loading...</p>
             </div>
             <div class="card kpi-card">
                 <h3>Top Market (2025)</h3>
-                <p class="kpi-value" id="kpi-top-market">Loading...</p>
+                <p class="kpi-value" id="kpi-top-market" aria-live="polite">Loading...</p>
             </div>
             <div class="card kpi-card">
                 <h3>Recovery vs 2019</h3>
-                <p class="kpi-value" id="kpi-recovery">Loading...</p>
+                <p class="kpi-value" id="kpi-recovery" aria-live="polite">Loading...</p>
             </div>
         </div>
 
@@ -42,7 +43,7 @@
                 <p class="chart-insight"><strong>Insight:</strong> V-shaped recovery visible from late 2022. 2025 YTD
                     momentum continues strong growth trajectory.</p>
                 <div class="chart-container">
-                    <canvas id="trendChart"></canvas>
+                    <canvas id="trendChart" aria-label="Monthly visitor trend line chart from 2019 to 2025"></canvas>
                 </div>
             </div>
 
@@ -51,7 +52,7 @@
                 <p class="chart-insight"><strong>Insight:</strong> Taiwan leads all source markets, followed closely by
                     South Korea and China. Vietnam shows strongest growth at +10% YoY.</p>
                 <div class="chart-container">
-                    <canvas id="marketChart"></canvas>
+                    <canvas id="marketChart" aria-label="Top 10 source markets bar chart for 2025"></canvas>
                 </div>
             </div>
 
@@ -60,7 +61,7 @@
                 <p class="chart-insight"><strong>Insight:</strong> Cherry blossom season (April) and Autumn foliage
                     (October) remain peak travel windows across all major markets.</p>
                 <div class="chart-container">
-                    <canvas id="seasonalityChart"></canvas>
+                    <canvas id="seasonalityChart" aria-label="Seasonality patterns stacked bar chart by country and month"></canvas>
                 </div>
             </div>
 
@@ -69,7 +70,7 @@
                 <p class="chart-insight"><strong>Insight:</strong> Weak Yen (JPY/USD >150) correlates with surge in
                     Western market arrivals, particularly from US and Europe.</p>
                 <div class="chart-container">
-                    <canvas id="fxChart"></canvas>
+                    <canvas id="fxChart" aria-label="FX impact dual-axis chart showing JPY/USD rate versus visitor volume"></canvas>
                 </div>
             </div>
 
@@ -78,7 +79,7 @@
                 <p class="chart-insight"><strong>Insight:</strong> Summer heatwaves (July-Aug) pose growing risk to
                     tourist satisfaction. Typhoon season peaks in September.</p>
                 <div class="chart-container">
-                    <canvas id="weatherChart"></canvas>
+                    <canvas id="weatherChart" aria-label="Weather risk monitor chart showing temperature and extreme weather days in Tokyo"></canvas>
                 </div>
             </div>
 
@@ -87,7 +88,7 @@
                 <p class="chart-insight"><strong>Insight:</strong> Narita (NRT) and Haneda (HND) handle >60% of traffic.
                     Kansai (KIX) capacity recovering slower than Kanto airports.</p>
                 <div class="chart-container">
-                    <canvas id="flightsChart"></canvas>
+                    <canvas id="flightsChart" aria-label="Airport capacity stacked bar chart showing monthly inbound flights by airport"></canvas>
                 </div>
             </div>
 
@@ -98,7 +99,7 @@
                 <p class="chart-insight"><strong>Action Required:</strong> These markets show highest growth momentum
                     (2024→2025 YTD). Allocate 2026 marketing budget accordingly.</p>
                 <div class="chart-container">
-                    <canvas id="marketingChart"></canvas>
+                    <canvas id="marketingChart" aria-label="2026 marketing priority matrix showing year-over-year growth by market"></canvas>
                 </div>
             </div>
 
@@ -107,7 +108,7 @@
                 <p class="chart-insight"><strong>Action Required:</strong> Projected 2026 demand based on 2025 growth
                     trajectory. Hire guides during peak months (Mar-Apr, Oct-Nov).</p>
                 <div class="chart-container">
-                    <canvas id="staffingChart"></canvas>
+                    <canvas id="staffingChart" aria-label="2026 staffing forecast showing projected visitors and recommended staff by month"></canvas>
                 </div>
             </div>
 
@@ -117,7 +118,7 @@
                 <p class="chart-insight"><strong>Risk Alert:</strong> Airports nearing 85% utilization may face delays
                     and service quality issues. Diversify supplier partnerships.</p>
                 <div class="chart-container" style="height: 250px;">
-                    <canvas id="capacityChart"></canvas>
+                    <canvas id="capacityChart" aria-label="Airport capacity health check showing utilization percentage by airport"></canvas>
                 </div>
             </div>
         </div>
