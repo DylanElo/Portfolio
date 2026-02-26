@@ -2,128 +2,142 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Japan Inbound Travel Intelligence Hub — Live analytics for visitor arrivals, market trends, FX impact, and seasonal patterns.">
-    <title>Japan Inbound Travel Intelligence Hub</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Japan Inbound Travel Intelligence Hub — Live analytics for visitor arrivals, market trends, FX impact, and seasonal patterns.">
+  <title>Japan Inbound Travel Intelligence Hub | Dylan Elo</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class="container">
-        <!-- Navigation -->
-        <nav class="top-nav">
-            <a href="../../../index.html" class="btn-back">← Return to Portfolio</a>
-        </nav>
 
-        <header>
-            <h1>Japan Inbound Travel Intelligence Hub</h1>
-            <p class="subtitle">Live Analytics: Visitor Arrivals, Market Trends & Seasonality</p>
-        </header>
-
-        <div class="kpi-grid">
-            <div class="card kpi-card">
-                <h3>Total Visitors (2025 YTD)</h3>
-                <p class="kpi-value" id="kpi-total-2024" aria-live="polite">Loading...</p>
-            </div>
-            <div class="card kpi-card">
-                <h3>Top Market (2025)</h3>
-                <p class="kpi-value" id="kpi-top-market" aria-live="polite">Loading...</p>
-            </div>
-            <div class="card kpi-card">
-                <h3>Recovery vs 2019</h3>
-                <p class="kpi-value" id="kpi-recovery" aria-live="polite">Loading...</p>
-            </div>
-        </div>
-
-        <div class="charts-grid">
-            <div class="card chart-card full-width">
-                <h2>Monthly Visitor Trend (2019-2025)</h2>
-                <p class="chart-insight"><strong>Insight:</strong> V-shaped recovery visible from late 2022. 2025 YTD
-                    momentum continues strong growth trajectory.</p>
-                <div class="chart-container">
-                    <canvas id="trendChart" aria-label="Monthly visitor trend line chart from 2019 to 2025"></canvas>
-                </div>
-            </div>
-
-            <div class="card chart-card">
-                <h2>Top 10 Markets (2025 YTD)</h2>
-                <p class="chart-insight"><strong>Insight:</strong> Taiwan leads all source markets, followed closely by
-                    South Korea and China. Vietnam shows strongest growth at +10% YoY.</p>
-                <div class="chart-container">
-                    <canvas id="marketChart" aria-label="Top 10 source markets bar chart for 2025"></canvas>
-                </div>
-            </div>
-
-            <div class="card chart-card">
-                <h2>Seasonality Patterns</h2>
-                <p class="chart-insight"><strong>Insight:</strong> Cherry blossom season (April) and Autumn foliage
-                    (October) remain peak travel windows across all major markets.</p>
-                <div class="chart-container">
-                    <canvas id="seasonalityChart" aria-label="Seasonality patterns stacked bar chart by country and month"></canvas>
-                </div>
-            </div>
-
-            <div class="card chart-card full-width">
-                <h2>FX Impact: JPY/USD Rate vs Visitor Volume</h2>
-                <p class="chart-insight"><strong>Insight:</strong> Weak Yen (JPY/USD >150) correlates with surge in
-                    Western market arrivals, particularly from US and Europe.</p>
-                <div class="chart-container">
-                    <canvas id="fxChart" aria-label="FX impact dual-axis chart showing JPY/USD rate versus visitor volume"></canvas>
-                </div>
-            </div>
-
-            <div class="card chart-card full-width">
-                <h2>Weather Risk Monitor (Tokyo)</h2>
-                <p class="chart-insight"><strong>Insight:</strong> Summer heatwaves (July-Aug) pose growing risk to
-                    tourist satisfaction. Typhoon season peaks in September.</p>
-                <div class="chart-container">
-                    <canvas id="weatherChart" aria-label="Weather risk monitor chart showing temperature and extreme weather days in Tokyo"></canvas>
-                </div>
-            </div>
-
-            <div class="card chart-card full-width">
-                <h2>Airport Capacity: Monthly Inbound Flights</h2>
-                <p class="chart-insight"><strong>Insight:</strong> Narita (NRT) and Haneda (HND) handle >60% of traffic.
-                    Kansai (KIX) capacity recovering slower than Kanto airports.</p>
-                <div class="chart-container">
-                    <canvas id="flightsChart" aria-label="Airport capacity stacked bar chart showing monthly inbound flights by airport"></canvas>
-                </div>
-            </div>
-
-            <!-- NEW: Prescriptive Analytics Section -->
-            <div class="card chart-card full-width"
-                style="background: linear-gradient(135deg, rgba(22, 160, 133, 0.05), rgba(52, 152, 219, 0.05)); border-left: 4px solid #16a085;">
-                <h2>🎯 2026 Marketing Priority Matrix</h2>
-                <p class="chart-insight"><strong>Action Required:</strong> These markets show highest growth momentum
-                    (2024→2025 YTD). Allocate 2026 marketing budget accordingly.</p>
-                <div class="chart-container">
-                    <canvas id="marketingChart" aria-label="2026 marketing priority matrix showing year-over-year growth by market"></canvas>
-                </div>
-            </div>
-
-            <div class="card chart-card full-width">
-                <h2>👥 2026 Staffing Forecast</h2>
-                <p class="chart-insight"><strong>Action Required:</strong> Projected 2026 demand based on 2025 growth
-                    trajectory. Hire guides during peak months (Mar-Apr, Oct-Nov).</p>
-                <div class="chart-container">
-                    <canvas id="staffingChart" aria-label="2026 staffing forecast showing projected visitors and recommended staff by month"></canvas>
-                </div>
-            </div>
-
-            <div class="card chart-card full-width"
-                style="background: linear-gradient(135deg, rgba(255, 193, 7, 0.05), rgba(255, 87, 34, 0.05)); border-left: 4px solid #f39c12;">
-                <h2>⚠️ Airport Capacity Health Check</h2>
-                <p class="chart-insight"><strong>Risk Alert:</strong> Airports nearing 85% utilization may face delays
-                    and service quality issues. Diversify supplier partnerships.</p>
-                <div class="chart-container" style="height: 250px;">
-                    <canvas id="capacityChart" aria-label="Airport capacity health check showing utilization percentage by airport"></canvas>
-                </div>
-            </div>
-        </div>
+  <!-- ── Navigation ──────────────────────────────────────────────────────── -->
+  <nav class="dash-nav">
+    <div class="dash-nav__inner">
+      <div class="dash-nav__brand">
+        <span class="dash-nav__flag">🇯🇵</span>
+        <span class="dash-nav__title">Japan Inbound Intelligence Hub</span>
+        <span class="dash-badge">LIVE</span>
+      </div>
+      <a href="../../../index.html" class="dash-back">← Portfolio</a>
     </div>
-    <script src="app.js"></script>
+  </nav>
+
+  <!-- ── Page hero ────────────────────────────────────────────────────────── -->
+  <div class="dash-hero">
+    <div class="dash-hero__inner">
+      <p class="dash-hero__label">BI Capstone · Applied Analytics</p>
+      <h1 class="dash-hero__title">Japan Inbound Travel Intelligence Hub</h1>
+      <p class="dash-hero__sub">Visitor Arrivals · Market Trends · FX Impact · Seasonality · 2026 Forecast</p>
+    </div>
+  </div>
+
+  <!-- ── Main content ─────────────────────────────────────────────────────── -->
+  <div class="dash-main">
+
+    <!-- KPI Row -->
+    <div class="kpi-grid">
+      <div class="card kpi-card">
+        <h3>Total Visitors (2025 YTD)</h3>
+        <p class="kpi-value" id="kpi-total-2024" aria-live="polite">Loading…</p>
+      </div>
+      <div class="card kpi-card">
+        <h3>Top Market (2025)</h3>
+        <p class="kpi-value" id="kpi-top-market" aria-live="polite">Loading…</p>
+      </div>
+      <div class="card kpi-card">
+        <h3>Recovery vs 2019</h3>
+        <p class="kpi-value" id="kpi-recovery" aria-live="polite">Loading…</p>
+      </div>
+    </div>
+
+    <!-- Charts grid -->
+    <div class="charts-grid">
+
+      <div class="card chart-card full-width">
+        <h2>Monthly Visitor Trend (2019–2025)</h2>
+        <p class="chart-insight"><strong>Insight:</strong> V-shaped recovery visible from late 2022. 2025 YTD momentum continues strong growth trajectory.</p>
+        <div class="chart-container">
+          <canvas id="trendChart" aria-label="Monthly visitor trend line chart from 2019 to 2025"></canvas>
+        </div>
+      </div>
+
+      <div class="card chart-card">
+        <h2>Top 10 Markets (2025 YTD)</h2>
+        <p class="chart-insight"><strong>Insight:</strong> Taiwan leads all source markets, followed closely by South Korea and China. Vietnam shows strongest growth at +10% YoY.</p>
+        <div class="chart-container">
+          <canvas id="marketChart" aria-label="Top 10 source markets bar chart for 2025"></canvas>
+        </div>
+      </div>
+
+      <div class="card chart-card">
+        <h2>Seasonality Patterns</h2>
+        <p class="chart-insight"><strong>Insight:</strong> Cherry blossom season (April) and Autumn foliage (October) remain peak travel windows across all major markets.</p>
+        <div class="chart-container">
+          <canvas id="seasonalityChart" aria-label="Seasonality patterns stacked bar chart by country and month"></canvas>
+        </div>
+      </div>
+
+      <div class="card chart-card full-width">
+        <h2>FX Impact: JPY/USD Rate vs Visitor Volume</h2>
+        <p class="chart-insight"><strong>Insight:</strong> Weak Yen (JPY/USD &gt;150) correlates with surge in Western market arrivals, particularly from US and Europe.</p>
+        <div class="chart-container">
+          <canvas id="fxChart" aria-label="FX impact dual-axis chart showing JPY/USD rate versus visitor volume"></canvas>
+        </div>
+      </div>
+
+      <div class="card chart-card full-width">
+        <h2>Weather Risk Monitor (Tokyo)</h2>
+        <p class="chart-insight"><strong>Insight:</strong> Summer heatwaves (July–Aug) pose growing risk to tourist satisfaction. Typhoon season peaks in September.</p>
+        <div class="chart-container">
+          <canvas id="weatherChart" aria-label="Weather risk monitor chart showing temperature and extreme weather days in Tokyo"></canvas>
+        </div>
+      </div>
+
+      <div class="card chart-card full-width">
+        <h2>Airport Capacity: Monthly Inbound Flights</h2>
+        <p class="chart-insight"><strong>Insight:</strong> Narita (NRT) and Haneda (HND) handle &gt;60% of traffic. Kansai (KIX) capacity recovering slower than Kanto airports.</p>
+        <div class="chart-container">
+          <canvas id="flightsChart" aria-label="Airport capacity stacked bar chart showing monthly inbound flights by airport"></canvas>
+        </div>
+      </div>
+
+      <div class="card chart-card full-width chart-card--priority">
+        <h2>🎯 2026 Marketing Priority Matrix</h2>
+        <p class="chart-insight"><strong>Action Required:</strong> These markets show highest growth momentum (2024→2025 YTD). Allocate 2026 marketing budget accordingly.</p>
+        <div class="chart-container">
+          <canvas id="marketingChart" aria-label="2026 marketing priority matrix showing year-over-year growth by market"></canvas>
+        </div>
+      </div>
+
+      <div class="card chart-card full-width">
+        <h2>👥 2026 Staffing Forecast</h2>
+        <p class="chart-insight"><strong>Action Required:</strong> Projected 2026 demand based on 2025 growth trajectory. Hire guides during peak months (Mar–Apr, Oct–Nov).</p>
+        <div class="chart-container">
+          <canvas id="staffingChart" aria-label="2026 staffing forecast showing projected visitors and recommended staff by month"></canvas>
+        </div>
+      </div>
+
+      <div class="card chart-card full-width chart-card--alert">
+        <h2>⚠️ Airport Capacity Health Check</h2>
+        <p class="chart-insight"><strong>Risk Alert:</strong> Airports nearing 85% utilization may face delays and service quality issues. Diversify supplier partnerships.</p>
+        <div class="chart-container" style="height: 250px;">
+          <canvas id="capacityChart" aria-label="Airport capacity health check showing utilization percentage by airport"></canvas>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── Footer ───────────────────────────────────────────────────────────── -->
+  <footer class="dash-footer">
+    <div class="dash-footer__inner">
+      <p>&copy; 2026 Dylan Elo · Japan Inbound Travel Intelligence Hub · BI Capstone Project</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
 </body>
 
 </html>
