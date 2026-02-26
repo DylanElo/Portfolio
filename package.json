@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && cp -r projects/studio-pierrot-bi/dashboard dist/projects/studio-pierrot-bi/dashboard && cp -r projects/inbound-japan-bi/dashboard dist/projects/inbound-japan-bi/dashboard",
+    "build": "vite build && mkdir -p dist/projects/studio-pierrot-bi dist/projects/inbound-japan-bi && cp -r projects/studio-pierrot-bi/dashboard dist/projects/studio-pierrot-bi/dashboard && cp -r projects/inbound-japan-bi/dashboard dist/projects/inbound-japan-bi/dashboard",
     "preview": "vite preview",
     "start": "npx serve dist -s -l tcp://0.0.0.0:${PORT:-3000}"
   },
