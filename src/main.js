@@ -60,16 +60,16 @@ document.addEventListener('DOMContentLoaded', () => {
     if (themeToggle) {
         // Restore saved theme
         const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'light') {
-            document.body.classList.add('light-theme');
-            themeToggle.textContent = 'Dark';
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-theme');
+            themeToggle.textContent = 'Light';
         }
 
         themeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('light-theme');
-            const isLight = document.body.classList.contains('light-theme');
-            themeToggle.textContent = isLight ? 'Dark' : 'Light';
-            localStorage.setItem('theme', isLight ? 'light' : 'dark');
+            document.body.classList.toggle('dark-theme');
+            const isDark = document.body.classList.contains('dark-theme');
+            themeToggle.textContent = isDark ? 'Light' : 'Dark';
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
         });
     }
 
