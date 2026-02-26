@@ -4,419 +4,424 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Studio Pierrot BI Dashboard - Dylan Elo</title>
-  <script src="https://cdn.tailwindcss.com" crossorigin="anonymous"></script><!-- Tailwind Play CDN: dev only, replace with build for production -->
+  <meta name="description" content="Studio Pierrot BI Dashboard — Multi-lens analytics: Global Fandom, Revenue Timeline, Streaming, Domestic Japan, Production Insights.">
+  <title>Studio Pierrot BI Dashboard | Dylan Elo</title>
+  <link rel="stylesheet" href="./dashboard-style.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" crossorigin="anonymous">
-  <style>
-    body {
-      font-family: 'Inter', -apple-system, sans-serif;
-    }
-
-    .chart-container {
-      position: relative;
-      height: 300px;
-      width: 100%;
-    }
-
-    .chart-container-timeline {
-      position: relative;
-      height: 400px;
-      width: 100%;
-    }
-
-    .tab-btn {
-      position: relative;
-      transition: all 0.3s;
-    }
-
-    .tab-btn.active {
-      color: #6366F1;
-      border-bottom: 2px solid #6366F1;
-    }
-
-    .tab-content {
-      display: none;
-    }
-
-    .tab-content.active {
-      display: block;
-      animation: fadeIn 0.3s;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(10px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  </style>
 </head>
 
-<body class="bg-slate-50">
+<body>
 
-  <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between h-16">
-        <div class="flex items-center">
-          <h1 class="text-xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-            📊 Studio Pierrot BI Dashboard
-          </h1>
-        </div>
-        <div class="flex items-center space-x-4">
-          <span class="px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800">Production Ready</span>
-          <a href="../../../index.html" class="text-slate-600 hover:text-slate-900 font-medium">← Back</a>
-        </div>
+  <!-- ── Navigation ──────────────────────────────────────────────────────── -->
+  <nav class="dash-nav">
+    <div class="dash-container dash-nav__inner">
+      <span class="dash-nav__title">Studio Pierrot <span>BI</span></span>
+      <div class="dash-nav__actions">
+        <span class="dash-badge">Production Ready</span>
+        <a href="../../../index.html" class="dash-back">← Portfolio</a>
       </div>
     </div>
   </nav>
 
-  <div class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <h2 class="text-3xl font-bold mb-2">Business Intelligence Case Study</h2>
-      <p class="text-indigo-100 text-lg">Strategic Analysis & Data-Driven Insights for Studio Pierrot</p>
+  <!-- ── Hero banner ─────────────────────────────────────────────────────── -->
+  <div class="dash-hero">
+    <div class="dash-container">
+      <p class="dash-hero__label">Business Intelligence Case Study</p>
+      <h1 class="dash-hero__title">Studio Pierrot Analytics</h1>
+      <p class="dash-hero__sub">Strategic Analysis & Data-Driven Insights — Multi-lens view across Fandom, Revenue, Streaming, Domestic, and Production</p>
     </div>
   </div>
 
-  <div class="bg-white border-b border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex space-x-8 overflow-x-auto" role="tablist" aria-label="Dashboard sections">
-        <button class="tab-btn active py-4 px-2 font-medium whitespace-nowrap" role="tab" aria-selected="true" aria-controls="fandom-tab" data-tab="fandom"><span aria-hidden="true">🌍</span>
-          Fandom</button>
-        <button class="tab-btn py-4 px-2 font-medium whitespace-nowrap" role="tab" aria-selected="false" aria-controls="timeline-tab" data-tab="timeline"><span aria-hidden="true">📈</span>
-          Timeline</button>
-        <button class="tab-btn py-4 px-2 font-medium whitespace-nowrap" role="tab" aria-selected="false" aria-controls="streaming-tab" data-tab="streaming"><span aria-hidden="true">📺</span>
-          Streaming</button>
-        <button class="tab-btn py-4 px-2 font-medium whitespace-nowrap" role="tab" aria-selected="false" aria-controls="domestic-tab" data-tab="domestic"><span aria-hidden="true">🇯🇵</span>
-          Domestic</button>
-        <button class="tab-btn py-4 px-2 font-medium whitespace-nowrap" role="tab" aria-selected="false" aria-controls="production-tab" data-tab="production"><span aria-hidden="true">🎬</span>
-          Production</button>
-      </div>
+  <!-- ── Tab bar ──────────────────────────────────────────────────────────── -->
+  <div class="dash-tabs">
+    <div class="dash-container dash-tabs__inner">
+      <button class="tab-btn active" data-tab="fandom" aria-selected="true">Fandom</button>
+      <button class="tab-btn" data-tab="timeline" aria-selected="false">Timeline</button>
+      <button class="tab-btn" data-tab="streaming" aria-selected="false">Streaming</button>
+      <button class="tab-btn" data-tab="domestic" aria-selected="false">Domestic</button>
+      <button class="tab-btn" data-tab="production" aria-selected="false">Production</button>
     </div>
   </div>
 
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-8">
+  <!-- ── Main content ─────────────────────────────────────────────────────── -->
+  <main class="dash-main">
+    <div class="dash-container">
 
-    <div id="fandom-tab" class="tab-content active" role="tabpanel" aria-label="Global Fandom analytics">
-      <div class="mb-6 p-4 bg-slate-100 border-l-4 border-slate-400 rounded-r-lg">
-        <h4 class="font-bold text-slate-800 mb-2">📋 Data Source</h4>
-        <p class="text-slate-700 text-sm"><strong>Real MAL data.</strong> Note: Titles like Naruto are finished airing
-          but treated as <strong>legacy evergreen IP</strong> for ongoing revenue.</p>
-      </div>
+      <!-- FANDOM TAB -->
+      <div id="fandom-tab" class="tab-content active">
 
-      <div class="mb-6 p-4 bg-blue-50 border-l-4 border-blue-500 rounded-r-lg">
-        <h4 class="font-bold text-blue-900 mb-2">💡 Key Insight: Legacy Quality Still Competitive</h4>
-        <p class="text-blue-800 text-sm">Bleach TYBW (8.99) matches JJK benchmarks. Boruto (5.98) underperforms. Quality
-          > quantity.</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-        <div class="bg-white rounded-lg shadow p-6">
-          <div class="text-sm font-medium text-slate-600 mb-1">Top Rated (Pierrot)</div>
-          <div class="text-3xl font-bold text-indigo-600">8.99</div>
-          <div class="text-xs text-slate-500 mt-1">Bleach TYBW</div>
-          <span class="inline-block mt-2 px-2 py-1 bg-indigo-100 text-indigo-700 rounded text-xs font-medium">Revival
-            Hit</span>
+        <div class="source-note">
+          <div class="source-note__title">Data Source</div>
+          <strong>Real MAL data.</strong> Naruto is finished airing but treated as a legacy evergreen IP for ongoing revenue analysis.
         </div>
-        <div class="bg-white rounded-lg shadow p-6">
-          <div class="text-sm font-medium text-slate-600 mb-1">Top Competitor</div>
-          <div class="text-3xl font-bold text-purple-600">9.08</div>
-          <div class="text-xs text-slate-500 mt-1">JJK S2 (MAPPA)</div>
-          <span class="inline-block mt-2 px-2 py-1 bg-green-100 text-green-700 rounded text-xs font-medium">Recent
-            Hit</span>
-        </div>
-        <div class="bg-white rounded-lg shadow p-6">
-          <div class="text-sm font-medium text-slate-600 mb-1">Legacy Pillar</div>
-          <div class="text-3xl font-bold text-pink-600">2.4M</div>
-          <div class="text-xs text-slate-500 mt-1">Naruto members</div>
-          <span class="inline-block mt-2 px-2 py-1 bg-purple-100 text-purple-700 rounded text-xs font-medium">Legacy
-            Evergreen</span>
-        </div>
-      </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-        <div class="bg-white rounded-lg shadow p-6">
-          <h3 class="text-lg font-semibold mb-4">MAL Score Comparison</h3>
-          <div class="chart-container"><canvas id="scoreChart" aria-label="MAL score comparison bar chart for Studio Pierrot anime"></canvas></div>
+        <div class="insight-callout">
+          <div class="insight-callout__title">Key Insight — Legacy Quality Still Competitive</div>
+          <p>Bleach TYBW (8.99) matches JJK benchmarks. Boruto (5.98) underperforms significantly. Quality over quantity.</p>
         </div>
-        <div class="bg-white rounded-lg shadow p-6">
-          <h3 class="text-lg font-semibold mb-4">Member Base</h3>
-          <div class="chart-container"><canvas id="memberChart" aria-label="Member base doughnut chart showing fandom size per anime title"></canvas></div>
-        </div>
-      </div>
-    </div>
 
-    <div id="timeline-tab" class="tab-content" role="tabpanel" aria-label="Revenue timeline analytics">
-      <div class="mb-6 p-4 bg-slate-100 border-l-4 border-slate-400 rounded-r-lg">
-        <h4 class="font-bold text-slate-800 mb-2">📋 Data Source</h4>
-        <p class="text-slate-700 text-sm"><strong>Simulated revenue 2020-2024</strong> showing typical patterns.</p>
-      </div>
-
-      <div class="mb-6 p-4 bg-indigo-50 border-l-4 border-indigo-500 rounded-r-lg">
-        <h4 class="font-bold text-indigo-900 mb-2">💡 Revenue Momentum Shift</h4>
-        <p class="text-indigo-800 text-sm">Naruto ($42M→$34M) declining. JJK ($20M→$48M) surging. Bleach TYBW revival
-          proves Pierrot CAN compete.</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-        <div class="bg-white rounded-lg shadow p-6">
-          <div class="text-sm font-medium text-slate-600 mb-1">Naruto (2024)</div>
-          <div class="text-3xl font-bold text-purple-600">$34M</div>
-          <div class="text-xs text-red-600 mt-1">-19% decline</div>
-        </div>
-        <div class="bg-white rounded-lg shadow p-6">
-          <div class="text-sm font-medium text-slate-600 mb-1">JJK Peak</div>
-          <div class="text-3xl font-bold text-green-600">$48M</div>
-          <div class="text-xs text-green-600 mt-1">+140% growth</div>
-        </div>
-        <div class="bg-white rounded-lg shadow p-6">
-          <div class="text-sm font-medium text-slate-600 mb-1">Bleach TYBW</div>
-          <div class="text-3xl font-bold text-indigo-600">$32M</div>
-          <div class="text-xs text-indigo-600 mt-1">Revival success</div>
-        </div>
-      </div>
-
-      <div class="bg-white rounded-lg shadow p-6 mb-8">
-        <h3 class="text-lg font-semibold mb-4">Revenue Evolution 2020-2024</h3>
-        <div class="chart-container-timeline"><canvas id="timelineChart" aria-label="Revenue evolution line chart from 2020 to 2024"></canvas></div>
-      </div>
-    </div>
-
-    <div id="streaming-tab" class="tab-content">
-      <div class="mb-6 p-4 bg-slate-100 border-l-4 border-slate-400 rounded-r-lg">
-        <h4 class="font-bold text-slate-800 mb-2">📋 Data Source</h4>
-        <p class="text-slate-700 text-sm"><strong>Simulated streaming data</strong> calibrated to Parrot Analytics.</p>
-      </div>
-
-      <div class="mb-6 p-4 bg-purple-50 border-l-4 border-purple-500 rounded-r-lg">
-        <h4 class="font-bold text-purple-900 mb-2">💡 Competitive Gap vs MAPPA/ufotable</h4>
-        <p class="text-purple-800 text-sm">JJK 71.2x demand vs Pierrot 2-12x. Netflix+CR control 80% overseas market.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-        <div class="bg-white rounded-lg shadow p-6">
-          <div class="text-sm font-medium text-slate-600 mb-1">JJK Demand</div>
-          <div class="text-3xl font-bold text-purple-600">71.2x</div>
-          <div class="text-xs text-slate-500 mt-1">Most in-demand 2023</div>
-        </div>
-        <div class="bg-white rounded-lg shadow p-6">
-          <div class="text-sm font-medium text-slate-600 mb-1">Naruto Demand</div>
-          <div class="text-3xl font-bold text-indigo-600">12.5x</div>
-          <div class="text-xs text-slate-500 mt-1">Strong legacy</div>
-        </div>
-        <div class="bg-white rounded-lg shadow p-6">
-          <div class="text-sm font-medium text-slate-600 mb-1">Boruto Demand</div>
-          <div class="text-3xl font-bold text-red-600">2.3x</div>
-          <div class="text-xs text-slate-500 mt-1">Struggling</div>
-        </div>
-      </div>
-
-      <div class="bg-white rounded-lg shadow p-6">
-        <h3 class="text-lg font-semibold mb-4">Platform Market Share</h3>
-        <div class="grid grid-cols-2 gap-4">
-          <div class="p-4 bg-red-50 rounded">
-            <div class="text-2xl font-bold text-red-600">40%</div>
-            <div class="text-sm">Netflix</div>
+        <div class="kpi-row">
+          <div class="kpi-card">
+            <div class="kpi-card__label">Top Rated (Pierrot)</div>
+            <div class="kpi-card__value">8.99</div>
+            <div class="kpi-card__sub">Bleach TYBW</div>
+            <span class="kpi-card__badge badge--blue">Revival Hit</span>
           </div>
-          <div class="p-4 bg-orange-50 rounded">
-            <div class="text-2xl font-bold text-orange-600">35%</div>
-            <div class="text-sm">Crunchyroll</div>
+          <div class="kpi-card">
+            <div class="kpi-card__label">Top Competitor</div>
+            <div class="kpi-card__value">9.08</div>
+            <div class="kpi-card__sub">JJK S2 (MAPPA)</div>
+            <span class="kpi-card__badge badge--green">Recent Hit</span>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-card__label">Legacy Pillar</div>
+            <div class="kpi-card__value">2.4M</div>
+            <div class="kpi-card__sub">Naruto MAL members</div>
+            <span class="kpi-card__badge badge--purple">Legacy Evergreen</span>
           </div>
         </div>
-      </div>
-    </div>
 
-    <div id="domestic-tab" class="tab-content">
-      <div class="mb-6 p-4 bg-slate-100 border-l-4 border-slate-400 rounded-r-lg">
-        <h4 class="font-bold text-slate-800 mb-2">📋 Data Source</h4>
-        <p class="text-slate-700 text-sm"><strong>Simulated domestic data</strong> calibrated to TV ratings & BD sales.
-        </p>
-      </div>
-
-      <div class="mb-6 p-4 bg-green-50 border-l-4 border-green-500 rounded-r-lg">
-        <h4 class="font-bold text-green-900 mb-2">💡 MAL-BD Sales Correlation</h4>
-        <p class="text-green-800 text-sm">Higher MAL score = Better BD sales (R² > 0.7). TYBW 48K vs Boruto 6K units.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-        <div class="bg-white rounded-lg shadow p-6">
-          <div class="text-sm font-medium text-slate-600 mb-1">TYBW BD Sales</div>
-          <div class="text-3xl font-bold text-green-600">48K</div>
-          <div class="text-xs text-slate-500 mt-1">Units/volume</div>
-        </div>
-        <div class="bg-white rounded-lg shadow p-6">
-          <div class="text-sm font-medium text-slate-600 mb-1">Naruto Merch</div>
-          <div class="text-3xl font-bold text-indigo-600">¥1.2B</div>
-          <div class="text-xs text-slate-500 mt-1">Per quarter</div>
-        </div>
-        <div class="bg-white rounded-lg shadow p-6">
-          <div class="text-sm font-medium text-slate-600 mb-1">Boruto BD Sales</div>
-          <div class="text-3xl font-bold text-red-600">6K</div>
-          <div class="text-xs text-slate-500 mt-1">Units/volume</div>
-        </div>
-      </div>
-
-      <div class="bg-white rounded-lg shadow p-6">
-        <h3 class="text-lg font-semibold mb-4">Revenue Streams</h3>
-        <div class="space-y-3">
-          <div class="flex justify-between p-3 bg-indigo-50 rounded">
-            <div class="font-semibold">BD/DVD Sales</div>
-            <div class="text-indigo-600 font-bold">35%</div>
+        <div class="chart-row">
+          <div class="chart-card">
+            <div class="chart-card__title">MAL Score Comparison</div>
+            <div class="chart-container">
+              <canvas id="scoreChart" aria-label="MAL score comparison bar chart"></canvas>
+            </div>
           </div>
-          <div class="flex justify-between p-3 bg-purple-50 rounded">
-            <div class="font-semibold">Merchandise</div>
-            <div class="text-purple-600 font-bold">40%</div>
-          </div>
-          <div class="flex justify-between p-3 bg-pink-50 rounded">
-            <div class="font-semibold">Licensing & Events</div>
-            <div class="text-pink-600 font-bold">25%</div>
+          <div class="chart-card">
+            <div class="chart-card__title">Fandom Size by Member Count</div>
+            <div class="chart-container">
+              <canvas id="memberChart" aria-label="Member base doughnut chart"></canvas>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
 
-    <div id="production-tab" class="tab-content">
-      <div class="mb-6 p-4 bg-slate-100 border-l-4 border-slate-400 rounded-r-lg">
-        <h4 class="font-bold text-slate-800 mb-2">📋 Data Source</h4>
-        <p class="text-slate-700 text-sm"><strong>Simulated production data</strong> based on known filler % and
-          budgets.</p>
       </div>
 
-      <div class="mb-6 p-4 bg-orange-50 border-l-4 border-orange-500 rounded-r-lg">
-        <h4 class="font-bold text-orange-900 mb-2">💡 Filler Kills Engagement</h4>
-        <p class="text-orange-800 text-sm">Seasonal (under 10% filler, 8.7 score) vs Continuous (42% filler, 6.1 score).
-        </p>
-      </div>
+      <!-- TIMELINE TAB -->
+      <div id="timeline-tab" class="tab-content">
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-        <div class="bg-white rounded-lg shadow p-6">
-          <div class="text-sm font-medium text-slate-600 mb-1">TYBW Budget</div>
-          <div class="text-3xl font-bold text-green-600">$380K</div>
-          <div class="text-xs text-slate-500 mt-1">Per episode</div>
+        <div class="source-note">
+          <div class="source-note__title">Data Source</div>
+          <strong>Simulated revenue 2020–2024</strong> showing typical revenue profile patterns for each anime type.
         </div>
-        <div class="bg-white rounded-lg shadow p-6">
-          <div class="text-sm font-medium text-slate-600 mb-1">TYBW Filler</div>
-          <div class="text-3xl font-bold text-green-600">0%</div>
-          <div class="text-xs text-slate-500 mt-1">Seasonal model</div>
-        </div>
-        <div class="bg-white rounded-lg shadow p-6">
-          <div class="text-sm font-medium text-slate-600 mb-1">Boruto Filler</div>
-          <div class="text-3xl font-bold text-red-600">42%</div>
-          <div class="text-xs text-slate-500 mt-1">Continuous model</div>
-        </div>
-      </div>
 
-      <div class="bg-white rounded-lg shadow p-6">
-        <h3 class="text-lg font-semibold mb-4">Production Model Comparison</h3>
-        <div class="grid grid-cols-2 gap-4">
-          <div class="p-4 bg-green-50 rounded border border-green-200">
-            <h4 class="font-semibold text-green-900 mb-2">✅ Seasonal</h4>
-            <ul class="text-sm text-green-800 space-y-1">
-              <li>• Under 10% filler</li>
-              <li>• Higher budget/ep</li>
-              <li>• Better scores (8.5+)</li>
-            </ul>
+        <div class="insight-callout">
+          <div class="insight-callout__title">Key Insight — Revenue Momentum Shift</div>
+          <p>Naruto ($42M→$34M, −19%) declining. JJK ($20M→$48M, +140%) surging. Bleach TYBW revival proves Pierrot CAN compete when they invest in quality.</p>
+        </div>
+
+        <div class="kpi-row">
+          <div class="kpi-card">
+            <div class="kpi-card__label">Naruto (2024 revenue)</div>
+            <div class="kpi-card__value kpi-card__value--warning">$34M</div>
+            <div class="kpi-card__sub">−19% decline since 2020</div>
           </div>
-          <div class="p-4 bg-red-50 rounded border border-red-200">
-            <h4 class="font-semibold text-red-900 mb-2">❌ Continuous</h4>
-            <ul class="text-sm text-red-800 space-y-1">
-              <li>• 40%+ filler</li>
-              <li>• Lower budget/ep</li>
-              <li>• Worse scores (under 7.0)</li>
-            </ul>
+          <div class="kpi-card">
+            <div class="kpi-card__label">JJK Peak Revenue</div>
+            <div class="kpi-card__value kpi-card__value--success">$48M</div>
+            <div class="kpi-card__sub">+140% growth 2020–2024</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-card__label">Bleach TYBW</div>
+            <div class="kpi-card__value">$32M</div>
+            <div class="kpi-card__sub">Revival success story</div>
           </div>
         </div>
+
+        <div class="chart-card chart-card--full">
+          <div class="chart-card__title">Revenue Evolution 2020–2024</div>
+          <div class="chart-container chart-container--tall">
+            <canvas id="timelineChart" aria-label="Revenue evolution line chart 2020–2024"></canvas>
+          </div>
+        </div>
+
       </div>
-    </div>
 
-    <div class="bg-white rounded-lg shadow p-6 mt-8">
-      <h3 class="text-lg font-semibold mb-4">📈 Strategic Recommendations</h3>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div class="p-4 bg-green-50 rounded-lg border border-green-200">
-          <span class="text-green-600 text-2xl">✓</span>
-          <h4 class="font-semibold mt-2 mb-1">Prioritize Quality</h4>
-          <p class="text-sm text-slate-700">Bleach TYBW proves Pierrot can compete</p>
+      <!-- STREAMING TAB -->
+      <div id="streaming-tab" class="tab-content">
+
+        <div class="source-note">
+          <div class="source-note__title">Data Source</div>
+          <strong>Simulated streaming data</strong> calibrated to publicly available Parrot Analytics demand indices.
         </div>
-        <div class="p-4 bg-blue-50 rounded-lg border border-blue-200">
-          <span class="text-blue-600 text-2xl">✓</span>
-          <h4 class="font-semibold mt-2 mb-1">Adopt Seasonal Model</h4>
-          <p class="text-sm text-slate-700">Reduce filler to under 10%</p>
+
+        <div class="insight-callout">
+          <div class="insight-callout__title">Key Insight — Competitive Gap vs MAPPA/ufotable</div>
+          <p>JJK 71.2× demand vs Pierrot's 2–12×. Netflix + Crunchyroll control ~80% of overseas anime market.</p>
         </div>
-        <div class="p-4 bg-purple-50 rounded-lg border border-purple-200">
-          <span class="text-purple-600 text-2xl">✓</span>
-          <h4 class="font-semibold mt-2 mb-1">Leverage Legacy IP</h4>
-          <p class="text-sm text-slate-700">Naruto maintains strong tail</p>
+
+        <div class="kpi-row">
+          <div class="kpi-card">
+            <div class="kpi-card__label">JJK Global Demand</div>
+            <div class="kpi-card__value kpi-card__value--danger">71.2×</div>
+            <div class="kpi-card__sub">Most in-demand show, 2023</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-card__label">Naruto Demand</div>
+            <div class="kpi-card__value">12.5×</div>
+            <div class="kpi-card__sub">Strong legacy tail</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-card__label">Boruto Demand</div>
+            <div class="kpi-card__value kpi-card__value--danger">2.3×</div>
+            <div class="kpi-card__sub">Struggling to gain traction</div>
+          </div>
         </div>
-        <div class="p-4 bg-orange-50 rounded-lg border border-orange-200">
-          <span class="text-orange-600 text-2xl">✓</span>
-          <h4 class="font-semibold mt-2 mb-1">Develop Premium New IP</h4>
-          <p class="text-sm text-slate-700">Compete in streaming era</p>
+
+        <div class="chart-card">
+          <div class="chart-card__title">Platform Market Share (Overseas Anime)</div>
+          <div class="stat-grid">
+            <div class="stat-item">
+              <div class="stat-item__value">40%</div>
+              <div class="stat-item__label">Netflix</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-item__value">35%</div>
+              <div class="stat-item__label">Crunchyroll</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-item__value">15%</div>
+              <div class="stat-item__label">Disney+</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-item__value">10%</div>
+              <div class="stat-item__label">Other</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- DOMESTIC TAB -->
+      <div id="domestic-tab" class="tab-content">
+
+        <div class="source-note">
+          <div class="source-note__title">Data Source</div>
+          <strong>Simulated domestic data</strong> calibrated to publicly available TV ratings and Oricon BD sales charts.
+        </div>
+
+        <div class="insight-callout">
+          <div class="insight-callout__title">Key Insight — MAL Score ↔ BD Sales Correlation</div>
+          <p>Higher MAL score = Better Blu-ray sales (R² > 0.7). TYBW 48K vs Boruto 6K units per volume.</p>
+        </div>
+
+        <div class="kpi-row">
+          <div class="kpi-card">
+            <div class="kpi-card__label">TYBW BD Sales</div>
+            <div class="kpi-card__value kpi-card__value--success">48K</div>
+            <div class="kpi-card__sub">Units per volume</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-card__label">Naruto Merch Revenue</div>
+            <div class="kpi-card__value">¥1.2B</div>
+            <div class="kpi-card__sub">Per quarter</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-card__label">Boruto BD Sales</div>
+            <div class="kpi-card__value kpi-card__value--danger">6K</div>
+            <div class="kpi-card__sub">Units per volume</div>
+          </div>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-card__title">Domestic Revenue Mix</div>
+          <div class="rev-list">
+            <div class="rev-item">
+              <span class="rev-item__label">Merchandise & Licensing</span>
+              <span class="rev-item__value">40%</span>
+            </div>
+            <div class="rev-item">
+              <span class="rev-item__label">BD / DVD Sales</span>
+              <span class="rev-item__value">35%</span>
+            </div>
+            <div class="rev-item">
+              <span class="rev-item__label">Events & Live</span>
+              <span class="rev-item__value">25%</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PRODUCTION TAB -->
+      <div id="production-tab" class="tab-content">
+
+        <div class="source-note">
+          <div class="source-note__title">Data Source</div>
+          <strong>Simulated production data</strong> based on publicly known filler percentages and industry budget estimates.
+        </div>
+
+        <div class="insight-callout">
+          <div class="insight-callout__title">Key Insight — Filler Kills Engagement</div>
+          <p>Seasonal model (&lt;10% filler, 8.7 avg score) vs Continuous model (42% filler, 6.1 avg score). The gap is decisive.</p>
+        </div>
+
+        <div class="kpi-row">
+          <div class="kpi-card">
+            <div class="kpi-card__label">TYBW Budget / Episode</div>
+            <div class="kpi-card__value kpi-card__value--success">$380K</div>
+            <div class="kpi-card__sub">Seasonal model</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-card__label">TYBW Filler Rate</div>
+            <div class="kpi-card__value kpi-card__value--success">0%</div>
+            <div class="kpi-card__sub">All canon content</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-card__label">Boruto Filler Rate</div>
+            <div class="kpi-card__value kpi-card__value--danger">42%</div>
+            <div class="kpi-card__sub">Continuous model</div>
+          </div>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-card__title">Production Model: Seasonal vs Continuous</div>
+          <div class="prod-compare">
+            <div class="prod-card prod-card--good">
+              <div class="prod-card__title">Seasonal Model</div>
+              <ul>
+                <li>Under 10% filler rate</li>
+                <li>Higher budget per episode</li>
+                <li>Avg score 8.5+</li>
+                <li>JJK, Demon Slayer, TYBW</li>
+              </ul>
+            </div>
+            <div class="prod-card prod-card--bad">
+              <div class="prod-card__title">Continuous Model</div>
+              <ul>
+                <li>40%+ filler rate</li>
+                <li>Lower budget per episode</li>
+                <li>Avg score below 7.0</li>
+                <li>Boruto, Black Clover</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RECOMMENDATIONS (always visible) -->
+      <div class="recs-section">
+        <div class="chart-card">
+          <div class="recs-section__title">Strategic Recommendations</div>
+          <div class="rec-grid">
+            <div class="rec-card">
+              <span class="rec-card__icon">🎬</span>
+              <div class="rec-card__title">Prioritize Seasonal Quality</div>
+              <p class="rec-card__desc">Bleach TYBW proves Pierrot can compete. Adopt seasonal model and cap filler at 10% max.</p>
+            </div>
+            <div class="rec-card">
+              <span class="rec-card__icon">📺</span>
+              <div class="rec-card__title">Leverage Legacy on Netflix</div>
+              <p class="rec-card__desc">Naruto/Bleach licensing revenue funds premium new IP development. 10× merch uplift vs new IPs.</p>
+            </div>
+            <div class="rec-card">
+              <span class="rec-card__icon">🌍</span>
+              <div class="rec-card__title">Target Global Streaming</div>
+              <p class="rec-card__desc">Build 1–2 premium IPs for Netflix/Crunchyroll. Market projected to triple by 2030 ($12.5B).</p>
+            </div>
+            <div class="rec-card">
+              <span class="rec-card__icon">📊</span>
+              <div class="rec-card__title">Data-Driven Greenlight</div>
+              <p class="rec-card__desc">Use demand index, MAL trajectory, and filler analytics to guide production decisions before commit.</p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
 
-  </div>
-
-  <footer class="bg-white border-t border-slate-200 mt-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center">
-      <p class="text-slate-600">© 2025 Dylan Elo - BI Case Study</p>
-      <p class="text-xs text-slate-400 mt-2">Multi-lens analysis with time-series perspective</p>
     </div>
+  </main>
+
+  <footer class="dash-footer">
+    <p>&copy; 2026 Dylan Elo · Studio Pierrot BI Case Study · Not affiliated with Studio Pierrot</p>
   </footer>
 
   <script type="module">
     import { timelineData } from './timeline_data.js';
 
-    window.switchTab = function (tabName) {
-      document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
-      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-      document.getElementById(tabName + '-tab').classList.add('active');
-      event.target.classList.add('active');
-    };
+    // ── Tab switching ─────────────────────────────────────────────────────
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const tab = btn.dataset.tab;
+        document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.tab-btn').forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        document.getElementById(tab + '-tab').classList.add('active');
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
+      });
+    });
 
+    // ── MAL Score Chart ───────────────────────────────────────────────────
     new Chart(document.getElementById('scoreChart'), {
       type: 'bar',
       data: {
-        labels: [['JJK', '(MAPPA)'], ['TYBW', '(Pierrot)'], ['Demon Slayer', '(ufotable)'], ['Naruto', '(Pierrot)'], ['TG', '(Pierrot)'], ['Boruto', '(Pierrot)']],
+        labels: ['JJK S2 (MAPPA)', 'Bleach TYBW (Pierrot)', 'Demon Slayer (ufotable)', 'Naruto Shippuden (Pierrot)', 'Tokyo Ghoul (Pierrot)', 'Boruto (Pierrot)'],
         datasets: [{
-          label: 'Score',
+          label: 'MAL Score',
           data: [9.08, 8.99, 8.95, 8.28, 7.80, 5.98],
-          backgroundColor: ctx => [1, 3, 4, 5].includes(ctx.dataIndex) ? '#6366F1' : '#94A3B8',
-          borderRadius: 4
+          backgroundColor: ctx => [0, 2].includes(ctx.dataIndex)
+            ? 'rgba(26, 86, 219, 0.18)'
+            : 'rgba(26, 86, 219, 0.7)',
+          borderColor: ctx => [0, 2].includes(ctx.dataIndex)
+            ? 'rgba(26, 86, 219, 0.4)'
+            : 'rgba(26, 86, 219, 1)',
+          borderWidth: 1.5,
+          borderRadius: 4,
         }]
       },
       options: {
         indexAxis: 'y',
         responsive: true,
         maintainAspectRatio: false,
-        plugins: { legend: { display: false } },
-        scales: { x: { beginAtZero: true, max: 10 } }
+        plugins: {
+          legend: { display: false },
+          tooltip: { callbacks: { label: ctx => ` Score: ${ctx.raw}` } }
+        },
+        scales: {
+          x: { beginAtZero: true, max: 10, grid: { color: 'rgba(0,0,0,0.05)' } },
+          y: { grid: { display: false } }
+        }
       }
     });
 
+    // ── Member Count Chart ────────────────────────────────────────────────
     new Chart(document.getElementById('memberChart'), {
       type: 'doughnut',
       data: {
         labels: ['Naruto', 'Tokyo Ghoul', 'JJK', 'Demon Slayer', 'Black Clover', 'Boruto'],
         datasets: [{
           data: [2400000, 1500000, 1200000, 850000, 580000, 450000],
-          backgroundColor: ['#6366F1', '#8B5CF6', '#94A3B8', '#CBD5E1', '#EC4899', '#F59E0B']
+          backgroundColor: [
+            'rgba(26,86,219,0.8)',
+            'rgba(26,86,219,0.6)',
+            'rgba(26,86,219,0.4)',
+            'rgba(26,86,219,0.3)',
+            'rgba(100,116,139,0.5)',
+            'rgba(100,116,139,0.3)',
+          ],
+          borderWidth: 2,
+          borderColor: '#fff',
         }]
       },
       options: {
         responsive: true,
         maintainAspectRatio: false,
-        plugins: { legend: { position: 'bottom' } }
+        plugins: {
+          legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } } },
+          tooltip: {
+            callbacks: {
+              label: ctx => ` ${ctx.label}: ${(ctx.raw / 1000000).toFixed(1)}M members`
+            }
+          }
+        }
       }
     });
 
+    // ── Revenue Timeline Chart ────────────────────────────────────────────
     const timelineByYear = {};
     timelineData.forEach(d => {
       if (!timelineByYear[d.year]) timelineByYear[d.year] = {};
@@ -424,38 +429,49 @@
     });
 
     const years = [2020, 2021, 2022, 2023, 2024];
-    const titles = ['Naruto Shippuden', 'Jujutsu Kaisen', 'Demon Slayer', 'Bleach TYBW', 'Boruto'];
-    const colors = {
-      'Naruto Shippuden': '#8B5CF6',
-      'Jujutsu Kaisen': '#10B981',
-      'Demon Slayer': '#F59E0B',
-      'Bleach TYBW': '#6366F1',
-      'Boruto': '#EF4444'
-    };
+    const series = [
+      { title: 'Naruto Shippuden', color: '#7c3aed' },
+      { title: 'Jujutsu Kaisen',   color: '#059669' },
+      { title: 'Demon Slayer',     color: '#d97706' },
+      { title: 'Bleach TYBW',      color: '#1a56db' },
+      { title: 'Boruto',           color: '#dc2626' },
+    ];
 
     new Chart(document.getElementById('timelineChart'), {
       type: 'line',
       data: {
         labels: years,
-        datasets: titles.map(title => ({
-          label: title,
-          data: years.map(year => timelineByYear[year]?.[title] || 0),
-          borderColor: colors[title],
-          tension: 0.3
+        datasets: series.map(s => ({
+          label: s.title,
+          data: years.map(y => timelineByYear[y]?.[s.title] || null),
+          borderColor: s.color,
+          backgroundColor: s.color + '18',
+          tension: 0.35,
+          pointRadius: 4,
+          pointHoverRadius: 6,
+          borderWidth: 2,
         }))
       },
       options: {
         responsive: true,
         maintainAspectRatio: false,
-        plugins: { legend: { position: 'bottom' } },
+        plugins: {
+          legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } } }
+        },
         scales: {
-          y: { beginAtZero: true, title: { display: true, text: 'Revenue ($M)' } },
-          x: { title: { display: true, text: 'Year' } }
+          y: {
+            beginAtZero: true,
+            title: { display: true, text: 'Revenue ($M)', font: { size: 11 } },
+            grid: { color: 'rgba(0,0,0,0.05)' }
+          },
+          x: {
+            title: { display: true, text: 'Year', font: { size: 11 } },
+            grid: { display: false }
+          }
         }
       }
     });
   </script>
 
 </body>
-
 </html>
