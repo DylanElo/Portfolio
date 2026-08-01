@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A sanitized case study by Dylan Elo covering hotel connectivity troubleshooting, booking-flow analysis, technical escalation, and cross-functional incident coordination.">
+  <title>Connectivity Troubleshooting | Dylan Elo</title>
+  <link rel="stylesheet" href="../src/style.css">
+  <style>
+    .case-hero { padding: 8.5rem 0 4rem; }
+    .case-shell { width: min(900px, 92%); margin: 0 auto; }
+    .case-kicker { color: var(--primary); text-transform: uppercase; letter-spacing: .08em; font-weight: 700; font-size: .78rem; margin-bottom: .85rem; }
+    .case-hero h1 { font-size: clamp(2.35rem, 5vw, 4.4rem); line-height: 1.02; letter-spacing: -.055em; margin-bottom: 1.25rem; }
+    .case-lead { max-width: 760px; color: var(--muted); font-size: 1.15rem; }
+    .case-meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 1rem; margin-top: 2rem; }
+    .case-meta .stat { background: var(--panel); border: 1px solid var(--outline); border-radius: var(--radius-md); padding: 1rem; }
+    .case-meta .label { color: var(--muted); font-size: .72rem; text-transform: uppercase; letter-spacing: .07em; font-weight: 700; }
+    .case-meta .value { margin-top: .3rem; font-weight: 700; }
+    .case-section { padding: 4rem 0; border-top: 1px solid var(--outline); }
+    .case-section h2 { font-size: clamp(1.65rem, 3vw, 2.35rem); letter-spacing: -.035em; margin-bottom: 1rem; }
+    .case-section p { color: var(--muted); margin-bottom: 1rem; }
+    .case-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+    .case-card { background: var(--panel); border: 1px solid var(--outline); border-radius: var(--radius-lg); padding: 1.35rem; }
+    .case-card h3 { margin-bottom: .7rem; font-size: 1.05rem; }
+    .case-card p, .case-card li { color: var(--muted); font-size: .94rem; }
+    .case-card ul { padding-left: 1.1rem; display: grid; gap: .45rem; }
+    .system-flow { display: grid; grid-template-columns: repeat(5, 1fr); gap: .65rem; margin-top: 1.5rem; }
+    .system-node { background: var(--panel); border: 1px solid var(--outline); border-radius: var(--radius-md); padding: 1rem; min-height: 120px; }
+    .system-node span { display: block; color: var(--primary); font-size: .72rem; font-weight: 800; letter-spacing: .08em; margin-bottom: .45rem; }
+    .system-node strong { display: block; font-size: .92rem; margin-bottom: .35rem; }
+    .evidence { border-left: 3px solid var(--primary); padding: 1.1rem 1.25rem; background: rgba(var(--primary-rgb), .06); border-radius: 0 var(--radius-md) var(--radius-md) 0; margin: 1.25rem 0; }
+    .outcome { background: var(--panel); border: 1px solid var(--outline); border-radius: var(--radius-lg); padding: 1.6rem; margin-top: 1.5rem; }
+    .notice { font-size: .84rem; color: var(--muted); border-top: 1px solid var(--outline); padding-top: 1rem; margin-top: 2rem; }
+    @media (max-width: 760px) { .system-flow { grid-template-columns: 1fr; } .system-node { min-height: auto; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="../index.html" class="logo">Dylan<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="../index.html#projects">Case studies</a></li>
+        <li><a href="../index.html#resume">Experience</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+        <li><button class="theme-toggle" aria-label="Toggle light/dark theme">Dark</button></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="case-hero">
+      <div class="case-shell fade-in">
+        <p class="case-kicker">Case study · Production troubleshooting</p>
+        <h1>Diagnosing a booking connection when every stakeholder saw a different truth.</h1>
+        <p class="case-lead">A sanitized account of how I investigated inconsistent integration behaviour, separated system responsibilities, gathered reproducible evidence, and kept hotel, platform, and technical teams aligned.</p>
+        <div class="case-meta">
+          <div class="stat"><div class="label">Role</div><div class="value">Technical coordinator</div></div>
+          <div class="stat"><div class="label">Domain</div><div class="value">Hotel connectivity</div></div>
+          <div class="stat"><div class="label">Core work</div><div class="value">Reproduction · Evidence · Escalation</div></div>
+          <div class="stat"><div class="label">Environment</div><div class="value">Multi-vendor integration</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-shell fade-in">
+        <p class="section-header">The challenge</p>
+        <h2>The connection appeared disabled to one party, yet searches and bookings still worked.</h2>
+        <p>The hotel and external platform did not share the same understanding of the connection state. Earlier testing suggested that the route had been disabled, but later searches returned rooms and new reservations could again be created.</p>
+        <p>The issue could not be reduced to “the interface works” or “the interface is broken.” A booking passed through several independent systems, and each stakeholder controlled only part of that chain.</p>
+        <div class="case-grid">
+          <div class="case-card"><h3>Conflicting observations</h3><p>Historical behaviour, current search results, and the hotel’s understanding did not align.</p></div>
+          <div class="case-card"><h3>Layered ownership</h3><p>The booking platform, external adaptor, channel manager, and hotel PMS had separate responsibilities.</p></div>
+          <div class="case-card"><h3>Operational urgency</h3><p>Live availability created commercial risk while the receiving and processing path remained uncertain.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-shell fade-in">
+        <p class="section-header">System model</p>
+        <h2>I mapped the flow before assigning blame.</h2>
+        <div class="system-flow" aria-label="Hotel booking integration flow">
+          <div class="system-node"><span>01</span><strong>Internal booking platform</strong><p>Searches, prices, and creates the reservation request.</p></div>
+          <div class="system-node"><span>02</span><strong>External connection adaptor</strong><p>Transforms and transmits the request to the provider.</p></div>
+          <div class="system-node"><span>03</span><strong>Channel or CRS layer</strong><p>Controls distributed inventory and booking messages.</p></div>
+          <div class="system-node"><span>04</span><strong>Hotel-side interface</strong><p>Routes the message toward the property environment.</p></div>
+          <div class="system-node"><span>05</span><strong>PMS / hotel operations</strong><p>Receives and processes the reservation operationally.</p></div>
+        </div>
+        <p style="margin-top:1.25rem">This model prevented a common troubleshooting error: treating the hotel PMS as if it were the direct endpoint of the internal booking platform.</p>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-shell fade-in">
+        <p class="section-header">My approach</p>
+        <h2>I converted an ambiguous operational complaint into a structured technical case.</h2>
+        <div class="case-grid">
+          <div class="case-card">
+            <h3>Reproduce</h3>
+            <ul>
+              <li>Search controlled dates and room combinations</li>
+              <li>Create a traceable test reservation</li>
+              <li>Record expected and actual behaviour at each step</li>
+            </ul>
+          </div>
+          <div class="case-card">
+            <h3>Compare</h3>
+            <ul>
+              <li>Contrast current behaviour with earlier test results</li>
+              <li>Separate availability, booking creation, delivery, and PMS receipt</li>
+              <li>Identify which conclusions were proven and which were assumptions</li>
+            </ul>
+          </div>
+          <div class="case-card">
+            <h3>Escalate</h3>
+            <ul>
+              <li>Provide reservation references and timestamps</li>
+              <li>Share the relevant outbound booking message where available</li>
+              <li>Ask each technical owner to verify its segment of the chain</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-shell fade-in">
+        <p class="section-header">Evidence package</p>
+        <h2>The escalation was designed to reduce another round of vague questions.</h2>
+        <div class="evidence"><strong>Reproduction context</strong><p>Property, test date, occupancy, room or service-line reference, and the exact action performed.</p></div>
+        <div class="evidence"><strong>Behavioural evidence</strong><p>Search result, price response, reservation identifier, cancellation state, and screenshots where useful.</p></div>
+        <div class="evidence"><strong>Technical evidence</strong><p>Relevant outbound reservation request, timestamps, interface references, and the distinction between adaptor, provider, and PMS responsibilities.</p></div>
+        <div class="evidence"><strong>Decision request</strong><p>A precise question for each owner: confirm whether the connection is enabled, where the message was accepted, and what the hotel should verify downstream.</p></div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-shell fade-in">
+        <p class="section-header">Communication control</p>
+        <h2>I kept technical uncertainty from becoming stakeholder confusion.</h2>
+        <div class="case-grid">
+          <div class="case-card"><h3>With the hotel</h3><p>Explained what had been proven on our side without claiming visibility into systems we did not control.</p></div>
+          <div class="case-card"><h3>With platform support</h3><p>Shared a reproducible case and requested confirmation of adaptor and provider behaviour.</p></div>
+          <div class="case-card"><h3>With internal teams</h3><p>Separated confirmed functionality from open risk so commercial teams did not overinterpret a successful search.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-shell fade-in">
+        <p class="section-header">Outcome</p>
+        <h2>The investigation established a reliable shared picture of the booking path.</h2>
+        <div class="outcome">
+          <ul class="about-list">
+            <li>Confirmed that current search and reservation creation were functioning</li>
+            <li>Clarified that the external adaptor communicated with the provider rather than directly with the hotel PMS</li>
+            <li>Produced evidence the hotel could use with its own provider or PMS contact</li>
+            <li>Reduced circular escalation by assigning verification to the correct system owners</li>
+            <li>Documented the difference between technical connectivity and confirmed hotel-side processing</li>
+          </ul>
+        </div>
+        <p class="notice">Confidentiality note: hotel names, reservation identifiers, payload content, provider names, screenshots, and internal support correspondence have been removed or generalized.</p>
+        <div class="btn-row" style="margin-top:1.5rem">
+          <a href="../index.html#projects" class="btn btn-primary">Back to case studies</a>
+          <a href="mailto:dylanelo18@gmail.com" class="btn btn-ghost">Discuss my experience</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container"><p>&copy; 2026 Dylan Elo — implementation, integrations, and systems that work.</p></div></footer>
+  <script type="module" src="../src/main.js"></script>
+</body>
+</html>
