@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A sanitized case study by Dylan Elo covering a multi-property hotel connectivity rollout, standardization, dependency tracking, UAT, and launch governance.">
+  <title>Multi-Property Connectivity Rollout | Dylan Elo</title>
+  <link rel="stylesheet" href="../src/style.css">
+  <style>
+    .case-hero { padding: 8.5rem 0 4rem; }
+    .case-shell { width: min(900px, 92%); margin: 0 auto; }
+    .case-kicker { color: var(--primary); text-transform: uppercase; letter-spacing: .08em; font-weight: 700; font-size: .78rem; margin-bottom: .85rem; }
+    .case-hero h1 { font-size: clamp(2.35rem, 5vw, 4.4rem); line-height: 1.02; letter-spacing: -.055em; margin-bottom: 1.25rem; }
+    .case-lead { max-width: 760px; color: var(--muted); font-size: 1.15rem; }
+    .case-meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 1rem; margin-top: 2rem; }
+    .case-meta .stat, .case-card, .property-card, .outcome { background: var(--panel); border: 1px solid var(--outline); border-radius: var(--radius-md); padding: 1rem; }
+    .case-meta .label { color: var(--muted); font-size: .72rem; text-transform: uppercase; letter-spacing: .07em; font-weight: 700; }
+    .case-meta .value { margin-top: .3rem; font-weight: 700; }
+    .case-section { padding: 4rem 0; border-top: 1px solid var(--outline); }
+    .case-section h2 { font-size: clamp(1.65rem, 3vw, 2.35rem); letter-spacing: -.035em; margin-bottom: 1rem; }
+    .case-section p, .case-card li, .property-card li { color: var(--muted); }
+    .case-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+    .case-card h3, .property-card h3 { margin-bottom: .65rem; font-size: 1.05rem; }
+    .case-card ul, .property-card ul { padding-left: 1.1rem; display: grid; gap: .45rem; }
+    .rollout { display: grid; grid-template-columns: repeat(4, 1fr); gap: .75rem; margin-top: 1.5rem; }
+    .rollout-step { background: var(--panel); border: 1px solid var(--outline); border-radius: var(--radius-md); padding: 1rem; }
+    .rollout-step span { display: block; color: var(--primary); font-size: .72rem; font-weight: 800; letter-spacing: .08em; margin-bottom: .45rem; }
+    .matrix { width: 100%; border-collapse: collapse; margin-top: 1.5rem; font-size: .9rem; }
+    .matrix th, .matrix td { border: 1px solid var(--outline); padding: .8rem; text-align: left; }
+    .matrix th { background: var(--panel-raised); }
+    .status { font-weight: 700; color: var(--primary); }
+    .decision { border-left: 3px solid var(--primary); padding: 1.1rem 1.25rem; background: rgba(var(--primary-rgb), .06); border-radius: 0 var(--radius-md) var(--radius-md) 0; margin: 1.25rem 0; }
+    .notice { font-size: .84rem; color: var(--muted); border-top: 1px solid var(--outline); padding-top: 1rem; margin-top: 2rem; }
+    @media (max-width: 760px) { .rollout { grid-template-columns: 1fr; } .matrix { display: block; overflow-x: auto; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="../index.html" class="logo">Dylan<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="../index.html#projects">Case studies</a></li>
+        <li><a href="../index.html#resume">Experience</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+        <li><button class="theme-toggle" aria-label="Toggle light/dark theme">Dark</button></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="case-hero">
+      <div class="case-shell fade-in">
+        <p class="case-kicker">Case study · Scaled implementation</p>
+        <h1>Scaling one proven hotel connection into a controlled multi-property rollout.</h1>
+        <p class="case-lead">A sanitized account of how I reused a working connectivity model while separating group-wide standards from property-specific codes, products, dependencies, and launch risks.</p>
+        <div class="case-meta">
+          <div class="stat"><div class="label">Role</div><div class="value">Rollout coordinator</div></div>
+          <div class="stat"><div class="label">Scope</div><div class="value">Multiple hotel properties</div></div>
+          <div class="stat"><div class="label">Core work</div><div class="value">Standardize · Track · Validate</div></div>
+          <div class="stat"><div class="label">Delivery model</div><div class="value">Cross-team, phased launch</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-shell fade-in">
+        <p class="section-header">The challenge</p>
+        <h2>A hotel group may share a brand and technology stack, but each property still has its own implementation reality.</h2>
+        <p>An existing set of connected properties provided a useful reference, but the new hotels could not simply be copied into production. Each required confirmed facility identifiers, published rooms and plans, internal product coverage, mapping decisions, commercial review, and end-to-end testing.</p>
+        <div class="case-grid">
+          <div class="case-card"><h3>Reusable foundation</h3><p>Existing properties showed the expected connection pattern, naming conventions, and internal setup.</p></div>
+          <div class="case-card"><h3>Property variation</h3><p>Room codes, rate plans, inventory, launch timing, and internal service-line readiness differed by hotel.</p></div>
+          <div class="case-card"><h3>Coordination risk</h3><p>Missing one dependency could leave a property technically configured but commercially unusable.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-shell fade-in">
+        <p class="section-header">My responsibility</p>
+        <h2>I turned a loose group expansion into a property-by-property delivery framework.</h2>
+        <div class="case-grid">
+          <div class="case-card"><h3>Define the template</h3><ul><li>Identify the parts of the existing setup that could be reused</li><li>Document required property, room, and rate-plan data</li><li>Establish minimum readiness criteria before configuration</li></ul></div>
+          <div class="case-card"><h3>Control dependencies</h3><ul><li>Track partner publication and internal product creation separately</li><li>Assign unresolved items to the correct team</li><li>Prevent testing before prerequisites were genuinely complete</li></ul></div>
+          <div class="case-card"><h3>Validate each launch</h3><ul><li>Review mapping and commercial fit per property</li><li>Run controlled searches, bookings, and cancellations</li><li>Record launch status, defects, and follow-up ownership</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-shell fade-in">
+        <p class="section-header">Rollout model</p>
+        <h2>Standardize the process, not the assumptions.</h2>
+        <div class="rollout">
+          <div class="rollout-step"><span>01</span><strong>Reference</strong><p>Review proven properties and reusable configuration patterns.</p></div>
+          <div class="rollout-step"><span>02</span><strong>Qualify</strong><p>Collect property identifiers, rooms, plans, and commercial requirements.</p></div>
+          <div class="rollout-step"><span>03</span><strong>Implement</strong><p>Create internal products, map inventory, and resolve property-specific gaps.</p></div>
+          <div class="rollout-step"><span>04</span><strong>Release</strong><p>Test each property independently and approve only when launch criteria are met.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-shell fade-in">
+        <p class="section-header">Readiness control</p>
+        <h2>A shared checklist made progress visible without pretending every property was at the same stage.</h2>
+        <table class="matrix">
+          <thead><tr><th>Workstream</th><th>What I verified</th><th>Typical owner</th><th>Release condition</th></tr></thead>
+          <tbody>
+            <tr><td>Partner setup</td><td>Facility ID, published rooms, plans, availability</td><td>Hotel / connectivity partner</td><td class="status">Source data confirmed</td></tr>
+            <tr><td>Commercial scope</td><td>Which room and plan combinations should be sold</td><td>Contracting / product</td><td class="status">Sellable scope approved</td></tr>
+            <tr><td>Internal product</td><td>Room concepts, service lines, pricing and agent visibility</td><td>Database / product</td><td class="status">Products available</td></tr>
+            <tr><td>Connectivity</td><td>Mappings, business rules, search and booking flow</td><td>Implementation / vendor</td><td class="status">UAT passed</td></tr>
+            <tr><td>Launch</td><td>Open defects, communication, support ownership</td><td>All stakeholders</td><td class="status">Go-live approved</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-shell fade-in">
+        <p class="section-header">Key decisions</p>
+        <h2>Scaling well meant knowing when to reuse and when to stop and investigate.</h2>
+        <div class="decision"><strong>Reuse structure, verify data.</strong><p>I used proven properties as a template for workflow and configuration logic, but never assumed that identifiers, room coverage, rate plans, or business priorities were identical.</p></div>
+        <div class="decision"><strong>Track external and internal readiness separately.</strong><p>A hotel could publish inventory before the matching internal service lines existed—or internal products could be ready before the hotel released plans. The rollout view had to show both sides.</p></div>
+        <div class="decision"><strong>Launch by evidence, not by group deadline.</strong><p>Each property required its own validated search, price, booking delivery, and cancellation results before being treated as live.</p></div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-shell fade-in">
+        <p class="section-header">Outcome</p>
+        <h2>A repeatable rollout method that preserved property-level control.</h2>
+        <div class="outcome">
+          <ul class="about-list">
+            <li>Created a consistent intake structure for facility, room, and plan data</li>
+            <li>Made cross-team dependencies and blockers visible at property level</li>
+            <li>Reduced avoidable rework by confirming identifiers before configuration</li>
+            <li>Reused proven setup logic without copying incorrect assumptions</li>
+            <li>Established clear, test-based launch criteria for each hotel</li>
+          </ul>
+        </div>
+        <p class="notice">Confidentiality note: hotel-group names, property names, identifiers, rollout dates, commercial terms, and internal tracking data have been removed or generalized.</p>
+        <div class="btn-row" style="margin-top:1.5rem">
+          <a href="../index.html#projects" class="btn btn-primary">Back to case studies</a>
+          <a href="mailto:dylanelo18@gmail.com" class="btn btn-ghost">Discuss my experience</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container"><p>&copy; 2026 Dylan Elo — implementation, integrations, and systems that work.</p></div></footer>
+  <script type="module" src="../src/main.js"></script>
+</body>
+</html>
