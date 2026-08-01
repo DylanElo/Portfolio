@@ -1,6 +1,22 @@
 
-
 document.addEventListener('DOMContentLoaded', () => {
+    // Add a clear entry point to the first professional case study.
+    const firstCaseStudy = document.querySelector('#projects .project-item');
+    if (firstCaseStudy && !firstCaseStudy.querySelector('[data-case-study-link]')) {
+        const actions = document.createElement('div');
+        actions.className = 'btn-row';
+        actions.style.marginTop = '1.25rem';
+
+        const link = document.createElement('a');
+        link.href = 'case-studies/hotel-connectivity-onboarding.html';
+        link.className = 'btn btn-primary';
+        link.dataset.caseStudyLink = 'hotel-connectivity-onboarding';
+        link.textContent = 'Read full case study';
+
+        actions.appendChild(link);
+        firstCaseStudy.appendChild(actions);
+    }
+
     // Mobile Menu Toggle
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
@@ -28,11 +44,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (links) {
         links.forEach(link => {
             link.addEventListener('click', () => {
+                if (!navLinks || !mobileMenuBtn) return;
                 navLinks.classList.remove('active');
                 const spans = mobileMenuBtn.querySelectorAll('span');
-                spans[0].style.transform = 'none';
-                spans[1].style.opacity = '1';
-                spans[2].style.transform = 'none';
+                if (spans.length === 3) {
+                    spans[0].style.transform = 'none';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = 'none';
+                }
             });
         });
     }
@@ -47,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                observer.unobserve(entry.target); // Only animate once
+                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
@@ -58,7 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Theme Toggle
     const themeToggle = document.querySelector('.theme-toggle');
     if (themeToggle) {
-        // Restore saved theme
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme === 'dark') {
             document.body.classList.add('dark-theme');
@@ -88,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 window.scrollTo({
                     top: offsetPosition,
-                    behavior: "smooth"
+                    behavior: 'smooth'
                 });
             }
         });
