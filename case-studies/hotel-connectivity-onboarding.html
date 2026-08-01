@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A sanitized case study by Dylan Elo covering end-to-end hotel connectivity onboarding, systems mapping, UAT, cross-functional coordination, and go-live validation.">
+  <title>Hotel Connectivity Onboarding | Dylan Elo</title>
+  <link rel="stylesheet" href="../src/style.css">
+  <style>
+    .case-hero { padding: 8.5rem 0 4rem; }
+    .case-shell { width: min(900px, 92%); margin: 0 auto; }
+    .case-kicker { color: var(--primary); text-transform: uppercase; letter-spacing: .08em; font-weight: 700; font-size: .78rem; margin-bottom: .85rem; }
+    .case-hero h1 { font-size: clamp(2.35rem, 5vw, 4.4rem); line-height: 1.02; letter-spacing: -.055em; margin-bottom: 1.25rem; }
+    .case-lead { max-width: 760px; color: var(--muted); font-size: 1.15rem; }
+    .case-meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 1rem; margin-top: 2rem; }
+    .case-meta .stat { background: var(--panel); border: 1px solid var(--outline); border-radius: var(--radius-md); padding: 1rem; }
+    .case-meta .label { color: var(--muted); font-size: .72rem; text-transform: uppercase; letter-spacing: .07em; font-weight: 700; }
+    .case-meta .value { margin-top: .3rem; font-weight: 700; }
+    .case-section { padding: 4rem 0; border-top: 1px solid var(--outline); }
+    .case-section h2 { font-size: clamp(1.65rem, 3vw, 2.35rem); letter-spacing: -.035em; margin-bottom: 1rem; }
+    .case-section p { color: var(--muted); margin-bottom: 1rem; }
+    .case-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+    .case-card { background: var(--panel); border: 1px solid var(--outline); border-radius: var(--radius-lg); padding: 1.35rem; }
+    .case-card h3 { margin-bottom: .7rem; font-size: 1.05rem; }
+    .case-card p, .case-card li { color: var(--muted); font-size: .94rem; }
+    .case-card ul { padding-left: 1.1rem; display: grid; gap: .45rem; }
+    .flow { display: grid; grid-template-columns: repeat(5, 1fr); gap: .65rem; margin-top: 1.5rem; align-items: stretch; }
+    .flow-step { position: relative; background: var(--panel); border: 1px solid var(--outline); border-radius: var(--radius-md); padding: 1rem; min-height: 120px; }
+    .flow-step span { display: block; color: var(--primary); font-size: .72rem; font-weight: 800; letter-spacing: .08em; margin-bottom: .45rem; }
+    .flow-step strong { display: block; font-size: .92rem; }
+    .decision { border-left: 3px solid var(--primary); padding: 1.1rem 1.25rem; background: rgba(var(--primary-rgb), .06); border-radius: 0 var(--radius-md) var(--radius-md) 0; margin: 1.25rem 0; }
+    .outcome { background: var(--panel); border: 1px solid var(--outline); border-radius: var(--radius-lg); padding: 1.6rem; margin-top: 1.5rem; }
+    .notice { font-size: .84rem; color: var(--muted); border-top: 1px solid var(--outline); padding-top: 1rem; margin-top: 2rem; }
+    @media (max-width: 760px) { .flow { grid-template-columns: 1fr; } .flow-step { min-height: auto; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="../index.html" class="logo">Dylan<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="../index.html#projects">Case studies</a></li>
+        <li><a href="../index.html#resume">Experience</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+        <li><button class="theme-toggle" aria-label="Toggle light/dark theme">Dark</button></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="case-hero">
+      <div class="case-shell fade-in">
+        <p class="case-kicker">Case study · End-to-end implementation</p>
+        <h1>Turning hotel inventory into a reliable live booking flow.</h1>
+        <p class="case-lead">A sanitized account of how I coordinated hotel, commercial, database, and technology stakeholders to translate externally published room and rate-plan data into a tested, saleable configuration.</p>
+        <div class="case-meta">
+          <div class="stat"><div class="label">Role</div><div class="value">Implementation owner</div></div>
+          <div class="stat"><div class="label">Domain</div><div class="value">Hotel connectivity</div></div>
+          <div class="stat"><div class="label">Core work</div><div class="value">Mapping · UAT · Go-live</div></div>
+          <div class="stat"><div class="label">Environment</div><div class="value">Cross-functional, multilingual</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-shell fade-in">
+        <p class="section-header">The challenge</p>
+        <h2>The hotel had published inventory, but that did not yet make it commercially usable.</h2>
+        <p>The external platform exposed multiple room and meal-plan combinations using hotel-facing names and identifiers. Internally, those combinations had to be matched to the correct room concepts, service lines, pricing logic, and sales priorities before reservations could be trusted.</p>
+        <p>The risk was not simply a failed connection. A technically available product could still be wrong for the business: duplicated rooms, mismatched meal plans, misleading availability, incorrect prices, or reservations delivered against the wrong product definition.</p>
+        <div class="case-grid">
+          <div class="case-card"><h3>Operational ambiguity</h3><p>Hotel naming and internal product naming did not align one-to-one.</p></div>
+          <div class="case-card"><h3>Multiple owners</h3><p>Hotel, contracting, product, database, operations, and connectivity teams each owned part of the outcome.</p></div>
+          <div class="case-card"><h3>Production risk</h3><p>A mapping that looked correct in configuration still required end-to-end reservation validation.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-shell fade-in">
+        <p class="section-header">My responsibility</p>
+        <h2>I owned the translation layer between partner inventory and the internal booking product.</h2>
+        <div class="case-grid">
+          <div class="case-card">
+            <h3>Analyse</h3>
+            <ul>
+              <li>Review rooms, plans, identifiers, inclusions, and availability</li>
+              <li>Compare partner data with internal product definitions</li>
+              <li>Identify duplicates, gaps, and ambiguous combinations</li>
+            </ul>
+          </div>
+          <div class="case-card">
+            <h3>Coordinate</h3>
+            <ul>
+              <li>Clarify intended inventory with the hotel</li>
+              <li>Request internal room or service-line changes</li>
+              <li>Align commercial relevance with contracting and product teams</li>
+            </ul>
+          </div>
+          <div class="case-card">
+            <h3>Validate</h3>
+            <ul>
+              <li>Configure mappings and business rules</li>
+              <li>Run searches, reservations, modifications where applicable, and cancellations</li>
+              <li>Confirm delivery and launch readiness with all parties</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-shell fade-in">
+        <p class="section-header">Implementation flow</p>
+        <h2>A controlled path from source data to live distribution.</h2>
+        <div class="flow" aria-label="Implementation workflow">
+          <div class="flow-step"><span>01</span><strong>Inventory review</strong><p>Rooms, plans, codes, inclusions, and constraints.</p></div>
+          <div class="flow-step"><span>02</span><strong>Business mapping</strong><p>Match inventory to internal products and sales priorities.</p></div>
+          <div class="flow-step"><span>03</span><strong>Configuration</strong><p>Create or adjust room concepts, service lines, and mappings.</p></div>
+          <div class="flow-step"><span>04</span><strong>End-to-end UAT</strong><p>Search, price, reserve, verify delivery, and cancel.</p></div>
+          <div class="flow-step"><span>05</span><strong>Go-live control</strong><p>Document status, confirm ownership, and monitor initial flow.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-shell fade-in">
+        <p class="section-header">Key decisions</p>
+        <h2>The difficult work was deciding what should be sold—not merely what could be mapped.</h2>
+        <div class="decision"><strong>Reduce unnecessary complexity.</strong><p>Where several external combinations represented the same internal room concept, I worked toward a smaller, clearer product set rather than reproducing every hotel-facing variation.</p></div>
+        <div class="decision"><strong>Separate availability from correctness.</strong><p>A room appearing in search was treated as one test result, not proof of a complete implementation. Price, occupancy, inclusions, reservation delivery, and cancellation all had to align.</p></div>
+        <div class="decision"><strong>Escalate with evidence.</strong><p>When expected and actual behaviour differed, I documented identifiers, dates, product combinations, screenshots, reservation references, and reproduction steps so technical teams could investigate efficiently.</p></div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-shell fade-in">
+        <p class="section-header">Testing approach</p>
+        <h2>UAT covered the commercial and technical journey.</h2>
+        <div class="case-grid">
+          <div class="case-card"><h3>Search & availability</h3><p>Verified that intended rooms and plans appeared for controlled dates and occupancy combinations.</p></div>
+          <div class="case-card"><h3>Pricing</h3><p>Compared external and internal outputs, including markups, fees, taxes, and known rate behaviour.</p></div>
+          <div class="case-card"><h3>Reservation delivery</h3><p>Confirmed that test bookings generated the expected downstream record and reached the relevant partner flow.</p></div>
+          <div class="case-card"><h3>Cancellation</h3><p>Validated cancellation handling and checked that temporary test inventory was cleaned up correctly.</p></div>
+          <div class="case-card"><h3>Exception handling</h3><p>Logged missing plans, inconsistent availability, mapping gaps, and price discrepancies with reproducible evidence.</p></div>
+          <div class="case-card"><h3>Launch readiness</h3><p>Separated confirmed items, open dependencies, and post-launch monitoring responsibilities.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-shell fade-in">
+        <p class="section-header">Outcome</p>
+        <h2>A configuration that internal teams could sell and partners could support.</h2>
+        <div class="outcome">
+          <ul class="about-list">
+            <li>Converted partner-published inventory into a controlled internal product structure</li>
+            <li>Resolved room and plan ambiguity before it became a customer-facing issue</li>
+            <li>Coordinated required changes across technical and commercial stakeholders</li>
+            <li>Completed reservation and cancellation testing before launch approval</li>
+            <li>Created a traceable implementation record for support and future maintenance</li>
+          </ul>
+        </div>
+        <p class="notice">Confidentiality note: hotel names, identifiers, commercial terms, screenshots, and internal configuration details have been removed or generalized. This case study describes my working method and responsibilities without disclosing partner-sensitive information.</p>
+        <div class="btn-row" style="margin-top:1.5rem">
+          <a href="../index.html#projects" class="btn btn-primary">Back to case studies</a>
+          <a href="mailto:dylanelo18@gmail.com" class="btn btn-ghost">Discuss my experience</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container"><p>&copy; 2026 Dylan Elo — implementation, integrations, and systems that work.</p></div></footer>
+  <script type="module" src="../src/main.js"></script>
+</body>
+</html>
